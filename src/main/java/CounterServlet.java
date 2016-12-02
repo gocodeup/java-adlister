@@ -6,8 +6,10 @@ import java.io.IOException;
 
 @WebServlet(name = "CounterServlet", urlPatterns = "/count")
 public class CounterServlet extends HttpServlet {
+    private int counter = 0;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.getWriter().println("We're at the counter page");
+        counter += 1;
+        response.getWriter().println("<h1>The count is " + counter + ".</h1>");
     }
 }
