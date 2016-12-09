@@ -1,3 +1,7 @@
+package com.codeup.adlister.dao;
+
+import com.codeup.adlister.models.Ad;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +21,7 @@ public class ListAdsDao implements Ads {
             ads = generateAds();
         }
         // we'll assign an "id" here based on the size of the ads list
-        // really the database would handle this
+        // really the dao would handle this
         ad.setId((long) ads.size());
         ads.add(ad);
         return ad.getId();

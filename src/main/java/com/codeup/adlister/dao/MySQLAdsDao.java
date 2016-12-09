@@ -1,3 +1,6 @@
+package com.codeup.adlister.dao;
+
+import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
@@ -17,8 +20,6 @@ public class MySQLAdsDao implements Ads {
             );
         } catch (SQLException e) {
             throw new RuntimeException("Error talking to the database!", e);
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Error initializing the MySQL driver.", e);
         }
     }
 
