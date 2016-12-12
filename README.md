@@ -8,7 +8,7 @@ curriculum.
 1. Clone this repository.
 
 As we progress through the lessons, your instructors will push various git tags
-corresponding tags to each lesson and exercise.
+corresponding to each lesson and exercise.
 
 For each exercise you should:
 
