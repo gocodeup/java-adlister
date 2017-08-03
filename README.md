@@ -3,23 +3,33 @@
 This is the project that we will be going through in the latter part of the Java
 curriculum.
 
-## Instructions
+This repository contains various
+[tags](https://git-scm.com/book/en/v2/Git-Basics-Tagging) that correspond to
+each lesson we will cover.
+
+## Setup and Workflow
+
+1. Fork this repository to your GitHub account.
 
 1. Clone this repository.
 
-As we progress through the lessons, your instructors will push various git tags
-corresponding to each lesson and exercise.
+As we progress through the java lessons, for each exercise you should:
 
-For each exercise you should:
+1. Checkout the corresponding tag
 
-1. checkout the corresponding tag
-
-1. create a new branch for your work on the exercise
+1. Create a new branch for your work on the exercise
 
     **It is very important that you create and switch to a new branch here, if
     you do not, your work and commits could be lost!**
 
-1. push up your branch
+    At this point, you could merge your previous work into the current branch,
+    or start "fresh" from the branch you just created
 
-After each exercise is completed, a tag that provides the solution will be made
-available to you so that you can check it out.
+1. Add and commit as you work your way through the exercise
+
+1. Push your branch
+
+1. (Optionally) Check out the tag containing the solution for the exercise
+
+    All of the tags that correspond to each exercise also have a tag suffixed
+    with `-solution`
