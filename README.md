@@ -15,9 +15,31 @@ each lesson we will cover.
 
 As we progress through the java lessons, for each exercise you should:
 
+0. Make sure all of your previous work is committed, and your working directory
+   is clean.
+
+    ```
+    git status
+    ```
+
+    This is good practice in general before manipulating a git repository
+
 1. Checkout the corresponding tag
 
-1. Create a new branch for your work on the exercise
+    For example:
+
+    ```
+    git checkout servlets
+    ```
+
+1. Create and switch to a new branch for your work on the exercise
+
+For example:
+
+    ```
+    git branch servlets-exercise
+    git checkout servlets-exercise
+    ```
 
     **It is very important that you create and switch to a new branch here, if
     you do not, your work and commits could be lost!**
