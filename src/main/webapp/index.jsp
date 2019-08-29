@@ -8,12 +8,9 @@
 </head>
 <body>
 <c:choose>
-    <c:when test="${sessionScope.user != null}">
-        <%@ include file="/WEB-INF/partials/navbar-logout.jsp" %>
+    <c:when test="${sessionScope.user == null}">
+        <%@ include file="/WEB-INF/partials/navbar.jsp" %>
     </c:when>
-    <c:otherwise>
-        <%@ include file="/WEB-INF/partials/navbar-login.jsp" %>
-    </c:otherwise>
 </c:choose>
  <div class="container">
         <h1>Welcome to the Adlister!</h1>
