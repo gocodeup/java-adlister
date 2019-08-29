@@ -1,14 +1,21 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page errorPage="messages.jsp"%>
 <html>
 <head>
     <jsp:include page="partials/head.jsp">
-        <jsp:param name="title" value="Register For Our Site!" />
+        <jsp:param name="title" value="Register For Our Site!"/>
     </jsp:include>
 </head>
 <body>
     <jsp:include page="partials/navbar.jsp" />
     <div class="container">
         <h1>Please fill in your information.</h1>
+          <c:if test="${sessionScope.error != null}">
+        <h3 style='color:red; text-align: center'>"${sessionScope.error}"</h3>
+        <%request.getSession().removeAttribute("error");%>
+    </c:if>
+
         <form action="/register" method="post">
             <div class="form-group">
                 <label for="username">Username</label>

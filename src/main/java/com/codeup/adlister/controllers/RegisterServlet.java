@@ -31,13 +31,20 @@ public class RegisterServlet extends HttpServlet {
             || (! password.equals(passwordConfirmation));
 
         if (inputHasErrors) {
+            request.getSession().setAttribute("error","Invalid Input, Please Try Again");
             response.sendRedirect("/register");
             return;
         }
 
         // create and save a new user
         User user = new User(username, email, password);
+        if (DaoFactory.getUsersDao().findByUsername(user.getUsername()) != null){
+            request.getSession().setAttribute("error","Invalid Input, Please Try Again");
+            response.sendRedirect("/register");
+            return;
+        }
         DaoFactory.getUsersDao().insert(user);
         response.sendRedirect("/login");
     }
+
 }

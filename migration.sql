@@ -25,10 +25,11 @@ CREATE TABLE categories
     PRIMARY KEY (id)
 );
 
-CREATE TABLE blocks (
-                        id INT UNSIGNED NOT NULL  AUTO_INCREMENT,
-                        block VARCHAR(240) NOT NULL,
-                        PRIMARY KEY (id)
+CREATE TABLE blocks
+(
+    id    INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    block VARCHAR(240) NOT NULL,
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE ads
