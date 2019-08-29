@@ -8,8 +8,9 @@
 </head>
 <body>
 <c:choose>
-    <c:when test="${empty user}">
-        <%@ include file="/WEB-INF/partials/navbar-logout.jsp" %>    </c:when>
+    <c:when test="${sessionScope.user != null}">
+        <%@ include file="/WEB-INF/partials/navbar-logout.jsp" %>
+    </c:when>
     <c:otherwise>
         <%@ include file="/WEB-INF/partials/navbar-login.jsp" %>
     </c:otherwise>
