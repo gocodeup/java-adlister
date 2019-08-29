@@ -12,6 +12,7 @@
     <h1>Please fill in your information.</h1>
     <c:if test="${sessionScope.error != null}">
         <h3 style='color:red; text-align: center'>"${sessionScope.error}"</h3>
+        <%request.getSession().removeAttribute("error");%>
     </c:if>
     <form action="/register" method="post">
         <div class="form-group">
