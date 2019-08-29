@@ -12,12 +12,14 @@
 <div class="container">
     <h1>Here Are all the ads!</h1>
 
-    <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
-            <h2>${ad.title}</h2>
-            <p>${ad.description}</p>
+    <c: var="ad" items="${ads}">
+        <div class="col-md-7">
+            <div class="ad-box" style="border: 1px solid black">
+                <h2>${ad.title}</h2>
+                <p>${ad.description}</p>
+            </div>
         </div>
-    </c:forEach>
+    </c:>
 </div>
 
 </body>
