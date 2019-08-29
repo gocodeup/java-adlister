@@ -30,28 +30,29 @@ CREATE TABLE ads
 );
 
 CREATE TABLE categories
-(   
-    id  INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    category  varchar(240)  NOT NULL,
+(
+    id       INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    category varchar(240) NOT NULL,
     PRIMARY KEY (id)
 );
 
-CREATE TABLE blocks (
-                    id INT UNSIGNED NOT NULL  AUTO_INCREMENT,
-                    block VARCHAR(240) NOT NULL,
-                    PRIMARY KEY (id) 
+CREATE TABLE blocks
+(
+    id    INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    block VARCHAR(240) NOT NULL,
+    PRIMARY KEY (id)
 );
 
 CREATE TABLE adsCategoriesBlocks
 (
-    ads_id INT UNSIGNED NOT NULL,
-    blocks_id INT UNSIGNED NOT NULL,
+    ads_id        INT UNSIGNED NOT NULL,
+    blocks_id     INT UNSIGNED NOT NULL,
     categories_id INT UNSIGNED NOT NULL,
-     FOREIGN KEY (ads_id) REFERENCES ads (id)
+    FOREIGN KEY (ads_id) REFERENCES ads (id)
         ON DELETE CASCADE,
-     FOREIGN KEY (categories_id) REFERENCES categories (id)
+    FOREIGN KEY (categories_id) REFERENCES categories (id)
         ON DELETE CASCADE,
-      FOREIGN KEY (blocks_id) REFERENCES blocks (id)
+    FOREIGN KEY (blocks_id) REFERENCES blocks (id)
         ON DELETE CASCADE
 );        
   
