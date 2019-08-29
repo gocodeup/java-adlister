@@ -30,15 +30,6 @@ public class LoginServlet extends HttpServlet {
 
         if (user == null) {
             request.getSession().setAttribute("error","Invalid Username or Password");
-            try {
-                RequestDispatcher rd=request.getRequestDispatcher("/index.jsp");
-                rd.include(request, response);
-
-            } catch (ServletException e) {
-                e.printStackTrace();
-            }
-
-
             return;
         }
 
@@ -49,15 +40,6 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("/profile");
         } else {
             request.getSession().setAttribute("error","Invalid Username or Password");
-            try {
-                RequestDispatcher rd=request.getRequestDispatcher("/index.jsp");
-                rd.include(request, response);
-
-            } catch (ServletException e) {
-                e.printStackTrace();
-            }
-
-
             response.sendRedirect("/login");
         }
     }

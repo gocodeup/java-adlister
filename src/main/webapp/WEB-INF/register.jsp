@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -8,16 +9,10 @@
 <body>
 <jsp:include page="partials/navbar-login.jsp"/>
 <div class="container">
-    <%
-        if (request.getAttribute("error") != null) {
-            String login_msg = (String) request.getAttribute("error");
-            if (login_msg != null) {
-                System.out.println("<p style=' color=red size=4px>'+login_msg+'</font>");
-            }
-
-        }
-    %>
     <h1>Please fill in your information.</h1>
+    <c:if test="${sessionScope.error != null}">
+        <h3 style='color:red; text-align: center'>"${sessionScope.error}"</h3>
+    </c:if>
     <form action="/register" method="post">
         <div class="form-group">
             <label for="username">Username</label>
