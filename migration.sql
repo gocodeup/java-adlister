@@ -2,6 +2,8 @@ USE adlister_db;
 
 DROP TABLE IF EXISTS ads;
 DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS categories;
+DROP TABLE IF EXISTS blocks;
 
 CREATE TABLE users (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -19,4 +21,14 @@ CREATE TABLE ads (
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id)
         ON DELETE CASCADE
+);
+
+CREATE TABLE categories (
+                    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+                    category VARCHAR(240) NOT NULL
+);
+
+CREATE TABLE blocks (
+                    id INT UNSIGNED NOT NULL  AUTO_INCREMENT,
+                    blocks VARCHAR(240) NOT NULL
 );
