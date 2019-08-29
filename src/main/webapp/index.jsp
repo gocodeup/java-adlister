@@ -5,6 +5,11 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Welcome to my site!" />
     </jsp:include>
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/ErrorHandler</location>
+    </error-page>
+
 </head>
 <body>
 <c:choose>
