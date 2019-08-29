@@ -7,6 +7,7 @@ import com.codeup.adlister.util.Password;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -15,11 +16,15 @@ import java.io.IOException;
 @WebServlet(name = "controllers.LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Boolean lurker = null;
+
         if (request.getSession().getAttribute("user") != null) {
             response.sendRedirect("/profile");
             return;
         }
-
+        if (request.getSession().getAttribute("user") == null) {
+            request.setAttribute("lurker", true);
+        }
         request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
     }
 
@@ -28,17 +33,28 @@ public class LoginServlet extends HttpServlet {
         if (username == null) username = " ";
         String password = request.getParameter("password");
         User user = DaoFactory.getUsersDao().findByUsername(username);
+        Cookie[]cookies = request.getCookies();
+        String referer = request.getHeader("Referer");
 
         if (user == null) {
-            request.getSession().setAttribute("error","Invalid Username or Password");
+            request.getSession().setAttribute("error", "Invalid Username or Password");
             return;
         }
 
         boolean validAttempt = Password.check(password, user.getPassword());
 
-        if (validAttempt) {
+        if (validAttempt && cookies == null) {
             request.getSession().setAttribute("user", user);
             response.sendRedirect("/profile");
+                return;
+        } if (validAttempt && cookies != null) {
+            request.getSession().setAttribute("user", user);
+            response.sendRedirect(referer);
+            for (Cookie cookie : cookies) {
+                cookie.setValue("");
+                cookie.setMaxAge(0);
+            }
+                return;
         } else {
             response.sendRedirect("/login");
         }
