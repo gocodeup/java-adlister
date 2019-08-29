@@ -10,6 +10,9 @@
 
     <div class="container">
         <h1>Welcome, ${sessionScope.user.username}!</h1>
+        <div class="col-md-3">
+
+        </div>
     </div>
 
 </body>

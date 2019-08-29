@@ -69,9 +69,6 @@ public class MySQLAdsDao implements Ads {
         while (rs.next()) {
             ads.add(extractAd(rs));
         }
-        while (ads.size() <= 20) {
-            return ads;
-        }
         return ads;
     }
 }

@@ -11,16 +11,16 @@
 
 <div class="container">
     <h1>Here Are all the ads!</h1>
-
-    <c: var="ad" items="${ads}">
-        <div class="col-md-7">
-            <div class="ad-box" style="border: 1px solid black">
-                <h2>${ad.title}</h2>
-                <p>${ad.description}</p>
-            </div>
-        </div>
-    </c:>
+    <c:forEach var="ad" items="${ads}">
+        <c:forEach var="user" items="${user}">
+            <c: if ${ad.id} == ${user.id}>
+                <div class="col-md-3" style="border: black 1px">
+                    <h2>${ad.title}</h2>
+                    <p>${ad.description}</p>
+                </div>
+            </c:>
+        </c:forEach>
+    </c:forEach>
 </div>
-
 </body>
 </html>
