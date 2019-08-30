@@ -25,13 +25,32 @@ public class RegisterServlet extends HttpServlet {
         String passwordConfirmation = request.getParameter("confirm_password");
 
         // validate input
-        boolean inputHasErrors = username.isEmpty()
-            || email.isEmpty()
-            || password.isEmpty()
-            || (! password.equals(passwordConfirmation));
+        boolean usernameError = username.isEmpty();
+        boolean emailError = email.isEmpty();
+        boolean passwordError = password.isEmpty();
+        boolean passwordDontMatch = (! password.equals(passwordConfirmation));
+//        boolean inputHasErrors = username.isEmpty()
+//            || email.isEmpty()
+//            || password.isEmpty()
+//            || (! password.equals(passwordConfirmation));
 
-        if (inputHasErrors) {
-            request.getSession().setAttribute("error","Invalid Input, Please Try Again");
+        if (usernameError) {
+            request.getSession().setAttribute("error","Username Error, Please Try Again");
+            response.sendRedirect("/register");
+            return;
+        }
+        if (emailError) {
+            request.getSession().setAttribute("error","Email Error, Please Try Again");
+            response.sendRedirect("/register");
+            return;
+        }
+        if (passwordError) {
+            request.getSession().setAttribute("error","Password Error, Please Try Again");
+            response.sendRedirect("/register");
+            return;
+        }
+        if (passwordDontMatch) {
+            request.getSession().setAttribute("error","Passwords Didn't Match, Please Try Again");
             response.sendRedirect("/register");
             return;
         }
@@ -39,10 +58,16 @@ public class RegisterServlet extends HttpServlet {
         // create and save a new user
         User user = new User(username, email, password);
         if (DaoFactory.getUsersDao().findByUsername(user.getUsername()) != null){
-            request.getSession().setAttribute("error","Invalid Input, Please Try Again");
+            request.getSession().setAttribute("error","Username Already Exists, Please Try Again");
             response.sendRedirect("/register");
             return;
         }
+        if (DaoFactory.getUsersDao().findByEmail(user.getEmail()) != null){
+            request.getSession().setAttribute("error","Email is Already in Use, Please Try Again");
+            response.sendRedirect("/register");
+            return;
+        }
+
         DaoFactory.getUsersDao().insert(user);
         response.sendRedirect("/login");
     }
