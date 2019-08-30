@@ -16,14 +16,12 @@ import java.io.IOException;
 @WebServlet(name = "controllers.LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Boolean lurker = null;
 
         if (request.getSession().getAttribute("user") != null) {
             response.sendRedirect("/profile");
             return;
         }
         if (request.getSession().getAttribute("user") == null) {
-            request.setAttribute("lurker", true);
         }
         request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
     }

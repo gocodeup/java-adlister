@@ -17,7 +17,7 @@ public class ViewProfileServlet extends HttpServlet {
         Cookie message = new Cookie("message", "Welcome to the profile page");
 
         if (request.getSession().getAttribute("user") == null) {
-//            response.addCookie(message);
+            response.addCookie(message);
             response.sendRedirect("/login");
             return;
         }
