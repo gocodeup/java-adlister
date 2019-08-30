@@ -31,7 +31,7 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         User user = DaoFactory.getUsersDao().findByUsername(username);
         Cookie[]cookies = request.getCookies();
-        String referer = request.getHeader("Referer");
+//        String referer = request.getHeader("Referer");
 
         if (username == null) {
             username = " ";
@@ -46,18 +46,18 @@ public class LoginServlet extends HttpServlet {
 
         boolean validAttempt = Password.check(password, user.getPassword());
 
-        if (validAttempt && cookies == null) {
+        if (validAttempt) {
             request.getSession().setAttribute("user", user);
             response.sendRedirect("/profile");
                 return;
-        } if (validAttempt && cookies != null) {
-            request.getSession().setAttribute("user", user);
-            response.sendRedirect(referer);
-            for (Cookie cookie : cookies) {
-                cookie.setValue("");
-                cookie.setMaxAge(0);
-            }
-                return;
+//        } if (validAttempt && cookies != null) {
+//            request.getSession().setAttribute("user", user);
+//            response.sendRedirect(referer);
+//            for (Cookie cookie : cookies) {
+//                cookie.setValue("");
+//                cookie.setMaxAge(0);
+//            }
+//                return;
         } else {
             response.sendRedirect("/login");
         }
