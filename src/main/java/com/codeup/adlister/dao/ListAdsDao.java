@@ -1,3 +1,4 @@
+
 //package com.codeup.adlister.dao;
 //
 //import com.codeup.adlister.dao.Ads;
@@ -28,13 +29,10 @@
 //        return ad.getId();
 //    }
 //
-//    @Override
-//    public List<Ad> userAds(Long user_id) {
-//        return null;
-//    }
-//
 //    private List<Ad> generateAds() {
 //        List<Ad> ads = new ArrayList<>();
 //        return ads;
 //    }
 //}
+
+
