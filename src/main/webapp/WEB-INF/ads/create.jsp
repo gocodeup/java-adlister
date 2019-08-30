@@ -26,6 +26,16 @@
                 </c:if>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
+            <div>
+                <select multiple name="category">
+                   <c:forEach var="category" items="${categories}">
+<%--                    <option value="volvo">Volvo</option>--%>
+                       <option value="${category.id}">${category.category}</option>
+<%--                       <h2>${category.category}</h2>--%>
+<%--                    <h2>${category.category_id}</h2>--%>
+                   </c:forEach>
+                </select>
+            </div>
             <input type="submit" class="btn btn-block btn-primary">
         </form>
     </div>
