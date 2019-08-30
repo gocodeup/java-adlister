@@ -7,6 +7,7 @@ public class User {
     private String username;
     private String email;
     private String password;
+    private boolean lurkerStatus;
 
     public User() {}
 
@@ -54,4 +55,8 @@ public class User {
     public void setPassword(String password) {
         this.password = Password.hash(password);
     }
+
+    public boolean getLurkerStatus() { return lurkerStatus; }
+
+    public void setLurkerStatus(boolean lurkerStatus) { this.lurkerStatus = lurkerStatus; }
 }
