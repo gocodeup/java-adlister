@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="navbar-header">
             <a class="navbar-brand" href="/ads">Home</a>
-            <a class="navbar-brand" href="/search">Create an Ad</a>
+<%--            <a class="navbar-brand" href="/search">Create an Ad</a>--%>
             <c:if test="${sessionScope.user != null}">
             <a class="navbar-brand" href="/ads/create">Create an Ad</a>
         </c:if>
