@@ -1,6 +1,8 @@
 package com.codeup.adlister.models;
 
+
 import java.util.Date;
+
 
 public class Ad {
     private long id;
@@ -26,7 +28,6 @@ public class Ad {
         this. blocksId = blocksId;
         this. categoriesId = categoriesId;
     }
-
 
     public Ad(long userId, String title, String description, int blocksId, int categoriesId) {
         this.userId = userId;
