@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                <c:if test="${sessionScope.error!=null}">
+                <c:if test="${sessionScope.error != null}">
                     <textarea id="description" name="description" class="form-control" type="text" value = ${sessionScope.description}>
                     <%request.getSession().removeAttribute("email");%>
                 </c:if>
