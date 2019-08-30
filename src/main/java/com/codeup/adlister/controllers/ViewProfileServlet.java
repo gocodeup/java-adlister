@@ -1,5 +1,8 @@
 package com.codeup.adlister.controllers;
 
+import com.codeup.adlister.dao.DaoFactory;
+import com.codeup.adlister.models.User;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
@@ -12,12 +15,16 @@ import java.io.IOException;
 public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Cookie message = new Cookie("message", "Welcome to the profile page");
+
         if (request.getSession().getAttribute("user") == null) {
-            response.addCookie(message);
+//            response.addCookie(message);
             response.sendRedirect("/login");
             return;
         }
-        request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
 
+        User sessionUser = (User) request.getSession().getAttribute("user");
+        request.setAttribute("ads", DaoFactory.getAdsDao().userAds((sessionUser.getId())));
+        request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
     }
+
 }
