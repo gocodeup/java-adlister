@@ -39,6 +39,7 @@ public class RegisterServlet extends HttpServlet {
         boolean emailError = email.isEmpty();
         boolean passwordError = password.isEmpty();
         boolean passwordDontMatch = (! password.equals(passwordConfirmation));
+//        Old function
 //        boolean inputHasErrors = username.isEmpty()
 //            || email.isEmpty()
 //            || password.isEmpty()
