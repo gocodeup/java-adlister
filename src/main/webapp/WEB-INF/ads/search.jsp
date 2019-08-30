@@ -1,4 +1,8 @@
+<%@ page import="com.codeup.adlister.models.Ad" %>
+<%@ page import="java.util.List" %>
+<%@ page import="java.util.ArrayList" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -11,34 +15,38 @@
 
 <div class="container">
     <h1>Search for an Ad!</h1>
-    <form action="/search" method="post">
+    <form action="/ads/search" method="get">
         <div class="form-group">
-            <label for="description">Search</label>
-            <textarea id="description" name="description" class="form-control" type="text">
-        </textarea>
-            <button type="button" id="submitbtn">submit</button>
+            <label for="search">Search</label>
+            <input id="search" name="search" class="form-control" type="text" value="${param.searched}">
         </div>
-    </form>
+        <input type="submit" class="btn btn-block btn-primary">
 
-    <c:forEach var="ad" items="${ads}">
-        <c:if test="${sessionScope.searched != null}">
-            <c:if test="${ad.title || ad.description || ad.date || ad.category == sessionScope.searched}">
+    </form>
+    <c:choose>
+        <c:when test="${param.search != null}">
+            <c:forEach var="ad" items="${ads}">
+                <c:if test="${fn:contains(ad.title, param.search) || fn:contains(ad.description, param.search)}">
+                    <div class="col-md-6">
+                        <h1>${ad.title}</h1>
+                        <h2>${ad.description}</h2>
+                    </div>
+                </c:if>
+            </c:forEach>
+
+        </c:when>
+        <c:otherwise>
+            <p>${param.search}</p>
+            <c:forEach var="ad" items="${ads}">
                 <div class="col-md-6">
                     <h2>${ad.title}</h2>
                     <p>${ad.description}</p>
-                    <p>${ad.category_id}</p>
-                    <p>${ad.block_id}</p>
-                    <p>${ad.date}</p>
                 </div>
-            </c:if>
-        </c:if>
-        <c:if test="${sessionScope.searched = null}">
-            <div class="col-md-6">
-                <h2>${ad.title}</h2>
-                <p>${ad.description}</p>
-            </div>
-        </c:if>
-    </c:forEach>
+            </c:forEach>
+
+
+        </c:otherwise>
+    </c:choose>
 </div>
 
 </body>
