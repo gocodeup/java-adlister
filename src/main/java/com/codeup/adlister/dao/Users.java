@@ -9,5 +9,5 @@ public interface Users {
     User findByEmail(String email);
     User updateUserInfo(User user);
     Long insert(User user);
-    User deleteUserInfo(String username);
+//    User deleteUserInfo(String username);
 }

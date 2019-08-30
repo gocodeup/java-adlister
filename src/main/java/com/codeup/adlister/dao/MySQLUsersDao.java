@@ -32,29 +32,30 @@ public class MySQLUsersDao implements Users {
     }
 
     public User updateUserInfo(User user) {
-        String query = "UPDATE users SET username = ?, email = ?, password = ?";
+        String query = "update users SET username = ?, email = ?, password = ? where id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, user.getUsername());
             stmt.setString(2, user.getEmail());
             stmt.setString(3, user.getPassword());
+            stmt.setLong(4, user.getId());
             return extractUser(stmt.executeQuery());
         } catch (SQLException e) {
             throw new RuntimeException("Error finding a user by email", e);
         }
     }
 
-    public User deleteUserInfo(String username) {
-        String query = "DELETE FROM users where username = ?";
-        try {
-            PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.setString(1, username);
-            return extractUser(stmt.executeQuery());
-        } catch (SQLException e) {
-            throw new RuntimeException("Error finding a user by username", e);
-        }
-    }
-
+//    public User updateUserInfo(String username) {
+//        String query = "update users set where idusername = ?";
+//        try {
+//            PreparedStatement stmt = connection.prepareStatement(query);
+//            stmt.setString(1, username);
+//            return extractUser(stmt.executeQuery());
+//        } catch (SQLException e) {
+//            throw new RuntimeException("Error finding a user by username", e);
+//        }
+//    }
+//
 
     @Override
     public User findByUsername(String username) {
