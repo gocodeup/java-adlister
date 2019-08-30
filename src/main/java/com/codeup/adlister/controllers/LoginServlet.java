@@ -16,26 +16,27 @@ import java.io.IOException;
 @WebServlet(name = "controllers.LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-        if (request.getSession().getAttribute("user") != null) {
-            response.sendRedirect("/profile");
-            return;
-        }
-        if (request.getSession().getAttribute("user") == null) {
-        }
+//
+//        if (request.getSession().getAttribute("user") != null) {
+//            response.sendRedirect("/profile");
+//            return;
+//        }
+//        if (request.getSession().getAttribute("user") == null) {
+//        }
         request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException{
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+//        String lurker = request.getParameter("from");
         User user = DaoFactory.getUsersDao().findByUsername(username);
-        Cookie[]cookies = request.getCookies();
-//        String referer = request.getHeader("Referer");
+        Cookie[] cookies = request.getCookies();
+        String lurker = request.getParameter("from").replace("/WEB-INF", "").replace("/index.jsp", "").replace(".jsp", "");
 
         if (username == null) {
-            username = " ";
-        }else{
+            username = "";
+        } else {
             request.getSession().setAttribute("username", username);
         }
 
@@ -48,18 +49,17 @@ public class LoginServlet extends HttpServlet {
 
         if (validAttempt) {
             request.getSession().setAttribute("user", user);
-            response.sendRedirect("/profile");
+
+            if (lurker != null) {
+                response.sendRedirect(lurker);
                 return;
-//        } if (validAttempt && cookies != null) {
-//            request.getSession().setAttribute("user", user);
-//            response.sendRedirect(referer);
-//            for (Cookie cookie : cookies) {
-//                cookie.setValue("");
-//                cookie.setMaxAge(0);
-//            }
-//                return;
-        } else {
-            response.sendRedirect("/login");
+            }
+            if (lurker == null) {
+                response.sendRedirect("/profile");
+                return;
+            } else {
+                response.sendRedirect("/login");
+            }
         }
     }
 }
