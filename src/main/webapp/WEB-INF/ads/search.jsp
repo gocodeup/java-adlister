@@ -1,6 +1,3 @@
-<%@ page import="com.codeup.adlister.models.Ad" %>
-<%@ page import="java.util.List" %>
-<%@ page import="java.util.ArrayList" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -26,10 +23,10 @@
     <c:choose>
         <c:when test="${param.search != null}">
             <c:forEach var="ad" items="${ads}">
-                <c:if test="${fn:contains(ad.title, param.search) || fn:contains(ad.description, param.search)}">
+                <c:if test="${fn:containsIgnoreCase(ad.title, param.search) || fn:containsIgnoreCase(ad.description, param.search)}">
                     <div class="col-md-6">
-                        <h1>${ad.title}</h1>
-                        <h2>${ad.description}</h2>
+                        <h2>${ad.title}</h2>
+                        <p>${ad.description}</p>
                     </div>
                 </c:if>
             </c:forEach>
