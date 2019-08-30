@@ -34,6 +34,7 @@ public class Ad {
         this.description = description;
         this.blocksId = blocksId;
         this.categoriesId= categoriesId;
+
     }
 
     public long getId() {
