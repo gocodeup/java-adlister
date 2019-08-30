@@ -19,7 +19,7 @@
         <form action="/login" method="POST">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input id="username" name="username" class="form-control" type="text" value = ${param.username}>
+<%--                <input id="username" name="username" class="form-control" type="text" value = ${param.username}>--%>
                 <c:if test="${sessionScope.error!=null}">
                     <input id="username" name="username" class="form-control" type="text" value = ${sessionScope.username}>
                     <%request.getSession().removeAttribute("username");%>
