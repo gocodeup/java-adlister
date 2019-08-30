@@ -22,11 +22,16 @@ public class ListAdsDao implements Ads {
         }
         // we'll assign an "id" here based on the size of the ads list
         // really the dao would handle this
+<<<<<<< HEAD
         ad.setId(ads.size());
+=======
+        ad.setId((long) ads.size());
+>>>>>>> e076e545f3f9fe01d71185c5a383495f8ede8a36
         ads.add(ad);
         return ad.getId();
     }
 
+<<<<<<< HEAD
     @Override
     public List<Ad> userAds(Long user_id) {
         return null;
@@ -61,3 +66,11 @@ public class ListAdsDao implements Ads {
         return ads;
     }
 }
+=======
+    private List<Ad> generateAds() {
+        List<Ad> ads = new ArrayList<>();
+        return ads;
+    }
+}
+
+>>>>>>> e076e545f3f9fe01d71185c5a383495f8ede8a36

@@ -15,6 +15,7 @@ import java.io.IOException;
 public class CreateAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("categories", DaoFactory.getCategoriesDao().all());
+        request.setAttribute("blocks", DaoFactory.getBlocksDao().all());
 
         if (request.getSession().getAttribute("user") == null) {
             response.sendRedirect("/login");
@@ -28,13 +29,10 @@ public class CreateAdServlet extends HttpServlet {
         User user = (User) request.getSession().getAttribute("user");
         String title = request.getParameter("title");
         String description = request.getParameter("description");
-        Ad ad = new Ad(
-            user.getId(),
-//            request.getParameter("title"),
-                title,
-//            request.getParameter("description")
-                description
-        );
+        Integer blockId = (Integer) Integer.parseInt(request.getParameter("block") );
+        Integer categoryId = (Integer) Integer.parseInt(request.getParameter("category"));
+
+        Ad ad = new Ad( user.getId(), title,  description,  blockId, categoryId);
 
         if (title == null) {
             title = " ";
@@ -47,6 +45,7 @@ public class CreateAdServlet extends HttpServlet {
         }else{
             request.getSession().setAttribute("description", description);
         }
+
 
         DaoFactory.getAdsDao().insert(ad);
         response.sendRedirect("/ads");
