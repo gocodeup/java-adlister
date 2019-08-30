@@ -40,14 +40,21 @@ CREATE TABLE ads
     description TEXT NOT NULL,
     `date` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     blocks_id INT UNSIGNED NOT NULL,
-    categories_id INT UNSIGNED NOT NULL,
+#     categories_id INT UNSIGNED NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users (id)
         ON DELETE CASCADE,
-    FOREIGN KEY (categories_id) REFERENCES categories (id)
-        ON DELETE CASCADE,
+#     FOREIGN KEY (categories_id) REFERENCES categories (id)
+#         ON DELETE CASCADE,
     FOREIGN KEY (blocks_id) REFERENCES blocks (id)
         ON DELETE CASCADE
+);
+
+CREATE TABLE adscategories (
+    ad_id INTEGER UNSIGNED NOT NULL,
+    categories_id INTEGER UNSIGNED NOT NULL,
+    FOREIGN KEY (ad_id) REFERENCES ads(id),
+    FOREIGN KEY (categories_id) REFERENCES categories(id)
 );
 
 
