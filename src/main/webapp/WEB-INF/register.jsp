@@ -19,10 +19,18 @@
         <form action="/register" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
-                <input id="username" name="username" class="form-control" type="text" value = "${param.username}">
+                <c:if test="${sessionScope.error!=null}">
+                    <input id="username" name="username" class="form-control" type="text" value = ${sessionScope.username}>
+                    <%request.getSession().removeAttribute("username");%>
+                </c:if>
+                <input id="username" name="username" class="form-control" type="text">
             </div>
             <div class="form-group">
                 <label for="email">Email</label>
+                <c:if test="${sessionScope.error!=null}">
+                    <input id="email" name="email" class="form-control" type="text" value = ${sessionScope.email}>
+                    <%request.getSession().removeAttribute("email");%>
+                </c:if>
                 <input id="email" name="email" class="form-control" type="text">
             </div>
             <div class="form-group">
