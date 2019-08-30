@@ -4,6 +4,7 @@ INSERT INTO categories (category)
 VALUES
        ('Reserved List'),
        ('EDH'),
+       ('Competitive'),
        ('Bulk'),
        ('Foreign'),
        ('Promos'),
