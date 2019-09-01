@@ -19,7 +19,7 @@
 <c:set var="exception" value="${requestScope['javax.servlet.error.exception']}"/>
 
 <div class="container">
-    <h1>Opps! An Error has Occurred.</h1>
+    <h1>Oops! An Error has Occurred.</h1>
     <!-- Stack trace -->
     <jsp:scriptlet>
 
