@@ -1,0 +1,385 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../extend'",
+      "raw" : "'../../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "GeometryCollection",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../GeometryCollection'",
+      "raw" : "'../GeometryCollection'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "ShortCircuitedGeometryVisitor",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ {
+          "expression" : {
+            "operator" : "=",
+            "left" : {
+              "object" : {
+                "type" : "ThisExpression"
+              },
+              "property" : {
+                "name" : "_isDone",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "right" : {
+              "value" : false,
+              "raw" : "false",
+              "type" : "Literal"
+            },
+            "type" : "AssignmentExpression"
+          },
+          "type" : "ExpressionStatement"
+        } ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "ShortCircuitedGeometryVisitor",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "applyTo",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ {
+              "name" : "geom",
+              "type" : "Identifier"
+            } ],
+            "body" : {
+              "body" : [ {
+                "init" : {
+                  "declarations" : [ {
+                    "id" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "value" : "0",
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "type" : "VariableDeclarator"
+                  } ],
+                  "kind" : "var",
+                  "type" : "VariableDeclaration"
+                },
+                "test" : {
+                  "operator" : "&&",
+                  "left" : {
+                    "operator" : "<",
+                    "left" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "geom",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "getNumGeometries",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "right" : {
+                    "operator" : "!",
+                    "prefix" : true,
+                    "argument" : {
+                      "object" : {
+                        "type" : "ThisExpression"
+                      },
+                      "property" : {
+                        "name" : "_isDone",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "UnaryExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "update" : {
+                  "operator" : "++",
+                  "prefix" : false,
+                  "argument" : {
+                    "name" : "i",
+                    "type" : "Identifier"
+                  },
+                  "type" : "UnaryExpression"
+                },
+                "body" : {
+                  "body" : [ {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "element",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "geom",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "getGeometryN",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "i",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "var",
+                    "type" : "VariableDeclaration"
+                  }, {
+                    "test" : {
+                      "operator" : "!",
+                      "prefix" : true,
+                      "argument" : {
+                        "operator" : "instanceof",
+                        "left" : {
+                          "name" : "element",
+                          "type" : "Identifier"
+                        },
+                        "right" : {
+                          "name" : "GeometryCollection",
+                          "type" : "Identifier"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "type" : "UnaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "expression" : {
+                          "callee" : {
+                            "object" : {
+                              "type" : "ThisExpression"
+                            },
+                            "property" : {
+                              "name" : "visit",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ {
+                            "name" : "element",
+                            "type" : "Identifier"
+                          } ],
+                          "type" : "CallExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "test" : {
+                          "callee" : {
+                            "object" : {
+                              "type" : "ThisExpression"
+                            },
+                            "property" : {
+                              "name" : "isDone",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ ],
+                          "type" : "CallExpression"
+                        },
+                        "consequent" : {
+                          "body" : [ {
+                            "expression" : {
+                              "operator" : "=",
+                              "left" : {
+                                "object" : {
+                                  "type" : "ThisExpression"
+                                },
+                                "property" : {
+                                  "name" : "_isDone",
+                                  "type" : "Identifier"
+                                },
+                                "computed" : false,
+                                "type" : "MemberExpression"
+                              },
+                              "right" : {
+                                "value" : true,
+                                "raw" : "true",
+                                "type" : "Literal"
+                              },
+                              "type" : "AssignmentExpression"
+                            },
+                            "type" : "ExpressionStatement"
+                          }, {
+                            "argument" : {
+                              "value" : null,
+                              "raw" : "null",
+                              "type" : "Literal"
+                            },
+                            "type" : "ReturnStatement"
+                          } ],
+                          "type" : "BlockStatement"
+                        },
+                        "alternate" : null,
+                        "type" : "IfStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : {
+                      "expression" : {
+                        "callee" : {
+                          "object" : {
+                            "type" : "ThisExpression"
+                          },
+                          "property" : {
+                            "name" : "applyTo",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "element",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "ExpressionStatement"
+                    },
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "ForStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "ShortCircuitedGeometryVisitor",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

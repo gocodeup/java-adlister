@@ -1,0 +1,1566 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../extend'",
+      "raw" : "'../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "CommonBitsOp",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'./CommonBitsOp'",
+      "raw" : "'./CommonBitsOp'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "RuntimeException",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../java/lang/RuntimeException'",
+      "raw" : "'../../../../java/lang/RuntimeException'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "EnhancedPrecisionOp",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "EnhancedPrecisionOp",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "EnhancedPrecisionOp",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "EnhancedPrecisionOp",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "union",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "geom0",
+          "type" : "Identifier"
+        }, {
+          "name" : "geom1",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "originalEx",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "value" : null,
+                "raw" : "null",
+                "type" : "Literal"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "block" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "result",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "geom0",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "union",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "geom1",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "argument" : {
+                  "name" : "result",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "handler" : {
+              "param" : {
+                "name" : "ex",
+                "type" : "Identifier"
+              },
+              "body" : {
+                "body" : [ {
+                  "test" : {
+                    "operator" : "instanceof",
+                    "left" : {
+                      "name" : "ex",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "RuntimeException",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "expression" : {
+                        "operator" : "=",
+                        "left" : {
+                          "name" : "originalEx",
+                          "type" : "Identifier"
+                        },
+                        "right" : {
+                          "name" : "ex",
+                          "type" : "Identifier"
+                        },
+                        "type" : "AssignmentExpression"
+                      },
+                      "type" : "ExpressionStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : {
+                    "argument" : {
+                      "name" : "ex",
+                      "type" : "Identifier"
+                    },
+                    "type" : "ThrowStatement"
+                  },
+                  "type" : "IfStatement"
+                } ],
+                "type" : "BlockStatement"
+              },
+              "type" : "CatchClause"
+            },
+            "finalizer" : {
+              "body" : [ ],
+              "type" : "BlockStatement"
+            },
+            "type" : "TryStatement"
+          }, {
+            "block" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "cbo",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "name" : "CommonBitsOp",
+                      "type" : "Identifier"
+                    },
+                    "arguments" : [ {
+                      "value" : true,
+                      "raw" : "true",
+                      "type" : "Literal"
+                    } ],
+                    "type" : "NewExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "resultEP",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "cbo",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "union",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "geom0",
+                      "type" : "Identifier"
+                    }, {
+                      "name" : "geom1",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "test" : {
+                  "operator" : "!",
+                  "prefix" : true,
+                  "argument" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "resultEP",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "isValid",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "UnaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "name" : "originalEx",
+                    "type" : "Identifier"
+                  },
+                  "type" : "ThrowStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "argument" : {
+                  "name" : "resultEP",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "handler" : {
+              "param" : {
+                "name" : "ex2",
+                "type" : "Identifier"
+              },
+              "body" : {
+                "body" : [ {
+                  "test" : {
+                    "operator" : "instanceof",
+                    "left" : {
+                      "name" : "ex2",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "RuntimeException",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "argument" : {
+                        "name" : "originalEx",
+                        "type" : "Identifier"
+                      },
+                      "type" : "ThrowStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : {
+                    "argument" : {
+                      "name" : "ex2",
+                      "type" : "Identifier"
+                    },
+                    "type" : "ThrowStatement"
+                  },
+                  "type" : "IfStatement"
+                } ],
+                "type" : "BlockStatement"
+              },
+              "type" : "CatchClause"
+            },
+            "finalizer" : {
+              "body" : [ ],
+              "type" : "BlockStatement"
+            },
+            "type" : "TryStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "EnhancedPrecisionOp",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "intersection",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "geom0",
+          "type" : "Identifier"
+        }, {
+          "name" : "geom1",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "originalEx",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "value" : null,
+                "raw" : "null",
+                "type" : "Literal"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "block" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "result",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "geom0",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "intersection",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "geom1",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "argument" : {
+                  "name" : "result",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "handler" : {
+              "param" : {
+                "name" : "ex",
+                "type" : "Identifier"
+              },
+              "body" : {
+                "body" : [ {
+                  "test" : {
+                    "operator" : "instanceof",
+                    "left" : {
+                      "name" : "ex",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "RuntimeException",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "expression" : {
+                        "operator" : "=",
+                        "left" : {
+                          "name" : "originalEx",
+                          "type" : "Identifier"
+                        },
+                        "right" : {
+                          "name" : "ex",
+                          "type" : "Identifier"
+                        },
+                        "type" : "AssignmentExpression"
+                      },
+                      "type" : "ExpressionStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : {
+                    "argument" : {
+                      "name" : "ex",
+                      "type" : "Identifier"
+                    },
+                    "type" : "ThrowStatement"
+                  },
+                  "type" : "IfStatement"
+                } ],
+                "type" : "BlockStatement"
+              },
+              "type" : "CatchClause"
+            },
+            "finalizer" : {
+              "body" : [ ],
+              "type" : "BlockStatement"
+            },
+            "type" : "TryStatement"
+          }, {
+            "block" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "cbo",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "name" : "CommonBitsOp",
+                      "type" : "Identifier"
+                    },
+                    "arguments" : [ {
+                      "value" : true,
+                      "raw" : "true",
+                      "type" : "Literal"
+                    } ],
+                    "type" : "NewExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "resultEP",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "cbo",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "intersection",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "geom0",
+                      "type" : "Identifier"
+                    }, {
+                      "name" : "geom1",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "test" : {
+                  "operator" : "!",
+                  "prefix" : true,
+                  "argument" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "resultEP",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "isValid",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "UnaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "name" : "originalEx",
+                    "type" : "Identifier"
+                  },
+                  "type" : "ThrowStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "argument" : {
+                  "name" : "resultEP",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "handler" : {
+              "param" : {
+                "name" : "ex2",
+                "type" : "Identifier"
+              },
+              "body" : {
+                "body" : [ {
+                  "test" : {
+                    "operator" : "instanceof",
+                    "left" : {
+                      "name" : "ex2",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "RuntimeException",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "argument" : {
+                        "name" : "originalEx",
+                        "type" : "Identifier"
+                      },
+                      "type" : "ThrowStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : {
+                    "argument" : {
+                      "name" : "ex2",
+                      "type" : "Identifier"
+                    },
+                    "type" : "ThrowStatement"
+                  },
+                  "type" : "IfStatement"
+                } ],
+                "type" : "BlockStatement"
+              },
+              "type" : "CatchClause"
+            },
+            "finalizer" : {
+              "body" : [ ],
+              "type" : "BlockStatement"
+            },
+            "type" : "TryStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "EnhancedPrecisionOp",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "buffer",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "geom",
+          "type" : "Identifier"
+        }, {
+          "name" : "distance",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "originalEx",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "value" : null,
+                "raw" : "null",
+                "type" : "Literal"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "block" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "result",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "geom",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "buffer",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "distance",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "argument" : {
+                  "name" : "result",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "handler" : {
+              "param" : {
+                "name" : "ex",
+                "type" : "Identifier"
+              },
+              "body" : {
+                "body" : [ {
+                  "test" : {
+                    "operator" : "instanceof",
+                    "left" : {
+                      "name" : "ex",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "RuntimeException",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "expression" : {
+                        "operator" : "=",
+                        "left" : {
+                          "name" : "originalEx",
+                          "type" : "Identifier"
+                        },
+                        "right" : {
+                          "name" : "ex",
+                          "type" : "Identifier"
+                        },
+                        "type" : "AssignmentExpression"
+                      },
+                      "type" : "ExpressionStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : {
+                    "argument" : {
+                      "name" : "ex",
+                      "type" : "Identifier"
+                    },
+                    "type" : "ThrowStatement"
+                  },
+                  "type" : "IfStatement"
+                } ],
+                "type" : "BlockStatement"
+              },
+              "type" : "CatchClause"
+            },
+            "finalizer" : {
+              "body" : [ ],
+              "type" : "BlockStatement"
+            },
+            "type" : "TryStatement"
+          }, {
+            "block" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "cbo",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "name" : "CommonBitsOp",
+                      "type" : "Identifier"
+                    },
+                    "arguments" : [ {
+                      "value" : true,
+                      "raw" : "true",
+                      "type" : "Literal"
+                    } ],
+                    "type" : "NewExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "resultEP",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "cbo",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "buffer",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "geom",
+                      "type" : "Identifier"
+                    }, {
+                      "name" : "distance",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "test" : {
+                  "operator" : "!",
+                  "prefix" : true,
+                  "argument" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "resultEP",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "isValid",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "UnaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "name" : "originalEx",
+                    "type" : "Identifier"
+                  },
+                  "type" : "ThrowStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "argument" : {
+                  "name" : "resultEP",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "handler" : {
+              "param" : {
+                "name" : "ex2",
+                "type" : "Identifier"
+              },
+              "body" : {
+                "body" : [ {
+                  "test" : {
+                    "operator" : "instanceof",
+                    "left" : {
+                      "name" : "ex2",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "RuntimeException",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "argument" : {
+                        "name" : "originalEx",
+                        "type" : "Identifier"
+                      },
+                      "type" : "ThrowStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : {
+                    "argument" : {
+                      "name" : "ex2",
+                      "type" : "Identifier"
+                    },
+                    "type" : "ThrowStatement"
+                  },
+                  "type" : "IfStatement"
+                } ],
+                "type" : "BlockStatement"
+              },
+              "type" : "CatchClause"
+            },
+            "finalizer" : {
+              "body" : [ ],
+              "type" : "BlockStatement"
+            },
+            "type" : "TryStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "EnhancedPrecisionOp",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "symDifference",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "geom0",
+          "type" : "Identifier"
+        }, {
+          "name" : "geom1",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "originalEx",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "value" : null,
+                "raw" : "null",
+                "type" : "Literal"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "block" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "result",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "geom0",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "symDifference",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "geom1",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "argument" : {
+                  "name" : "result",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "handler" : {
+              "param" : {
+                "name" : "ex",
+                "type" : "Identifier"
+              },
+              "body" : {
+                "body" : [ {
+                  "test" : {
+                    "operator" : "instanceof",
+                    "left" : {
+                      "name" : "ex",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "RuntimeException",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "expression" : {
+                        "operator" : "=",
+                        "left" : {
+                          "name" : "originalEx",
+                          "type" : "Identifier"
+                        },
+                        "right" : {
+                          "name" : "ex",
+                          "type" : "Identifier"
+                        },
+                        "type" : "AssignmentExpression"
+                      },
+                      "type" : "ExpressionStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : {
+                    "argument" : {
+                      "name" : "ex",
+                      "type" : "Identifier"
+                    },
+                    "type" : "ThrowStatement"
+                  },
+                  "type" : "IfStatement"
+                } ],
+                "type" : "BlockStatement"
+              },
+              "type" : "CatchClause"
+            },
+            "finalizer" : {
+              "body" : [ ],
+              "type" : "BlockStatement"
+            },
+            "type" : "TryStatement"
+          }, {
+            "block" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "cbo",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "name" : "CommonBitsOp",
+                      "type" : "Identifier"
+                    },
+                    "arguments" : [ {
+                      "value" : true,
+                      "raw" : "true",
+                      "type" : "Literal"
+                    } ],
+                    "type" : "NewExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "resultEP",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "cbo",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "symDifference",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "geom0",
+                      "type" : "Identifier"
+                    }, {
+                      "name" : "geom1",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "test" : {
+                  "operator" : "!",
+                  "prefix" : true,
+                  "argument" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "resultEP",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "isValid",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "UnaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "name" : "originalEx",
+                    "type" : "Identifier"
+                  },
+                  "type" : "ThrowStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "argument" : {
+                  "name" : "resultEP",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "handler" : {
+              "param" : {
+                "name" : "ex2",
+                "type" : "Identifier"
+              },
+              "body" : {
+                "body" : [ {
+                  "test" : {
+                    "operator" : "instanceof",
+                    "left" : {
+                      "name" : "ex2",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "RuntimeException",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "argument" : {
+                        "name" : "originalEx",
+                        "type" : "Identifier"
+                      },
+                      "type" : "ThrowStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : {
+                    "argument" : {
+                      "name" : "ex2",
+                      "type" : "Identifier"
+                    },
+                    "type" : "ThrowStatement"
+                  },
+                  "type" : "IfStatement"
+                } ],
+                "type" : "BlockStatement"
+              },
+              "type" : "CatchClause"
+            },
+            "finalizer" : {
+              "body" : [ ],
+              "type" : "BlockStatement"
+            },
+            "type" : "TryStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "EnhancedPrecisionOp",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "difference",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "geom0",
+          "type" : "Identifier"
+        }, {
+          "name" : "geom1",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "originalEx",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "value" : null,
+                "raw" : "null",
+                "type" : "Literal"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "block" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "result",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "geom0",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "difference",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "geom1",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "argument" : {
+                  "name" : "result",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "handler" : {
+              "param" : {
+                "name" : "ex",
+                "type" : "Identifier"
+              },
+              "body" : {
+                "body" : [ {
+                  "test" : {
+                    "operator" : "instanceof",
+                    "left" : {
+                      "name" : "ex",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "RuntimeException",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "expression" : {
+                        "operator" : "=",
+                        "left" : {
+                          "name" : "originalEx",
+                          "type" : "Identifier"
+                        },
+                        "right" : {
+                          "name" : "ex",
+                          "type" : "Identifier"
+                        },
+                        "type" : "AssignmentExpression"
+                      },
+                      "type" : "ExpressionStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : {
+                    "argument" : {
+                      "name" : "ex",
+                      "type" : "Identifier"
+                    },
+                    "type" : "ThrowStatement"
+                  },
+                  "type" : "IfStatement"
+                } ],
+                "type" : "BlockStatement"
+              },
+              "type" : "CatchClause"
+            },
+            "finalizer" : {
+              "body" : [ ],
+              "type" : "BlockStatement"
+            },
+            "type" : "TryStatement"
+          }, {
+            "block" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "cbo",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "name" : "CommonBitsOp",
+                      "type" : "Identifier"
+                    },
+                    "arguments" : [ {
+                      "value" : true,
+                      "raw" : "true",
+                      "type" : "Literal"
+                    } ],
+                    "type" : "NewExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "resultEP",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "cbo",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "difference",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "geom0",
+                      "type" : "Identifier"
+                    }, {
+                      "name" : "geom1",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "test" : {
+                  "operator" : "!",
+                  "prefix" : true,
+                  "argument" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "resultEP",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "isValid",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "UnaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "name" : "originalEx",
+                    "type" : "Identifier"
+                  },
+                  "type" : "ThrowStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "argument" : {
+                  "name" : "resultEP",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "handler" : {
+              "param" : {
+                "name" : "ex2",
+                "type" : "Identifier"
+              },
+              "body" : {
+                "body" : [ {
+                  "test" : {
+                    "operator" : "instanceof",
+                    "left" : {
+                      "name" : "ex2",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "RuntimeException",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "argument" : {
+                        "name" : "originalEx",
+                        "type" : "Identifier"
+                      },
+                      "type" : "ThrowStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : {
+                    "argument" : {
+                      "name" : "ex2",
+                      "type" : "Identifier"
+                    },
+                    "type" : "ThrowStatement"
+                  },
+                  "type" : "IfStatement"
+                } ],
+                "type" : "BlockStatement"
+              },
+              "type" : "CatchClause"
+            },
+            "finalizer" : {
+              "body" : [ ],
+              "type" : "BlockStatement"
+            },
+            "type" : "TryStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

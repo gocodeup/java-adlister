@@ -1,0 +1,651 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../extend'",
+      "raw" : "'../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "HalfEdge",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'./HalfEdge'",
+      "raw" : "'./HalfEdge'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "inherits",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../inherits'",
+      "raw" : "'../../../../inherits'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "MarkHalfEdge",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ {
+          "expression" : {
+            "operator" : "=",
+            "left" : {
+              "object" : {
+                "type" : "ThisExpression"
+              },
+              "property" : {
+                "name" : "_isMarked",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "right" : {
+              "value" : false,
+              "raw" : "false",
+              "type" : "Literal"
+            },
+            "type" : "AssignmentExpression"
+          },
+          "type" : "ExpressionStatement"
+        }, {
+          "declarations" : [ {
+            "id" : {
+              "name" : "orig",
+              "type" : "Identifier"
+            },
+            "init" : {
+              "object" : {
+                "name" : "arguments",
+                "type" : "Identifier"
+              },
+              "property" : {
+                "value" : 0,
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "computed" : true,
+              "type" : "MemberExpression"
+            },
+            "type" : "VariableDeclarator"
+          } ],
+          "kind" : "let",
+          "type" : "VariableDeclaration"
+        }, {
+          "expression" : {
+            "callee" : {
+              "object" : {
+                "name" : "HalfEdge",
+                "type" : "Identifier"
+              },
+              "property" : {
+                "name" : "call",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "arguments" : [ {
+              "type" : "ThisExpression"
+            }, {
+              "name" : "orig",
+              "type" : "Identifier"
+            } ],
+            "type" : "CallExpression"
+          },
+          "type" : "ExpressionStatement"
+        } ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "inherits",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "name" : "MarkHalfEdge",
+        "type" : "Identifier"
+      }, {
+        "name" : "HalfEdge",
+        "type" : "Identifier"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "MarkHalfEdge",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "mark",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "expression" : {
+                  "operator" : "=",
+                  "left" : {
+                    "object" : {
+                      "type" : "ThisExpression"
+                    },
+                    "property" : {
+                      "name" : "_isMarked",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "value" : true,
+                    "raw" : "true",
+                    "type" : "Literal"
+                  },
+                  "type" : "AssignmentExpression"
+                },
+                "type" : "ExpressionStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "setMark",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ {
+              "name" : "isMarked",
+              "type" : "Identifier"
+            } ],
+            "body" : {
+              "body" : [ {
+                "expression" : {
+                  "operator" : "=",
+                  "left" : {
+                    "object" : {
+                      "type" : "ThisExpression"
+                    },
+                    "property" : {
+                      "name" : "_isMarked",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "name" : "isMarked",
+                    "type" : "Identifier"
+                  },
+                  "type" : "AssignmentExpression"
+                },
+                "type" : "ExpressionStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "isMarked",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "object" : {
+                    "type" : "ThisExpression"
+                  },
+                  "property" : {
+                    "name" : "_isMarked",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "MarkHalfEdge",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "MarkHalfEdge",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "setMarkBoth",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "e",
+          "type" : "Identifier"
+        }, {
+          "name" : "isMarked",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "expression" : {
+              "callee" : {
+                "object" : {
+                  "name" : "e",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "setMark",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "name" : "isMarked",
+                "type" : "Identifier"
+              } ],
+              "type" : "CallExpression"
+            },
+            "type" : "ExpressionStatement"
+          }, {
+            "expression" : {
+              "callee" : {
+                "object" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "e",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "sym",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ ],
+                  "type" : "CallExpression"
+                },
+                "property" : {
+                  "name" : "setMark",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "name" : "isMarked",
+                "type" : "Identifier"
+              } ],
+              "type" : "CallExpression"
+            },
+            "type" : "ExpressionStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "MarkHalfEdge",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "isMarked",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "e",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "argument" : {
+              "callee" : {
+                "object" : {
+                  "name" : "e",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "isMarked",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ ],
+              "type" : "CallExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "MarkHalfEdge",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "setMark",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "e",
+          "type" : "Identifier"
+        }, {
+          "name" : "isMarked",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "expression" : {
+              "callee" : {
+                "object" : {
+                  "name" : "e",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "setMark",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "name" : "isMarked",
+                "type" : "Identifier"
+              } ],
+              "type" : "CallExpression"
+            },
+            "type" : "ExpressionStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "MarkHalfEdge",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "markBoth",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "e",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "expression" : {
+              "callee" : {
+                "object" : {
+                  "name" : "e",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "mark",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ ],
+              "type" : "CallExpression"
+            },
+            "type" : "ExpressionStatement"
+          }, {
+            "expression" : {
+              "callee" : {
+                "object" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "e",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "sym",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ ],
+                  "type" : "CallExpression"
+                },
+                "property" : {
+                  "name" : "mark",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ ],
+              "type" : "CallExpression"
+            },
+            "type" : "ExpressionStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "MarkHalfEdge",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "mark",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "e",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "expression" : {
+              "callee" : {
+                "object" : {
+                  "name" : "e",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "mark",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ ],
+              "type" : "CallExpression"
+            },
+            "type" : "ExpressionStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

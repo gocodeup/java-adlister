@@ -1,0 +1,255 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../extend'",
+      "raw" : "'../../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "ArrayList",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../java/util/ArrayList'",
+      "raw" : "'../../../../../java/util/ArrayList'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "QuadEdgeUtil",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "QuadEdgeUtil",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "QuadEdgeUtil",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "QuadEdgeUtil",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "findEdgesIncidentOnOrigin",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "start",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "incEdge",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "name" : "ArrayList",
+                  "type" : "Identifier"
+                },
+                "arguments" : [ ],
+                "type" : "NewExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "qe",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "name" : "start",
+                "type" : "Identifier"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "body" : {
+              "body" : [ {
+                "expression" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "incEdge",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "add",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "qe",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "expression" : {
+                  "operator" : "=",
+                  "left" : {
+                    "name" : "qe",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "qe",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "oNext",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "AssignmentExpression"
+                },
+                "type" : "ExpressionStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "test" : {
+              "operator" : "!==",
+              "left" : {
+                "name" : "qe",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "name" : "start",
+                "type" : "Identifier"
+              },
+              "type" : "BinaryExpression"
+            },
+            "type" : "DoWhileStatement"
+          }, {
+            "argument" : {
+              "name" : "incEdge",
+              "type" : "Identifier"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

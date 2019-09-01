@@ -1,0 +1,176 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../extend'",
+      "raw" : "'../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Exception",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../java/lang/Exception'",
+      "raw" : "'../../../../java/lang/Exception'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "inherits",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../inherits'",
+      "raw" : "'../../../../inherits'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "NotRepresentableException",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ {
+          "expression" : {
+            "callee" : {
+              "object" : {
+                "name" : "Exception",
+                "type" : "Identifier"
+              },
+              "property" : {
+                "name" : "call",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "arguments" : [ {
+              "type" : "ThisExpression"
+            }, {
+              "value" : "Projective point not representable on the Cartesian plane.",
+              "raw" : "\"Projective point not representable on the Cartesian plane.\"",
+              "type" : "Literal"
+            } ],
+            "type" : "CallExpression"
+          },
+          "type" : "ExpressionStatement"
+        } ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "inherits",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "name" : "NotRepresentableException",
+        "type" : "Identifier"
+      }, {
+        "name" : "Exception",
+        "type" : "Identifier"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "NotRepresentableException",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "NotRepresentableException",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

@@ -1,0 +1,5224 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "WKTWriter",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../io/WKTWriter'",
+      "raw" : "'../../io/WKTWriter'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "CoordinateArraySequence",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../geom/impl/CoordinateArraySequence'",
+      "raw" : "'../../geom/impl/CoordinateArraySequence'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../extend'",
+      "raw" : "'../../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "DD",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../math/DD'",
+      "raw" : "'../../math/DD'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "System",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../java/lang/System'",
+      "raw" : "'../../../../../java/lang/System'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Triangle",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../geom/Triangle'",
+      "raw" : "'../../geom/Triangle'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "TrianglePredicate",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "TrianglePredicate",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "TrianglePredicate",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "TrianglePredicate",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "triArea",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "a",
+          "type" : "Identifier"
+        }, {
+          "name" : "b",
+          "type" : "Identifier"
+        }, {
+          "name" : "c",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "argument" : {
+              "operator" : "-",
+              "left" : {
+                "operator" : "*",
+                "left" : {
+                  "operator" : "-",
+                  "left" : {
+                    "object" : {
+                      "name" : "b",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "x",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "object" : {
+                      "name" : "a",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "x",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "operator" : "-",
+                  "left" : {
+                    "object" : {
+                      "name" : "c",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "y",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "object" : {
+                      "name" : "a",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "y",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "right" : {
+                "operator" : "*",
+                "left" : {
+                  "operator" : "-",
+                  "left" : {
+                    "object" : {
+                      "name" : "b",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "y",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "object" : {
+                      "name" : "a",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "y",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "operator" : "-",
+                  "left" : {
+                    "object" : {
+                      "name" : "c",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "x",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "object" : {
+                      "name" : "a",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "x",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "TrianglePredicate",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "isInCircleDDNormalized",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "a",
+          "type" : "Identifier"
+        }, {
+          "name" : "b",
+          "type" : "Identifier"
+        }, {
+          "name" : "c",
+          "type" : "Identifier"
+        }, {
+          "name" : "p",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "adx",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "DD",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "valueOf",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "object" : {
+                        "name" : "a",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "x",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfSubtract",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "object" : {
+                    "name" : "p",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "ady",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "DD",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "valueOf",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "object" : {
+                        "name" : "a",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "y",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfSubtract",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "object" : {
+                    "name" : "p",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "bdx",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "DD",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "valueOf",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "object" : {
+                        "name" : "b",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "x",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfSubtract",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "object" : {
+                    "name" : "p",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "bdy",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "DD",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "valueOf",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "object" : {
+                        "name" : "b",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "y",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfSubtract",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "object" : {
+                    "name" : "p",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "cdx",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "DD",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "valueOf",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "object" : {
+                        "name" : "c",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "x",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfSubtract",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "object" : {
+                    "name" : "p",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "cdy",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "DD",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "valueOf",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "object" : {
+                        "name" : "c",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "y",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfSubtract",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "object" : {
+                    "name" : "p",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "abdet",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "adx",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "multiply",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "bdy",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfSubtract",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "name" : "bdx",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "multiply",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "ady",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "bcdet",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "bdx",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "multiply",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "cdy",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfSubtract",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "name" : "cdx",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "multiply",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "bdy",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "cadet",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "cdx",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "multiply",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "ady",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfSubtract",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "name" : "adx",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "multiply",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "cdy",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "alift",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "adx",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "multiply",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "adx",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfAdd",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "name" : "ady",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "multiply",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "ady",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "blift",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "bdx",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "multiply",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "bdx",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfAdd",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "name" : "bdy",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "multiply",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "bdy",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "clift",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "cdx",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "multiply",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "cdx",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfAdd",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "name" : "cdy",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "multiply",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "cdy",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "sum",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "alift",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "selfMultiply",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "bcdet",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "property" : {
+                        "name" : "selfAdd",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "callee" : {
+                        "object" : {
+                          "name" : "blift",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "selfMultiply",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "name" : "cadet",
+                        "type" : "Identifier"
+                      } ],
+                      "type" : "CallExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfAdd",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "name" : "clift",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "selfMultiply",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "abdet",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "isInCircle",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : ">",
+                "left" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "sum",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "doubleValue",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ ],
+                  "type" : "CallExpression"
+                },
+                "right" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "argument" : {
+              "name" : "isInCircle",
+              "type" : "Identifier"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "TrianglePredicate",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "checkRobustInCircle",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "a",
+          "type" : "Identifier"
+        }, {
+          "name" : "b",
+          "type" : "Identifier"
+        }, {
+          "name" : "c",
+          "type" : "Identifier"
+        }, {
+          "name" : "p",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "nonRobustInCircle",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "TrianglePredicate",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "isInCircleNonRobust",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "name" : "a",
+                  "type" : "Identifier"
+                }, {
+                  "name" : "b",
+                  "type" : "Identifier"
+                }, {
+                  "name" : "c",
+                  "type" : "Identifier"
+                }, {
+                  "name" : "p",
+                  "type" : "Identifier"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "isInCircleDD",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "TrianglePredicate",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "isInCircleDDSlow",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "name" : "a",
+                  "type" : "Identifier"
+                }, {
+                  "name" : "b",
+                  "type" : "Identifier"
+                }, {
+                  "name" : "c",
+                  "type" : "Identifier"
+                }, {
+                  "name" : "p",
+                  "type" : "Identifier"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "isInCircleCC",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "TrianglePredicate",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "isInCircleCC",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "name" : "a",
+                  "type" : "Identifier"
+                }, {
+                  "name" : "b",
+                  "type" : "Identifier"
+                }, {
+                  "name" : "c",
+                  "type" : "Identifier"
+                }, {
+                  "name" : "p",
+                  "type" : "Identifier"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "circumCentre",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "Triangle",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "circumcentre",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "name" : "a",
+                  "type" : "Identifier"
+                }, {
+                  "name" : "b",
+                  "type" : "Identifier"
+                }, {
+                  "name" : "c",
+                  "type" : "Identifier"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "expression" : {
+              "callee" : {
+                "object" : {
+                  "object" : {
+                    "name" : "System",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "out",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "property" : {
+                  "name" : "println",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "operator" : "+",
+                "left" : {
+                  "value" : "p radius diff a = ",
+                  "raw" : "\"p radius diff a = \"",
+                  "type" : "Literal"
+                },
+                "right" : {
+                  "operator" : "/",
+                  "left" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "Math",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "abs",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "operator" : "-",
+                      "left" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "p",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "distance",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "circumCentre",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "right" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "a",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "distance",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "circumCentre",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "BinaryExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "right" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "a",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "distance",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "circumCentre",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "type" : "BinaryExpression"
+              } ],
+              "type" : "CallExpression"
+            },
+            "type" : "ExpressionStatement"
+          }, {
+            "test" : {
+              "operator" : "||",
+              "left" : {
+                "operator" : "!==",
+                "left" : {
+                  "name" : "nonRobustInCircle",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "name" : "isInCircleDD",
+                  "type" : "Identifier"
+                },
+                "type" : "BinaryExpression"
+              },
+              "right" : {
+                "operator" : "!==",
+                "left" : {
+                  "name" : "nonRobustInCircle",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "name" : "isInCircleCC",
+                  "type" : "Identifier"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "body" : [ {
+                "expression" : {
+                  "callee" : {
+                    "object" : {
+                      "object" : {
+                        "name" : "System",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "out",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "property" : {
+                      "name" : "println",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "operator" : "+",
+                    "left" : {
+                      "operator" : "+",
+                      "left" : {
+                        "operator" : "+",
+                        "left" : {
+                          "operator" : "+",
+                          "left" : {
+                            "operator" : "+",
+                            "left" : {
+                              "operator" : "+",
+                              "left" : {
+                                "value" : "inCircle robustness failure (double result = ",
+                                "raw" : "\"inCircle robustness failure (double result = \"",
+                                "type" : "Literal"
+                              },
+                              "right" : {
+                                "name" : "nonRobustInCircle",
+                                "type" : "Identifier"
+                              },
+                              "type" : "BinaryExpression"
+                            },
+                            "right" : {
+                              "value" : ", DD result = ",
+                              "raw" : "\", DD result = \"",
+                              "type" : "Literal"
+                            },
+                            "type" : "BinaryExpression"
+                          },
+                          "right" : {
+                            "name" : "isInCircleDD",
+                            "type" : "Identifier"
+                          },
+                          "type" : "BinaryExpression"
+                        },
+                        "right" : {
+                          "value" : ", CC result = ",
+                          "raw" : "\", CC result = \"",
+                          "type" : "Literal"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "right" : {
+                        "name" : "isInCircleCC",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "right" : {
+                      "value" : ")",
+                      "raw" : "\")\"",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "expression" : {
+                  "callee" : {
+                    "object" : {
+                      "object" : {
+                        "name" : "System",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "out",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "property" : {
+                      "name" : "println",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "callee" : {
+                      "object" : {
+                        "name" : "WKTWriter",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "toLineString",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "callee" : {
+                        "name" : "CoordinateArraySequence",
+                        "type" : "Identifier"
+                      },
+                      "arguments" : [ {
+                        "elements" : [ {
+                          "name" : "a",
+                          "type" : "Identifier"
+                        }, {
+                          "name" : "b",
+                          "type" : "Identifier"
+                        }, {
+                          "name" : "c",
+                          "type" : "Identifier"
+                        }, {
+                          "name" : "p",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "ArrayExpression"
+                      } ],
+                      "type" : "NewExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "expression" : {
+                  "callee" : {
+                    "object" : {
+                      "object" : {
+                        "name" : "System",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "out",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "property" : {
+                      "name" : "println",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "operator" : "+",
+                    "left" : {
+                      "operator" : "+",
+                      "left" : {
+                        "operator" : "+",
+                        "left" : {
+                          "value" : "Circumcentre = ",
+                          "raw" : "\"Circumcentre = \"",
+                          "type" : "Literal"
+                        },
+                        "right" : {
+                          "callee" : {
+                            "object" : {
+                              "name" : "WKTWriter",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "toPoint",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ {
+                            "name" : "circumCentre",
+                            "type" : "Identifier"
+                          } ],
+                          "type" : "CallExpression"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "right" : {
+                        "value" : " radius = ",
+                        "raw" : "\" radius = \"",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "right" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "a",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "distance",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "name" : "circumCentre",
+                        "type" : "Identifier"
+                      } ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "expression" : {
+                  "callee" : {
+                    "object" : {
+                      "object" : {
+                        "name" : "System",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "out",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "property" : {
+                      "name" : "println",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "operator" : "+",
+                    "left" : {
+                      "value" : "p radius diff a = ",
+                      "raw" : "\"p radius diff a = \"",
+                      "type" : "Literal"
+                    },
+                    "right" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "Math",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "abs",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "operator" : "-",
+                        "left" : {
+                          "operator" : "/",
+                          "left" : {
+                            "callee" : {
+                              "object" : {
+                                "name" : "p",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "distance",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ {
+                              "name" : "circumCentre",
+                              "type" : "Identifier"
+                            } ],
+                            "type" : "CallExpression"
+                          },
+                          "right" : {
+                            "callee" : {
+                              "object" : {
+                                "name" : "a",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "distance",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ {
+                              "name" : "circumCentre",
+                              "type" : "Identifier"
+                            } ],
+                            "type" : "CallExpression"
+                          },
+                          "type" : "BinaryExpression"
+                        },
+                        "right" : {
+                          "value" : "1",
+                          "raw" : "1",
+                          "type" : "Literal"
+                        },
+                        "type" : "BinaryExpression"
+                      } ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "expression" : {
+                  "callee" : {
+                    "object" : {
+                      "object" : {
+                        "name" : "System",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "out",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "property" : {
+                      "name" : "println",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "operator" : "+",
+                    "left" : {
+                      "value" : "p radius diff b = ",
+                      "raw" : "\"p radius diff b = \"",
+                      "type" : "Literal"
+                    },
+                    "right" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "Math",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "abs",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "operator" : "-",
+                        "left" : {
+                          "operator" : "/",
+                          "left" : {
+                            "callee" : {
+                              "object" : {
+                                "name" : "p",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "distance",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ {
+                              "name" : "circumCentre",
+                              "type" : "Identifier"
+                            } ],
+                            "type" : "CallExpression"
+                          },
+                          "right" : {
+                            "callee" : {
+                              "object" : {
+                                "name" : "b",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "distance",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ {
+                              "name" : "circumCentre",
+                              "type" : "Identifier"
+                            } ],
+                            "type" : "CallExpression"
+                          },
+                          "type" : "BinaryExpression"
+                        },
+                        "right" : {
+                          "value" : "1",
+                          "raw" : "1",
+                          "type" : "Literal"
+                        },
+                        "type" : "BinaryExpression"
+                      } ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "expression" : {
+                  "callee" : {
+                    "object" : {
+                      "object" : {
+                        "name" : "System",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "out",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "property" : {
+                      "name" : "println",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "operator" : "+",
+                    "left" : {
+                      "value" : "p radius diff c = ",
+                      "raw" : "\"p radius diff c = \"",
+                      "type" : "Literal"
+                    },
+                    "right" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "Math",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "abs",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "operator" : "-",
+                        "left" : {
+                          "operator" : "/",
+                          "left" : {
+                            "callee" : {
+                              "object" : {
+                                "name" : "p",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "distance",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ {
+                              "name" : "circumCentre",
+                              "type" : "Identifier"
+                            } ],
+                            "type" : "CallExpression"
+                          },
+                          "right" : {
+                            "callee" : {
+                              "object" : {
+                                "name" : "c",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "distance",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ {
+                              "name" : "circumCentre",
+                              "type" : "Identifier"
+                            } ],
+                            "type" : "CallExpression"
+                          },
+                          "type" : "BinaryExpression"
+                        },
+                        "right" : {
+                          "value" : "1",
+                          "raw" : "1",
+                          "type" : "Literal"
+                        },
+                        "type" : "BinaryExpression"
+                      } ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "expression" : {
+                  "callee" : {
+                    "object" : {
+                      "object" : {
+                        "name" : "System",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "out",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "property" : {
+                      "name" : "println",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ExpressionStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "TrianglePredicate",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "isInCircleDDFast",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "a",
+          "type" : "Identifier"
+        }, {
+          "name" : "b",
+          "type" : "Identifier"
+        }, {
+          "name" : "c",
+          "type" : "Identifier"
+        }, {
+          "name" : "p",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "aTerm",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "DD",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "sqr",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "object" : {
+                            "name" : "a",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "x",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "property" : {
+                        "name" : "selfAdd",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "callee" : {
+                        "object" : {
+                          "name" : "DD",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "sqr",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "object" : {
+                          "name" : "a",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "y",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      } ],
+                      "type" : "CallExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfMultiply",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "name" : "TrianglePredicate",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "triAreaDDFast",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "b",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "c",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "p",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "bTerm",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "DD",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "sqr",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "object" : {
+                            "name" : "b",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "x",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "property" : {
+                        "name" : "selfAdd",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "callee" : {
+                        "object" : {
+                          "name" : "DD",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "sqr",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "object" : {
+                          "name" : "b",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "y",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      } ],
+                      "type" : "CallExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfMultiply",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "name" : "TrianglePredicate",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "triAreaDDFast",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "a",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "c",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "p",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "cTerm",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "DD",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "sqr",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "object" : {
+                            "name" : "c",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "x",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "property" : {
+                        "name" : "selfAdd",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "callee" : {
+                        "object" : {
+                          "name" : "DD",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "sqr",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "object" : {
+                          "name" : "c",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "y",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      } ],
+                      "type" : "CallExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfMultiply",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "name" : "TrianglePredicate",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "triAreaDDFast",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "a",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "b",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "p",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "pTerm",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "DD",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "sqr",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "object" : {
+                            "name" : "p",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "x",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "property" : {
+                        "name" : "selfAdd",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "callee" : {
+                        "object" : {
+                          "name" : "DD",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "sqr",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "object" : {
+                          "name" : "p",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "y",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      } ],
+                      "type" : "CallExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfMultiply",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "name" : "TrianglePredicate",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "triAreaDDFast",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "a",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "b",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "c",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "sum",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "aTerm",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "selfSubtract",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "bTerm",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "property" : {
+                        "name" : "selfAdd",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "cTerm",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfSubtract",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "name" : "pTerm",
+                  "type" : "Identifier"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "isInCircle",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : ">",
+                "left" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "sum",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "doubleValue",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ ],
+                  "type" : "CallExpression"
+                },
+                "right" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "argument" : {
+              "name" : "isInCircle",
+              "type" : "Identifier"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "TrianglePredicate",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "isInCircleCC",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "a",
+          "type" : "Identifier"
+        }, {
+          "name" : "b",
+          "type" : "Identifier"
+        }, {
+          "name" : "c",
+          "type" : "Identifier"
+        }, {
+          "name" : "p",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "cc",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "Triangle",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "circumcentre",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "name" : "a",
+                  "type" : "Identifier"
+                }, {
+                  "name" : "b",
+                  "type" : "Identifier"
+                }, {
+                  "name" : "c",
+                  "type" : "Identifier"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "ccRadius",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "a",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "distance",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "name" : "cc",
+                  "type" : "Identifier"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "pRadiusDiff",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "-",
+                "left" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "p",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "distance",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "cc",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "right" : {
+                  "name" : "ccRadius",
+                  "type" : "Identifier"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "argument" : {
+              "operator" : "<=",
+              "left" : {
+                "name" : "pRadiusDiff",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "TrianglePredicate",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "isInCircleNormalized",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "a",
+          "type" : "Identifier"
+        }, {
+          "name" : "b",
+          "type" : "Identifier"
+        }, {
+          "name" : "c",
+          "type" : "Identifier"
+        }, {
+          "name" : "p",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "adx",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "-",
+                "left" : {
+                  "object" : {
+                    "name" : "a",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "right" : {
+                  "object" : {
+                    "name" : "p",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "ady",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "-",
+                "left" : {
+                  "object" : {
+                    "name" : "a",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "right" : {
+                  "object" : {
+                    "name" : "p",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "bdx",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "-",
+                "left" : {
+                  "object" : {
+                    "name" : "b",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "right" : {
+                  "object" : {
+                    "name" : "p",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "bdy",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "-",
+                "left" : {
+                  "object" : {
+                    "name" : "b",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "right" : {
+                  "object" : {
+                    "name" : "p",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "cdx",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "-",
+                "left" : {
+                  "object" : {
+                    "name" : "c",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "right" : {
+                  "object" : {
+                    "name" : "p",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "cdy",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "-",
+                "left" : {
+                  "object" : {
+                    "name" : "c",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "right" : {
+                  "object" : {
+                    "name" : "p",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "abdet",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "-",
+                "left" : {
+                  "operator" : "*",
+                  "left" : {
+                    "name" : "adx",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "bdy",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "operator" : "*",
+                  "left" : {
+                    "name" : "bdx",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "ady",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "bcdet",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "-",
+                "left" : {
+                  "operator" : "*",
+                  "left" : {
+                    "name" : "bdx",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "cdy",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "operator" : "*",
+                  "left" : {
+                    "name" : "cdx",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "bdy",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "cadet",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "-",
+                "left" : {
+                  "operator" : "*",
+                  "left" : {
+                    "name" : "cdx",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "ady",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "operator" : "*",
+                  "left" : {
+                    "name" : "adx",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "cdy",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "alift",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "+",
+                "left" : {
+                  "operator" : "*",
+                  "left" : {
+                    "name" : "adx",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "adx",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "operator" : "*",
+                  "left" : {
+                    "name" : "ady",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "ady",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "blift",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "+",
+                "left" : {
+                  "operator" : "*",
+                  "left" : {
+                    "name" : "bdx",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "bdx",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "operator" : "*",
+                  "left" : {
+                    "name" : "bdy",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "bdy",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "clift",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "+",
+                "left" : {
+                  "operator" : "*",
+                  "left" : {
+                    "name" : "cdx",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "cdx",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "operator" : "*",
+                  "left" : {
+                    "name" : "cdy",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "cdy",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "disc",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "+",
+                "left" : {
+                  "operator" : "+",
+                  "left" : {
+                    "operator" : "*",
+                    "left" : {
+                      "name" : "alift",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "bcdet",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "right" : {
+                    "operator" : "*",
+                    "left" : {
+                      "name" : "blift",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "cadet",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "operator" : "*",
+                  "left" : {
+                    "name" : "clift",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "abdet",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "argument" : {
+              "operator" : ">",
+              "left" : {
+                "name" : "disc",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "TrianglePredicate",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "isInCircleDDSlow",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "a",
+          "type" : "Identifier"
+        }, {
+          "name" : "b",
+          "type" : "Identifier"
+        }, {
+          "name" : "c",
+          "type" : "Identifier"
+        }, {
+          "name" : "p",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "px",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "DD",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "valueOf",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "object" : {
+                    "name" : "p",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "py",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "DD",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "valueOf",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "object" : {
+                    "name" : "p",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "ax",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "DD",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "valueOf",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "object" : {
+                    "name" : "a",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "ay",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "DD",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "valueOf",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "object" : {
+                    "name" : "a",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "bx",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "DD",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "valueOf",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "object" : {
+                    "name" : "b",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "by",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "DD",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "valueOf",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "object" : {
+                    "name" : "b",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "cx",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "DD",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "valueOf",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "object" : {
+                    "name" : "c",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "cy",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "DD",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "valueOf",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "object" : {
+                    "name" : "c",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "aTerm",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "ax",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "multiply",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "ax",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "property" : {
+                        "name" : "add",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "callee" : {
+                        "object" : {
+                          "name" : "ay",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "multiply",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "name" : "ay",
+                        "type" : "Identifier"
+                      } ],
+                      "type" : "CallExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "multiply",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "name" : "TrianglePredicate",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "triAreaDDSlow",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "bx",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "by",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "cx",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "cy",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "px",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "py",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "bTerm",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "bx",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "multiply",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "bx",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "property" : {
+                        "name" : "add",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "callee" : {
+                        "object" : {
+                          "name" : "by",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "multiply",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "name" : "by",
+                        "type" : "Identifier"
+                      } ],
+                      "type" : "CallExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "multiply",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "name" : "TrianglePredicate",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "triAreaDDSlow",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "ax",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "ay",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "cx",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "cy",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "px",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "py",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "cTerm",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "cx",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "multiply",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "cx",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "property" : {
+                        "name" : "add",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "callee" : {
+                        "object" : {
+                          "name" : "cy",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "multiply",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "name" : "cy",
+                        "type" : "Identifier"
+                      } ],
+                      "type" : "CallExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "multiply",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "name" : "TrianglePredicate",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "triAreaDDSlow",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "ax",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "ay",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "bx",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "by",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "px",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "py",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "pTerm",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "px",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "multiply",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "px",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "property" : {
+                        "name" : "add",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "callee" : {
+                        "object" : {
+                          "name" : "py",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "multiply",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "name" : "py",
+                        "type" : "Identifier"
+                      } ],
+                      "type" : "CallExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "multiply",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "name" : "TrianglePredicate",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "triAreaDDSlow",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "ax",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "ay",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "bx",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "by",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "cx",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "cy",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "sum",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "aTerm",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "subtract",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "bTerm",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "property" : {
+                        "name" : "add",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "cTerm",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "subtract",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "name" : "pTerm",
+                  "type" : "Identifier"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "isInCircle",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : ">",
+                "left" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "sum",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "doubleValue",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ ],
+                  "type" : "CallExpression"
+                },
+                "right" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "argument" : {
+              "name" : "isInCircle",
+              "type" : "Identifier"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "TrianglePredicate",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "isInCircleNonRobust",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "a",
+          "type" : "Identifier"
+        }, {
+          "name" : "b",
+          "type" : "Identifier"
+        }, {
+          "name" : "c",
+          "type" : "Identifier"
+        }, {
+          "name" : "p",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "isInCircle",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : ">",
+                "left" : {
+                  "operator" : "-",
+                  "left" : {
+                    "operator" : "+",
+                    "left" : {
+                      "operator" : "-",
+                      "left" : {
+                        "operator" : "*",
+                        "left" : {
+                          "operator" : "+",
+                          "left" : {
+                            "operator" : "*",
+                            "left" : {
+                              "object" : {
+                                "name" : "a",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "x",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "right" : {
+                              "object" : {
+                                "name" : "a",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "x",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "type" : "BinaryExpression"
+                          },
+                          "right" : {
+                            "operator" : "*",
+                            "left" : {
+                              "object" : {
+                                "name" : "a",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "y",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "right" : {
+                              "object" : {
+                                "name" : "a",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "y",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "type" : "BinaryExpression"
+                          },
+                          "type" : "BinaryExpression"
+                        },
+                        "right" : {
+                          "callee" : {
+                            "object" : {
+                              "name" : "TrianglePredicate",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "triArea",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ {
+                            "name" : "b",
+                            "type" : "Identifier"
+                          }, {
+                            "name" : "c",
+                            "type" : "Identifier"
+                          }, {
+                            "name" : "p",
+                            "type" : "Identifier"
+                          } ],
+                          "type" : "CallExpression"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "right" : {
+                        "operator" : "*",
+                        "left" : {
+                          "operator" : "+",
+                          "left" : {
+                            "operator" : "*",
+                            "left" : {
+                              "object" : {
+                                "name" : "b",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "x",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "right" : {
+                              "object" : {
+                                "name" : "b",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "x",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "type" : "BinaryExpression"
+                          },
+                          "right" : {
+                            "operator" : "*",
+                            "left" : {
+                              "object" : {
+                                "name" : "b",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "y",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "right" : {
+                              "object" : {
+                                "name" : "b",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "y",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "type" : "BinaryExpression"
+                          },
+                          "type" : "BinaryExpression"
+                        },
+                        "right" : {
+                          "callee" : {
+                            "object" : {
+                              "name" : "TrianglePredicate",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "triArea",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ {
+                            "name" : "a",
+                            "type" : "Identifier"
+                          }, {
+                            "name" : "c",
+                            "type" : "Identifier"
+                          }, {
+                            "name" : "p",
+                            "type" : "Identifier"
+                          } ],
+                          "type" : "CallExpression"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "right" : {
+                      "operator" : "*",
+                      "left" : {
+                        "operator" : "+",
+                        "left" : {
+                          "operator" : "*",
+                          "left" : {
+                            "object" : {
+                              "name" : "c",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "x",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "right" : {
+                            "object" : {
+                              "name" : "c",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "x",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "type" : "BinaryExpression"
+                        },
+                        "right" : {
+                          "operator" : "*",
+                          "left" : {
+                            "object" : {
+                              "name" : "c",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "y",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "right" : {
+                            "object" : {
+                              "name" : "c",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "y",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "type" : "BinaryExpression"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "right" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "TrianglePredicate",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "triArea",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "a",
+                          "type" : "Identifier"
+                        }, {
+                          "name" : "b",
+                          "type" : "Identifier"
+                        }, {
+                          "name" : "p",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "right" : {
+                    "operator" : "*",
+                    "left" : {
+                      "operator" : "+",
+                      "left" : {
+                        "operator" : "*",
+                        "left" : {
+                          "object" : {
+                            "name" : "p",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "x",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "right" : {
+                          "object" : {
+                            "name" : "p",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "x",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "right" : {
+                        "operator" : "*",
+                        "left" : {
+                          "object" : {
+                            "name" : "p",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "y",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "right" : {
+                          "object" : {
+                            "name" : "p",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "y",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "right" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "TrianglePredicate",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "triArea",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "name" : "a",
+                        "type" : "Identifier"
+                      }, {
+                        "name" : "b",
+                        "type" : "Identifier"
+                      }, {
+                        "name" : "c",
+                        "type" : "Identifier"
+                      } ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "argument" : {
+              "name" : "isInCircle",
+              "type" : "Identifier"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "TrianglePredicate",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "isInCircleRobust",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "a",
+          "type" : "Identifier"
+        }, {
+          "name" : "b",
+          "type" : "Identifier"
+        }, {
+          "name" : "c",
+          "type" : "Identifier"
+        }, {
+          "name" : "p",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "argument" : {
+              "callee" : {
+                "object" : {
+                  "name" : "TrianglePredicate",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "isInCircleNormalized",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "name" : "a",
+                "type" : "Identifier"
+              }, {
+                "name" : "b",
+                "type" : "Identifier"
+              }, {
+                "name" : "c",
+                "type" : "Identifier"
+              }, {
+                "name" : "p",
+                "type" : "Identifier"
+              } ],
+              "type" : "CallExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "TrianglePredicate",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "triAreaDDSlow",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "ax",
+          "type" : "Identifier"
+        }, {
+          "name" : "ay",
+          "type" : "Identifier"
+        }, {
+          "name" : "bx",
+          "type" : "Identifier"
+        }, {
+          "name" : "by",
+          "type" : "Identifier"
+        }, {
+          "name" : "cx",
+          "type" : "Identifier"
+        }, {
+          "name" : "cy",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "argument" : {
+              "callee" : {
+                "object" : {
+                  "callee" : {
+                    "object" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "bx",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "subtract",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "name" : "ax",
+                        "type" : "Identifier"
+                      } ],
+                      "type" : "CallExpression"
+                    },
+                    "property" : {
+                      "name" : "multiply",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "callee" : {
+                      "object" : {
+                        "name" : "cy",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "subtract",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "ay",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "property" : {
+                  "name" : "subtract",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "by",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "subtract",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "ay",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "multiply",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "name" : "cx",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "subtract",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "ax",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              } ],
+              "type" : "CallExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "TrianglePredicate",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "triAreaDDFast",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "a",
+          "type" : "Identifier"
+        }, {
+          "name" : "b",
+          "type" : "Identifier"
+        }, {
+          "name" : "c",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "t1",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "DD",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "valueOf",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "object" : {
+                            "name" : "b",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "x",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "property" : {
+                        "name" : "selfSubtract",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "object" : {
+                        "name" : "a",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "x",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfMultiply",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "DD",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "valueOf",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "object" : {
+                          "name" : "c",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "y",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      } ],
+                      "type" : "CallExpression"
+                    },
+                    "property" : {
+                      "name" : "selfSubtract",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "object" : {
+                      "name" : "a",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "y",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "t2",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "object" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "DD",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "valueOf",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "object" : {
+                            "name" : "b",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "y",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "property" : {
+                        "name" : "selfSubtract",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "object" : {
+                        "name" : "a",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "y",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "property" : {
+                    "name" : "selfMultiply",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "DD",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "valueOf",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "object" : {
+                          "name" : "c",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "x",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      } ],
+                      "type" : "CallExpression"
+                    },
+                    "property" : {
+                      "name" : "selfSubtract",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "object" : {
+                      "name" : "a",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "x",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "argument" : {
+              "callee" : {
+                "object" : {
+                  "name" : "t1",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "selfSubtract",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "name" : "t2",
+                "type" : "Identifier"
+              } ],
+              "type" : "CallExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

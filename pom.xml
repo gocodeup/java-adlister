@@ -44,6 +44,11 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>6.0.5</version>
         </dependency>
+        <dependency>
+            <groupId>io.magicthegathering</groupId>
+            <artifactId>javasdk</artifactId>
+            <version>0.0.14</version>
+        </dependency>
     </dependencies>
 
 

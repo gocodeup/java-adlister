@@ -1,0 +1,282 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../extend'",
+      "raw" : "'../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "SpatialIndex",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "SpatialIndex",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "insert",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ {
+              "name" : "itemEnv",
+              "type" : "Identifier"
+            }, {
+              "name" : "item",
+              "type" : "Identifier"
+            } ],
+            "body" : {
+              "body" : [ ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "remove",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ {
+              "name" : "itemEnv",
+              "type" : "Identifier"
+            }, {
+              "name" : "item",
+              "type" : "Identifier"
+            } ],
+            "body" : {
+              "body" : [ ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "query",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "test" : {
+                  "operator" : "===",
+                  "left" : {
+                    "name" : "arguments.length",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : 1,
+                    "raw" : "1",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "searchEnv",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "object" : {
+                          "name" : "arguments",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "value" : 0,
+                          "raw" : "0",
+                          "type" : "Literal"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "let",
+                    "type" : "VariableDeclaration"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : {
+                  "test" : {
+                    "operator" : "===",
+                    "left" : {
+                      "name" : "arguments.length",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "value" : 2,
+                      "raw" : "2",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "declarations" : [ {
+                        "id" : {
+                          "name" : "searchEnv",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "object" : {
+                            "name" : "arguments",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "value" : 0,
+                            "raw" : "0",
+                            "type" : "Literal"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      }, {
+                        "id" : {
+                          "name" : "visitor",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "object" : {
+                            "name" : "arguments",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "value" : 1,
+                            "raw" : "1",
+                            "type" : "Literal"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      } ],
+                      "kind" : "let",
+                      "type" : "VariableDeclaration"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : null,
+                  "type" : "IfStatement"
+                },
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "SpatialIndex",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

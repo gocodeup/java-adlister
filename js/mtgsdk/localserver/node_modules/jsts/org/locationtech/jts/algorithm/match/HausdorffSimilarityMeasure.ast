@@ -1,0 +1,530 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "SimilarityMeasure",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'./SimilarityMeasure'",
+      "raw" : "'./SimilarityMeasure'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../extend'",
+      "raw" : "'../../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Envelope",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../geom/Envelope'",
+      "raw" : "'../../geom/Envelope'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "DiscreteHausdorffDistance",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../distance/DiscreteHausdorffDistance'",
+      "raw" : "'../distance/DiscreteHausdorffDistance'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "HausdorffSimilarityMeasure",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "HausdorffSimilarityMeasure",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "measure",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ {
+              "name" : "g1",
+              "type" : "Identifier"
+            }, {
+              "name" : "g2",
+              "type" : "Identifier"
+            } ],
+            "body" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "distance",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "DiscreteHausdorffDistance",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "distance",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "g1",
+                      "type" : "Identifier"
+                    }, {
+                      "name" : "g2",
+                      "type" : "Identifier"
+                    }, {
+                      "object" : {
+                        "name" : "HausdorffSimilarityMeasure",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "DENSIFY_FRACTION",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "env",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "name" : "Envelope",
+                      "type" : "Identifier"
+                    },
+                    "arguments" : [ {
+                      "callee" : {
+                        "object" : {
+                          "name" : "g1",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "getEnvelopeInternal",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ ],
+                      "type" : "CallExpression"
+                    } ],
+                    "type" : "NewExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "expression" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "env",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "expandToInclude",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "callee" : {
+                      "object" : {
+                        "name" : "g2",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "getEnvelopeInternal",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "envSize",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "HausdorffSimilarityMeasure",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "diagonalSize",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "env",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "measure",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "operator" : "-",
+                    "left" : {
+                      "value" : "1",
+                      "raw" : "1",
+                      "type" : "Literal"
+                    },
+                    "right" : {
+                      "operator" : "/",
+                      "left" : {
+                        "name" : "distance",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "name" : "envSize",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "argument" : {
+                  "name" : "measure",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ {
+                    "name" : "SimilarityMeasure",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "HausdorffSimilarityMeasure",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "HausdorffSimilarityMeasure",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "diagonalSize",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "env",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "test" : {
+              "callee" : {
+                "object" : {
+                  "name" : "env",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "isNull",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ ],
+              "type" : "CallExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "value" : "0.0",
+                "raw" : "0.0",
+                "type" : "Literal"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "width",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "env",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "getWidth",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "hgt",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "env",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "getHeight",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "argument" : {
+              "callee" : {
+                "object" : {
+                  "name" : "Math",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "sqrt",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "operator" : "+",
+                "left" : {
+                  "operator" : "*",
+                  "left" : {
+                    "name" : "width",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "width",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "operator" : "*",
+                  "left" : {
+                    "name" : "hgt",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "hgt",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "type" : "BinaryExpression"
+              } ],
+              "type" : "CallExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "HausdorffSimilarityMeasure",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "DENSIFY_FRACTION",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "0.25",
+        "raw" : "0.25",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

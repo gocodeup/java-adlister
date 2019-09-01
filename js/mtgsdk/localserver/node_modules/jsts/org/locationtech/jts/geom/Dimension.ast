@@ -1,0 +1,908 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "IllegalArgumentException",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../java/lang/IllegalArgumentException'",
+      "raw" : "'../../../../java/lang/IllegalArgumentException'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../extend'",
+      "raw" : "'../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Character",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../java/lang/Character'",
+      "raw" : "'../../../../java/lang/Character'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "Dimension",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "Dimension",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "Dimension",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Dimension",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "toDimensionSymbol",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "dimensionValue",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "discriminant" : {
+              "name" : "dimensionValue",
+              "type" : "Identifier"
+            },
+            "cases" : [ {
+              "test" : {
+                "object" : {
+                  "name" : "Dimension",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "FALSE",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "object" : {
+                    "name" : "Dimension",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "SYM_FALSE",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "object" : {
+                  "name" : "Dimension",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "TRUE",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "object" : {
+                    "name" : "Dimension",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "SYM_TRUE",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "object" : {
+                  "name" : "Dimension",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "DONTCARE",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "object" : {
+                    "name" : "Dimension",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "SYM_DONTCARE",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "object" : {
+                  "name" : "Dimension",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "P",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "object" : {
+                    "name" : "Dimension",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "SYM_P",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "object" : {
+                  "name" : "Dimension",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "L",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "object" : {
+                    "name" : "Dimension",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "SYM_L",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "object" : {
+                  "name" : "Dimension",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "A",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "object" : {
+                    "name" : "Dimension",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "SYM_A",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            } ],
+            "type" : "SwitchStatement"
+          }, {
+            "argument" : {
+              "callee" : {
+                "name" : "IllegalArgumentException",
+                "type" : "Identifier"
+              },
+              "arguments" : [ {
+                "operator" : "+",
+                "left" : {
+                  "value" : "Unknown dimension value: ",
+                  "raw" : "\"Unknown dimension value: \"",
+                  "type" : "Literal"
+                },
+                "right" : {
+                  "name" : "dimensionValue",
+                  "type" : "Identifier"
+                },
+                "type" : "BinaryExpression"
+              } ],
+              "type" : "NewExpression"
+            },
+            "type" : "ThrowStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Dimension",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "toDimensionValue",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "dimensionSymbol",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "discriminant" : {
+              "callee" : {
+                "object" : {
+                  "name" : "Character",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "toUpperCase",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "name" : "dimensionSymbol",
+                "type" : "Identifier"
+              } ],
+              "type" : "CallExpression"
+            },
+            "cases" : [ {
+              "test" : {
+                "object" : {
+                  "name" : "Dimension",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "SYM_FALSE",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "object" : {
+                    "name" : "Dimension",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "FALSE",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "object" : {
+                  "name" : "Dimension",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "SYM_TRUE",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "object" : {
+                    "name" : "Dimension",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "TRUE",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "object" : {
+                  "name" : "Dimension",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "SYM_DONTCARE",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "object" : {
+                    "name" : "Dimension",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "DONTCARE",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "object" : {
+                  "name" : "Dimension",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "SYM_P",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "object" : {
+                    "name" : "Dimension",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "P",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "object" : {
+                  "name" : "Dimension",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "SYM_L",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "object" : {
+                    "name" : "Dimension",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "L",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "object" : {
+                  "name" : "Dimension",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "SYM_A",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "object" : {
+                    "name" : "Dimension",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "A",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            } ],
+            "type" : "SwitchStatement"
+          }, {
+            "argument" : {
+              "callee" : {
+                "name" : "IllegalArgumentException",
+                "type" : "Identifier"
+              },
+              "arguments" : [ {
+                "operator" : "+",
+                "left" : {
+                  "value" : "Unknown dimension symbol: ",
+                  "raw" : "\"Unknown dimension symbol: \"",
+                  "type" : "Literal"
+                },
+                "right" : {
+                  "name" : "dimensionSymbol",
+                  "type" : "Identifier"
+                },
+                "type" : "BinaryExpression"
+              } ],
+              "type" : "NewExpression"
+            },
+            "type" : "ThrowStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Dimension",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "P",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "0",
+        "raw" : "0",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Dimension",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "L",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "1",
+        "raw" : "1",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Dimension",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "A",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "2",
+        "raw" : "2",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Dimension",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "FALSE",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "operator" : "-",
+        "prefix" : true,
+        "argument" : {
+          "value" : "1",
+          "raw" : "1",
+          "type" : "Literal"
+        },
+        "type" : "UnaryExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Dimension",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "TRUE",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "operator" : "-",
+        "prefix" : true,
+        "argument" : {
+          "value" : "2",
+          "raw" : "2",
+          "type" : "Literal"
+        },
+        "type" : "UnaryExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Dimension",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "DONTCARE",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "operator" : "-",
+        "prefix" : true,
+        "argument" : {
+          "value" : "3",
+          "raw" : "3",
+          "type" : "Literal"
+        },
+        "type" : "UnaryExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Dimension",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "SYM_FALSE",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "'F'",
+        "raw" : "'F'",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Dimension",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "SYM_TRUE",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "'T'",
+        "raw" : "'T'",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Dimension",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "SYM_DONTCARE",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "'*'",
+        "raw" : "'*'",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Dimension",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "SYM_P",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "'0'",
+        "raw" : "'0'",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Dimension",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "SYM_L",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "'1'",
+        "raw" : "'1'",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Dimension",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "SYM_A",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "'2'",
+        "raw" : "'2'",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

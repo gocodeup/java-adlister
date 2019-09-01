@@ -1,0 +1,364 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../extend'",
+      "raw" : "'../../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "DoubleBits",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'./DoubleBits'",
+      "raw" : "'./DoubleBits'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "IntervalSize",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "IntervalSize",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "IntervalSize",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "IntervalSize",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "isZeroWidth",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "min",
+          "type" : "Identifier"
+        }, {
+          "name" : "max",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "width",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "-",
+                "left" : {
+                  "name" : "max",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "name" : "min",
+                  "type" : "Identifier"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "test" : {
+              "operator" : "===",
+              "left" : {
+                "name" : "width",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "value" : "0.0",
+                "raw" : "0.0",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "value" : true,
+                "raw" : "true",
+                "type" : "Literal"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "maxAbs",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "Math",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "max",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "callee" : {
+                    "object" : {
+                      "name" : "Math",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "abs",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "min",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                }, {
+                  "callee" : {
+                    "object" : {
+                      "name" : "Math",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "abs",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "max",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "scaledInterval",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "/",
+                "left" : {
+                  "name" : "width",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "name" : "maxAbs",
+                  "type" : "Identifier"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "level",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "DoubleBits",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "exponent",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "name" : "scaledInterval",
+                  "type" : "Identifier"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "argument" : {
+              "operator" : "<=",
+              "left" : {
+                "name" : "level",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "object" : {
+                  "name" : "IntervalSize",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "MIN_BINARY_EXPONENT",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "IntervalSize",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "MIN_BINARY_EXPONENT",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "operator" : "-",
+        "prefix" : true,
+        "argument" : {
+          "value" : "50",
+          "raw" : "50",
+          "type" : "Literal"
+        },
+        "type" : "UnaryExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

@@ -52,8 +52,6 @@ public class MySQLAdsDao implements Ads, UserAds {
         }
     }
 
-
-
     private List<Ad> createUserAdsFromResults(ResultSet rs) throws SQLException {
         List<Ad> userAds = new ArrayList<>();
         while (rs.next()) {

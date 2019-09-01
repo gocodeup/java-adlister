@@ -1,0 +1,625 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "CoordinateSequenceFactory",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../CoordinateSequenceFactory'",
+      "raw" : "'../CoordinateSequenceFactory'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "hasInterface",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../hasInterface'",
+      "raw" : "'../../../../../hasInterface'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "CoordinateArraySequence",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'./CoordinateArraySequence'",
+      "raw" : "'./CoordinateArraySequence'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../extend'",
+      "raw" : "'../../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "CoordinateSequence",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../CoordinateSequence'",
+      "raw" : "'../CoordinateSequence'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Serializable",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../java/io/Serializable'",
+      "raw" : "'../../../../../java/io/Serializable'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "CoordinateArraySequenceFactory",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "CoordinateArraySequenceFactory",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "readResolve",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "CoordinateArraySequenceFactory",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "instance",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "create",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "test" : {
+                  "operator" : "===",
+                  "left" : {
+                    "name" : "arguments.length",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : 1,
+                    "raw" : "1",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : "instanceof",
+                      "left" : {
+                        "object" : {
+                          "name" : "arguments",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "value" : 0,
+                          "raw" : "0",
+                          "type" : "Literal"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      },
+                      "right" : {
+                        "name" : "Array",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "declarations" : [ {
+                          "id" : {
+                            "name" : "coordinates",
+                            "type" : "Identifier"
+                          },
+                          "init" : {
+                            "object" : {
+                              "name" : "arguments",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "value" : 0,
+                              "raw" : "0",
+                              "type" : "Literal"
+                            },
+                            "computed" : true,
+                            "type" : "MemberExpression"
+                          },
+                          "type" : "VariableDeclarator"
+                        } ],
+                        "kind" : "let",
+                        "type" : "VariableDeclaration"
+                      }, {
+                        "argument" : {
+                          "callee" : {
+                            "name" : "CoordinateArraySequence",
+                            "type" : "Identifier"
+                          },
+                          "arguments" : [ {
+                            "name" : "coordinates",
+                            "type" : "Identifier"
+                          } ],
+                          "type" : "NewExpression"
+                        },
+                        "type" : "ReturnStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : {
+                      "test" : {
+                        "callee" : {
+                          "name" : "hasInterface",
+                          "type" : "Identifier"
+                        },
+                        "arguments" : [ {
+                          "object" : {
+                            "name" : "arguments",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "value" : 0,
+                            "raw" : "0",
+                            "type" : "Literal"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        }, {
+                          "name" : "CoordinateSequence",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "consequent" : {
+                        "body" : [ {
+                          "declarations" : [ {
+                            "id" : {
+                              "name" : "coordSeq",
+                              "type" : "Identifier"
+                            },
+                            "init" : {
+                              "object" : {
+                                "name" : "arguments",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "value" : 0,
+                                "raw" : "0",
+                                "type" : "Literal"
+                              },
+                              "computed" : true,
+                              "type" : "MemberExpression"
+                            },
+                            "type" : "VariableDeclarator"
+                          } ],
+                          "kind" : "let",
+                          "type" : "VariableDeclaration"
+                        }, {
+                          "argument" : {
+                            "callee" : {
+                              "name" : "CoordinateArraySequence",
+                              "type" : "Identifier"
+                            },
+                            "arguments" : [ {
+                              "name" : "coordSeq",
+                              "type" : "Identifier"
+                            } ],
+                            "type" : "NewExpression"
+                          },
+                          "type" : "ReturnStatement"
+                        } ],
+                        "type" : "BlockStatement"
+                      },
+                      "alternate" : null,
+                      "type" : "IfStatement"
+                    },
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : {
+                  "test" : {
+                    "operator" : "===",
+                    "left" : {
+                      "name" : "arguments.length",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "value" : 2,
+                      "raw" : "2",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "declarations" : [ {
+                        "id" : {
+                          "name" : "size",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "object" : {
+                            "name" : "arguments",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "value" : 0,
+                            "raw" : "0",
+                            "type" : "Literal"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      }, {
+                        "id" : {
+                          "name" : "dimension",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "object" : {
+                            "name" : "arguments",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "value" : 1,
+                            "raw" : "1",
+                            "type" : "Literal"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      } ],
+                      "kind" : "let",
+                      "type" : "VariableDeclaration"
+                    }, {
+                      "test" : {
+                        "operator" : ">",
+                        "left" : {
+                          "name" : "dimension",
+                          "type" : "Identifier"
+                        },
+                        "right" : {
+                          "value" : "3",
+                          "raw" : "3",
+                          "type" : "Literal"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "consequent" : {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "dimension",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "value" : "3",
+                            "raw" : "3",
+                            "type" : "Literal"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      },
+                      "alternate" : null,
+                      "type" : "IfStatement"
+                    }, {
+                      "test" : {
+                        "operator" : "<",
+                        "left" : {
+                          "name" : "dimension",
+                          "type" : "Identifier"
+                        },
+                        "right" : {
+                          "value" : "2",
+                          "raw" : "2",
+                          "type" : "Literal"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "consequent" : {
+                        "argument" : {
+                          "callee" : {
+                            "name" : "CoordinateArraySequence",
+                            "type" : "Identifier"
+                          },
+                          "arguments" : [ {
+                            "name" : "size",
+                            "type" : "Identifier"
+                          } ],
+                          "type" : "NewExpression"
+                        },
+                        "type" : "ReturnStatement"
+                      },
+                      "alternate" : null,
+                      "type" : "IfStatement"
+                    }, {
+                      "argument" : {
+                        "callee" : {
+                          "name" : "CoordinateArraySequence",
+                          "type" : "Identifier"
+                        },
+                        "arguments" : [ {
+                          "name" : "size",
+                          "type" : "Identifier"
+                        }, {
+                          "name" : "dimension",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "NewExpression"
+                      },
+                      "type" : "ReturnStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : null,
+                  "type" : "IfStatement"
+                },
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ {
+                    "name" : "CoordinateSequenceFactory",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "Serializable",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "CoordinateArraySequenceFactory",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArraySequenceFactory",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "instance",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ ],
+        "body" : {
+          "body" : [ {
+            "argument" : {
+              "object" : {
+                "name" : "CoordinateArraySequenceFactory",
+                "type" : "Identifier"
+              },
+              "property" : {
+                "name" : "instanceObject",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArraySequenceFactory",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "serialVersionUID",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "operator" : "-",
+        "prefix" : true,
+        "argument" : {
+          "value" : "4099577099607551657",
+          "raw" : "4099577099607551657",
+          "type" : "Literal"
+        },
+        "type" : "UnaryExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArraySequenceFactory",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "instanceObject",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "callee" : {
+          "name" : "CoordinateArraySequenceFactory",
+          "type" : "Identifier"
+        },
+        "arguments" : [ ],
+        "type" : "NewExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

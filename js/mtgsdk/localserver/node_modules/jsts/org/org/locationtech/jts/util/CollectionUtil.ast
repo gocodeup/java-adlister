@@ -1,0 +1,630 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../extend'",
+      "raw" : "'../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "ArrayList",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../java/util/ArrayList'",
+      "raw" : "'../../../../java/util/ArrayList'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "CollectionUtil",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "CollectionUtil",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "CollectionUtil",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CollectionUtil",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "transform",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "coll",
+          "type" : "Identifier"
+        }, {
+          "name" : "func",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "result",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "name" : "ArrayList",
+                  "type" : "Identifier"
+                },
+                "arguments" : [ ],
+                "type" : "NewExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "init" : {
+              "declarations" : [ {
+                "id" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "init" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "coll",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "iterator",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ ],
+                  "type" : "CallExpression"
+                },
+                "type" : "VariableDeclarator"
+              } ],
+              "kind" : "var",
+              "type" : "VariableDeclaration"
+            },
+            "test" : {
+              "callee" : {
+                "object" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "hasNext",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ ],
+              "type" : "CallExpression"
+            },
+            "update" : null,
+            "body" : {
+              "body" : [ {
+                "expression" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "result",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "add",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "callee" : {
+                      "object" : {
+                        "name" : "func",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "execute",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "callee" : {
+                        "object" : {
+                          "name" : "i",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "next",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ ],
+                      "type" : "CallExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ExpressionStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "ForStatement"
+          }, {
+            "argument" : {
+              "name" : "result",
+              "type" : "Identifier"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CollectionUtil",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "select",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "collection",
+          "type" : "Identifier"
+        }, {
+          "name" : "func",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "result",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "name" : "ArrayList",
+                  "type" : "Identifier"
+                },
+                "arguments" : [ ],
+                "type" : "NewExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "init" : {
+              "declarations" : [ {
+                "id" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "init" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "collection",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "iterator",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ ],
+                  "type" : "CallExpression"
+                },
+                "type" : "VariableDeclarator"
+              } ],
+              "kind" : "var",
+              "type" : "VariableDeclaration"
+            },
+            "test" : {
+              "callee" : {
+                "object" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "hasNext",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ ],
+              "type" : "CallExpression"
+            },
+            "update" : null,
+            "body" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "item",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "i",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "next",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "test" : {
+                  "callee" : {
+                    "object" : {
+                      "object" : {
+                        "name" : "Boolean",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "TRUE",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "property" : {
+                      "name" : "equals",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "callee" : {
+                      "object" : {
+                        "name" : "func",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "execute",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "item",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "expression" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "result",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "add",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "name" : "item",
+                        "type" : "Identifier"
+                      } ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "ExpressionStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "ForStatement"
+          }, {
+            "argument" : {
+              "name" : "result",
+              "type" : "Identifier"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CollectionUtil",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "apply",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "coll",
+          "type" : "Identifier"
+        }, {
+          "name" : "func",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "init" : {
+              "declarations" : [ {
+                "id" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "init" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "coll",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "iterator",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ ],
+                  "type" : "CallExpression"
+                },
+                "type" : "VariableDeclarator"
+              } ],
+              "kind" : "var",
+              "type" : "VariableDeclaration"
+            },
+            "test" : {
+              "callee" : {
+                "object" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "hasNext",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ ],
+              "type" : "CallExpression"
+            },
+            "update" : null,
+            "body" : {
+              "body" : [ {
+                "expression" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "func",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "execute",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "callee" : {
+                      "object" : {
+                        "name" : "i",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "next",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ExpressionStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "ForStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "id" : {
+      "name" : "Function",
+      "type" : "Identifier"
+    },
+    "params" : [ ],
+    "body" : {
+      "body" : [ ],
+      "type" : "BlockStatement"
+    },
+    "generator" : false,
+    "type" : "FunctionDeclaration"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CollectionUtil",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "Function",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "name" : "Function",
+        "type" : "Identifier"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

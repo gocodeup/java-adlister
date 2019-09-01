@@ -1,0 +1,853 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../extend'",
+      "raw" : "'../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Assert",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../util/Assert'",
+      "raw" : "'../util/Assert'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "SegmentPointComparator",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "SegmentPointComparator",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "SegmentPointComparator",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "SegmentPointComparator",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "relativeSign",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "x0",
+          "type" : "Identifier"
+        }, {
+          "name" : "x1",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "x0",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "name" : "x1",
+                "type" : "Identifier"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "operator" : "-",
+                "prefix" : true,
+                "argument" : {
+                  "value" : "1",
+                  "raw" : "1",
+                  "type" : "Literal"
+                },
+                "type" : "UnaryExpression"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "test" : {
+              "operator" : ">",
+              "left" : {
+                "name" : "x0",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "name" : "x1",
+                "type" : "Identifier"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "value" : "1",
+                "raw" : "1",
+                "type" : "Literal"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "argument" : {
+              "value" : "0",
+              "raw" : "0",
+              "type" : "Literal"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "SegmentPointComparator",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "compare",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "octant",
+          "type" : "Identifier"
+        }, {
+          "name" : "p0",
+          "type" : "Identifier"
+        }, {
+          "name" : "p1",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "test" : {
+              "callee" : {
+                "object" : {
+                  "name" : "p0",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "equals2D",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "name" : "p1",
+                "type" : "Identifier"
+              } ],
+              "type" : "CallExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "xSign",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "SegmentPointComparator",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "relativeSign",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "object" : {
+                    "name" : "p0",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                }, {
+                  "object" : {
+                    "name" : "p1",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "ySign",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "SegmentPointComparator",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "relativeSign",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "object" : {
+                    "name" : "p0",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                }, {
+                  "object" : {
+                    "name" : "p1",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "discriminant" : {
+              "name" : "octant",
+              "type" : "Identifier"
+            },
+            "cases" : [ {
+              "test" : {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "SegmentPointComparator",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "compareValue",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "xSign",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "ySign",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "value" : "1",
+                "raw" : "1",
+                "type" : "Literal"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "SegmentPointComparator",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "compareValue",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "ySign",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "xSign",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "value" : "2",
+                "raw" : "2",
+                "type" : "Literal"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "SegmentPointComparator",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "compareValue",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "ySign",
+                    "type" : "Identifier"
+                  }, {
+                    "operator" : "-",
+                    "prefix" : true,
+                    "argument" : {
+                      "name" : "xSign",
+                      "type" : "Identifier"
+                    },
+                    "type" : "UnaryExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "value" : "3",
+                "raw" : "3",
+                "type" : "Literal"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "SegmentPointComparator",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "compareValue",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "operator" : "-",
+                    "prefix" : true,
+                    "argument" : {
+                      "name" : "xSign",
+                      "type" : "Identifier"
+                    },
+                    "type" : "UnaryExpression"
+                  }, {
+                    "name" : "ySign",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "value" : "4",
+                "raw" : "4",
+                "type" : "Literal"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "SegmentPointComparator",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "compareValue",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "operator" : "-",
+                    "prefix" : true,
+                    "argument" : {
+                      "name" : "xSign",
+                      "type" : "Identifier"
+                    },
+                    "type" : "UnaryExpression"
+                  }, {
+                    "operator" : "-",
+                    "prefix" : true,
+                    "argument" : {
+                      "name" : "ySign",
+                      "type" : "Identifier"
+                    },
+                    "type" : "UnaryExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "value" : "5",
+                "raw" : "5",
+                "type" : "Literal"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "SegmentPointComparator",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "compareValue",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "operator" : "-",
+                    "prefix" : true,
+                    "argument" : {
+                      "name" : "ySign",
+                      "type" : "Identifier"
+                    },
+                    "type" : "UnaryExpression"
+                  }, {
+                    "operator" : "-",
+                    "prefix" : true,
+                    "argument" : {
+                      "name" : "xSign",
+                      "type" : "Identifier"
+                    },
+                    "type" : "UnaryExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "value" : "6",
+                "raw" : "6",
+                "type" : "Literal"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "SegmentPointComparator",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "compareValue",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "operator" : "-",
+                    "prefix" : true,
+                    "argument" : {
+                      "name" : "ySign",
+                      "type" : "Identifier"
+                    },
+                    "type" : "UnaryExpression"
+                  }, {
+                    "name" : "xSign",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "value" : "7",
+                "raw" : "7",
+                "type" : "Literal"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "SegmentPointComparator",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "compareValue",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "xSign",
+                    "type" : "Identifier"
+                  }, {
+                    "operator" : "-",
+                    "prefix" : true,
+                    "argument" : {
+                      "name" : "ySign",
+                      "type" : "Identifier"
+                    },
+                    "type" : "UnaryExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            } ],
+            "type" : "SwitchStatement"
+          }, {
+            "expression" : {
+              "callee" : {
+                "object" : {
+                  "name" : "Assert",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "shouldNeverReachHere",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "value" : "invalid octant value",
+                "raw" : "\"invalid octant value\"",
+                "type" : "Literal"
+              } ],
+              "type" : "CallExpression"
+            },
+            "type" : "ExpressionStatement"
+          }, {
+            "argument" : {
+              "value" : "0",
+              "raw" : "0",
+              "type" : "Literal"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "SegmentPointComparator",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "compareValue",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "compareSign0",
+          "type" : "Identifier"
+        }, {
+          "name" : "compareSign1",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "compareSign0",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "operator" : "-",
+                "prefix" : true,
+                "argument" : {
+                  "value" : "1",
+                  "raw" : "1",
+                  "type" : "Literal"
+                },
+                "type" : "UnaryExpression"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "test" : {
+              "operator" : ">",
+              "left" : {
+                "name" : "compareSign0",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "value" : "1",
+                "raw" : "1",
+                "type" : "Literal"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "compareSign1",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "operator" : "-",
+                "prefix" : true,
+                "argument" : {
+                  "value" : "1",
+                  "raw" : "1",
+                  "type" : "Literal"
+                },
+                "type" : "UnaryExpression"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "test" : {
+              "operator" : ">",
+              "left" : {
+                "name" : "compareSign1",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "value" : "1",
+                "raw" : "1",
+                "type" : "Literal"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "argument" : {
+              "value" : "0",
+              "raw" : "0",
+              "type" : "Literal"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

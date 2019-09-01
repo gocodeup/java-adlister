@@ -1,0 +1,1397 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../extend'",
+      "raw" : "'../../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "Interval",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ {
+          "expression" : {
+            "operator" : "=",
+            "left" : {
+              "object" : {
+                "type" : "ThisExpression"
+              },
+              "property" : {
+                "name" : "min",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "right" : {
+              "value" : null,
+              "raw" : "null",
+              "type" : "Literal"
+            },
+            "type" : "AssignmentExpression"
+          },
+          "type" : "ExpressionStatement"
+        }, {
+          "expression" : {
+            "operator" : "=",
+            "left" : {
+              "object" : {
+                "type" : "ThisExpression"
+              },
+              "property" : {
+                "name" : "max",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "right" : {
+              "value" : null,
+              "raw" : "null",
+              "type" : "Literal"
+            },
+            "type" : "AssignmentExpression"
+          },
+          "type" : "ExpressionStatement"
+        }, {
+          "test" : {
+            "operator" : "===",
+            "left" : {
+              "name" : "arguments.length",
+              "type" : "Identifier"
+            },
+            "right" : {
+              "value" : 0,
+              "raw" : "0",
+              "type" : "Literal"
+            },
+            "type" : "BinaryExpression"
+          },
+          "consequent" : {
+            "body" : [ {
+              "expression" : {
+                "operator" : "=",
+                "left" : {
+                  "object" : {
+                    "type" : "ThisExpression"
+                  },
+                  "property" : {
+                    "name" : "min",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "right" : {
+                  "value" : "0.0",
+                  "raw" : "0.0",
+                  "type" : "Literal"
+                },
+                "type" : "AssignmentExpression"
+              },
+              "type" : "ExpressionStatement"
+            }, {
+              "expression" : {
+                "operator" : "=",
+                "left" : {
+                  "object" : {
+                    "type" : "ThisExpression"
+                  },
+                  "property" : {
+                    "name" : "max",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "right" : {
+                  "value" : "0.0",
+                  "raw" : "0.0",
+                  "type" : "Literal"
+                },
+                "type" : "AssignmentExpression"
+              },
+              "type" : "ExpressionStatement"
+            } ],
+            "type" : "BlockStatement"
+          },
+          "alternate" : {
+            "test" : {
+              "operator" : "===",
+              "left" : {
+                "name" : "arguments.length",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "value" : 1,
+                "raw" : "1",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "interval",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 0,
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "let",
+                "type" : "VariableDeclaration"
+              }, {
+                "expression" : {
+                  "callee" : {
+                    "object" : {
+                      "type" : "ThisExpression"
+                    },
+                    "property" : {
+                      "name" : "init",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "object" : {
+                      "name" : "interval",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "min",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  }, {
+                    "object" : {
+                      "name" : "interval",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "max",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ExpressionStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "alternate" : {
+              "test" : {
+                "operator" : "===",
+                "left" : {
+                  "name" : "arguments.length",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "value" : 2,
+                  "raw" : "2",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "consequent" : {
+                "body" : [ {
+                  "declarations" : [ {
+                    "id" : {
+                      "name" : "min",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 0,
+                        "raw" : "0",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  }, {
+                    "id" : {
+                      "name" : "max",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 1,
+                        "raw" : "1",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  } ],
+                  "kind" : "let",
+                  "type" : "VariableDeclaration"
+                }, {
+                  "expression" : {
+                    "callee" : {
+                      "object" : {
+                        "type" : "ThisExpression"
+                      },
+                      "property" : {
+                        "name" : "init",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "min",
+                      "type" : "Identifier"
+                    }, {
+                      "name" : "max",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "ExpressionStatement"
+                } ],
+                "type" : "BlockStatement"
+              },
+              "alternate" : null,
+              "type" : "IfStatement"
+            },
+            "type" : "IfStatement"
+          },
+          "type" : "IfStatement"
+        } ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "Interval",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "expandToInclude",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ {
+              "name" : "interval",
+              "type" : "Identifier"
+            } ],
+            "body" : {
+              "body" : [ {
+                "test" : {
+                  "operator" : ">",
+                  "left" : {
+                    "object" : {
+                      "name" : "interval",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "max",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "object" : {
+                      "type" : "ThisExpression"
+                    },
+                    "property" : {
+                      "name" : "max",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "expression" : {
+                    "operator" : "=",
+                    "left" : {
+                      "object" : {
+                        "type" : "ThisExpression"
+                      },
+                      "property" : {
+                        "name" : "max",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "right" : {
+                      "object" : {
+                        "name" : "interval",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "max",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "AssignmentExpression"
+                  },
+                  "type" : "ExpressionStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "object" : {
+                      "name" : "interval",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "min",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "object" : {
+                      "type" : "ThisExpression"
+                    },
+                    "property" : {
+                      "name" : "min",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "expression" : {
+                    "operator" : "=",
+                    "left" : {
+                      "object" : {
+                        "type" : "ThisExpression"
+                      },
+                      "property" : {
+                        "name" : "min",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "right" : {
+                      "object" : {
+                        "name" : "interval",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "min",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "AssignmentExpression"
+                  },
+                  "type" : "ExpressionStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getWidth",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "operator" : "-",
+                  "left" : {
+                    "object" : {
+                      "type" : "ThisExpression"
+                    },
+                    "property" : {
+                      "name" : "max",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "object" : {
+                      "type" : "ThisExpression"
+                    },
+                    "property" : {
+                      "name" : "min",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "overlaps",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "test" : {
+                  "operator" : "===",
+                  "left" : {
+                    "name" : "arguments.length",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : 1,
+                    "raw" : "1",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "interval",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "object" : {
+                          "name" : "arguments",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "value" : 0,
+                          "raw" : "0",
+                          "type" : "Literal"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "let",
+                    "type" : "VariableDeclaration"
+                  }, {
+                    "argument" : {
+                      "callee" : {
+                        "object" : {
+                          "type" : "ThisExpression"
+                        },
+                        "property" : {
+                          "name" : "overlaps",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "object" : {
+                          "name" : "interval",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "min",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      }, {
+                        "object" : {
+                          "name" : "interval",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "max",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      } ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "ReturnStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : {
+                  "test" : {
+                    "operator" : "===",
+                    "left" : {
+                      "name" : "arguments.length",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "value" : 2,
+                      "raw" : "2",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "declarations" : [ {
+                        "id" : {
+                          "name" : "min",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "object" : {
+                            "name" : "arguments",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "value" : 0,
+                            "raw" : "0",
+                            "type" : "Literal"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      }, {
+                        "id" : {
+                          "name" : "max",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "object" : {
+                            "name" : "arguments",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "value" : 1,
+                            "raw" : "1",
+                            "type" : "Literal"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      } ],
+                      "kind" : "let",
+                      "type" : "VariableDeclaration"
+                    }, {
+                      "test" : {
+                        "operator" : "||",
+                        "left" : {
+                          "operator" : ">",
+                          "left" : {
+                            "object" : {
+                              "type" : "ThisExpression"
+                            },
+                            "property" : {
+                              "name" : "min",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "right" : {
+                            "name" : "max",
+                            "type" : "Identifier"
+                          },
+                          "type" : "BinaryExpression"
+                        },
+                        "right" : {
+                          "operator" : "<",
+                          "left" : {
+                            "object" : {
+                              "type" : "ThisExpression"
+                            },
+                            "property" : {
+                              "name" : "max",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "right" : {
+                            "name" : "min",
+                            "type" : "Identifier"
+                          },
+                          "type" : "BinaryExpression"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "consequent" : {
+                        "argument" : {
+                          "value" : false,
+                          "raw" : "false",
+                          "type" : "Literal"
+                        },
+                        "type" : "ReturnStatement"
+                      },
+                      "alternate" : null,
+                      "type" : "IfStatement"
+                    }, {
+                      "argument" : {
+                        "value" : true,
+                        "raw" : "true",
+                        "type" : "Literal"
+                      },
+                      "type" : "ReturnStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : null,
+                  "type" : "IfStatement"
+                },
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getMin",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "object" : {
+                    "type" : "ThisExpression"
+                  },
+                  "property" : {
+                    "name" : "min",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "toString",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "operator" : "+",
+                  "left" : {
+                    "operator" : "+",
+                    "left" : {
+                      "operator" : "+",
+                      "left" : {
+                        "operator" : "+",
+                        "left" : {
+                          "value" : "[",
+                          "raw" : "\"[\"",
+                          "type" : "Literal"
+                        },
+                        "right" : {
+                          "object" : {
+                            "type" : "ThisExpression"
+                          },
+                          "property" : {
+                            "name" : "min",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "right" : {
+                        "value" : ", ",
+                        "raw" : "\", \"",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "right" : {
+                      "object" : {
+                        "type" : "ThisExpression"
+                      },
+                      "property" : {
+                        "name" : "max",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "right" : {
+                    "value" : "]",
+                    "raw" : "\"]\"",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "contains",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "test" : {
+                  "operator" : "===",
+                  "left" : {
+                    "name" : "arguments.length",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : 1,
+                    "raw" : "1",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : "instanceof",
+                      "left" : {
+                        "object" : {
+                          "name" : "arguments",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "value" : 0,
+                          "raw" : "0",
+                          "type" : "Literal"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      },
+                      "right" : {
+                        "name" : "Interval",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "declarations" : [ {
+                          "id" : {
+                            "name" : "interval",
+                            "type" : "Identifier"
+                          },
+                          "init" : {
+                            "object" : {
+                              "name" : "arguments",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "value" : 0,
+                              "raw" : "0",
+                              "type" : "Literal"
+                            },
+                            "computed" : true,
+                            "type" : "MemberExpression"
+                          },
+                          "type" : "VariableDeclarator"
+                        } ],
+                        "kind" : "let",
+                        "type" : "VariableDeclaration"
+                      }, {
+                        "argument" : {
+                          "callee" : {
+                            "object" : {
+                              "type" : "ThisExpression"
+                            },
+                            "property" : {
+                              "name" : "contains",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ {
+                            "object" : {
+                              "name" : "interval",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "min",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          }, {
+                            "object" : {
+                              "name" : "interval",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "max",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          } ],
+                          "type" : "CallExpression"
+                        },
+                        "type" : "ReturnStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : {
+                      "test" : {
+                        "operator" : "===",
+                        "left" : {
+                          "operator" : "typeof",
+                          "prefix" : true,
+                          "argument" : {
+                            "object" : {
+                              "name" : "arguments",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "value" : 0,
+                              "raw" : "0",
+                              "type" : "Literal"
+                            },
+                            "computed" : true,
+                            "type" : "MemberExpression"
+                          },
+                          "type" : "UnaryExpression"
+                        },
+                        "right" : {
+                          "value" : "number",
+                          "raw" : "\"number\"",
+                          "type" : "Literal"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "consequent" : {
+                        "body" : [ {
+                          "declarations" : [ {
+                            "id" : {
+                              "name" : "p",
+                              "type" : "Identifier"
+                            },
+                            "init" : {
+                              "object" : {
+                                "name" : "arguments",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "value" : 0,
+                                "raw" : "0",
+                                "type" : "Literal"
+                              },
+                              "computed" : true,
+                              "type" : "MemberExpression"
+                            },
+                            "type" : "VariableDeclarator"
+                          } ],
+                          "kind" : "let",
+                          "type" : "VariableDeclaration"
+                        }, {
+                          "argument" : {
+                            "operator" : "&&",
+                            "left" : {
+                              "operator" : ">=",
+                              "left" : {
+                                "name" : "p",
+                                "type" : "Identifier"
+                              },
+                              "right" : {
+                                "object" : {
+                                  "type" : "ThisExpression"
+                                },
+                                "property" : {
+                                  "name" : "min",
+                                  "type" : "Identifier"
+                                },
+                                "computed" : false,
+                                "type" : "MemberExpression"
+                              },
+                              "type" : "BinaryExpression"
+                            },
+                            "right" : {
+                              "operator" : "<=",
+                              "left" : {
+                                "name" : "p",
+                                "type" : "Identifier"
+                              },
+                              "right" : {
+                                "object" : {
+                                  "type" : "ThisExpression"
+                                },
+                                "property" : {
+                                  "name" : "max",
+                                  "type" : "Identifier"
+                                },
+                                "computed" : false,
+                                "type" : "MemberExpression"
+                              },
+                              "type" : "BinaryExpression"
+                            },
+                            "type" : "BinaryExpression"
+                          },
+                          "type" : "ReturnStatement"
+                        } ],
+                        "type" : "BlockStatement"
+                      },
+                      "alternate" : null,
+                      "type" : "IfStatement"
+                    },
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : {
+                  "test" : {
+                    "operator" : "===",
+                    "left" : {
+                      "name" : "arguments.length",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "value" : 2,
+                      "raw" : "2",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "declarations" : [ {
+                        "id" : {
+                          "name" : "min",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "object" : {
+                            "name" : "arguments",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "value" : 0,
+                            "raw" : "0",
+                            "type" : "Literal"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      }, {
+                        "id" : {
+                          "name" : "max",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "object" : {
+                            "name" : "arguments",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "value" : 1,
+                            "raw" : "1",
+                            "type" : "Literal"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      } ],
+                      "kind" : "let",
+                      "type" : "VariableDeclaration"
+                    }, {
+                      "argument" : {
+                        "operator" : "&&",
+                        "left" : {
+                          "operator" : ">=",
+                          "left" : {
+                            "name" : "min",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "object" : {
+                              "type" : "ThisExpression"
+                            },
+                            "property" : {
+                              "name" : "min",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "type" : "BinaryExpression"
+                        },
+                        "right" : {
+                          "operator" : "<=",
+                          "left" : {
+                            "name" : "max",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "object" : {
+                              "type" : "ThisExpression"
+                            },
+                            "property" : {
+                              "name" : "max",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "type" : "BinaryExpression"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "type" : "ReturnStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : null,
+                  "type" : "IfStatement"
+                },
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "init",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ {
+              "name" : "min",
+              "type" : "Identifier"
+            }, {
+              "name" : "max",
+              "type" : "Identifier"
+            } ],
+            "body" : {
+              "body" : [ {
+                "expression" : {
+                  "operator" : "=",
+                  "left" : {
+                    "object" : {
+                      "type" : "ThisExpression"
+                    },
+                    "property" : {
+                      "name" : "min",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "name" : "min",
+                    "type" : "Identifier"
+                  },
+                  "type" : "AssignmentExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "expression" : {
+                  "operator" : "=",
+                  "left" : {
+                    "object" : {
+                      "type" : "ThisExpression"
+                    },
+                    "property" : {
+                      "name" : "max",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "name" : "max",
+                    "type" : "Identifier"
+                  },
+                  "type" : "AssignmentExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "test" : {
+                  "operator" : ">",
+                  "left" : {
+                    "name" : "min",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "max",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "expression" : {
+                      "operator" : "=",
+                      "left" : {
+                        "object" : {
+                          "type" : "ThisExpression"
+                        },
+                        "property" : {
+                          "name" : "min",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "right" : {
+                        "name" : "max",
+                        "type" : "Identifier"
+                      },
+                      "type" : "AssignmentExpression"
+                    },
+                    "type" : "ExpressionStatement"
+                  }, {
+                    "expression" : {
+                      "operator" : "=",
+                      "left" : {
+                        "object" : {
+                          "type" : "ThisExpression"
+                        },
+                        "property" : {
+                          "name" : "max",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "right" : {
+                        "name" : "min",
+                        "type" : "Identifier"
+                      },
+                      "type" : "AssignmentExpression"
+                    },
+                    "type" : "ExpressionStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getMax",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "object" : {
+                    "type" : "ThisExpression"
+                  },
+                  "property" : {
+                    "name" : "max",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "Interval",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

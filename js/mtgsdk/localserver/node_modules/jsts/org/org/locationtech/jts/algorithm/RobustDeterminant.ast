@@ -1,0 +1,2595 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../extend'",
+      "raw" : "'../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "RobustDeterminant",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "RobustDeterminant",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "RobustDeterminant",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "RobustDeterminant",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "orientationIndex",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "p1",
+          "type" : "Identifier"
+        }, {
+          "name" : "p2",
+          "type" : "Identifier"
+        }, {
+          "name" : "q",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "dx1",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "-",
+                "left" : {
+                  "object" : {
+                    "name" : "p2",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "right" : {
+                  "object" : {
+                    "name" : "p1",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "dy1",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "-",
+                "left" : {
+                  "object" : {
+                    "name" : "p2",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "right" : {
+                  "object" : {
+                    "name" : "p1",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "dx2",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "-",
+                "left" : {
+                  "object" : {
+                    "name" : "q",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "right" : {
+                  "object" : {
+                    "name" : "p2",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "x",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "dy2",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "-",
+                "left" : {
+                  "object" : {
+                    "name" : "q",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "right" : {
+                  "object" : {
+                    "name" : "p2",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "y",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "argument" : {
+              "callee" : {
+                "object" : {
+                  "name" : "RobustDeterminant",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "signOfDet2x2",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "name" : "dx1",
+                "type" : "Identifier"
+              }, {
+                "name" : "dy1",
+                "type" : "Identifier"
+              }, {
+                "name" : "dx2",
+                "type" : "Identifier"
+              }, {
+                "name" : "dy2",
+                "type" : "Identifier"
+              } ],
+              "type" : "CallExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "RobustDeterminant",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "signOfDet2x2",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "x1",
+          "type" : "Identifier"
+        }, {
+          "name" : "y1",
+          "type" : "Identifier"
+        }, {
+          "name" : "x2",
+          "type" : "Identifier"
+        }, {
+          "name" : "y2",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "sign",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "value" : null,
+                "raw" : "null",
+                "type" : "Literal"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "swap",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "value" : null,
+                "raw" : "null",
+                "type" : "Literal"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "k",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "value" : null,
+                "raw" : "null",
+                "type" : "Literal"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "count",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "expression" : {
+              "operator" : "=",
+              "left" : {
+                "name" : "sign",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "value" : "1",
+                "raw" : "1",
+                "type" : "Literal"
+              },
+              "type" : "AssignmentExpression"
+            },
+            "type" : "ExpressionStatement"
+          }, {
+            "test" : {
+              "operator" : "||",
+              "left" : {
+                "operator" : "===",
+                "left" : {
+                  "name" : "x1",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "value" : "0.0",
+                  "raw" : "0.0",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "right" : {
+                "operator" : "===",
+                "left" : {
+                  "name" : "y2",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "value" : "0.0",
+                  "raw" : "0.0",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "body" : [ {
+                "test" : {
+                  "operator" : "||",
+                  "left" : {
+                    "operator" : "===",
+                    "left" : {
+                      "name" : "y1",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "value" : "0.0",
+                      "raw" : "0.0",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "right" : {
+                    "operator" : "===",
+                    "left" : {
+                      "name" : "x2",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "value" : "0.0",
+                      "raw" : "0.0",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "argument" : {
+                      "value" : "0",
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "type" : "ReturnStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : {
+                  "test" : {
+                    "operator" : ">",
+                    "left" : {
+                      "name" : "y1",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "value" : "0",
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "test" : {
+                        "operator" : ">",
+                        "left" : {
+                          "name" : "x2",
+                          "type" : "Identifier"
+                        },
+                        "right" : {
+                          "value" : "0",
+                          "raw" : "0",
+                          "type" : "Literal"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "consequent" : {
+                        "body" : [ {
+                          "argument" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "sign",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "ReturnStatement"
+                        } ],
+                        "type" : "BlockStatement"
+                      },
+                      "alternate" : {
+                        "body" : [ {
+                          "argument" : {
+                            "name" : "sign",
+                            "type" : "Identifier"
+                          },
+                          "type" : "ReturnStatement"
+                        } ],
+                        "type" : "BlockStatement"
+                      },
+                      "type" : "IfStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : {
+                    "body" : [ {
+                      "test" : {
+                        "operator" : ">",
+                        "left" : {
+                          "name" : "x2",
+                          "type" : "Identifier"
+                        },
+                        "right" : {
+                          "value" : "0",
+                          "raw" : "0",
+                          "type" : "Literal"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "consequent" : {
+                        "body" : [ {
+                          "argument" : {
+                            "name" : "sign",
+                            "type" : "Identifier"
+                          },
+                          "type" : "ReturnStatement"
+                        } ],
+                        "type" : "BlockStatement"
+                      },
+                      "alternate" : {
+                        "body" : [ {
+                          "argument" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "sign",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "ReturnStatement"
+                        } ],
+                        "type" : "BlockStatement"
+                      },
+                      "type" : "IfStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "type" : "IfStatement"
+                },
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "test" : {
+              "operator" : "||",
+              "left" : {
+                "operator" : "===",
+                "left" : {
+                  "name" : "y1",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "value" : "0.0",
+                  "raw" : "0.0",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "right" : {
+                "operator" : "===",
+                "left" : {
+                  "name" : "x2",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "value" : "0.0",
+                  "raw" : "0.0",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "body" : [ {
+                "test" : {
+                  "operator" : ">",
+                  "left" : {
+                    "name" : "y2",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : "0",
+                    "raw" : "0",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : ">",
+                      "left" : {
+                        "name" : "x1",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "value" : "0",
+                        "raw" : "0",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "argument" : {
+                          "name" : "sign",
+                          "type" : "Identifier"
+                        },
+                        "type" : "ReturnStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : {
+                      "body" : [ {
+                        "argument" : {
+                          "operator" : "-",
+                          "prefix" : true,
+                          "argument" : {
+                            "name" : "sign",
+                            "type" : "Identifier"
+                          },
+                          "type" : "UnaryExpression"
+                        },
+                        "type" : "ReturnStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : ">",
+                      "left" : {
+                        "name" : "x1",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "value" : "0",
+                        "raw" : "0",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "argument" : {
+                          "operator" : "-",
+                          "prefix" : true,
+                          "argument" : {
+                            "name" : "sign",
+                            "type" : "Identifier"
+                          },
+                          "type" : "UnaryExpression"
+                        },
+                        "type" : "ReturnStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : {
+                      "body" : [ {
+                        "argument" : {
+                          "name" : "sign",
+                          "type" : "Identifier"
+                        },
+                        "type" : "ReturnStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "value" : "0.0",
+                "raw" : "0.0",
+                "type" : "Literal"
+              },
+              "right" : {
+                "name" : "y1",
+                "type" : "Identifier"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "body" : [ {
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "value" : "0.0",
+                    "raw" : "0.0",
+                    "type" : "Literal"
+                  },
+                  "right" : {
+                    "name" : "y2",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : "<=",
+                      "left" : {
+                        "name" : "y1",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "name" : "y2",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "type" : "EmptyStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : {
+                      "body" : [ {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "sign",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "sign",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "swap",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "name" : "x1",
+                            "type" : "Identifier"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "x1",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "name" : "x2",
+                            "type" : "Identifier"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "x2",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "name" : "swap",
+                            "type" : "Identifier"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "swap",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "name" : "y1",
+                            "type" : "Identifier"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "y1",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "name" : "y2",
+                            "type" : "Identifier"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "y2",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "name" : "swap",
+                            "type" : "Identifier"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : "<=",
+                      "left" : {
+                        "name" : "y1",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "operator" : "-",
+                        "prefix" : true,
+                        "argument" : {
+                          "name" : "y2",
+                          "type" : "Identifier"
+                        },
+                        "type" : "UnaryExpression"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "sign",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "sign",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "x2",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "x2",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "y2",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "y2",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : {
+                      "body" : [ {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "swap",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "name" : "x1",
+                            "type" : "Identifier"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "x1",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "x2",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "x2",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "name" : "swap",
+                            "type" : "Identifier"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "swap",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "name" : "y1",
+                            "type" : "Identifier"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "y1",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "y2",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "y2",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "name" : "swap",
+                            "type" : "Identifier"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "alternate" : {
+              "body" : [ {
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "value" : "0.0",
+                    "raw" : "0.0",
+                    "type" : "Literal"
+                  },
+                  "right" : {
+                    "name" : "y2",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : "<=",
+                      "left" : {
+                        "operator" : "-",
+                        "prefix" : true,
+                        "argument" : {
+                          "name" : "y1",
+                          "type" : "Identifier"
+                        },
+                        "type" : "UnaryExpression"
+                      },
+                      "right" : {
+                        "name" : "y2",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "sign",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "sign",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "x1",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "x1",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "y1",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "y1",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : {
+                      "body" : [ {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "swap",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "x1",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "x1",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "name" : "x2",
+                            "type" : "Identifier"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "x2",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "name" : "swap",
+                            "type" : "Identifier"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "swap",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "y1",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "y1",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "name" : "y2",
+                            "type" : "Identifier"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "y2",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "name" : "swap",
+                            "type" : "Identifier"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : ">=",
+                      "left" : {
+                        "name" : "y1",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "name" : "y2",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "x1",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "x1",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "y1",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "y1",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "x2",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "x2",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "y2",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "y2",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "type" : "EmptyStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : {
+                      "body" : [ {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "sign",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "sign",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "swap",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "x1",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "x1",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "x2",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "x2",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "name" : "swap",
+                            "type" : "Identifier"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "swap",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "y1",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "y1",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "y2",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "y2",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "name" : "swap",
+                            "type" : "Identifier"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "IfStatement"
+          }, {
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "value" : "0.0",
+                "raw" : "0.0",
+                "type" : "Literal"
+              },
+              "right" : {
+                "name" : "x1",
+                "type" : "Identifier"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "body" : [ {
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "value" : "0.0",
+                    "raw" : "0.0",
+                    "type" : "Literal"
+                  },
+                  "right" : {
+                    "name" : "x2",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : "<=",
+                      "left" : {
+                        "name" : "x1",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "name" : "x2",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "type" : "EmptyStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : {
+                      "body" : [ {
+                        "argument" : {
+                          "name" : "sign",
+                          "type" : "Identifier"
+                        },
+                        "type" : "ReturnStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : {
+                  "body" : [ {
+                    "argument" : {
+                      "name" : "sign",
+                      "type" : "Identifier"
+                    },
+                    "type" : "ReturnStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "alternate" : {
+              "body" : [ {
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "value" : "0.0",
+                    "raw" : "0.0",
+                    "type" : "Literal"
+                  },
+                  "right" : {
+                    "name" : "x2",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "argument" : {
+                      "operator" : "-",
+                      "prefix" : true,
+                      "argument" : {
+                        "name" : "sign",
+                        "type" : "Identifier"
+                      },
+                      "type" : "UnaryExpression"
+                    },
+                    "type" : "ReturnStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : ">=",
+                      "left" : {
+                        "name" : "x1",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "name" : "x2",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "sign",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "sign",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "x1",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "x1",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "x2",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "x2",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "type" : "EmptyStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : {
+                      "body" : [ {
+                        "argument" : {
+                          "operator" : "-",
+                          "prefix" : true,
+                          "argument" : {
+                            "name" : "sign",
+                            "type" : "Identifier"
+                          },
+                          "type" : "UnaryExpression"
+                        },
+                        "type" : "ReturnStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "IfStatement"
+          }, {
+            "test" : {
+              "value" : true,
+              "raw" : "true",
+              "type" : "Literal"
+            },
+            "body" : {
+              "body" : [ {
+                "expression" : {
+                  "operator" : "=",
+                  "left" : {
+                    "name" : "count",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "operator" : "+",
+                    "left" : {
+                      "name" : "count",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "value" : "1",
+                      "raw" : "1",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "AssignmentExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "expression" : {
+                  "operator" : "=",
+                  "left" : {
+                    "name" : "k",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "Math",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "floor",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "operator" : "/",
+                      "left" : {
+                        "name" : "x2",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "name" : "x1",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "AssignmentExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "expression" : {
+                  "operator" : "=",
+                  "left" : {
+                    "name" : "x2",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "operator" : "-",
+                    "left" : {
+                      "name" : "x2",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "operator" : "*",
+                      "left" : {
+                        "name" : "k",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "name" : "x1",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "AssignmentExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "expression" : {
+                  "operator" : "=",
+                  "left" : {
+                    "name" : "y2",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "operator" : "-",
+                    "left" : {
+                      "name" : "y2",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "operator" : "*",
+                      "left" : {
+                        "name" : "k",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "name" : "y1",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "AssignmentExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "name" : "y2",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : "0.0",
+                    "raw" : "0.0",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "argument" : {
+                      "operator" : "-",
+                      "prefix" : true,
+                      "argument" : {
+                        "name" : "sign",
+                        "type" : "Identifier"
+                      },
+                      "type" : "UnaryExpression"
+                    },
+                    "type" : "ReturnStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "test" : {
+                  "operator" : ">",
+                  "left" : {
+                    "name" : "y2",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "y1",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "argument" : {
+                      "name" : "sign",
+                      "type" : "Identifier"
+                    },
+                    "type" : "ReturnStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "test" : {
+                  "operator" : ">",
+                  "left" : {
+                    "name" : "x1",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "operator" : "+",
+                    "left" : {
+                      "name" : "x2",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "x2",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : "<",
+                      "left" : {
+                        "name" : "y1",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "operator" : "+",
+                        "left" : {
+                          "name" : "y2",
+                          "type" : "Identifier"
+                        },
+                        "right" : {
+                          "name" : "y2",
+                          "type" : "Identifier"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "argument" : {
+                          "name" : "sign",
+                          "type" : "Identifier"
+                        },
+                        "type" : "ReturnStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : null,
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : ">",
+                      "left" : {
+                        "name" : "y1",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "operator" : "+",
+                        "left" : {
+                          "name" : "y2",
+                          "type" : "Identifier"
+                        },
+                        "right" : {
+                          "name" : "y2",
+                          "type" : "Identifier"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "argument" : {
+                          "operator" : "-",
+                          "prefix" : true,
+                          "argument" : {
+                            "name" : "sign",
+                            "type" : "Identifier"
+                          },
+                          "type" : "UnaryExpression"
+                        },
+                        "type" : "ReturnStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : {
+                      "body" : [ {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "x2",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "left" : {
+                              "name" : "x1",
+                              "type" : "Identifier"
+                            },
+                            "right" : {
+                              "name" : "x2",
+                              "type" : "Identifier"
+                            },
+                            "type" : "BinaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "y2",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "left" : {
+                              "name" : "y1",
+                              "type" : "Identifier"
+                            },
+                            "right" : {
+                              "name" : "y2",
+                              "type" : "Identifier"
+                            },
+                            "type" : "BinaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "sign",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "sign",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "IfStatement"
+              }, {
+                "test" : {
+                  "operator" : "===",
+                  "left" : {
+                    "name" : "y2",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : "0.0",
+                    "raw" : "0.0",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : "===",
+                      "left" : {
+                        "name" : "x2",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "value" : "0.0",
+                        "raw" : "0.0",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "argument" : {
+                          "value" : "0",
+                          "raw" : "0",
+                          "type" : "Literal"
+                        },
+                        "type" : "ReturnStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : {
+                      "body" : [ {
+                        "argument" : {
+                          "operator" : "-",
+                          "prefix" : true,
+                          "argument" : {
+                            "name" : "sign",
+                            "type" : "Identifier"
+                          },
+                          "type" : "UnaryExpression"
+                        },
+                        "type" : "ReturnStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "test" : {
+                  "operator" : "===",
+                  "left" : {
+                    "name" : "x2",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : "0.0",
+                    "raw" : "0.0",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "argument" : {
+                      "name" : "sign",
+                      "type" : "Identifier"
+                    },
+                    "type" : "ReturnStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "expression" : {
+                  "operator" : "=",
+                  "left" : {
+                    "name" : "k",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "Math",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "floor",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "operator" : "/",
+                      "left" : {
+                        "name" : "x1",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "name" : "x2",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "AssignmentExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "expression" : {
+                  "operator" : "=",
+                  "left" : {
+                    "name" : "x1",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "operator" : "-",
+                    "left" : {
+                      "name" : "x1",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "operator" : "*",
+                      "left" : {
+                        "name" : "k",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "name" : "x2",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "AssignmentExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "expression" : {
+                  "operator" : "=",
+                  "left" : {
+                    "name" : "y1",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "operator" : "-",
+                    "left" : {
+                      "name" : "y1",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "operator" : "*",
+                      "left" : {
+                        "name" : "k",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "name" : "y2",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "AssignmentExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "name" : "y1",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : "0.0",
+                    "raw" : "0.0",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "argument" : {
+                      "name" : "sign",
+                      "type" : "Identifier"
+                    },
+                    "type" : "ReturnStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "test" : {
+                  "operator" : ">",
+                  "left" : {
+                    "name" : "y1",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "y2",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "argument" : {
+                      "operator" : "-",
+                      "prefix" : true,
+                      "argument" : {
+                        "name" : "sign",
+                        "type" : "Identifier"
+                      },
+                      "type" : "UnaryExpression"
+                    },
+                    "type" : "ReturnStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "test" : {
+                  "operator" : ">",
+                  "left" : {
+                    "name" : "x2",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "operator" : "+",
+                    "left" : {
+                      "name" : "x1",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "x1",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : "<",
+                      "left" : {
+                        "name" : "y2",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "operator" : "+",
+                        "left" : {
+                          "name" : "y1",
+                          "type" : "Identifier"
+                        },
+                        "right" : {
+                          "name" : "y1",
+                          "type" : "Identifier"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "argument" : {
+                          "operator" : "-",
+                          "prefix" : true,
+                          "argument" : {
+                            "name" : "sign",
+                            "type" : "Identifier"
+                          },
+                          "type" : "UnaryExpression"
+                        },
+                        "type" : "ReturnStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : null,
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : ">",
+                      "left" : {
+                        "name" : "y2",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "operator" : "+",
+                        "left" : {
+                          "name" : "y1",
+                          "type" : "Identifier"
+                        },
+                        "right" : {
+                          "name" : "y1",
+                          "type" : "Identifier"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "argument" : {
+                          "name" : "sign",
+                          "type" : "Identifier"
+                        },
+                        "type" : "ReturnStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : {
+                      "body" : [ {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "x1",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "left" : {
+                              "name" : "x2",
+                              "type" : "Identifier"
+                            },
+                            "right" : {
+                              "name" : "x1",
+                              "type" : "Identifier"
+                            },
+                            "type" : "BinaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "y1",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "left" : {
+                              "name" : "y2",
+                              "type" : "Identifier"
+                            },
+                            "right" : {
+                              "name" : "y1",
+                              "type" : "Identifier"
+                            },
+                            "type" : "BinaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "sign",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "operator" : "-",
+                            "prefix" : true,
+                            "argument" : {
+                              "name" : "sign",
+                              "type" : "Identifier"
+                            },
+                            "type" : "UnaryExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "IfStatement"
+              }, {
+                "test" : {
+                  "operator" : "===",
+                  "left" : {
+                    "name" : "y1",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : "0.0",
+                    "raw" : "0.0",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : "===",
+                      "left" : {
+                        "name" : "x1",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "value" : "0.0",
+                        "raw" : "0.0",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "argument" : {
+                          "value" : "0",
+                          "raw" : "0",
+                          "type" : "Literal"
+                        },
+                        "type" : "ReturnStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : {
+                      "body" : [ {
+                        "argument" : {
+                          "name" : "sign",
+                          "type" : "Identifier"
+                        },
+                        "type" : "ReturnStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "test" : {
+                  "operator" : "===",
+                  "left" : {
+                    "name" : "x1",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : "0.0",
+                    "raw" : "0.0",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "argument" : {
+                      "operator" : "-",
+                      "prefix" : true,
+                      "argument" : {
+                        "name" : "sign",
+                        "type" : "Identifier"
+                      },
+                      "type" : "UnaryExpression"
+                    },
+                    "type" : "ReturnStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "WhileStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

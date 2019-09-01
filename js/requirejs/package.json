@@ -49,5 +49,8 @@
     "type": "git",
     "url": "git+https://github.com/jrburke/r.js.git"
   },
-  "version": "2.3.6"
+  "version": "2.3.6",
+  "devDependencies": {
+    "js": "^0.1.0"
+  }
 }

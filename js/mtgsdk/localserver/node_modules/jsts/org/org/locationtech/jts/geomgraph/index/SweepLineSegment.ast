@@ -1,0 +1,658 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../extend'",
+      "raw" : "'../../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "SweepLineSegment",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ {
+          "expression" : {
+            "operator" : "=",
+            "left" : {
+              "object" : {
+                "type" : "ThisExpression"
+              },
+              "property" : {
+                "name" : "edge",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "right" : {
+              "value" : null,
+              "raw" : "null",
+              "type" : "Literal"
+            },
+            "type" : "AssignmentExpression"
+          },
+          "type" : "ExpressionStatement"
+        }, {
+          "expression" : {
+            "operator" : "=",
+            "left" : {
+              "object" : {
+                "type" : "ThisExpression"
+              },
+              "property" : {
+                "name" : "pts",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "right" : {
+              "value" : null,
+              "raw" : "null",
+              "type" : "Literal"
+            },
+            "type" : "AssignmentExpression"
+          },
+          "type" : "ExpressionStatement"
+        }, {
+          "expression" : {
+            "operator" : "=",
+            "left" : {
+              "object" : {
+                "type" : "ThisExpression"
+              },
+              "property" : {
+                "name" : "ptIndex",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "right" : {
+              "value" : null,
+              "raw" : "null",
+              "type" : "Literal"
+            },
+            "type" : "AssignmentExpression"
+          },
+          "type" : "ExpressionStatement"
+        }, {
+          "declarations" : [ {
+            "id" : {
+              "name" : "edge",
+              "type" : "Identifier"
+            },
+            "init" : {
+              "object" : {
+                "name" : "arguments",
+                "type" : "Identifier"
+              },
+              "property" : {
+                "value" : 0,
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "computed" : true,
+              "type" : "MemberExpression"
+            },
+            "type" : "VariableDeclarator"
+          }, {
+            "id" : {
+              "name" : "ptIndex",
+              "type" : "Identifier"
+            },
+            "init" : {
+              "object" : {
+                "name" : "arguments",
+                "type" : "Identifier"
+              },
+              "property" : {
+                "value" : 1,
+                "raw" : "1",
+                "type" : "Literal"
+              },
+              "computed" : true,
+              "type" : "MemberExpression"
+            },
+            "type" : "VariableDeclarator"
+          } ],
+          "kind" : "let",
+          "type" : "VariableDeclaration"
+        }, {
+          "expression" : {
+            "operator" : "=",
+            "left" : {
+              "object" : {
+                "type" : "ThisExpression"
+              },
+              "property" : {
+                "name" : "edge",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "right" : {
+              "name" : "edge",
+              "type" : "Identifier"
+            },
+            "type" : "AssignmentExpression"
+          },
+          "type" : "ExpressionStatement"
+        }, {
+          "expression" : {
+            "operator" : "=",
+            "left" : {
+              "object" : {
+                "type" : "ThisExpression"
+              },
+              "property" : {
+                "name" : "ptIndex",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "right" : {
+              "name" : "ptIndex",
+              "type" : "Identifier"
+            },
+            "type" : "AssignmentExpression"
+          },
+          "type" : "ExpressionStatement"
+        }, {
+          "expression" : {
+            "operator" : "=",
+            "left" : {
+              "object" : {
+                "type" : "ThisExpression"
+              },
+              "property" : {
+                "name" : "pts",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "right" : {
+              "callee" : {
+                "object" : {
+                  "name" : "edge",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "getCoordinates",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ ],
+              "type" : "CallExpression"
+            },
+            "type" : "AssignmentExpression"
+          },
+          "type" : "ExpressionStatement"
+        } ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "SweepLineSegment",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "getMaxX",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "x1",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "object" : {
+                        "object" : {
+                          "type" : "ThisExpression"
+                        },
+                        "property" : {
+                          "name" : "pts",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "property" : {
+                        "object" : {
+                          "type" : "ThisExpression"
+                        },
+                        "property" : {
+                          "name" : "ptIndex",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "property" : {
+                      "name" : "x",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "x2",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "object" : {
+                        "object" : {
+                          "type" : "ThisExpression"
+                        },
+                        "property" : {
+                          "name" : "pts",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "property" : {
+                        "operator" : "+",
+                        "left" : {
+                          "object" : {
+                            "type" : "ThisExpression"
+                          },
+                          "property" : {
+                            "name" : "ptIndex",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "right" : {
+                          "value" : "1",
+                          "raw" : "1",
+                          "type" : "Literal"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "property" : {
+                      "name" : "x",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "argument" : {
+                  "test" : {
+                    "operator" : ">",
+                    "left" : {
+                      "name" : "x1",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "x2",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "alternate" : {
+                    "name" : "x2",
+                    "type" : "Identifier"
+                  },
+                  "consequent" : {
+                    "name" : "x1",
+                    "type" : "Identifier"
+                  },
+                  "type" : "ConditionalExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getMinX",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "x1",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "object" : {
+                        "object" : {
+                          "type" : "ThisExpression"
+                        },
+                        "property" : {
+                          "name" : "pts",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "property" : {
+                        "object" : {
+                          "type" : "ThisExpression"
+                        },
+                        "property" : {
+                          "name" : "ptIndex",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "property" : {
+                      "name" : "x",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "x2",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "object" : {
+                        "object" : {
+                          "type" : "ThisExpression"
+                        },
+                        "property" : {
+                          "name" : "pts",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "property" : {
+                        "operator" : "+",
+                        "left" : {
+                          "object" : {
+                            "type" : "ThisExpression"
+                          },
+                          "property" : {
+                            "name" : "ptIndex",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "right" : {
+                          "value" : "1",
+                          "raw" : "1",
+                          "type" : "Literal"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "property" : {
+                      "name" : "x",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "argument" : {
+                  "test" : {
+                    "operator" : "<",
+                    "left" : {
+                      "name" : "x1",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "x2",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "alternate" : {
+                    "name" : "x2",
+                    "type" : "Identifier"
+                  },
+                  "consequent" : {
+                    "name" : "x1",
+                    "type" : "Identifier"
+                  },
+                  "type" : "ConditionalExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "computeIntersections",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ {
+              "name" : "ss",
+              "type" : "Identifier"
+            }, {
+              "name" : "si",
+              "type" : "Identifier"
+            } ],
+            "body" : {
+              "body" : [ {
+                "expression" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "si",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "addIntersections",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "object" : {
+                      "type" : "ThisExpression"
+                    },
+                    "property" : {
+                      "name" : "edge",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  }, {
+                    "object" : {
+                      "type" : "ThisExpression"
+                    },
+                    "property" : {
+                      "name" : "ptIndex",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  }, {
+                    "object" : {
+                      "name" : "ss",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "edge",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  }, {
+                    "object" : {
+                      "name" : "ss",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "ptIndex",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ExpressionStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "SweepLineSegment",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

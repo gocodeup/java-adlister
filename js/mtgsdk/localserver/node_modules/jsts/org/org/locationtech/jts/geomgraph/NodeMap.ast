@@ -1,0 +1,1221 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Location",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../geom/Location'",
+      "raw" : "'../geom/Location'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Coordinate",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../geom/Coordinate'",
+      "raw" : "'../geom/Coordinate'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Node",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'./Node'",
+      "raw" : "'./Node'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../extend'",
+      "raw" : "'../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "ArrayList",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../java/util/ArrayList'",
+      "raw" : "'../../../../java/util/ArrayList'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "TreeMap",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../java/util/TreeMap'",
+      "raw" : "'../../../../java/util/TreeMap'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "NodeMap",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ {
+          "expression" : {
+            "operator" : "=",
+            "left" : {
+              "object" : {
+                "type" : "ThisExpression"
+              },
+              "property" : {
+                "name" : "nodeMap",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "right" : {
+              "callee" : {
+                "name" : "TreeMap",
+                "type" : "Identifier"
+              },
+              "arguments" : [ ],
+              "type" : "NewExpression"
+            },
+            "type" : "AssignmentExpression"
+          },
+          "type" : "ExpressionStatement"
+        }, {
+          "expression" : {
+            "operator" : "=",
+            "left" : {
+              "object" : {
+                "type" : "ThisExpression"
+              },
+              "property" : {
+                "name" : "nodeFact",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "right" : {
+              "value" : null,
+              "raw" : "null",
+              "type" : "Literal"
+            },
+            "type" : "AssignmentExpression"
+          },
+          "type" : "ExpressionStatement"
+        }, {
+          "declarations" : [ {
+            "id" : {
+              "name" : "nodeFact",
+              "type" : "Identifier"
+            },
+            "init" : {
+              "object" : {
+                "name" : "arguments",
+                "type" : "Identifier"
+              },
+              "property" : {
+                "value" : 0,
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "computed" : true,
+              "type" : "MemberExpression"
+            },
+            "type" : "VariableDeclarator"
+          } ],
+          "kind" : "let",
+          "type" : "VariableDeclaration"
+        }, {
+          "expression" : {
+            "operator" : "=",
+            "left" : {
+              "object" : {
+                "type" : "ThisExpression"
+              },
+              "property" : {
+                "name" : "nodeFact",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "right" : {
+              "name" : "nodeFact",
+              "type" : "Identifier"
+            },
+            "type" : "AssignmentExpression"
+          },
+          "type" : "ExpressionStatement"
+        } ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "NodeMap",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "find",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ {
+              "name" : "coord",
+              "type" : "Identifier"
+            } ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "callee" : {
+                    "object" : {
+                      "object" : {
+                        "type" : "ThisExpression"
+                      },
+                      "property" : {
+                        "name" : "nodeMap",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "property" : {
+                      "name" : "get",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "coord",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "addNode",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "test" : {
+                  "operator" : "instanceof",
+                  "left" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 0,
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "name" : "Coordinate",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "coord",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "object" : {
+                          "name" : "arguments",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "value" : 0,
+                          "raw" : "0",
+                          "type" : "Literal"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "let",
+                    "type" : "VariableDeclaration"
+                  }, {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "node",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "callee" : {
+                          "object" : {
+                            "object" : {
+                              "type" : "ThisExpression"
+                            },
+                            "property" : {
+                              "name" : "nodeMap",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "property" : {
+                            "name" : "get",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "coord",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "var",
+                    "type" : "VariableDeclaration"
+                  }, {
+                    "test" : {
+                      "operator" : "===",
+                      "left" : {
+                        "name" : "node",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "value" : null,
+                        "raw" : "null",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "expression" : {
+                          "operator" : "=",
+                          "left" : {
+                            "name" : "node",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "callee" : {
+                              "object" : {
+                                "object" : {
+                                  "type" : "ThisExpression"
+                                },
+                                "property" : {
+                                  "name" : "nodeFact",
+                                  "type" : "Identifier"
+                                },
+                                "computed" : false,
+                                "type" : "MemberExpression"
+                              },
+                              "property" : {
+                                "name" : "createNode",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ {
+                              "name" : "coord",
+                              "type" : "Identifier"
+                            } ],
+                            "type" : "CallExpression"
+                          },
+                          "type" : "AssignmentExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      }, {
+                        "expression" : {
+                          "callee" : {
+                            "object" : {
+                              "object" : {
+                                "type" : "ThisExpression"
+                              },
+                              "property" : {
+                                "name" : "nodeMap",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "property" : {
+                              "name" : "put",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ {
+                            "name" : "coord",
+                            "type" : "Identifier"
+                          }, {
+                            "name" : "node",
+                            "type" : "Identifier"
+                          } ],
+                          "type" : "CallExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : null,
+                    "type" : "IfStatement"
+                  }, {
+                    "argument" : {
+                      "name" : "node",
+                      "type" : "Identifier"
+                    },
+                    "type" : "ReturnStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : {
+                  "test" : {
+                    "operator" : "instanceof",
+                    "left" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 0,
+                        "raw" : "0",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "right" : {
+                      "name" : "Node",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "declarations" : [ {
+                        "id" : {
+                          "name" : "n",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "object" : {
+                            "name" : "arguments",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "value" : 0,
+                            "raw" : "0",
+                            "type" : "Literal"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      } ],
+                      "kind" : "let",
+                      "type" : "VariableDeclaration"
+                    }, {
+                      "declarations" : [ {
+                        "id" : {
+                          "name" : "node",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "callee" : {
+                            "object" : {
+                              "object" : {
+                                "type" : "ThisExpression"
+                              },
+                              "property" : {
+                                "name" : "nodeMap",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "property" : {
+                              "name" : "get",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ {
+                            "callee" : {
+                              "object" : {
+                                "name" : "n",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "getCoordinate",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ ],
+                            "type" : "CallExpression"
+                          } ],
+                          "type" : "CallExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      } ],
+                      "kind" : "var",
+                      "type" : "VariableDeclaration"
+                    }, {
+                      "test" : {
+                        "operator" : "===",
+                        "left" : {
+                          "name" : "node",
+                          "type" : "Identifier"
+                        },
+                        "right" : {
+                          "value" : null,
+                          "raw" : "null",
+                          "type" : "Literal"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "consequent" : {
+                        "body" : [ {
+                          "expression" : {
+                            "callee" : {
+                              "object" : {
+                                "object" : {
+                                  "type" : "ThisExpression"
+                                },
+                                "property" : {
+                                  "name" : "nodeMap",
+                                  "type" : "Identifier"
+                                },
+                                "computed" : false,
+                                "type" : "MemberExpression"
+                              },
+                              "property" : {
+                                "name" : "put",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ {
+                              "callee" : {
+                                "object" : {
+                                  "name" : "n",
+                                  "type" : "Identifier"
+                                },
+                                "property" : {
+                                  "name" : "getCoordinate",
+                                  "type" : "Identifier"
+                                },
+                                "computed" : false,
+                                "type" : "MemberExpression"
+                              },
+                              "arguments" : [ ],
+                              "type" : "CallExpression"
+                            }, {
+                              "name" : "n",
+                              "type" : "Identifier"
+                            } ],
+                            "type" : "CallExpression"
+                          },
+                          "type" : "ExpressionStatement"
+                        }, {
+                          "argument" : {
+                            "name" : "n",
+                            "type" : "Identifier"
+                          },
+                          "type" : "ReturnStatement"
+                        } ],
+                        "type" : "BlockStatement"
+                      },
+                      "alternate" : null,
+                      "type" : "IfStatement"
+                    }, {
+                      "expression" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "node",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "mergeLabel",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "n",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "ExpressionStatement"
+                    }, {
+                      "argument" : {
+                        "name" : "node",
+                        "type" : "Identifier"
+                      },
+                      "type" : "ReturnStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : null,
+                  "type" : "IfStatement"
+                },
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "print",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ {
+              "name" : "out",
+              "type" : "Identifier"
+            } ],
+            "body" : {
+              "body" : [ {
+                "init" : {
+                  "declarations" : [ {
+                    "id" : {
+                      "name" : "it",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "callee" : {
+                        "object" : {
+                          "type" : "ThisExpression"
+                        },
+                        "property" : {
+                          "name" : "iterator",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  } ],
+                  "kind" : "var",
+                  "type" : "VariableDeclaration"
+                },
+                "test" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "it",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "hasNext",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ ],
+                  "type" : "CallExpression"
+                },
+                "update" : null,
+                "body" : {
+                  "body" : [ {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "n",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "it",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "next",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "var",
+                    "type" : "VariableDeclaration"
+                  }, {
+                    "expression" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "n",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "print",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "name" : "out",
+                        "type" : "Identifier"
+                      } ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "ExpressionStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "ForStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "iterator",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "callee" : {
+                    "object" : {
+                      "callee" : {
+                        "object" : {
+                          "object" : {
+                            "type" : "ThisExpression"
+                          },
+                          "property" : {
+                            "name" : "nodeMap",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "property" : {
+                          "name" : "values",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ ],
+                      "type" : "CallExpression"
+                    },
+                    "property" : {
+                      "name" : "iterator",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "values",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "callee" : {
+                    "object" : {
+                      "object" : {
+                        "type" : "ThisExpression"
+                      },
+                      "property" : {
+                        "name" : "nodeMap",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "property" : {
+                      "name" : "values",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getBoundaryNodes",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ {
+              "name" : "geomIndex",
+              "type" : "Identifier"
+            } ],
+            "body" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "bdyNodes",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "name" : "ArrayList",
+                      "type" : "Identifier"
+                    },
+                    "arguments" : [ ],
+                    "type" : "NewExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "init" : {
+                  "declarations" : [ {
+                    "id" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "callee" : {
+                        "object" : {
+                          "type" : "ThisExpression"
+                        },
+                        "property" : {
+                          "name" : "iterator",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  } ],
+                  "kind" : "var",
+                  "type" : "VariableDeclaration"
+                },
+                "test" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "hasNext",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ ],
+                  "type" : "CallExpression"
+                },
+                "update" : null,
+                "body" : {
+                  "body" : [ {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "node",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "i",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "next",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "var",
+                    "type" : "VariableDeclaration"
+                  }, {
+                    "test" : {
+                      "operator" : "===",
+                      "left" : {
+                        "callee" : {
+                          "object" : {
+                            "callee" : {
+                              "object" : {
+                                "name" : "node",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "getLabel",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ ],
+                            "type" : "CallExpression"
+                          },
+                          "property" : {
+                            "name" : "getLocation",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "geomIndex",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "right" : {
+                        "object" : {
+                          "name" : "Location",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "BOUNDARY",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "expression" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "bdyNodes",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "add",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "node",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "ExpressionStatement"
+                    },
+                    "alternate" : null,
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "ForStatement"
+              }, {
+                "argument" : {
+                  "name" : "bdyNodes",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "add",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ {
+              "name" : "e",
+              "type" : "Identifier"
+            } ],
+            "body" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "p",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "e",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "getCoordinate",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "n",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "type" : "ThisExpression"
+                      },
+                      "property" : {
+                        "name" : "addNode",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "p",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "expression" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "n",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "add",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "e",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ExpressionStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "NodeMap",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

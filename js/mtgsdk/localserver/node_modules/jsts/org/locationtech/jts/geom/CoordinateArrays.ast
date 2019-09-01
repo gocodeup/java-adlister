@@ -1,0 +1,5529 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "CoordinateList",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'./CoordinateList'",
+      "raw" : "'./CoordinateList'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Coordinate",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'./Coordinate'",
+      "raw" : "'./Coordinate'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../extend'",
+      "raw" : "'../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "MathUtil",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../math/MathUtil'",
+      "raw" : "'../math/MathUtil'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "System",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../java/lang/System'",
+      "raw" : "'../../../../java/lang/System'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Comparator",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../java/util/Comparator'",
+      "raw" : "'../../../../java/util/Comparator'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Envelope",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'./Envelope'",
+      "raw" : "'./Envelope'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "CoordinateArrays",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "CoordinateArrays",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "isRing",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "pts",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "object" : {
+                  "name" : "pts",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "length",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "right" : {
+                "value" : "4",
+                "raw" : "4",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "value" : false,
+                "raw" : "false",
+                "type" : "Literal"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "test" : {
+              "operator" : "!",
+              "prefix" : true,
+              "argument" : {
+                "callee" : {
+                  "object" : {
+                    "object" : {
+                      "name" : "pts",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : "0",
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "property" : {
+                    "name" : "equals2D",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "object" : {
+                    "name" : "pts",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "operator" : "-",
+                    "left" : {
+                      "object" : {
+                        "name" : "pts",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "length",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "right" : {
+                      "value" : "1",
+                      "raw" : "1",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "computed" : true,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "UnaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "value" : false,
+                "raw" : "false",
+                "type" : "Literal"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "argument" : {
+              "value" : true,
+              "raw" : "true",
+              "type" : "Literal"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "ptNotInList",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "testPts",
+          "type" : "Identifier"
+        }, {
+          "name" : "pts",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "init" : {
+              "declarations" : [ {
+                "id" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "init" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "VariableDeclarator"
+              } ],
+              "kind" : "var",
+              "type" : "VariableDeclaration"
+            },
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "object" : {
+                  "name" : "testPts",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "length",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "update" : {
+              "operator" : "++",
+              "prefix" : false,
+              "argument" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "type" : "UnaryExpression"
+            },
+            "body" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "testPt",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "name" : "testPts",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "CoordinateArrays",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "indexOf",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "testPt",
+                      "type" : "Identifier"
+                    }, {
+                      "name" : "pts",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "right" : {
+                    "value" : "0",
+                    "raw" : "0",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "name" : "testPt",
+                    "type" : "Identifier"
+                  },
+                  "type" : "ReturnStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "ForStatement"
+          }, {
+            "argument" : {
+              "value" : null,
+              "raw" : "null",
+              "type" : "Literal"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "scroll",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "coordinates",
+          "type" : "Identifier"
+        }, {
+          "name" : "firstCoordinate",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "CoordinateArrays",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "indexOf",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "name" : "firstCoordinate",
+                  "type" : "Identifier"
+                }, {
+                  "name" : "coordinates",
+                  "type" : "Identifier"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "value" : null,
+                "raw" : "null",
+                "type" : "Literal"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "newCoordinates",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "name" : "Array",
+                      "type" : "Identifier"
+                    },
+                    "arguments" : [ {
+                      "object" : {
+                        "name" : "coordinates",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "length",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    } ],
+                    "type" : "NewExpression"
+                  },
+                  "property" : {
+                    "name" : "fill",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "value" : null,
+                  "raw" : "null",
+                  "type" : "Literal"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "expression" : {
+              "callee" : {
+                "object" : {
+                  "name" : "System",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "arraycopy",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "name" : "coordinates",
+                "type" : "Identifier"
+              }, {
+                "name" : "i",
+                "type" : "Identifier"
+              }, {
+                "name" : "newCoordinates",
+                "type" : "Identifier"
+              }, {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              }, {
+                "operator" : "-",
+                "left" : {
+                  "object" : {
+                    "name" : "coordinates",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "length",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "right" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "type" : "BinaryExpression"
+              } ],
+              "type" : "CallExpression"
+            },
+            "type" : "ExpressionStatement"
+          }, {
+            "expression" : {
+              "callee" : {
+                "object" : {
+                  "name" : "System",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "arraycopy",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "name" : "coordinates",
+                "type" : "Identifier"
+              }, {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              }, {
+                "name" : "newCoordinates",
+                "type" : "Identifier"
+              }, {
+                "operator" : "-",
+                "left" : {
+                  "object" : {
+                    "name" : "coordinates",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "length",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "right" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "type" : "BinaryExpression"
+              }, {
+                "name" : "i",
+                "type" : "Identifier"
+              } ],
+              "type" : "CallExpression"
+            },
+            "type" : "ExpressionStatement"
+          }, {
+            "expression" : {
+              "callee" : {
+                "object" : {
+                  "name" : "System",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "arraycopy",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "name" : "newCoordinates",
+                "type" : "Identifier"
+              }, {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              }, {
+                "name" : "coordinates",
+                "type" : "Identifier"
+              }, {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              }, {
+                "object" : {
+                  "name" : "coordinates",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "length",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              } ],
+              "type" : "CallExpression"
+            },
+            "type" : "ExpressionStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "equals",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ ],
+        "body" : {
+          "body" : [ {
+            "test" : {
+              "operator" : "===",
+              "left" : {
+                "name" : "arguments.length",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "value" : 2,
+                "raw" : "2",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "coord1",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 0,
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                }, {
+                  "id" : {
+                    "name" : "coord2",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 1,
+                      "raw" : "1",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "let",
+                "type" : "VariableDeclaration"
+              }, {
+                "test" : {
+                  "operator" : "===",
+                  "left" : {
+                    "name" : "coord1",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "coord2",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "value" : true,
+                    "raw" : "true",
+                    "type" : "Literal"
+                  },
+                  "type" : "ReturnStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "test" : {
+                  "operator" : "||",
+                  "left" : {
+                    "operator" : "===",
+                    "left" : {
+                      "name" : "coord1",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "value" : null,
+                      "raw" : "null",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "right" : {
+                    "operator" : "===",
+                    "left" : {
+                      "name" : "coord2",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "value" : null,
+                      "raw" : "null",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "value" : false,
+                    "raw" : "false",
+                    "type" : "Literal"
+                  },
+                  "type" : "ReturnStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "test" : {
+                  "operator" : "!==",
+                  "left" : {
+                    "object" : {
+                      "name" : "coord1",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "length",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "object" : {
+                      "name" : "coord2",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "length",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "value" : false,
+                    "raw" : "false",
+                    "type" : "Literal"
+                  },
+                  "type" : "ReturnStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "init" : {
+                  "declarations" : [ {
+                    "id" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "value" : "0",
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "type" : "VariableDeclarator"
+                  } ],
+                  "kind" : "var",
+                  "type" : "VariableDeclaration"
+                },
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "name" : "i",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "object" : {
+                      "name" : "coord1",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "length",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "update" : {
+                  "operator" : "++",
+                  "prefix" : false,
+                  "argument" : {
+                    "name" : "i",
+                    "type" : "Identifier"
+                  },
+                  "type" : "UnaryExpression"
+                },
+                "body" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : "!",
+                      "prefix" : true,
+                      "argument" : {
+                        "callee" : {
+                          "object" : {
+                            "object" : {
+                              "name" : "coord1",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "i",
+                              "type" : "Identifier"
+                            },
+                            "computed" : true,
+                            "type" : "MemberExpression"
+                          },
+                          "property" : {
+                            "name" : "equals",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "object" : {
+                            "name" : "coord2",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "i",
+                            "type" : "Identifier"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "UnaryExpression"
+                    },
+                    "consequent" : {
+                      "argument" : {
+                        "value" : false,
+                        "raw" : "false",
+                        "type" : "Literal"
+                      },
+                      "type" : "ReturnStatement"
+                    },
+                    "alternate" : null,
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "ForStatement"
+              }, {
+                "argument" : {
+                  "value" : true,
+                  "raw" : "true",
+                  "type" : "Literal"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "alternate" : {
+              "test" : {
+                "operator" : "===",
+                "left" : {
+                  "name" : "arguments.length",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "value" : 3,
+                  "raw" : "3",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "consequent" : {
+                "body" : [ {
+                  "declarations" : [ {
+                    "id" : {
+                      "name" : "coord1",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 0,
+                        "raw" : "0",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  }, {
+                    "id" : {
+                      "name" : "coord2",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 1,
+                        "raw" : "1",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  }, {
+                    "id" : {
+                      "name" : "coordinateComparator",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 2,
+                        "raw" : "2",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  } ],
+                  "kind" : "let",
+                  "type" : "VariableDeclaration"
+                }, {
+                  "test" : {
+                    "operator" : "===",
+                    "left" : {
+                      "name" : "coord1",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "coord2",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "argument" : {
+                      "value" : true,
+                      "raw" : "true",
+                      "type" : "Literal"
+                    },
+                    "type" : "ReturnStatement"
+                  },
+                  "alternate" : null,
+                  "type" : "IfStatement"
+                }, {
+                  "test" : {
+                    "operator" : "||",
+                    "left" : {
+                      "operator" : "===",
+                      "left" : {
+                        "name" : "coord1",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "value" : null,
+                        "raw" : "null",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "right" : {
+                      "operator" : "===",
+                      "left" : {
+                        "name" : "coord2",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "value" : null,
+                        "raw" : "null",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "argument" : {
+                      "value" : false,
+                      "raw" : "false",
+                      "type" : "Literal"
+                    },
+                    "type" : "ReturnStatement"
+                  },
+                  "alternate" : null,
+                  "type" : "IfStatement"
+                }, {
+                  "test" : {
+                    "operator" : "!==",
+                    "left" : {
+                      "object" : {
+                        "name" : "coord1",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "length",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "right" : {
+                      "object" : {
+                        "name" : "coord2",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "length",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "argument" : {
+                      "value" : false,
+                      "raw" : "false",
+                      "type" : "Literal"
+                    },
+                    "type" : "ReturnStatement"
+                  },
+                  "alternate" : null,
+                  "type" : "IfStatement"
+                }, {
+                  "init" : {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "i",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "value" : "0",
+                        "raw" : "0",
+                        "type" : "Literal"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "var",
+                    "type" : "VariableDeclaration"
+                  },
+                  "test" : {
+                    "operator" : "<",
+                    "left" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "object" : {
+                        "name" : "coord1",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "length",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "update" : {
+                    "operator" : "++",
+                    "prefix" : false,
+                    "argument" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "type" : "UnaryExpression"
+                  },
+                  "body" : {
+                    "body" : [ {
+                      "test" : {
+                        "operator" : "!==",
+                        "left" : {
+                          "callee" : {
+                            "object" : {
+                              "name" : "coordinateComparator",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "compare",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ {
+                            "object" : {
+                              "name" : "coord1",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "i",
+                              "type" : "Identifier"
+                            },
+                            "computed" : true,
+                            "type" : "MemberExpression"
+                          }, {
+                            "object" : {
+                              "name" : "coord2",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "i",
+                              "type" : "Identifier"
+                            },
+                            "computed" : true,
+                            "type" : "MemberExpression"
+                          } ],
+                          "type" : "CallExpression"
+                        },
+                        "right" : {
+                          "value" : "0",
+                          "raw" : "0",
+                          "type" : "Literal"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "consequent" : {
+                        "argument" : {
+                          "value" : false,
+                          "raw" : "false",
+                          "type" : "Literal"
+                        },
+                        "type" : "ReturnStatement"
+                      },
+                      "alternate" : null,
+                      "type" : "IfStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "type" : "ForStatement"
+                }, {
+                  "argument" : {
+                    "value" : true,
+                    "raw" : "true",
+                    "type" : "Literal"
+                  },
+                  "type" : "ReturnStatement"
+                } ],
+                "type" : "BlockStatement"
+              },
+              "alternate" : null,
+              "type" : "IfStatement"
+            },
+            "type" : "IfStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "intersection",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "coordinates",
+          "type" : "Identifier"
+        }, {
+          "name" : "env",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "coordList",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "name" : "CoordinateList",
+                  "type" : "Identifier"
+                },
+                "arguments" : [ ],
+                "type" : "NewExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "init" : {
+              "declarations" : [ {
+                "id" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "init" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "VariableDeclarator"
+              } ],
+              "kind" : "var",
+              "type" : "VariableDeclaration"
+            },
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "object" : {
+                  "name" : "coordinates",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "length",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "update" : {
+              "operator" : "++",
+              "prefix" : false,
+              "argument" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "type" : "UnaryExpression"
+            },
+            "body" : {
+              "body" : [ {
+                "test" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "env",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "intersects",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "object" : {
+                      "name" : "coordinates",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "consequent" : {
+                  "expression" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "coordList",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "add",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "object" : {
+                        "name" : "coordinates",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "i",
+                        "type" : "Identifier"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    }, {
+                      "value" : true,
+                      "raw" : "true",
+                      "type" : "Literal"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "ExpressionStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "ForStatement"
+          }, {
+            "argument" : {
+              "callee" : {
+                "object" : {
+                  "name" : "coordList",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "toCoordinateArray",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ ],
+              "type" : "CallExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "hasRepeatedPoints",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "coord",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "init" : {
+              "declarations" : [ {
+                "id" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "init" : {
+                  "value" : "1",
+                  "raw" : "1",
+                  "type" : "Literal"
+                },
+                "type" : "VariableDeclarator"
+              } ],
+              "kind" : "var",
+              "type" : "VariableDeclaration"
+            },
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "object" : {
+                  "name" : "coord",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "length",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "update" : {
+              "operator" : "++",
+              "prefix" : false,
+              "argument" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "type" : "UnaryExpression"
+            },
+            "body" : {
+              "body" : [ {
+                "test" : {
+                  "callee" : {
+                    "object" : {
+                      "object" : {
+                        "name" : "coord",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "operator" : "-",
+                        "left" : {
+                          "name" : "i",
+                          "type" : "Identifier"
+                        },
+                        "right" : {
+                          "value" : "1",
+                          "raw" : "1",
+                          "type" : "Literal"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "property" : {
+                      "name" : "equals",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "object" : {
+                      "name" : "coord",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "argument" : {
+                      "value" : true,
+                      "raw" : "true",
+                      "type" : "Literal"
+                    },
+                    "type" : "ReturnStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "ForStatement"
+          }, {
+            "argument" : {
+              "value" : false,
+              "raw" : "false",
+              "type" : "Literal"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "removeRepeatedPoints",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "coord",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "test" : {
+              "operator" : "!",
+              "prefix" : true,
+              "argument" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "CoordinateArrays",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "hasRepeatedPoints",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "name" : "coord",
+                  "type" : "Identifier"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "UnaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "name" : "coord",
+                "type" : "Identifier"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "coordList",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "name" : "CoordinateList",
+                  "type" : "Identifier"
+                },
+                "arguments" : [ {
+                  "name" : "coord",
+                  "type" : "Identifier"
+                }, {
+                  "value" : false,
+                  "raw" : "false",
+                  "type" : "Literal"
+                } ],
+                "type" : "NewExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "argument" : {
+              "callee" : {
+                "object" : {
+                  "name" : "coordList",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "toCoordinateArray",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ ],
+              "type" : "CallExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "reverse",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "coord",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "last",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "-",
+                "left" : {
+                  "object" : {
+                    "name" : "coord",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "length",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "right" : {
+                  "value" : "1",
+                  "raw" : "1",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "mid",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "Math",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "trunc",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "operator" : "/",
+                  "left" : {
+                    "name" : "last",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : "2",
+                    "raw" : "2",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "init" : {
+              "declarations" : [ {
+                "id" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "init" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "VariableDeclarator"
+              } ],
+              "kind" : "var",
+              "type" : "VariableDeclaration"
+            },
+            "test" : {
+              "operator" : "<=",
+              "left" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "name" : "mid",
+                "type" : "Identifier"
+              },
+              "type" : "BinaryExpression"
+            },
+            "update" : {
+              "operator" : "++",
+              "prefix" : false,
+              "argument" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "type" : "UnaryExpression"
+            },
+            "body" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "tmp",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "name" : "coord",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "expression" : {
+                  "operator" : "=",
+                  "left" : {
+                    "object" : {
+                      "name" : "coord",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "object" : {
+                      "name" : "coord",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "operator" : "-",
+                      "left" : {
+                        "name" : "last",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "name" : "i",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "AssignmentExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "expression" : {
+                  "operator" : "=",
+                  "left" : {
+                    "object" : {
+                      "name" : "coord",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "operator" : "-",
+                      "left" : {
+                        "name" : "last",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "name" : "i",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "name" : "tmp",
+                    "type" : "Identifier"
+                  },
+                  "type" : "AssignmentExpression"
+                },
+                "type" : "ExpressionStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "ForStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "removeNull",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "coord",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "nonNull",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "init" : {
+              "declarations" : [ {
+                "id" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "init" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "VariableDeclarator"
+              } ],
+              "kind" : "var",
+              "type" : "VariableDeclaration"
+            },
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "object" : {
+                  "name" : "coord",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "length",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "update" : {
+              "operator" : "++",
+              "prefix" : false,
+              "argument" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "type" : "UnaryExpression"
+            },
+            "body" : {
+              "body" : [ {
+                "test" : {
+                  "operator" : "!==",
+                  "left" : {
+                    "object" : {
+                      "name" : "coord",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "value" : null,
+                    "raw" : "null",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "expression" : {
+                    "operator" : "++",
+                    "prefix" : false,
+                    "argument" : {
+                      "name" : "nonNull",
+                      "type" : "Identifier"
+                    },
+                    "type" : "UnaryExpression"
+                  },
+                  "type" : "ExpressionStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "ForStatement"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "newCoord",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "name" : "Array",
+                      "type" : "Identifier"
+                    },
+                    "arguments" : [ {
+                      "name" : "nonNull",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "NewExpression"
+                  },
+                  "property" : {
+                    "name" : "fill",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "value" : null,
+                  "raw" : "null",
+                  "type" : "Literal"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "test" : {
+              "operator" : "===",
+              "left" : {
+                "name" : "nonNull",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "name" : "newCoord",
+                "type" : "Identifier"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "j",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "init" : {
+              "declarations" : [ {
+                "id" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "init" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "VariableDeclarator"
+              } ],
+              "kind" : "var",
+              "type" : "VariableDeclaration"
+            },
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "object" : {
+                  "name" : "coord",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "length",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "update" : {
+              "operator" : "++",
+              "prefix" : false,
+              "argument" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "type" : "UnaryExpression"
+            },
+            "body" : {
+              "body" : [ {
+                "test" : {
+                  "operator" : "!==",
+                  "left" : {
+                    "object" : {
+                      "name" : "coord",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "value" : null,
+                    "raw" : "null",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "expression" : {
+                    "operator" : "=",
+                    "left" : {
+                      "object" : {
+                        "name" : "newCoord",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "operator" : "++",
+                        "prefix" : false,
+                        "argument" : {
+                          "name" : "j",
+                          "type" : "Identifier"
+                        },
+                        "type" : "UnaryExpression"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "right" : {
+                      "object" : {
+                        "name" : "coord",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "i",
+                        "type" : "Identifier"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "AssignmentExpression"
+                  },
+                  "type" : "ExpressionStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "ForStatement"
+          }, {
+            "argument" : {
+              "name" : "newCoord",
+              "type" : "Identifier"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "copyDeep",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ ],
+        "body" : {
+          "body" : [ {
+            "test" : {
+              "operator" : "===",
+              "left" : {
+                "name" : "arguments.length",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "value" : 1,
+                "raw" : "1",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "coordinates",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 0,
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "let",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "copy",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "callee" : {
+                          "name" : "Array",
+                          "type" : "Identifier"
+                        },
+                        "arguments" : [ {
+                          "object" : {
+                            "name" : "coordinates",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "length",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        } ],
+                        "type" : "NewExpression"
+                      },
+                      "property" : {
+                        "name" : "fill",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "value" : null,
+                      "raw" : "null",
+                      "type" : "Literal"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "init" : {
+                  "declarations" : [ {
+                    "id" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "value" : "0",
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "type" : "VariableDeclarator"
+                  } ],
+                  "kind" : "var",
+                  "type" : "VariableDeclaration"
+                },
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "name" : "i",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "object" : {
+                      "name" : "coordinates",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "length",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "update" : {
+                  "operator" : "++",
+                  "prefix" : false,
+                  "argument" : {
+                    "name" : "i",
+                    "type" : "Identifier"
+                  },
+                  "type" : "UnaryExpression"
+                },
+                "body" : {
+                  "body" : [ {
+                    "expression" : {
+                      "operator" : "=",
+                      "left" : {
+                        "object" : {
+                          "name" : "copy",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "i",
+                          "type" : "Identifier"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      },
+                      "right" : {
+                        "callee" : {
+                          "name" : "Coordinate",
+                          "type" : "Identifier"
+                        },
+                        "arguments" : [ {
+                          "object" : {
+                            "name" : "coordinates",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "i",
+                            "type" : "Identifier"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        } ],
+                        "type" : "NewExpression"
+                      },
+                      "type" : "AssignmentExpression"
+                    },
+                    "type" : "ExpressionStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "ForStatement"
+              }, {
+                "argument" : {
+                  "name" : "copy",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "alternate" : {
+              "test" : {
+                "operator" : "===",
+                "left" : {
+                  "name" : "arguments.length",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "value" : 5,
+                  "raw" : "5",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "consequent" : {
+                "body" : [ {
+                  "declarations" : [ {
+                    "id" : {
+                      "name" : "src",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 0,
+                        "raw" : "0",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  }, {
+                    "id" : {
+                      "name" : "srcStart",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 1,
+                        "raw" : "1",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  }, {
+                    "id" : {
+                      "name" : "dest",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 2,
+                        "raw" : "2",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  }, {
+                    "id" : {
+                      "name" : "destStart",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 3,
+                        "raw" : "3",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  }, {
+                    "id" : {
+                      "name" : "length",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 4,
+                        "raw" : "4",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  } ],
+                  "kind" : "let",
+                  "type" : "VariableDeclaration"
+                }, {
+                  "init" : {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "i",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "value" : "0",
+                        "raw" : "0",
+                        "type" : "Literal"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "var",
+                    "type" : "VariableDeclaration"
+                  },
+                  "test" : {
+                    "operator" : "<",
+                    "left" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "length",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "update" : {
+                    "operator" : "++",
+                    "prefix" : false,
+                    "argument" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "type" : "UnaryExpression"
+                  },
+                  "body" : {
+                    "body" : [ {
+                      "expression" : {
+                        "operator" : "=",
+                        "left" : {
+                          "object" : {
+                            "name" : "dest",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "operator" : "+",
+                            "left" : {
+                              "name" : "destStart",
+                              "type" : "Identifier"
+                            },
+                            "right" : {
+                              "name" : "i",
+                              "type" : "Identifier"
+                            },
+                            "type" : "BinaryExpression"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        },
+                        "right" : {
+                          "callee" : {
+                            "name" : "Coordinate",
+                            "type" : "Identifier"
+                          },
+                          "arguments" : [ {
+                            "object" : {
+                              "name" : "src",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "operator" : "+",
+                              "left" : {
+                                "name" : "srcStart",
+                                "type" : "Identifier"
+                              },
+                              "right" : {
+                                "name" : "i",
+                                "type" : "Identifier"
+                              },
+                              "type" : "BinaryExpression"
+                            },
+                            "computed" : true,
+                            "type" : "MemberExpression"
+                          } ],
+                          "type" : "NewExpression"
+                        },
+                        "type" : "AssignmentExpression"
+                      },
+                      "type" : "ExpressionStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "type" : "ForStatement"
+                } ],
+                "type" : "BlockStatement"
+              },
+              "alternate" : null,
+              "type" : "IfStatement"
+            },
+            "type" : "IfStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "isEqualReversed",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "pts1",
+          "type" : "Identifier"
+        }, {
+          "name" : "pts2",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "init" : {
+              "declarations" : [ {
+                "id" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "init" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "VariableDeclarator"
+              } ],
+              "kind" : "var",
+              "type" : "VariableDeclaration"
+            },
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "object" : {
+                  "name" : "pts1",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "length",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "update" : {
+              "operator" : "++",
+              "prefix" : false,
+              "argument" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "type" : "UnaryExpression"
+            },
+            "body" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "p1",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "name" : "pts1",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "p2",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "name" : "pts2",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "operator" : "-",
+                      "left" : {
+                        "operator" : "-",
+                        "left" : {
+                          "object" : {
+                            "name" : "pts1",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "length",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "right" : {
+                          "name" : "i",
+                          "type" : "Identifier"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "right" : {
+                        "value" : "1",
+                        "raw" : "1",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "test" : {
+                  "operator" : "!==",
+                  "left" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "p1",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "compareTo",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "p2",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "right" : {
+                    "value" : "0",
+                    "raw" : "0",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "value" : false,
+                    "raw" : "false",
+                    "type" : "Literal"
+                  },
+                  "type" : "ReturnStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "ForStatement"
+          }, {
+            "argument" : {
+              "value" : true,
+              "raw" : "true",
+              "type" : "Literal"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "envelope",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "coordinates",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "env",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "name" : "Envelope",
+                  "type" : "Identifier"
+                },
+                "arguments" : [ ],
+                "type" : "NewExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "init" : {
+              "declarations" : [ {
+                "id" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "init" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "VariableDeclarator"
+              } ],
+              "kind" : "var",
+              "type" : "VariableDeclaration"
+            },
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "object" : {
+                  "name" : "coordinates",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "length",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "update" : {
+              "operator" : "++",
+              "prefix" : false,
+              "argument" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "type" : "UnaryExpression"
+            },
+            "body" : {
+              "body" : [ {
+                "expression" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "env",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "expandToInclude",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "object" : {
+                      "name" : "coordinates",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ExpressionStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "ForStatement"
+          }, {
+            "argument" : {
+              "name" : "env",
+              "type" : "Identifier"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "toCoordinateArray",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "coordList",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "argument" : {
+              "callee" : {
+                "object" : {
+                  "name" : "coordList",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "toArray",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "object" : {
+                  "name" : "CoordinateArrays",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "coordArrayType",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              } ],
+              "type" : "CallExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "atLeastNCoordinatesOrNothing",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "n",
+          "type" : "Identifier"
+        }, {
+          "name" : "c",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "argument" : {
+              "test" : {
+                "operator" : ">=",
+                "left" : {
+                  "object" : {
+                    "name" : "c",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "length",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "right" : {
+                  "name" : "n",
+                  "type" : "Identifier"
+                },
+                "type" : "BinaryExpression"
+              },
+              "alternate" : {
+                "elements" : [ ],
+                "type" : "ArrayExpression"
+              },
+              "consequent" : {
+                "name" : "c",
+                "type" : "Identifier"
+              },
+              "type" : "ConditionalExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "indexOf",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "coordinate",
+          "type" : "Identifier"
+        }, {
+          "name" : "coordinates",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "init" : {
+              "declarations" : [ {
+                "id" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "init" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "VariableDeclarator"
+              } ],
+              "kind" : "var",
+              "type" : "VariableDeclaration"
+            },
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "object" : {
+                  "name" : "coordinates",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "length",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "update" : {
+              "operator" : "++",
+              "prefix" : false,
+              "argument" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "type" : "UnaryExpression"
+            },
+            "body" : {
+              "body" : [ {
+                "test" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "coordinate",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "equals",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "object" : {
+                      "name" : "coordinates",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "argument" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "type" : "ReturnStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "ForStatement"
+          }, {
+            "argument" : {
+              "operator" : "-",
+              "prefix" : true,
+              "argument" : {
+                "value" : "1",
+                "raw" : "1",
+                "type" : "Literal"
+              },
+              "type" : "UnaryExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "increasingDirection",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "pts",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "init" : {
+              "declarations" : [ {
+                "id" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "init" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "VariableDeclarator"
+              } ],
+              "kind" : "var",
+              "type" : "VariableDeclaration"
+            },
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "Math",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "trunc",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "operator" : "/",
+                  "left" : {
+                    "object" : {
+                      "name" : "pts",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "length",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "value" : "2",
+                    "raw" : "2",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "update" : {
+              "operator" : "++",
+              "prefix" : false,
+              "argument" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "type" : "UnaryExpression"
+            },
+            "body" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "j",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "operator" : "-",
+                    "left" : {
+                      "operator" : "-",
+                      "left" : {
+                        "object" : {
+                          "name" : "pts",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "length",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "right" : {
+                        "value" : "1",
+                        "raw" : "1",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "right" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "comp",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "object" : {
+                          "name" : "pts",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "i",
+                          "type" : "Identifier"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      },
+                      "property" : {
+                        "name" : "compareTo",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "object" : {
+                        "name" : "pts",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "j",
+                        "type" : "Identifier"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "test" : {
+                  "operator" : "!==",
+                  "left" : {
+                    "name" : "comp",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : "0",
+                    "raw" : "0",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "name" : "comp",
+                    "type" : "Identifier"
+                  },
+                  "type" : "ReturnStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "ForStatement"
+          }, {
+            "argument" : {
+              "value" : "1",
+              "raw" : "1",
+              "type" : "Literal"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "compare",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "pts1",
+          "type" : "Identifier"
+        }, {
+          "name" : "pts2",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "test" : {
+              "operator" : "&&",
+              "left" : {
+                "operator" : "<",
+                "left" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "object" : {
+                    "name" : "pts1",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "length",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "right" : {
+                "operator" : "<",
+                "left" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "object" : {
+                    "name" : "pts2",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "length",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "body" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "compare",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "object" : {
+                          "name" : "pts1",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "i",
+                          "type" : "Identifier"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      },
+                      "property" : {
+                        "name" : "compareTo",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "object" : {
+                        "name" : "pts2",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "i",
+                        "type" : "Identifier"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "test" : {
+                  "operator" : "!==",
+                  "left" : {
+                    "name" : "compare",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : "0",
+                    "raw" : "0",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "name" : "compare",
+                    "type" : "Identifier"
+                  },
+                  "type" : "ReturnStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "expression" : {
+                  "operator" : "++",
+                  "prefix" : false,
+                  "argument" : {
+                    "name" : "i",
+                    "type" : "Identifier"
+                  },
+                  "type" : "UnaryExpression"
+                },
+                "type" : "ExpressionStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "WhileStatement"
+          }, {
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "object" : {
+                  "name" : "pts2",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "length",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "operator" : "-",
+                "prefix" : true,
+                "argument" : {
+                  "value" : "1",
+                  "raw" : "1",
+                  "type" : "Literal"
+                },
+                "type" : "UnaryExpression"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "object" : {
+                  "name" : "pts1",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "length",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "value" : "1",
+                "raw" : "1",
+                "type" : "Literal"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "argument" : {
+              "value" : "0",
+              "raw" : "0",
+              "type" : "Literal"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "minCoordinate",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "coordinates",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "minCoord",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "value" : null,
+                "raw" : "null",
+                "type" : "Literal"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "init" : {
+              "declarations" : [ {
+                "id" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "init" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "VariableDeclarator"
+              } ],
+              "kind" : "var",
+              "type" : "VariableDeclaration"
+            },
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "object" : {
+                  "name" : "coordinates",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "length",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "update" : {
+              "operator" : "++",
+              "prefix" : false,
+              "argument" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "type" : "UnaryExpression"
+            },
+            "body" : {
+              "body" : [ {
+                "test" : {
+                  "operator" : "||",
+                  "left" : {
+                    "operator" : "===",
+                    "left" : {
+                      "name" : "minCoord",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "value" : null,
+                      "raw" : "null",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "right" : {
+                    "operator" : ">",
+                    "left" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "minCoord",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "compareTo",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "object" : {
+                          "name" : "coordinates",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "i",
+                          "type" : "Identifier"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      } ],
+                      "type" : "CallExpression"
+                    },
+                    "right" : {
+                      "value" : "0",
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "expression" : {
+                      "operator" : "=",
+                      "left" : {
+                        "name" : "minCoord",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "object" : {
+                          "name" : "coordinates",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "i",
+                          "type" : "Identifier"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      },
+                      "type" : "AssignmentExpression"
+                    },
+                    "type" : "ExpressionStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "ForStatement"
+          }, {
+            "argument" : {
+              "name" : "minCoord",
+              "type" : "Identifier"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "extract",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "pts",
+          "type" : "Identifier"
+        }, {
+          "name" : "start",
+          "type" : "Identifier"
+        }, {
+          "name" : "end",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "expression" : {
+              "operator" : "=",
+              "left" : {
+                "name" : "start",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "MathUtil",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "clamp",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "name" : "start",
+                  "type" : "Identifier"
+                }, {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                }, {
+                  "object" : {
+                    "name" : "pts",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "length",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "AssignmentExpression"
+            },
+            "type" : "ExpressionStatement"
+          }, {
+            "expression" : {
+              "operator" : "=",
+              "left" : {
+                "name" : "end",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "MathUtil",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "clamp",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "name" : "end",
+                  "type" : "Identifier"
+                }, {
+                  "operator" : "-",
+                  "prefix" : true,
+                  "argument" : {
+                    "value" : "1",
+                    "raw" : "1",
+                    "type" : "Literal"
+                  },
+                  "type" : "UnaryExpression"
+                }, {
+                  "object" : {
+                    "name" : "pts",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "length",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "AssignmentExpression"
+            },
+            "type" : "ExpressionStatement"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "npts",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "+",
+                "left" : {
+                  "operator" : "-",
+                  "left" : {
+                    "name" : "end",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "start",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "value" : "1",
+                  "raw" : "1",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "end",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "expression" : {
+                "operator" : "=",
+                "left" : {
+                  "name" : "npts",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "AssignmentExpression"
+              },
+              "type" : "ExpressionStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "test" : {
+              "operator" : ">=",
+              "left" : {
+                "name" : "start",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "object" : {
+                  "name" : "pts",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "length",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "expression" : {
+                "operator" : "=",
+                "left" : {
+                  "name" : "npts",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "AssignmentExpression"
+              },
+              "type" : "ExpressionStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "end",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "name" : "start",
+                "type" : "Identifier"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "expression" : {
+                "operator" : "=",
+                "left" : {
+                  "name" : "npts",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "AssignmentExpression"
+              },
+              "type" : "ExpressionStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "extractPts",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "callee" : {
+                      "name" : "Array",
+                      "type" : "Identifier"
+                    },
+                    "arguments" : [ {
+                      "name" : "npts",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "NewExpression"
+                  },
+                  "property" : {
+                    "name" : "fill",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "value" : null,
+                  "raw" : "null",
+                  "type" : "Literal"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "test" : {
+              "operator" : "===",
+              "left" : {
+                "name" : "npts",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "name" : "extractPts",
+                "type" : "Identifier"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "iPts",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "value" : "0",
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "init" : {
+              "declarations" : [ {
+                "id" : {
+                  "name" : "i",
+                  "type" : "Identifier"
+                },
+                "init" : {
+                  "name" : "start",
+                  "type" : "Identifier"
+                },
+                "type" : "VariableDeclarator"
+              } ],
+              "kind" : "var",
+              "type" : "VariableDeclaration"
+            },
+            "test" : {
+              "operator" : "<=",
+              "left" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "name" : "end",
+                "type" : "Identifier"
+              },
+              "type" : "BinaryExpression"
+            },
+            "update" : {
+              "operator" : "++",
+              "prefix" : false,
+              "argument" : {
+                "name" : "i",
+                "type" : "Identifier"
+              },
+              "type" : "UnaryExpression"
+            },
+            "body" : {
+              "body" : [ {
+                "expression" : {
+                  "operator" : "=",
+                  "left" : {
+                    "object" : {
+                      "name" : "extractPts",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "operator" : "++",
+                      "prefix" : false,
+                      "argument" : {
+                        "name" : "iPts",
+                        "type" : "Identifier"
+                      },
+                      "type" : "UnaryExpression"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "object" : {
+                      "name" : "pts",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "AssignmentExpression"
+                },
+                "type" : "ExpressionStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "type" : "ForStatement"
+          }, {
+            "argument" : {
+              "name" : "extractPts",
+              "type" : "Identifier"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "id" : {
+      "name" : "ForwardComparator",
+      "type" : "Identifier"
+    },
+    "params" : [ ],
+    "body" : {
+      "body" : [ ],
+      "type" : "BlockStatement"
+    },
+    "generator" : false,
+    "type" : "FunctionDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "ForwardComparator",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "compare",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ {
+              "name" : "o1",
+              "type" : "Identifier"
+            }, {
+              "name" : "o2",
+              "type" : "Identifier"
+            } ],
+            "body" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "pts1",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "name" : "o1",
+                    "type" : "Identifier"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "pts2",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "name" : "o2",
+                    "type" : "Identifier"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "argument" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "CoordinateArrays",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "compare",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "pts1",
+                    "type" : "Identifier"
+                  }, {
+                    "name" : "pts2",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ {
+                    "name" : "Comparator",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "ForwardComparator",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "id" : {
+      "name" : "BidirectionalComparator",
+      "type" : "Identifier"
+    },
+    "params" : [ ],
+    "body" : {
+      "body" : [ ],
+      "type" : "BlockStatement"
+    },
+    "generator" : false,
+    "type" : "FunctionDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "BidirectionalComparator",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "compare",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ {
+              "name" : "o1",
+              "type" : "Identifier"
+            }, {
+              "name" : "o2",
+              "type" : "Identifier"
+            } ],
+            "body" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "pts1",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "name" : "o1",
+                    "type" : "Identifier"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "pts2",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "name" : "o2",
+                    "type" : "Identifier"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "object" : {
+                      "name" : "pts1",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "length",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "object" : {
+                      "name" : "pts2",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "length",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "operator" : "-",
+                    "prefix" : true,
+                    "argument" : {
+                      "value" : "1",
+                      "raw" : "1",
+                      "type" : "Literal"
+                    },
+                    "type" : "UnaryExpression"
+                  },
+                  "type" : "ReturnStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "test" : {
+                  "operator" : ">",
+                  "left" : {
+                    "object" : {
+                      "name" : "pts1",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "length",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "object" : {
+                      "name" : "pts2",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "length",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "value" : "1",
+                    "raw" : "1",
+                    "type" : "Literal"
+                  },
+                  "type" : "ReturnStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "test" : {
+                  "operator" : "===",
+                  "left" : {
+                    "object" : {
+                      "name" : "pts1",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "length",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "value" : "0",
+                    "raw" : "0",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "value" : "0",
+                    "raw" : "0",
+                    "type" : "Literal"
+                  },
+                  "type" : "ReturnStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "forwardComp",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "CoordinateArrays",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "compare",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "pts1",
+                      "type" : "Identifier"
+                    }, {
+                      "name" : "pts2",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "isEqualRev",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "CoordinateArrays",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "isEqualReversed",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "pts1",
+                      "type" : "Identifier"
+                    }, {
+                      "name" : "pts2",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "test" : {
+                  "name" : "isEqualRev",
+                  "type" : "Identifier"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "value" : "0",
+                    "raw" : "0",
+                    "type" : "Literal"
+                  },
+                  "type" : "ReturnStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "argument" : {
+                  "name" : "forwardComp",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "OLDcompare",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ {
+              "name" : "o1",
+              "type" : "Identifier"
+            }, {
+              "name" : "o2",
+              "type" : "Identifier"
+            } ],
+            "body" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "pts1",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "name" : "o1",
+                    "type" : "Identifier"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "pts2",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "name" : "o2",
+                    "type" : "Identifier"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "object" : {
+                      "name" : "pts1",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "length",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "object" : {
+                      "name" : "pts2",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "length",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "operator" : "-",
+                    "prefix" : true,
+                    "argument" : {
+                      "value" : "1",
+                      "raw" : "1",
+                      "type" : "Literal"
+                    },
+                    "type" : "UnaryExpression"
+                  },
+                  "type" : "ReturnStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "test" : {
+                  "operator" : ">",
+                  "left" : {
+                    "object" : {
+                      "name" : "pts1",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "length",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "object" : {
+                      "name" : "pts2",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "length",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "value" : "1",
+                    "raw" : "1",
+                    "type" : "Literal"
+                  },
+                  "type" : "ReturnStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "test" : {
+                  "operator" : "===",
+                  "left" : {
+                    "object" : {
+                      "name" : "pts1",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "length",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "value" : "0",
+                    "raw" : "0",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "value" : "0",
+                    "raw" : "0",
+                    "type" : "Literal"
+                  },
+                  "type" : "ReturnStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "dir1",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "CoordinateArrays",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "increasingDirection",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "pts1",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "dir2",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "CoordinateArrays",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "increasingDirection",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "name" : "pts2",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "i1",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "test" : {
+                      "operator" : ">",
+                      "left" : {
+                        "name" : "dir1",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "value" : "0",
+                        "raw" : "0",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "alternate" : {
+                      "operator" : "-",
+                      "left" : {
+                        "object" : {
+                          "name" : "pts1",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "length",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "right" : {
+                        "value" : "1",
+                        "raw" : "1",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "value" : "0",
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "type" : "ConditionalExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "i2",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "test" : {
+                      "operator" : ">",
+                      "left" : {
+                        "name" : "dir2",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "value" : "0",
+                        "raw" : "0",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "alternate" : {
+                      "operator" : "-",
+                      "left" : {
+                        "object" : {
+                          "name" : "pts1",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "length",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "right" : {
+                        "value" : "1",
+                        "raw" : "1",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "value" : "0",
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "type" : "ConditionalExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "init" : {
+                  "declarations" : [ {
+                    "id" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "value" : "0",
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "type" : "VariableDeclarator"
+                  } ],
+                  "kind" : "var",
+                  "type" : "VariableDeclaration"
+                },
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "name" : "i",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "object" : {
+                      "name" : "pts1",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "length",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "update" : {
+                  "operator" : "++",
+                  "prefix" : false,
+                  "argument" : {
+                    "name" : "i",
+                    "type" : "Identifier"
+                  },
+                  "type" : "UnaryExpression"
+                },
+                "body" : {
+                  "body" : [ {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "comparePt",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "callee" : {
+                          "object" : {
+                            "object" : {
+                              "name" : "pts1",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "i1",
+                              "type" : "Identifier"
+                            },
+                            "computed" : true,
+                            "type" : "MemberExpression"
+                          },
+                          "property" : {
+                            "name" : "compareTo",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "object" : {
+                            "name" : "pts2",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "i2",
+                            "type" : "Identifier"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "var",
+                    "type" : "VariableDeclaration"
+                  }, {
+                    "test" : {
+                      "operator" : "!==",
+                      "left" : {
+                        "name" : "comparePt",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "value" : "0",
+                        "raw" : "0",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "argument" : {
+                        "name" : "comparePt",
+                        "type" : "Identifier"
+                      },
+                      "type" : "ReturnStatement"
+                    },
+                    "alternate" : null,
+                    "type" : "IfStatement"
+                  }, {
+                    "expression" : {
+                      "operator" : "+=",
+                      "left" : {
+                        "name" : "i1",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "name" : "dir1",
+                        "type" : "Identifier"
+                      },
+                      "type" : "AssignmentExpression"
+                    },
+                    "type" : "ExpressionStatement"
+                  }, {
+                    "expression" : {
+                      "operator" : "+=",
+                      "left" : {
+                        "name" : "i2",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "name" : "dir2",
+                        "type" : "Identifier"
+                      },
+                      "type" : "AssignmentExpression"
+                    },
+                    "type" : "ExpressionStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "ForStatement"
+              }, {
+                "argument" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ {
+                    "name" : "Comparator",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "BidirectionalComparator",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "ForwardComparator",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "name" : "ForwardComparator",
+        "type" : "Identifier"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "BidirectionalComparator",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "name" : "BidirectionalComparator",
+        "type" : "Identifier"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "CoordinateArrays",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "coordArrayType",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "callee" : {
+          "object" : {
+            "callee" : {
+              "name" : "Array",
+              "type" : "Identifier"
+            },
+            "arguments" : [ {
+              "value" : "0",
+              "raw" : "0",
+              "type" : "Literal"
+            } ],
+            "type" : "NewExpression"
+          },
+          "property" : {
+            "name" : "fill",
+            "type" : "Identifier"
+          },
+          "computed" : false,
+          "type" : "MemberExpression"
+        },
+        "arguments" : [ {
+          "value" : null,
+          "raw" : "null",
+          "type" : "Literal"
+        } ],
+        "type" : "CallExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

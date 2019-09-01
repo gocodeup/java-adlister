@@ -1,0 +1,776 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Geometry",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../Geometry'",
+      "raw" : "'../Geometry'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "hasInterface",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../hasInterface'",
+      "raw" : "'../../../../../hasInterface'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Collection",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../java/util/Collection'",
+      "raw" : "'../../../../../java/util/Collection'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../extend'",
+      "raw" : "'../../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "ArrayList",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../java/util/ArrayList'",
+      "raw" : "'../../../../../java/util/ArrayList'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "GeometryMapper",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "GeometryMapper",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "GeometryMapper",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "GeometryMapper",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "map",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ ],
+        "body" : {
+          "body" : [ {
+            "test" : {
+              "operator" : "&&",
+              "left" : {
+                "operator" : "instanceof",
+                "left" : {
+                  "object" : {
+                    "name" : "arguments",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "value" : 0,
+                    "raw" : "0",
+                    "type" : "Literal"
+                  },
+                  "computed" : true,
+                  "type" : "MemberExpression"
+                },
+                "right" : {
+                  "name" : "Geometry",
+                  "type" : "Identifier"
+                },
+                "type" : "BinaryExpression"
+              },
+              "right" : {
+                "callee" : {
+                  "name" : "hasInterface",
+                  "type" : "Identifier"
+                },
+                "arguments" : [ {
+                  "object" : {
+                    "name" : "arguments",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "value" : 1,
+                    "raw" : "1",
+                    "type" : "Literal"
+                  },
+                  "computed" : true,
+                  "type" : "MemberExpression"
+                }, {
+                  "name" : "MapOp",
+                  "type" : "Identifier"
+                } ],
+                "type" : "CallExpression"
+              },
+              "type" : "LogicalExpression"
+            },
+            "consequent" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "geom",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 0,
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                }, {
+                  "id" : {
+                    "name" : "op",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 1,
+                      "raw" : "1",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "let",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "mapped",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "name" : "ArrayList",
+                      "type" : "Identifier"
+                    },
+                    "arguments" : [ ],
+                    "type" : "NewExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "init" : {
+                  "declarations" : [ {
+                    "id" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "value" : "0",
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "type" : "VariableDeclarator"
+                  } ],
+                  "kind" : "var",
+                  "type" : "VariableDeclaration"
+                },
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "name" : "i",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "geom",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "getNumGeometries",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "update" : {
+                  "operator" : "++",
+                  "prefix" : false,
+                  "argument" : {
+                    "name" : "i",
+                    "type" : "Identifier"
+                  },
+                  "type" : "UnaryExpression"
+                },
+                "body" : {
+                  "body" : [ {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "g",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "op",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "map",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "callee" : {
+                            "object" : {
+                              "name" : "geom",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "getGeometryN",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ {
+                            "name" : "i",
+                            "type" : "Identifier"
+                          } ],
+                          "type" : "CallExpression"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "var",
+                    "type" : "VariableDeclaration"
+                  }, {
+                    "test" : {
+                      "operator" : "!==",
+                      "left" : {
+                        "name" : "g",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "value" : null,
+                        "raw" : "null",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "expression" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "mapped",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "add",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "g",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "ExpressionStatement"
+                    },
+                    "alternate" : null,
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "ForStatement"
+              }, {
+                "argument" : {
+                  "callee" : {
+                    "object" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "geom",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "getFactory",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ ],
+                      "type" : "CallExpression"
+                    },
+                    "property" : {
+                      "name" : "buildGeometry",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "name" : "mapped",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "alternate" : {
+              "test" : {
+                "operator" : "&&",
+                "left" : {
+                  "callee" : {
+                    "name" : "hasInterface",
+                    "type" : "Identifier"
+                  },
+                  "arguments" : [ {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 0,
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  }, {
+                    "name" : "Collection",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "right" : {
+                  "callee" : {
+                    "name" : "hasInterface",
+                    "type" : "Identifier"
+                  },
+                  "arguments" : [ {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 1,
+                      "raw" : "1",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  }, {
+                    "name" : "MapOp",
+                    "type" : "Identifier"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "LogicalExpression"
+              },
+              "consequent" : {
+                "body" : [ {
+                  "declarations" : [ {
+                    "id" : {
+                      "name" : "geoms",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 0,
+                        "raw" : "0",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  }, {
+                    "id" : {
+                      "name" : "op",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 1,
+                        "raw" : "1",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  } ],
+                  "kind" : "let",
+                  "type" : "VariableDeclaration"
+                }, {
+                  "declarations" : [ {
+                    "id" : {
+                      "name" : "mapped",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "callee" : {
+                        "name" : "ArrayList",
+                        "type" : "Identifier"
+                      },
+                      "arguments" : [ ],
+                      "type" : "NewExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  } ],
+                  "kind" : "var",
+                  "type" : "VariableDeclaration"
+                }, {
+                  "init" : {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "i",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "geoms",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "iterator",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "var",
+                    "type" : "VariableDeclaration"
+                  },
+                  "test" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "i",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "hasNext",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "update" : null,
+                  "body" : {
+                    "body" : [ {
+                      "declarations" : [ {
+                        "id" : {
+                          "name" : "g",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "callee" : {
+                            "object" : {
+                              "name" : "i",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "next",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ ],
+                          "type" : "CallExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      } ],
+                      "kind" : "var",
+                      "type" : "VariableDeclaration"
+                    }, {
+                      "declarations" : [ {
+                        "id" : {
+                          "name" : "gr",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "callee" : {
+                            "object" : {
+                              "name" : "op",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "map",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ {
+                            "name" : "g",
+                            "type" : "Identifier"
+                          } ],
+                          "type" : "CallExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      } ],
+                      "kind" : "var",
+                      "type" : "VariableDeclaration"
+                    }, {
+                      "test" : {
+                        "operator" : "!==",
+                        "left" : {
+                          "name" : "gr",
+                          "type" : "Identifier"
+                        },
+                        "right" : {
+                          "value" : null,
+                          "raw" : "null",
+                          "type" : "Literal"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "consequent" : {
+                        "expression" : {
+                          "callee" : {
+                            "object" : {
+                              "name" : "mapped",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "add",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ {
+                            "name" : "gr",
+                            "type" : "Identifier"
+                          } ],
+                          "type" : "CallExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      },
+                      "alternate" : null,
+                      "type" : "IfStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "type" : "ForStatement"
+                }, {
+                  "argument" : {
+                    "name" : "mapped",
+                    "type" : "Identifier"
+                  },
+                  "type" : "ReturnStatement"
+                } ],
+                "type" : "BlockStatement"
+              },
+              "alternate" : null,
+              "type" : "IfStatement"
+            },
+            "type" : "IfStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "id" : {
+      "name" : "MapOp",
+      "type" : "Identifier"
+    },
+    "params" : [ ],
+    "body" : {
+      "body" : [ ],
+      "type" : "BlockStatement"
+    },
+    "generator" : false,
+    "type" : "FunctionDeclaration"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "GeometryMapper",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "MapOp",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "name" : "MapOp",
+        "type" : "Identifier"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

@@ -1,0 +1,1459 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "LineString",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../geom/LineString'",
+      "raw" : "'../../../geom/LineString'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Geometry",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../geom/Geometry'",
+      "raw" : "'../../../geom/Geometry'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Coordinate",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../geom/Coordinate'",
+      "raw" : "'../../../geom/Coordinate'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Polygon",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../geom/Polygon'",
+      "raw" : "'../../../geom/Polygon'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../../extend'",
+      "raw" : "'../../../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "LineSegment",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../geom/LineSegment'",
+      "raw" : "'../../../geom/LineSegment'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "PointPairDistance",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'./PointPairDistance'",
+      "raw" : "'./PointPairDistance'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "GeometryCollection",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../geom/GeometryCollection'",
+      "raw" : "'../../../geom/GeometryCollection'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "DistanceToPointFinder",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "DistanceToPointFinder",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "DistanceToPointFinder",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "DistanceToPointFinder",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "computeDistance",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ ],
+        "body" : {
+          "body" : [ {
+            "test" : {
+              "operator" : "&&",
+              "left" : {
+                "operator" : "instanceof",
+                "left" : {
+                  "object" : {
+                    "name" : "arguments",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "value" : 2,
+                    "raw" : "2",
+                    "type" : "Literal"
+                  },
+                  "computed" : true,
+                  "type" : "MemberExpression"
+                },
+                "right" : {
+                  "name" : "PointPairDistance",
+                  "type" : "Identifier"
+                },
+                "type" : "BinaryExpression"
+              },
+              "right" : {
+                "operator" : "&&",
+                "left" : {
+                  "operator" : "instanceof",
+                  "left" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 0,
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "name" : "LineString",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "operator" : "instanceof",
+                  "left" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 1,
+                      "raw" : "1",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "name" : "Coordinate",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "type" : "LogicalExpression"
+              },
+              "type" : "LogicalExpression"
+            },
+            "consequent" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "line",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 0,
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                }, {
+                  "id" : {
+                    "name" : "pt",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 1,
+                      "raw" : "1",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                }, {
+                  "id" : {
+                    "name" : "ptDist",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 2,
+                      "raw" : "2",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "let",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "coords",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "line",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "getCoordinates",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "tempSegment",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "name" : "LineSegment",
+                      "type" : "Identifier"
+                    },
+                    "arguments" : [ ],
+                    "type" : "NewExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "init" : {
+                  "declarations" : [ {
+                    "id" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "value" : "0",
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "type" : "VariableDeclarator"
+                  } ],
+                  "kind" : "var",
+                  "type" : "VariableDeclaration"
+                },
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "name" : "i",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "operator" : "-",
+                    "left" : {
+                      "object" : {
+                        "name" : "coords",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "length",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "right" : {
+                      "value" : "1",
+                      "raw" : "1",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "update" : {
+                  "operator" : "++",
+                  "prefix" : false,
+                  "argument" : {
+                    "name" : "i",
+                    "type" : "Identifier"
+                  },
+                  "type" : "UnaryExpression"
+                },
+                "body" : {
+                  "body" : [ {
+                    "expression" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "tempSegment",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "setCoordinates",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "object" : {
+                          "name" : "coords",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "i",
+                          "type" : "Identifier"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      }, {
+                        "object" : {
+                          "name" : "coords",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "operator" : "+",
+                          "left" : {
+                            "name" : "i",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "value" : "1",
+                            "raw" : "1",
+                            "type" : "Literal"
+                          },
+                          "type" : "BinaryExpression"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      } ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "ExpressionStatement"
+                  }, {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "closestPt",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "tempSegment",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "closestPoint",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "pt",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "var",
+                    "type" : "VariableDeclaration"
+                  }, {
+                    "expression" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "ptDist",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "setMinimum",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "name" : "closestPt",
+                        "type" : "Identifier"
+                      }, {
+                        "name" : "pt",
+                        "type" : "Identifier"
+                      } ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "ExpressionStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "ForStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "alternate" : {
+              "test" : {
+                "operator" : "&&",
+                "left" : {
+                  "operator" : "instanceof",
+                  "left" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 2,
+                      "raw" : "2",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "name" : "PointPairDistance",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "operator" : "&&",
+                  "left" : {
+                    "operator" : "instanceof",
+                    "left" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 0,
+                        "raw" : "0",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "right" : {
+                      "name" : "Polygon",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "right" : {
+                    "operator" : "instanceof",
+                    "left" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 1,
+                        "raw" : "1",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "right" : {
+                      "name" : "Coordinate",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "LogicalExpression"
+                },
+                "type" : "LogicalExpression"
+              },
+              "consequent" : {
+                "body" : [ {
+                  "declarations" : [ {
+                    "id" : {
+                      "name" : "poly",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 0,
+                        "raw" : "0",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  }, {
+                    "id" : {
+                      "name" : "pt",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 1,
+                        "raw" : "1",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  }, {
+                    "id" : {
+                      "name" : "ptDist",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 2,
+                        "raw" : "2",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  } ],
+                  "kind" : "let",
+                  "type" : "VariableDeclaration"
+                }, {
+                  "expression" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "DistanceToPointFinder",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "computeDistance",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "callee" : {
+                        "object" : {
+                          "name" : "poly",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "getExteriorRing",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ ],
+                      "type" : "CallExpression"
+                    }, {
+                      "name" : "pt",
+                      "type" : "Identifier"
+                    }, {
+                      "name" : "ptDist",
+                      "type" : "Identifier"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "ExpressionStatement"
+                }, {
+                  "init" : {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "i",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "value" : "0",
+                        "raw" : "0",
+                        "type" : "Literal"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "var",
+                    "type" : "VariableDeclaration"
+                  },
+                  "test" : {
+                    "operator" : "<",
+                    "left" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "poly",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "getNumInteriorRing",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "update" : {
+                    "operator" : "++",
+                    "prefix" : false,
+                    "argument" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "type" : "UnaryExpression"
+                  },
+                  "body" : {
+                    "body" : [ {
+                      "expression" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "DistanceToPointFinder",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "computeDistance",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "callee" : {
+                            "object" : {
+                              "name" : "poly",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "getInteriorRingN",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ {
+                            "name" : "i",
+                            "type" : "Identifier"
+                          } ],
+                          "type" : "CallExpression"
+                        }, {
+                          "name" : "pt",
+                          "type" : "Identifier"
+                        }, {
+                          "name" : "ptDist",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "ExpressionStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "type" : "ForStatement"
+                } ],
+                "type" : "BlockStatement"
+              },
+              "alternate" : {
+                "test" : {
+                  "operator" : "&&",
+                  "left" : {
+                    "operator" : "instanceof",
+                    "left" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 2,
+                        "raw" : "2",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "right" : {
+                      "name" : "PointPairDistance",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "right" : {
+                    "operator" : "&&",
+                    "left" : {
+                      "operator" : "instanceof",
+                      "left" : {
+                        "object" : {
+                          "name" : "arguments",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "value" : 0,
+                          "raw" : "0",
+                          "type" : "Literal"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      },
+                      "right" : {
+                        "name" : "Geometry",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "right" : {
+                      "operator" : "instanceof",
+                      "left" : {
+                        "object" : {
+                          "name" : "arguments",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "value" : 1,
+                          "raw" : "1",
+                          "type" : "Literal"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      },
+                      "right" : {
+                        "name" : "Coordinate",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "type" : "LogicalExpression"
+                  },
+                  "type" : "LogicalExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "geom",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "object" : {
+                          "name" : "arguments",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "value" : 0,
+                          "raw" : "0",
+                          "type" : "Literal"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    }, {
+                      "id" : {
+                        "name" : "pt",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "object" : {
+                          "name" : "arguments",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "value" : 1,
+                          "raw" : "1",
+                          "type" : "Literal"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    }, {
+                      "id" : {
+                        "name" : "ptDist",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "object" : {
+                          "name" : "arguments",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "value" : 2,
+                          "raw" : "2",
+                          "type" : "Literal"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "let",
+                    "type" : "VariableDeclaration"
+                  }, {
+                    "test" : {
+                      "operator" : "instanceof",
+                      "left" : {
+                        "name" : "geom",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "name" : "LineString",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "expression" : {
+                          "callee" : {
+                            "object" : {
+                              "name" : "DistanceToPointFinder",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "computeDistance",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ {
+                            "name" : "geom",
+                            "type" : "Identifier"
+                          }, {
+                            "name" : "pt",
+                            "type" : "Identifier"
+                          }, {
+                            "name" : "ptDist",
+                            "type" : "Identifier"
+                          } ],
+                          "type" : "CallExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : {
+                      "test" : {
+                        "operator" : "instanceof",
+                        "left" : {
+                          "name" : "geom",
+                          "type" : "Identifier"
+                        },
+                        "right" : {
+                          "name" : "Polygon",
+                          "type" : "Identifier"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "consequent" : {
+                        "body" : [ {
+                          "expression" : {
+                            "callee" : {
+                              "object" : {
+                                "name" : "DistanceToPointFinder",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "computeDistance",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ {
+                              "name" : "geom",
+                              "type" : "Identifier"
+                            }, {
+                              "name" : "pt",
+                              "type" : "Identifier"
+                            }, {
+                              "name" : "ptDist",
+                              "type" : "Identifier"
+                            } ],
+                            "type" : "CallExpression"
+                          },
+                          "type" : "ExpressionStatement"
+                        } ],
+                        "type" : "BlockStatement"
+                      },
+                      "alternate" : {
+                        "test" : {
+                          "operator" : "instanceof",
+                          "left" : {
+                            "name" : "geom",
+                            "type" : "Identifier"
+                          },
+                          "right" : {
+                            "name" : "GeometryCollection",
+                            "type" : "Identifier"
+                          },
+                          "type" : "BinaryExpression"
+                        },
+                        "consequent" : {
+                          "body" : [ {
+                            "declarations" : [ {
+                              "id" : {
+                                "name" : "gc",
+                                "type" : "Identifier"
+                              },
+                              "init" : {
+                                "name" : "geom",
+                                "type" : "Identifier"
+                              },
+                              "type" : "VariableDeclarator"
+                            } ],
+                            "kind" : "var",
+                            "type" : "VariableDeclaration"
+                          }, {
+                            "init" : {
+                              "declarations" : [ {
+                                "id" : {
+                                  "name" : "i",
+                                  "type" : "Identifier"
+                                },
+                                "init" : {
+                                  "value" : "0",
+                                  "raw" : "0",
+                                  "type" : "Literal"
+                                },
+                                "type" : "VariableDeclarator"
+                              } ],
+                              "kind" : "var",
+                              "type" : "VariableDeclaration"
+                            },
+                            "test" : {
+                              "operator" : "<",
+                              "left" : {
+                                "name" : "i",
+                                "type" : "Identifier"
+                              },
+                              "right" : {
+                                "callee" : {
+                                  "object" : {
+                                    "name" : "gc",
+                                    "type" : "Identifier"
+                                  },
+                                  "property" : {
+                                    "name" : "getNumGeometries",
+                                    "type" : "Identifier"
+                                  },
+                                  "computed" : false,
+                                  "type" : "MemberExpression"
+                                },
+                                "arguments" : [ ],
+                                "type" : "CallExpression"
+                              },
+                              "type" : "BinaryExpression"
+                            },
+                            "update" : {
+                              "operator" : "++",
+                              "prefix" : false,
+                              "argument" : {
+                                "name" : "i",
+                                "type" : "Identifier"
+                              },
+                              "type" : "UnaryExpression"
+                            },
+                            "body" : {
+                              "body" : [ {
+                                "declarations" : [ {
+                                  "id" : {
+                                    "name" : "g",
+                                    "type" : "Identifier"
+                                  },
+                                  "init" : {
+                                    "callee" : {
+                                      "object" : {
+                                        "name" : "gc",
+                                        "type" : "Identifier"
+                                      },
+                                      "property" : {
+                                        "name" : "getGeometryN",
+                                        "type" : "Identifier"
+                                      },
+                                      "computed" : false,
+                                      "type" : "MemberExpression"
+                                    },
+                                    "arguments" : [ {
+                                      "name" : "i",
+                                      "type" : "Identifier"
+                                    } ],
+                                    "type" : "CallExpression"
+                                  },
+                                  "type" : "VariableDeclarator"
+                                } ],
+                                "kind" : "var",
+                                "type" : "VariableDeclaration"
+                              }, {
+                                "expression" : {
+                                  "callee" : {
+                                    "object" : {
+                                      "name" : "DistanceToPointFinder",
+                                      "type" : "Identifier"
+                                    },
+                                    "property" : {
+                                      "name" : "computeDistance",
+                                      "type" : "Identifier"
+                                    },
+                                    "computed" : false,
+                                    "type" : "MemberExpression"
+                                  },
+                                  "arguments" : [ {
+                                    "name" : "g",
+                                    "type" : "Identifier"
+                                  }, {
+                                    "name" : "pt",
+                                    "type" : "Identifier"
+                                  }, {
+                                    "name" : "ptDist",
+                                    "type" : "Identifier"
+                                  } ],
+                                  "type" : "CallExpression"
+                                },
+                                "type" : "ExpressionStatement"
+                              } ],
+                              "type" : "BlockStatement"
+                            },
+                            "type" : "ForStatement"
+                          } ],
+                          "type" : "BlockStatement"
+                        },
+                        "alternate" : {
+                          "body" : [ {
+                            "expression" : {
+                              "callee" : {
+                                "object" : {
+                                  "name" : "ptDist",
+                                  "type" : "Identifier"
+                                },
+                                "property" : {
+                                  "name" : "setMinimum",
+                                  "type" : "Identifier"
+                                },
+                                "computed" : false,
+                                "type" : "MemberExpression"
+                              },
+                              "arguments" : [ {
+                                "callee" : {
+                                  "object" : {
+                                    "name" : "geom",
+                                    "type" : "Identifier"
+                                  },
+                                  "property" : {
+                                    "name" : "getCoordinate",
+                                    "type" : "Identifier"
+                                  },
+                                  "computed" : false,
+                                  "type" : "MemberExpression"
+                                },
+                                "arguments" : [ ],
+                                "type" : "CallExpression"
+                              }, {
+                                "name" : "pt",
+                                "type" : "Identifier"
+                              } ],
+                              "type" : "CallExpression"
+                            },
+                            "type" : "ExpressionStatement"
+                          } ],
+                          "type" : "BlockStatement"
+                        },
+                        "type" : "IfStatement"
+                      },
+                      "type" : "IfStatement"
+                    },
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : {
+                  "test" : {
+                    "operator" : "&&",
+                    "left" : {
+                      "operator" : "instanceof",
+                      "left" : {
+                        "object" : {
+                          "name" : "arguments",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "value" : 2,
+                          "raw" : "2",
+                          "type" : "Literal"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      },
+                      "right" : {
+                        "name" : "PointPairDistance",
+                        "type" : "Identifier"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "right" : {
+                      "operator" : "&&",
+                      "left" : {
+                        "operator" : "instanceof",
+                        "left" : {
+                          "object" : {
+                            "name" : "arguments",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "value" : 0,
+                            "raw" : "0",
+                            "type" : "Literal"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        },
+                        "right" : {
+                          "name" : "LineSegment",
+                          "type" : "Identifier"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "right" : {
+                        "operator" : "instanceof",
+                        "left" : {
+                          "object" : {
+                            "name" : "arguments",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "value" : 1,
+                            "raw" : "1",
+                            "type" : "Literal"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        },
+                        "right" : {
+                          "name" : "Coordinate",
+                          "type" : "Identifier"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "type" : "LogicalExpression"
+                    },
+                    "type" : "LogicalExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "declarations" : [ {
+                        "id" : {
+                          "name" : "segment",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "object" : {
+                            "name" : "arguments",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "value" : 0,
+                            "raw" : "0",
+                            "type" : "Literal"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      }, {
+                        "id" : {
+                          "name" : "pt",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "object" : {
+                            "name" : "arguments",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "value" : 1,
+                            "raw" : "1",
+                            "type" : "Literal"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      }, {
+                        "id" : {
+                          "name" : "ptDist",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "object" : {
+                            "name" : "arguments",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "value" : 2,
+                            "raw" : "2",
+                            "type" : "Literal"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      } ],
+                      "kind" : "let",
+                      "type" : "VariableDeclaration"
+                    }, {
+                      "declarations" : [ {
+                        "id" : {
+                          "name" : "closestPt",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "callee" : {
+                            "object" : {
+                              "name" : "segment",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "closestPoint",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ {
+                            "name" : "pt",
+                            "type" : "Identifier"
+                          } ],
+                          "type" : "CallExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      } ],
+                      "kind" : "var",
+                      "type" : "VariableDeclaration"
+                    }, {
+                      "expression" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "ptDist",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "setMinimum",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "closestPt",
+                          "type" : "Identifier"
+                        }, {
+                          "name" : "pt",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "ExpressionStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : null,
+                  "type" : "IfStatement"
+                },
+                "type" : "IfStatement"
+              },
+              "type" : "IfStatement"
+            },
+            "type" : "IfStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

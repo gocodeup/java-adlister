@@ -1,0 +1,2118 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "hasInterface",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../hasInterface'",
+      "raw" : "'../../../../../hasInterface'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "MonotoneChain",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'./MonotoneChain'",
+      "raw" : "'./MonotoneChain'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "SweepLineEvent",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'./SweepLineEvent'",
+      "raw" : "'./SweepLineEvent'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "EdgeSetIntersector",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'./EdgeSetIntersector'",
+      "raw" : "'./EdgeSetIntersector'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../extend'",
+      "raw" : "'../../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Collections",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../java/util/Collections'",
+      "raw" : "'../../../../../java/util/Collections'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "SegmentIntersector",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'./SegmentIntersector'",
+      "raw" : "'./SegmentIntersector'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "ArrayList",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../java/util/ArrayList'",
+      "raw" : "'../../../../../java/util/ArrayList'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "inherits",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../inherits'",
+      "raw" : "'../../../../../inherits'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "List",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../java/util/List'",
+      "raw" : "'../../../../../java/util/List'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "SimpleMCSweepLineIntersector",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ {
+          "expression" : {
+            "callee" : {
+              "object" : {
+                "name" : "EdgeSetIntersector",
+                "type" : "Identifier"
+              },
+              "property" : {
+                "name" : "apply",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "arguments" : [ {
+              "type" : "ThisExpression"
+            } ],
+            "type" : "CallExpression"
+          },
+          "type" : "ExpressionStatement"
+        }, {
+          "expression" : {
+            "operator" : "=",
+            "left" : {
+              "object" : {
+                "type" : "ThisExpression"
+              },
+              "property" : {
+                "name" : "events",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "right" : {
+              "callee" : {
+                "name" : "ArrayList",
+                "type" : "Identifier"
+              },
+              "arguments" : [ ],
+              "type" : "NewExpression"
+            },
+            "type" : "AssignmentExpression"
+          },
+          "type" : "ExpressionStatement"
+        }, {
+          "expression" : {
+            "operator" : "=",
+            "left" : {
+              "object" : {
+                "type" : "ThisExpression"
+              },
+              "property" : {
+                "name" : "nOverlaps",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "right" : {
+              "value" : null,
+              "raw" : "null",
+              "type" : "Literal"
+            },
+            "type" : "AssignmentExpression"
+          },
+          "type" : "ExpressionStatement"
+        } ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "inherits",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "name" : "SimpleMCSweepLineIntersector",
+        "type" : "Identifier"
+      }, {
+        "name" : "EdgeSetIntersector",
+        "type" : "Identifier"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "SimpleMCSweepLineIntersector",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "prepareEvents",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "expression" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "Collections",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "sort",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "object" : {
+                      "type" : "ThisExpression"
+                    },
+                    "property" : {
+                      "name" : "events",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "init" : {
+                  "declarations" : [ {
+                    "id" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "value" : "0",
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "type" : "VariableDeclarator"
+                  } ],
+                  "kind" : "var",
+                  "type" : "VariableDeclaration"
+                },
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "name" : "i",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "callee" : {
+                      "object" : {
+                        "object" : {
+                          "type" : "ThisExpression"
+                        },
+                        "property" : {
+                          "name" : "events",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "property" : {
+                        "name" : "size",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "update" : {
+                  "operator" : "++",
+                  "prefix" : false,
+                  "argument" : {
+                    "name" : "i",
+                    "type" : "Identifier"
+                  },
+                  "type" : "UnaryExpression"
+                },
+                "body" : {
+                  "body" : [ {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "ev",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "callee" : {
+                          "object" : {
+                            "object" : {
+                              "type" : "ThisExpression"
+                            },
+                            "property" : {
+                              "name" : "events",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "property" : {
+                            "name" : "get",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "i",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "var",
+                    "type" : "VariableDeclaration"
+                  }, {
+                    "test" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "ev",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "isDelete",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ ],
+                      "type" : "CallExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "expression" : {
+                          "callee" : {
+                            "object" : {
+                              "callee" : {
+                                "object" : {
+                                  "name" : "ev",
+                                  "type" : "Identifier"
+                                },
+                                "property" : {
+                                  "name" : "getInsertEvent",
+                                  "type" : "Identifier"
+                                },
+                                "computed" : false,
+                                "type" : "MemberExpression"
+                              },
+                              "arguments" : [ ],
+                              "type" : "CallExpression"
+                            },
+                            "property" : {
+                              "name" : "setDeleteEventIndex",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ {
+                            "name" : "i",
+                            "type" : "Identifier"
+                          } ],
+                          "type" : "CallExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : null,
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "ForStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "computeIntersections",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "test" : {
+                  "operator" : "===",
+                  "left" : {
+                    "name" : "arguments.length",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : 1,
+                    "raw" : "1",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "si",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "object" : {
+                          "name" : "arguments",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "value" : 0,
+                          "raw" : "0",
+                          "type" : "Literal"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "let",
+                    "type" : "VariableDeclaration"
+                  }, {
+                    "expression" : {
+                      "operator" : "=",
+                      "left" : {
+                        "object" : {
+                          "type" : "ThisExpression"
+                        },
+                        "property" : {
+                          "name" : "nOverlaps",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "right" : {
+                        "value" : "0",
+                        "raw" : "0",
+                        "type" : "Literal"
+                      },
+                      "type" : "AssignmentExpression"
+                    },
+                    "type" : "ExpressionStatement"
+                  }, {
+                    "expression" : {
+                      "callee" : {
+                        "object" : {
+                          "type" : "ThisExpression"
+                        },
+                        "property" : {
+                          "name" : "prepareEvents",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "ExpressionStatement"
+                  }, {
+                    "init" : {
+                      "declarations" : [ {
+                        "id" : {
+                          "name" : "i",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "value" : "0",
+                          "raw" : "0",
+                          "type" : "Literal"
+                        },
+                        "type" : "VariableDeclarator"
+                      } ],
+                      "kind" : "var",
+                      "type" : "VariableDeclaration"
+                    },
+                    "test" : {
+                      "operator" : "<",
+                      "left" : {
+                        "name" : "i",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "callee" : {
+                          "object" : {
+                            "object" : {
+                              "type" : "ThisExpression"
+                            },
+                            "property" : {
+                              "name" : "events",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "property" : {
+                            "name" : "size",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "update" : {
+                      "operator" : "++",
+                      "prefix" : false,
+                      "argument" : {
+                        "name" : "i",
+                        "type" : "Identifier"
+                      },
+                      "type" : "UnaryExpression"
+                    },
+                    "body" : {
+                      "body" : [ {
+                        "declarations" : [ {
+                          "id" : {
+                            "name" : "ev",
+                            "type" : "Identifier"
+                          },
+                          "init" : {
+                            "callee" : {
+                              "object" : {
+                                "object" : {
+                                  "type" : "ThisExpression"
+                                },
+                                "property" : {
+                                  "name" : "events",
+                                  "type" : "Identifier"
+                                },
+                                "computed" : false,
+                                "type" : "MemberExpression"
+                              },
+                              "property" : {
+                                "name" : "get",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ {
+                              "name" : "i",
+                              "type" : "Identifier"
+                            } ],
+                            "type" : "CallExpression"
+                          },
+                          "type" : "VariableDeclarator"
+                        } ],
+                        "kind" : "var",
+                        "type" : "VariableDeclaration"
+                      }, {
+                        "test" : {
+                          "callee" : {
+                            "object" : {
+                              "name" : "ev",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "isInsert",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ ],
+                          "type" : "CallExpression"
+                        },
+                        "consequent" : {
+                          "body" : [ {
+                            "expression" : {
+                              "callee" : {
+                                "object" : {
+                                  "type" : "ThisExpression"
+                                },
+                                "property" : {
+                                  "name" : "processOverlaps",
+                                  "type" : "Identifier"
+                                },
+                                "computed" : false,
+                                "type" : "MemberExpression"
+                              },
+                              "arguments" : [ {
+                                "name" : "i",
+                                "type" : "Identifier"
+                              }, {
+                                "callee" : {
+                                  "object" : {
+                                    "name" : "ev",
+                                    "type" : "Identifier"
+                                  },
+                                  "property" : {
+                                    "name" : "getDeleteEventIndex",
+                                    "type" : "Identifier"
+                                  },
+                                  "computed" : false,
+                                  "type" : "MemberExpression"
+                                },
+                                "arguments" : [ ],
+                                "type" : "CallExpression"
+                              }, {
+                                "name" : "ev",
+                                "type" : "Identifier"
+                              }, {
+                                "name" : "si",
+                                "type" : "Identifier"
+                              } ],
+                              "type" : "CallExpression"
+                            },
+                            "type" : "ExpressionStatement"
+                          } ],
+                          "type" : "BlockStatement"
+                        },
+                        "alternate" : null,
+                        "type" : "IfStatement"
+                      }, {
+                        "test" : {
+                          "callee" : {
+                            "object" : {
+                              "name" : "si",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "isDone",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ ],
+                          "type" : "CallExpression"
+                        },
+                        "consequent" : {
+                          "body" : [ {
+                            "label" : null,
+                            "type" : "BreakStatement"
+                          } ],
+                          "type" : "BlockStatement"
+                        },
+                        "alternate" : null,
+                        "type" : "IfStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "type" : "ForStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : {
+                  "test" : {
+                    "operator" : "===",
+                    "left" : {
+                      "name" : "arguments.length",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "value" : 3,
+                      "raw" : "3",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "test" : {
+                        "operator" : "&&",
+                        "left" : {
+                          "operator" : "instanceof",
+                          "left" : {
+                            "object" : {
+                              "name" : "arguments",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "value" : 2,
+                              "raw" : "2",
+                              "type" : "Literal"
+                            },
+                            "computed" : true,
+                            "type" : "MemberExpression"
+                          },
+                          "right" : {
+                            "name" : "SegmentIntersector",
+                            "type" : "Identifier"
+                          },
+                          "type" : "BinaryExpression"
+                        },
+                        "right" : {
+                          "operator" : "&&",
+                          "left" : {
+                            "callee" : {
+                              "name" : "hasInterface",
+                              "type" : "Identifier"
+                            },
+                            "arguments" : [ {
+                              "object" : {
+                                "name" : "arguments",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "value" : 0,
+                                "raw" : "0",
+                                "type" : "Literal"
+                              },
+                              "computed" : true,
+                              "type" : "MemberExpression"
+                            }, {
+                              "name" : "List",
+                              "type" : "Identifier"
+                            } ],
+                            "type" : "CallExpression"
+                          },
+                          "right" : {
+                            "callee" : {
+                              "name" : "hasInterface",
+                              "type" : "Identifier"
+                            },
+                            "arguments" : [ {
+                              "object" : {
+                                "name" : "arguments",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "value" : 1,
+                                "raw" : "1",
+                                "type" : "Literal"
+                              },
+                              "computed" : true,
+                              "type" : "MemberExpression"
+                            }, {
+                              "name" : "List",
+                              "type" : "Identifier"
+                            } ],
+                            "type" : "CallExpression"
+                          },
+                          "type" : "LogicalExpression"
+                        },
+                        "type" : "LogicalExpression"
+                      },
+                      "consequent" : {
+                        "body" : [ {
+                          "declarations" : [ {
+                            "id" : {
+                              "name" : "edges0",
+                              "type" : "Identifier"
+                            },
+                            "init" : {
+                              "object" : {
+                                "name" : "arguments",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "value" : 0,
+                                "raw" : "0",
+                                "type" : "Literal"
+                              },
+                              "computed" : true,
+                              "type" : "MemberExpression"
+                            },
+                            "type" : "VariableDeclarator"
+                          }, {
+                            "id" : {
+                              "name" : "edges1",
+                              "type" : "Identifier"
+                            },
+                            "init" : {
+                              "object" : {
+                                "name" : "arguments",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "value" : 1,
+                                "raw" : "1",
+                                "type" : "Literal"
+                              },
+                              "computed" : true,
+                              "type" : "MemberExpression"
+                            },
+                            "type" : "VariableDeclarator"
+                          }, {
+                            "id" : {
+                              "name" : "si",
+                              "type" : "Identifier"
+                            },
+                            "init" : {
+                              "object" : {
+                                "name" : "arguments",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "value" : 2,
+                                "raw" : "2",
+                                "type" : "Literal"
+                              },
+                              "computed" : true,
+                              "type" : "MemberExpression"
+                            },
+                            "type" : "VariableDeclarator"
+                          } ],
+                          "kind" : "let",
+                          "type" : "VariableDeclaration"
+                        }, {
+                          "expression" : {
+                            "callee" : {
+                              "object" : {
+                                "type" : "ThisExpression"
+                              },
+                              "property" : {
+                                "name" : "addEdges",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ {
+                              "name" : "edges0",
+                              "type" : "Identifier"
+                            }, {
+                              "name" : "edges0",
+                              "type" : "Identifier"
+                            } ],
+                            "type" : "CallExpression"
+                          },
+                          "type" : "ExpressionStatement"
+                        }, {
+                          "expression" : {
+                            "callee" : {
+                              "object" : {
+                                "type" : "ThisExpression"
+                              },
+                              "property" : {
+                                "name" : "addEdges",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ {
+                              "name" : "edges1",
+                              "type" : "Identifier"
+                            }, {
+                              "name" : "edges1",
+                              "type" : "Identifier"
+                            } ],
+                            "type" : "CallExpression"
+                          },
+                          "type" : "ExpressionStatement"
+                        }, {
+                          "expression" : {
+                            "callee" : {
+                              "object" : {
+                                "type" : "ThisExpression"
+                              },
+                              "property" : {
+                                "name" : "computeIntersections",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ {
+                              "name" : "si",
+                              "type" : "Identifier"
+                            } ],
+                            "type" : "CallExpression"
+                          },
+                          "type" : "ExpressionStatement"
+                        } ],
+                        "type" : "BlockStatement"
+                      },
+                      "alternate" : {
+                        "test" : {
+                          "operator" : "&&",
+                          "left" : {
+                            "operator" : "===",
+                            "left" : {
+                              "operator" : "typeof",
+                              "prefix" : true,
+                              "argument" : {
+                                "object" : {
+                                  "name" : "arguments",
+                                  "type" : "Identifier"
+                                },
+                                "property" : {
+                                  "value" : 2,
+                                  "raw" : "2",
+                                  "type" : "Literal"
+                                },
+                                "computed" : true,
+                                "type" : "MemberExpression"
+                              },
+                              "type" : "UnaryExpression"
+                            },
+                            "right" : {
+                              "value" : "boolean",
+                              "raw" : "\"boolean\"",
+                              "type" : "Literal"
+                            },
+                            "type" : "BinaryExpression"
+                          },
+                          "right" : {
+                            "operator" : "&&",
+                            "left" : {
+                              "callee" : {
+                                "name" : "hasInterface",
+                                "type" : "Identifier"
+                              },
+                              "arguments" : [ {
+                                "object" : {
+                                  "name" : "arguments",
+                                  "type" : "Identifier"
+                                },
+                                "property" : {
+                                  "value" : 0,
+                                  "raw" : "0",
+                                  "type" : "Literal"
+                                },
+                                "computed" : true,
+                                "type" : "MemberExpression"
+                              }, {
+                                "name" : "List",
+                                "type" : "Identifier"
+                              } ],
+                              "type" : "CallExpression"
+                            },
+                            "right" : {
+                              "operator" : "instanceof",
+                              "left" : {
+                                "object" : {
+                                  "name" : "arguments",
+                                  "type" : "Identifier"
+                                },
+                                "property" : {
+                                  "value" : 1,
+                                  "raw" : "1",
+                                  "type" : "Literal"
+                                },
+                                "computed" : true,
+                                "type" : "MemberExpression"
+                              },
+                              "right" : {
+                                "name" : "SegmentIntersector",
+                                "type" : "Identifier"
+                              },
+                              "type" : "BinaryExpression"
+                            },
+                            "type" : "LogicalExpression"
+                          },
+                          "type" : "LogicalExpression"
+                        },
+                        "consequent" : {
+                          "body" : [ {
+                            "declarations" : [ {
+                              "id" : {
+                                "name" : "edges",
+                                "type" : "Identifier"
+                              },
+                              "init" : {
+                                "object" : {
+                                  "name" : "arguments",
+                                  "type" : "Identifier"
+                                },
+                                "property" : {
+                                  "value" : 0,
+                                  "raw" : "0",
+                                  "type" : "Literal"
+                                },
+                                "computed" : true,
+                                "type" : "MemberExpression"
+                              },
+                              "type" : "VariableDeclarator"
+                            }, {
+                              "id" : {
+                                "name" : "si",
+                                "type" : "Identifier"
+                              },
+                              "init" : {
+                                "object" : {
+                                  "name" : "arguments",
+                                  "type" : "Identifier"
+                                },
+                                "property" : {
+                                  "value" : 1,
+                                  "raw" : "1",
+                                  "type" : "Literal"
+                                },
+                                "computed" : true,
+                                "type" : "MemberExpression"
+                              },
+                              "type" : "VariableDeclarator"
+                            }, {
+                              "id" : {
+                                "name" : "testAllSegments",
+                                "type" : "Identifier"
+                              },
+                              "init" : {
+                                "object" : {
+                                  "name" : "arguments",
+                                  "type" : "Identifier"
+                                },
+                                "property" : {
+                                  "value" : 2,
+                                  "raw" : "2",
+                                  "type" : "Literal"
+                                },
+                                "computed" : true,
+                                "type" : "MemberExpression"
+                              },
+                              "type" : "VariableDeclarator"
+                            } ],
+                            "kind" : "let",
+                            "type" : "VariableDeclaration"
+                          }, {
+                            "test" : {
+                              "name" : "testAllSegments",
+                              "type" : "Identifier"
+                            },
+                            "consequent" : {
+                              "expression" : {
+                                "callee" : {
+                                  "object" : {
+                                    "type" : "ThisExpression"
+                                  },
+                                  "property" : {
+                                    "name" : "addEdges",
+                                    "type" : "Identifier"
+                                  },
+                                  "computed" : false,
+                                  "type" : "MemberExpression"
+                                },
+                                "arguments" : [ {
+                                  "name" : "edges",
+                                  "type" : "Identifier"
+                                }, {
+                                  "value" : null,
+                                  "raw" : "null",
+                                  "type" : "Literal"
+                                } ],
+                                "type" : "CallExpression"
+                              },
+                              "type" : "ExpressionStatement"
+                            },
+                            "alternate" : {
+                              "expression" : {
+                                "callee" : {
+                                  "object" : {
+                                    "type" : "ThisExpression"
+                                  },
+                                  "property" : {
+                                    "name" : "addEdges",
+                                    "type" : "Identifier"
+                                  },
+                                  "computed" : false,
+                                  "type" : "MemberExpression"
+                                },
+                                "arguments" : [ {
+                                  "name" : "edges",
+                                  "type" : "Identifier"
+                                } ],
+                                "type" : "CallExpression"
+                              },
+                              "type" : "ExpressionStatement"
+                            },
+                            "type" : "IfStatement"
+                          }, {
+                            "expression" : {
+                              "callee" : {
+                                "object" : {
+                                  "type" : "ThisExpression"
+                                },
+                                "property" : {
+                                  "name" : "computeIntersections",
+                                  "type" : "Identifier"
+                                },
+                                "computed" : false,
+                                "type" : "MemberExpression"
+                              },
+                              "arguments" : [ {
+                                "name" : "si",
+                                "type" : "Identifier"
+                              } ],
+                              "type" : "CallExpression"
+                            },
+                            "type" : "ExpressionStatement"
+                          } ],
+                          "type" : "BlockStatement"
+                        },
+                        "alternate" : null,
+                        "type" : "IfStatement"
+                      },
+                      "type" : "IfStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : null,
+                  "type" : "IfStatement"
+                },
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "addEdge",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ {
+              "name" : "edge",
+              "type" : "Identifier"
+            }, {
+              "name" : "edgeSet",
+              "type" : "Identifier"
+            } ],
+            "body" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "mce",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "edge",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "getMonotoneChainEdge",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "startIndex",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "mce",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "getStartIndexes",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "init" : {
+                  "declarations" : [ {
+                    "id" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "value" : "0",
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "type" : "VariableDeclarator"
+                  } ],
+                  "kind" : "var",
+                  "type" : "VariableDeclaration"
+                },
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "name" : "i",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "operator" : "-",
+                    "left" : {
+                      "object" : {
+                        "name" : "startIndex",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "length",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "right" : {
+                      "value" : "1",
+                      "raw" : "1",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "update" : {
+                  "operator" : "++",
+                  "prefix" : false,
+                  "argument" : {
+                    "name" : "i",
+                    "type" : "Identifier"
+                  },
+                  "type" : "UnaryExpression"
+                },
+                "body" : {
+                  "body" : [ {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "mc",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "callee" : {
+                          "name" : "MonotoneChain",
+                          "type" : "Identifier"
+                        },
+                        "arguments" : [ {
+                          "name" : "mce",
+                          "type" : "Identifier"
+                        }, {
+                          "name" : "i",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "NewExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "var",
+                    "type" : "VariableDeclaration"
+                  }, {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "insertEvent",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "callee" : {
+                          "name" : "SweepLineEvent",
+                          "type" : "Identifier"
+                        },
+                        "arguments" : [ {
+                          "name" : "edgeSet",
+                          "type" : "Identifier"
+                        }, {
+                          "callee" : {
+                            "object" : {
+                              "name" : "mce",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "getMinX",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ {
+                            "name" : "i",
+                            "type" : "Identifier"
+                          } ],
+                          "type" : "CallExpression"
+                        }, {
+                          "name" : "mc",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "NewExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "var",
+                    "type" : "VariableDeclaration"
+                  }, {
+                    "expression" : {
+                      "callee" : {
+                        "object" : {
+                          "object" : {
+                            "type" : "ThisExpression"
+                          },
+                          "property" : {
+                            "name" : "events",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "property" : {
+                          "name" : "add",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "name" : "insertEvent",
+                        "type" : "Identifier"
+                      } ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "ExpressionStatement"
+                  }, {
+                    "expression" : {
+                      "callee" : {
+                        "object" : {
+                          "object" : {
+                            "type" : "ThisExpression"
+                          },
+                          "property" : {
+                            "name" : "events",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "property" : {
+                          "name" : "add",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "callee" : {
+                          "name" : "SweepLineEvent",
+                          "type" : "Identifier"
+                        },
+                        "arguments" : [ {
+                          "callee" : {
+                            "object" : {
+                              "name" : "mce",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "getMaxX",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ {
+                            "name" : "i",
+                            "type" : "Identifier"
+                          } ],
+                          "type" : "CallExpression"
+                        }, {
+                          "name" : "insertEvent",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "NewExpression"
+                      } ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "ExpressionStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "ForStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "processOverlaps",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ {
+              "name" : "start",
+              "type" : "Identifier"
+            }, {
+              "name" : "end",
+              "type" : "Identifier"
+            }, {
+              "name" : "ev0",
+              "type" : "Identifier"
+            }, {
+              "name" : "si",
+              "type" : "Identifier"
+            } ],
+            "body" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "mc0",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "ev0",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "getObject",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "var",
+                "type" : "VariableDeclaration"
+              }, {
+                "init" : {
+                  "declarations" : [ {
+                    "id" : {
+                      "name" : "i",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "name" : "start",
+                      "type" : "Identifier"
+                    },
+                    "type" : "VariableDeclarator"
+                  } ],
+                  "kind" : "var",
+                  "type" : "VariableDeclaration"
+                },
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "name" : "i",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "end",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "update" : {
+                  "operator" : "++",
+                  "prefix" : false,
+                  "argument" : {
+                    "name" : "i",
+                    "type" : "Identifier"
+                  },
+                  "type" : "UnaryExpression"
+                },
+                "body" : {
+                  "body" : [ {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "ev1",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "callee" : {
+                          "object" : {
+                            "object" : {
+                              "type" : "ThisExpression"
+                            },
+                            "property" : {
+                              "name" : "events",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "property" : {
+                            "name" : "get",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ {
+                          "name" : "i",
+                          "type" : "Identifier"
+                        } ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "var",
+                    "type" : "VariableDeclaration"
+                  }, {
+                    "test" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "ev1",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "isInsert",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ ],
+                      "type" : "CallExpression"
+                    },
+                    "consequent" : {
+                      "body" : [ {
+                        "declarations" : [ {
+                          "id" : {
+                            "name" : "mc1",
+                            "type" : "Identifier"
+                          },
+                          "init" : {
+                            "callee" : {
+                              "object" : {
+                                "name" : "ev1",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "getObject",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ ],
+                            "type" : "CallExpression"
+                          },
+                          "type" : "VariableDeclarator"
+                        } ],
+                        "kind" : "var",
+                        "type" : "VariableDeclaration"
+                      }, {
+                        "test" : {
+                          "operator" : "!",
+                          "prefix" : true,
+                          "argument" : {
+                            "callee" : {
+                              "object" : {
+                                "name" : "ev0",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "isSameLabel",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ {
+                              "name" : "ev1",
+                              "type" : "Identifier"
+                            } ],
+                            "type" : "CallExpression"
+                          },
+                          "type" : "UnaryExpression"
+                        },
+                        "consequent" : {
+                          "body" : [ {
+                            "expression" : {
+                              "callee" : {
+                                "object" : {
+                                  "name" : "mc0",
+                                  "type" : "Identifier"
+                                },
+                                "property" : {
+                                  "name" : "computeIntersections",
+                                  "type" : "Identifier"
+                                },
+                                "computed" : false,
+                                "type" : "MemberExpression"
+                              },
+                              "arguments" : [ {
+                                "name" : "mc1",
+                                "type" : "Identifier"
+                              }, {
+                                "name" : "si",
+                                "type" : "Identifier"
+                              } ],
+                              "type" : "CallExpression"
+                            },
+                            "type" : "ExpressionStatement"
+                          }, {
+                            "expression" : {
+                              "operator" : "++",
+                              "prefix" : false,
+                              "argument" : {
+                                "object" : {
+                                  "type" : "ThisExpression"
+                                },
+                                "property" : {
+                                  "name" : "nOverlaps",
+                                  "type" : "Identifier"
+                                },
+                                "computed" : false,
+                                "type" : "MemberExpression"
+                              },
+                              "type" : "UnaryExpression"
+                            },
+                            "type" : "ExpressionStatement"
+                          } ],
+                          "type" : "BlockStatement"
+                        },
+                        "alternate" : null,
+                        "type" : "IfStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "alternate" : null,
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "ForStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "addEdges",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "test" : {
+                  "operator" : "===",
+                  "left" : {
+                    "name" : "arguments.length",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : 1,
+                    "raw" : "1",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "declarations" : [ {
+                      "id" : {
+                        "name" : "edges",
+                        "type" : "Identifier"
+                      },
+                      "init" : {
+                        "object" : {
+                          "name" : "arguments",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "value" : 0,
+                          "raw" : "0",
+                          "type" : "Literal"
+                        },
+                        "computed" : true,
+                        "type" : "MemberExpression"
+                      },
+                      "type" : "VariableDeclarator"
+                    } ],
+                    "kind" : "let",
+                    "type" : "VariableDeclaration"
+                  }, {
+                    "init" : {
+                      "declarations" : [ {
+                        "id" : {
+                          "name" : "i",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "callee" : {
+                            "object" : {
+                              "name" : "edges",
+                              "type" : "Identifier"
+                            },
+                            "property" : {
+                              "name" : "iterator",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ ],
+                          "type" : "CallExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      } ],
+                      "kind" : "var",
+                      "type" : "VariableDeclaration"
+                    },
+                    "test" : {
+                      "callee" : {
+                        "object" : {
+                          "name" : "i",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "hasNext",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ ],
+                      "type" : "CallExpression"
+                    },
+                    "update" : null,
+                    "body" : {
+                      "body" : [ {
+                        "declarations" : [ {
+                          "id" : {
+                            "name" : "edge",
+                            "type" : "Identifier"
+                          },
+                          "init" : {
+                            "callee" : {
+                              "object" : {
+                                "name" : "i",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "next",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ ],
+                            "type" : "CallExpression"
+                          },
+                          "type" : "VariableDeclarator"
+                        } ],
+                        "kind" : "var",
+                        "type" : "VariableDeclaration"
+                      }, {
+                        "expression" : {
+                          "callee" : {
+                            "object" : {
+                              "type" : "ThisExpression"
+                            },
+                            "property" : {
+                              "name" : "addEdge",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ {
+                            "name" : "edge",
+                            "type" : "Identifier"
+                          }, {
+                            "name" : "edge",
+                            "type" : "Identifier"
+                          } ],
+                          "type" : "CallExpression"
+                        },
+                        "type" : "ExpressionStatement"
+                      } ],
+                      "type" : "BlockStatement"
+                    },
+                    "type" : "ForStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : {
+                  "test" : {
+                    "operator" : "===",
+                    "left" : {
+                      "name" : "arguments.length",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "value" : 2,
+                      "raw" : "2",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "declarations" : [ {
+                        "id" : {
+                          "name" : "edges",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "object" : {
+                            "name" : "arguments",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "value" : 0,
+                            "raw" : "0",
+                            "type" : "Literal"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      }, {
+                        "id" : {
+                          "name" : "edgeSet",
+                          "type" : "Identifier"
+                        },
+                        "init" : {
+                          "object" : {
+                            "name" : "arguments",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "value" : 1,
+                            "raw" : "1",
+                            "type" : "Literal"
+                          },
+                          "computed" : true,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "VariableDeclarator"
+                      } ],
+                      "kind" : "let",
+                      "type" : "VariableDeclaration"
+                    }, {
+                      "init" : {
+                        "declarations" : [ {
+                          "id" : {
+                            "name" : "i",
+                            "type" : "Identifier"
+                          },
+                          "init" : {
+                            "callee" : {
+                              "object" : {
+                                "name" : "edges",
+                                "type" : "Identifier"
+                              },
+                              "property" : {
+                                "name" : "iterator",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ ],
+                            "type" : "CallExpression"
+                          },
+                          "type" : "VariableDeclarator"
+                        } ],
+                        "kind" : "var",
+                        "type" : "VariableDeclaration"
+                      },
+                      "test" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "i",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "hasNext",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ ],
+                        "type" : "CallExpression"
+                      },
+                      "update" : null,
+                      "body" : {
+                        "body" : [ {
+                          "declarations" : [ {
+                            "id" : {
+                              "name" : "edge",
+                              "type" : "Identifier"
+                            },
+                            "init" : {
+                              "callee" : {
+                                "object" : {
+                                  "name" : "i",
+                                  "type" : "Identifier"
+                                },
+                                "property" : {
+                                  "name" : "next",
+                                  "type" : "Identifier"
+                                },
+                                "computed" : false,
+                                "type" : "MemberExpression"
+                              },
+                              "arguments" : [ ],
+                              "type" : "CallExpression"
+                            },
+                            "type" : "VariableDeclarator"
+                          } ],
+                          "kind" : "var",
+                          "type" : "VariableDeclaration"
+                        }, {
+                          "expression" : {
+                            "callee" : {
+                              "object" : {
+                                "type" : "ThisExpression"
+                              },
+                              "property" : {
+                                "name" : "addEdge",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ {
+                              "name" : "edge",
+                              "type" : "Identifier"
+                            }, {
+                              "name" : "edgeSet",
+                              "type" : "Identifier"
+                            } ],
+                            "type" : "CallExpression"
+                          },
+                          "type" : "ExpressionStatement"
+                        } ],
+                        "type" : "BlockStatement"
+                      },
+                      "type" : "ForStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : null,
+                  "type" : "IfStatement"
+                },
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "SimpleMCSweepLineIntersector",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

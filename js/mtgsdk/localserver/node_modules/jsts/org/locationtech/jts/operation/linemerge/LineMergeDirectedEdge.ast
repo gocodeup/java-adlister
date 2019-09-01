@@ -1,0 +1,633 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../extend'",
+      "raw" : "'../../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "DirectedEdge",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../planargraph/DirectedEdge'",
+      "raw" : "'../../planargraph/DirectedEdge'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Assert",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../util/Assert'",
+      "raw" : "'../../util/Assert'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "inherits",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../../inherits'",
+      "raw" : "'../../../../../inherits'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "LineMergeDirectedEdge",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ {
+          "declarations" : [ {
+            "id" : {
+              "name" : "from",
+              "type" : "Identifier"
+            },
+            "init" : {
+              "object" : {
+                "name" : "arguments",
+                "type" : "Identifier"
+              },
+              "property" : {
+                "value" : 0,
+                "raw" : "0",
+                "type" : "Literal"
+              },
+              "computed" : true,
+              "type" : "MemberExpression"
+            },
+            "type" : "VariableDeclarator"
+          }, {
+            "id" : {
+              "name" : "to",
+              "type" : "Identifier"
+            },
+            "init" : {
+              "object" : {
+                "name" : "arguments",
+                "type" : "Identifier"
+              },
+              "property" : {
+                "value" : 1,
+                "raw" : "1",
+                "type" : "Literal"
+              },
+              "computed" : true,
+              "type" : "MemberExpression"
+            },
+            "type" : "VariableDeclarator"
+          }, {
+            "id" : {
+              "name" : "directionPt",
+              "type" : "Identifier"
+            },
+            "init" : {
+              "object" : {
+                "name" : "arguments",
+                "type" : "Identifier"
+              },
+              "property" : {
+                "value" : 2,
+                "raw" : "2",
+                "type" : "Literal"
+              },
+              "computed" : true,
+              "type" : "MemberExpression"
+            },
+            "type" : "VariableDeclarator"
+          }, {
+            "id" : {
+              "name" : "edgeDirection",
+              "type" : "Identifier"
+            },
+            "init" : {
+              "object" : {
+                "name" : "arguments",
+                "type" : "Identifier"
+              },
+              "property" : {
+                "value" : 3,
+                "raw" : "3",
+                "type" : "Literal"
+              },
+              "computed" : true,
+              "type" : "MemberExpression"
+            },
+            "type" : "VariableDeclarator"
+          } ],
+          "kind" : "let",
+          "type" : "VariableDeclaration"
+        }, {
+          "expression" : {
+            "callee" : {
+              "object" : {
+                "name" : "DirectedEdge",
+                "type" : "Identifier"
+              },
+              "property" : {
+                "name" : "call",
+                "type" : "Identifier"
+              },
+              "computed" : false,
+              "type" : "MemberExpression"
+            },
+            "arguments" : [ {
+              "type" : "ThisExpression"
+            }, {
+              "name" : "from",
+              "type" : "Identifier"
+            }, {
+              "name" : "to",
+              "type" : "Identifier"
+            }, {
+              "name" : "directionPt",
+              "type" : "Identifier"
+            }, {
+              "name" : "edgeDirection",
+              "type" : "Identifier"
+            } ],
+            "type" : "CallExpression"
+          },
+          "type" : "ExpressionStatement"
+        } ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "inherits",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "name" : "LineMergeDirectedEdge",
+        "type" : "Identifier"
+      }, {
+        "name" : "DirectedEdge",
+        "type" : "Identifier"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "LineMergeDirectedEdge",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "getNext",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "test" : {
+                  "operator" : "!==",
+                  "left" : {
+                    "callee" : {
+                      "object" : {
+                        "callee" : {
+                          "object" : {
+                            "type" : "ThisExpression"
+                          },
+                          "property" : {
+                            "name" : "getToNode",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ ],
+                        "type" : "CallExpression"
+                      },
+                      "property" : {
+                        "name" : "getDegree",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "right" : {
+                    "value" : "2",
+                    "raw" : "2",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "argument" : {
+                      "value" : null,
+                      "raw" : "null",
+                      "type" : "Literal"
+                    },
+                    "type" : "ReturnStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "test" : {
+                  "operator" : "===",
+                  "left" : {
+                    "callee" : {
+                      "object" : {
+                        "callee" : {
+                          "object" : {
+                            "callee" : {
+                              "object" : {
+                                "callee" : {
+                                  "object" : {
+                                    "type" : "ThisExpression"
+                                  },
+                                  "property" : {
+                                    "name" : "getToNode",
+                                    "type" : "Identifier"
+                                  },
+                                  "computed" : false,
+                                  "type" : "MemberExpression"
+                                },
+                                "arguments" : [ ],
+                                "type" : "CallExpression"
+                              },
+                              "property" : {
+                                "name" : "getOutEdges",
+                                "type" : "Identifier"
+                              },
+                              "computed" : false,
+                              "type" : "MemberExpression"
+                            },
+                            "arguments" : [ ],
+                            "type" : "CallExpression"
+                          },
+                          "property" : {
+                            "name" : "getEdges",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ ],
+                        "type" : "CallExpression"
+                      },
+                      "property" : {
+                        "name" : "get",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ {
+                      "value" : "0",
+                      "raw" : "0",
+                      "type" : "Literal"
+                    } ],
+                    "type" : "CallExpression"
+                  },
+                  "right" : {
+                    "callee" : {
+                      "object" : {
+                        "type" : "ThisExpression"
+                      },
+                      "property" : {
+                        "name" : "getSym",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "argument" : {
+                      "callee" : {
+                        "object" : {
+                          "callee" : {
+                            "object" : {
+                              "callee" : {
+                                "object" : {
+                                  "callee" : {
+                                    "object" : {
+                                      "type" : "ThisExpression"
+                                    },
+                                    "property" : {
+                                      "name" : "getToNode",
+                                      "type" : "Identifier"
+                                    },
+                                    "computed" : false,
+                                    "type" : "MemberExpression"
+                                  },
+                                  "arguments" : [ ],
+                                  "type" : "CallExpression"
+                                },
+                                "property" : {
+                                  "name" : "getOutEdges",
+                                  "type" : "Identifier"
+                                },
+                                "computed" : false,
+                                "type" : "MemberExpression"
+                              },
+                              "arguments" : [ ],
+                              "type" : "CallExpression"
+                            },
+                            "property" : {
+                              "name" : "getEdges",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ ],
+                          "type" : "CallExpression"
+                        },
+                        "property" : {
+                          "name" : "get",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "value" : "1",
+                        "raw" : "1",
+                        "type" : "Literal"
+                      } ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "ReturnStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "expression" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "Assert",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "isTrue",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "operator" : "===",
+                    "left" : {
+                      "callee" : {
+                        "object" : {
+                          "callee" : {
+                            "object" : {
+                              "callee" : {
+                                "object" : {
+                                  "callee" : {
+                                    "object" : {
+                                      "type" : "ThisExpression"
+                                    },
+                                    "property" : {
+                                      "name" : "getToNode",
+                                      "type" : "Identifier"
+                                    },
+                                    "computed" : false,
+                                    "type" : "MemberExpression"
+                                  },
+                                  "arguments" : [ ],
+                                  "type" : "CallExpression"
+                                },
+                                "property" : {
+                                  "name" : "getOutEdges",
+                                  "type" : "Identifier"
+                                },
+                                "computed" : false,
+                                "type" : "MemberExpression"
+                              },
+                              "arguments" : [ ],
+                              "type" : "CallExpression"
+                            },
+                            "property" : {
+                              "name" : "getEdges",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ ],
+                          "type" : "CallExpression"
+                        },
+                        "property" : {
+                          "name" : "get",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ {
+                        "value" : "1",
+                        "raw" : "1",
+                        "type" : "Literal"
+                      } ],
+                      "type" : "CallExpression"
+                    },
+                    "right" : {
+                      "callee" : {
+                        "object" : {
+                          "type" : "ThisExpression"
+                        },
+                        "property" : {
+                          "name" : "getSym",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ ],
+                      "type" : "CallExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ExpressionStatement"
+              }, {
+                "argument" : {
+                  "callee" : {
+                    "object" : {
+                      "callee" : {
+                        "object" : {
+                          "callee" : {
+                            "object" : {
+                              "callee" : {
+                                "object" : {
+                                  "type" : "ThisExpression"
+                                },
+                                "property" : {
+                                  "name" : "getToNode",
+                                  "type" : "Identifier"
+                                },
+                                "computed" : false,
+                                "type" : "MemberExpression"
+                              },
+                              "arguments" : [ ],
+                              "type" : "CallExpression"
+                            },
+                            "property" : {
+                              "name" : "getOutEdges",
+                              "type" : "Identifier"
+                            },
+                            "computed" : false,
+                            "type" : "MemberExpression"
+                          },
+                          "arguments" : [ ],
+                          "type" : "CallExpression"
+                        },
+                        "property" : {
+                          "name" : "getEdges",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "arguments" : [ ],
+                      "type" : "CallExpression"
+                    },
+                    "property" : {
+                      "name" : "get",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "value" : "0",
+                    "raw" : "0",
+                    "type" : "Literal"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "LineMergeDirectedEdge",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

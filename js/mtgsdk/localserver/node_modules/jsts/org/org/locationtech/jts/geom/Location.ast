@@ -1,0 +1,366 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "IllegalArgumentException",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../java/lang/IllegalArgumentException'",
+      "raw" : "'../../../../java/lang/IllegalArgumentException'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../extend'",
+      "raw" : "'../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "Location",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "Location",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "Location",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Location",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "toLocationSymbol",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "locationValue",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "discriminant" : {
+              "name" : "locationValue",
+              "type" : "Identifier"
+            },
+            "cases" : [ {
+              "test" : {
+                "object" : {
+                  "name" : "Location",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "EXTERIOR",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "value" : "'e'",
+                  "raw" : "'e'",
+                  "type" : "Literal"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "object" : {
+                  "name" : "Location",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "BOUNDARY",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "value" : "'b'",
+                  "raw" : "'b'",
+                  "type" : "Literal"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "object" : {
+                  "name" : "Location",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "INTERIOR",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "value" : "'i'",
+                  "raw" : "'i'",
+                  "type" : "Literal"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            }, {
+              "test" : {
+                "object" : {
+                  "name" : "Location",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "NONE",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "consequent" : [ {
+                "argument" : {
+                  "value" : "'-'",
+                  "raw" : "'-'",
+                  "type" : "Literal"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "SwitchCase"
+            } ],
+            "type" : "SwitchStatement"
+          }, {
+            "argument" : {
+              "callee" : {
+                "name" : "IllegalArgumentException",
+                "type" : "Identifier"
+              },
+              "arguments" : [ {
+                "operator" : "+",
+                "left" : {
+                  "value" : "Unknown location value: ",
+                  "raw" : "\"Unknown location value: \"",
+                  "type" : "Literal"
+                },
+                "right" : {
+                  "name" : "locationValue",
+                  "type" : "Identifier"
+                },
+                "type" : "BinaryExpression"
+              } ],
+              "type" : "NewExpression"
+            },
+            "type" : "ThrowStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Location",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "INTERIOR",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "0",
+        "raw" : "0",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Location",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "BOUNDARY",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "1",
+        "raw" : "1",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Location",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "EXTERIOR",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "2",
+        "raw" : "2",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Location",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "NONE",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "operator" : "-",
+        "prefix" : true,
+        "argument" : {
+          "value" : "1",
+          "raw" : "1",
+          "type" : "Literal"
+        },
+        "type" : "UnaryExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

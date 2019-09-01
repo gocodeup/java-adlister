@@ -1,0 +1,1136 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../extend'",
+      "raw" : "'../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "Memory",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "Memory",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "Memory",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Memory",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "used",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "runtime",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "Runtime",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "getRuntime",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "argument" : {
+              "operator" : "-",
+              "left" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "runtime",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "totalMemory",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ ],
+                "type" : "CallExpression"
+              },
+              "right" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "runtime",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "freeMemory",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ ],
+                "type" : "CallExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Memory",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "format",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "mem",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "mem",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "operator" : "*",
+                "left" : {
+                  "value" : "2",
+                  "raw" : "2",
+                  "type" : "Literal"
+                },
+                "right" : {
+                  "object" : {
+                    "name" : "Memory",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "KB",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "operator" : "+",
+                "left" : {
+                  "name" : "mem",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "value" : " bytes",
+                  "raw" : "\" bytes\"",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "mem",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "operator" : "*",
+                "left" : {
+                  "value" : "2",
+                  "raw" : "2",
+                  "type" : "Literal"
+                },
+                "right" : {
+                  "object" : {
+                    "name" : "Memory",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "MB",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "operator" : "+",
+                "left" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "Memory",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "round",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "operator" : "/",
+                    "left" : {
+                      "name" : "mem",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "object" : {
+                        "name" : "Memory",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "KB",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "right" : {
+                  "value" : " KB",
+                  "raw" : "\" KB\"",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "test" : {
+              "operator" : "<",
+              "left" : {
+                "name" : "mem",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "operator" : "*",
+                "left" : {
+                  "value" : "2",
+                  "raw" : "2",
+                  "type" : "Literal"
+                },
+                "right" : {
+                  "object" : {
+                    "name" : "Memory",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "GB",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "operator" : "+",
+                "left" : {
+                  "callee" : {
+                    "object" : {
+                      "name" : "Memory",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "round",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "arguments" : [ {
+                    "operator" : "/",
+                    "left" : {
+                      "name" : "mem",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "object" : {
+                        "name" : "Memory",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "MB",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  } ],
+                  "type" : "CallExpression"
+                },
+                "right" : {
+                  "value" : " MB",
+                  "raw" : "\" MB\"",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "argument" : {
+              "operator" : "+",
+              "left" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "Memory",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "round",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "operator" : "/",
+                  "left" : {
+                    "name" : "mem",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "object" : {
+                      "name" : "Memory",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "name" : "GB",
+                      "type" : "Identifier"
+                    },
+                    "computed" : false,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "BinaryExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "right" : {
+                "value" : " GB",
+                "raw" : "\" GB\"",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Memory",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "freeString",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ ],
+        "body" : {
+          "body" : [ {
+            "argument" : {
+              "callee" : {
+                "object" : {
+                  "name" : "Memory",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "format",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "callee" : {
+                  "object" : {
+                    "name" : "Memory",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "free",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ ],
+                "type" : "CallExpression"
+              } ],
+              "type" : "CallExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Memory",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "total",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "runtime",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "Runtime",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "getRuntime",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "argument" : {
+              "callee" : {
+                "object" : {
+                  "name" : "runtime",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "totalMemory",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ ],
+              "type" : "CallExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Memory",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "usedTotalString",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ ],
+        "body" : {
+          "body" : [ {
+            "argument" : {
+              "operator" : "+",
+              "left" : {
+                "operator" : "+",
+                "left" : {
+                  "operator" : "+",
+                  "left" : {
+                    "value" : "Used: ",
+                    "raw" : "\"Used: \"",
+                    "type" : "Literal"
+                  },
+                  "right" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "Memory",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "usedString",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "value" : "   Total: ",
+                  "raw" : "\"   Total: \"",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "right" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "Memory",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "totalString",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ ],
+                "type" : "CallExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Memory",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "usedString",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ ],
+        "body" : {
+          "body" : [ {
+            "argument" : {
+              "callee" : {
+                "object" : {
+                  "name" : "Memory",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "format",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "callee" : {
+                  "object" : {
+                    "name" : "Memory",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "used",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ ],
+                "type" : "CallExpression"
+              } ],
+              "type" : "CallExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Memory",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "allString",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ ],
+        "body" : {
+          "body" : [ {
+            "argument" : {
+              "operator" : "+",
+              "left" : {
+                "operator" : "+",
+                "left" : {
+                  "operator" : "+",
+                  "left" : {
+                    "operator" : "+",
+                    "left" : {
+                      "operator" : "+",
+                      "left" : {
+                        "value" : "Used: ",
+                        "raw" : "\"Used: \"",
+                        "type" : "Literal"
+                      },
+                      "right" : {
+                        "callee" : {
+                          "object" : {
+                            "name" : "Memory",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "usedString",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "arguments" : [ ],
+                        "type" : "CallExpression"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "right" : {
+                      "value" : "   Free: ",
+                      "raw" : "\"   Free: \"",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "right" : {
+                    "callee" : {
+                      "object" : {
+                        "name" : "Memory",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "freeString",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "arguments" : [ ],
+                    "type" : "CallExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "value" : "   Total: ",
+                  "raw" : "\"   Total: \"",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "right" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "Memory",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "totalString",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ ],
+                "type" : "CallExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Memory",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "round",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "d",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "argument" : {
+              "operator" : "/",
+              "left" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "Math",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "ceil",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ {
+                  "operator" : "*",
+                  "left" : {
+                    "name" : "d",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : "100",
+                    "raw" : "100",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                } ],
+                "type" : "CallExpression"
+              },
+              "right" : {
+                "value" : "100",
+                "raw" : "100",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Memory",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "totalString",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ ],
+        "body" : {
+          "body" : [ {
+            "argument" : {
+              "callee" : {
+                "object" : {
+                  "name" : "Memory",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "format",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ {
+                "callee" : {
+                  "object" : {
+                    "name" : "Memory",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "total",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ ],
+                "type" : "CallExpression"
+              } ],
+              "type" : "CallExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Memory",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "free",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ ],
+        "body" : {
+          "body" : [ {
+            "declarations" : [ {
+              "id" : {
+                "name" : "runtime",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "callee" : {
+                  "object" : {
+                    "name" : "Runtime",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "getRuntime",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "arguments" : [ ],
+                "type" : "CallExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "argument" : {
+              "callee" : {
+                "object" : {
+                  "name" : "runtime",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "freeMemory",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "arguments" : [ ],
+              "type" : "CallExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Memory",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "KB",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "1024",
+        "raw" : "1024",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Memory",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "MB",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "1048576",
+        "raw" : "1048576",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Memory",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "GB",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "1073741824",
+        "raw" : "1073741824",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}

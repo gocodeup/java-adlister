@@ -30,7 +30,7 @@ public class CreateAdServlet extends HttpServlet {
         String title = request.getParameter("title");
         String description = request.getParameter("description");
         Integer blockId = (Integer) Integer.parseInt(request.getParameter("block") );
-        Integer categoryId = (Integer) Integer.parseInt(request.getParameter("category"));
+//        Integer categoryId = (Integer) Integer.parseInt(request.getParameter("category"));
 
         Ad ad = new Ad( user.getId(), title,  description,  blockId);
 

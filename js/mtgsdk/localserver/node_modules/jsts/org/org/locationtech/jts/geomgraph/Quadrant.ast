@@ -1,0 +1,1481 @@
+{
+  "sourceType" : "module",
+  "body" : [ {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "Coordinate",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../geom/Coordinate'",
+      "raw" : "'../geom/Coordinate'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "IllegalArgumentException",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../java/lang/IllegalArgumentException'",
+      "raw" : "'../../../../java/lang/IllegalArgumentException'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "specifiers" : [ {
+      "local" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "type" : "ImportDefaultSpecifier"
+    } ],
+    "source" : {
+      "value" : "'../../../../extend'",
+      "raw" : "'../../../../extend'",
+      "type" : "Literal"
+    },
+    "type" : "ImportDeclaration"
+  }, {
+    "declaration" : {
+      "id" : {
+        "name" : "Quadrant",
+        "type" : "Identifier"
+      },
+      "params" : [ ],
+      "body" : {
+        "body" : [ ],
+        "type" : "BlockStatement"
+      },
+      "generator" : false,
+      "type" : "FunctionDeclaration"
+    },
+    "type" : "ExportDefaultDeclaration"
+  }, {
+    "expression" : {
+      "callee" : {
+        "name" : "extend",
+        "type" : "Identifier"
+      },
+      "arguments" : [ {
+        "object" : {
+          "name" : "Quadrant",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "prototype",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      }, {
+        "properties" : [ {
+          "key" : {
+            "name" : "interfaces_",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "elements" : [ ],
+                  "type" : "ArrayExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        }, {
+          "key" : {
+            "name" : "getClass",
+            "type" : "Identifier"
+          },
+          "value" : {
+            "params" : [ ],
+            "body" : {
+              "body" : [ {
+                "argument" : {
+                  "name" : "Quadrant",
+                  "type" : "Identifier"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "generator" : false,
+            "type" : "FunctionExpression"
+          },
+          "kind" : "init",
+          "computed" : false,
+          "method" : false,
+          "shorthand" : false,
+          "type" : "Property"
+        } ],
+        "type" : "ObjectExpression"
+      } ],
+      "type" : "CallExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Quadrant",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "isNorthern",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "quad",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "argument" : {
+              "operator" : "||",
+              "left" : {
+                "operator" : "===",
+                "left" : {
+                  "name" : "quad",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "object" : {
+                    "name" : "Quadrant",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "NE",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "right" : {
+                "operator" : "===",
+                "left" : {
+                  "name" : "quad",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "object" : {
+                    "name" : "Quadrant",
+                    "type" : "Identifier"
+                  },
+                  "property" : {
+                    "name" : "NW",
+                    "type" : "Identifier"
+                  },
+                  "computed" : false,
+                  "type" : "MemberExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Quadrant",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "isOpposite",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "quad1",
+          "type" : "Identifier"
+        }, {
+          "name" : "quad2",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "test" : {
+              "operator" : "===",
+              "left" : {
+                "name" : "quad1",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "name" : "quad2",
+                "type" : "Identifier"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "value" : false,
+                "raw" : "false",
+                "type" : "Literal"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "diff",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "%",
+                "left" : {
+                  "operator" : "+",
+                  "left" : {
+                    "operator" : "-",
+                    "left" : {
+                      "name" : "quad1",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "quad2",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "right" : {
+                    "value" : "4",
+                    "raw" : "4",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "value" : "4",
+                  "raw" : "4",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "test" : {
+              "operator" : "===",
+              "left" : {
+                "name" : "diff",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "value" : "2",
+                "raw" : "2",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "value" : true,
+                "raw" : "true",
+                "type" : "Literal"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "argument" : {
+              "value" : false,
+              "raw" : "false",
+              "type" : "Literal"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Quadrant",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "commonHalfPlane",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "quad1",
+          "type" : "Identifier"
+        }, {
+          "name" : "quad2",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "test" : {
+              "operator" : "===",
+              "left" : {
+                "name" : "quad1",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "name" : "quad2",
+                "type" : "Identifier"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "name" : "quad1",
+                "type" : "Identifier"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "diff",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "operator" : "%",
+                "left" : {
+                  "operator" : "+",
+                  "left" : {
+                    "operator" : "-",
+                    "left" : {
+                      "name" : "quad1",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "name" : "quad2",
+                      "type" : "Identifier"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "right" : {
+                    "value" : "4",
+                    "raw" : "4",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "value" : "4",
+                  "raw" : "4",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "test" : {
+              "operator" : "===",
+              "left" : {
+                "name" : "diff",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "value" : "2",
+                "raw" : "2",
+                "type" : "Literal"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "operator" : "-",
+                "prefix" : true,
+                "argument" : {
+                  "value" : "1",
+                  "raw" : "1",
+                  "type" : "Literal"
+                },
+                "type" : "UnaryExpression"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "min",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "test" : {
+                  "operator" : "<",
+                  "left" : {
+                    "name" : "quad1",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "quad2",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "alternate" : {
+                  "name" : "quad2",
+                  "type" : "Identifier"
+                },
+                "consequent" : {
+                  "name" : "quad1",
+                  "type" : "Identifier"
+                },
+                "type" : "ConditionalExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "declarations" : [ {
+              "id" : {
+                "name" : "max",
+                "type" : "Identifier"
+              },
+              "init" : {
+                "test" : {
+                  "operator" : ">",
+                  "left" : {
+                    "name" : "quad1",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "name" : "quad2",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "alternate" : {
+                  "name" : "quad2",
+                  "type" : "Identifier"
+                },
+                "consequent" : {
+                  "name" : "quad1",
+                  "type" : "Identifier"
+                },
+                "type" : "ConditionalExpression"
+              },
+              "type" : "VariableDeclarator"
+            } ],
+            "kind" : "var",
+            "type" : "VariableDeclaration"
+          }, {
+            "test" : {
+              "operator" : "&&",
+              "left" : {
+                "operator" : "===",
+                "left" : {
+                  "name" : "min",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "value" : "0",
+                  "raw" : "0",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "right" : {
+                "operator" : "===",
+                "left" : {
+                  "name" : "max",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "value" : "3",
+                  "raw" : "3",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "argument" : {
+                "value" : "3",
+                "raw" : "3",
+                "type" : "Literal"
+              },
+              "type" : "ReturnStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "argument" : {
+              "name" : "min",
+              "type" : "Identifier"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Quadrant",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "isInHalfPlane",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ {
+          "name" : "quad",
+          "type" : "Identifier"
+        }, {
+          "name" : "halfPlane",
+          "type" : "Identifier"
+        } ],
+        "body" : {
+          "body" : [ {
+            "test" : {
+              "operator" : "===",
+              "left" : {
+                "name" : "halfPlane",
+                "type" : "Identifier"
+              },
+              "right" : {
+                "object" : {
+                  "name" : "Quadrant",
+                  "type" : "Identifier"
+                },
+                "property" : {
+                  "name" : "SE",
+                  "type" : "Identifier"
+                },
+                "computed" : false,
+                "type" : "MemberExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "consequent" : {
+              "body" : [ {
+                "argument" : {
+                  "operator" : "||",
+                  "left" : {
+                    "operator" : "===",
+                    "left" : {
+                      "name" : "quad",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "object" : {
+                        "name" : "Quadrant",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "SE",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "right" : {
+                    "operator" : "===",
+                    "left" : {
+                      "name" : "quad",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "object" : {
+                        "name" : "Quadrant",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "SW",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "type" : "ReturnStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "alternate" : null,
+            "type" : "IfStatement"
+          }, {
+            "argument" : {
+              "operator" : "||",
+              "left" : {
+                "operator" : "===",
+                "left" : {
+                  "name" : "quad",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "name" : "halfPlane",
+                  "type" : "Identifier"
+                },
+                "type" : "BinaryExpression"
+              },
+              "right" : {
+                "operator" : "===",
+                "left" : {
+                  "name" : "quad",
+                  "type" : "Identifier"
+                },
+                "right" : {
+                  "operator" : "+",
+                  "left" : {
+                    "name" : "halfPlane",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : "1",
+                    "raw" : "1",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "BinaryExpression"
+            },
+            "type" : "ReturnStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Quadrant",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "quadrant",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "params" : [ ],
+        "body" : {
+          "body" : [ {
+            "test" : {
+              "operator" : "&&",
+              "left" : {
+                "operator" : "===",
+                "left" : {
+                  "operator" : "typeof",
+                  "prefix" : true,
+                  "argument" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 0,
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "UnaryExpression"
+                },
+                "right" : {
+                  "value" : "number",
+                  "raw" : "\"number\"",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "right" : {
+                "operator" : "===",
+                "left" : {
+                  "operator" : "typeof",
+                  "prefix" : true,
+                  "argument" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 1,
+                      "raw" : "1",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "UnaryExpression"
+                },
+                "right" : {
+                  "value" : "number",
+                  "raw" : "\"number\"",
+                  "type" : "Literal"
+                },
+                "type" : "BinaryExpression"
+              },
+              "type" : "LogicalExpression"
+            },
+            "consequent" : {
+              "body" : [ {
+                "declarations" : [ {
+                  "id" : {
+                    "name" : "dx",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 0,
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                }, {
+                  "id" : {
+                    "name" : "dy",
+                    "type" : "Identifier"
+                  },
+                  "init" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 1,
+                      "raw" : "1",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "type" : "VariableDeclarator"
+                } ],
+                "kind" : "let",
+                "type" : "VariableDeclaration"
+              }, {
+                "test" : {
+                  "operator" : "&&",
+                  "left" : {
+                    "operator" : "===",
+                    "left" : {
+                      "name" : "dx",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "value" : "0.0",
+                      "raw" : "0.0",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "right" : {
+                    "operator" : "===",
+                    "left" : {
+                      "name" : "dy",
+                      "type" : "Identifier"
+                    },
+                    "right" : {
+                      "value" : "0.0",
+                      "raw" : "0.0",
+                      "type" : "Literal"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "argument" : {
+                    "callee" : {
+                      "name" : "IllegalArgumentException",
+                      "type" : "Identifier"
+                    },
+                    "arguments" : [ {
+                      "operator" : "+",
+                      "left" : {
+                        "operator" : "+",
+                        "left" : {
+                          "operator" : "+",
+                          "left" : {
+                            "operator" : "+",
+                            "left" : {
+                              "value" : "Cannot compute the quadrant for point ( ",
+                              "raw" : "\"Cannot compute the quadrant for point ( \"",
+                              "type" : "Literal"
+                            },
+                            "right" : {
+                              "name" : "dx",
+                              "type" : "Identifier"
+                            },
+                            "type" : "BinaryExpression"
+                          },
+                          "right" : {
+                            "value" : ", ",
+                            "raw" : "\", \"",
+                            "type" : "Literal"
+                          },
+                          "type" : "BinaryExpression"
+                        },
+                        "right" : {
+                          "name" : "dy",
+                          "type" : "Identifier"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "right" : {
+                        "value" : " )",
+                        "raw" : "\" )\"",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    } ],
+                    "type" : "NewExpression"
+                  },
+                  "type" : "ThrowStatement"
+                },
+                "alternate" : null,
+                "type" : "IfStatement"
+              }, {
+                "test" : {
+                  "operator" : ">=",
+                  "left" : {
+                    "name" : "dx",
+                    "type" : "Identifier"
+                  },
+                  "right" : {
+                    "value" : "0.0",
+                    "raw" : "0.0",
+                    "type" : "Literal"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "consequent" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : ">=",
+                      "left" : {
+                        "name" : "dy",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "value" : "0.0",
+                        "raw" : "0.0",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "argument" : {
+                        "object" : {
+                          "name" : "Quadrant",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "NE",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "type" : "ReturnStatement"
+                    },
+                    "alternate" : {
+                      "argument" : {
+                        "object" : {
+                          "name" : "Quadrant",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "SE",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "type" : "ReturnStatement"
+                    },
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "alternate" : {
+                  "body" : [ {
+                    "test" : {
+                      "operator" : ">=",
+                      "left" : {
+                        "name" : "dy",
+                        "type" : "Identifier"
+                      },
+                      "right" : {
+                        "value" : "0.0",
+                        "raw" : "0.0",
+                        "type" : "Literal"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "consequent" : {
+                      "argument" : {
+                        "object" : {
+                          "name" : "Quadrant",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "NW",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "type" : "ReturnStatement"
+                    },
+                    "alternate" : {
+                      "argument" : {
+                        "object" : {
+                          "name" : "Quadrant",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "SW",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "type" : "ReturnStatement"
+                    },
+                    "type" : "IfStatement"
+                  } ],
+                  "type" : "BlockStatement"
+                },
+                "type" : "IfStatement"
+              } ],
+              "type" : "BlockStatement"
+            },
+            "alternate" : {
+              "test" : {
+                "operator" : "&&",
+                "left" : {
+                  "operator" : "instanceof",
+                  "left" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 0,
+                      "raw" : "0",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "name" : "Coordinate",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "right" : {
+                  "operator" : "instanceof",
+                  "left" : {
+                    "object" : {
+                      "name" : "arguments",
+                      "type" : "Identifier"
+                    },
+                    "property" : {
+                      "value" : 1,
+                      "raw" : "1",
+                      "type" : "Literal"
+                    },
+                    "computed" : true,
+                    "type" : "MemberExpression"
+                  },
+                  "right" : {
+                    "name" : "Coordinate",
+                    "type" : "Identifier"
+                  },
+                  "type" : "BinaryExpression"
+                },
+                "type" : "LogicalExpression"
+              },
+              "consequent" : {
+                "body" : [ {
+                  "declarations" : [ {
+                    "id" : {
+                      "name" : "p0",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 0,
+                        "raw" : "0",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  }, {
+                    "id" : {
+                      "name" : "p1",
+                      "type" : "Identifier"
+                    },
+                    "init" : {
+                      "object" : {
+                        "name" : "arguments",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "value" : 1,
+                        "raw" : "1",
+                        "type" : "Literal"
+                      },
+                      "computed" : true,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "VariableDeclarator"
+                  } ],
+                  "kind" : "let",
+                  "type" : "VariableDeclaration"
+                }, {
+                  "test" : {
+                    "operator" : "&&",
+                    "left" : {
+                      "operator" : "===",
+                      "left" : {
+                        "object" : {
+                          "name" : "p1",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "x",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "right" : {
+                        "object" : {
+                          "name" : "p0",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "x",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "right" : {
+                      "operator" : "===",
+                      "left" : {
+                        "object" : {
+                          "name" : "p1",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "y",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "right" : {
+                        "object" : {
+                          "name" : "p0",
+                          "type" : "Identifier"
+                        },
+                        "property" : {
+                          "name" : "y",
+                          "type" : "Identifier"
+                        },
+                        "computed" : false,
+                        "type" : "MemberExpression"
+                      },
+                      "type" : "BinaryExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "argument" : {
+                      "callee" : {
+                        "name" : "IllegalArgumentException",
+                        "type" : "Identifier"
+                      },
+                      "arguments" : [ {
+                        "operator" : "+",
+                        "left" : {
+                          "value" : "Cannot compute the quadrant for two identical points ",
+                          "raw" : "\"Cannot compute the quadrant for two identical points \"",
+                          "type" : "Literal"
+                        },
+                        "right" : {
+                          "name" : "p0",
+                          "type" : "Identifier"
+                        },
+                        "type" : "BinaryExpression"
+                      } ],
+                      "type" : "NewExpression"
+                    },
+                    "type" : "ThrowStatement"
+                  },
+                  "alternate" : null,
+                  "type" : "IfStatement"
+                }, {
+                  "test" : {
+                    "operator" : ">=",
+                    "left" : {
+                      "object" : {
+                        "name" : "p1",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "x",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "right" : {
+                      "object" : {
+                        "name" : "p0",
+                        "type" : "Identifier"
+                      },
+                      "property" : {
+                        "name" : "x",
+                        "type" : "Identifier"
+                      },
+                      "computed" : false,
+                      "type" : "MemberExpression"
+                    },
+                    "type" : "BinaryExpression"
+                  },
+                  "consequent" : {
+                    "body" : [ {
+                      "test" : {
+                        "operator" : ">=",
+                        "left" : {
+                          "object" : {
+                            "name" : "p1",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "y",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "right" : {
+                          "object" : {
+                            "name" : "p0",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "y",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "consequent" : {
+                        "argument" : {
+                          "object" : {
+                            "name" : "Quadrant",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "NE",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "ReturnStatement"
+                      },
+                      "alternate" : {
+                        "argument" : {
+                          "object" : {
+                            "name" : "Quadrant",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "SE",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "ReturnStatement"
+                      },
+                      "type" : "IfStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "alternate" : {
+                    "body" : [ {
+                      "test" : {
+                        "operator" : ">=",
+                        "left" : {
+                          "object" : {
+                            "name" : "p1",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "y",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "right" : {
+                          "object" : {
+                            "name" : "p0",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "y",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "BinaryExpression"
+                      },
+                      "consequent" : {
+                        "argument" : {
+                          "object" : {
+                            "name" : "Quadrant",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "NW",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "ReturnStatement"
+                      },
+                      "alternate" : {
+                        "argument" : {
+                          "object" : {
+                            "name" : "Quadrant",
+                            "type" : "Identifier"
+                          },
+                          "property" : {
+                            "name" : "SW",
+                            "type" : "Identifier"
+                          },
+                          "computed" : false,
+                          "type" : "MemberExpression"
+                        },
+                        "type" : "ReturnStatement"
+                      },
+                      "type" : "IfStatement"
+                    } ],
+                    "type" : "BlockStatement"
+                  },
+                  "type" : "IfStatement"
+                } ],
+                "type" : "BlockStatement"
+              },
+              "alternate" : null,
+              "type" : "IfStatement"
+            },
+            "type" : "IfStatement"
+          } ],
+          "type" : "BlockStatement"
+        },
+        "generator" : false,
+        "type" : "FunctionExpression"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Quadrant",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "NE",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "0",
+        "raw" : "0",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Quadrant",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "NW",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "1",
+        "raw" : "1",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Quadrant",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "SW",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "2",
+        "raw" : "2",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  }, {
+    "expression" : {
+      "operator" : "=",
+      "left" : {
+        "object" : {
+          "name" : "Quadrant",
+          "type" : "Identifier"
+        },
+        "property" : {
+          "name" : "SE",
+          "type" : "Identifier"
+        },
+        "computed" : false,
+        "type" : "MemberExpression"
+      },
+      "right" : {
+        "value" : "3",
+        "raw" : "3",
+        "type" : "Literal"
+      },
+      "type" : "AssignmentExpression"
+    },
+    "type" : "ExpressionStatement"
+  } ],
+  "type" : "Program"
+}
