@@ -43,7 +43,7 @@ public class LoginServlet extends HttpServlet {
         if (validAttempt) {
             request.getSession().setAttribute("user", user);
 
-            if (lurker != null && lurker == "") {
+            if (lurker != null && request.getParameter("from") == "/ ") {
                 response.sendRedirect("/profile");
                 return;
             }
