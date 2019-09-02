@@ -87,6 +87,7 @@ public class UpdateProfileServlet extends HttpServlet {
 //
 //            DaoFactory.getUsersDao().updateUserInfo(oldUsername);
 
+//        DaoFactory.getUsersDao().deleteUserByUsername(oldEmail);
             User user = new User( sessionUser.getId(), username, email, newPassword);
 
 //            if (! DaoFactory.getUsersDao().findByUsername(username).getUsername().equalsIgnoreCase(oldUsername)) {
@@ -103,7 +104,6 @@ public class UpdateProfileServlet extends HttpServlet {
 //            }
 
 
-            request.getSession().removeAttribute("user");
             request.getSession().setAttribute("user", user);
 
 
@@ -113,3 +113,5 @@ public class UpdateProfileServlet extends HttpServlet {
     }
 
 }
+
+//FIX UPDATE

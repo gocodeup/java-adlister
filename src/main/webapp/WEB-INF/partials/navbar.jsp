@@ -14,6 +14,9 @@
             <li><a href="/register">Register</a></li>
             <li ><a name="from" href="/login?from=${pageContext.request.requestURI}">Login</a></li>
         </c:if>
+            <c:if test="${sessionScope.user != null}">
+                <li><a href="/profile">Profile</a></li>
+            </c:if>
         <c:if test="${sessionScope.user != null}">
             <a class="navbar-brand" href="/update">Update Profile</a>
             <li><a href="/logout">Logout</a></li>

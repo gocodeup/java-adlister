@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
 //        String lurker = request.getParameter("from");
         User user = DaoFactory.getUsersDao().findByUsername(username);
         Cookie[] cookies = request.getCookies();
-        String lurker = request.getParameter("from").replace("/WEB-INF", "").replace("/index.jsp", "").replace(".jsp", "");
+        String lurker = request.getParameter("from").replace("/WEB-INF", "").replace("/index", "").replace(".jsp", "");
 
         if (username == null) {
             username = "";
@@ -50,18 +50,22 @@ public class LoginServlet extends HttpServlet {
 
         if (validAttempt) {
             request.getSession().setAttribute("user", user);
-                response.sendRedirect("/profile");
 
-//            if (lurker != null) {
-//                response.sendRedirect(lurker);
-//                return;
-//            }
-//            if (lurker == null) {
-//                response.sendRedirect("/profile");
-//                return;
-//            } else {
-//                response.sendRedirect("/login");
-//            }
+            if (lurker != null && lurker == "") {
+                response.sendRedirect("/profile");
+                return;
+            }
+            if (lurker != null) {
+                response.sendRedirect(lurker);
+                return;
+            }
+            if (lurker == null) {
+                response.sendRedirect("/profile");
+                return;
+            }
+            else {
+                response.sendRedirect("/login");
+            }
         }
     }
 }
