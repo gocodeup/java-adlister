@@ -45,10 +45,7 @@ public class MySQLAdsDao implements Ads, UserAds {
             throw new RuntimeException("Error retrieving user ads.", e);
         }
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin
     private List<Ad> createUserAdsFromResults(ResultSet rs) throws SQLException {
         List<Ad> userAds = new ArrayList<>();
         while (rs.next()) {

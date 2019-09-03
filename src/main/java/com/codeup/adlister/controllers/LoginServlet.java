@@ -22,47 +22,41 @@ public class LoginServlet extends HttpServlet {
             return;
         }
         if (request.getSession().getAttribute("user") == null) {
+            request.getRequestDispatcher("WEB-INF/login.jsp").forward(request, response);
         }
     }
-        protected void doPost (HttpServletRequest request, HttpServletResponse response) throws IOException {
-            String username = request.getParameter("username");
-            String password = request.getParameter("password");
-//        String lurker = request.getParameter("from");
-            User user = DaoFactory.getUsersDao().findByUsername(username);
-            Cookie[] cookies = request.getCookies();
-            String lurker = request.getParameter("from").replace("/WEB-INF", "").replace("/index", "").replace(".jsp", "");
 
-            if (username == null) {
-                username = "";
-            } else {
-                request.getSession().setAttribute("username", username);
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        User user = DaoFactory.getUsersDao().findByUsername(username);
+        String lurker = request.getParameter("from");
+
+        if (username == null) {
+            request.getSession().setAttribute("username", "");
+        } else {
+            request.getSession().setAttribute("username", username);
+
+            boolean validAttempt = Password.check(password, user.getPassword());
+            if (validAttempt && lurker.equals("/")) {
+                request.getSession().setAttribute("user", user);
+                response.sendRedirect("/profile");
+                return;
             }
-
-            if (user == null) {
-                request.getSession().setAttribute("error", "Invalid Username or Password");
+            if (validAttempt && lurker.equals(null)) {
+                request.getSession().setAttribute("user", user);
+                response.sendRedirect("/ads");
+                return;
+            }
+            if (validAttempt && !lurker.equals("")) {
+                request.getSession().setAttribute("user", user);
+                response.sendRedirect(lurker.replace("/WEB-INF", "").replace("/index", "").replace(".jsp", ""));
+                return;
+            }
+            if (!validAttempt) {
                 response.sendRedirect("/login");
                 return;
             }
-
-            boolean validAttempt = Password.check(password, user.getPassword());
-
-            if (validAttempt) {
-                request.getSession().setAttribute("user", user);
-
-                if (lurker != null && request.getParameter("from") == "/") {
-                    response.sendRedirect("/profile");
-                    return;
-                }
-                if (lurker != null) {
-                    response.sendRedirect(lurker);
-                    return;
-                }
-                if (lurker == null) {
-                    response.sendRedirect("/profile");
-                    return;
-                } else {
-                    response.sendRedirect("/login");
-                }
-            }
         }
     }
+}

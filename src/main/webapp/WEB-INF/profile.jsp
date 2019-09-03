@@ -6,8 +6,6 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Your Profile" />
     </jsp:include>
-<%--    <link href="https://api.magicthegathering.io/v1/cards">--%>
-<%--    <script language="JavaScript" src="js/mtg-require.js"></script>--%>
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
@@ -22,9 +20,6 @@
                         <h1>${ad.title}</h1>
                         <p>${ad.description}</p>
                         <hr>
-                        <script>
-                            card
-                        </script>
                     </div>
                 </div>
             </c:forEach>
