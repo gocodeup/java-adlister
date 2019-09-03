@@ -54,7 +54,7 @@ public class LoginServlet extends HttpServlet {
                 response.sendRedirect("/profile");
                 return;
             }
-            if (lurker != null) {
+            if (lurker != null && request.getParameter("from") != null) {
                 response.sendRedirect(lurker);
                 return;
             }

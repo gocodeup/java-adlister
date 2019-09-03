@@ -32,7 +32,7 @@ public class CreateAdServlet extends HttpServlet {
         String description = request.getParameter("description");
         Integer blockId = (Integer) Integer.parseInt(request.getParameter("block") );
         String block = request.getParameter("block");
-        Integer categoryId = (Integer) Integer.parseInt(request.getParameter("category"));
+        int categoryId = Integer.parseInt(request.getParameter("category"));
 
         Ad ad = new Ad(user.getId(), title,  description,  blockId);
 
@@ -47,10 +47,18 @@ public class CreateAdServlet extends HttpServlet {
         }else{
             request.getSession().setAttribute("description", description);
         }
-
-
         DaoFactory.getAdsDao().insert(ad);
-//        DaoFactory.getAdsDao().insertCat(newId, categoryId);
+        List<Ad> adsHere = DaoFactory.getAdsDao().userAds(user.getId());
+        long newId = 0;
+
+        for (Ad adHere : adsHere) {
+            if (adHere.getTitle().equalsIgnoreCase(title)){
+                newId = adHere.getId();
+            }
+        }
+        System.out.println("newId = " + newId);
+        System.out.println("categoryId = " + categoryId);
+        DaoFactory.getAdsDao().insertCat(newId, categoryId);
         response.sendRedirect("/ads");
     }
 

@@ -8,11 +8,11 @@
     </jsp:include>
 </head>
 <body>
-<c:choose>
-    <c:when test="${sessionScope.user == null}">
+<%--<c:choose>--%>
+<%--    <c:when test="${sessionScope.user == null}">--%>
         <%@ include file="/WEB-INF/partials/navbar.jsp" %>
-    </c:when>
-</c:choose>
+<%--    </c:when>--%>
+<%--</c:choose>--%>
  <div class="container">
         <h1>Welcome to the Adlister!</h1>
     </div>
