@@ -27,9 +27,8 @@
                     <div class="col-md-6">
                         <h2>${ad.title}</h2>
                         <p>${ad.description}</p>
-                        <h3>${ad.date}</h3>
-                        <h4>${ad.category}</h4>
                         <h4>${ad.block}</h4>
+                        <h3>Date: ${ad.date}, Ad ID: ${ad.id}</h3>
                     </div>
                 </c:if>
             </c:forEach>
@@ -41,9 +40,8 @@
                 <div class="col-md-6">
                     <h2>${ad.title}</h2>
                     <p>${ad.description}</p>
-                    <h3>${ad.date}</h3>
-<%--                    <h4>${ad.category}</h4>--%>
-                    <h4>${ad.blocksId}</h4>
+                    <h4>${ad.block}</h4>
+                    <h3>Date: ${ad.date}, Ad ID: ${ad.id}</h3>
                 </div>
             </c:forEach>
 
