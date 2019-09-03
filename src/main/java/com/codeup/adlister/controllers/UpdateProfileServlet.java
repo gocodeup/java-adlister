@@ -2,6 +2,7 @@ package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.User;
+import org.mindrot.jbcrypt.BCrypt;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -88,7 +89,7 @@ public class UpdateProfileServlet extends HttpServlet {
 //            DaoFactory.getUsersDao().updateUserInfo(oldUsername);
 
 //        DaoFactory.getUsersDao().deleteUserByUsername(oldEmail);
-            User user = new User( sessionUser.getId(), username, email, newPassword);
+            User user = new User(sessionUser.getId(), username, email, BCrypt.hashpw(newPassword, BCrypt.gensalt()));
 
 //            if (! DaoFactory.getUsersDao().findByUsername(username).getUsername().equalsIgnoreCase(oldUsername)) {
 //                request.getSession().setAttribute("error", "Username Already Exists, Please Try Again");

@@ -62,10 +62,12 @@ public class LoginServlet extends HttpServlet {
             if (lurker == null) {
                 response.sendRedirect("/profile");
                 return;
-            }
-            else {
+            } else {
                 response.sendRedirect("/login");
             }
+        } else {
+            response.sendRedirect("/login");
+
         }
     }
 }
