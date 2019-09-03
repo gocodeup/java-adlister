@@ -38,22 +38,23 @@ public class LoginServlet extends HttpServlet {
             request.getSession().setAttribute("username", username);
 
             boolean validAttempt = Password.check(password, user.getPassword());
-            if (validAttempt && lurker.equals("/")) {
+            if (validAttempt) {
                 request.getSession().setAttribute("user", user);
-                response.sendRedirect("/profile");
-                return;
-            }
-            if (validAttempt && lurker.equals(null)) {
-                request.getSession().setAttribute("user", user);
-                response.sendRedirect("/ads");
-                return;
-            }
-            if (validAttempt && !lurker.equals("")) {
-                request.getSession().setAttribute("user", user);
-                response.sendRedirect(lurker.replace("/WEB-INF", "").replace("/index", "").replace(".jsp", ""));
-                return;
-            } else {
-                response.sendRedirect("/login");
+
+                if (lurker != null && lurker == "") {
+                    response.sendRedirect("/profile");
+                    return;
+                }
+                if (lurker != null) {
+                    response.sendRedirect(lurker);
+                    return;
+                }
+                if (lurker == null) {
+                    response.sendRedirect("/profile");
+                    return;
+                } else {
+                    response.sendRedirect("/login");
+                }
             }
         }
     }
