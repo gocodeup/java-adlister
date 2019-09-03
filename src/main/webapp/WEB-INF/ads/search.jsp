@@ -23,7 +23,7 @@
     <c:choose>
         <c:when test="${param.search != null}">
             <c:forEach var="ad" items="${ads}">
-                <c:if test="${fn:containsIgnoreCase(ad.title, param.search) || fn:containsIgnoreCase(ad.description, param.search)}">
+                <c:if test="${fn:containsIgnoreCase(ad.title, param.search) || fn:containsIgnoreCase(ad.description, param.search)|| fn:containsIgnoreCase(ad.block, param.search)|| fn:containsIgnoreCase(ad.date, param.search)|| fn:containsIgnoreCase(ad.id, param.search)}">
                     <div class="col-md-6">
                         <h2>${ad.title}</h2>
                         <p>Description: ${ad.description}</p>
