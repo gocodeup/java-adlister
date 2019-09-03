@@ -30,7 +30,6 @@
                     </div>
                 </c:if>
             </c:forEach>
-
         </c:when>
         <c:otherwise>
             <p>${param.search}</p>
@@ -40,11 +39,8 @@
                     <p>${ad.description}</p>
                 </div>
             </c:forEach>
-
-
         </c:otherwise>
     </c:choose>
 </div>
-
 </body>
 </html>
