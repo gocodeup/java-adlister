@@ -26,9 +26,6 @@ public class Ad {
 //        this.categoriesId = categoriesId;
     }
 
-    public Ad() {
-    }
-
     public Ad(long id, long userId, String title, String description, Date date, int blocksId) {
         this.id = id;
         this.userId = userId;

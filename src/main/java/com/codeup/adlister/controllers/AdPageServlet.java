@@ -17,11 +17,10 @@ public class AdPageServlet {
         } else if (request.getSession().getAttribute("id") == null) {
             response.sendRedirect("/search");
         } else {
-
             Cookie message = new Cookie("message", "Welcome to a specific ad page.");
             request.setAttribute("ads", DaoFactory.getAdsDao().thisAd((Long) request.getSession().getAttribute("id")));
-            request.getRequestDispatcher("/WEB-INF/AdLanding.jsp").forward(request, response);
             response.addCookie(message);
+            request.getRequestDispatcher("/WEB-INF/AdLanding.jsp").forward(request, response);
         }
     }
 }
