@@ -17,12 +17,12 @@ import java.io.IOException;
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //
-//        if (request.getSession().getAttribute("user") != null) {
-//            response.sendRedirect("/profile");
-//            return;
-//        }
-//        if (request.getSession().getAttribute("user") == null) {
-//        }
+        if (request.getSession().getAttribute("user") != null) {
+            response.sendRedirect("/profile");
+            return;
+        }
+        if (request.getSession().getAttribute("user") == null) {
+        }
         request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
     }
 
@@ -42,6 +42,7 @@ public class LoginServlet extends HttpServlet {
 
         if (user == null) {
             request.getSession().setAttribute("error", "Invalid Username or Password");
+            response.sendRedirect("/login");
             return;
         }
 
@@ -61,10 +62,12 @@ public class LoginServlet extends HttpServlet {
             if (lurker == null) {
                 response.sendRedirect("/profile");
                 return;
-            }
-            else {
+            } else {
                 response.sendRedirect("/login");
             }
+        } else {
+            response.sendRedirect("/login");
+
         }
     }
 }

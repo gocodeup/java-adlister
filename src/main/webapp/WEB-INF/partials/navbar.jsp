@@ -6,8 +6,8 @@
             <a class="navbar-brand" href="/ads">Home</a>
             <a class="navbar-brand" href="/ads/search">Search</a>
             <c:if test="${sessionScope.user != null}">
-            <a class="navbar-brand" href="/ads/create">Create an Ad</a>
-        </c:if>
+                <a class="navbar-brand" href="/ads/create">Create an Ad</a>
+            </c:if>
         </div>
         <ul class="nav navbar-nav navbar-right">
         <c:if test="${sessionScope.user == null}">
@@ -18,6 +18,7 @@
                 <li><a href="/profile">Profile</a></li>
             </c:if>
         <c:if test="${sessionScope.user != null}">
+            <a class="navbar-brand" href="/update">Update Profile</a>
             <li><a href="/logout">Logout</a></li>
         </c:if>
         </ul>

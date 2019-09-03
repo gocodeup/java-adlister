@@ -1,32 +1,27 @@
 package com.codeup.adlister.dao;
-
 import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
 public class MySQLAdsDao implements Ads, UserAds {
     private Connection connection;
-
     public MySQLAdsDao(Config config) {
         try {
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
-                config.getUrl(),
-                config.getUser(),
-                config.getPassword()
+                    config.getUrl(),
+                    config.getUser(),
+                    config.getPassword()
             );
         } catch (SQLException e) {
             throw new RuntimeException("Error connecting to the database!", e);
         }
     }
-
     @Override
     public List<Ad> all() {
         PreparedStatement stmt = null;
@@ -39,7 +34,6 @@ public class MySQLAdsDao implements Ads, UserAds {
             throw new RuntimeException("Error retrieving all ads.", e);
         }
     }
-
     @Override
     public List<Ad> userAds(Long user_id) {
         PreparedStatement stmt;
@@ -52,9 +46,6 @@ public class MySQLAdsDao implements Ads, UserAds {
             throw new RuntimeException("Error retrieving user ads.", e);
         }
     }
-
-
-
     private List<Ad> createUserAdsFromResults(ResultSet rs) throws SQLException {
         List<Ad> userAds = new ArrayList<>();
         while (rs.next()) {
@@ -62,7 +53,6 @@ public class MySQLAdsDao implements Ads, UserAds {
         }
         return userAds;
     }
-
     @Override
     public Long insert(Ad ad) {
         try {
@@ -85,7 +75,6 @@ public class MySQLAdsDao implements Ads, UserAds {
             throw new RuntimeException("Error creating a new ad.", e);
         }
     }
-
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("ads_id"),
@@ -94,8 +83,6 @@ public class MySQLAdsDao implements Ads, UserAds {
             rs.getString("description"),
             rs.getDate("date"),
             rs.getInt("blocks_id")
-//            rs.getString("block")
-//            rs.getInt("categories_id")
         );
     }
 
@@ -115,7 +102,6 @@ public class MySQLAdsDao implements Ads, UserAds {
         List<Ad> ads = new ArrayList<>();
         while (rs.next()) {
             ads.add(extractAd(rs));
-//            ads.add(extractAd2(rs));
         }
         return ads;
     }
@@ -123,9 +109,20 @@ public class MySQLAdsDao implements Ads, UserAds {
     private List<Ad> createAdsFromResults2(ResultSet rs) throws SQLException {
         List<Ad> ads = new ArrayList<>();
         while (rs.next()) {
-//            ads.add(extractAd(rs));
             ads.add(extractAd2(rs));
         }
         return ads;
+    }
+
+    public Ad thisAd(Long id) {
+        PreparedStatement stmt;
+        try {
+            stmt = connection.prepareStatement("SELECT ads.id as ads_id, ads.user_id as user_id, ads.title as title, ads.description as description, ads.date as date, ads.blocks_id as blocks_id, blocks.block as block FROM ads LEFT JOIN blocks ON ads.blocks_id = blocks.id WHERE user_id = ?");
+            stmt.setLong(1, id);
+            ResultSet rs = stmt.executeQuery();
+            return extractAd(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving ad.", e);
+        }
     }
 }
