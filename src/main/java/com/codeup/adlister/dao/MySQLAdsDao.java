@@ -31,9 +31,10 @@ public class MySQLAdsDao implements Ads, UserAds {
     public List<Ad> all() {
         PreparedStatement stmt = null;
         try {
-            stmt = connection.prepareStatement("SELECT * FROM ads");
+//            stmt = connection.prepareStatement("SELECT * FROM ads");
+            stmt = connection.prepareStatement("SELECT ads.id as ads_id, ads.user_id as user_id, ads.title as title, ads.description as description, ads.date as date, ads.blocks_id as blocks_id, blocks.block as block FROM ads LEFT JOIN blocks  ON ads.blocks_id = blocks.id;");
             ResultSet rs = stmt.executeQuery();
-            return createAdsFromResults(rs);
+            return createAdsFromResults2(rs);
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving all ads.", e);
         }
@@ -76,7 +77,10 @@ public class MySQLAdsDao implements Ads, UserAds {
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
+//            rs.getString("block");
+
             return rs.getLong(1);
+
         } catch (SQLException e) {
             throw new RuntimeException("Error creating a new ad.", e);
         }
@@ -84,13 +88,26 @@ public class MySQLAdsDao implements Ads, UserAds {
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
-            rs.getLong("id"),
+            rs.getLong("ads_id"),
             rs.getLong("user_id"),
             rs.getString("title"),
             rs.getString("description"),
             rs.getDate("date"),
             rs.getInt("blocks_id")
+//            rs.getString("block")
 //            rs.getInt("categories_id")
+        );
+    }
+
+    private Ad extractAd2(ResultSet rs) throws SQLException {
+        return new Ad(
+                rs.getLong("ads_id"),
+                rs.getLong("user_id"),
+                rs.getString("title"),
+                rs.getString("description"),
+                rs.getDate("date"),
+                rs.getInt("blocks_id"),
+                rs.getString("block")
         );
     }
 
@@ -98,6 +115,16 @@ public class MySQLAdsDao implements Ads, UserAds {
         List<Ad> ads = new ArrayList<>();
         while (rs.next()) {
             ads.add(extractAd(rs));
+//            ads.add(extractAd2(rs));
+        }
+        return ads;
+    }
+
+    private List<Ad> createAdsFromResults2(ResultSet rs) throws SQLException {
+        List<Ad> ads = new ArrayList<>();
+        while (rs.next()) {
+//            ads.add(extractAd(rs));
+            ads.add(extractAd2(rs));
         }
         return ads;
     }

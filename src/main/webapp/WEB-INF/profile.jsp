@@ -21,7 +21,9 @@
                     <p>${ad.description}</p>
                     <h3>${ad.date}</h3>
 <%--                    <h4>${ad.category}</h4>--%>
-                    <h4>${ad.blocksId}</h4>
+<%--                    <h4><%--%>
+<%--                        --%>
+<%--                    %></h4>--%>
                 </div>
             </c:forEach>
         </div>

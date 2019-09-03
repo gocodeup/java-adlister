@@ -15,6 +15,8 @@ import java.io.IOException;
 public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Cookie message = new Cookie("message", "Welcome to the profile page");
+        request.setAttribute("blocks", DaoFactory.getBlocksDao().all());
+
 
         if (request.getSession().getAttribute("user") == null) {
             response.addCookie(message);
