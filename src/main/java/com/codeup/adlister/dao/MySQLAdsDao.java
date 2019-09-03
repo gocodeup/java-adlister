@@ -114,15 +114,28 @@ public class MySQLAdsDao implements Ads, UserAds {
         return ads;
     }
 
-    public Ad thisAd(Long id) {
+    public Ad thisAd(String id) {
         PreparedStatement stmt;
         try {
             stmt = connection.prepareStatement("SELECT ads.id as ads_id, ads.user_id as user_id, ads.title as title, ads.description as description, ads.date as date, ads.blocks_id as blocks_id, blocks.block as block FROM ads LEFT JOIN blocks ON ads.blocks_id = blocks.id WHERE user_id = ?");
-            stmt.setLong(1, id);
+            stmt.setString(1, id);
             ResultSet rs = stmt.executeQuery();
             return extractAd(rs);
         } catch (SQLException e) {
-            throw new RuntimeException("Error retrieving ad.", e);
+            throw new RuntimeException("Error retrieving ad "+ id, e);
         }
     }
+
+    public List<Ad> thisAdById(Long id) {
+        PreparedStatement stmt;
+        try {
+            stmt = connection.prepareStatement("SELECT ads.id as ads_id, ads.user_id as user_id, ads.title as title, ads.description as description, ads.date as date, ads.blocks_id as blocks_id, blocks.block as block FROM ads LEFT JOIN blocks ON ads.blocks_id = blocks.id WHERE ads.id = ?");
+            stmt.setLong(1, id);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults2(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving ad "+ id, e);
+        }
+    }
+
 }
