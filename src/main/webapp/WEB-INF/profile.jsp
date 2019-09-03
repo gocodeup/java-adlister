@@ -18,9 +18,10 @@
             <c:forEach var="ad" items="${ads}">
                 <div class="col-md-6" style="border: black 1px">
                     <h2>${ad.title}</h2>
-                    <p>${ad.description}</p>
-                    <h4>${ad.block}</h4>
-                    <h3>Date: ${ad.date}</h3>
+                    <p>Description: ${ad.description}</p>
+                    <h4>Block: ${ad.block}</h4>
+                    <h4>Category: ${ad.category}</h4>
+                    <h3>Date: ${ad.date},  Ad ID:${ad.id}</h3>
                 </div>
             </c:forEach>
         </div>
