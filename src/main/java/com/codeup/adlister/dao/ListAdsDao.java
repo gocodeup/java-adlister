@@ -1,4 +1,3 @@
-
 //package com.codeup.adlister.dao;
 //
 //import com.codeup.adlister.dao.Ads;
@@ -34,5 +33,3 @@
 //        return ads;
 //    }
 //}
-
-
