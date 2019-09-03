@@ -14,12 +14,12 @@
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6" style="border: black 1px">
             <a href="/ad/id/?${ad.id}">
-                <h2>${ad.title}</h2>
+            <h2>${ad.title}</h2>
             </a>
-
-            <p>${ad.description}</p>
-            <h4>${ad.block}</h4>
-            <h3>Date: ${ad.date}, Ad ID:${ad.id}</h3>
+            <p>Description: ${ad.description}</p>
+            <h4>Block: ${ad.block}</h4>
+            <h4>Category: ${ad.category}</h4>
+            <h3>Date: ${ad.date},  Ad ID:${ad.id}</h3>
         </div>
     </c:forEach>
 </div>
