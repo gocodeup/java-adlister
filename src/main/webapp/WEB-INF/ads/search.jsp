@@ -25,7 +25,10 @@
             <c:forEach var="ad" items="${ads}">
                 <c:if test="${fn:containsIgnoreCase(ad.title, param.search) || fn:containsIgnoreCase(ad.description, param.search)|| fn:containsIgnoreCase(ad.block, param.search)|| fn:containsIgnoreCase(ad.date, param.search)|| fn:containsIgnoreCase(ad.id, param.search)}">
                     <div class="col-md-6">
+                        <a href="/ad/id/?${ad.id}">
+
                         <h2>${ad.title}</h2>
+                        </a>
                         <p>Description: ${ad.description}</p>
                         <h4>Block: ${ad.block}</h4>
                         <h4>Category: ${ad.category}</h4>
@@ -39,7 +42,10 @@
             <p>${param.search}</p>
             <c:forEach var="ad" items="${ads}">
                 <div class="col-md-6">
+                    <a href="/ad/id/?${ad.id}">
+
                     <h2>${ad.title}</h2>
+                    </a>
                     <p>Description: ${ad.description}</p>
                     <h4>Block: ${ad.block}</h4>
                     <h4>Category: ${ad.category}</h4>
