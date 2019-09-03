@@ -52,10 +52,8 @@ public class LoginServlet extends HttpServlet {
                 request.getSession().setAttribute("user", user);
                 response.sendRedirect(lurker.replace("/WEB-INF", "").replace("/index", "").replace(".jsp", ""));
                 return;
-            }
-            if (!validAttempt) {
+            } else {
                 response.sendRedirect("/login");
-                return;
             }
         }
     }
