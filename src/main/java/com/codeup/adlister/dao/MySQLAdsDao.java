@@ -113,7 +113,7 @@ public class MySQLAdsDao implements Ads, UserAds {
             ads.add(extractAd2(rs));
         }
         return ads;
-    }dd
+    }
 
     public Ad thisAd(String id) {
         PreparedStatement stmt;
