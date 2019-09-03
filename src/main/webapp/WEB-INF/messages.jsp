@@ -8,14 +8,9 @@
     </jsp:include>
 </head>
 <body>
-<c:choose>
-    <c:when test="${empty user}">
-        <%@ include file="/WEB-INF/partials/navbar-logout.jsp" %>
-    </c:when>
-    <c:otherwise>
-        <%@ include file="/WEB-INF/partials/navbar-login.jsp" %>
-    </c:otherwise>
-</c:choose>
+
+<%@ include file="/WEB-INF/partials/navbar.jsp" %>
+
 <c:set var="exception" value="${requestScope['javax.servlet.error.exception']}"/>
 
 <div class="container">

@@ -17,6 +17,8 @@ public class Block {
         return id;
     }
 
+//    public String getId() {return block;}
+
     public void setId(int id) {
         this.id = id;
     }

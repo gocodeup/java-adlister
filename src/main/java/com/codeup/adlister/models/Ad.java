@@ -7,9 +7,28 @@ public class Ad {
     private String description;
     private Date date;
     private int blocksId;
-    //    private int categoriesId;
+    private String block;
+//    private int categoriesId;
+
+    public Ad() {
+
+    }
+
+
+    public Ad(long id, long userId, String title, String description, Date date, int blocksId, String block) {
+        this.id = id;
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.date = date;
+        this.blocksId = blocksId;
+        this.block = block;
+//        this.categoriesId = categoriesId;
+    }
+
     public Ad() {
     }
+
     public Ad(long id, long userId, String title, String description, Date date, int blocksId) {
         this.id = id;
         this.userId = userId;
@@ -17,15 +36,23 @@ public class Ad {
         this.description = description;
         this.date = date;
         this.blocksId = blocksId;
-//        this.categoriesId = categoriesId;
     }
+  
     public Ad(long userId, String title, String description, int blocksId) {
         this.userId = userId;
         this.title = title;
         this.description = description;
         this.blocksId = blocksId;
-//        this.categoriesId = categoriesId;
     }
+
+    public Ad(long userId, String title, String description, int blocksId, String block) {
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.blocksId= blocksId;
+        this.block= block;
+    }
+
     public long getId() {
         return id;
     }
@@ -62,11 +89,12 @@ public class Ad {
     public void setBlocksId(int blocksId) {
         this.blocksId = blocksId;
     }
-//    public int getCategoriesId() {
-//        return categoriesId;
-//    }
-//
-//    public void setCategoriesId(int categoriesId) {
-//        this.categoriesId = categoriesId;
-//    }
+
+    public String getBlock() {
+        return block;
+    }
+
+    public void setBlock(String block) {
+        this.block = block;
+    }
 }

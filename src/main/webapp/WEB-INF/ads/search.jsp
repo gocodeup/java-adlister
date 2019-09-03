@@ -27,6 +27,8 @@
                     <div class="col-md-6">
                         <h2>${ad.title}</h2>
                         <p>${ad.description}</p>
+                        <h4>${ad.block}</h4>
+                        <h3>Date: ${ad.date}, Ad ID: ${ad.id}</h3>
                     </div>
                 </c:if>
             </c:forEach>
@@ -37,6 +39,8 @@
                 <div class="col-md-6">
                     <h2>${ad.title}</h2>
                     <p>${ad.description}</p>
+                    <h4>${ad.block}</h4>
+                    <h3>Date: ${ad.date}, Ad ID: ${ad.id}</h3>
                 </div>
             </c:forEach>
         </c:otherwise>

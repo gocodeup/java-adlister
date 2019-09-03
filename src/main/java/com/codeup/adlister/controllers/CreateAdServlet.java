@@ -30,9 +30,10 @@ public class CreateAdServlet extends HttpServlet {
         String title = request.getParameter("title");
         String description = request.getParameter("description");
         Integer blockId = (Integer) Integer.parseInt(request.getParameter("block") );
-//        Integer categoryId = (Integer) Integer.parseInt(request.getParameter("category"));
+        String block = request.getParameter("block");
+        Integer categoryId = (Integer) Integer.parseInt(request.getParameter("category"));
 
-        Ad ad = new Ad( user.getId(), title,  description,  blockId);
+        Ad ad = new Ad(user.getId(), title,  description,  blockId);
 
         if (title == null) {
             title = " ";
@@ -50,6 +51,4 @@ public class CreateAdServlet extends HttpServlet {
         DaoFactory.getAdsDao().insert(ad);
         response.sendRedirect("/ads");
     }
-
-//    change for commit
 }
