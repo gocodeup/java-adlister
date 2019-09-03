@@ -12,7 +12,6 @@ public class Ad {
     private String category;
 
     public Ad() {
-
     }
 
 

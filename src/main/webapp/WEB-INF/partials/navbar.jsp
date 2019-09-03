@@ -3,14 +3,9 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-<<<<<<< HEAD
             <a class="navbar-brand" href="/ads">Home</a>
             <a name="from" class="navbar-brand" href="/ads/search">Search</a>
-=======
-            <a class="navbar-brand" href="/">Home</a>
-            <a class="navbar-brand" href="/ads">Ads</a>
-            <a class="navbar-brand" href="/ads/search">Search</a>
->>>>>>> origin
+
             <c:if test="${sessionScope.user != null}">
                 <a name="from" class="navbar-brand" href="/ads/create">Create an Ad</a>
             </c:if>
