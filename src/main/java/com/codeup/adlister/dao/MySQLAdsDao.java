@@ -27,7 +27,7 @@ public class MySQLAdsDao implements Ads, UserAds {
         PreparedStatement stmt = null;
         try {
 //            stmt = connection.prepareStatement("SELECT * FROM ads");
-            stmt = connection.prepareStatement("SELECT ads.id as ads_id, ads.user_id as user_id, ads.title as title, ads.description as description, ads.date as date, ads.blocks_id as blocks_id, blocks.block as block FROM ads LEFT JOIN blocks  ON ads.blocks_id = blocks.id;");
+            stmt = connection.prepareStatement("SELECT ads.id as ads_id, ads.user_id as user_id, ads.title as title, ads.description as description, ads.date as date, ads.blocks_id as blocks_id, blocks.block as block, adscategories.categories_id as categories_id, categories.category as category FROM ads LEFT JOIN blocks ON ads.blocks_id = blocks.id LEFT JOIN adscategories ON ads.id = adscategories.ad_id LEFT JOIN categories ON adscategories.categories_id = categories.id;");
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults2(rs);
         } catch (SQLException e) {
@@ -38,7 +38,7 @@ public class MySQLAdsDao implements Ads, UserAds {
     public List<Ad> userAds(Long user_id) {
         PreparedStatement stmt;
         try {
-            stmt = connection.prepareStatement("SELECT ads.id as ads_id, ads.user_id as user_id, ads.title as title, ads.description as description, ads.date as date, ads.blocks_id as blocks_id, blocks.block as block FROM ads LEFT JOIN blocks ON ads.blocks_id = blocks.id WHERE user_id = ?");
+            stmt = connection.prepareStatement("SELECT ads.id as ads_id, ads.user_id as user_id, ads.title as title, ads.description as description, ads.date as date, ads.blocks_id as blocks_id, blocks.block as block, adscategories.categories_id as categories_id, categories.category as category FROM ads LEFT JOIN blocks ON ads.blocks_id = blocks.id LEFT JOIN adscategories ON ads.id = adscategories.ad_id LEFT JOIN categories ON adscategories.categories_id = categories.id WHERE user_id = ?");
             stmt.setLong(1, user_id);
             ResultSet rs = stmt.executeQuery();
             return createUserAdsFromResults(rs);
@@ -94,7 +94,8 @@ public class MySQLAdsDao implements Ads, UserAds {
                 rs.getString("description"),
                 rs.getDate("date"),
                 rs.getInt("blocks_id"),
-                rs.getString("block")
+                rs.getString("block"),
+                rs.getString("category")
         );
     }
 
@@ -117,7 +118,7 @@ public class MySQLAdsDao implements Ads, UserAds {
     public Ad thisAd(Long id) {
         PreparedStatement stmt;
         try {
-            stmt = connection.prepareStatement("SELECT ads.id as ads_id, ads.user_id as user_id, ads.title as title, ads.description as description, ads.date as date, ads.blocks_id as blocks_id, blocks.block as block FROM ads LEFT JOIN blocks ON ads.blocks_id = blocks.id WHERE user_id = ?");
+            stmt = connection.prepareStatement("SELECT ads.id as ads_id, ads.user_id as user_id, ads.title as title, ads.description as description, ads.date as date, ads.blocks_id as blocks_id, blocks.block as block, adscategories.categories_id as categories_id, categories.category as category FROM ads LEFT JOIN blocks ON ads.blocks_id = blocks.id LEFT JOIN adscategories ON ads.id = adscategories.ad_id LEFT JOIN categories ON adscategories.categories_id = categories.id WHERE user_id = ?");
             stmt.setLong(1, id);
             ResultSet rs = stmt.executeQuery();
             return extractAd(rs);
