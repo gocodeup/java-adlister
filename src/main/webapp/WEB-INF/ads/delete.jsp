@@ -3,44 +3,28 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Create a new Ad" />
+        <jsp:param name="title" value="Viewing All The Ads"/>
     </jsp:include>
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
+
 <div class="container">
     <h1>Delete an Ad</h1>
-    <form action="/ads/delete" method="post">
-        <div class="form-group">
-            <label for="title">Title</label>
-            <c:if test="${sessionScope.error!=null}">
-                <input id="title" name="title" class="form-control" type="text" value = ${sessionScope.title}>
-                <%request.getSession().removeAttribute("title");%>
-            </c:if>
-            <input id="title" name="title" class="form-control" type="text">
+    <h1>Pickj an Ad to Delete:</h1>
+    <c:forEach var="ad" items="${ads}">
+    <form action="/ads/delete?${ad.id}" method="post">
+        <div class="row">
+            <div class="col-md-6" style="border: black 1px">
+                <h2>${ad.title}</h2>
+                <p>Description: ${ad.description}</p>
+                <h4>Block: ${ad.block}</h4>
+                <h4>Category: ${ad.category}</h4>
+                <h3>Date: ${ad.date}, Ad ID:${ad.id}</h3>
+                <input type="submit" value="Delete">
+            </div>
+            </c:forEach>
         </div>
-        <div class="form-group">
-            <label for="description">Description</label>
-            <c:if test="${sessionScope.error != null}">
-            <textarea id="description" name="description" class="form-control" type="text" value = ${sessionScope.description}>
-                    <%request.getSession().removeAttribute("email");%>
-                </c:if>
-                <textarea id="description" name="description" class="form-control" type="text"></textarea>
-        </div>
-        <div>
-            <select multiple name="category">
-
-                <c:forEach var="category" items="${categories}">
-                    <option value="${category.id}">${category.category}</option>
-                </c:forEach>
-            </select>
-            <select name="block">
-                <%--                    <option value=0 selected>Unknown</option>--%>
-                <c:forEach var="block" items="${blocks}">
-                    <option  value="${block.id}">${block.block}</option>
-                </c:forEach>
-            </select>
-        </div>
-        <input type="submit" class="btn btn-block btn-primary">
     </form>
 </div>
 </body>

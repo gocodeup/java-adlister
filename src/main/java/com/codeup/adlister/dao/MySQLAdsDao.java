@@ -75,6 +75,20 @@ public class MySQLAdsDao implements Ads, UserAds {
             throw new RuntimeException("Error creating a new ad.", e);
         }
     }
+    public Long insertCat(Long id, int category) {
+        try {
+            String insertQuery = "INSERT INTO adscategories(ad_id, categories_id) VALUES (?, ?)";
+            PreparedStatement stmt = connection.prepareStatement(insertQuery);
+            int idtwo = id.intValue();
+            stmt.setInt(1, idtwo);
+            stmt.setInt(2, category);
+            stmt.execute();
+            return null;
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error creating a new ad cat.", e);
+        }
+    }
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("ads_id"),
@@ -134,6 +148,17 @@ public class MySQLAdsDao implements Ads, UserAds {
             stmt.setLong(1, id);
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults2(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving ad "+ id, e);
+        }
+    }
+    public List<Ad> deleteThisAd(Long id) {
+        PreparedStatement stmt;
+        try {
+            stmt = connection.prepareStatement("delete FROM ads WHERE id = ?");
+            stmt.setLong(1, id);
+            stmt.execute();
+            return null;
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving ad "+ id, e);
         }

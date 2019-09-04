@@ -20,10 +20,9 @@ public class LoginServlet extends HttpServlet {
         if (request.getSession().getAttribute("user") != null) {
             response.sendRedirect("/profile");
             return;
+        }else {
+            request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         }
-        if (request.getSession().getAttribute("user") == null) {
-        }
-        request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -55,19 +54,20 @@ public class LoginServlet extends HttpServlet {
                 response.sendRedirect("/profile");
                 return;
             }
-            if (lurker != null) {
+            if (lurker != null && request.getParameter("from") != null) {
                 response.sendRedirect(lurker);
                 return;
             }
             if (lurker == null) {
                 response.sendRedirect("/profile");
                 return;
-            } else {
+            }
+            else {
                 response.sendRedirect("/login");
             }
         } else {
+            request.getSession().setAttribute("error", "Invalid Username or Password");
             response.sendRedirect("/login");
-
         }
     }
 }

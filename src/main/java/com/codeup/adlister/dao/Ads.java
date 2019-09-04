@@ -13,6 +13,7 @@ public interface Ads {
     List<Ad> userAds(Long user_id);
     Ad thisAd(String id);
     List<Ad> thisAdById(Long id);
-
+    Long insertCat(Long id, int category);
+    List<Ad> deleteThisAd(Long id);
 
 }
