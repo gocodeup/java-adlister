@@ -10,9 +10,9 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <h1>Welcome, ${sessionScope.user.username}!</h1>
+        <h1 style="text-transform: capitalize">Welcome, ${sessionScope.user.username}!</h1>
         <div class="col-lg-12">
-            <h1>Here Are all the user ads!</h1>
+            <h1>Your Ads:</h1>
             <c:forEach var="ad" items="${ads}">
                 <div class="col-md-6" style="border: black 1px">
                     <h2>${ad.title}</h2>
