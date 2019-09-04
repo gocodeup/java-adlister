@@ -11,9 +11,7 @@ public class Ad {
     private String block;
     private String category;
 
-    public Ad() {
-    }
-
+    public Ad() { }
 
     public Ad(long id, long userId, String title, String description, Date date, int blocksId, String block, String category) {
         this.id = id;

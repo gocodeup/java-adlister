@@ -20,6 +20,8 @@ public class LoginServlet extends HttpServlet {
         if (request.getSession().getAttribute("user") != null) {
             response.sendRedirect("/profile");
             return;
+        } else {
+            request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         }
         if (request.getSession().getAttribute("user") == null) {
             request.getRequestDispatcher("WEB-INF/login.jsp").forward(request, response);
@@ -37,7 +39,9 @@ public class LoginServlet extends HttpServlet {
         } else {
             request.getSession().setAttribute("username", username);
 
+
             boolean validAttempt = Password.check(password, user.getPassword());
+
             if (validAttempt) {
                 request.getSession().setAttribute("user", user);
 
@@ -45,7 +49,7 @@ public class LoginServlet extends HttpServlet {
                     response.sendRedirect("/profile");
                     return;
                 }
-                if (lurker != null) {
+                if (lurker != null && request.getParameter("from") != null) {
                     response.sendRedirect(lurker);
                     return;
                 }
@@ -53,6 +57,7 @@ public class LoginServlet extends HttpServlet {
                     response.sendRedirect("/profile");
                     return;
                 } else {
+                    request.getSession().setAttribute("error", "Invalid Username or Password");
                     response.sendRedirect("/login");
                 }
             }
