@@ -34,7 +34,7 @@ public class CreateAdServlet extends HttpServlet {
         String block = request.getParameter("block");
         int categoryId = Integer.parseInt(request.getParameter("category"));
 
-        Ad ad = new Ad(user.getId(), title,  description,  blockId);
+        Ad ad = new Ad(user.getId(), title, description,  blockId);
 
         if (title == null) {
             title = " ";
@@ -49,7 +49,7 @@ public class CreateAdServlet extends HttpServlet {
         }
         DaoFactory.getAdsDao().insert(ad);
         List<Ad> adsHere = DaoFactory.getAdsDao().userAds(user.getId());
-        long newId = 0;
+        Long newId = null;
 
         for (Ad adHere : adsHere) {
             if (adHere.getTitle().equalsIgnoreCase(title)){
