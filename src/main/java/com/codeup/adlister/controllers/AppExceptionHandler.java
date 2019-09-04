@@ -24,13 +24,9 @@ public class AppExceptionHandler extends HttpServlet {
 
     private void processError(HttpServletRequest request,
                               HttpServletResponse response) throws IOException {
-        // Analyze the servlet exception
-        Throwable throwable = (Throwable) request
-                .getAttribute("javax.servlet.error.exception");
-        Integer statusCode = (Integer) request
-                .getAttribute("javax.servlet.error.status_code");
-        String servletName = (String) request
-                .getAttribute("javax.servlet.error.servlet_name");
+        Throwable throwable = (Throwable) request.getAttribute("javax.servlet.error.exception");
+        Integer statusCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
+        String servletName = (String) request.getAttribute("javax.servlet.error.servlet_name");
         if (servletName == null) {
             servletName = "Unknown";
         }
@@ -40,7 +36,6 @@ public class AppExceptionHandler extends HttpServlet {
             requestUri = "Unknown";
         }
 
-        // Set response content type
         response.setContentType("text/html");
 
         PrintWriter out = response.getWriter();
