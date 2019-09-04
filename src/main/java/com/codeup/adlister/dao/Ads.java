@@ -14,5 +14,6 @@ public interface Ads {
     Ad thisAd(String id);
     List<Ad> thisAdById(Long id);
     Long insertCat(Long id, int category);
+    List<Ad> deleteThisAd(Long id);
 
 }
