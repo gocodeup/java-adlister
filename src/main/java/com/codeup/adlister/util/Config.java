@@ -1,8 +1,10 @@
-class Config {
+package com.codeup.adlister.util;
+
+public class Config {
     public String getUrl() {
         return "jdbc:mysql://localhost/adlister_db?serverTimezone=UTC&useSSL=false";
     }
-    public String getUsername() {
+    public String getUser() {
         return "root";
     }
     public String getPassword() {
