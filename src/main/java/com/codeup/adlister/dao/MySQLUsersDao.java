@@ -64,15 +64,33 @@ public class MySQLUsersDao implements Users {
         );
     }
 
-    private Ad extractAd(ResultSet rs) throws SQLException {
-        if (! rs.next()) {
-            return null;
+    @Override
+    public String getUserNameByAdId(Long adId) {
+        String query = "SELECT username FROM users JOIN ads ON ads.user_id = users.id And ads.id = ? ";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, adId);
+            stmt.executeQuery();
+            ResultSet rs = stmt.getResultSet();
+            System.out.println("executed query");
+            System.out.println("ad id = " + adId);
+            System.out.println(rs);
+//            while (rs.next())
+//                System.out.println(rs.getString("username"));
+//            User u = new User(
+//                    rs.getLong("id"),
+//                    rs.getString("username"),
+//                    rs.getString("email"),
+//                    rs.getString("password")
+//            );
+//            return u.getUsername();
+            while (rs.next())
+                return rs.getString("username");
+            return "no username found";
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding a user by username", e);
         }
-        return new Ad(
-                rs.getLong("user_id"),
-                rs.getString("title"),
-                rs.getString("description")
-        );
     }
 
 }
+

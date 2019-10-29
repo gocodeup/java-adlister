@@ -5,6 +5,14 @@
             <a class="navbar-brand" href="/ads">Adlister</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
+            <li>
+            <form action="/searchAds" method="post">
+                <label for="description"> Search ad description<input type="text" id="description" name="description">
+<%--                    <a  href="/searchAds?description=${description}>Search</a></label>--%>
+                    <button type="submit">search</button>
+
+            </form>
+            </li>
             <li><a href="/login">Login</a></li>
             <li><a href="/logout">Logout</a></li>
         </ul>
