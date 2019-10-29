@@ -13,6 +13,7 @@ public class Ad {
         this.title = title;
         this.description = description;
         this.category = category;
+        //test comment
     }
 
     public Ad(long userId, String title, String description, String category) {
