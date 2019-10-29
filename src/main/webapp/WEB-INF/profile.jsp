@@ -17,18 +17,15 @@
         <div class="container">
             <h1>Here are your ads!</h1>
 
-<%--        when the user id for ad matches user.id for the user display the ad--%>
-        <c:choose>
-            <c:when test="${sessionScope.user.id} == ${sessionScope.ads.user_id}">
-        <c:forEach var="ad" items="${ads}">
+<%--this pulls userAds from our servlet viewprofileservlet where we declared out request.setAtribute--%>
+        <c:forEach var="ad" items="${userAds}">
             <div class="col-md-6">
                 <h2>${ad.title}</h2>
                 <p>${ad.description}</p>
             </div>
         </c:forEach>
 
-            </c:when>
-        </c:choose>
+
     </div>
 
 </body>

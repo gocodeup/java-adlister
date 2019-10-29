@@ -1,6 +1,7 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
 import java.io.FileInputStream;
@@ -71,13 +72,14 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
-
+//This method allows us to view user specific ads
     @Override
-    public List<Ad> userAd() {
+    public List<Ad> viewAllAdsFromUser(User user) {
         PreparedStatement stmt = null;
         try {
             stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id = ? ");
-            stmt.setLong(1, ad.getUserId());
+
+            stmt.setLong(1, user.getId());
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
         } catch (SQLException e) {
