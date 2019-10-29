@@ -12,4 +12,5 @@ public class Password {
     public static boolean check(String password, String hash) {
         return BCrypt.checkpw(password, hash);
     }
+
 }

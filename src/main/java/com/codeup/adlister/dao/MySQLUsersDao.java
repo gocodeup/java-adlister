@@ -11,6 +11,9 @@ public class MySQLUsersDao implements Users {
     private Connection connection;
 
     public MySQLUsersDao(Config config) {
+        System.out.println("config.getUrl() = " + config.getUrl());
+        System.out.println("config.getPassword() = " + config.getPassword());
+        System.out.println("config.getUser() = " + config.getUser());
         try {
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
@@ -23,7 +26,6 @@ public class MySQLUsersDao implements Users {
         }
     }
 
-
     @Override
     public User findByUsername(String username) {
         String query = "SELECT * FROM users WHERE username = ? LIMIT 1";
@@ -35,6 +37,8 @@ public class MySQLUsersDao implements Users {
             throw new RuntimeException("Error finding a user by username", e);
         }
     }
+
+
 
     @Override
     public Long insert(User user) {
@@ -50,6 +54,20 @@ public class MySQLUsersDao implements Users {
             return rs.getLong(1);
         } catch (SQLException e) {
             throw new RuntimeException("Error creating new user", e);
+        }
+    }
+
+    // Find user by user id and return string of their name
+    // I dont think this will work.
+    @Override
+    public User findById(Long id) {
+        String query = "SELECT * FROM users WHERE id = ? LIMIT 1";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, String.valueOf(id));
+            return extractUser(stmt.executeQuery());
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding a user by username", e);
         }
     }
 

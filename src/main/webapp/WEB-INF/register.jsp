@@ -29,5 +29,10 @@
             <input type="submit" class="btn btn-primary btn-block">
         </form>
     </div>
+
+<script>
+    // confirm passwords match
+
+</script>
 </body>
 </html>

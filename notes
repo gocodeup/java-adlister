@@ -1,0 +1,22 @@
+- Need to fix convert user ID to username
+
+- Get search to work
+
+- Show users ads on their profile page
+
+- Dynamic navbar: show different links if user is logged in (toggle create ads link, add link to view all ads)
+
+- Add buttons to allow users to update and delete ads
+
+- Allow users to update their profile information
+
+
+
+- validate data that goes to database
+- Display error messages (passwords don't match, try to create a ad without title)
+
+Sticky forms?
+
+- Categories table?
+
+- login redirect?

@@ -44,7 +44,7 @@ public class MySQLAdsDao implements Ads {
     @Override
     public Long insert(Ad ad) {
         try {
-            String insertQuery = "INSERT INTO ads(user_id, title, description) VALUES (?, ?, ?)";
+            String insertQuery = "INSERT INTO ads(userId, title, description) VALUES (?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad.getUserId());
             stmt.setString(2, ad.getTitle());
@@ -58,10 +58,30 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    @Override
+    public Ad findAdById(long id) {
+        System.out.println("findadbyid.id = " + id);
+        try {
+            String query = "SELECT * FROM ads WHERE id = ? LIMIT 1";
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, String.valueOf(id));
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            return new Ad(
+                    rs.getLong("id"),
+                    rs.getLong("userId"),
+                    rs.getString("title"),
+                    rs.getString("description")
+            );
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding individual ad with ad_id of " + id);
+        }
+    }
+
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("id"),
-            rs.getLong("user_id"),
+            rs.getLong("userId"),
             rs.getString("title"),
             rs.getString("description")
         );
