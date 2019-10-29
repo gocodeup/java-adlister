@@ -17,6 +17,10 @@
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <input id="category" name="category" class="form-control" type="text">
+            </div>
             <input type="submit" class="btn btn-block btn-primary">
         </form>
     </div>

@@ -9,4 +9,11 @@ public interface Ads {
     List<Ad> all();
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
+
+    Ad getAdById(Long id);
+
+
+    //do I come up with a new method in adds??
+
+
 }
