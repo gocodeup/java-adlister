@@ -4,8 +4,6 @@
 
 - Show users ads on their profile page
 
-- Dynamic navbar: show different links if user is logged in (toggle create ads link, add link to view all ads)
-
 - Add buttons to allow users to update and delete ads
 
 - Allow users to update their profile information
