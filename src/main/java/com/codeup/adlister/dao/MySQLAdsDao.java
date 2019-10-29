@@ -80,6 +80,23 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    // Used for the search field for finding ads. Takes in string of query and returns ad list
+    @Override
+    public List<Ad> adsTitleQuery(String q) {
+        System.out.println("Searching for ad titles that begin with: " + q);
+        try {
+            String query = "SELECT * FROM ads WHERE title LIKE ?";
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, "%" + q + "%");
+            ResultSet rs = stmt.executeQuery();
+            System.out.println("rs = " + rs.getFetchSize());
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding ads from database, with title beginning with: " + q);
+        }
+    }
+
+
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("id"),
