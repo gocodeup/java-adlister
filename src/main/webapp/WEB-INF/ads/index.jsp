@@ -16,9 +16,10 @@
                     <h3><a href="/ads/create">Create an ad</a></h3>
                 </div>
                 <div class="col-md-6">
-                    <form method="post" style="padding-top: 30px;">
-                        <input class="form-control" type="search" value="How do I shoot web" id="search" style="display: inline-block;width: 85%;">
-                        <button type="submit" style="display: inline-block;">Search</button>
+                    <form method="POST" action="/search">
+                        <label for="search">Search for ads</label>
+                        <input type="text" id="search" name="search" placeholder="search for ads" style="display: inline-block; width: 85%;">
+                        <input type="submit" value="Submit">
                     </form>
                 </div>
             </div>
