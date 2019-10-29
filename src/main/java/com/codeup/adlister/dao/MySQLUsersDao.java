@@ -58,7 +58,6 @@ public class MySQLUsersDao implements Users {
     }
 
     // Find user by user id and return string of their name
-    // I dont think this will work.
     @Override
     public User findById(Long id) {
         String query = "SELECT * FROM users WHERE id = ? LIMIT 1";

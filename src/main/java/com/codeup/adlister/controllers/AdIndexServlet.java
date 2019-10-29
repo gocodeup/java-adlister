@@ -13,11 +13,9 @@ import java.io.IOException;
 public class AdIndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String adId = request.getParameter("ad_id");
-        System.out.println("adId = " + adId);
-
-        request.setAttribute("ad", DaoFactory.getAdsDao().findAdById(Long.parseLong(adId)));
+        request.setAttribute("ad", DaoFactory.getAdsDao().findAdById(Long.parseLong(request.getParameter("ad_id"))));
         request.getRequestDispatcher("/WEB-INF/ads/ad.jsp").forward(request, response);
+
     }
 
 
