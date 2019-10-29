@@ -15,7 +15,7 @@
 - validate data that goes to database
 - Display error messages (passwords don't match, try to create a ad without title)
 
-Sticky forms?
+- Sticky forms?
 
 - Categories table?
 
