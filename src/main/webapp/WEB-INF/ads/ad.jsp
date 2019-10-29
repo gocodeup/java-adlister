@@ -18,9 +18,9 @@
         <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
         <div class="container">
-            <h1>${ad.title}</h1>
-            <h2><em>${ad.userId}</em></h2>
-            <h3>${ad.description}</h3>
+            <h1>Title: ${ad.title}</h1>
+            <h2>Username: <em>${ad.username}</em></h2>
+            <h3>Description: ${ad.description}</h3>
             <p></p>
             <p><a href="/ads">Go back and view all ads</a></p>
             <p><a href="/ads/create">Create an ad</a></p>
