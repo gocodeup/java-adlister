@@ -71,9 +71,9 @@ public class MySQLUsersDao implements Users {
             stmt.setLong(1, adId);
             stmt.executeQuery();
             ResultSet rs = stmt.getResultSet();
-            System.out.println("executed query");
-            System.out.println("ad id = " + adId);
-            System.out.println(rs);
+//            System.out.println("executed query");
+//            System.out.println("ad id = " + adId);
+//            System.out.println(rs);
 //            while (rs.next())
 //                System.out.println(rs.getString("username"));
 //            User u = new User(
