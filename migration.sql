@@ -21,3 +21,7 @@ CREATE TABLE ads (
     FOREIGN KEY (user_id) REFERENCES users(id)
         ON DELETE CASCADE
 );
+
+SELECT * FROM users
+JOIN ads ON users.id = ads.user_id
+and users.username = ?;

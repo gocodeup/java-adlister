@@ -3,6 +3,7 @@ package com.codeup.adlister.dao;
 import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,9 +11,6 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -78,7 +76,6 @@ public class MySQLAdsDao implements Ads {
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
-            rs.getLong("id"),
             rs.getLong("user_id"),
             rs.getString("title"),
             rs.getString("description"),
@@ -93,7 +90,6 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
-
 
     public Ad getAdById(Long id) {
         PreparedStatement stmt;
@@ -116,6 +112,19 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    @Override
+    public List<Ad> findAdByUserName(String username) {
+        String query = "SELECT ads.* FROM ads JOIN users ON users.id = ads.user_id WHERE users.username = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, username);
+            ResultSet rs = stmt.executeQuery();
+//            System.out.println(rs);
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding an ad by username", e);
+        }
+    }
 
     public static void main(String[] args) {
 //        Ad newAd = new MySQLAdsDao(new Config());
