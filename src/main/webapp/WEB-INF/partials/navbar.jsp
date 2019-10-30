@@ -10,8 +10,7 @@
                 <form action="/searchAds" method="post">
                     <label for="description"> Search ad description<input type="text" id="description"
                                                                           name="description">
-                        <%--                    <a  href="/searchAds?description=${description}>Search</a></label>--%>
-                        <button type="submit">search</button>
+                         <button type="submit">search</button>
 
                 </form>
             </li>
