@@ -13,8 +13,9 @@ public interface Ads {
 
     Ad getAdById(Long id);
 
+    List<Ad> findAdByUserName(String username);
+
 
     //do I come up with a new method in adds??
-
 
 }
