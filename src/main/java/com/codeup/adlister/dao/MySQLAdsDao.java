@@ -94,7 +94,6 @@ public class MySQLAdsDao implements Ads {
         return ads;
     }
 
-
     public Ad getAdById(Long id) {
         PreparedStatement stmt;
         try {
