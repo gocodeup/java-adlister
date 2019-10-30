@@ -1,6 +1,7 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 import com.codeup.adlister.util.Config;
 
@@ -125,5 +126,22 @@ public class MySQLAdsDao implements Ads {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    //finds adds by the id.
+    @Override
+    public List<Ad> getAdsByUserId(Long id) {
+        System.out.println("\"ran this method\" = " + "ran this method");
+        try {
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM ads WHERE userId = ?");
+            statement.setLong(1, id);
+            ResultSet rs = statement.executeQuery();
+            rs.next();
+            return createAdsFromResults(rs);
+        } catch(SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 }
