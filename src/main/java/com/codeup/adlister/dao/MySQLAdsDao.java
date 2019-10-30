@@ -3,7 +3,6 @@ package com.codeup.adlister.dao;
 import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,6 +10,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -92,6 +94,7 @@ public class MySQLAdsDao implements Ads {
         return ads;
     }
 
+
     public Ad getAdById(Long id) {
         PreparedStatement stmt;
         try {
@@ -127,25 +130,4 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-//    @Override
-//    public List<Ad> listByUserid(User user) {
-//        PreparedStatement stmt = null;
-//        try {
-//            stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id = ?");
-//            stmt.setLong(1,user.getId());
-//            ResultSet rs = stmt.executeQuery();
-//            return createAdsFromResults(rs);
-//        }catch (SQLException e){
-//            throw new RuntimeException("error finding your ads", e);
-//        }
-//    }
-
-//    public static void main(String[] args) {
-//        MySQLAdsDao adConnection = new MySQLAdsDao(new Config());
-//        List<Ad> adsList = adConnection.findAdByUserId(user) ;
-//        System.out.println(adsList);
-//    }
-
     }
-
-

@@ -1,7 +1,5 @@
 package com.codeup.adlister.models;
 
-import org.w3c.dom.Text;
-
 public class Ad {
     private long id;
     private long userId;

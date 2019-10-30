@@ -17,6 +17,8 @@ public interface Ads {
     List<Ad> findAdByUserId(User user);
 
 
+
     //do I come up with a new method in adds??
+
 
 }
