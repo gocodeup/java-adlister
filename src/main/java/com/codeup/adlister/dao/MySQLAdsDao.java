@@ -112,6 +112,19 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    @Override
+    public List<Ad> findAdByUserName(String username) {
+        String query = "SELECT ads.* FROM ads JOIN users ON users.id = ads.user_id WHERE users.username = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, username);
+            ResultSet rs = stmt.executeQuery();
+//            System.out.println(rs);
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding an ad by username", e);
+        }
+    }
 
     public static void main(String[] args) {
 //        Ad newAd = new MySQLAdsDao(new Config());
