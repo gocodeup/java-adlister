@@ -12,7 +12,7 @@
 <div class="container">
     <h1> ${heading}</h1>
 
-    <c:forEach var="ad" items="${ad}">
+    <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
 
             <a href="/ad/?ad=${ad.id}">
