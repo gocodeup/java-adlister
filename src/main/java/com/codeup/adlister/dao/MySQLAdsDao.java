@@ -94,7 +94,6 @@ public class MySQLAdsDao implements Ads {
         return ads;
     }
 
-
     public Ad getAdById(Long id) {
         PreparedStatement stmt;
         try {
@@ -116,12 +115,18 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-
-    public static void main(String[] args) {
-//        Ad newAd = new MySQLAdsDao(new Config());
-//        System.out.println(newAd);
-
-
+    @Override
+    public List<Ad> findAdByUserId(User user) {
+        String query = "SELECT * FROM ads WHERE user_id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, user.getId());
+            ResultSet rs = stmt.executeQuery();
+//            System.out.println(rs);
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding an ad by id", e);
+        }
     }
 
-}
+    }
