@@ -113,24 +113,38 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public List<Ad> findAdByUserName(String username) {
-        String query = "SELECT ads.* FROM ads JOIN users ON users.id = ads.user_id WHERE users.username = ?";
+    public List<Ad> findAdByUserId(User user) {
+        String query = "SELECT * FROM ads WHERE user_id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.setString(1, username);
+            stmt.setLong(1, user.getId());
             ResultSet rs = stmt.executeQuery();
 //            System.out.println(rs);
             return createAdsFromResults(rs);
         } catch (SQLException e) {
-            throw new RuntimeException("Error finding an ad by username", e);
+            throw new RuntimeException("Error finding an ad by id", e);
         }
     }
 
-    public static void main(String[] args) {
-//        Ad newAd = new MySQLAdsDao(new Config());
-//        System.out.println(newAd);
+//    @Override
+//    public List<Ad> listByUserid(User user) {
+//        PreparedStatement stmt = null;
+//        try {
+//            stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id = ?");
+//            stmt.setLong(1,user.getId());
+//            ResultSet rs = stmt.executeQuery();
+//            return createAdsFromResults(rs);
+//        }catch (SQLException e){
+//            throw new RuntimeException("error finding your ads", e);
+//        }
+//    }
 
+//    public static void main(String[] args) {
+//        MySQLAdsDao adConnection = new MySQLAdsDao(new Config());
+//        List<Ad> adsList = adConnection.findAdByUserId(user) ;
+//        System.out.println(adsList);
+//    }
 
     }
 
-}
+
