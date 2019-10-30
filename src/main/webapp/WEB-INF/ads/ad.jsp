@@ -22,6 +22,14 @@
             <h2>Username: <em>${ad.username}</em></h2>
             <h3>Description: ${ad.description}</h3>
             <p></p>
+
+<%--            delete button added by kyndall--%>
+            <c:if test="${sessionScope.user.username == user.username}">
+                <form action="/delete?postid=${ad.id}" method="POST">
+                    <input type="submit" class="btn btn primary" value="Delete Ad" onclick="return confirm('Are you sure you want to delete this add?')">
+                </form>
+            </c:if>
+
             <p><a href="/ads">Go back and view all ads</a></p>
             <p><a href="/ads/create">Create an ad</a></p>
         </div>

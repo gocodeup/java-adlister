@@ -13,4 +13,6 @@ public interface Ads {
     Ad findAdById(long id);
 
     List<Ad> adsTitleQuery(String q);
+
+    void delete(long id);
 }

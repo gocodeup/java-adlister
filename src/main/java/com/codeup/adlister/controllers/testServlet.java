@@ -9,7 +9,7 @@ package com.codeup.adlister.controllers;
         import java.io.IOException;
 
 @WebServlet(name = "controllers.TestServlet", urlPatterns = "/test")
-public class TestServlet extends HttpServlet {
+ class TestServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String name = DaoFactory.getUsersDao().findById(1L).getUsername();
 
