@@ -3,3 +3,4 @@ target/
 .idea/
 Config.java
 pom.xml
+out/

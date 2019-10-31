@@ -2,6 +2,9 @@ package com.codeup.adlister.models;
 
 import com.codeup.adlister.util.Password;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 public class User {
     private long id;
     private String username;
