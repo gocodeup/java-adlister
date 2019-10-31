@@ -20,6 +20,7 @@
         <div class="container">
             <h1>Title: ${ad.title}</h1>
             <h2>Username: <em>${ad.username}</em></h2>
+            <h2>Category: <em>${ad.category}</em></h2>
             <h3>Description: ${ad.description}</h3>
             <p></p>
 

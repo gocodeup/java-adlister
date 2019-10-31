@@ -18,4 +18,6 @@ public interface Ads {
     void delete(long id);
 
     List<Ad> getAdsByUserId(Long id);
+
+    List<Ad> getAdsByCategory(Long id);
 }
