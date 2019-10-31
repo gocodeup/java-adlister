@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <jsp:include page="partials/head.jsp">
@@ -7,9 +8,19 @@
 </head>
 <body>
     <jsp:include page="partials/navbar.jsp" />
+
     <div class="container">
-        <h1>Please fill in your information.</h1>
+
         <form action="/register" method="post">
+            <h1>Please fill in your information.</h1>
+            <c:set var="error" scope="session" value="${error}"/>
+            <c:set var="badUser" scope="session" value="${badUser}"/>
+            <c:if test="${error == -1}">
+                <div class="form-group">
+
+                    <h3>The user '${badUser}' exists in the system.</h3>
+                </div>
+            </c:if>
             <div class="form-group">
                 <label for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text">
