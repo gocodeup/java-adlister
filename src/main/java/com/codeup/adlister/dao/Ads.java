@@ -12,6 +12,7 @@ public interface Ads {
     // insert a new ad and return the new ad's id
     int insert(Ad ad);
     void addtoAdCategoryTable(int adId, int catId) throws SQLException;
+    // get the details of a certain ad
+    List<Ad> adDetails(int id);
 
-//    void insert(Ad ad);
 }
