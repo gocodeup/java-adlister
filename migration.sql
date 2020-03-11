@@ -65,11 +65,10 @@ CREATE TABLE users
 CREATE TABLE ads
 (
     id          INT UNSIGNED  NOT NULL AUTO_INCREMENT,
-    user_id     INT UNSIGNED  NOT NULL,
+    user_id     INT UNSIGNED NOT NULL,
     title       VARCHAR(240)  NOT NULL,
     description TEXT          NOT NULL,
-    lat         DECIMAL(6, 3) not null,
-    lon         DECIMAL(6, 3) not null,
+#     category TEXT            NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users (id)
         ON DELETE CASCADE
@@ -90,14 +89,21 @@ CREATE TABLE ad_category
 );
 
 
+
 INSERT INTO categories(category)
-VALUES ('Concert'),
-       ('Movie'),
-       ('Charity'),
-       ('Sports'),
-       ('Musical'),
-       ('Arts');
+VALUES ('Cars'),
+       ('Home-Decor'),
+       ('Electronics'),
+       ('Animals'),
+       ('Services'),
+       ('Tools'),
+       ('Furniture'),
+       ('Real-Estate'),
+       ('Jobs'),
+       ('Other');
 
-
-
+# insert into ads (id, user_id, title, description)
+# values (id, user_id, 'car for sale', 'reliable barely used');
+#
+# insert into ad_category(ad_id, category_id) VALUE (1, 1)
 
