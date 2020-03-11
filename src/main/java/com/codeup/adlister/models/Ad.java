@@ -30,15 +30,6 @@ public class Ad {
         this.categories = categories;
     }
 
-    // Constructor for create ad servlet
-    // No id yet
-//    public Ad(int userId, String title, String description) {
-//        this.userId = userId;
-//        this.title = title;
-//        this.description = description;
-//        this.categories = null;
-//    }
-
     public int getId() {
         return id;
     }

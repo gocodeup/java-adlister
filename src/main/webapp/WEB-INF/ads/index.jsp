@@ -18,6 +18,9 @@
             <p>${ad.description}</p>
             <p>${ad.categories}</p>
         </div>
+        <form action = "/adDetails" method="POST">
+            <button name="button" class="edit button" type=submit value="${ad.id}">adDetails</button>
+        </form>
     </c:forEach>
 </div>
 
