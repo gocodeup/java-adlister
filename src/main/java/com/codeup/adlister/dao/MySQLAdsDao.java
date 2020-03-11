@@ -17,9 +17,9 @@ public class MySQLAdsDao implements Ads {
         try {
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
-                config.getUrl(),
-                config.getUsername(),
-                config.getPassword()
+                    config.getUrl(),
+                    config.getUsername(),
+                    config.getPassword()
             );
         } catch (SQLException e) {
             throw new RuntimeException("Error connecting to the database!", e);
@@ -39,31 +39,54 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public Long insert(Ad ad) {
+    public int insert(Ad ad) {
         try {
-            String insertQuery = "INSERT INTO ads(user_id, title, description, cat_id) VALUES (?, ?, ?, ?)";
+            String insertQuery = "INSERT INTO ads (user_id, title, description) VALUES (?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
-            stmt.setLong(1, ad.getUserId());
+            stmt.setInt(1, ad.getUserId());
             stmt.setString(2, ad.getTitle());
             stmt.setString(3, ad.getDescription());
-            stmt.setString(4, ad.getCategory());
+
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
-            return rs.getLong(1);
+            return rs.getInt(1);
         } catch (SQLException e) {
             throw new RuntimeException("Error creating a new ad.", e);
         }
     }
 
+    public void addtoAdCategoryTable(int adId, int catId) throws SQLException {
+        String addCat = "INSERT INTO ad_category (ad_id, category_id) VALUES (? , ?)";
+        PreparedStatement stmtAddCat = connection.prepareStatement(addCat, Statement.RETURN_GENERATED_KEYS);
+        stmtAddCat.setInt(1, adId);
+        stmtAddCat.setInt(2, catId);
+        stmtAddCat.executeUpdate();
+    }
+
     private Ad extractAd(ResultSet rs) throws SQLException {
-        return new Ad(
-            rs.getLong("id"),
-            rs.getLong("user_id"),
-            rs.getString("title"),
-            rs.getString("description"),
-            rs.getString("category")
-        );
+            return new Ad(
+                    rs.getInt(1),
+                    rs.getInt(2),
+                    rs.getString(3),
+                    rs.getString(4),
+                    getCategoryByAdId(rs.getInt(1))
+            );
+    }
+
+    private List<String> getCategoryByAdId(int ad_id) throws SQLException {
+        List<String> categoryList = new ArrayList<>();
+
+        String getCategoryByIDstmt = "SELECT * FROM ad_category WHERE ad_id = ?";
+        PreparedStatement catById = connection.prepareStatement(getCategoryByIDstmt, Statement.RETURN_GENERATED_KEYS);
+        catById.setInt(1, ad_id);
+        catById.executeQuery();
+        ResultSet rs = catById.getResultSet();
+        while(rs.next()){
+            categoryList.add(Integer.toString(rs.getInt("category_id")));
+        }
+        // TODO- do a query to get the categories by adId
+        return categoryList;
     }
 
     private List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
@@ -73,4 +96,6 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
+
+
 }

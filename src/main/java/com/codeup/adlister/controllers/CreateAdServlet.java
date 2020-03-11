@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.Arrays;
+import java.util.List;
 
 @WebServlet(name = "controllers.CreateAdServlet", urlPatterns = "/ads/create")
 public class CreateAdServlet extends HttpServlet {
@@ -24,13 +27,26 @@ public class CreateAdServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User user = (User) request.getSession().getAttribute("user");
+        String title = request.getParameter("title");
+        String description = request.getParameter("description");
+        List<String> categoryList = Arrays.asList(request.getParameterValues("categoryCheckbox"));
         Ad ad = new Ad(
             user.getId(),
-            request.getParameter("title"),
-            request.getParameter("description"),
-            request.getParameter("category")
+            title,
+            description
+//            request.getParameter("category")
         );
-        DaoFactory.getAdsDao().insert(ad);
+//        String checkbox = request.getParameter("checkbox1");
+
+        int newAdId = DaoFactory.getAdsDao().insert(ad);
+        for (String cat : categoryList) {
+            try {
+                DaoFactory.getAdsDao().addtoAdCategoryTable(newAdId, Integer.parseInt(cat));
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+
         response.sendRedirect("/ads");
     }
 }

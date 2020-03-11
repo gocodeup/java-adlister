@@ -1,40 +1,57 @@
 package com.codeup.adlister.models;
 
+import java.util.List;
+
 public class Ad {
-    private long id;
-    private long userId;
+
+    private int id;
+    private int userId;
     private String title;
     private String description;
-    private String category;
+    private List<String> categories;
 
-    public Ad(long id, long userId, String title, String description, String category) {
+    // Default constructor
+    public Ad() {
+    }
+
+    // Constructor for getting from db
+    public Ad(int userId, String title, String description) {
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.categories = null;
+    }
+
+    public Ad(int id, int userId, String title, String description, List<String> categories) {
         this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
-        this.category = category;
+        this.categories = categories;
     }
 
-    public Ad(long userId, String title, String description, String category) {
-        this.userId = userId;
-        this.title = title;
-        this.description = description;
-        this.category = category;
-    }
+    // Constructor for create ad servlet
+    // No id yet
+//    public Ad(int userId, String title, String description) {
+//        this.userId = userId;
+//        this.title = title;
+//        this.description = description;
+//        this.categories = null;
+//    }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
-    public long getUserId() {
+    public int getUserId() {
         return userId;
     }
 
-    public void setUserId(long userId) {
+    public void setUserId(int userId) {
         this.userId = userId;
     }
 
@@ -54,10 +71,22 @@ public class Ad {
         this.description = description;
     }
 
-    public String getCategory(){
-        return category;
+    public List<String> getCategories() {
+        return categories;
     }
-    public void setCategory(String category){
-        this.category = category;
+
+    public void setCategories(List<String> categories) {
+        this.categories = categories;
+    }
+
+    @Override
+    public String toString() {
+        return "Ad{" +
+                "id=" + id +
+                ", userId=" + userId +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", categories=" + categories +
+                '}';
     }
 }
