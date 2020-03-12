@@ -6,6 +6,7 @@ public class DaoFactory {
     private static Ads adsDao;
     private static Users usersDao;
     private static Config config = new Config();
+//    public static Categories categoriesDao;
 
     public static Ads getAdsDao() {
         if (adsDao == null) {
@@ -20,4 +21,5 @@ public class DaoFactory {
         }
         return usersDao;
     }
+
 }
