@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -11,6 +12,7 @@
 <div class="container">
     <div class="row">
     <c:forEach var="ad" items="${ads}">
+
         <div class="col-12">
             <div class="card text-center mx-auto mt-5" style="width: 50%">
                 <div class="card-img">
@@ -22,7 +24,7 @@
                     <div class="card-body-primary">
                         <h3>Posted by: ${user.username}</h3>
                         <h4 class="card-title">${ad.title}</h4>
-                        <em class="card-text">$${ad.price}</em>
+                        <em class="card-text"><fmt:formatNumber value="${ad.price}" type="currency"/></em>
                     </div>
                     <div class="card-body-secondary">
                         <p class="card-text">${ad.description}</p>
@@ -37,7 +39,6 @@
 
             </div>
         </div>
-
     </c:forEach>
 </div>
 </body>

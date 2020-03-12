@@ -13,5 +13,6 @@ public interface Ads {
     void addtoAdCategoryTable(int adId, int catId) throws SQLException;
     // get the details of a certain ad
     List<Ad> adDetails(int id);
+    List<Ad> getUserAds(int id);
 
 }

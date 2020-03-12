@@ -1,4 +1,4 @@
-
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -28,7 +28,7 @@
         <div class="card-body">
             <div class="card-body-primary">
                 <h4 class="card-title">${ad.title}</h4>
-                <em class="card-text">$${ad.price}</em>
+                <em class="card-text"><fmt:formatNumber value="${ad.price}" type="currency"/></em>
             </div>
             <div class="card-body-secondary">
                 <p class="card-text">${ad.description}</p>
