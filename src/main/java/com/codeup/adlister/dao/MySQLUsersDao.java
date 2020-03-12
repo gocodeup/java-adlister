@@ -3,7 +3,6 @@ package com.codeup.adlister.dao;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
-import javax.swing.*;
 import java.sql.*;
 
 public class MySQLUsersDao implements Users {
@@ -61,14 +60,7 @@ public class MySQLUsersDao implements Users {
             rs.next();
             return rs.getInt(1);
         } catch (SQLException e) {
-            if (e.getMessage().contains("Duplicate entry")) {
-                JOptionPane.showMessageDialog(null, "Duplicate User Error");
-
-                return -1;
-            }
-            else {
-                throw new RuntimeException("Error creating new user", e);
-            }
+            throw new RuntimeException("Error creating new user", e);
         }
     }
 
