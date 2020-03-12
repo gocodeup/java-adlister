@@ -2,12 +2,16 @@ package com.codeup.adlister.models;
 
 import com.codeup.adlister.util.Password;
 
+import java.io.File;
+
 public class User {
-    private long id;
+    private int id;
     private String username;
     private String email;
     private String password;
-
+//    private String city;
+//    private String contact;
+//    private File icon;
     public User() {}
 
     public User(String username, String email, String password) {
@@ -16,18 +20,18 @@ public class User {
         setPassword(password);
     }
 
-    public User(long id, String username, String email, String password) {
+    public User(int id, String username, String email, String password) {
         this.id = id;
         this.username = username;
         this.email = email;
         this.password = password;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
