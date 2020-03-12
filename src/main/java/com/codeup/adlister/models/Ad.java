@@ -9,25 +9,28 @@ public class Ad {
     private String title;
     private String description;
     private List<String> categories;
+    private double price;
 
     // Default constructor
     public Ad() {
     }
 
     // Constructor for getting from db
-    public Ad(int userId, String title, String description) {
+    public Ad(int userId, String title, String description, double price) {
         this.userId = userId;
         this.title = title;
         this.description = description;
         this.categories = null;
+        this.price = price;
     }
 
-    public Ad(int id, int userId, String title, String description, List<String> categories) {
+    public Ad(int id, int userId, String title, String description, List<String> categories, double price) {
         this.id = id;
         this.userId = userId;
         this.title = title;
         this.description = description;
         this.categories = categories;
+        this.price = price;
     }
 
     public int getId() {
@@ -68,6 +71,14 @@ public class Ad {
 
     public void setCategories(List<String> categories) {
         this.categories = categories;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 
     @Override

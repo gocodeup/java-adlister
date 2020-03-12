@@ -6,8 +6,9 @@
     </jsp:include>
 </head>
 <body>
+<jsp:include page="../partials/navbar.jsp" />
     <div class="container">
-        <h1>Create a new Ad</h1>
+        <h1 class="text-center mt-5">Create a new Ad</h1>
         <form action="/ads/create" method="post">
             <div class="form-group">
                 <label for="title">Title</label>
@@ -17,45 +18,15 @@
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input class="form-control" type="number" step="0.1" id="price" name="price" />
+            </div>
 
-<%--            <div class="dropdownButton">--%>
-<%--                <button class="btn btn-secondary dropdown-toggle" type="button" id="category" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--%>
-<%--                    Categories--%>
-<%--                </button>--%>
-<%--                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">--%>
-<%--                    <button class="dropdown-item" href="#">cars</button>--%>
-<%--                    <button class="dropdown-item" href="#">home goods</button>--%>
-<%--                    <button class="dropdown-item" href="#">Something else here</button>--%>
-<%--                </div>--%>
-<%--                <br><br><br>--%>
-<%--            </div>--%>
 
-<%--            <div class="dropdownButton">--%>
-<%--                <button class="btn btn-secondary dropdown-toggle" type="button" id="category" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--%>
-<%--                    Categories--%>
-<%--                </button>--%>
-<%--                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">--%>
-<%--                    <button class="dropdown-item" href="#">cars</button>--%>
-<%--                    <button class="dropdown-item" href="#">home goods</button>--%>
-<%--                    <button class="dropdown-item" href="#">Something else here</button>--%>
-<%--                </div>--%>
-<%--                <br><br><br>--%>
-<%--            </div>--%>
-<%--            <div class="form-group">--%>
-<%--                <label for="category">Category</label>--%>
-<%--                <textarea id="category" name="category" class="form-control" type="text"></textarea>--%>
-<%--            </div>--%>
 
-<%--                <p>Please select your category:</p>--%>
-<%--                <input type="radio" id="1" name="category" value="car">--%>
-<%--                <label for="1">Car</label><br>--%>
-<%--                <input type="radio" id="2" name="category" value="home goods">--%>
-<%--                <label for="2">Home Goods</label><br>--%>
-<%--                <input type="radio" id="other" name="category" value="other">--%>
-<%--                <label for="other">Other</label>--%>
-<%--            <input type="submit" class="btn btn-block btn-primary">--%>
 
-            <%--            Category Checkbox--%>
+
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" name="categoryCheckbox" id="Cars" value="1">
                 <label class="form-check-label" for="Cars">Cars</label>
@@ -96,7 +67,7 @@
                 <input class="form-check-input" type="checkbox" name="categoryCheckbox" id="Other" value="10">
                 <label class="form-check-label" for="Other">Other</label>
             </div>
-            <input type="submit" class="btn btn-block btn-primary">
+            <input type="submit" class="btn btn-block btn-info">
         </form>
     </div>
 </body>

@@ -30,13 +30,14 @@ public class CreateAdServlet extends HttpServlet {
         String title = request.getParameter("title");
         String description = request.getParameter("description");
         List<String> categoryList = Arrays.asList(request.getParameterValues("categoryCheckbox"));
+        double price = Double.parseDouble(request.getParameter("price"));
+
         Ad ad = new Ad(
             user.getId(),
             title,
-            description
-//            request.getParameter("category")
+            description,
+            price
         );
-//        String checkbox = request.getParameter("checkbox1");
 
         int newAdId = DaoFactory.getAdsDao().insert(ad);
         for (String cat : categoryList) {
