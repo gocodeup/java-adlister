@@ -22,10 +22,4 @@ public class DaoFactory {
         return usersDao;
     }
 
-//    public static Categories getCategoriesDao() {
-//        if (categoriesDao == null) {
-//            categoriesDao = new MySQLCategoriesDao(config);
-//        }
-//        return categoriesDao;
-//    }
 }

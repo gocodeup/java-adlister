@@ -12,22 +12,33 @@
     <div class="row">
     <c:forEach var="ad" items="${ads}">
         <div class="col-12">
-            <div class="card shadow p-3 mt-5 bg-white rounded text-center" style="width: 100%; height: 40em">
-                <div class="card-body">
-<%--        <div class="col">--%>
-            <h3>posted by ${user.username}</h3>
-            <h2>${ad.title}</h2>
-            <p>${ad.description}</p>
-            <div><h4>Contact Seller:    <a href="mailto:${user.email}" target="_blank" class="notBlue item"><i class="fas fa-envelope fa-2x"></i></a></h4>
-<%--            </div>--%>
-        </div>
+            <div class="card text-center mx-auto mt-5" style="width: 50%">
+                <div class="card-img">
+                    <img class="card-img-top"
+                         src="https://picsum.photos/300/200"
+                         alt="Card image">
                 </div>
+                <div class="card-body">
+                    <div class="card-body-primary">
+                        <h3>Posted by: ${user.username}</h3>
+                        <h4 class="card-title">${ad.title}</h4>
+                        <em class="card-text">$${ad.price}</em>
+                    </div>
+                    <div class="card-body-secondary">
+                        <p class="card-text">${ad.description}</p>
+                    </div>
+                </div>
+                <div class="card-footer text-center">
+                <p class="center-text">Contact Seller:</p>
+                <a href="mailto:${user.email}" target="_blank" class=" item center-text"><i class="fas fa-envelope fa-2x"></i></a>
+            </div>
+
+            </div>
+
             </div>
         </div>
 
     </c:forEach>
 </div>
-</div>
-<%--</div>--%>
 </body>
 </html>

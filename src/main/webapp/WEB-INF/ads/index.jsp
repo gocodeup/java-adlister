@@ -1,3 +1,4 @@
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -5,36 +6,45 @@
     <jsp:include page="../partials/head.jsp">
         <jsp:param name="title" value="Viewing All The Ads" />
     </jsp:include>
+<%--          <jsp:include page="../partials/dropdown.jsp" /> %>--%>
 </head>
 <body>
 <jsp:include page="../partials/navbar.jsp" />
-
+<jsp:include page="../partials/dropdown.jsp" />
 <div class="container">
-    <h1>Here Are all the ads!</h1>
+    <h1 class="text-center mt-5">Here Are all the ads!</h1>
     <div class="row">
-    <c:forEach var="ad" items="${ads}">
+        <c:forEach var="ad" items="${ads}">
         <br>
             <div class="col-12 col-md-4 mb-1">
-                <div class="text-center card shadow p-3 mt-5 mb-5 bg-white rounded" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">${ad.title}</h5>
-                        <%--            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>--%>
-                    <p class="card-text">${ad.description}</p>
-                    <form action = "/adDetails" method="POST">
-                        <button name="button" class="edit button" type=submit value="${ad.id}">adDetails</button>
-                    </form>
-<%--                    <a href="#" class="card-link">Card link</a>--%>
-<%--                    <a href="#" class="card-link">Another link</a>--%>
-                </div>
-                </div>
-<%--            <form action = "/adDetails" method="POST">--%>
-<%--                <button name="button" class="edit button" type=submit value="${ad.id}">adDetails</button>--%>
-<%--            </form>--%>
+
+
+    <div class="card mt-5 text-center">
+        <div class="card-img">
+            <img class="card-img-top"
+                 src="https://picsum.photos/300/200"
+                 alt="Card image">
+        </div>
+        <div class="card-body">
+            <div class="card-body-primary">
+                <h4 class="card-title">${ad.title}</h4>
+                <em class="card-text">$${ad.price}</em>
+            </div>
+            <div class="card-body-secondary">
+                <p class="card-text">${ad.description}</p>
+            </div>
+        </div>
+        <div class="card-footer text-center">
+            <form action = "/adDetails" method="POST">
+                <button name="button" class="edit button btn-info" type=submit value="${ad.id}">adDetails</button>
+            </form>
+        </div>
+    </div>
+
         </div>
     </c:forEach>
     </div>
+    </div>
     <br>
-</div>
-
 </body>
 </html>
