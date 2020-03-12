@@ -60,7 +60,7 @@ public class MySQLAdsDao implements Ads {
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setInt(1, ad.getUserId());
             stmt.setString(2, ad.getTitle());
-
+            stmt.setString(3, ad.getDescription());
             stmt.setDouble(4, ad.getPrice());
 
 
@@ -127,20 +127,5 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error retrieving ad", e);
         }
     }
-    @Override
-    public List<Ad> getUserAds(int id){
-        PreparedStatement stmt;
-        try {
-            stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id = ?");
-            stmt.setInt(1, id);
-            ResultSet rs = stmt.executeQuery();
-            return createAdsFromResults(rs);
-        } catch (SQLException e) {
-            throw new RuntimeException("Error retrieving user ads.", e);
-        }
-    }
-
-
-
 
 }

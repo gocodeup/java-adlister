@@ -16,7 +16,7 @@ public class RegisterServlet extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
@@ -34,12 +34,7 @@ public class RegisterServlet extends HttpServlet {
 
         // create and save a new user
         User user = new User(username, email, password);
-        int wasUserCreated = DaoFactory.getUsersDao().insert(user);
-        if (wasUserCreated == -1) {
-            response.sendRedirect("/register");
-
-        }else{
-            response.sendRedirect("/login");
-        }
+        DaoFactory.getUsersDao().insert(user);
+        response.sendRedirect("/login");
     }
 }
