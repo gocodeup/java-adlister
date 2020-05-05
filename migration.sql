@@ -1,4 +1,6 @@
+
 CREATE DATABASE if not EXISTS adlister_db;
+
 
 USE adlister_db;
 

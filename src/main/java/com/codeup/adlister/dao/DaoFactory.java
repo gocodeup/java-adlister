@@ -1,4 +1,7 @@
 package com.codeup.adlister.dao;
+import controllers.Config;
+
+import controllers.Config;
 
 import models.Config;
 
