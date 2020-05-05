@@ -2,6 +2,7 @@ package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
+import controllers.Config;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -18,7 +19,7 @@ public class MySQLAdsDao implements Ads {
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
                 config.getUrl(),
-                config.getUser(),
+                config.getUsername(),
                 config.getPassword()
             );
         } catch (SQLException e) {
