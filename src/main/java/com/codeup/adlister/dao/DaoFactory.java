@@ -3,6 +3,8 @@ import controllers.Config;
 
 import controllers.Config;
 
+import models.Config;
+
 public class DaoFactory {
     private static Ads adsDao;
     private static Users usersDao;
