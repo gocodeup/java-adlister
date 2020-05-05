@@ -28,9 +28,10 @@ public class ListAdsDao implements Ads {
     }
 
     @Override
-    public Ad pick(int adID) {
+    public Ad adTitlePick(String title) {
         return null;
     }
+
 
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();

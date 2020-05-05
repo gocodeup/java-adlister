@@ -10,5 +10,5 @@ public interface Ads {
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
     //Take a single ad and post information
-    Ad pick(int adID);
+    Ad adTitlePick(String title);
 }
