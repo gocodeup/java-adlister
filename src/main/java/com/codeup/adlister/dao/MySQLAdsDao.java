@@ -143,7 +143,7 @@ public class MySQLAdsDao implements Ads {
             stmt.setString(1, "%" + search + "%");
 
             ResultSet rs = stmt.executeQuery();
-            rs.next();
+
 
             return createAdsFromResults(rs);
         } catch (SQLException e) {
@@ -160,7 +160,7 @@ public class MySQLAdsDao implements Ads {
             stmt.setString(1, "%" + type + "%");
 
             ResultSet rs = stmt.executeQuery();
-            rs.next();
+
 
             return createAdsFromResults(rs);
         } catch (SQLException e) {
