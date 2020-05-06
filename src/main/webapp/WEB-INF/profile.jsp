@@ -25,10 +25,10 @@
 
 <%--for to update user profile--%>
     <div id="userProfileUpdateForm">
-        <form method="POST" action="/update">
+        <form method="POST" action="/profile">
         <input type="hidden" name="updateprofile" value="${profile.id}"/>
         <label>Change Username</label>
-        <input type="text" name="username" value="${user.username}"/>
+        <input type="text" name="edit_username" value="${user.username}"/>
         <br>
         <label>Change Email</label>
         <input type="text" name="email" value="${user.email}"/>
