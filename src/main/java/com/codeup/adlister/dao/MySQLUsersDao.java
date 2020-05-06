@@ -36,7 +36,6 @@ public class MySQLUsersDao implements Users {
     }
 
     @Override
-    public User findByUserId(Long userId) {
         String query = "SELECT * FROM users WHERE id = ? LIMIT 1";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
@@ -63,7 +62,6 @@ public class MySQLUsersDao implements Users {
             throw new RuntimeException("Error creating new user", e);
         }
     }
-
 
     private User extractUser(ResultSet rs) throws SQLException {
         if (! rs.next()) {
