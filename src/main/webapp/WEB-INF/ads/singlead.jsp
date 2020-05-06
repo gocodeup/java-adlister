@@ -24,6 +24,7 @@
             <p>${ad.price}</p>
             <p>${ad.condition}</p>
             <p>${ad.shiny}</p>
+            <p>${ad.type}</p>
 
         </div>
 
