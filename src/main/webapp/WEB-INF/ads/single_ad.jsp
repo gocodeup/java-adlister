@@ -10,22 +10,20 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Single Ad" />
+        <jsp:param name="title" value="Single Ad"/>
     </jsp:include>
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
 <div class="container">
-    <h1>Check out this listing!</h1>
+    <h2><c:out value="${ad.title}"/></h2>
+    <p><c:out value="${ad.user_id}"/></p>
 
-    var="ad" items="${ads}"
         <div class="col-md-6">
-            <h2><c:out value="${ad.title}"/></h2>
-            <p><c:out value="${ad.user_id}"/></p>
             <p><c:out value="${ad.description}"/></p>
+            <a href="/index.jsp">Return to All Ads</a>
         </div>
-
 </div>
 
 </body>
