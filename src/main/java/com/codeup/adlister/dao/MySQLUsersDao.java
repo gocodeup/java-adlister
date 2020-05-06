@@ -36,7 +36,6 @@ public class MySQLUsersDao implements Users {
     }
 
     @Override
-    public User findByUserId(long userId) {
         String query = "SELECT * FROM users WHERE id = ? LIMIT 1";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
