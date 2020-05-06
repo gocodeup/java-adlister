@@ -20,10 +20,10 @@
     <h2><c:out value="${ad.title}"/></h2>
     <p><c:out value="${ad.user_id}"/></p>
 
-        <div class="col-md-6">
-            <p><c:out value="${ad.description}"/></p>
-            <a href="/index.jsp">Return to All Ads</a>
-        </div>
+    <div class="col-md-6">
+        <p><c:out value="${ad.description}"/></p>
+        <a href="/index.jsp">Return to All Ads</a>
+    </div>
 </div>
 
 </body>
