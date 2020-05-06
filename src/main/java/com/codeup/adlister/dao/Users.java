@@ -5,6 +5,15 @@ import com.codeup.adlister.models.User;
 import java.util.List;
 
 public interface Users {
+    // find user by username
     User findByUsername(String username);
+
+    // create a new user
     Long insert(User user);
+
+    // update user information
+    void update(User user);
+
+    // delete us by id
+    void delete(Long id);
 }
