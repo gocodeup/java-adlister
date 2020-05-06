@@ -25,23 +25,23 @@
 
 <%--for to update user profile--%>
     <div id="userProfileUpdateForm">
-        <form method="POST" action="update">
-        <input type="hidden" name="updateProfile" value="${profile.id}"/>
+        <form method="POST" action="/update">
+        <input type="hidden" name="updateprofile" value="${profile.id}"/>
         <label>Change Username</label>
-        <input type="text" name="userName" value="${user.userName}"/>
+        <input type="text" name="username" value="${user.username}"/>
         <br>
         <label>Change Email</label>
-        <input type="text" name="userEmail" value="${user.email}"/>
+        <input type="text" name="email" value="${user.email}"/>
         <br>
         <label>Change Password</label>
-        <input type="text" name="userPassword" value="${user.password}">
+        <input type="text" name="password" value="${user.password}">
             <button type="submit" class="ui-button">Update User Profile</button>
         </form>
     </div>
 
-    <div class="container">
-        <h1>Welcome, ${sessionScope.user.username}!</h1>
-    </div>
+<%--    <div class="container">--%>
+<%--        <h1>Welcome, ${sessionScope.user.username}!</h1>--%>
+<%--    </div>--%>
 
 </body>
 </html>

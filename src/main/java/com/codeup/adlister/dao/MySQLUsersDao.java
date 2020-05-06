@@ -36,11 +36,11 @@ public class MySQLUsersDao implements Users {
     }
 
     @Override
-    public User findByUserId(Long id) {
+    public User findByUserId(Long userId) {
         String query = "SELECT * FROM users WHERE id = ? LIMIT 1";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.setLong(1, id);
+            stmt.setLong(1, userId);
             return extractUser(stmt.executeQuery());
         } catch (SQLException e) {
             throw new RuntimeException("Error finding this user", e);
