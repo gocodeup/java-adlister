@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -6,6 +7,8 @@
     </jsp:include>
 </head>
 <body>
+    <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+
     <div class="container">
         <h1>Create a new Ad</h1>
         <form action="/ads/create" method="post">
@@ -31,7 +34,12 @@
             </div>
             <div class="form-group">
                 <label for="type">Type</label>
-                <input id="type" name="type" class="form-control" type="text">
+                <select id="type" name="type" class="form-control">
+                    <option></option>
+                    <c:forEach var="type" items="${types}">
+                        <option value="${type.type}">${type.type}</option>
+                    </c:forEach>
+                </select>
             </div>
             <input type="submit" class="btn btn-block btn-primary">
         </form>

@@ -2,15 +2,15 @@ package com.codeup.adlister.models;
 
 public class Type {
     private Long id;
-    private String name;
+    private String type;
 
-    public Type(String name) {
-        this.name = name;
+    public Type(Long id, String type) {
+        this.id = id;
+        this.type = type;
     }
 
-    public Type(Long id, String name) {
-        this.id = id;
-        this.name = name;
+    public Type(String type) {
+        this.type = type;
     }
 
     public Long getId() {
@@ -21,11 +21,11 @@ public class Type {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getType() {
+        return type;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setType(String type) {
+        this.type = type;
     }
 }
