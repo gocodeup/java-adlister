@@ -10,6 +10,15 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
+
+    <form action="/search" method="POST" >
+        <div class="form-group">
+            <label for="search">Search</label>
+            <input id="search" name="search" class="form-control" type="search">
+        </div>
+        <input type="submit" class="btn btn-primary btn-block" value="search">
+    </form>
+
     <h1>Here Are all the ads!</h1>
 
     <c:forEach var="ad" items="${ads}">
