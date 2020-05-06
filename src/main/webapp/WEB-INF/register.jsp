@@ -10,6 +10,7 @@
     <div class="container">
         <h1>Please fill in your information.</h1>
         <form action="/register" method="post">
+            <h2>${errorMessage}</h2>
             <div class="form-group">
                 <label for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text">

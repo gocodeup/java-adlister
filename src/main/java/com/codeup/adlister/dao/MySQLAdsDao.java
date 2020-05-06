@@ -2,18 +2,17 @@ package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
+
 import controllers.Config;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 public class MySQLAdsDao implements Ads {
     private Connection connection = null;
-
+    private List<Ad> ads;
     public MySQLAdsDao(Config config) {
         try {
             DriverManager.registerDriver(new Driver());
@@ -56,6 +55,23 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    @Override
+    public Ad adTitlePick(String adTitle) {
+        try {
+            String titleQuery = "SELECT * FROM ads WHERE title = ?";
+            PreparedStatement stmt = connection.prepareStatement(titleQuery);
+            stmt.setString(1, adTitle);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                return extractAd(rs);
+            } else {
+                return null;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving an ad.", e);
+        }
+    }
+
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("id"),
@@ -66,7 +82,7 @@ public class MySQLAdsDao implements Ads {
     }
 
     private List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
-        List<Ad> ads = new ArrayList<>();
+        this.ads = new ArrayList<>();
         while (rs.next()) {
             ads.add(extractAd(rs));
         }
