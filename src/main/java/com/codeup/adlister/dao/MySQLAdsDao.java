@@ -17,9 +17,9 @@ public class MySQLAdsDao implements Ads {
         try {
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
-                config.getUrl(),
-                config.getUsername(),
-                config.getPassword()
+                    config.getUrl(),
+                    config.getUsername(),
+                    config.getPassword()
             );
         } catch (SQLException e) {
             throw new RuntimeException("Error connecting to the database!", e);
@@ -39,7 +39,7 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public Ad getById(long id){
+    public Ad getById(long id) {
         PreparedStatement stmt = null;
         try {
             stmt = connection.prepareStatement("SELECT * FROM ads WHERE id = ?");
@@ -88,17 +88,27 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public int updateAd(Ad update) {
-        return 0;
+    public int updateAd(Ad ad) {
+        String query = "UPDATE ads SET title = ?, description = ? where id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+            stmt.setString(1, ad.getTitle());
+            stmt.setString(2, ad.getDescription());
+            stmt.setInt(3, (int) ad.getId());
+            int count = stmt.executeUpdate();
+            return count;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating ad posting", e);
+        }
     }
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         // must call rs.next on new resultSet before calling this
         return new Ad(
-            rs.getLong("id"),
-            rs.getLong("user_id"),
-            rs.getString("title"),
-            rs.getString("description")
+                rs.getLong("id"),
+                rs.getLong("user_id"),
+                rs.getString("title"),
+                rs.getString("description")
         );
     }
 

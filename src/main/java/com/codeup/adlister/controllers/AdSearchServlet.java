@@ -14,7 +14,7 @@ import java.io.IOException;
 @WebServlet(name = "controllers.AdSearchServlet", urlPatterns = "/search")
 public class AdSearchServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if(request.getSession().getAttribute("user") == null){
+        if (request.getSession().getAttribute("user") == null) {
             response.sendRedirect("/register");
         } else {
             response.sendRedirect("/ads");
@@ -23,7 +23,7 @@ public class AdSearchServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
             IOException {
-        if(request.getSession().getAttribute("user") == null){
+        if (request.getSession().getAttribute("user") == null) {
             response.sendRedirect("/register");
         } else {
             if (DaoFactory.getAdsDao().adTitlePick(request.getParameter("title")) != null) {
@@ -38,5 +38,5 @@ public class AdSearchServlet extends HttpServlet {
             }
         }
 
-}
+    }
 }

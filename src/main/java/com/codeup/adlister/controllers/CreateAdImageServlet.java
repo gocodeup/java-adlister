@@ -19,7 +19,7 @@ public class CreateAdImageServlet extends HttpServlet {
             response.sendRedirect("/login");
             return;
         }
-        // user made request for /ads/images?adid=7
+        // Example: user made request for /ads/images?adid=7
         long adId = Long.parseLong(request.getParameter("adid"));
         request.setAttribute("adid", adId);
         request.getRequestDispatcher("/WEB-INF/ads/adImage.jsp")

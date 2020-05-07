@@ -76,47 +76,26 @@ public class ViewProfileServlet extends HttpServlet {
                     request.getSession().setAttribute("user", user);
                 } else {
                     if (!checkEmail) {
-                        request.setAttribute("emailError", "Email address is already registered. Try another.");
+                        request.setAttribute("emailErrorMessage", "Email address is already registered. Try another.");
                     }
                     if (!checkEmailForm) {
-                        request.setAttribute("emailError", "Email is not formatted correctly.");
+                        request.setAttribute("emailErrorMessage", "Email is not formatted correctly.");
                     }
                     if (!checkUsername) {
-                        request.setAttribute("usernameError", "Username is already taken. Try another.");
+                        request.setAttribute("usernameErrorMessage", "Username is already taken. Try another.");
                     }
                     if (!checkPassword) {
-                        request.setAttribute("passwordError", "Password does not meet criteria. Try another."); // Add to ensure password adheres to criteria
+                        request.setAttribute("passwordErrorMessage", "Password does not meet criteria. Try another."); // Add to ensure password adheres to criteria
                     }
                 }
             } else {
-                request.setAttribute("generalError", "Do not leave any fields blank.");
+                request.setAttribute("generalErrorMessage", "Do not leave any fields blank.");
             }
         } else {
-            request.setAttribute("generalError", "Do not leave any fields blank.");
+            request.setAttribute("generalErrorMessage", "Do not leave any fields blank.");
         }
         response.sendRedirect("/profile");
-
-        // validate input
-//        boolean inputHasErrors = username.isEmpty()
-//                || email.isEmpty()
-//                || password.isEmpty();
-
-//        if (inputHasErrors) {
-//            response.sendRedirect("/register");
-//            return;
-//        }
-//
-//        if (DaoFactory.getUsersDao().findByUsername(username) != null) {
-//            request.getSession().setAttribute("errorMessage", "Username already exists, please choose another one!");
-//            response.sendRedirect("/register");
-//        } else {
-//            request.getSession().removeAttribute("errorMessage");
-
-            // create and save a new user
-//            User user = new User(username, email, password);
-//            DaoFactory.getUsersDao().insert(user);
-//            response.sendRedirect("/login");
-        }
     }
+}
 
 
