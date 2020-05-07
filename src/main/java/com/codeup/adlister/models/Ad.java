@@ -3,20 +3,32 @@ package com.codeup.adlister.models;
 public class Ad {
     private long id;
     private long userId;
-    private String title;
+    private String name;
     private String description;
+    private double price;
+    private String condition;
+    private String shiny;
+    private String type;
 
-    public Ad(long id, long userId, String title, String description) {
+    public Ad(long id, long userId, String name, String description, double price, String condition, String shiny, String type) {
         this.id = id;
         this.userId = userId;
-        this.title = title;
+        this.name = name;
         this.description = description;
+        this.price = price;
+        this.condition = condition;
+        this.shiny = shiny;
+        this.type = type;
     }
 
-    public Ad(long userId, String title, String description) {
+    public Ad(long userId, String name, String description, double price, String condition, String shiny, String type) {
         this.userId = userId;
-        this.title = title;
+        this.name = name;
         this.description = description;
+        this.price = price;
+        this.condition = condition;
+        this.shiny = shiny;
+        this.type = type;
     }
 
     public long getId() {
@@ -35,12 +47,12 @@ public class Ad {
         this.userId = userId;
     }
 
-    public String getTitle() {
-        return title;
+    public String getName() {
+        return name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
@@ -49,5 +61,37 @@ public class Ad {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    public String getCondition() {
+        return condition;
+    }
+
+    public void setCondition(String condition) {
+        this.condition = condition;
+    }
+
+    public String getShiny() {
+        return shiny;
+    }
+
+    public void setShiny(String shiny) {
+        this.shiny = shiny;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 }
