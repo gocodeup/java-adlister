@@ -19,10 +19,9 @@
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
             <h2><c:out value="${ad.title}"/></h2>
-                <%--            <p><c:out value="${ad.user_id}"/></p>--%>
+
             <p><c:out value="${ad.description}"/></p>
-<%--            <a href=“/ads?id=${ad.id}&button=edit” name=“button”>Edit</a>--%>
-<%--            <a href=“/ads?id=${ad.id}&button=delete” name=“button”>Delete</a>--%>
+
             <p>${editDelMessage}</p>
             <a href="/ad?name=${ad.title}">Click here to view more about this ad!</a>
         </div>
