@@ -14,8 +14,9 @@
     </jsp:include>
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<%--display an ad by the designated columns--%>
 <div class="container">
     <h1>Here Are all the ads!</h1>
         <div class="col-md-6">

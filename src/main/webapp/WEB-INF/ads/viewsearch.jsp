@@ -18,7 +18,7 @@
 
    <div class="container">
       <h1>Here are the results for your search</h1>
-
+<%--loop through the ads and display the ones searched for--%>
       <c:forEach var="ad" items="${ads}">
          <div class="col-md-6">
             <a href="/ad?id=${ad.id}"><h2>${ad.name}</h2></a>
