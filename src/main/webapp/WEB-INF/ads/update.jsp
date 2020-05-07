@@ -11,7 +11,7 @@
 
     <div class="container">
         <h1>Update</h1>
-        <form action="/ads/update" method="post">
+        <form action="/update" method="post">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input id="name" name="name" class="form-control" type="text" value="${ad.name}">
@@ -23,10 +23,6 @@
             <div class="form-group">
                 <label for="price">Price</label>
                 <input id="price" name="price" class="form-control" type="text" value="${ad.price}">
-            </div>
-            <div class="form-group">
-                <label for="condition">Condition</label>
-                <input id="condition" name="condition" class="form-control" type="text" value="${ad.condition}">
             </div>
             <div class="form-group">
                 <strong>Shiny</strong><br>

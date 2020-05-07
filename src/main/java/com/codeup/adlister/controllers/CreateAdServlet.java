@@ -15,7 +15,7 @@ import java.io.IOException;
 //get the session and get the attribute of user to check if it is empty. If it is, then redirect to login
 //else forward to create page
 // also set the types attribute and display all types which will be used in the drop on on the jsp
-@WebServlet(name = "controllers.CreateAdServlet", urlPatterns = "/ads/create")
+@WebServlet(name = "controllers.CreateAdServlet", urlPatterns = "/create")
 public class CreateAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") == null) {
@@ -41,14 +41,13 @@ public class CreateAdServlet extends HttpServlet {
                     request.getParameter("name"),
                     request.getParameter("description"),
                     Double.parseDouble(request.getParameter("price")),
-                    request.getParameter("condition"),
                     request.getParameter("shiny"),
                     request.getParameter("type")
             );
             DaoFactory.getAdsDao().insert(ad);
-            response.sendRedirect("/ads");
+            response.sendRedirect("/profile");
         } catch (NumberFormatException e) {
-            response.sendRedirect("/ads/create");
+            response.sendRedirect("/create");
             e.printStackTrace();
         }
     }

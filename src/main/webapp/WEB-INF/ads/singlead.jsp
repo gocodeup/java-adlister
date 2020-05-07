@@ -23,7 +23,6 @@
            <h2>${ad.name}</h2>
             <p>${ad.description}</p>
             <p>${ad.price}</p>
-            <p>${ad.condition}</p>
             <p>${ad.shiny}</p>
             <p>${ad.type}</p>
 

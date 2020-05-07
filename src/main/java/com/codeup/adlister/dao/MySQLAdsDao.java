@@ -43,7 +43,7 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public Long insert(Ad ad) {
-        String insertQuery = "INSERT INTO ads(user_id, name, description, price, `condition`, shiny, type) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        String insertQuery = "INSERT INTO ads(user_id, name, description, price, shiny, type) VALUES (?, ?, ?, ?, ?, ?)";
 
         try {
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
@@ -51,9 +51,8 @@ public class MySQLAdsDao implements Ads {
             stmt.setString(2, ad.getName());
             stmt.setString(3, ad.getDescription());
             stmt.setDouble(4, ad.getPrice());
-            stmt.setString(5, ad.getCondition());
-            stmt.setString(6, ad.getShiny());
-            stmt.setString(7, ad.getType());
+            stmt.setString(5, ad.getShiny());
+            stmt.setString(6, ad.getType());
 
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
@@ -68,17 +67,16 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public void update(Ad ad) {
-        String query = "UPDATE ads SET name = ?, description = ?, price = ?, `condition` = ?, shiny = ?, type = ?  WHERE id = ?";
+        String query = "UPDATE ads SET name = ?, description = ?, price = ?, shiny = ?, type = ?  WHERE id = ?";
 
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, ad.getName());
             stmt.setString(2, ad.getDescription());
             stmt.setDouble(3, ad.getPrice());
-            stmt.setString(4, ad.getCondition());
-            stmt.setString(5, ad.getShiny());
-            stmt.setString(6, ad.getType());
-            stmt.setLong(7, ad.getId());
+            stmt.setString(4, ad.getShiny());
+            stmt.setString(5, ad.getType());
+            stmt.setLong(6, ad.getId());
 
             stmt.executeUpdate();
         } catch (SQLException e) {
@@ -126,7 +124,7 @@ public class MySQLAdsDao implements Ads {
             stmt.setLong(1, id);
 
             ResultSet rs = stmt.executeQuery();
-            rs.next();
+
 
             return createAdsFromResults(rs);
         } catch (SQLException e) {
@@ -173,7 +171,6 @@ public class MySQLAdsDao implements Ads {
                 rs.getString("name"),
                 rs.getString("description"),
                 rs.getDouble("price"),
-                rs.getString("condition"),
                 rs.getString("shiny"),
                 rs.getString("type")
         );
