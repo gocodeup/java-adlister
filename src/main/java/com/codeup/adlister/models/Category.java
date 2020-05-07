@@ -1,7 +1,5 @@
 package com.codeup.adlister.models;
 
-import jdk.jfr.Category;
-
 import java.util.Comparator;
 
 // Category model
@@ -23,20 +21,25 @@ public class Category {
     }
     // Getters and Setters
     public int getId(){
+
         return this.id;
     }
     public String getName(){
+
         return this.name;
     }
     public void setId(int id){
+
         this.id = id;
     }
     public void setName(String name){
+
         this.name = name;
     }
 
     // Method to convert both (int) id and String name "to strings"
     public String toString(){
+
         return "{'+this.id+ ' '+this.name+'}";
     }
 
@@ -48,9 +51,7 @@ public class Category {
             return false;
         } else if (obj instanceof jdk.jfr.Category){
             jdk.jfr.Category cat = (jdk.jfr.Category)obj;
-            if((cat.getName() == null && name == null) || (cat.getName().equals(name))){
-                return true;
-            }
+            return (cat.getName() == null && name == null) || (cat.getName().equals(name));
         }
         return false;
     }
