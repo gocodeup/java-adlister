@@ -41,6 +41,7 @@ public class RegisterServlet extends HttpServlet {
                 || email.isEmpty()
                 || password.isEmpty()
                 ||DaoFactory.getUsersDao().findByUsername(username) != null
+                ||DaoFactory.getUsersDao().findByEmail(email) != null
                 || (!password.equals(passwordConfirmation));
 
 
