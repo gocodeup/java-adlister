@@ -19,6 +19,7 @@ public class Category {
     public Category(String name){
         this.name = name;
     }
+
     // Getters and Setters
     public int getId(){
 
@@ -43,16 +44,16 @@ public class Category {
         return "{'+this.id+ ' '+this.name+'}";
     }
 
-    // Checks object created from constructor
-    public boolean equals(Object obj){
-        if(this == obj){
-            return true;
-        } else if (obj == null){
-            return false;
-        } else if (obj instanceof jdk.jfr.Category){
-            jdk.jfr.Category cat = (jdk.jfr.Category)obj;
-            return (cat.getName() == null && name == null) || (cat.getName().equals(name));
-        }
-        return false;
-    }
+//    // Checks object created from constructor
+//    public boolean equals(Object obj){
+//        if(this == obj){
+//            return true;
+//        } else if (obj == null){
+//            return false;
+//        } else if (obj instanceof jdk.jfr.Category){
+//            jdk.jfr.Category cat = (jdk.jfr.Category)obj;
+//            return (cat.getName() == null && name == null) || (cat.getName().equals(name));
+//        }
+//        return false;
+//    }
 }

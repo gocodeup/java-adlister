@@ -5,7 +5,6 @@ import com.mysql.cj.jdbc.Driver;
 
 import controllers.Config;
 
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,6 +12,7 @@ import java.util.List;
 public class MySQLAdsDao implements Ads {
     private Connection connection = null;
     private List<Ad> ads;
+
     public MySQLAdsDao(Config config) {
         try {
             DriverManager.registerDriver(new Driver());
@@ -85,6 +85,11 @@ public class MySQLAdsDao implements Ads {
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving an ad.", e);
         }
+    }
+
+    @Override
+    public int updateAd(Ad update) {
+        return 0;
     }
 
     private Ad extractAd(ResultSet rs) throws SQLException {

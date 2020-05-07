@@ -16,4 +16,6 @@ public interface Ads {
 
     //Take a single ad and post information
     Ad adTitlePick(String title);
+
+    int updateAd(Ad update);
 }

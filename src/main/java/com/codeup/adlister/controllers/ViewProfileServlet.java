@@ -32,9 +32,13 @@ public class ViewProfileServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String edit = request.getParameter("edit");
-        String delete = request.getParameter("delete");
-        String update = request.getParameter("update");
+        String edit = request.getParameter("editSend");
+        String delete = request.getParameter("deleteSend");
+        String update = request.getParameter("updateId");
+        String username = "";
+        String password = "";
+        String email = "";
+        Boolean validate = false;
 
         if (edit != null) {
             request.getSession().setAttribute("username", edit);
@@ -51,9 +55,9 @@ public class ViewProfileServlet extends HttpServlet {
         }
 
         if (update != null) {
-            String username = request.getParameter("username");
-            String email = request.getParameter("email");
-            Boolean validate = !username.equals(" ") && !email.equals(" ");
+            username = request.getParameter("username");
+            email = request.getParameter("email");
+            validate = !username.equals(" ") && !email.equals(" ");
         }
 
         if (username != null && password != null && email != null) {

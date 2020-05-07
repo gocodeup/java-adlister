@@ -56,7 +56,7 @@ public class MySQLAdImagesDao implements AdImages {
         }
     }
 
-    private AdImage extractAd(ResultSet rs) throws SQLException {
+    private AdImage extractAdImage(ResultSet rs) throws SQLException {
         // must call rs.next on new resultSet before calling this
         return new AdImage(
                 rs.getLong("id"),
