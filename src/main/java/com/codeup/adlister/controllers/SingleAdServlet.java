@@ -17,9 +17,7 @@ public class SingleAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String idStr = request.getParameter("id");
         long id = Long.parseLong(idStr);
-
         Ad ad = DaoFactory.getAdsDao().getById(id);
-
         request.setAttribute("ad", ad);
         System.out.println(ad);
         request.getRequestDispatcher("/WEB-INF/ads/single_ad.jsp").forward(request, response);

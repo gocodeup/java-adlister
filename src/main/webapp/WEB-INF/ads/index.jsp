@@ -11,22 +11,22 @@
 
 <div class="container">
     <h1>Here Are all the ads!</h1>
+
     <form method="POST" action = "/ads" id="search_form">
         <input type="text" name="search" id="search" placeholder="Search">
         <button type="submit">Search</button>
     </form>
 
     <c:forEach var="ad" items="${ads}">
+        <br>
         <div class="col-md-6">
             <h2><c:out value="${ad.title}"/></h2>
-
             <p><c:out value="${ad.description}"/></p>
-
-            <p>${editDelMessage}</p>
-            <a href="/ad?name=${ad.title}">Click here to view more about this ad!</a>
+            <a href="/WEB-INF/single_ad?id=${ad.id}">Click here to view more about this ad!</a>
         </div>
     </c:forEach>
+    <br>
 </div>
-
+<br>
 </body>
 </html>

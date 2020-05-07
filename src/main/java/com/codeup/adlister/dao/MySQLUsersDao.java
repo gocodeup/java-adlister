@@ -4,6 +4,7 @@ import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
 import controllers.Config;
+
 import java.sql.*;
 
 public class MySQLUsersDao implements Users {
@@ -71,7 +72,7 @@ public class MySQLUsersDao implements Users {
     }
 
     @Override
-    public int updateUser(User user){
+    public int updateUser(User user) {
         String query = "UPDATE users SET username = ?, email = ? where id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
@@ -103,7 +104,7 @@ public class MySQLUsersDao implements Users {
     }
 
     private User extractUser(ResultSet rs) throws SQLException {
-        if (! rs.next()) {
+        if (!rs.next()) {
             return null;
         }
         return new User(
@@ -113,5 +114,4 @@ public class MySQLUsersDao implements Users {
                 rs.getString("password")
         );
     }
-
 }

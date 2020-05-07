@@ -14,10 +14,6 @@
     </jsp:include>
 </head>
 <body>
-
-    <p>
-        <c:out value="${ad.id}"></c:out>
-    </p>
-
+    <p><c:out value="${ad.id}"></c:out></p>
 </body>
 </html>
