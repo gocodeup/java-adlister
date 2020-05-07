@@ -15,6 +15,11 @@ public class ListAdsDao implements Ads {
         return ads;
     }
 
+    @Deprecated
+    public Ad getById(long id) {
+        return ads.get((int) id);
+    }
+
     public Long insert(Ad ad) {
         // make sure we have ads
         if (ads == null) {
