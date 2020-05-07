@@ -26,16 +26,22 @@ public class CreateAdServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User user = (User) request.getSession().getAttribute("user");
 
-        Ad ad = new Ad(
-                user.getId(),
-                request.getParameter("name"),
-                request.getParameter("description"),
-                Double.parseDouble(request.getParameter("price")),
-                request.getParameter("condition"),
-                request.getParameter("shiny"),
-                request.getParameter("type")
-        );
-        DaoFactory.getAdsDao().insert(ad);
-        response.sendRedirect("/ads");
+        //validate price to make sure it is a double
+        try {
+            Ad ad = new Ad(
+                    user.getId(),
+                    request.getParameter("name"),
+                    request.getParameter("description"),
+                    Double.parseDouble(request.getParameter("price")),
+                    request.getParameter("condition"),
+                    request.getParameter("shiny"),
+                    request.getParameter("type")
+            );
+            DaoFactory.getAdsDao().insert(ad);
+            response.sendRedirect("/ads");
+        } catch (NumberFormatException e) {
+            response.sendRedirect("/ads/create");
+            e.printStackTrace();
+        }
     }
 }
