@@ -22,7 +22,6 @@ public class MySQLUsersDao implements Users {
         }
     }
 
-
     @Override
     public User findByUsername(String username) {
         String query = "SELECT * FROM users WHERE username = ? LIMIT 1";
@@ -44,6 +43,45 @@ public class MySQLUsersDao implements Users {
             return extractUser(stmt.executeQuery());
         } catch (SQLException e) {
             throw new RuntimeException("Error finding this user", e);
+        }
+    }
+
+    @Override
+    public User findByPassword(String password) {
+        String query = "SELECT * FROM users WHERE password = ? LIMIT 1";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, password);
+            return extractUser(stmt.executeQuery());
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding a user by username", e);
+        }
+    }
+
+    @Override
+    public User findByEmail(String email) {
+        String query = "SELECT * FROM users WHERE email = ? LIMIT 1";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, email);
+            return extractUser(stmt.executeQuery());
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding a user by username", e);
+        }
+    }
+
+    @Override
+    public int updateUser(User user){
+        String query = "UPDATE users SET username = ?, email = ? where id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+            stmt.setString(1, user.getUsername());
+            stmt.setString(2, user.getEmail());
+            stmt.setInt(3, (int) user.getId());
+            int count = stmt.executeUpdate();
+            return count;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating user information", e);
         }
     }
 

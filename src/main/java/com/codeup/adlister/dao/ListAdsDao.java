@@ -37,6 +37,10 @@ public class ListAdsDao implements Ads {
         return null;
     }
 
+    @Override
+    public int updateAd(Ad update) {
+        return 0;
+    }
 
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();

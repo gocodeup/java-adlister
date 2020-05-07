@@ -19,7 +19,6 @@ public class Ad {
         this.description = description;
     }
 
-
     public long getId() {
         return id;
     }
@@ -50,5 +49,9 @@ public class Ad {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String toString(){
+        return "{Id: " + this.id + ", Title: " + this.title + ", Description: " + this.description + "}";
     }
 }
