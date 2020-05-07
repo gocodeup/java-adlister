@@ -8,6 +8,9 @@ public interface Users {
     // find user by username
     User findByUsername(String username);
 
+    // find by email
+    User findByEmail(String email);
+
     // create a new user
     Long insert(User user);
 
