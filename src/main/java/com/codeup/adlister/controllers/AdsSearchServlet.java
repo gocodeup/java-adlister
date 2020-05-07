@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "controllers.AdsSearchServlet", urlPatterns = "/search")
+@WebServlet(name = "controllers.AdsSearchServlet", urlPatterns = "/ads/search")
 public class AdsSearchServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String search = request.getParameter("search");

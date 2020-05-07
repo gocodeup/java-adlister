@@ -68,7 +68,7 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public void update(Ad ad) {
-        String query = "UPDATE ads SET name=?, description = ?, price = ?, condition = ?, shiny = ?, type = ?  WHERE id = ?";
+        String query = "UPDATE ads SET name = ?, description = ?, price = ?, `condition` = ?, shiny = ?, type = ?  WHERE id = ?";
 
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
@@ -80,7 +80,7 @@ public class MySQLAdsDao implements Ads {
             stmt.setString(6, ad.getType());
             stmt.setLong(7, ad.getId());
 
-            stmt.executeUpdate(query);
+            stmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -144,7 +144,6 @@ public class MySQLAdsDao implements Ads {
 
             ResultSet rs = stmt.executeQuery();
 
-
             return createAdsFromResults(rs);
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving ads.", e);
@@ -160,7 +159,6 @@ public class MySQLAdsDao implements Ads {
             stmt.setString(1, "%" + type + "%");
 
             ResultSet rs = stmt.executeQuery();
-
 
             return createAdsFromResults(rs);
         } catch (SQLException e) {
