@@ -3,14 +3,14 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Create a new Ad" />
+        <jsp:param name="title" value="Update Ad" />
     </jsp:include>
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
     <div class="container">
-        <h1>Create a new Ad</h1>
+        <h1>Update</h1>
         <form action="/ads/update" method="post">
             <div class="form-group">
                 <label for="name">Name</label>
@@ -30,18 +30,19 @@
             </div>
             <div class="form-group">
                 <strong>Shiny</strong><br>
-                <label for="yes" class="radio-inline"><input type="radio" class="form-check-input" id="yes" name="shiny" value="Yes"> Yes</label>
-                <label for="no" class="radio-inline"><input type="radio" class="form-check-input" id="no" name="shiny" value="No"> No</label>
+                <label for="yes" class="radio-inline"><input type="radio" class="form-check-input" id="yes" name="shiny" value="Yes" <c:if test="${ad.shiny eq 'Yes'}">checked</c:if>> Yes</label>
+                <label for="no" class="radio-inline"><input type="radio" class="form-check-input" id="no" name="shiny" value="No" <c:if test="${ad.shiny eq 'No'}">checked</c:if>> No</label>
             </div>
             <div class="form-group">
                 <label for="type">Type</label>
                 <select id="type" name="type" class="form-control">
                     <option></option>
                     <c:forEach var="type" items="${types}">
-                        <option value="${type.type}">${type.type}</option>
+                        <option value="${type.type}" <c:if test="${type.type eq ad.type}">selected</c:if>>${type.type}</option>
                     </c:forEach>
                 </select>
             </div>
+            <input type="hidden" name="id" value="${ad.id}">
             <input type="submit" class="btn btn-block btn-primary">
         </form>
     </div>
