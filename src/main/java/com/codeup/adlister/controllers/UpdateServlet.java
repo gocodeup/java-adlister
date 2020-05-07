@@ -19,15 +19,15 @@ public class UpdateServlet extends HttpServlet {
             response.sendRedirect("/login");
             return;
         }
-        String adId = (String) request.getSession().getAttribute("adId");
-        int id = Integer.parseInt(adId);
-        Ad updateAd = DaoFactory.getAdsDao().getById(id);
-        request.setAttribute("adName", updateAd.getTitle());
-        request.setAttribute("adDescription", updateAd.getDescription());
-        request.setAttribute("adId", id);
-        request.setAttribute("categories", DaoFactory.getCategoriesDao().all());
-        request.setAttribute("adCategories", DaoFactory.getCategoriesDao().combined(updateAd));
-        request.getRequestDispatcher("/WEB-INF/update.jsp").forward(request, response);
+//        String adId = (String) request.getSession().getAttribute("adId");
+//        int id = Integer.parseInt(adId);
+//        Ad updateAd = DaoFactory.getAdsDao().getById(id);
+//        request.setAttribute("adName", updateAd.getTitle());
+//        request.setAttribute("adDescription", updateAd.getDescription());
+//        request.setAttribute("adId", id);
+//        request.setAttribute("categories", DaoFactory.getCategoriesDao().all());
+//        request.setAttribute("adCategories", DaoFactory.getCategoriesDao().combined(updateAd));
+//        request.getRequestDispatcher("/WEB-INF/update.jsp").forward(request, response);
     }
 
     @Override
