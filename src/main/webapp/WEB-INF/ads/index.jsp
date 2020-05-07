@@ -25,7 +25,6 @@
 <%--make index of ads links--%>
                 <a href="/ad?id=${ad.id}"><h2>${ad.name}</h2></a>
                 <p>${ad.description}</p>
-                <p><a href="/delete?id=${ad.id}">Delete</a></p>
             </div>
         </c:forEach>
     </div>

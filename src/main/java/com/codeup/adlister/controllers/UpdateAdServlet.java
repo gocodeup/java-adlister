@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet(name = "controllers.UpdateAdServlet", urlPatterns = "/ads/update")
+@WebServlet(name = "controllers.UpdateAdServlet", urlPatterns = "/update")
 public class UpdateAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") == null) {
@@ -38,15 +38,14 @@ public class UpdateAdServlet extends HttpServlet {
                     request.getParameter("name"),
                     request.getParameter("description"),
                     Double.parseDouble(request.getParameter("price")),
-                    request.getParameter("condition"),
                     request.getParameter("shiny"),
                     request.getParameter("type")
             );
 
             DaoFactory.getAdsDao().update(ad);
-            response.sendRedirect("/ads");
+            response.sendRedirect("/profile");
         } catch (NumberFormatException e) {
-            response.sendRedirect("/ads/update?id=" + Long.parseLong(request.getParameter("id")));
+            response.sendRedirect("/update?id=" + Long.parseLong(request.getParameter("id")));
         }
     }
 }
