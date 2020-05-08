@@ -71,17 +71,24 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public Ad adTitlePick(String adTitle) {
+    public List<Ad> getByTitle(String adTitle) {
+        this.ads = new ArrayList<>();
         try {
-            String titleQuery = "SELECT * FROM ads WHERE title = ?";
+            String titleQuery = "SELECT * FROM ads WHERE title LIKE ?";
+
             PreparedStatement stmt = connection.prepareStatement(titleQuery);
-            stmt.setString(1, adTitle);
+            stmt.setString(1, "%"+adTitle+"%");
+            System.out.println(stmt);
+//            stmt.setString(1, "%"+adTitle+"%");
             ResultSet rs = stmt.executeQuery();
-            if (rs.next()) {
-                return extractAd(rs);
-            } else {
-                return null;
-            }
+//            if (rs.next()) {
+                while(rs.next()){
+                    ads.add(extractAd(rs));
+                }
+//            } else {
+//                return null;
+//            }
+            return ads;
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving an ad.", e);
         }

@@ -13,6 +13,7 @@
         <div class="">
         <ul class="nav navbar-nav navbar-right d-flex flex-row">
             <% if (request.getSession().getAttribute("user") != null) { %>
+            <li><a class="text-dark ml-0 mr-2" href="ads/create">Create an Ad</a></li>
             <li ><a class = "text-dark ml-0 mr-2" href = "/profile" > Profile </a ></li >
             <li ><a class = "text-dark ml-1" href = "/logout" > Logout </a ></li >
             <% } else { %>

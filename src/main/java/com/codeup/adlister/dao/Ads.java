@@ -15,5 +15,5 @@ public interface Ads {
     Long insert(Ad ad);
 
     //Take a single ad and post information
-    Ad adTitlePick(String title);
+    List<Ad> getByTitle(String title);
 }

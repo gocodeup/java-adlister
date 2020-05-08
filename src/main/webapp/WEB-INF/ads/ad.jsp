@@ -3,21 +3,22 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Viewing All The Ads" />
+        <jsp:param name="title" value="Viewing Some of The Ads" />
     </jsp:include>
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <h1>Here is the selected ad!</h1>
+    <h1>Here are the results!</h1>
 
-
-        <div>
-            <h2>${ad.title}</h2>
-            <h3>From ${adUser.username}</h3>
-            <p>${ad.description}</p>
+    <c:forEach var="ad" items="${ads}" varStatus="status">
+        <div class="col-md-6">
+            <h2><a href="/ad?name=${ad.title}"><c:out value="${ad.title}"/></a></h2>
+            <h4>By <c:out value="${users[status.index]}"/></h4>
+            <p><c:out value="${ad.description}"/></p>
         </div>
+    </c:forEach>
 </div>
 
 </body>

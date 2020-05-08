@@ -24,10 +24,10 @@ CREATE TABLE ads
 );
 
 INSERT INTO users (username, email, password)
-VALUES ('Jeremy Telhiard', 'jeremy@gmail.com', 'bobbyTables'),
-       ('Mike Greenburg', 'mike@hotmail.com', 'greenBelt'),
-       ('Anthony San Miguel', 'anthony@satx.rr.com', 'secretPassword'),
-       ('John Doe', 'john@yahoo.com', 'password123');
+VALUES ('Jeremy Telhiard', 'jeremy@gmail.com', '$2a$12$OO.hASBeuKXEOVtnD1RXtOdTpBkmAJGF9x.z2aY9IKhQEOjz91YUK'),
+       ('Mike Greenburg', 'mike@hotmail.com', '$2a$12$MIleZjxgndLPLZKvPsgNf.flhDueV3mhsV4WwmEL48wwRXu8prwdC'),
+       ('Anthony San Miguel', 'anthony@satx.rr.com', '$2a$12$OJvtZfs303H3YK.O.Muz6eriFkhqZHgkx2PE9d5Ve614pULuxwzga'),
+       ('John Doe', 'john@yahoo.com', '$2a$12$UTSMlRS6lidTGQWdcLDDROkSF1iM9AlBtI7FG/QwXX/gPMk5ekfNC');
 
 INSERT into ads (user_id, title, description)
 VALUES (1, 'playstation for sale', 'This is a slightly used playstation'),
@@ -35,3 +35,10 @@ VALUES (1, 'playstation for sale', 'This is a slightly used playstation'),
        (2, 'Junior Java Developer Position',
         'Minimum 7 years of experience required. You will be working in the scripting language for Java, JavaScript'),
        (2, 'JavaScript Developer needed', 'Must have strong Java skills');
+
+INSERT INTO categories (name)
+VALUES ('service'),
+        ('item'),
+        ('help wanted');
+
+

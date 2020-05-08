@@ -12,9 +12,9 @@
 </head>
 <body>
     <div class="container">
+        <jsp:include page="partials/message.jsp" />
         <h1>Please fill in your information.</h1>
         <form action="/update" method="post">
-            <h2>${errorMessage}</h2>
             <div class="form-group">
                 <label for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text">
