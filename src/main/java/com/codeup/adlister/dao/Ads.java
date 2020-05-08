@@ -18,4 +18,8 @@ public interface Ads {
     Ad adTitlePick(String title);
 
     int updateAd(Ad update);
+
+    void deleteAd(int deladID);
+
+    Object findById(long id);
 }

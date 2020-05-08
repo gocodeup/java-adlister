@@ -102,6 +102,16 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    @Override
+    public void deleteAd(int deladID) {
+      String query = "DELETE FROM ads WHERE id = ?";
+    }
+
+    @Override
+    public Object findById(long id) {
+        return null;
+    }
+
     private Ad extractAd(ResultSet rs) throws SQLException {
         // must call rs.next on new resultSet before calling this
         return new Ad(
