@@ -14,9 +14,16 @@ import java.io.IOException;
 @WebServlet(name = "controllers.ViewProfileServlet", urlPatterns = "/profile")
 public class ViewProfileServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String delete = request.getParameter("deleteSend");
+
         if (request.getSession().getAttribute("user") == null) {
             response.sendRedirect("/login");
             return;
+        }
+
+        if(delete != null){
+            request.getSession().setAttribute("delAdId", delete);
+            response.sendRedirect("/ad/delete");
         }
         request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
     }

@@ -12,5 +12,21 @@
     <a href="/ads"><h4>Click here to see all current listings!</h4></a>
     <br>
     <a href="/ads/create"><h4>Click here to create an ad of your own!</h4></a>
+
+    <c:forEach var="ad" items="${ads}">
+
+        <div class="col-md-6">
+            <h2>${ad.title}</h2>
+            <p>${ad.description}</p>
+
+            <a href="/ads?id=${ad.id}&button=edit" name="button">Edit</a>
+            <a href="/ads?id=${ad.id}&button=delete" name="button">Delete</a>
+            <p>${editDelMessage}</p>
+        </div>
+
+
+    </c:forEach>
+
+update ads, delete ads, view individual ads
 </body>
 </html>
