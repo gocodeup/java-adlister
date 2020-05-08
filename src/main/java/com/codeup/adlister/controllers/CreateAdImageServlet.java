@@ -22,8 +22,7 @@ public class CreateAdImageServlet extends HttpServlet {
         // Example: user made request for /ads/images?adid=7
         long adId = Long.parseLong(request.getParameter("adid"));
         request.setAttribute("adid", adId);
-        request.getRequestDispatcher("/WEB-INF/ads/adImage.jsp")
-                .forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/ads/adImage.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {

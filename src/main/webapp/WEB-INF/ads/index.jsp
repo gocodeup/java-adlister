@@ -12,10 +12,10 @@
 <div class="container">
     <h1>Here Are all the ads!</h1>
 
-    <form method="POST" action = "/ads" id="search_form">
-        <input type="text" name="search" id="search" placeholder="Search">
-        <button type="submit">Search</button>
-    </form>
+<%--    <form method="POST" action = "/ads" id="search_form">--%>
+<%--        <input type="text" name="search" id="search" placeholder="Search">--%>
+<%--        <button type="submit">Search</button>--%>
+<%--    </form>--%>
 
     <c:forEach var="ad" items="${ads}">
         <br>

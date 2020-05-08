@@ -25,11 +25,9 @@
     <label>Title: </label>
     <input type="text" name="adName" value="${ad.name}"/>
     <br>
-    <br>
 
     <label>Description:</label>
     <input type="text" name="adDescription" value="${ad.description}"/>
-    <br>
     <br>
 
     <button type="submit" class="ui-button">Update Ad</button>
@@ -56,5 +54,6 @@
         <button type="submit" class="ui-button">Update User Profile</button>
     </form>
 </div>
+
 </body>
 </html>
