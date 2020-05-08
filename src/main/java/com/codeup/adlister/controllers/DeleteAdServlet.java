@@ -9,7 +9,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+<<<<<<< HEAD
 @WebServlet("/ad/delete")
+=======
+//@WebServlet("/update")
+>>>>>>> 03a3c4cec1a3cbae0b051bd44adcd79174e763d5
 public class DeleteAdServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

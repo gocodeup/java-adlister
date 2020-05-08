@@ -16,4 +16,7 @@ public interface Users {
     Long insert(User user);
 
     int updateUser(User user);
+
+    List<User> all();
 }
+
