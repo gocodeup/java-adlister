@@ -29,16 +29,26 @@ public class UpdateProfileServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User currentUser = (User) request.getSession().getAttribute("user");
         try {
-            User user = new User(
-                    currentUser.getId(),
-                    request.getParameter("username"),
-                    request.getParameter("email"),
-                    Password.hash(request.getParameter("password"))
-            );
-            System.out.println(user.getId());
-            System.out.println(user.getUsername());
-            DaoFactory.getUsersDao().update(user);
-            request.getSession().setAttribute("user", user);
+            if(!request.getParameter("password").equals("")) {
+                User user = new User(
+                        currentUser.getId(),
+                        request.getParameter("username"),
+                        request.getParameter("email"),
+                        Password.hash(request.getParameter("password"))
+                );
+
+                DaoFactory.getUsersDao().updatePassword(user);
+                request.getSession().setAttribute("user", user);
+            } else {
+                User user = new User(
+                        currentUser.getId(),
+                        request.getParameter("username"),
+                        request.getParameter("email")
+                );
+
+                DaoFactory.getUsersDao().update(user);
+                request.getSession().setAttribute("user", user);
+            }
             response.sendRedirect("/profile");
         } catch (NumberFormatException e) {
             response.sendRedirect("/");

@@ -151,7 +151,7 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public List<Ad> findAdsByType(Type type) {
+    public List<Ad> findAdsByType(String type) {
         String query = "SELECT * FROM ads WHERE type LIKE ?";
 
         try {
