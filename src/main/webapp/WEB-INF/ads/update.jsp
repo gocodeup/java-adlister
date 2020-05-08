@@ -21,6 +21,10 @@
                 <textarea id="description" name="description" class="form-control" type="text">${ad.description}</textarea>
             </div>
             <div class="form-group">
+                <label for="imageURL">Image URL</label>
+                <input id="imageURL" name="imageURL" class="form-control" type="text" value="${ad.imageURL}">
+            </div>
+            <div class="form-group">
                 <label for="price">Price</label>
                 <input id="price" name="price" class="form-control" type="text" value="${ad.price}">
             </div>

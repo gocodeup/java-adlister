@@ -20,12 +20,12 @@
 <div class="container">
     <h1>Here Are all the ads!</h1>
         <div class="col-md-6">
-           <h2>${ad.name}</h2>
+            <img src="${ad.imageURL}">
+            <h2>${ad.name}</h2>
             <p>${ad.description}</p>
             <p>${ad.price}</p>
             <p>${ad.shiny}</p>
             <p>${ad.type}</p>
-
         </div>
 
 </div>
