@@ -11,6 +11,11 @@
 
     <div class="container">
         <h1>Create a new Ad</h1>
+        <c:if test="${not empty error}">
+            <div class="alert alert-danger" role="alert">
+                <c:out value="${error}"/>
+            </div>
+        </c:if>
         <form action="/create" method="post">
             <div class="form-group">
                 <label for="name">Name</label>

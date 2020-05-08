@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.*;
 import java.io.IOException;
 
 //only able to create an ad if there is a session
@@ -31,7 +32,7 @@ public class CreateAdServlet extends HttpServlet {
     // create a new ad object and price will be validated
     //insert the ad and redirect to ads page
     //if validation fails then redirect back to create page
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         User user = (User) request.getSession().getAttribute("user");
 
         //validate price to make sure it is a double
@@ -47,7 +48,9 @@ public class CreateAdServlet extends HttpServlet {
             DaoFactory.getAdsDao().insert(ad);
             response.sendRedirect("/profile");
         } catch (NumberFormatException e) {
-            response.sendRedirect("/create");
+           request.setAttribute("error","Invalid price, please enter a number");
+            request.getRequestDispatcher("/WEB-INF/ads/create.jsp").forward(request, response);
+//            response.sendRedirect("/create");
             e.printStackTrace();
         }
     }
