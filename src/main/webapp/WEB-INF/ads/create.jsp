@@ -19,15 +19,19 @@
         <form action="/create" method="post">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input id="name" name="name" class="form-control" type="text" value="${ad.name}">
+                <input id="name" name="name" class="form-control" type="text">
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                <textarea id="description" name="description" class="form-control" type="text">${ad.description}</textarea>
+                <textarea id="description" name="description" class="form-control" type="text"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="imageURL">Image URL</label>
+                <input id="imageURL" name="imageURL" class="form-control" type="text">
             </div>
             <div class="form-group">
                 <label for="price">Price</label>
-                <input id="price" name="price" class="form-control" type="text" value="${ad.price}">
+                <input id="price" name="price" class="form-control" type="text">
             </div>
             <div class="form-group">
                 <strong>Shiny</strong><br>

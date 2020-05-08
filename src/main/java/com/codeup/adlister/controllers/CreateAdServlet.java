@@ -2,6 +2,7 @@ package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.AdImage;
 import com.codeup.adlister.models.User;
 
 import javax.servlet.ServletException;
@@ -24,6 +25,8 @@ public class CreateAdServlet extends HttpServlet {
             return;
         }
 
+
+
         request.setAttribute("types", DaoFactory.getTypesDao().all());
         request.getRequestDispatcher("/WEB-INF/ads/create.jsp").forward(request, response);
     }
@@ -34,7 +37,6 @@ public class CreateAdServlet extends HttpServlet {
     //if validation fails then redirect back to create page
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         User user = (User) request.getSession().getAttribute("user");
-
         //validate price to make sure it is a double
         try {
             Ad ad = new Ad(
@@ -43,7 +45,8 @@ public class CreateAdServlet extends HttpServlet {
                     request.getParameter("description"),
                     Double.parseDouble(request.getParameter("price")),
                     request.getParameter("shiny"),
-                    request.getParameter("type")
+                    request.getParameter("type"),
+                    request.getParameter("imageURL")
             );
             DaoFactory.getAdsDao().insert(ad);
             response.sendRedirect("/profile");

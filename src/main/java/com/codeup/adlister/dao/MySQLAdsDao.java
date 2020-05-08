@@ -43,7 +43,7 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public Long insert(Ad ad) {
-        String insertQuery = "INSERT INTO ads(user_id, name, description, price, shiny, type) VALUES (?, ?, ?, ?, ?, ?)";
+        String insertQuery = "INSERT INTO ads(user_id, name, description, price, shiny, type, image_url) VALUES (?, ?, ?, ?, ?, ?, ?)";
 
         try {
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
@@ -53,6 +53,7 @@ public class MySQLAdsDao implements Ads {
             stmt.setDouble(4, ad.getPrice());
             stmt.setString(5, ad.getShiny());
             stmt.setString(6, ad.getType());
+            stmt.setString(7, ad.getImageURL());
 
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
@@ -67,7 +68,7 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public void update(Ad ad) {
-        String query = "UPDATE ads SET name = ?, description = ?, price = ?, shiny = ?, type = ?  WHERE id = ?";
+        String query = "UPDATE ads SET name = ?, description = ?, price = ?, shiny = ?, type = ?, image_url = ?  WHERE id = ?";
 
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
@@ -76,7 +77,8 @@ public class MySQLAdsDao implements Ads {
             stmt.setDouble(3, ad.getPrice());
             stmt.setString(4, ad.getShiny());
             stmt.setString(5, ad.getType());
-            stmt.setLong(6, ad.getId());
+            stmt.setString(6, ad.getImageURL());
+            stmt.setLong(7, ad.getId());
 
             stmt.executeUpdate();
         } catch (SQLException e) {
@@ -172,7 +174,8 @@ public class MySQLAdsDao implements Ads {
                 rs.getString("description"),
                 rs.getDouble("price"),
                 rs.getString("shiny"),
-                rs.getString("type")
+                rs.getString("type"),
+                rs.getString("image_url")
         );
     }
 

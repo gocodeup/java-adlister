@@ -1,3 +1,6 @@
+<%@ page import="com.codeup.adlister.dao.DaoFactory" %>
+<%@ page import="com.codeup.adlister.models.Ad" %>
+<%@ page import="java.util.List" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -23,6 +26,7 @@
         <c:forEach var="ad" items="${ads}">
             <div class="col-md-6">
 <%--make index of ads links--%>
+                <img src="${ad.imageURL}">
                 <a href="/ad?id=${ad.id}"><h2>${ad.name}</h2></a>
                 <p>${ad.description}</p>
             </div>

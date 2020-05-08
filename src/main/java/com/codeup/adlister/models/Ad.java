@@ -8,8 +8,9 @@ public class Ad {
     private double price;
     private String shiny;
     private String type;
+    private String imageURL;
 
-    public Ad(long id, long userId, String name, String description, double price, String shiny, String type) {
+    public Ad(long id, long userId, String name, String description, double price, String shiny, String type, String imageURL) {
         this.id = id;
         this.userId = userId;
         this.name = name;
@@ -17,15 +18,17 @@ public class Ad {
         this.price = price;
         this.shiny = shiny;
         this.type = type;
+        this.imageURL = imageURL;
     }
 
-    public Ad(long userId, String name, String description, double price, String shiny, String type) {
+    public Ad(long userId, String name, String description, double price, String shiny, String type, String imageURL) {
         this.userId = userId;
         this.name = name;
         this.description = description;
         this.price = price;
         this.shiny = shiny;
         this.type = type;
+        this.imageURL = imageURL;
     }
 
     public long getId() {
@@ -82,5 +85,13 @@ public class Ad {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 }

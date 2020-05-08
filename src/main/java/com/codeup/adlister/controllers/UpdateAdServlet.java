@@ -39,7 +39,8 @@ public class UpdateAdServlet extends HttpServlet {
                     request.getParameter("description"),
                     Double.parseDouble(request.getParameter("price")),
                     request.getParameter("shiny"),
-                    request.getParameter("type")
+                    request.getParameter("type"),
+                    request.getParameter("imageURL")
             );
 
             DaoFactory.getAdsDao().update(ad);
