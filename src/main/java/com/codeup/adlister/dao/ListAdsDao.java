@@ -33,7 +33,7 @@ public class ListAdsDao implements Ads {
     }
 
     @Override
-    public Ad adTitlePick(String title) {
+    public List<Ad> getByTitle(String title) {
         return null;
     }
 

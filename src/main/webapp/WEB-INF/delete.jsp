@@ -14,7 +14,8 @@
     </jsp:include>
 </head>
 <body>
-
+<jsp:include page="partials/navbar.jsp" />
+<jsp:include page="partials/message.jsp" />
     <p>
         <c:out value="${ad.id}"></c:out>
     </p>

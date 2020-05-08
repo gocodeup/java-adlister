@@ -10,4 +10,12 @@ public interface Users {
     User findByUserId(long userId);
 
     Long insert(User user);
+
+    User findByPassword(String password);
+
+    User findByEmail(String email);
+
+    List<User> all();
+
+    void updateUser(User user);
 }

@@ -10,21 +10,14 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <h1>Here Are all the ads!</h1>
-    <form method="POST" action = "/ads" id="search_form">
-        <input type="text" name="search" id="search" placeholder="Search">
-        <button type="submit">Search</button>
-    </form>
+    <jsp:include page="../partials/message.jsp" />
+    <h1>Here are all the ads!</h1>
 
-    <c:forEach var="ad" items="${ads}">
+    <c:forEach var="ad" items="${ads}" varStatus="status">
         <div class="col-md-6">
-            <h2><c:out value="${ad.title}"/></h2>
-                <%--            <p><c:out value="${ad.user_id}"/></p>--%>
+            <h2><a href="/ad?name=${ad.title}"><c:out value="${ad.title}"/></a></h2>
+            <h4>By <c:out value="${users[status.index]}"/></h4>
             <p><c:out value="${ad.description}"/></p>
-            <a href=“/ads?id=${ad.id}&button=edit” name=“button”>Edit</a>
-            <a href=“/ads?id=${ad.id}&button=delete” name=“button”>Delete</a>
-            <p>${editDelMessage}</p>
-            <a href="/ad?name=${ad.title}">Click here to view more about this ad!</a>
         </div>
     </c:forEach>
 </div>
