@@ -7,8 +7,12 @@
 </head>
 <body>
 <div class="container">
-    <h1>${ad.title}</h1>
-    <p>${ad.description}</p>
+    <h1>Check out this popular listing!</h1>
+    <div>
+        <h2>${ad.title}</h2>
+        <h3>From ${adUser.username}</h3>
+        <p>${ad.description}</p>
+    </div>
 </div>
 </body>
 </html>
