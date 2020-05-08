@@ -74,10 +74,12 @@ VALUES ('service'),
 
 INSERT INTO ad_images (ad_id, path)
 VALUES (1,
-        'https://www.thoughtco.com/thmb/5GsvhhtGRd64_-UOMeYly6ZTquE=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/OriginalSonyPlayStation-5c2d3715c9e77c000192d75e.jpg')
+        'https://www.thoughtco.com/thmb/5GsvhhtGRd64_-UOMeYly6ZTquE=/768x0/filters:no_upscale():max_bytes(150000)' ||
+         ':strip_icc()/OriginalSonyPlayStation-5c2d3715c9e77c000192d75e.jpg');
 
 INSERT INTO ad_category(ad_id, category_id)
 VALUES (1, 2),
        (2, 2),
        (3, 3),
        (4, 3);
+

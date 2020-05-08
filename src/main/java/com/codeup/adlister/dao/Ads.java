@@ -14,12 +14,14 @@ public interface Ads {
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
 
-    //Take a single ad and post information
-    Ad adTitlePick(String title);
+
 
     int updateAd(Ad update);
 
     void deleteAd(int deladID);
 
     Object findById(long id);
+
+    //Take a single ad and post information
+    List<Ad> getByTitle(String title);
 }

@@ -8,7 +8,7 @@ import java.util.List;
 public interface Categories {
     List<Category> all();
 
-    Long insert(int id, int categoryId);
+    int insert(int id, int categoryId);
 
     List<Category> combined(Ad ad);
 

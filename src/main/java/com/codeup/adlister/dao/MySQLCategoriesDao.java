@@ -1,7 +1,7 @@
 package com.codeup.adlister.dao;
-
-import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.Category;
+import com.codeup.adlister.models.Ad;
+
 import controllers.Config;
 
 import java.sql.*;
@@ -11,6 +11,8 @@ import java.util.List;
 
 public class MySQLCategoriesDao implements Categories {
     private Connection connection = null;
+
+
 
     public MySQLCategoriesDao(Config config) {
         try {
@@ -25,9 +27,10 @@ public class MySQLCategoriesDao implements Categories {
         }
     }
 
+
     //    creates function to display all categories
     public List<Category> all() {
-        PreparedStatement stmt = null;
+        PreparedStatement stmt;
         try {
             stmt = connection.prepareStatement("SELECT * FROM categories");
             ResultSet rs = stmt.executeQuery();
@@ -37,14 +40,15 @@ public class MySQLCategoriesDao implements Categories {
         }
     }
 
-    private List<Category> createCategoriesFromResults(ResultSet rs) throws SQLException {
-        List<Category> all = new ArrayList<>();
-        while (rs.next()) {
-            all.add(extractCategory(rs));
-        }
 
-        return all;
+    private List<Category> createCategoriesFromResults(ResultSet rs) throws SQLException {
+        List<Category> categories = new ArrayList<>();
+        while (rs.next()) {
+            categories.add(extractCategory(rs));
+        }
+        return categories;
     }
+
 
     private Category extractCategory(ResultSet rs) throws SQLException {
         return new Category(
@@ -53,20 +57,42 @@ public class MySQLCategoriesDao implements Categories {
         );
     }
 
-    //function to add category
-    public Long insert(int id, int categoryId) { // change category ID later to what we are using
-        try {
-            String query = "INSERT INTO ad_category (category_id, ad_id) VALUES (?, ?)";//change category_id
-            PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
-            stmt.setInt(1, categoryId);//change categoryID
-            stmt.setInt(2, id);
 
-            long count = stmt.executeUpdate();
-            return count;
+    //function to add category
+    public int insert(int id, int categoryId) { // change category ID later to what we are using
+        return 0;
+    }
+
+
+    public List<Category> search(String userInput) {
+        PreparedStatement stmt = null;
+        try {
+            String query = "SELECT * FROM categories WHERE name LIKE ?";
+            String queryWildCard = "%" + userInput + "%";
+
+            stmt = connection.prepareStatement(query);
+            stmt.setString(1, queryWildCard);
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            return createCategoriesFromResults(rs);
         } catch (SQLException e) {
-            throw new RuntimeException("Error inserting new category.", e);
+            throw new RuntimeException("Error retrieving this ad.", e);
         }
     }
+
+//    public Long insert(Ad ad) {
+//        try {
+//            String query = "INSERT INTO ad_category (category_id, ad_id) VALUES (?, ?)";//change category_id
+//            PreparedStatement stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
+//            stmt.setInt(1, categoryId);//change categoryID
+//            stmt.setInt(2, id);
+//            long count = stmt.executeUpdate();
+//            return count;
+//        } catch (SQLException e) {
+//            throw new RuntimeException("Error inserting new category.", e);
+//        }
+//    }
+
 
     // function to display ads with respective categories
     public List<Category> combined(Ad ad) {
@@ -76,11 +102,16 @@ public class MySQLCategoriesDao implements Categories {
             stmt.setLong(1, ad.getId());
             StringBuilder query1;
             ResultSet rs = stmt.executeQuery();
+            rs.next();
             return createCategoriesFromResults(rs);
         } catch (SQLException e) {
             throw new RuntimeException("Error getting categories.", e);
         }
     }
+
+
+
+
 
     public int deleteCategoriesPerAd(int id) {
         String query = "DELETE FROM ad_category WHERE category_id = ?"; //change category_id to whatever we are using_id

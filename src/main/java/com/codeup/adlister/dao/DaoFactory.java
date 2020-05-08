@@ -6,6 +6,7 @@ public class DaoFactory {
     private static Users usersDao;
     private static AdImages adImagesDao;
     private static Categories CategoriesDao;
+
     private static Config config = new Config();
 
     public static Ads getAdsDao() {
