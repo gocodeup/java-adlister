@@ -28,5 +28,5 @@ public interface Ads {
     List<Ad> findAdsByName(String search);
 
     // find ads by Pokemon Type
-    List<Ad> findAdsByType(Type type);
+    List<Ad> findAdsByType(String type);
 }

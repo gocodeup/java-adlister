@@ -89,9 +89,29 @@ public class MySQLUsersDao implements Users {
 
     // will not return anything because it is an update
     // make a String query and execute that query
+    // update only username and email
     @Override
     public void update(User user) {
-        String query = "UPDATE users SET username=?, email=?, password=? WHERE id=?";
+        String query = "UPDATE users SET username = ?, email = ? WHERE id = ?";
+
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, user.getUsername());
+            stmt.setString(2, user.getEmail());
+            stmt.setLong(3, user.getId());
+            stmt.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // will not return anything because it is an update
+    // make a String query and execute that query
+    // able to update password
+    @Override
+    public void updatePassword(User user) {
+        String query = "UPDATE users SET username = ?, email = ?, password = ? WHERE id = ?";
 
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
@@ -99,7 +119,7 @@ public class MySQLUsersDao implements Users {
             stmt.setString(2, user.getEmail());
             stmt.setString(3, user.getPassword());
             stmt.setLong(4, user.getId());
-            stmt.executeUpdate(query);
+            stmt.executeUpdate();
 
         } catch (SQLException e) {
             e.printStackTrace();

@@ -13,13 +13,31 @@
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <%--search form is POST--%>
     <div class="container">
-        <form action="/ads/search" method="POST" >
-            <div class="form-group">
-                <label for="search">Search</label>
-                <input id="search" name="search" class="form-control" type="search">
+        <div class="row">
+            <div class="col-md-8">
+                <form action="/ads/search" method="POST" >
+                        <div class="form-group">
+                            <label for="search">Search</label>
+                            <input id="search" name="search" class="form-control" type="search">
+                        </div>
+                        <input type="submit" class="btn btn-primary btn-block" value="search">
+                </form>
             </div>
-            <input type="submit" class="btn btn-primary btn-block" value="search">
-        </form>
+            <div class="col-md-4">
+                <form action="/ads/filter" method="POST">
+                    <div class="form-group">
+                        <label for="type">Type</label>
+                        <select id="type" name="type" class="form-control">
+                            <option></option>
+                            <c:forEach var="type" items="${types}">
+                                <option value="${type.type}">${type.type}</option>
+                            </c:forEach>
+                        </select>
+                    </div>
+                    <input type="submit" class="btn btn-primary btn-block" value="filter">
+                </form>
+            </div>
+        </div>
 
         <h1>Here Are all the ads!</h1>
 <%--shows all the ads--%>

@@ -19,6 +19,7 @@
             <label for="email">Email</label>
             <input id="email" name="email" class="form-control" type="text" value="${user.email}">
         </div>
+        <p class="small">To change your password, fill out the password fields below. Otherwise, leave blank.</p>
         <div class="form-group">
             <label for="password">Password</label>
             <input id="password" name="password" class="form-control" type="password">

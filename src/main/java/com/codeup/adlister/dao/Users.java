@@ -17,6 +17,9 @@ public interface Users {
     // update user information
     void update(User user);
 
+    // update user information - password
+    void updatePassword(User user);
+
     // delete us by id
     void delete(Long id);
 }
