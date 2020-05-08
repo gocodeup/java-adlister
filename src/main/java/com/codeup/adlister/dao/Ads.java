@@ -2,6 +2,7 @@ package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
 
+import java.sql.ResultSet;
 import java.util.List;
 
 public interface Ads {
@@ -24,4 +25,6 @@ public interface Ads {
 
     //Take a single ad and post information
     List<Ad> getByTitle(String title);
+
+    List<Ad> createAdsFromResults(ResultSet rs);
 }

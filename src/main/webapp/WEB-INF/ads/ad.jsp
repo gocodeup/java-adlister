@@ -15,13 +15,13 @@
 
     <c:forEach var="ad" items="${ads}" varStatus="status">
         <div class="col-md-6">
-            <h2><a href="/ad?name=${ad.title}"><c:out value="${ad.title}"/></a></h2>
+            <h2><a href="/ad?id=${ad.id}"><c:out value="${ad.title}"/></a></h2>
             <h4>By <c:out value="${users[status.index]}"/></h4>
             <p><c:out value="${ad.description}"/></p>
         </div>
     </c:forEach>
 </div>
 <br>
-<a href="/index"><h4>Return to All Ads Page</h4></a>
+<a href="/ads"><h4>Return to All Ads Page</h4></a>
 </body>
 </html>

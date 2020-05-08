@@ -1,6 +1,7 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
+import com.mysql.cj.api.mysqla.result.Resultset;
 import com.mysql.cj.jdbc.Driver;
 
 import controllers.Config;
@@ -53,6 +54,23 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    public List<Ad> getAllById(List<Integer> ids) {
+        List<Ad> results = new ArrayList<>();
+        PreparedStatement stmt;
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM ads WHERE id = ?");
+            for(int i = 0; i <= ids.size()-1; i++) {
+                stmt.setLong(1, ids.get(i));
+                ResultSet rs = stmt.executeQuery();
+                rs.next();
+                results.add(extractAd(rs));
+            }
+            return results;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving ads by id");
+        }
+    }
+
     @Override
     public Long insert(Ad ad) {
         try {
@@ -78,7 +96,6 @@ public class MySQLAdsDao implements Ads {
 
             PreparedStatement stmt = connection.prepareStatement(titleQuery);
             stmt.setString(1, "%"+adTitle+"%");
-            System.out.println(stmt);
 //            stmt.setString(1, "%"+adTitle+"%");
             ResultSet rs = stmt.executeQuery();
 //            if (rs.next()) {
@@ -119,7 +136,7 @@ public class MySQLAdsDao implements Ads {
         return null;
     }
 
-    private Ad extractAd(ResultSet rs) throws SQLException {
+    public Ad extractAd(ResultSet rs) throws SQLException {
         // must call rs.next on new resultSet before calling this
         return new Ad(
                 rs.getLong("id"),
@@ -128,12 +145,16 @@ public class MySQLAdsDao implements Ads {
                 rs.getString("description")
         );
     }
-
-    private List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
+    @Override
+    public List<Ad> createAdsFromResults(ResultSet rs) {
         this.ads = new ArrayList<>();
-        while (rs.next()) {
-            ads.add(extractAd(rs));
+        try {
+            while (rs.next()) {
+                ads.add(extractAd(rs));
+            }
+            return ads;
+        } catch (SQLException e){
+            return this.ads;
         }
-        return ads;
     }
 }

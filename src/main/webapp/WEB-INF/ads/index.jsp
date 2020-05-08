@@ -32,6 +32,7 @@
             <h2><a href="/ad?name=${ad.title}"><c:out value="${ad.title}"/></a></h2>
             <h4>By <c:out value="${users[status.index]}"/></h4>
             <p><c:out value="${ad.description}"/></p>
+            <h5><c:out value="${categories[status.index]}"/></h5>
         </div>
     </c:forEach>
     <br>

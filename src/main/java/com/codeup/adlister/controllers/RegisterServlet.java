@@ -33,9 +33,6 @@ public class RegisterServlet extends HttpServlet {
             errorMessage = "- All fields must be completed! -<br>";
         }
 
-        if (DaoFactory.getUsersDao().findByUsername(username) != null) {
-            request.getSession().setAttribute("errorMessage", "Username already exists, please choose another one!");
-
             if (DaoFactory.getUsersDao().findByUsername(username) != null) {
                 errorMessage = errorMessage + "- Username already exists, please choose another one. -<br>";
             }
@@ -62,5 +59,4 @@ public class RegisterServlet extends HttpServlet {
             response.sendRedirect("/login");
         }
     }
-}
 
