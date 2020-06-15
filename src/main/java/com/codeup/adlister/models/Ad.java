@@ -1,5 +1,7 @@
 package com.codeup.adlister.models;
 
+import com.codeup.adlister.dao.DaoFactory;
+
 public class Ad {
     private long id;
     private long userId;
@@ -50,4 +52,7 @@ public class Ad {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public String displayUser() {return DaoFactory.getUsersDao().findByUserId(getUserId()).getUsername();}
+
 }
