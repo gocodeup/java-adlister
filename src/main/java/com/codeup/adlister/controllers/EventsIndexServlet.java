@@ -13,7 +13,6 @@ public class EventsIndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("ads", DaoFactory.getAdsDao().filterByCategory("Events"));
         request.getRequestDispatcher("/WEB-INF/events/index.jsp").forward(request, response);
-
     }
 
 }
