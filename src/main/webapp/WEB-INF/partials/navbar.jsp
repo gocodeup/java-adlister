@@ -1,13 +1,26 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-dark bg-dark fixed-top navbar-expand-md">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <a class="navbar-brand" href="/ads">Adlister</a>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="/login">Login</a></li>
-            <li><a href="/logout">Logout</a></li>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active"><a class="nav-link" href="/events">Events</a></li>
+            <li class="nav-item active"><a class="nav-link" href="/business">Business Operations</a></li>
+            <li class="nav-item active"><a class="nav-link" href="/post">Create A Post</a></li>
+            <li class="nav-item active"><a class="nav-link" href="/login">Login</a></li>
+            <li class="nav-item active"><a class="nav-link" href="/logout">Logout</a></li>
         </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        </div>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
