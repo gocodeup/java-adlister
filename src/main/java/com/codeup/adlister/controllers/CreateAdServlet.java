@@ -1,6 +1,7 @@
 package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
+import com.codeup.adlister.dao.MySQLAdsDao;
 import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 
@@ -22,7 +23,7 @@ public class CreateAdServlet extends HttpServlet {
             .forward(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         User user = (User) request.getSession().getAttribute("user");
         Ad ad = new Ad(
             user.getId(),
@@ -30,7 +31,15 @@ public class CreateAdServlet extends HttpServlet {
             request.getParameter("description"),
             request.getParameter("category")
         );
+
         DaoFactory.getAdsDao().insert(ad);
-        response.sendRedirect("/ads");
+
+
+//        if ( DaoFactory.getAdsDao().filterByCategory(Ad category)) {
+//            response.sendRedirect("/events");
+//        }
+
+
+//        response.sendRedirect("/ads");
     }
 }

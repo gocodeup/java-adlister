@@ -11,11 +11,9 @@ import java.io.IOException;
 @WebServlet(name = "controllers.EventsIndexServlet", urlPatterns = "/events")
 public class EventsIndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("ads", DaoFactory.getAdsDao().all());
-//        if (request.getSession().getAttribute("events").equals("events")){
-//            response.sendRedirect("/events");
-//        }
+        request.setAttribute("ads", DaoFactory.getAdsDao().filterByCategory("Events"));
         request.getRequestDispatcher("/WEB-INF/events/index.jsp").forward(request, response);
+
     }
 
 }

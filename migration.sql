@@ -30,3 +30,4 @@ CREATE TABLE ads (
 
 
 
+select * from ads;
