@@ -12,7 +12,7 @@
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item active"><a class="nav-link" href="/events">Events</a></li>
             <li class="nav-item active"><a class="nav-link" href="/business">Business Operations</a></li>
-            <li class="nav-item active"><a class="nav-link" href="/post">Create A Post</a></li>
+            <li class="nav-item active"><a class="nav-link" href="/ads/create">Create A Post</a></li>
             <li class="nav-item active"><a class="nav-link" href="/login">Login</a></li>
             <li class="nav-item active"><a class="nav-link" href="/logout">Logout</a></li>
         </ul>

@@ -14,10 +14,17 @@
                 <input id="title" name="title" class="form-control" type="text">
             </div>
             <div class="form-group">
+                <label for="exampleFormControlSelect1">Category</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Events</option>
+                    <option>Business Operations</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
-            <input type="submit" class="btn btn-block btn-primary">
+            <button type="submit" class="btn btn-block btn-primary">Create Post</button>
         </form>
     </div>
 </body>
