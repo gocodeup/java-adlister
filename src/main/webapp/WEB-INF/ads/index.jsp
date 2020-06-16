@@ -20,6 +20,7 @@
             <p>${ad.displayUser()}</p>
         </div>
     </c:forEach>
+
 </div>
 
 </body>
