@@ -37,7 +37,9 @@ public class CreateAdServlet extends HttpServlet {
         //route based on category
         if (ad.getCategory().equals("Events")) {
             response.sendRedirect("/events");
-        } else{
+        } else if (ad.getCategory().equals("Business Operations")) {
+            response.sendRedirect("/business");
+        }else{
             response.sendRedirect("/ads");
         }
 
