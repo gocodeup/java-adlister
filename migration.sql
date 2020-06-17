@@ -35,3 +35,5 @@ WHERE  user_id = 1;
 
 
 select * from ads;
+
+select id from users where username = 'evey';

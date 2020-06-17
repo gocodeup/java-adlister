@@ -21,6 +21,15 @@ public class ViewProfileServlet extends HttpServlet {
             return;
         }
 
+
+        User user = (User) request.getSession().getAttribute("id");
+        if (user == user_id){
+
+        }
+//        if (request.getSession().getAttribute(user.getUsername()){
+//
+//        }
+
         request.setAttribute("ads", DaoFactory.getAdsDao().all());
 
         request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
@@ -28,10 +37,11 @@ public class ViewProfileServlet extends HttpServlet {
 
     //what to look for and how to get there - methods
 
-//    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    }
 //
-//
-//        User user = (User) request.getSession().getAttribute("user");
+
 //        Ad userAd = new Ad(
 //                user.getId(),
 //                request.getParameter("title"),
