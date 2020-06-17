@@ -34,8 +34,6 @@ public class CreateAdServlet extends HttpServlet {
 
         DaoFactory.getAdsDao().insert(ad);
 
-        //route to
-
         //route based on category
         if (ad.getCategory().equals("Events")) {
             response.sendRedirect("/events");
