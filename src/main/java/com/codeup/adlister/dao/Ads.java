@@ -11,6 +11,8 @@ public interface Ads {
     Long insert(Ad ad);
 
     List<Ad> filterByCategory(String category);
+    List<Ad> userSpecificPost(Long user_id);
+
 
 
 }

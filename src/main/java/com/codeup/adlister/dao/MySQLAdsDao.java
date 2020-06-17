@@ -58,6 +58,8 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+
+
     @Override
     public List<Ad> filterByCategory(String category) {
         String query = "SELECT * FROM ads WHERE category = ?";
@@ -69,6 +71,18 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error filtering category", e);
         }
     }
+
+    public List<Ad> userSpecificPost(Long user_id ) {
+        String query = "SELECT * FROM ads where user_id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1,user_id);
+            return createAdsFromResults(stmt.executeQuery());
+        } catch (SQLException e) {
+            throw new RuntimeException("Error filtering category", e);
+        }
+    }
+
 
     //for one specific ad
     private Ad extractAd(ResultSet rs) throws SQLException {

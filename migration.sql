@@ -27,7 +27,11 @@ CREATE TABLE ads (
 
 );
 
+select * from users;
 
+SELECT *
+FROM ads
+WHERE  user_id = 1;
 
 
 select * from ads;
