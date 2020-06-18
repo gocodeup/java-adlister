@@ -9,9 +9,9 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 
-<div id="formAlert" class="alert alert-danger hide collapse" role="alert">
+<div id="formTitleAlert" class="alert alert-dark hide collapse " role="alert">
     <a class="close" data-dismiss="alert">×</a>
-    <strong>Error!</strong> Please make sure all fields are filled out before creating a post!
+    <strong>Error!</strong> Please make sure you have a title for your post (: .
 </div>
 
 
@@ -35,7 +35,7 @@
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
-            <input type="submit" class="btn btn-block btn-primary" value="create a Post">
+            <input id="btn" type="submit" class="btn btn-block btn-primary" value="create a Post">
         </form>
     </div>
 
@@ -54,8 +54,15 @@
             var title = $(this).find('input[name="title"]');
             if ($.trim(title.val()) === "") {
                 e.preventDefault();
-                $("#formAlert").slideDown(400);
+                $("#formTitleAlert").slideDown(400);
+
             }
+        });
+
+        $('#btn').click(function () {
+            setTimeout(function () {
+                $('#formTitleAlert').hide('fade');
+            }, 2000);
         });
 
         $(".alert").find(".close").on("click", function (e) {

@@ -8,9 +8,9 @@
 <body>
     <jsp:include page="partials/navbar.jsp" />
 
-    <div id="formTitleAlert" class="alert alert-dark hide collapse " role="alert">
+    <div id="formUserAlert" class="alert alert-dark hide collapse " role="alert">
         <a class="close" data-dismiss="alert">×</a>
-        <strong>Error!</strong> Please make sure you have a title for your post (: .
+        <strong>Error!</strong> Please make sure you create a cool username (: .
     </div>
 
     <div id="formEmailWarning" class="alert alert-warning hide collapse " role="alert">
@@ -67,7 +67,7 @@
                 var username = $(this).find('input[name="username"]');
                 if ($.trim(username.val()) === "") {
                     e.preventDefault();
-                    $("#formTitleAlert").slideDown(400);
+                    $("#formUserAlert").slideDown(400);
 
                 }else var email =$(this).find('input[name="email"]');
                 if ($.trim(email.val()) === "") {
@@ -94,7 +94,7 @@
 
             $('#btn').click(function () {
                 setTimeout(function () {
-                    $('#formTitleAlert').hide('fade');
+                    $('#formUserAlert').hide('fade');
                 }, 2000);
             });
 

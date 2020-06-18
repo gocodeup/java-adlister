@@ -26,7 +26,7 @@
                 <input id="password" name="password" class="form-control" type="password">
             </div>
           
-            <input type="submit" class="btn btn-primary btn-block" value="Log In">
+            <input id="btn" type="submit" class="btn btn-primary btn-block" value="Log In">
         </form>
     </div>
 
@@ -49,7 +49,12 @@
                 if ($.trim(username.val()) === "") {
                     e.preventDefault();
                     $("#formAlert").slideDown(400);
+                }else var password =$(this).find('input[name="password"]');
+                if ($.trim(password.val()) === "") {
+                    e.preventDefault();
+                    $("#formAlert").slideDown(400);
                 }
+
             });
 
             $(".alert").find(".close").on("click", function (e) {
@@ -57,7 +62,16 @@
                 e.preventDefault();
                 $(this).closest(".alert").slideUp(400);
             });
+
+            $('#btn').click(function () {
+                setTimeout(function () {
+                    $('#formAlert').hide('fade');
+                }, 2000);
+            });
+
         });
+
+
     </script>
 </body>
 </html>
