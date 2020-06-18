@@ -7,9 +7,16 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+
+    <div id="formAlert" class="alert alert-warning hide collapse" role="alert">
+        <a class="close" data-dismiss="alert">×</a>
+        <strong>Warning!</strong> Cannot login without credentials.
+    </div>
+
     <div class="container">
         <h1>Please Log In</h1>
-        <form action="/login" method="POST">
+
+        <form name="username" action="/login" method="POST">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text">
@@ -22,5 +29,27 @@
             <input type="submit" class="btn btn-primary btn-block" value="Log In">
         </form>
     </div>
+
+    <script>
+
+        $(document).ready(function () {
+
+
+            $('form[name="username"]').on("submit", function (e) {
+
+                var username = $(this).find('input[name="username"]');
+                if ($.trim(username.val()) === "") {
+                    e.preventDefault();
+                    $("#formAlert").slideDown(400);
+                }
+            });
+
+            $(".alert").find(".close").on("click", function (e) {
+                e.stopPropagation();
+                e.preventDefault();
+                $(this).closest(".alert").slideUp(400);
+            });
+        });
+    </script>
 </body>
 </html>
