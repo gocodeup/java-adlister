@@ -17,7 +17,7 @@
 
     <div class="container">
         <h1>Create a new Ad</h1>
-        <form name="register" action="/ads/create" method="post">
+        <form name="title" action="/ads/create" method="post">
             <div class="form-group">
                 <label for="title">Title</label>
                 <input id="title" name="username" class="form-control" type="text">
@@ -56,7 +56,7 @@
     $(document).ready(function () {
         // Run this code only when the DOM (all elements) are ready
 
-        $('form[name="register"]').on("submit", function (e) {
+        $('form[name="title"]').on("submit", function (e) {
             // Find all <form>s with the name "register", and bind a "submit" event handler
 
             // Find the <input /> element with the name "username"
