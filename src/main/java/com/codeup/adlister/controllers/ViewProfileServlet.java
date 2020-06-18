@@ -21,11 +21,11 @@ public class ViewProfileServlet extends HttpServlet {
             return;
         }
 
-
-        User user = (User) request.getSession().getAttribute("id");
-        if (user == user_id){
-
-        }
+//
+//        User user = (User) request.getSession().getAttribute("id");
+//        if (user == user_id){
+//
+//        }
 //        if (request.getSession().getAttribute(user.getUsername()){
 //
 //        }
