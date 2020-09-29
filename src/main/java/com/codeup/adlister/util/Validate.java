@@ -5,8 +5,4 @@ public class Validate {
         int length = input.length();
         return length >= min && length <= max;
     }
-
-    public static boolean dyl() {
-        return false;
-    }
 }
