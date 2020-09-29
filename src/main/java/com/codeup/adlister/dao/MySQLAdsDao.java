@@ -2,6 +2,7 @@ package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
+import config.Config;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -10,20 +11,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MySQLAdsDao implements Ads {
-    private Connection connection = null;
-
+public class MySQLAdsDao extends MySQLDao implements Ads {
     public MySQLAdsDao(Config config) {
-        try {
-            DriverManager.registerDriver(new Driver());
-            connection = DriverManager.getConnection(
-                config.getUrl(),
-                config.getUser(),
-                config.getPassword()
-            );
-        } catch (SQLException e) {
-            throw new RuntimeException("Error connecting to the database!", e);
-        }
+        super(config);
     }
 
     @Override
