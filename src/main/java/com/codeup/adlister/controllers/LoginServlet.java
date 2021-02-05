@@ -3,6 +3,7 @@ package com.codeup.adlister.controllers;
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.User;
 import com.codeup.adlister.util.Password;
+import org.mindrot.jbcrypt.BCrypt;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,13 +22,15 @@ public class LoginServlet extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         User user = DaoFactory.getUsersDao().findByUsername(username);
 
         if (user == null) {
-            response.sendRedirect("/login");
+            request.setAttribute("error","Invalid Username/password");
+//            response.sendRedirect("/login");
+            request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
             return;
         }
 
@@ -37,7 +40,9 @@ public class LoginServlet extends HttpServlet {
             request.getSession().setAttribute("user", user);
             response.sendRedirect("/profile");
         } else {
-            response.sendRedirect("/login");
+            request.setAttribute("error","Invalid Username/password");
+            request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+
         }
     }
 }
