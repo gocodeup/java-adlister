@@ -7,10 +7,26 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+    <a href="/update"><h4>Click here to update ads you posted, or update your login data</h4></a>
+    <br>
+    <a href="/ads"><h4>Click here to see all current listings!</h4></a>
+    <br>
+    <a href="/ads/create"><h4>Click here to create an ad of your own!</h4></a>
 
-    <div class="container">
-        <h1>Welcome, ${sessionScope.user.username}!</h1>
-    </div>
+    <c:forEach var="ad" items="${ads}">
 
+        <div class="col-md-6">
+            <h2>${ad.title}</h2>
+            <p>${ad.description}</p>
+
+            <a href="/ads?id=${ad.id}&button=edit" name="button">Edit</a>
+            <a href="/ads?id=${ad.id}&button=delete" name="button">Delete</a>
+            <p>${editDelMessage}</p>
+        </div>
+
+
+    </c:forEach>
+
+update ads, delete ads, view individual ads
 </body>
 </html>

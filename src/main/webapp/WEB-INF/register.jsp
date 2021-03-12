@@ -7,7 +7,9 @@
 </head>
 <body>
     <jsp:include page="partials/navbar.jsp" />
+
     <div class="container">
+        <jsp:include page="partials/message.jsp" />
         <h1>Please fill in your information.</h1>
         <form action="/register" method="post">
             <div class="form-group">
