@@ -7,7 +7,7 @@ import java.io.IOException;
 
 @WebServlet( name = "HelloWorldServlet", urlPatterns = "/hello")
 public class HelloWorldServlet extends HttpServlet {
-
+//added
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res)throws IOException, ServletException {
         String name = req.getParameter("name");
