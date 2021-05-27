@@ -41,11 +41,11 @@ What is 1+1? <%= 1+1 %> would be the answer.
 <%--    <p>You really should go find stuff</p>--%>
 <%--    <a href="http://www.google.com">Google</a>--%>
 <%--</c:if>--%>
-
+<ul>
 <c:forEach items = "${numbers}" var="number">
 <li>Item number ${number}</li>
 </c:forEach>
-
+</ul>
 <c:choose>
     <c:when test ="${age <= 10}">
         <a href="http://www.neopets.com/"> Neopets for the win!</a>
