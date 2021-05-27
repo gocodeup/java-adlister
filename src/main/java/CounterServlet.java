@@ -8,7 +8,6 @@ import java.io.IOException;
 @WebServlet( name = "CounterServlet", urlPatterns = "/count")
 public class CounterServlet extends HttpServlet {
     int count  = 0;
-//added
     protected void doGet(HttpServletRequest req, HttpServletResponse res)throws IOException, ServletException {
       String reset = req.getParameter("reset");
       if(reset !=  null){
