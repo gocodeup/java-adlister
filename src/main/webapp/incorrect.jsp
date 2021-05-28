@@ -2,23 +2,15 @@
   Created by IntelliJ IDEA.
   User: Hunter
   Date: 5/28/21
-  Time: 10:13 AM
+  Time: 12:13 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title> CSS </title>
-
+    <title>Incorrect</title>
 </head>
-<style>
-    body {
-        background: cornflowerblue;
-        color: white;
-    }
-
-</style>
 <body>
-
+<h1> You Lose! </h1>
 </body>
 </html>
