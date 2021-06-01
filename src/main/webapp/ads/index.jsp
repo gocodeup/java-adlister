@@ -13,10 +13,10 @@
 </head>
 <body>
 
-<c:forEach var="ad" items="${ads}">
-    <div class="ad">
-        <h2>${ad.title}</h2>
-        <p>${ad.description}</p>
+<c:forEach var="ads" items="${ads}">
+    <div class="ads">
+        <h2>${ads.title}</h2>
+        <p>Description: ${ads.description}</p>
     </div>
 </c:forEach>
 
