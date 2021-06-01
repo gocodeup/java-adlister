@@ -17,10 +17,12 @@ public class GuessServlet extends HttpServlet {
         String randomNumString = Integer.toString(random);
 
          if(guess.equalsIgnoreCase(randomNumString)){
-            response.sendRedirect("/correct.jsp");
+            response.sendRedirect("/correct");
         }else if(!guess.equalsIgnoreCase(randomNumString)){
-            response.sendRedirect("/incorrect.jsp");
+            response.sendRedirect("/incorrect");
         }
+    request.setAttribute("guessResult", guess);
+    request.getRequestDispatcher("/guessResult.jsp").forward(request, response);
     }
 @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
