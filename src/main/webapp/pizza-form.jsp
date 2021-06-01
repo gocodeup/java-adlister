@@ -25,37 +25,37 @@
 <form action="/pizza-order.jsp" method="POST">
     Crust :
     <select name="typeOfCrust" id="crusts">
-        <option value="crusts">Crust #1</option>
-        <option value="crusts">Crust #2</option>
-        <option value="crusts">Crust #3</option>
+        <option value="crusts">Thin</option>
+        <option value="crusts">Cheese</option>
+        <option value="crusts">Stuffed</option>
     </select><br><hr>
 
     Sauce :
     <select name="typeOfSauce" id="sauce">
-        <option value="sauce">Sauce #1</option>
-        <option value="sauce">Sauce #2</option>
-        <option value="sauce">Sauce #3</option>
+        <option value="sauce">Mariana</option>
+        <option value="sauce">Alfredo</option>
+        <option value="sauce">Meat</option>
     </select><br><hr>
 
     Sizing :
     <select name="typeOfSizes" id="size">
-        <option value="size">Size Option #1</option>
-        <option value="size">Size Option #2</option>
-        <option value="size">Size Option #3</option>
+        <option value="size">6 in</option>
+        <option value="size">8 in</option>
+        <option value="size">10 in</option>
     </select><br><hr>
 
     Toppings :
     <input type="checkbox" id="one" name="1">
-    <label for="one">1</label>
+    <label for="one">Pepperoni</label>
 
     <input type="checkbox" id="two" name="2">
-    <label for="two">2</label>
+    <label for="two">Sausage</label>
 
     <input type="checkbox" id="three" name="3">
-    <label for="three">3</label>
+    <label for="three">Pineapple</label>
 
     <input type="checkbox" id="four" name="4">
-    <label for="four">4</label><br><hr>
+    <label for="four">Ham</label><br><hr>
 
     <p></p>
     Delivery? No problem! Please input an address
