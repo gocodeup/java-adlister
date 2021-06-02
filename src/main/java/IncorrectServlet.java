@@ -9,17 +9,11 @@ import java.io.IOException;
 @WebServlet(name="IncorrectServlet", urlPatterns = "/incorrect")
 
 public class IncorrectServlet extends HttpServlet {
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
-        request.setAttribute("guessResult", "Incorrect!");
-        request.getRequestDispatcher("/guessResult.jsp").forward(request, response);
-
-    }
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.sendRedirect("/guessResult.jsp");
+        request.setAttribute("guessResult","incorrect");
+        request.getRequestDispatcher("/guessResult.jsp").forward(request, response);
 
     }
 }

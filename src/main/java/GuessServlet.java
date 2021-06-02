@@ -21,12 +21,13 @@ public class GuessServlet extends HttpServlet {
         }else if(!guess.equalsIgnoreCase(randomNumString)){
             response.sendRedirect("/incorrect");
         }
-    request.setAttribute("guessResult", guess);
-    request.getRequestDispatcher("/guessResult.jsp").forward(request, response);
+//    request.setAttribute("guessResult", guess);
+//    request.getRequestDispatcher("/guessResult.jsp").forward(request, response);
     }
+
 @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.sendRedirect("/guess.jsp");
 
+    request.getRequestDispatcher("/guess.jsp").forward(request, response);
     }
 }
