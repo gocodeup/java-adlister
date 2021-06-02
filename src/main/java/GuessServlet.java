@@ -29,5 +29,6 @@ public class GuessServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     request.getRequestDispatcher("/guess.jsp").forward(request, response);
+
     }
 }
