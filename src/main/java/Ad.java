@@ -11,6 +11,9 @@ public class Ad {
         this.description = description;
     }
 
+    public Ad(int id, String title, String description) {
+    }
+
     public long getId() {
         return id;
     }

@@ -34,6 +34,11 @@ public class MySQLAdsDao implements Ads{
         }
     }
 
+    @Override
+    public void insert(Ad ad) {
+
+    }
+
     private Ad takeAd(ResultSet resultSet) throws SQLException {
         return new Ad (
                 resultSet.getInt("id"),
@@ -52,7 +57,7 @@ public class MySQLAdsDao implements Ads{
         return products;
     }
 
-    @Override
+
     public void insertAd(Ad ad) {
         try {
             Statement statement = connection.createStatement();
