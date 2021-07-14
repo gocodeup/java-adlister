@@ -1,4 +1,4 @@
-- Ad show page - David
+- Ad show page - Jose
 - Search
 - Show user’s ads on their profile page
 - Ensure usernames are unique - Matt
