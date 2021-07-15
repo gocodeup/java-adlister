@@ -1,12 +1,14 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.User;
+import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
+import java.util.List;
 
 public class MySQLUsersDao implements Users {
-    private Connection connection;
+    private static Connection connection;
 
     public MySQLUsersDao(Config config) {
         try {
@@ -61,6 +63,18 @@ public class MySQLUsersDao implements Users {
             rs.getString("email"),
             rs.getString("password")
         );
+    }
+
+    public static List<Ad> findAdByUsername(User username) {
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id LIKE ?");
+            stmt.setLong(1, username.getId());
+            ResultSet rs = stmt.executeQuery();
+            return MySQLAdsDao.createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving your ads.", e);
+        }
     }
 
 }
