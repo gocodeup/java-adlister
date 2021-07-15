@@ -13,9 +13,22 @@
     <h1>Here Are all the ads!</h1>
 
     <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
-            <h2>${ad.title}</h2>
-            <p>${ad.description}</p>
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                        <%--                <h2>THIS IS AN AD</h2>--%>
+                    <h2>${ad.title}</h2>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">${ad.description}</p>
+                        <%--                <p>AD DESCRIPTION</p>--%>
+                </div>
+                <form method="post" action="/ads/delete">
+                    <button type="submit" name="id" value="${ad.id}" class="btn btn-primary">
+                        Delete
+                    </button>
+                </form>
+            </div>
         </div>
     </c:forEach>
 </div>
