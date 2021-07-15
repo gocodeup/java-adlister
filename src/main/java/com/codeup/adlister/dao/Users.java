@@ -7,4 +7,6 @@ public interface Users {
     User findByEmail(String email);
 
     Long insert(User user);
+
+    User findByUserId(long id);
 }
