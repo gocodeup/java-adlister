@@ -47,7 +47,19 @@ public class MySQLAdsDao implements Ads {
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
         } catch (SQLException e) {
-            throw new RuntimeException("Error retrieving all ads.", e);
+            throw new RuntimeException("Error retrieving all ads for user.", e);
+        }
+    }
+    public List<Ad> allInCategory(long categoryId) {
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM ads inner join ads_categories on ads.id = ads_categories.ads_id inner join categories on ads_categories.categories_id = categories.id WHERE categories.id = ?");
+            stmt.setLong(1, categoryId);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads in category.", e);
         }
     }
 
@@ -101,14 +113,31 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public void deleteAd(Long adId) {
-        String deleteQuery = "DELETE FROM ads WHERE id = ?;";
+
+        String deleteQuery = "DELETE FROM ads_categories WHERE ads_id = ?;";
         try {
             PreparedStatement stmt = connection.prepareStatement(deleteQuery);
             stmt.setLong(1, adId);
             stmt.executeUpdate();
+
+
+            deleteQuery = "DELETE FROM ads WHERE id = ?;";
+            try {
+                stmt = connection.prepareStatement(deleteQuery);
+                stmt.setLong(1, adId);
+                stmt.executeUpdate();
+            } catch (SQLException e) {
+                throw new RuntimeException("Cannot delete ad", e);
+            }
+
+
         } catch (SQLException e) {
             throw new RuntimeException("Cannot delete ad", e);
         }
+
+
+
+
     }
 
 
