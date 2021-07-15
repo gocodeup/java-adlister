@@ -55,20 +55,26 @@ public class RegisterServlet extends HttpServlet {
             userConflicts = true;
         }
 
-        String usernameExistMessage = "Username already exists, try again";
-        String emailExistMessage = "This email already exist with another user, try again";
+        String usernameExistMessage = "<script>alert('The Username already exists, try again');</script>";
+        String emailExistMessage = "<script>alert('The email already exist with another user, try again');</script>";
+        String emaiNUsernameExistMessage = "<script>alert('The username and email already exist with another user, try again');</script>";
 
         if (userConflicts) {
             User user = new User(username, email, password);
             DaoFactory.getUsersDao().insert(user);
             response.sendRedirect("/login");
         } else if (!usernameNotExist && !emailNotExist) {
+// <<<<<<< hannah-paterka
             out.println("<script>");
             out.println("alert('This username and email is already in use, please try different ones.');");
             out.println("window.location.replace('" + "/register" + "');");
             out.println("</script>");
-            request.setAttribute("usernameExistMessage", usernameExistMessage);
-            request.setAttribute("emailExistMessage", emailExistMessage);
+//             request.setAttribute("usernameExistMessage", usernameExistMessage);
+//             request.setAttribute("emailExistMessage", emailExistMessage);
+// =======
+            request.setAttribute("emaiNUsernameExistMessage", emaiNUsernameExistMessage);
+//             request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
+// >>>>>>> master
         } else if (!emailNotExist) {
             out.println("<script>");
             out.println("alert('This email is already in use, please try another.');");
