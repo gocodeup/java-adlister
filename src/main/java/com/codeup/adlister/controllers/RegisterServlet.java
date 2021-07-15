@@ -1,14 +1,13 @@
 package com.codeup.adlister.controllers;
-
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.User;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet(name = "controllers.RegisterServlet", urlPatterns = "/register")
 public class RegisterServlet extends HttpServlet {
@@ -25,9 +24,12 @@ public class RegisterServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String passwordConfirmation = request.getParameter("confirm_password");
+        PrintWriter out = response.getWriter();
 
-        boolean inputHasErrors = username.isEmpty()
+        boolean inputHasErrors =
+            username.isEmpty()
             || email.isEmpty()
+            || email.contains("@")
             || password.isEmpty()
             || (!password.equals(passwordConfirmation));
 
@@ -61,17 +63,26 @@ public class RegisterServlet extends HttpServlet {
             DaoFactory.getUsersDao().insert(user);
             response.sendRedirect("/login");
         } else if (!usernameNotExist && !emailNotExist) {
+            out.println("<script>");
+            out.println("alert('This username and email is already in use, please try different ones.');");
+            out.println("window.location.replace('" + "/register" + "');");
+            out.println("</script>");
             request.setAttribute("usernameExistMessage", usernameExistMessage);
             request.setAttribute("emailExistMessage", emailExistMessage);
-            request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
         } else if (!emailNotExist) {
+            out.println("<script>");
+            out.println("alert('This email is already in use, please try another.');");
+            out.println("window.location.replace('" + "/register" + "');");
+            out.println("</script>");
             request.setAttribute("username", username);
             request.setAttribute("emailExistMessage", emailExistMessage);
-            request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
         } else {
+            out.println("<script>");
+            out.println("alert('This username is already in use, please try another.');");
+            out.println("window.location.replace('" + "/register" + "');");
+            out.println("</script>");
             request.setAttribute("email", email);
             request.setAttribute("usernameExistMessage", usernameExistMessage);
-            request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
         }
     }
 

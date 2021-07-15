@@ -13,4 +13,6 @@ public interface Ads {
     void deleteAd(Long adId);
 
     Ad showAd(long id);
+
+    List<Ad> searchByTitle(String query);
 }
