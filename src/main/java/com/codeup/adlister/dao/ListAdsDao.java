@@ -33,13 +33,15 @@ public class ListAdsDao implements Ads {
     }
 
     @Override
-    public void deleteAd(Long adId) {
-
-    }
-
+    public void deleteAd(Long adId) { }
 
     @Override
     public Ad showAd(long id) {
+        return null;
+    }
+
+    @Override
+    public List<Ad> searchByTitle(String query) {
         return null;
     }
 
