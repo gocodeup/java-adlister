@@ -10,5 +10,7 @@ public interface Ads {
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
     List<Ad> allFromUser(long id);
-    void deleteAd(Long id);
+    void deleteAd(Long adId);
+
+    Ad showAd(long id);
 }

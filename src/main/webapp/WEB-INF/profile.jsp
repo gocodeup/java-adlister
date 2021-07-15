@@ -17,7 +17,7 @@
         <div class="card">
             <div class="card-header">
                     <%--                <h2>THIS IS AN AD</h2>--%>
-                <h2>${ad.title}</h2>
+                <h2><a href="ads/show?id=${ad.id}&userId=${ad.userId}" class="text-secondary nav-link">${ad.title}</a></h2>
             </div>
             <div class="card-body">
                 <p class="card-text">${ad.description}</p>
