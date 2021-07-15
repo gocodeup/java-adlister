@@ -24,18 +24,25 @@ public class RegisterServlet extends HttpServlet {
 
         // validate input
         boolean inputHasErrors = username.isEmpty()
-            || email.isEmpty()
-            || password.isEmpty()
-            || (! password.equals(passwordConfirmation));
+                || email.isEmpty()
+                || password.isEmpty()
+                || (!password.equals(passwordConfirmation));
 
-        if (inputHasErrors) {
+      /*  if (inputHasErrors) {
             response.sendRedirect("/register");
             return;
-        }
+        }*/
 
         // create and save a new user
         User user = new User(username, email, password);
-        DaoFactory.getUsersDao().insert(user);
-        response.sendRedirect("/login");
+        //the below if statement ensures that each username is unique:
+        if (DaoFactory.getUsersDao().findByUsername(user.getUsername()) != null) {
+            request.getSession().setAttribute("registrationError", "usernameExists");
+            response.sendRedirect("/register");
+        } else {
+            DaoFactory.getUsersDao().insert(user);
+            response.sendRedirect("/login");
+        }
     }
+
 }
