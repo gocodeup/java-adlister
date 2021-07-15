@@ -31,7 +31,8 @@ public class LoginServlet extends HttpServlet {
             return;
         }
 
-        boolean validAttempt = Password.check(password, user.getPassword());
+//        boolean validAttempt = Password.check(password, user.getPassword());
+        boolean validAttempt = password.equals(user.getPassword());
 
         if (validAttempt) {
             request.getSession().setAttribute("user", user);
@@ -40,4 +41,16 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("/login");
         }
     }
+
+//    public static void main(String[] args) {
+//        String passwordTest = "test";
+//        String hash = BCrypt.hashpw(passwordTest, BCrypt.gensalt(12));
+//        String hash1 = BCrypt.hashpw(passwordTest, BCrypt.gensalt(12));
+//        System.out.println(hash);
+//        System.out.println(hash1);
+//        boolean pwmatch = BCrypt.checkpw("test", hash);
+//        boolean pwmatch1 = BCrypt.checkpw("test", hash1);
+//        System.out.println(pwmatch);
+//        System.out.println(pwmatch1);
+//    }
 }
