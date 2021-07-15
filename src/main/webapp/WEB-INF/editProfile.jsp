@@ -20,10 +20,28 @@
  files from the mySQLYUsersDao or add the edit one inside of there it makes sense.
  User.java also has conveneient Set methods i can try to possibly use instead since theyre already
  made--%>
+
 <div class="container">
-    <h1>Edit ${sessionScope.user.username}</h1>
-    <h1>Edit ${sessionScope.user.email}</h1>
-    <h1>Edit ${sessionScope.user.password}</h1>
+    <h1>Enter New Information Below</h1>
+    <form action="/editProfile" method="POST">
+        <div class="form-group">
+            <label for="username">New Username</label>
+            <input id="username" name="username" class="form-control" type="text" placeholder="${sessionScope.user.username}">
+        </div>
+        <div class="form-group">
+            <label for="email">New E-Mail</label>
+            <input id="email" name="email" class="form-control" type="text" placeholder="${sessionScope.user.email}">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" name="password" class="form-control" type="password">
+        </div>
+        <div class="form-group">
+            <label for="newPassword">Confirm Password</label>
+            <input id="newPassword" name="newPassword" class="form-control" type="password">
+        </div>
+        <input type="submit" class="btn btn-primary btn-block" value="Submit Changes">
+    </form>
 </div>
 
 </body>
