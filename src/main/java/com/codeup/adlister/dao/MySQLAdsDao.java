@@ -38,6 +38,19 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    public List<Ad> allFromUser(long id) {
+        PreparedStatement stmt = null;
+
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id = ?");
+            stmt.setLong(1, id);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
+
     @Override
     public Long insert(Ad ad) {
         try {
@@ -55,7 +68,7 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    private Ad extractAd(ResultSet rs) throws SQLException {
+    private static Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
                 rs.getLong("id"),
                 rs.getLong("user_id"),
@@ -64,26 +77,12 @@ public class MySQLAdsDao implements Ads {
         );
     }
 
-    private List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
+    public static List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
         List<Ad> ads = new ArrayList<>();
         while (rs.next()) {
             ads.add(extractAd(rs));
         }
         return ads;
-    }
-
-    @Override
-    public Ad findAdId(Long id) {
-        String query = "SELECT * from ads where id = ?;";
-        try {
-            PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.setLong(1, id);
-            ResultSet rs = stmt.executeQuery();
-            rs.next();
-            return extractAd(rs);
-        } catch (SQLException e) {
-            throw new RuntimeException("Error finding a ad by ID", e);
-        }
     }
 
     @Override
