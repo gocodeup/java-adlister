@@ -16,12 +16,11 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
-                    <%--                <h2>THIS IS AN AD</h2>--%>
+<%--                    Code Below is need to display ad--%>
                 <h2><a href="ads/show?id=${ad.id}&userId=${ad.userId}" class="text-secondary nav-link">${ad.title}</a></h2>
             </div>
             <div class="card-body">
                 <p class="card-text">${ad.description}</p>
-                    <%--                <p>AD DESCRIPTION</p>--%>
             </div>
             <form method="post" action="/ads/delete">
                 <button type="submit" name="id" value="${ad.id}" class="btn btn-primary">
