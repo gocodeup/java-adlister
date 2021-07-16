@@ -26,7 +26,6 @@
         </form>
     </div>
 <script>
-
     function validate() {
         const username = document.loginForm.username.value;
         const password = document.loginForm.password.value;
@@ -43,6 +42,7 @@
             return false;
         }
     }
+
 </script>
 </body>
 </html>
