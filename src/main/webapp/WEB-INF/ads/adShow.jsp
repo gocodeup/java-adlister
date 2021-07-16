@@ -10,7 +10,7 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-
+    <h1 class="text-center title">Advertisement Details</h1>
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title"><c:out value="${ad.title} - ${ad.user.username}" />
