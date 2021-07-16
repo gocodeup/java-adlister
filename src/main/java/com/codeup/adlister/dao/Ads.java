@@ -9,6 +9,11 @@ public interface Ads {
     List<Ad> all();
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
+
     Ad getOne(long id);
     List<Ad> searchByTitle(String query);
+
+
+    List<Ad> findAdsByUserId(long userId);
+
 }
