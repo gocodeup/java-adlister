@@ -33,7 +33,7 @@
             <input id="email" name="email" class="form-control" type="text" placeholder="${sessionScope.user.email}">
         </div>
         <div class="form-group">
-            <label for="password">Password</label>
+            <label for="password">New Password</label>
             <input id="password" name="password" class="form-control" type="password">
         </div>
         <div class="form-group">

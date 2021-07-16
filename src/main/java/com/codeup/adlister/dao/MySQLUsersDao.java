@@ -32,8 +32,6 @@ public class MySQLUsersDao implements Users {
             stmt.setString(3, Password.hash(newPassword));
             stmt.setString(4, username);
             stmt.executeUpdate();
-            System.out.println("Hello");
-
         } catch (SQLException e) {
             throw new RuntimeException("Error editing profile information");
         }

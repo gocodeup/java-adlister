@@ -3,6 +3,7 @@ package com.codeup.adlister.controllers;
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.User;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,10 +36,9 @@ public class EditProfileServlet extends HttpServlet {
 
         if (inputHasErrors) {
             resp.sendRedirect("/editProfile");
+        } else {
+            DaoFactory.getUsersDao().editProfile(username, email, password, currentUser.getUsername());
+            resp.sendRedirect("/logout");
         }
-        DaoFactory.getUsersDao().editProfile(username, email, password, currentUser.getUsername());
-
-        resp.sendRedirect("/login");
-        System.out.println(1);
     }
 }
