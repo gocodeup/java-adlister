@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <label for="password">Password${noPasswordMatchAlert}</label>
-                <input id="password" name="password" class="form-control" type="password" placeholder="${noPasswordMatch}" required>
+                <input id="password" name="password" class="form-control" type="password" placeholder="${noPasswordMatchMessage}" required>
             </div>
             <div class="form-group">
                 <label for="confirm_password">Confirm Password${noPasswordMatchAlert}</label>
