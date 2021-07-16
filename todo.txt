@@ -1,0 +1,13 @@
+- Ad show page - Jose
+X Search - David
+X Show user’s ads on their profile page - David
+X Ensure usernames are unique - Matt
+- Clean up the code
+X Dynamic navbar - Matt
+- Allow users to update and delete ads
+- Allow users to update profile
+- Validate data - Matt
+- Error messages - Matt
+- Sticky forms - Matt
+- Allow ad to have many categories - Jeff
+- Intended redirects
