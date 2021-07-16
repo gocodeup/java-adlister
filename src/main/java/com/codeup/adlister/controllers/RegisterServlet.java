@@ -39,31 +39,8 @@ public class RegisterServlet extends HttpServlet {
             return;
         }
 
-//        String foo = request.getParameter("foo");
-//        if (foo == null || foo.trim().isEmpty()) {
-//            messages.put("foo", "Please enter foo");
-//        } else if (!foo.matches("\\p{Alnum}+")) {
-//            messages.put("foo", "Please enter alphanumeric characters only");
-//        }
-//
-//        String bar = request.getParameter("bar");
-//        if (bar == null || bar.trim().isEmpty()) {
-//            messages.put("bar", "Please enter bar");
-//        } else if (!bar.matches("\\d+")) {
-//            messages.put("bar", "Please enter digits only");
-//        }
-//
-//        // ...
-//
-//        if (messages.isEmpty()) {
-//            messages.put("success", "Form successfully submitted!");
-//        }
-//
-//        request.getRequestDispatcher("/WEB-INF/foo.jsp").forward(request, response);
 
-
-
-//         create and save a new user
+        // create and save a new user
         User user = new User(username, email, password);
         DaoFactory.getUsersDao().insert(user);
         response.sendRedirect("/login");
