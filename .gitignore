@@ -2,3 +2,6 @@
 target/
 .idea/
 Config.java
+/src/main/java/com/codeup/adlister/dao/Config.java
+pom.xml
+
