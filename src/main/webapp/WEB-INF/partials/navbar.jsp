@@ -15,6 +15,10 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <a class="navbar-brand" href="/ads">Adlister</a>
+            <form action="/searchAds" method="post">
+                <input type="text" id="search" name="search">
+                <input type="submit" value="Search Ads">
+            </form>
         </div>
         <ul class="nav navbar-nav navbar-right">
             <c:choose>
