@@ -126,4 +126,13 @@ public class MySQLAdsDao implements Ads {
         }
 
     }
+    @Override
+    public int insertAdCategories(long ad_id, long cat_id) throws SQLException {
+        String query = "INSERT INTO ad_categories (ad_id, cat_id) VALUES (? ,?)";
+        PreparedStatement ps = connection.prepareStatement(query);
+        ps.setLong(1, ad_id);
+        ps.setLong(2, cat_id);
+        return ps.executeUpdate();
+    }
+
 }
