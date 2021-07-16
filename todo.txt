@@ -5,8 +5,8 @@
 - Clean up the code
 - Dynamic navbar - Matt
 - Allow users to update and delete ads
-- Validate data
-- Error messages
-- Sticky forms
+- Validate data - Matt
+- Error messages - Matt
+- Sticky forms - Matt
 - Allow ad to have many categories - Jeff
 - Intended redirects
