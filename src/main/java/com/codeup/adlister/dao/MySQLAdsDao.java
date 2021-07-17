@@ -1,6 +1,7 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.Category;
 import com.mysql.cj.jdbc.Driver;
 
 import java.io.FileInputStream;
@@ -116,7 +117,7 @@ public class MySQLAdsDao implements Ads {
     @Override
     public void deleteAd(Ad ad) {
         try{
-            PreparedStatement stmt = connection.prepareStatement("DELETE FROM ads WHERE id = ?");
+            PreparedStatement stmt = connection.prepareStatement("DELETE FROM ad_categories WHERE ad_id = ?");
             stmt.setLong(1, ad.getId());
 
             stmt.executeUpdate();
@@ -126,13 +127,14 @@ public class MySQLAdsDao implements Ads {
         }
 
     }
-    @Override
-    public int insertAdCategories(long ad_id, long cat_id) throws SQLException {
-        String query = "INSERT INTO ad_categories (ad_id, cat_id) VALUES (? ,?)";
-        PreparedStatement ps = connection.prepareStatement(query);
-        ps.setLong(1, ad_id);
-        ps.setLong(2, cat_id);
-        return ps.executeUpdate();
-    }
+//    @Override
+//    public long insertAdCategories(Category category) throws SQLException {
+//        String query = "INSERT INTO ad_categories (ad_id, cat_id) VALUES (? ,?)";
+//        PreparedStatement ps = connection.prepareStatement(query);
+//        ps.setLong(1, category.getAdId());
+//        ps.setLong(2, category.getId());
+//        ps.executeQuery();
+//        return 0L;
+//    }
 
 }

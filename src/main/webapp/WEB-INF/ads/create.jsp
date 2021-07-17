@@ -23,27 +23,27 @@
                 <h5>(More than one may be selected)</h5>
             </div>
             <div class="form-check form-check-inline">
-                <input name="category" type="checkbox" id="sportinggoods" value="Sports1">
+                <input name="category" type="checkbox" id="sportinggoods" value="1">
                 <label for="sportinggoods">Sporting Goods</label>
             </div>
             <div class="form-check form-check-inline">
-                <input  name="category" type="checkbox" id="vehicles" value="Camping2">
+                <input  name="category" type="checkbox" id="vehicles" value="2">
                 <label for="vehicles">Vehicles</label>
             </div>
             <div class="form-check form-check-inline">
-                <input  name="category" type="checkbox" id="jobs" value="Computers3">
+                <input  name="category" type="checkbox" id="jobs" value="3">
                 <label  for="jobs">Jobs</label>
             </div>
             <div class="form-check form-check-inline">
-                <input  name="category" type="checkbox" id="furniture" value="Phones4">
+                <input  name="category" type="checkbox" id="furniture" value="4">
                 <label for="furniture">Furniture</label>
             </div>
             <div class="form-check form-check-inline">
-                <input  name="category" type="checkbox" id="electronics" value="Jobs5">
+                <input  name="category" type="checkbox" id="electronics" value="5">
                 <label  for="electronics">Electronics</label>
             </div>
             <div class="form-check form-check-inline">
-                <input  name="category" type="checkbox" id="other" value="Clothing6">
+                <input  name="category" type="checkbox" id="other" value="6">
                 <label  for="other">Other</label>
             </div>
             <input type="submit" class="btn btn-block btn-primary">

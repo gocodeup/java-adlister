@@ -2,6 +2,7 @@ package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.Category;
 import com.codeup.adlister.models.User;
 
 import javax.servlet.ServletException;
@@ -10,6 +11,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
+import java.util.List;
+
+import static java.lang.Long.parseLong;
 
 @WebServlet(name = "controllers.CreateAdServlet", urlPatterns = "/ads/create")
 public class CreateAdServlet extends HttpServlet {
@@ -29,7 +34,22 @@ public class CreateAdServlet extends HttpServlet {
             request.getParameter("title"),
             request.getParameter("description")
         );
-        DaoFactory.getAdsDao().insertAd(ad);
+        long adId = DaoFactory.getAdsDao().insertAd(ad);
+        String[] checkboxValues = request.getParameterValues("category");
+        Category category1 = new Category();
+        for(String category: checkboxValues){
+            long newCategoryId = parseLong(category);
+            category1.setAdId(adId);
+            category1.setId(newCategoryId);
+            System.out.println(category);
+            try {
+                DaoFactory.getCatDao().insertAdCategories(category1);
+            } catch (SQLException throwables) {
+                throwables.printStackTrace();
+            }
+
+
+        }
         response.sendRedirect("/ads");
     }
 }
