@@ -1,0 +1,9 @@
+body {
+    background-color: darkgray;
+    color: white;
+}
+.card {
+    background-color: white;
+    color: black;
+    margin: 0.5em;
+}

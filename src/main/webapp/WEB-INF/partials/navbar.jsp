@@ -11,11 +11,12 @@
                 <li>
                     <%--      for visitor/user view   add a search bar for searching through ads--%>
                     <%--      need help centering search bar + adding dropdown              --%>
-                    <form action="/search" class="form-inline" method="GET">
-                        <input id="s" name="s" class="form-control" type="search" placeholder="Search Ads..." aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                    <form action="/search"style="display: flex; justify-content: center; align-content: center; margin-top: 0.5em;" class="form-inline" method="GET">
+                        <input id="s" name="s" class="form-control" type="search" placeholder="Search Ads..."
+                               aria-label="Search">
+                        <button style="color: white; background-color: black" class="btn btn-dark" type="submit">Search<i class="fas fa-search"></i></button>
                     </form>
-                </li>
+                </li
                 <%--        IF USER profile, logout, create ad links -K--%>
                 <%--        IF VISITOR login & register links -K--%>
                 <c:choose>
@@ -29,10 +30,7 @@
                         <li><a href="${pageContext.request.contextPath}/register">Register</a></li>
                     </c:otherwise>
                 </c:choose>
-
             </ul>
         </div>
     </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-
 </nav>
