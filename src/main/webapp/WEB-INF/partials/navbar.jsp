@@ -4,18 +4,18 @@
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <%--LOGO directing to ads page (change it to home page) -K --%>
-            <a class="navbar-brand" href="/ads">Adlister<i class="fas fa-network-wired"></i></a>
+            <a class="navbar-brand" style="font-size: 24px; margin-top: 0.3em" href="/ads">Adlister<i class="fas fa-network-wired"></i></a>
         </div>
         <div>
             <ul class="nav navbar-nav navbar-right">
                 <li>
                     <%--      for visitor/user view   add a search bar for searching through ads--%>
                     <%--      need help centering search bar + adding dropdown              --%>
-                    <form action="/search" class="form-inline" method="GET">
-                        <input id="s" name="s" class="form-control" type="search" placeholder="Search Ads..." aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
+                    <form action="/search"style="display: flex; justify-content: center; align-content: center; margin-top: 0.5em;" class="form-inline" method="GET">
+                        <input id="s" name="s" class="form-control" type="search" placeholder="Search Ads..."
+                               aria-label="Search">
+                        <button style="color: white; background-color: black" class="btn btn-dark" type="submit">Search<i class="fas fa-search"></i></button>
                     </form>
-                </li>
                 <%--        IF USER profile, logout, create ad links -K--%>
                 <%--        IF VISITOR login & register links -K--%>
                 <c:choose>
@@ -29,10 +29,8 @@
                         <li><a href="${pageContext.request.contextPath}/register">Register</a></li>
                     </c:otherwise>
                 </c:choose>
-
+                </li
             </ul>
         </div>
     </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-
 </nav>

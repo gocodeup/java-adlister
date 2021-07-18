@@ -13,10 +13,10 @@
 
 
 <div class="container">
-    <h1>Here Are all the results!</h1>
+    <h1 style="text-align: center">Here Are All The Results!</h1>
 
     <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
+        <div class="card col-md-6">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
         </div>
