@@ -58,7 +58,7 @@ body {
 /*  rain effect */
 .rain{
     height: 100vh;
-    background-image: url("css/img/rain.png");
+    background-image: url("/img/rain.png");
     animation: rain 0.3s linear infinite;
 }
 @keyframes rain{
@@ -74,7 +74,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    background-image: url(css/img/lightining.png);
+    background-image: url("/img/lightining.png");
     top: -100px;
     transform: rotate(180deg);
     animation: lightining 4s linear infinite;
