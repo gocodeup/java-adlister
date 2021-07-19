@@ -9,16 +9,18 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-    <div class="col-md-6 container ">
+    <div class="container">
         <div>
 
-    <h1>Welcome, ${sessionScope.user.username}!</h1>
-        <h2>Here are all of your active ads:</h2>
+    <h1 style="text-align: center">Welcome, ${sessionScope.user.username}!</h1>
+        <h2 style="text-align: center">Here are all of your active ads:</h2>
+            <div class="card" style="text-align: center">
         <c:forEach var="ad" items="${ads}">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
-            <a href="/ad?id=${ad.id}" class="btn btn-primary">More Details</a>
+            <a href="/ad?id=${ad.id}" class="btn btn-primary" style="align-content: center">More Details</a>
         </c:forEach>
+            </div>
         </div>
     </div>
 
