@@ -40,10 +40,15 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-
     public long insertAd(Ad ad) {
         return 0;
     }
+
+
+
+    @Override
+
+
 
     public List<Ad> findAdsByUserId(long userId) {
         PreparedStatement stmt = null;
