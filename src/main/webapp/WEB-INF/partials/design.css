@@ -1,0 +1,23 @@
+body {
+    background-color: darkgray;
+    color: white;
+    font-family: "comic sans ms";
+
+}
+.card {
+    background-color: white;
+    color: black;
+    margin: 0.5em;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+nav {
+    font-family: "Bradley Hand";
+    font-size: 18px;
+}
