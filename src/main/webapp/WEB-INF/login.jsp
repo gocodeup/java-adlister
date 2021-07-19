@@ -14,7 +14,6 @@
         <h1>Please Log In</h1>
         <form name="loginForm" action="/login" method="POST">
             <div class="form-group">
-                <div>${invalidUserMessage}</div>
                 <label for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text">
             </div>
