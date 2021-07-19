@@ -13,8 +13,8 @@
                     <%--      need help centering search bar + adding dropdown              --%>
                     <form action="/search"style="display: flex; justify-content: center; align-content: center; margin-top: 0.5em;" class="form-inline" method="GET">
                         <input id="s" name="s" class="form-control" type="search" placeholder="Search Ads..."
-                               aria-label="Search">
-                        <button style="color: white; background-color: black" class="btn btn-dark" type="submit">Search<i class="fas fa-search"></i></button>
+                               aria-label="Search" style="font-family: comic sans ms">
+                        <button style="color: white; font-family: comic sans ms; background-color: black" class="btn btn-dark" type="submit">Search<i class="fas fa-search"></i></button>
                     </form>
                 <%--        IF USER profile, logout, create ad links -K--%>
                 <%--        IF VISITOR login & register links -K--%>
