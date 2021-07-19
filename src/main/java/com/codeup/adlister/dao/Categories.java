@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface Categories {
     Category getCategoryById(long id);
-//    List <Category> getAllCategories();
+    List <Category> getAllCategories();
 long insertAdCategories(Category category) throws SQLException;
 List<String> printCategories(long ad_id);
 List<String> printCategories();

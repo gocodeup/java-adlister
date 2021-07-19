@@ -47,6 +47,34 @@ public class MySQLCategoryDao implements Categories {
 
         return category;
     }
+
+    private Category extractCat(ResultSet rs) throws SQLException {
+        return new Category (
+                rs.getLong("id"),
+                rs.getString("title")
+        );
+    }
+    private List<Category> createCatsFromResults(ResultSet rs) throws SQLException {
+        List<Category> cats = new ArrayList<>();
+        while (rs.next()) {
+            cats.add(extractCat(rs));
+        }
+        return cats;
+    }
+
+    @Override
+    public List<Category> getAllCategories() {
+        try {
+                PreparedStatement stmt = connection.prepareStatement("SELECT id, title FROM ad_categories, categories WHERE id = ad_categories.cat_id;");
+                ResultSet rs = stmt.executeQuery();
+                return createCatsFromResults(rs);
+            } catch (SQLException e) {
+                throw new RuntimeException("Error retrieving all ad categories.", e);
+            }
+
+
+    }
+
     @Override
     public long insertAdCategories(Category category) throws SQLException {
         try {

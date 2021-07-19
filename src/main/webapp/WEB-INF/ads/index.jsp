@@ -30,8 +30,8 @@
 
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
-            <p> Categories: </p>
-            <p>${ad.id}</p>
+
+<%--            <c:forEach var="cat" items="ad."--%>
             <a href="/ad?id=${ad.id}" class="btn btn-primary">More Details</a>
         </div>
 
