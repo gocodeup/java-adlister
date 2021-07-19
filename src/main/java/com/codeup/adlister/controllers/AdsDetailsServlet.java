@@ -27,12 +27,17 @@ public class AdsDetailsServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         long id = Long.parseLong(request.getParameter("id"));
+        List<String> categories = DaoFactory.getCatDao().printCategories(id);
+        for(String cat: categories){
+            System.out.println(cat);
+        }
 
         Ad viewAdInfo = DaoFactory.getAdsDao().getAdById(id);
         request.setAttribute("viewAdInfo", viewAdInfo);
 
         User viewUserInfo = DaoFactory.getUsersDao().findById(viewAdInfo.getUserId());
         request.setAttribute("viewUserInfo", viewUserInfo);
+        request.setAttribute("categories", categories);
 
 
         request.getRequestDispatcher("/WEB-INF/ads/ad-details.jsp").forward(request, response);

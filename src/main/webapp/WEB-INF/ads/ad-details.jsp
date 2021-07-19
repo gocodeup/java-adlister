@@ -16,6 +16,11 @@
         <div >
             <h4 >${viewAdInfo.title}</h4>
             <p >${viewAdInfo.description}</p>
+            <c:forEach var="cat" items="${categories}">
+                <span>
+                  ${cat}
+                </span>
+            </c:forEach>
 
             <div class="button-container">
                 <form action="/ads/delete?id=${viewAdInfo.id}" method="post">

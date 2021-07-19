@@ -34,11 +34,11 @@ public class CreateAdServlet extends HttpServlet {
             request.getParameter("title"),
             request.getParameter("description")
         );
-        long adId = DaoFactory.getAdsDao().insertAd(ad);
+        long adId = DaoFactory.getAdsDao().insert(ad);
         String[] checkboxValues = request.getParameterValues("category");
         Category category1 = new Category();
         for(String category: checkboxValues){
-            long newCategoryId = parseLong(category);
+            long newCategoryId = Long.parseLong(category);
             category1.setAdId(adId);
             category1.setId(newCategoryId);
             System.out.println(category);
