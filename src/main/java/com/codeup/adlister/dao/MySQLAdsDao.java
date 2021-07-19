@@ -40,8 +40,13 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-
     public long insertAd(Ad ad) {
+        return 0;
+    }
+
+    @Override
+
+
 
     public List<Ad> findAdsByUserId(long userId) {
         PreparedStatement stmt = null;
@@ -162,6 +167,11 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error updating Profile information", e);
         }
 
+    }
+
+    @Override
+    public List<Ad> all() {
+        return null;
     }
 //    @Override
 //    public long insertAdCategories(Category category) throws SQLException {
