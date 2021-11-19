@@ -17,3 +17,4 @@ public class RegisterServlet extends HttpServlet {
         // TODO: if a user was successfully created, send them to their profile
     }
 }
+//
