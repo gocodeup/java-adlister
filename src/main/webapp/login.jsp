@@ -15,11 +15,11 @@
 
 </head>
 <body>
-<form>
+<form action="http://localhost:8080/profile.jsp" method="POST">
     <div class="form-group">
-        <label for="exampleInputEmail1">Username</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your username with anyone else.</small>
+        <label for="exampleInputUsername">Username</label>
+        <input type="user" class="form-control" id="exampleInputUsername" aria-describedby="userHelp">
+        <small id="userHelp" class="form-text text-muted">We'll never share your username with anyone else.</small>
     </div>
     <div class="form-group">
         <label for="exampleInputPassword1">Password</label>
