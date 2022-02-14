@@ -9,4 +9,8 @@ public interface Ads {
     List<Ad> all();
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
+
+
+    // search for ads----
+    List<Ad> search(String keyword);
 }
