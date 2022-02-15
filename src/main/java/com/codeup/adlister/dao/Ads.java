@@ -16,5 +16,6 @@ public interface Ads {
     // get a single add to return
     Ad findById(Long ad);
 
+    List<Ad> search(String keyword);
 
 }

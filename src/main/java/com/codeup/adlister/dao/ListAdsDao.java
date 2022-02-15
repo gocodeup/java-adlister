@@ -1,6 +1,7 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,10 +16,12 @@ public class ListAdsDao {
         return ads;
     }
 
-    @Override
-    public List<Ad> getAd(User user) {
-        return null;
-    }
+//
+//
+//    @Override
+//    public List<Ad> getAd(User user) {
+//        return null;
+//    }
 
 
     public Long insert(Ad ad) {
@@ -33,10 +36,11 @@ public class ListAdsDao {
         return ad.getId();
     }
 
-    @Override
-    public List<Ad> search(String keyword) {
-        return null;
-    }
+//
+//    @Override
+//    public List<Ad> search(String keyword) {
+//        return null;
+//    }
 
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();
