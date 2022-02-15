@@ -1,6 +1,7 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
 import java.io.FileInputStream;
@@ -39,6 +40,20 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public List<Ad> getAd(User user) {
+        String sql = "SELECT * FROM ads WHERE user_id = " + user.getId() ;
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement(sql);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        }catch (SQLException e){
+            throw new RuntimeException("Error retrieving ads.", e);
+        }
+    }
+
+
+    @Override
     public Long insert(Ad ad) {
         try {
             String insertQuery = "INSERT INTO ads(user_id, title, description) VALUES (?, ?, ?)";
@@ -54,6 +69,22 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error creating a new ad.", e);
         }
     }
+//Method for search ads---------------------------
+    @Override
+    public List<Ad> search(String keyword) {
+        String query = "SELECT * FROM ads WHERE title LIKE ? OR description  LIKE ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, keyword );
+            stmt.setString(2, keyword);
+            ResultSet rs= stmt.executeQuery();
+            return createAdsFromResults(rs);
+        }catch(SQLException e){
+            throw new RuntimeException("Error finding ad", e);
+        }
+    }
+
+   // ---------------------------
 
     @Override
     public Ad findById(Long ad) {
