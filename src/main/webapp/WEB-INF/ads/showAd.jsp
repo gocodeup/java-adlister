@@ -1,4 +1,4 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: julianmartinez
@@ -15,7 +15,7 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <%--consider page being a card--%>
 <main class="container">
-    <h2>Your Ad Title: <c:out value="${ad.title}"/></h2>
+<%--    <h2>Your Ad Title: <c:out value="${ad.title}"/></h2>--%>
 <%--    <p>${ad.description}</p>--%>
 <%--    <h5>${ad.user_id.getName()}</h5>--%>
 <%--    <h6>${ad.user_id.getEmail()}</h6>--%>
