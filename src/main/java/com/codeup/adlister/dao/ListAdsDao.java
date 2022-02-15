@@ -23,6 +23,10 @@ public class ListAdsDao {
 //        return null;
 //    }
 
+    public List<Ad> getAd(User user) {
+        return null;
+    }
+
 
     public Long insert(Ad ad) {
         // make sure we have ads
@@ -41,6 +45,10 @@ public class ListAdsDao {
 //    public List<Ad> search(String keyword) {
 //        return null;
 //    }
+
+    public List<Ad> search(String keyword) {
+        return null;
+    }
 
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();
