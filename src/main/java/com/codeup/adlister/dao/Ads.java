@@ -11,5 +11,5 @@ public interface Ads {
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
     // get a single add to return
-    Ad individualAd(Long ad);
+    Ad findById(Long ad);
 }

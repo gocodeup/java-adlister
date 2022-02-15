@@ -1,6 +1,7 @@
 package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
+import com.codeup.adlister.models.Ad;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -14,8 +15,8 @@ public class IndividualAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         Long individualAd = Long.parseLong(request.getParameter("loneAd"));
-        DaoFactory.getAdsDao().individualAd(individualAd);
-        request.setAttribute("loneAd", DaoFactory.getAdsDao().individualAd(individualAd));
+        Ad ad = DaoFactory.getAdsDao().findById(individualAd);
+        request.setAttribute("loneAd", individualAd);
 
 
         request.getRequestDispatcher("/WEB-INF/ShowIndvAd.jsp").forward(request, response);

@@ -56,7 +56,7 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public Ad individualAd(Long ad) {
+    public Ad findById(Long ad) {
 //        selecting all ads from the ads table with the specific id to show it individually
         String insertQuery = "SELECT * FROM ads WHERE id = ?";
         try {
