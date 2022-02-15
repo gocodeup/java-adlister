@@ -12,4 +12,14 @@ public interface Ads {
     Long insert(Ad ad);
     // get a single add to return
     Ad findById(Long ad);
+    //find ads by their ids
+    Ad findByID(Long id);
+    //Searching ads by title
+    List<Ad> searchByTitle(String query);
+    //listing ads on profile page
+    List<Ad> findByUserID(Long userId);
+
+    void deleteByID(Long id);
+    void editByID(Long id, String newTitle, String newDesc);
+    List<Ad> listByCatID(Long catID);
 }
