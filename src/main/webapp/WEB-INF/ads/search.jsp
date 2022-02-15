@@ -19,14 +19,25 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <div class="container">
-    <h1>You Search Results  ${sessionScope.user.username}!</h1>
-<c:forEach var="ad" items="${ads}">
-    <div class="col-md-6">
-        <h2>${ad.title}</h2>
-        <p>${ad.description}</p>
-    </div>
-</c:forEach>
+    <h1>You Search Results:</h1>
 
+<%--//added some style to show add in a card*** Agutierrez--%>
+<c:if test="${ads != null}">
+    <c:forEach var="ad" items="${ads}">
+        <div class="card">
+            <div class="card-body">
+                <h2><a href="${pageContext.request.contextPath}/ads/ShowInvAd?id=${ad.id}">${ad.title}</a></h2>
+                 <p>${ad.description}</p>
+            </div>
+        </div>
+</c:forEach>
+</c:if>
+
+    <c:if test="${ads.isEmpty()}">
+        <h3>No Search Results Found</h3>
+    </c:if>
+
+    <a href="${pageContext.request.contextPath}/ads">Return to all ads</a>
 </div>
 
 </body>
