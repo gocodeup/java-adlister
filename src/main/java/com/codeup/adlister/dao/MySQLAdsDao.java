@@ -57,6 +57,11 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    @Override
+    public List<Ad> findAdByKeyword(String keyword) throws SQLException {
+        return null;
+    }
+
     //need to add arraylist methods, etc. ND
 //    @Override
 //    public List<Ad> findAdByKeyword(String keyword) throws SQLException {
