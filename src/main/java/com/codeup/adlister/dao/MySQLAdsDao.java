@@ -92,7 +92,7 @@ public class MySQLAdsDao implements Ads {
     @Override
     public Ad findById(Long ad) {
 //        selecting all ads from the ads table with the specific id to show it individually
-        String insertQuery = "SELECT * FROM ads WHERE id = ?";
+        String insertQuery = "SELECT * FROM ads WHERE id = ? LIMIT 1";
         try {
             PreparedStatement stmt = connection.prepareStatement(insertQuery);
             stmt.setLong(1, ad);
@@ -122,39 +122,7 @@ public class MySQLAdsDao implements Ads {
         return ads;
     }
 
-    // findbyId Method - To search by ad id
 
-    // **********    come back and review this -AGutierrez ********
-//    @Override
-//    public Ad findById(long id) {
-//        try {
-//            String query = "SELECT * FROM ads WHERE id = ? LIMIT 1";
-//            PreparedStatement stmt = connection.prepareStatement(query);
-//            stmt.setString(1, String.valueOf(id));
-//            ResultSet rs = stmt.executeQuery();
-//            if (rs.next()) {
-//                return extractAd(rs);
-//            }
-//            return null;
-//        } catch (SQLException e) {
-//            throw new RuntimeException("Error finding a Ad by Id", e);
-//        }
-//    }
-//
-
-    // find ads by category
-//      public List<Ad> getAdsFromCategory(String category){}
-
-
-//*****************************************************************************
-
-
-
-//
-//        //this is for ViewAdServlet
-//
-//
-//        //It makes a SQL query that searches by ID, (which cannot be the same unlike a title)
 //          public Ad findByID(Long id) {
 //          String query = "SELECT * FROM ads WHERE id = ? LIMIT 1";
 //           try {
@@ -171,6 +139,7 @@ public class MySQLAdsDao implements Ads {
 //             throw new RuntimeException("Error finding an Ad by ID", e);
 //         }
 //      }
+
 //
 //
 //    public List<Ad> searchByTitle(String title) {
@@ -256,6 +225,7 @@ public class MySQLAdsDao implements Ads {
 //            throw new RuntimeException("Error listing ads by cat ID.", e);
 //        }
 //    }
+
 
 
 
