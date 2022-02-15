@@ -15,6 +15,12 @@ public class ListAdsDao {
         return ads;
     }
 
+    @Override
+    public List<Ad> getAd(User user) {
+        return null;
+    }
+
+
     public Long insert(Ad ad) {
         // make sure we have ads
         if (ads == null) {
