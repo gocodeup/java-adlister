@@ -69,6 +69,22 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error creating a new ad.", e);
         }
     }
+//Method for search ads---------------------------
+    @Override
+    public List<Ad> search(String keyword) {
+        String query = "SELECT * FROM ads WHERE title LIKE ? OR description  LIKE ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, keyword );
+            stmt.setString(2, keyword);
+            ResultSet rs= stmt.executeQuery();
+            return createAdsFromResults(rs);
+        }catch(SQLException e){
+            throw new RuntimeException("Error finding ad", e);
+        }
+    }
+
+   // ---------------------------
 
     @Override
     public Ad findById(Long ad) {
