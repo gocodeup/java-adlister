@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name="SearchAdsServlet", urlPatterns="searchAds")
+@WebServlet(name="SearchAdsServlet", urlPatterns="/searchAds")
 public class SearchAdsServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
