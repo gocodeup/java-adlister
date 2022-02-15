@@ -26,8 +26,11 @@
                 <label for="confirm_password">Confirm Password</label>
                 <input id="confirm_password" name="confirm_password" class="form-control" type="password">
             </div>
+            <h3 style="color: red">${error}</h3>
             <input type="submit" class="btn btn-primary btn-block">
         </form>
     </div>
+
+
 </body>
 </html>
