@@ -26,6 +26,8 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+
+
     @Override
     public List<Ad> all() {
         PreparedStatement stmt = null;
@@ -54,6 +56,16 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error creating a new ad.", e);
         }
     }
+
+    //need to add arraylist methods, etc. ND
+//    @Override
+//    public List<Ad> findAdByKeyword(String keyword) throws SQLException {
+//        String query = "SELECT *, users.userName FROM ads\n + ";
+//
+////        prepped statement
+//        //while(rs.nets())
+//        return null;
+//    }
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
