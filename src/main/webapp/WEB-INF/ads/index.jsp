@@ -14,7 +14,11 @@
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
-            <h2><a href="${pageContext.request.contextPath}/src/main/webapp/WEB-INF/ads/ShowIndvAd.jsp">${ad.id}</a></h2>
+            <form action="/ads/individualAd" method="GET">
+<%--            <h2><a href="/ads/individualAd">${ad.id}</a></h2>--%>
+            <input type="hidden" name="ad" value="${ad.id}">
+            <button>Show Ad</button>
+            </form>
             <p>${ad.description}</p>
         </div>
     </c:forEach>

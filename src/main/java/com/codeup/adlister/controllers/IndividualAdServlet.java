@@ -9,14 +9,15 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 
-@WebServlet(name = "IndividualAdServlet", urlPatterns = "/ads/individualAd")
+@WebServlet(name = "controllers.IndividualAdServlet", urlPatterns = "/ads/individualAd")
 public class IndividualAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        Long individualAd = Long.parseLong(request.getParameter("loneAd"));
-        Ad ad = DaoFactory.getAdsDao().findById(individualAd);
-        request.setAttribute("ad", ad);
+        long individualAd = Long.parseLong(request.getParameter("ad"));
+        //Ad ad = DaoFactory.getAdsDao().findById(individualAd);
+        request.setAttribute("ad", DaoFactory.getAdsDao().findById(individualAd));
         request.getRequestDispatcher("/WEB-INF/ads/ShowIndvAd.jsp").forward(request, response);
     }
 }
