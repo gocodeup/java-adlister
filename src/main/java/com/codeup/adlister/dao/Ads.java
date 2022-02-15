@@ -12,4 +12,6 @@ public interface Ads {
     Long insert(Ad ad);
     // get a single add to return
     Ad findById(Long ad);
+
+
 }
