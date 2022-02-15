@@ -12,24 +12,24 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/ads/search")
+@WebServlet(name = "controllers.SearchAdsServlet", urlPatterns = "/ads/search")
 public class SearchAdsServlet extends HttpServlet {
 
     protected void doPost (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String keyword = request.getParameter("keyword");
 
 
-        boolean inputHasErrors = keyword.isEmpty();
+//        boolean inputHasErrors = keyword.isEmpty();
 
 
-        if (inputHasErrors){
+        if (keyword.isEmpty()){
             response.sendRedirect("/ads");// needs the page to be redirected
             return;
         }
 
         List<Ad> ads = DaoFactory.getAdsDao().search(keyword);
         request.setAttribute("ads", ads);
-        System.out.println(ads);
+//        System.out.println(ads);
         request.getRequestDispatcher("/WEB-INF/ads/search.jsp").forward(request,response);
 
     }

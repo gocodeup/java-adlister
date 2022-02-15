@@ -13,10 +13,14 @@ public interface Ads {
     List<Ad> getAd(User user);
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
-
-    // search for ads----
-    List<Ad> search(String keyword);
     // get a single add to return
     Ad findById(Long ad);
+    // search ads
+    List<Ad> search(String keyword);
+
+
+
+
+
 
 }
