@@ -26,10 +26,16 @@
            </ul>
             <span class="navbar-text">
                 <ul class="navbar-nav mr-auto">
-                    <form class="form-inline my-2 my-lg-0" action="/searchAds" method="POST">
-                        <input class="btn btn-outline-danger my 2 my-sm-0" type="submit">
-                        <a href="/searchAds"></a>
-                    </form>
+            <form class="form-inline my-2 my-lg-0" action="/searchAds" method="POST">
+<%--                        <input class="btn btn-outline-danger my 2 my-sm-0" type="submit">--%>
+                 <div>
+                     <input type="text" id="twotabsearchtextbox"  class="searchSelect"
+                                name="field-keywords" value="" size="50"
+                                title="Search for" style="width:50%; background-color: #FFF;" />
+                            <span class=lsbb><input name=button type=submit value="Search" ></span>
+                 </div>
+                    <a href="/searchAds"></a>
+            </form>
 
     <c:choose>
         <c:when test="${sessionScope.user != null}">
@@ -56,7 +62,6 @@
                 <a class="nav-link red-hover w-text" href="/register">
                     <i class="fa fa-list" aria-hidden="true"> Register <span class="sr-only">(current)</span>
                 </i></a>
-
             </li>
         </c:otherwise>
     </c:choose>
