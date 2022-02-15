@@ -2,6 +2,7 @@ package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,9 +23,14 @@ public class ListAdsDao implements Ads {
         }
         // we'll assign an "id" here based on the size of the ads list
         // really the dao would handle this
-        ad.setId((long) ads.size());
+        ad.setId(ads.size());
         ads.add(ad);
         return ad.getId();
+    }
+
+    @Override
+    public List<Ad> findAdByKeyword(String keyword) throws SQLException {
+        return null;
     }
 
     private List<Ad> generateAds() {

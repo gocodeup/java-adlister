@@ -1,0 +1,31 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&family=Montserrat:wght@300&display=swap');*/
+/*probably change the navbar up to look better*/
+.mainNav{
+    background-color: aquamarine;
+    /*background-image: url("img.png");*/
+    /*min-height: 280px;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*position: relative;*/
+}
+/*remember this for other additions like a footer?*/
+#side-nav> a:hover, a:visited{
+    background-color: #a74a42;
+}
+a{
+    text-decoration: none;
+}
+.w-text, a.w-text:link, a.w-text:visited{
+    color: brown;
+}
+a.blk:link, a.blk:visited, a.blk:hover{
+    color: black;
+}
+a.red-hover:hover{
+    color: red;
+    text-decoration: none;
+}
+a.blk:hover{
+    color: black;
+}
