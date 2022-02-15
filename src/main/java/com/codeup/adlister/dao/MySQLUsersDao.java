@@ -51,6 +51,85 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+    @Override
+    public User findByUserID(long id) {
+        String query = "SELECT * FROM users WHERE id = ? LIMIT 1";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, id);
+            return extractUser(stmt.executeQuery());
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding a user by username", e);
+        }
+    }
+
+    @Override
+    public void updateUserPassword(long id, String hashPassword) {
+        // ? will be replaced with the ID that wants to be deleted.
+        String updateSql = "UPDATE users set password = ? where id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(updateSql);
+            stmt.setString(1, hashPassword);
+            stmt.setLong(2, id);
+            // testing for the expected messages.
+            System.out.println(stmt);
+            System.out.println(stmt.executeQuery());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error Editing an Ad by ID", e);
+        }
+
+    }
+
+    @Override
+    public void updateUserEmail(long id, String email) {
+        //  ? will be replaced with the ID that is to be deleted
+        String updateSql = "UPDATE users set email = ? where id = ?";
+
+        try {
+            PreparedStatement stmt = connection.prepareStatement(updateSql);
+            stmt.setString(1, email);
+            stmt.setLong(2, id);
+            //    testing for expected  messages.
+             System.out.println(stmt);
+            System.out.println(stmt.executeQuery());
+            //   This executes a query
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error Editing an Ad by ID", e);
+        }
+    }
+
+
+
+    @Override
+    public User findByUserEmail(String email) {
+        String query = "SELECT * FROM users WHERE email = ? LIMIT 1";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, email);
+            return extractUser(stmt.executeQuery());
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding a user by email", e);
+        }
+
+    }
+
+    @Override
+    public void deleteByID(long id) {
+        String query = "DELETE FROM users WHERE id = ? LIMIT 1";//? will be replaced by the ID to be deleted
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, id);
+            System.out.println(stmt);
+            System.out.println(stmt.executeQuery());
+            stmt.execute();// EXECUTES A QUERY
+        } catch (SQLException e){
+            throw new RuntimeException("Error deleting a User by ID, e");
+        }
+
+    }
+
     private User extractUser(ResultSet rs) throws SQLException {
         if (! rs.next()) {
             return null;
