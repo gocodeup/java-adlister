@@ -29,5 +29,9 @@
             <input type="submit" class="btn btn-primary btn-block">
         </form>
     </div>
+
+<script>
+    ${error};
+</script>
 </body>
 </html>

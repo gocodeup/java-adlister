@@ -21,6 +21,22 @@ public class RegisterServlet extends HttpServlet {
         String email = request.getParameter("email");
         String password = request.getParameter("password");
         String passwordConfirmation = request.getParameter("confirm_password");
+        String errorMessage = "";
+
+        if(username.isEmpty()){
+            errorMessage += "alert('Username is required for registration');";
+        }
+        if(email.isEmpty()){
+            errorMessage += "alert('Email is required for registration');";
+        }
+        if (password.isEmpty()){
+            errorMessage += "alert('Password is required for registration');";
+        }
+        if(! password.equals(passwordConfirmation)){
+            errorMessage += "alert('Passwords do not match');";
+        }
+        request.getSession().setAttribute("error", errorMessage);
+
 
         // validate input
         boolean inputHasErrors = username.isEmpty()
@@ -30,7 +46,7 @@ public class RegisterServlet extends HttpServlet {
 
         if (inputHasErrors) {
 
-//            response.sendRedirect("/register");
+            response.sendRedirect("/register");
             return;
         }
 

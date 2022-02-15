@@ -16,7 +16,7 @@ public class ListAdsDao {
         return ads;
     }
 
-    @Override
+
     public List<Ad> getAd(User user) {
         return null;
     }
