@@ -25,8 +25,18 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         User user = DaoFactory.getUsersDao().findByUsername(username);
+        String errorMessage = "";
+
+        if(username.isEmpty() || password.isEmpty()){
+            errorMessage = "You have entered an invalid username or password";
+            request.getSession().setAttribute("loginError", errorMessage);
+            response.sendRedirect("/login");
+            return;
+        }
+
 
         if (user == null) {
+
             response.sendRedirect("/login");
             return;
         }
@@ -37,7 +47,10 @@ public class LoginServlet extends HttpServlet {
             request.getSession().setAttribute("user", user);
             response.sendRedirect("/profile");
         } else {
+            errorMessage = "You have entered an invalid username or password";
+            request.getSession().setAttribute("loginError", errorMessage);
             response.sendRedirect("/login");
         }
+
     }
 }
