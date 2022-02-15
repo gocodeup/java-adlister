@@ -15,6 +15,7 @@ public class ListAdsDao implements Ads {
         return ads;
     }
 
+
     public Long insert(Ad ad) {
         // make sure we have ads
         if (ads == null) {
@@ -26,6 +27,7 @@ public class ListAdsDao implements Ads {
         ads.add(ad);
         return ad.getId();
     }
+
 
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();
