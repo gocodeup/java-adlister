@@ -34,7 +34,7 @@ public class ListAdsDao {
         return ad.getId();
     }
 
-    @Override
+
     public List<Ad> search(String keyword) {
         return null;
     }

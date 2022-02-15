@@ -23,17 +23,18 @@ public class RegisterServlet extends HttpServlet {
         String passwordConfirmation = request.getParameter("confirm_password");
         String errorMessage = "";
 
+
         if(username.isEmpty()){
-            errorMessage += "alert('Username is required for registration');";
+            errorMessage += "Username is required for registration<br> ";
         }
         if(email.isEmpty()){
-            errorMessage += "alert('Email is required for registration');";
+            errorMessage += "Email is required for registration<br> ";
         }
         if (password.isEmpty()){
-            errorMessage += "alert('Password is required for registration');";
+            errorMessage += "Password is required for registration <br>";
         }
         if(! password.equals(passwordConfirmation)){
-            errorMessage += "alert('Passwords do not match');";
+            errorMessage += "Passwords do not match";
         }
         request.getSession().setAttribute("error", errorMessage);
 
