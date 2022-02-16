@@ -17,6 +17,7 @@
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
+            <%--createError attribute posts error message from createAdServlet --%>
             <h3 style="color: red">${createError}</h3>
             <input type="submit" class="btn btn-block btn-primary">
         </form>
