@@ -3,9 +3,6 @@ package com.codeup.adlister.dao;
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -55,6 +52,26 @@ public class MySQLAdsDao implements Ads {
         } catch (SQLException e) {
             throw new RuntimeException("Error creating a new ad.", e);
         }
+    }
+
+    //  need to finish this method
+    @Override
+    public Ad findOne(long id) {
+        String singleAdQuery = "SELECT * FROM ads WHERE id LIKE id";
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement(singleAdQuery);
+            ResultSet rs = stmt.executeQuery();
+            return extractAd(rs);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public List<Ad> findAdByKeyword(String keyword) throws SQLException {
+        return null;
     }
 
     //need to add arraylist methods, etc. ND

@@ -16,6 +16,11 @@
         <div class="col-md-6">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
+
+            <form action="/ad/id" method="get">
+                <input type="hidden" name="id">
+                <button>Submit</button>
+            </form>
         </div>
     </c:forEach>
 </div>
