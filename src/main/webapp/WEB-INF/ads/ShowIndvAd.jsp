@@ -18,22 +18,9 @@
 
     <div class="container">
         <h1>Your Ad</h1>
-
-        <h2> Title: ${ad.title} </h2>
-        <h3> Description: ${ad.description}</h3>
-        <h3>User: ${sessionScope.user.username}</h3>
-
-
-<%--added link to go back to all ads- AG --%>
-        <a class="back-button" href="/ads"><i class="fa fa-chevron-left" aria-hidden="true">Back to Ads</i></a>
-<%--        <c:forEach var="ad" items="${ads}">--%>
-<%--            <div class="col-md-6">--%>
-<%--                <h2> Title: ${ad.title} </h2>--%>
-<%--                <h3> Description: ${ad.description}</h3>--%>
-<%--                <h3>User: ${sessionScope.user.username}</h3>--%>
-<%--            </div>--%>
-<%--        </c:forEach>--%>
-
+                <h2> Title: ${ad.title} </h2>
+                <h3> Description: ${ad.description}</h3>
+                <h3>User: ${sessionScope.user.username}</h3>
     </div>
 
 </body>
