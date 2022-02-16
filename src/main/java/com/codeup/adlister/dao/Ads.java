@@ -11,7 +11,8 @@ public interface Ads {
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
     // get single ad
-//    List<Ad> singleAd();
+    Ad findAdById(long id);
+//    List<Ad> findAdById();
     //added by ND
     List<Ad> findAdByKeyword(String keyword) throws SQLException;
 }
