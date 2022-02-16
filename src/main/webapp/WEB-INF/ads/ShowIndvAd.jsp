@@ -21,6 +21,7 @@
         <h2> Title: ${sessionScope.ad.title} </h2>
         <h3> Description: ${sessionScope.ad.description}</h3>
         <h3>User: ${sessionScope.user.username}</h3>
+
     </div>
 
 </body>
