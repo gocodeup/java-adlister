@@ -17,6 +17,17 @@
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
+            <div class="form-group">
+                <select class="form-control form-control-sm">
+                    <option>Automobile</option>
+                    <option>Clothing</option>
+                    <option>Electronics</option>
+                    <option>Furniture</option>
+                    <option>Home</option>
+                    <option>Toys</option>
+                    <option>Tools</option>
+                </select>
+            </div>
             <h3 style="color: red">${createError}</h3>
             <input type="submit" class="btn btn-block btn-primary">
         </form>

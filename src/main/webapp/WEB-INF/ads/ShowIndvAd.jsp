@@ -18,13 +18,10 @@
 
     <div class="container">
         <h1>Your Ad</h1>
-        <c:forEach var="ad" items="${ads}">
-            <div class="col-md-6">
+
                 <h2> Title: ${ad.title} </h2>
                 <h3> Description: ${ad.description}</h3>
                 <h3>User: ${sessionScope.user.username}</h3>
-            </div>
-        </c:forEach>
     </div>
 
 </body>
