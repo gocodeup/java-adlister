@@ -18,7 +18,6 @@
 
     <div class="container">
         <h1>Your Ad</h1>
-
                 <h2> Title: ${ad.title} </h2>
                 <h3> Description: ${ad.description}</h3>
                 <h3>User: ${sessionScope.user.username}</h3>

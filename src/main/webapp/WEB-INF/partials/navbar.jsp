@@ -5,7 +5,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%--New  Dynamic Navbar--%>
-
+<%--on main page--%>
 <c:if test="${sessionScope.user == null}">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -17,6 +17,9 @@
                 <li><a href="/login">Login</a></li>
                     <%--                    <li><a href="/logout">Logout</a></li>--%>
                 <li><a href="/register">Register</a></li>
+
+<%--                added link to all ads--%>
+                <li><a class="nav-link" href="/ads">View All Ads</a></li>
                 <li>
                     <form action="/ads/search" METHOD="POST">
                         <input id="keyword" name="keyword" class="form-control" type="text">
@@ -28,6 +31,8 @@
         <!-- /.container-fluid -->
     </nav>
 </c:if>
+
+<%--after user logged in--%>
 <c:if test="${sessionScope.user != null}">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
@@ -40,6 +45,8 @@
                 <li><a href="/logout">Logout</a></li>
                     <%--                        <li><a href="/register">Register</a></li>--%>
                 <li><a href="/ads/create">Create Ad</a></li>
+<%--                        added link to all ads--%>
+                <li><a class="nav-link" href="/ads">View All Ads</a></li>
                 <li>
                     <form action="/ads/search" METHOD="POST">
                         <input id="title" name="keyword" class="form-control" type="text">

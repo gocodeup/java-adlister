@@ -19,8 +19,5 @@ public interface Ads {
     List<Ad> search(String keyword);
 
 
-
-
-
-
+    void update(Ad ad);
 }

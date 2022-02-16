@@ -27,13 +27,15 @@ public class CreateAdServlet extends HttpServlet {
         String title = request.getParameter("title");
         String description = request.getParameter("description");
 
-
+        //if title or description is missing error message will be created
         if(title.isEmpty() || description.isEmpty()){
             String errorMessage = "Missing information.";
+            //errorMessage variable is set to attribute createError
             request.getSession().setAttribute("createError", errorMessage);
+            //user is redirected to create page
             response.sendRedirect("/ads/create");
         }else{
-
+            //when all conditions are met new ad is created
             Ad ad = new Ad(
                     user.getId(),
                     request.getParameter("title"),
