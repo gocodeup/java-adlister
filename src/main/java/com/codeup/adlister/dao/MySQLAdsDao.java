@@ -18,9 +18,9 @@ public class MySQLAdsDao implements Ads {
         try {
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
-                config.getUrl(),
-                config.getUser(),
-                config.getPassword()
+                    config.getUrl(),
+                    config.getUser(),
+                    config.getPassword()
             );
         } catch (SQLException e) {
             throw new RuntimeException("Error connecting to the database!", e);
@@ -41,13 +41,13 @@ public class MySQLAdsDao implements Ads {
 
     @Override
     public List<Ad> getAd(User user) {
-        String sql = "SELECT * FROM ads WHERE user_id = " + user.getId() ;
+        String sql = "SELECT * FROM ads WHERE user_id = " + user.getId();
         PreparedStatement stmt = null;
         try {
             stmt = connection.prepareStatement(sql);
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
-        }catch (SQLException e){
+        } catch (SQLException e) {
             throw new RuntimeException("Error retrieving ads.", e);
         }
     }
@@ -69,25 +69,26 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error creating a new ad.", e);
         }
     }
-//Method for search ads---------------------------AG
+
+    //Method for search ads---------------------------AG
     @Override
     public List<Ad> search(String keyword) {
 //        String query = "SELECT * FROM ads WHERE title LIKE ? OR description  LIKE ?";
         String query = "SELECT * FROM ads WHERE title LIKE ? ";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.setString(1, keyword );
+            stmt.setString(1, keyword);
             // change above code to :
             stmt.setString(1, '%' + keyword + '%');
 //            stmt.setString(2, keyword);
-            ResultSet rs= stmt.executeQuery();
+            ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
-        }catch(SQLException e){
+        } catch (SQLException e) {
             throw new RuntimeException("Error finding ad", e);
         }
     }
 
-   // ---------------------------
+    // ---------------------------
 
     @Override
     public Ad findById(Long ad) {
@@ -96,14 +97,18 @@ public class MySQLAdsDao implements Ads {
         try {
             PreparedStatement stmt = connection.prepareStatement(insertQuery);
             stmt.setLong(1, ad);
-            stmt.executeUpdate();
+            //stmt.executeUpdate();
             ResultSet rs = stmt.executeQuery();
-            rs.next();
-            return extractAd(rs);
+            if (rs.next()) {
+                return extractAd(rs);
+            }
+            return null;
         } catch (SQLException e) {
             throw new RuntimeException("Error finding Ad id", e);
         }
     }
+
+
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
