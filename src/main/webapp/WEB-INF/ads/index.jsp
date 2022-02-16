@@ -17,9 +17,12 @@
             <form action="/ads/individualAd" method="GET">
 <%--            <h2><a href="/ads/individualAd">${ad.id}</a></h2>--%>
             <input type="hidden" name="ad" value="${ad.id}">
+<%--            <h2><a href="${pageContext.request.contextPath}/ads/ShowInvAd?id=${ad.id}">${ad.title}</a></h2>--%>
+            <h3>${ad.title}</h3>
+            <p>${ad.description}</p>
             <button>Show Ad</button>
             </form>
-            <p>${ad.description}</p>
+
         </div>
     </c:forEach>
 </div>
