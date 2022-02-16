@@ -20,6 +20,7 @@
             <button>Show Ad</button>
             </form>
             <p>${ad.description}</p>
+            <a class="update-button" href="/ads/updateAds"><i class="fa fa-chevron-left" aria-hidden="true">Update Ad</i></a>
         </div>
     </c:forEach>
 </div>
