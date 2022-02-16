@@ -21,14 +21,7 @@
                 <input type="hidden" name="id">
                 <button>Submit</button>
             </form>
-<%-- add form here --%>
-<%--            action to go to urlPattern of servlet method is GET--%>
-<%--            input--%>
-<%--            name that's linked to req param in servlet --%>
-<%--            input --%>
-<%--            add button --%>
         </div>
-
     </c:forEach>
 </div>
 
