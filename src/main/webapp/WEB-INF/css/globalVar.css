@@ -1,0 +1,20 @@
+:root{
+    --navBar: #f8f9fa;
+    --primary-red: #cb3329;
+    --light-grey: #D8D4D1;
+    --bg-color-3: #323232;
+    --bg-color-2:#464646;
+    --bg-color-1: #A9A8A6;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    color: var(--light-grey);
+}

@@ -1,0 +1,12 @@
+body{
+    color: var(--light-grey);
+}
+.regDiv{
+    background-color: var(--primary-red) ;
+    border-radius: 2em;
+    padding: 3em;
+    box-shadow: 0 .3em .8em black;
+}
+.regInput, .regBtn{
+    box-shadow: 0 .3em .8em black;
+}
