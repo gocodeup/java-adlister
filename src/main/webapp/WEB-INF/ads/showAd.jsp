@@ -15,22 +15,18 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 <%--consider page being a card--%>
 <main class="container">
-    <h2>Your Ad Title: <c:out value="${id.title}"/></h2>
-    <p>${id.description}</p>
-    <h5>${id.user_id.getName()}</h5>
-    <h6>${id.user_id.getEmail()}</h6>
-<%--    <h2>Ad Title</h2>--%>
-<%--    <p>ad.description</p>--%>
-<%--    <h5>ad.user_id.getName()</h5>--%>
-<%--    <h6>ad.user_id.getEmail()</h6>--%>
-    <h3>Categories</h3>
+    <h2>Your Ad Title: <c:out value="${ad.title}"/></h2>
+    <p>${ad.description}</p>
+    <h5>${adUser.username}</h5>
+    <h6>${adUser.email}</h6>
     <%--FOR LOOP to display all categories an ad belongs to ad.category_id.getName()--%>
-    <ul>
-        <li>Jobs</li>
-        <li>Housing</li>
-        <li>For Sale</li>
-        <li>Community</li>
-    </ul>
+<%--Still need to work on categories--%>
+<%--    <ul>--%>
+<%--        <li>Jobs</li>--%>
+<%--        <li>Housing</li>--%>
+<%--        <li>For Sale</li>--%>
+<%--        <li>Community</li>--%>
+<%--    </ul>--%>
 </main>
 </body>
 </html>
