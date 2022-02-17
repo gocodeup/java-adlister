@@ -29,7 +29,6 @@
         </c:forEach>
     </div>
 
-
             <%--createError attribute posts error message from createAdServlet --%>
 
             <h3 style="color: red">${createError}</h3>
