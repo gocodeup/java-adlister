@@ -23,7 +23,7 @@
             <button class="btn-light ">Show Ad</button>
             </form>
 
-            <p>${ad.description}</p>
+<%--            <p>${ad.description}</p>--%>
 
         </div>
 

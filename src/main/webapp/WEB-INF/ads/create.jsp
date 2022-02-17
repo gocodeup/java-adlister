@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
@@ -18,34 +19,31 @@
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
 
-            <div class="form-group">
-<%--                <select class="form-control form-control-sm">--%>
-<%--                    <option>Automobile</option>--%>
-<%--                    <option>Clothing</option>--%>
-<%--                    <option>Electronics</option>--%>
-<%--                    <option>Furniture</option>--%>
-<%--                    <option>Home</option>--%>
-<%--                    <option>Toys</option>--%>
-<%--                    <option>Tools</option>--%>
     <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="Automotive">
+
+<%--        <c:forEach var="category" items="${categories}">--%>
+            <form action="/ads/create" method="GET">
+        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Automotive">
         <label class="form-check-label" for="Automotive">Automotive</label>
-        <input class="form-check-input" type="checkbox" value="" id="Clothing">
+        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Clothing">
         <label class="form-check-label" for="Clothing">Clothing</label>
-        <input class="form-check-input" type="checkbox" value="" id="Electronics">
+        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Electronics">
         <label class="form-check-label" for="Electronics">Electronics</label>
-        <input class="form-check-input" type="checkbox" value="" id="Furniture">
+        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Furniture">
         <label class="form-check-label" for="Furniture">Furniture</label>
-        <input class="form-check-input" type="checkbox" value="" id="Home">
+        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Home">
         <label class="form-check-label" for="Home">Home</label>
-        <input class="form-check-input" type="checkbox" value="" id="Tools">
+        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Tools">
         <label class="form-check-label" for="Tools">Tools</label>
-        <input class="form-check-input" type="checkbox" value="" id="Toys">
+        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Toys">
         <label class="form-check-label" for="Toys">Toys</label>
-        <input class="form-check-input" type="checkbox" value="" id="Misc">
+        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Misc">
         <label class="form-check-label" for="Misc">Miscellaneous</label>
-<%--                </select>--%>
-            </div>
+            </form>
+<%--        </c:forEach>--%>
+
+    </div>
+
 
             <%--createError attribute posts error message from createAdServlet --%>
 
