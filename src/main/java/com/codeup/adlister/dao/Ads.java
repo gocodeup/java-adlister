@@ -18,4 +18,7 @@ public interface Ads {
 
     //added by ND
     List<Ad> findAdByKeyword(String keyword) throws SQLException;
+
+    //show all ads on profile
+    List<Ad> allAdsByUserId(long userId);
 }
