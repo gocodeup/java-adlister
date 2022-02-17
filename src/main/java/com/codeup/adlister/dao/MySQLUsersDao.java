@@ -64,41 +64,27 @@ public class MySQLUsersDao implements Users {
     }
 
     @Override
-    public void updateUserPassword(long id, String hashPassword) {
+    public void updateUser(User user) {
         // ? will be replaced with the ID that wants to be deleted.
-        String updateSql = "UPDATE users set password = ? where id = ?";
+        String updateSql = "UPDATE users set password = ?, email = ? where id = ?";
         try {
-            PreparedStatement stmt = connection.prepareStatement(updateSql);
-            stmt.setString(1, hashPassword);
-            stmt.setLong(2, id);
+            PreparedStatement stmt = connection.prepareStatement(updateSql, Statement.RETURN_GENERATED_KEYS);
+            stmt.setString(1, user.getPassword());
+            stmt.setString(2, user.getEmail());
+            stmt.setLong(3, user.getId());
+            stmt.executeUpdate();
+            ResultSet rs = stmt.getGeneratedKeys();
+            rs.next();
             // testing for the expected messages.
             System.out.println(stmt);
-            System.out.println(stmt.executeQuery());
-            stmt.executeUpdate();
+            System.out.println(stmt.executeUpdate());
+
         } catch (SQLException e) {
             throw new RuntimeException("Error Editing an Ad by ID", e);
         }
 
     }
 
-    @Override
-    public void updateUserEmail(long id, String email) {
-        //  ? will be replaced with the ID that is to be deleted
-        String updateSql = "UPDATE users set email = ? where id = ?";
-
-        try {
-            PreparedStatement stmt = connection.prepareStatement(updateSql);
-            stmt.setString(1, email);
-            stmt.setLong(2, id);
-            //    testing for expected  messages.
-             System.out.println(stmt);
-            System.out.println(stmt.executeQuery());
-            //   This executes a query
-            stmt.executeUpdate();
-        } catch (SQLException e) {
-            throw new RuntimeException("Error Editing an Ad by ID", e);
-        }
-    }
 
 
 

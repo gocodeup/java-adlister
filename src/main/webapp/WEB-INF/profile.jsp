@@ -39,7 +39,7 @@
 <br>
 <div>
 
-    <a href="${pageContext.request.contextPath}/WEB-INF/editProfile" onclick="w3_close()"
+    <a href="/editProfile" onclick="w3_close()"
        class="w3-bar-item w3-button w3-padding w3-text-teal"><i
             class="fa fa-th-large fa-fw w3-margin-right"></i>EDIT PROFILE</a>
 
