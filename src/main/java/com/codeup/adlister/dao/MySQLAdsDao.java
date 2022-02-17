@@ -3,9 +3,6 @@ package com.codeup.adlister.dao;
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -95,7 +92,37 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-//<<<<<<< diaz-navbar-search
+
+//     public Ad findOne(long id) throws SQLException {
+//         String singleAdQuery = "SELECT * FROM ads WHERE id LIKE ?";
+//         long adSelect = id;
+//         PreparedStatement stmt;
+// //        try {
+//             stmt = connection.prepareStatement(singleAdQuery);
+//             //  need to correct after I complete add/commit/push/pull
+//             stmt.setLong(adSelect);
+//             ResultSet rs = stmt.executeQuery();
+//             return extractAd(rs);
+// //        } catch (SQLException e) {
+// //            e.printStackTrace();
+// //        }
+// //        return null;
+//     }
+
+//     @Override
+//     public List<Ad> findAdByKeyword(String keyword) throws SQLException {
+//         return null;
+//     }
+
+    //need to add arraylist methods, etc. ND
+//    @Override
+//    public List<Ad> findAdByKeyword(String keyword) throws SQLException {
+//        String query = "SELECT *, users.userName FROM ads\n + ";
+//
+////        prepped statement
+//        //while(rs.nets())
+//        return null;
+//    }
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
@@ -141,4 +168,20 @@ public class MySQLAdsDao implements Ads {
         return keywordAds;
     }
 
+}
+
+
+//shows all of the current users ads in the profile by userid
+//@Override
+    public List<Ad> allAdsByUserId(long userId) {
+        String query = "SELECT * FROM ads WHERE user_id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, userId);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error: cannot retrieve ads", e);
+        }
+    }
 }

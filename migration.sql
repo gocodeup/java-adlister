@@ -1,11 +1,8 @@
 USE adlister_db;
 
 
-DROP TABLE IF EXISTS ads;
-DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS categories;
-DROP TABLE IF EXISTS ad_category;
 
+DROP TABLE IF EXISTS users;
 CREATE TABLE users
 (
     id       INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -21,7 +18,9 @@ CREATE TABLE users
 
 );
 
-CREATE TABLE IF NOT EXISTS ads
+
+DROP TABLE IF EXISTS ads;
+CREATE TABLE ads
 (
     id          INT UNSIGNED NOT NULL AUTO_INCREMENT,
     user_id     INT UNSIGNED NOT NULL,
@@ -31,7 +30,7 @@ CREATE TABLE IF NOT EXISTS ads
     FOREIGN KEY (user_id) REFERENCES users (id)
         ON DELETE CASCADE,
 
-# added these ND
+-- # added these ND
     dateCreated VARCHAR (50) NOT NULL,
     categoryName VARCHAR(255) NOT NULL,
     UNIQUE (user_id, title, description)
@@ -51,13 +50,16 @@ CREATE TABLE IF NOT EXISTS ads
 -- # added this ND
 -- # it has an error with the foreign key other code
 
-CREATE TABLE IF NOT EXISTS categories
-(id INT UNSIGNED AUTO_INCREMENT,
- categoryName VARCHAR(100) NOT NULL ,
- PRIMARY KEY (id),
- UNIQUE (categoryName)
+
+DROP TABLE IF EXISTS categories;
+CREATE TABLE categories
+(
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    categoryName VARCHAR(240) NOT NULL,
+    PRIMARY KEY (id)
 );
 
+DROP TABLE IF EXISTS ad_category;
 CREATE TABLE ad_category
 (
     category_id INT UNSIGNED NOT NULL,
@@ -75,4 +77,3 @@ INSERT INTO categories (categoryName) VALUES
               ('community'),
               ('furniture');
 
-SELECT * FROM categories;
