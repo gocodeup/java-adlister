@@ -16,3 +16,7 @@ public class AdsIndexServlet extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
     }
 }
+
+//  urlPattern does not work; get a 500 error code stating
+//  Error retrieving all ads
+//  Root Cause: Unknown database 'ads'
