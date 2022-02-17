@@ -1,7 +1,5 @@
 USE adlister_db;
 
-
-
 DROP TABLE IF EXISTS users;
 CREATE TABLE users
 (
@@ -12,12 +10,14 @@ CREATE TABLE users
     PRIMARY KEY (id),
 
 # added these ND
-    dateCreated VARCHAR(50) NOT NULL,
-    UNIQUE (username),
-    UNIQUE (email)
+# maybe only dateCreated could be added
+# UNIQUE is identified in username/email above
+# will comment out until okayed by team
+    dateCreated VARCHAR(50) NOT NULL
+#     UNIQUE (username),
+#     UNIQUE (email)
 
 );
-
 
 DROP TABLE IF EXISTS ads;
 CREATE TABLE ads
@@ -28,28 +28,15 @@ CREATE TABLE ads
     description VARCHAR(400)    NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users (id)
-        ON DELETE CASCADE,
+        ON DELETE CASCADE
 
 -- # added these ND
-    dateCreated VARCHAR (50) NOT NULL,
-    categoryName VARCHAR(255) NOT NULL,
-    UNIQUE (user_id, title, description)
+# commenting out the below, don't believe is needed
+# will discuss with team
+#     dateCreated VARCHAR (50) NOT NULL,
+#     categoryName VARCHAR(255) NOT NULL,
+#     UNIQUE (user_id, title, description)
 );
-
-
-
---
--- #     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
--- #     ad_id INT UNSIGNED NOT NULL,
--- #     categoryName VARCHAR(240) NOT NULL,
--- #     PRIMARY KEY (id),
--- #     FOREIGN KEY (ad_id) REFERENCES ads (id)
--- #         ON DELETE CASCADE,
-
-
--- # added this ND
--- # it has an error with the foreign key other code
-
 
 DROP TABLE IF EXISTS categories;
 CREATE TABLE categories
@@ -69,11 +56,13 @@ CREATE TABLE ad_category
     FOREIGN KEY (category_id) REFERENCES categories(id)
 );
 
-
-INSERT INTO categories (categoryName) VALUES
-              ('for sale'),
-              ('automotive'),
-              ('jobs'),
-              ('community'),
-              ('furniture');
+# Below INSERT should be removed
+# Have seeder file for INSERT of categories
+# Commenting out until discussed with team
+# INSERT INTO categories (categoryName) VALUES
+#               ('for sale'),
+#               ('automotive'),
+#               ('jobs'),
+#               ('community'),
+#               ('furniture');
 
