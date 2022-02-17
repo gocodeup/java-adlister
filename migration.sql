@@ -11,10 +11,10 @@ CREATE TABLE users
     password VARCHAR(255) NOT NULL,
     PRIMARY KEY (id),
 
-# added these ND
-    dateCreated VARCHAR(50) NOT NULL,
-    UNIQUE (username),
-    UNIQUE (email)
+# # added these ND
+#     dateCreated VARCHAR(50) NOT NULL,
+#     UNIQUE (username),
+#     UNIQUE (email)
 
 );
 
@@ -31,9 +31,9 @@ CREATE TABLE ads
         ON DELETE CASCADE,
 
 -- # added these ND
-    dateCreated VARCHAR (50) NOT NULL,
-    categoryName VARCHAR(255) NOT NULL,
-    UNIQUE (user_id, title, description)
+#     dateCreated VARCHAR (50) NOT NULL,
+#     categoryName VARCHAR(255) NOT NULL,
+#     UNIQUE (user_id, title, description)
 );
 
 

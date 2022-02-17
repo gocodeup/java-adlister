@@ -59,7 +59,6 @@ public class MySQLAdsDao implements Ads {
     }
 
 
-
     public Long insert(Ad ad) {
         try {
             String insertQuery = "INSERT INTO ads(user_id, title, description) VALUES (?, ?, ?)";
@@ -77,17 +76,21 @@ public class MySQLAdsDao implements Ads {
     }
 
 
-    //  need to finish this method
-    @Override
-    public Ad findOne(long id) throws SQLException {
-        String singleAdQuery = "SELECT * FROM ads WHERE id LIKE ?";
-        PreparedStatement stmt;
-        stmt = connection.prepareStatement(singleAdQuery);
-        stmt.setLong(1, id);
-        ResultSet rs = stmt.executeQuery();
-        return extractAd(rs);
-    }
-
+//    public Ad findOne(long id) throws SQLException {
+//        String singleAdQuery = "SELECT * FROM ads WHERE id LIKE ?";
+//        long adSelect = id;
+//        PreparedStatement stmt;
+//        try {
+//            stmt = connection.prepareStatement(singleAdQuery);
+//            //  need to correct after I complete add/commit/push/pull
+//            stmt.setLong(adSelect);
+//            ResultSet rs = stmt.executeQuery();
+//            return extractAd(rs);
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return null;
+//    }
 
 
 //     @Override
@@ -151,8 +154,6 @@ public class MySQLAdsDao implements Ads {
     }
 
 
-
-
     //shows all of the current users ads in the profile by userid
 //@Override
     public List<Ad> allAdsByUserId(long userId) {
@@ -164,6 +165,19 @@ public class MySQLAdsDao implements Ads {
             return createAdsFromResults(rs);
         } catch (SQLException e) {
             throw new RuntimeException("Error: cannot retrieve ads", e);
+        }
+    }
+
+    public Ad findByStringId(String id) {
+        String findquery = "SELECT * FROM ads WHERE id like (?)";
+        try{
+            PreparedStatement stmt = connection.prepareStatement(findquery);
+            stmt.setString(1, id);
+            ResultSet rs =stmt.executeQuery();
+            rs.next();
+            return extractAd(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding the ad by string id");
         }
     }
 }
