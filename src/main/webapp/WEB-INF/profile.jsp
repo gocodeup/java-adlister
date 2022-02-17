@@ -20,8 +20,8 @@
 
 
         <div class="col-md-6">
-            <h2>${ad.title}</h2>
-            <p>${ad.description}</p>
+            <h2><c:out value = "${ad.title}"/></h2>
+            <p><c:out value = "${ad.description}"/></p>
             <br>
             <a href="${pageContext.request.contextPath}/ads/updateAds?ad_id=${ad.id}"
                class="btn btn-sm ">Update</a>
