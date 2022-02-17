@@ -56,17 +56,20 @@ public class MySQLAdsDao implements Ads {
 
     //  need to finish this method
     @Override
-    public Ad findOne(long id) {
-        String singleAdQuery = "SELECT * FROM ads WHERE id LIKE id";
-        PreparedStatement stmt = null;
-        try {
+    public Ad findOne(long id) throws SQLException {
+        String singleAdQuery = "SELECT * FROM ads WHERE id LIKE ?";
+        long adSelect = id;
+        PreparedStatement stmt;
+//        try {
             stmt = connection.prepareStatement(singleAdQuery);
+            //  need to correct after I complete add/commit/push/pull
+            stmt.setLong(adSelect);
             ResultSet rs = stmt.executeQuery();
             return extractAd(rs);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+//        return null;
     }
 
     @Override
