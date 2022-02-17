@@ -1,5 +1,6 @@
 package com.codeup.adlister.dao;
 
+import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.Category;
 import com.mysql.cj.jdbc.Driver;
 
@@ -29,29 +30,40 @@ public class MySQLCategoriesDao implements Categories {
         try {
             stmt = connection.prepareStatement("SELECT * FROM categories");
             ResultSet rs = stmt.executeQuery();
-            List<Category> categories = new ArrayList<>();
-            while (rs.next()) {
-                categories.add(new Category(
-                        rs.getLong("id"),
-                        rs.getString("category")
-                ));
-            }
-            return categories;
+            return createCatsFromResults(rs);
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving all categories.", e);
         }
     }
 
-    @Override
-    public Category getCategoryByTitle(String category) {
-        PreparedStatement stmt = null;
-        try {
-            stmt = connection.prepareStatement("SELECT * from categories WHERE category = ? LIMIT 1");
-            ResultSet rs = stmt.executeQuery();
 
+    @Override
+    public Category getCategoryByCatName(String category) {
+        String query = "SELECT * FROM users WHERE email = ? LIMIT 1";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, category);
+            return extractCategory(stmt.executeQuery());
         } catch (SQLException e) {
-            throw new RuntimeException("Error retrieving category");
+            throw new RuntimeException("Error finding a category", e);
         }
-        return null;
+    }
+
+    private Category extractCategory(ResultSet rs) throws SQLException {
+        if (! rs.next()) {
+            return null;
+        }
+        return new Category(
+                rs.getLong("id"),
+                rs.getString("category")
+        );
+    }
+
+    private List<Category> createCatsFromResults(ResultSet rs) throws SQLException {
+        List<Category> categories = new ArrayList<>();
+        while (rs.next()) {
+            categories.add(extractCategory(rs));
+        }
+        return categories;
     }
 }

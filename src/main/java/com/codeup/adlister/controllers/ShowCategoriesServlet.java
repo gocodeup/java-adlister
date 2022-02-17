@@ -19,7 +19,7 @@ public class ShowCategoriesServlet extends HttpServlet {
 
         // request so that specific category populates the categories.jsp page
         String categoryTitle = request.getParameter("categories");
-        request.setAttribute("categories", DaoFactory.getCategoriesDao().getCategoryByTitle(categoryTitle));
+        request.setAttribute("categories", DaoFactory.getCategoriesDao().getCategoryByCatName(categoryTitle));
 
         request.getRequestDispatcher("/WEB-INF/ads/categories.jsp").forward(request, response);
     }
