@@ -13,8 +13,14 @@ import java.io.IOException;
 public class ShowCategoriesServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // request for all categories to populate the categories.jsp page
         request.setAttribute("categories", DaoFactory.getCategoriesDao().all());
-        
+
+
+        // request so that specific category populates the categories.jsp page
+        String categoryTitle = request.getParameter("categories");
+        request.setAttribute("categories", DaoFactory.getCategoriesDao().getCategoryByTitle(categoryTitle));
+
         request.getRequestDispatcher("/WEB-INF/ads/categories.jsp").forward(request, response);
     }
 }

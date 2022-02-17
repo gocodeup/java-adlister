@@ -38,12 +38,20 @@ public class MySQLCategoriesDao implements Categories {
             }
             return categories;
         } catch (SQLException e) {
-            throw new RuntimeException("Error retrieving all ads.", e);
+            throw new RuntimeException("Error retrieving all categories.", e);
         }
     }
 
     @Override
     public Category getCategoryByTitle(String category) {
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement("SELECT * from categories WHERE category = ? LIMIT 1");
+            ResultSet rs = stmt.executeQuery();
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving category");
+        }
         return null;
     }
 }

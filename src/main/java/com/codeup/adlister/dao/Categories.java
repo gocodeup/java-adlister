@@ -10,4 +10,5 @@ public interface Categories {
 
     //Show category object by title
     Category getCategoryByTitle(String category);
+
 }

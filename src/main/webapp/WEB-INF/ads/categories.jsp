@@ -20,7 +20,9 @@
   <h1>All Categories</h1>
   <c:forEach var="category" items="${categories}">
     <div class="col-md-6">
+      <ul>
 
+      </ul>
     </div>
   </c:forEach>
 </div>
