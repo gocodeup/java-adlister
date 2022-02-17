@@ -7,11 +7,11 @@
     --bg-color-1: #A9A8A6;
 }
 
-*,
-*::before,
-*::after{
-    box-sizing: inherit;
-}
+/**,*/
+/**::before,*/
+/**::after{*/
+/*    box-sizing: inherit;*/
+/*}*/
 
 html{
     box-sizing: border-box;

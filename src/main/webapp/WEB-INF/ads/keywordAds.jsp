@@ -13,6 +13,9 @@
         <jsp:param name="title" value="Your Profile"/>
     </jsp:include>
     <%--    needed this for css stylesheet!!   --%>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width", initial-scale="1.0" />
+    <meta http-equiv="X-UA-COMPATIBLE" content="ie=edge" />
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <title>Search</title>
 
