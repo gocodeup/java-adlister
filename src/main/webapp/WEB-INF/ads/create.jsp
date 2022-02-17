@@ -27,7 +27,6 @@
         <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="${category.id}">
         <label class="form-check-label" for="${category.id}">${category.category}</label>
         </c:forEach>
-
     </div>
 
 
