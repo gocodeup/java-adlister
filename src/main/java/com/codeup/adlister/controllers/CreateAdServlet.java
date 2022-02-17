@@ -39,6 +39,7 @@ public class CreateAdServlet extends HttpServlet {
             categoryObjects.add(DaoFactory.getCategoriesDao().getCategoryByCatName(selectedCategories[i]));
         }
 
+
         //if title or description is missing error message will be created
         if (title.isEmpty() || description.isEmpty()) {
             String errorMessage = "Missing information.";
