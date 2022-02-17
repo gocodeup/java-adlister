@@ -58,12 +58,12 @@ public class MySQLAdsDao implements Ads {
     }
 
     //need to add arraylist methods, etc. ND
-    @Override
+//    @Override
     public List<Ad> findAdByKeyword(String keyword) throws SQLException {
-        String query = "SELECT" *, users.userName FROM ads\n + ;
-
-//        prepped statement
-        //while(rs.nets())
+////        String query = "SELECT" *, users.userName FROM ads\n + ;
+//
+////        prepped statement
+//        //while(rs.nets())
         return null;
     }
 
@@ -82,5 +82,20 @@ public class MySQLAdsDao implements Ads {
             ads.add(extractAd(rs));
         }
         return ads;
+    }
+
+
+//shows all of the current users ads in the profile by userid
+//@Override
+    public List<Ad> allAdsByUserId(long userId) {
+        String query = "SELECT * FROM ads WHERE user_id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, userId);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error: cannot retrieve ads", e);
+        }
     }
 }

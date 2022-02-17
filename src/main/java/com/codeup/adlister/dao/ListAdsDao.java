@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+//public class ListAdsDao {
 public class ListAdsDao implements Ads {
     private List<Ad> ads;
 
@@ -30,6 +31,12 @@ public class ListAdsDao implements Ads {
 
     @Override
     public List<Ad> findAdByKeyword(String keyword) throws SQLException {
+        return null;
+    }
+
+    //show all ads on profile
+    @Override
+    public List<Ad> allAdsByUserId(long userId)  {
         return null;
     }
 
