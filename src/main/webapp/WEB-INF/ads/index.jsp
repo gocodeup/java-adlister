@@ -14,7 +14,7 @@
     <h1>Here Are all the ads!</h1>
     <div class="display-cards row row-cols-4" >
     <c:forEach var="ad" items="${ads}">
-        <div class="card" style="width: 25rem">
+        <div class="card" style="width: 30rem">
             <form action="/ads/individualAd" method="GET">
 <%--            <h2><a href="/ads/individualAd">${ad.id}</a></h2>--%>
             <input type="hidden" name="ad" value="${ad.id}">
@@ -31,6 +31,6 @@
     </c:forEach>
     </div>
 </div>
-
+<jsp:include page="/WEB-INF/partials/footer.jsp"></jsp:include>
 </body>
 </html>

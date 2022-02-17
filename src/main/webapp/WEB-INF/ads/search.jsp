@@ -40,6 +40,6 @@ NOTE: when click to indv ad gives error--%>
 
     <a href="${pageContext.request.contextPath}/ads">Return to all ads</a>
 </div>
-
+<jsp:include page="/WEB-INF/partials/footer.jsp"></jsp:include>
 </body>
 </html>

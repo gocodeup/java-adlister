@@ -23,6 +23,6 @@
             <input type="submit" class="btn btn-dark btn-block" value="Log In">
         </form>
     </div>
-
+    <jsp:include page="/WEB-INF/partials/footer.jsp"></jsp:include>
 </body>
 </html>

@@ -56,5 +56,9 @@
 <%--added link to get back to profile- AG--%>
         <a class="back-button" href="/profile"><i class="fa fa-chevron-left" aria-hidden="true">Back to Profile</i></a>
     </div>
+
+
+
+    <jsp:include page="/WEB-INF/partials/footer.jsp"></jsp:include>
 </body>
 </html>

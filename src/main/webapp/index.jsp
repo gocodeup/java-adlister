@@ -12,32 +12,32 @@
 
 
 
-    <div class="jumbotron jumbotron-fluid">
-        <div class="jumbo-container">
+    <div class="container my-5 mx-auto main">
+        <div class="jumbo-container mx-auto text-center">
             <h1 class="">Welcome to the Adlister!</h1>
         </div>
-    </div>
 
 
 
-<div class="container-fluid" id="index-img">
+
+<div class="container-fluid my-5" >
 
     <div class="search-bar">
-        <form action="/ads/search" METHOD="POST">
+        <form class="mx-5 search-bar" action="/ads/search" METHOD="POST">
             <input id="keyword" name="keyword" class="form-control" type="text" placeholder="What are you looking for?">
             <button type="submit" class="home-search-bar btn btn-dark btn-block" value="Search">Search</button>
         </form>
     </div>
 
 </div>
+    </div>
+    <div class="container-fluid my-5">
 
-    <div class="container-fluid">
 
-
-    <div class="jumbotron jumbotron-fluid">
+    <div class="container">
         <div class="categories-container" id="categories-header">
 <%--            <h3 class="categories-header"><i class="fa fa-hashtag" aria-hidden="true">CATEGORIES</i></h3>--%>
-            <div class="category">
+            <div class="category text-center justify-content-around">
                 <span class="align-baseline w3-tag w3-grey w3-margin-bottom w3-margin-left"><a href="${pageContext.request.contextPath}/ads/categories?category=Automobile">Automobile</a></span>
                 <span class="align-top w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?category=Clothing">Clothing</a></span>
                 <span class="align-bottom w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?category=Electronics">Electronics</a></span>
@@ -50,7 +50,7 @@
         </div>
     </div>
     </div>
-    <footer class="">
+    <footer class="my-5">
 
         <h3>Something here, this is our footer, can be social media, our signature, etc</h3>
 
