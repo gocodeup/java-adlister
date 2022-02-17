@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "controllers.UpdateAdsServlet", urlPatterns = "/ads/updateads")
+@WebServlet(name = "controllers.UpdateAdsServlet", urlPatterns = "/ads/updateAds")
 public class UpdateAdsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -29,7 +29,7 @@ public class UpdateAdsServlet extends HttpServlet {
         request.setAttribute("ad_id", request.getParameter("ad_id"));
         request.setAttribute("title", ad.getTitle());
         request.setAttribute("description", ad.getDescription());
-        request.getRequestDispatcher("/WEB-INF/ads/updateads.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/ads/updateAds.jsp").forward(request, response);
 
     }
 
@@ -41,12 +41,12 @@ public class UpdateAdsServlet extends HttpServlet {
         long updateID = Long.parseLong(request.getParameter("ad_id"));
 
         if(updateTitle == null || updateTitle.isEmpty()){
-            response.sendRedirect("/ads/updateads?ad_id=" + updateID+ "&errorMessage=TitleNull");
+            response.sendRedirect("/ads/updateAds?ad_id=" + updateID+ "&errorMessage=TitleNull");
             return;
         }
 
         if(updateDescription == null || updateDescription.isEmpty()){
-            response.sendRedirect("/ads/updateads?ad_id=" + updateID+ "&errorMessage=DescriptionNull");
+            response.sendRedirect("/ads/updateAds?ad_id=" + updateID+ "&errorMessage=DescriptionNull");
             return;
         }
 

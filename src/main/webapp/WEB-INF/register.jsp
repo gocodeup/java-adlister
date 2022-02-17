@@ -28,7 +28,7 @@
             </div>
             <%--error attribute posts error message from registerservlet --%>
             <h3 style="color: red">${error}</h3>
-            <input type="submit" class="btn btn-primary btn-block">
+            <input type="submit" class="btn btn-dark btn-block">
         </form>
     </div>
 

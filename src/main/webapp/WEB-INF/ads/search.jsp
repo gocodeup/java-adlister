@@ -24,7 +24,7 @@
 <%--//added some style to show add in a card*** Agutierrez--%>
 <c:if test="${ads != null}">
     <c:forEach var="ad" items="${ads}">
-        <div class="card">
+        <div class="card" style="width: 18rem;">
             <div class="card-body">
                 <h2><a href="${pageContext.request.contextPath}/ads/individualAd?id=${ad.id}">${ad.title}</a></h2>
                  <p>${ad.description}</p>

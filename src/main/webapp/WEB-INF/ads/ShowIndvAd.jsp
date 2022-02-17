@@ -18,9 +18,17 @@
 
     <div class="container">
         <h1>Your Ad</h1>
-                <h2> Title: ${ad.title} </h2>
-                <h3> Description: ${ad.description}</h3>
-                <h3>User: ${sessionScope.user.username}</h3>
+<div>
+    <div class="card" style="width: 18rem;">
+        <h2> Title: ${ad.title} </h2>
+        <h3> Description: ${ad.description}</h3>
+        <h3>User: ${sessionScope.user.username}</h3>
+    </div>
+</div>
+
+        <br>
+        <br>
+        <a class="back-button" href="/ads"><i class="fa fa-chevron-left" aria-hidden="true">Back to Ads</i></a>
     </div>
 
 </body>
