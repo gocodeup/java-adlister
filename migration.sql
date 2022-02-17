@@ -7,13 +7,13 @@ CREATE TABLE users
     username VARCHAR(240) NOT NULL UNIQUE,
     email    VARCHAR(240) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
-    PRIMARY KEY (id),
+    PRIMARY KEY (id)
 
 # added these ND
 # maybe only dateCreated could be added
 # UNIQUE is identified in username/email above
 # will comment out until okayed by team
-    dateCreated VARCHAR(50) NOT NULL
+#     dateCreated VARCHAR(50) NOT NULL
 #     UNIQUE (username),
 #     UNIQUE (email)
 
