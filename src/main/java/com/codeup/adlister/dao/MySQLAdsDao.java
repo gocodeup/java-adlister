@@ -99,7 +99,7 @@ public class MySQLAdsDao implements Ads {
     //  need to finish this method
     @Override
     public Ad findOne(long id) throws SQLException {
-        String singleAdQuery = "SELECT * FROM ads WHERE id LIKE ?";
+        String singleAdQuery = "SELECT * FROM ads WHERE id = ?";
         PreparedStatement stmt;
         stmt = connection.prepareStatement(singleAdQuery);
         stmt.setLong(1, id);
