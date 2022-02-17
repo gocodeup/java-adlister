@@ -34,7 +34,19 @@
 </div>
 
 
+
             </div>
+
+        <div class="col-md-6">
+            <h2><c:out value = "${ad.title}"/></h2>
+            <p><c:out value = "${ad.description}"/></p>
+            <br>
+            <a href="${pageContext.request.contextPath}/ads/updateAds?ad_id=${ad.id}"
+               class="btn btn-sm ">Update</a>
+            <a href="${pageContext.request.contextPath}/ads/delete?ad_id=${ad.id}"
+               onclick="return confirm('Are you sure you want to delete this item?')"
+               class="btn btn-sm ">Delete</a>
+
 
 
         </c:forEach>

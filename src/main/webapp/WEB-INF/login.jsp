@@ -19,6 +19,7 @@
                 <label for="password">Password</label>
                 <input id="password" name="password" class="form-control" type="password">
             </div>
+            <%--loginError allows error message to display  --%>
             <h3 style="color: red">${loginError}</h3>
             <input type="submit" class="btn btn-dark btn-block" value="Log In">
         </form>

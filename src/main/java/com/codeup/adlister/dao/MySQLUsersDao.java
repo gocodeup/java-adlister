@@ -65,7 +65,7 @@ public class MySQLUsersDao implements Users {
 
     @Override
     public void updateUser(User user) {
-        // ? will be replaced with the ID that wants to be deleted.
+        //updates only password and email
         String updateSql = "UPDATE users set password = ?, email = ? where id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(updateSql, Statement.RETURN_GENERATED_KEYS);
