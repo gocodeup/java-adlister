@@ -1,0 +1,14 @@
+/*started out trying to make var section for the color but would need to repeat in each css file*/
+/*made a var file for colors for each */
+.loginHeading{
+    color: var(--light-grey);
+    text-align: center;
+}
+.loginDiv{
+    border-radius: 2em;
+    padding: 3em;
+    background-color: var(--primary-red);
+    color: var(--light-grey);
+    box-shadow: 0 3em .8em black;
+
+}
