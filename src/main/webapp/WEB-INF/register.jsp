@@ -13,7 +13,7 @@
 </head>
 <body>
 <jsp:include page="partials/navbar.jsp" />
-<div class="container">
+<div class="container-fluid">
 
     <%--   ND     --%>
     <div class="row">
@@ -54,24 +54,27 @@
                         <p style="color:red">That username is not available. Try again.</p>
                     </c:if>
 
-<%--                    <div class="regDiv">--%>
-<%--                        <div class="form-group">--%>
-<%--                            <label for="username">Username</label>--%>
-<%--                        </div>--%>
-<%--                        <div class="form-group">--%>
-<%--                            <label for="password">Password</label>--%>
-<%--                        </div>--%>
-<%--                        <div class="form-group">--%>
-<%--                            <label for="email">Email</label>--%>
-<%--                        </div>--%>
-<%--                        <div class="form-group">--%>
-<%--                            <label for="confirm_password">Password Confirm</label>--%>
-<%--                        </div>--%>
+                    <div class="regDiv">
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="form-group">
+                            <label for="confirm_password">Password Confirm</label>
+                        </div>
 <%--                        <input type="submit" class="btn regBtn btn-block">--%>
-<%--                    </div>--%>
-<%--                </form>--%>
-<%--            </div>--%>
-<%--            --%>
+                    </div>
+                </form>
+            </div>
+
+
+
+<%--         Plan is for having this message popup when invalid input for registering.    --%>
             <div class="col-5" >
                 <div id="message">
                     <h3>Password must contain:</h3>
@@ -86,7 +89,7 @@
 <%-- need logic for the validation  --%>
 <script>
     var letter = document.getElementById("letter");
-    var myInput = document.getElementById("myInput");
+    var myInput = document.getElementById("password");
     var number = document.getElementById("number");
     var capital = document.getElementById("capital");
     var length = document.getElementById("length");
