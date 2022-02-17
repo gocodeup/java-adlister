@@ -34,10 +34,10 @@ public class CreateAdServlet extends HttpServlet {
         String description = request.getParameter("description");
 
         String [] selectedCategories = request.getParameterValues("categoryCheckbox");
-        List<Category> categoryObjects = new ArrayList<>();
-        for (int i = 0; i < selectedCategories.length; i++) {
-            categoryObjects.add(DaoFactory.getCategoriesDao().getCategoryByCatName(selectedCategories[i]));
-        }
+//        List<Category> categoryObjects = new ArrayList<>();
+//        for (int i = 0; i < selectedCategories.length; i++) {
+//            categoryObjects.add(DaoFactory.getCategoriesDao().getCategoryByCatName(selectedCategories[i]));
+//        }
 
 
         //if title or description is missing error message will be created
@@ -55,7 +55,13 @@ public class CreateAdServlet extends HttpServlet {
                     request.getParameter("description")
 
             );
-            DaoFactory.getAdsDao().insert(ad);
+            if (selectedCategories == null) {
+                DaoFactory.getAdsDao().insert(ad);
+            }else {
+                DaoFactory.getAdsDao().insertCategories(ad, selectedCategories);
+            }
+//            DaoFactory.getAdsDao().insert(ad);
+//            DaoFactory.getCategoriesDao().insert(categoryObjects);
             response.sendRedirect("/ads");
         }
 

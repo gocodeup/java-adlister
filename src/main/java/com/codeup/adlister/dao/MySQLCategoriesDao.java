@@ -49,6 +49,11 @@ public class MySQLCategoriesDao implements Categories {
         }
     }
 
+    @Override
+    public Long insert(List<Category> categoryObjects) {
+        return null;
+    }
+
 //    @Override
 //    public Category getAdsInsert(Category category) {
 //

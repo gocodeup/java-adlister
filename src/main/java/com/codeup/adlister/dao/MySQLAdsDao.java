@@ -53,6 +53,7 @@ public class MySQLAdsDao implements Ads {
     }
 
 
+
     @Override
     public Long insert(Ad ad) {
         try {
@@ -68,7 +69,36 @@ public class MySQLAdsDao implements Ads {
         } catch (SQLException e) {
             throw new RuntimeException("Error creating a new ad.", e);
         }
+
+
     }
+    public void insertCategories(Ad ad, String[] selectedCategories) {
+        try {
+            String insertQuery = "INSERT INTO ads(user_id, title, description) VALUES (?, ?, ?)";
+            PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
+            stmt.setLong(1, ad.getUserId());
+            stmt.setString(2, ad.getTitle());
+            stmt.setString(3, ad.getDescription());
+            stmt.executeUpdate();
+            ResultSet rs = stmt.getGeneratedKeys();
+            rs.next();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error creating a new ad.", e);
+        }
+        try {
+            String insertQuery = "INSERT INTO ads_categories (ads_id, category_id) VALUES (LAST_INSERT_ID(), ?)";
+            PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
+            for (String category : selectedCategories) {
+                stmt.setInt(1, Integer.parseInt(category));
+                stmt.executeUpdate();
+            }
+            ResultSet rs = stmt.getGeneratedKeys();
+            rs.next();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error creating a new ad.", e);
+        }
+    }
+
 
     //Method for search ads---------------------------AG
     @Override
@@ -121,7 +151,7 @@ public class MySQLAdsDao implements Ads {
     @Override
     public void deleteCategories(long ad_Id) {
         try {
-            String insertQuery = "DELETE FROM ad_categories WHERE ad_id = ?";
+            String insertQuery = "DELETE FROM ads_categories WHERE ads_id = ?";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad_Id);
 //            stmt.setLong(2, category_ID);
