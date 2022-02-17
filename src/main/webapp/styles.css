@@ -1,0 +1,52 @@
+body, h1, h2, h3, h4, h5, h6, .back-button {
+    font-family: "Monserrat", sans-serif;
+}
+
+.nav-item, .nav-link {
+    font-family: "Monserrat", sans-serif;
+}
+
+#index-img{
+background-image: url("/images/flea-market.jpg");
+}
+.jumbo-container > h1 {
+    display: flex; justify-content: center;
+}
+
+
+
+.categories-container > h3 {
+    display: flex; justify-content: center;
+}
+
+.categories-container {
+    display: flex; flex-direction: column
+}
+
+.category {
+    display: flex; justify-content: space-evenly
+}
+
+#profile-logo {
+    display: flex; justify-content: center
+}
+
+.users-name {
+    display: flex; justify-content: center
+}
+
+.display-cards {
+    display: flex; flex-wrap: wrap; justify-content: center; align-items: center
+}
+
+.back-button {
+    font-family: "Raleway", sans-serif; color: black
+}
+
+.navbar-brand, .display-4 {
+    font-family: "Pricedown"; color: black
+}
+
+.navbar-brand {
+    font-size: xx-large
+}

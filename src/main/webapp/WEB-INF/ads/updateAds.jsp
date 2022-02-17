@@ -11,6 +11,7 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Update your Ad" />
     </jsp:include>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>

@@ -13,7 +13,7 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Search Ads" />
     </jsp:include>
-
+    <link rel="stylesheet" href="/styles.css">
     <title>Search</title>
 </head>
 <body>
@@ -21,7 +21,8 @@
 <div class="container">
     <h1>You Search Results:</h1>
 
-<%--//added some style to show add in a card*** Agutierrez--%>
+<%--//added some style to show add in a card*** Agutierrez
+NOTE: when click to indv ad gives error--%>
 <c:if test="${ads != null}">
     <c:forEach var="ad" items="${ads}">
         <div class="card" style="width: 18rem;">
