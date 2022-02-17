@@ -11,7 +11,7 @@ public interface Ads {
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
     // get single ad
-    Ad findOne(long id);
+    Ad findOne(long id) throws SQLException;
     //  from reading should add all CRUD methods to DAO
 //    void update(Ad ad);
 //    void destroy(Ad ad);
