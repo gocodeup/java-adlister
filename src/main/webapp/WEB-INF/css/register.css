@@ -1,6 +1,9 @@
 body{
     color: var(--light-grey);
 }
+#red{
+    color: red;
+}
 .regDiv{
     background-color: var(--primary-red) ;
     border-radius: 2em;
@@ -9,4 +12,33 @@ body{
 }
 .regInput, .regBtn{
     box-shadow: 0 .3em .8em black;
+}
+#message p{
+    padding: 10px 35px;
+    font-size: 18px;
+}
+.valid{
+    color:green;
+}
+.valid:before{
+    position: relative;
+    left: -32px;
+    content: "√";
+}
+
+/*.unicode{*/
+/*    color: red;*/
+/*    content: "\2714\feOe";*/
+/*    found this snippet for a checkmark  */
+
+.invalid{
+    color: red;
+}
+.invalid:before{
+    position: relative;
+    left: -35px;
+    content: "X";
+}
+.headingRegister{
+    text-align: center;
 }
