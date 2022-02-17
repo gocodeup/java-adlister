@@ -12,6 +12,7 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Individual Ad" />
     </jsp:include>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
@@ -30,6 +31,6 @@
         <br>
         <a class="back-button" href="/ads"><i class="fa fa-chevron-left" aria-hidden="true">Back to Ads</i></a>
     </div>
-
+    <jsp:include page="/WEB-INF/partials/footer.jsp"></jsp:include>
 </body>
 </html>

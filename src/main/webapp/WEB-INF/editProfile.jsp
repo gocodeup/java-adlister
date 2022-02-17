@@ -12,6 +12,7 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Edit profile"/>
     </jsp:include>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
@@ -35,8 +36,12 @@
         <input type="password" class="form-control" id="confirmPassword" name="confirmPassword">
     </div>
     <h3 style="color: red;">${editError}</h3>
-    <button type="submit" class="btn btn-primary">Save changes</button>
+    <button type="submit" class="btn btn-dark btn-block">Save changes</button>
 </form>
 </div>
+
+
+
+<jsp:include page="/WEB-INF/partials/footer.jsp"></jsp:include>
 </body>
 </html>

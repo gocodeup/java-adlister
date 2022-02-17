@@ -5,6 +5,7 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Create a new Ad" />
     </jsp:include>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <div class="container">
@@ -53,5 +54,9 @@
 <%--added link to get back to profile- AG--%>
         <a class="back-button" href="/profile"><i class="fa fa-chevron-left" aria-hidden="true">Back to Profile</i></a>
     </div>
+
+
+
+    <jsp:include page="/WEB-INF/partials/footer.jsp"></jsp:include>
 </body>
 </html>

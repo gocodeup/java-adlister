@@ -1,0 +1,61 @@
+body, h1, h2, h3, h4, h5, h6, .back-button {
+    font-family: "Monserrat", sans-serif;
+}
+
+.nav-item, .nav-link {
+    font-family: "Monserrat", sans-serif;
+    color: #92A9BD;
+    margin-left:30px;
+    margin-right:30px;
+}
+
+.navbar-brand{
+    color:dimgray
+}
+
+/*.main{*/
+/*    background-image: url("/images/flea-market.jpg");*/
+/*  */
+/*}*/
+
+.search-bar{
+    width: 430px;
+}
+
+.container > h1 {
+    display: flex; justify-content: center;
+}
+
+.categories-container {
+    display: flex; flex-direction: column
+}
+
+.category {
+    display: flex; justify-content: space-evenly; margin-right: 10px;
+}
+
+#profile-logo {
+    display: flex; justify-content: center
+}
+
+.users-name {
+    display: flex; justify-content: center
+}
+
+.display-cards {
+    display: flex; flex-wrap: wrap; justify-content: center; align-items: center
+}
+
+.back-button {
+    font-family: "Moserrat", sans-serif; color:#92A9BD
+}
+
+.navbar-brand, .display-4 {
+    font-family: "Monserrat"; color: #92A9BD
+}
+
+.navbar-brand {
+    font-size: large; color:#92A9BD
+}
+
+
