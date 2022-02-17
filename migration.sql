@@ -39,17 +39,17 @@ CREATE TABLE IF NOT EXISTS ads
 
 
 
+--
+-- #     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+-- #     ad_id INT UNSIGNED NOT NULL,
+-- #     categoryName VARCHAR(240) NOT NULL,
+-- #     PRIMARY KEY (id),
+-- #     FOREIGN KEY (ad_id) REFERENCES ads (id)
+-- #         ON DELETE CASCADE,
 
-#     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-#     ad_id INT UNSIGNED NOT NULL,
-#     categoryName VARCHAR(240) NOT NULL,
-#     PRIMARY KEY (id),
-#     FOREIGN KEY (ad_id) REFERENCES ads (id)
-#         ON DELETE CASCADE,
 
-
-# added this ND
-# it has an error with the foreign key other code
+-- # added this ND
+-- # it has an error with the foreign key other code
 
 CREATE TABLE IF NOT EXISTS categories
 (id INT UNSIGNED AUTO_INCREMENT,
