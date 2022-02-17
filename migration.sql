@@ -15,9 +15,9 @@ CREATE TABLE users
     PRIMARY KEY (id),
 
 # added these ND
-dateCreated VARCHAR(50) NOT NULL,
-UNIQUE (username),
-UNIQUE (email)
+    dateCreated VARCHAR(50) NOT NULL,
+    UNIQUE (username),
+    UNIQUE (email)
 
 );
 
@@ -32,9 +32,9 @@ CREATE TABLE IF NOT EXISTS ads
         ON DELETE CASCADE,
 
 # added these ND
-dateCreated VARCHAR (50) NOT NULL,
-categoryName VARCHAR(255) NOT NULL,
-UNIQUE (user_id, title, description)
+    dateCreated VARCHAR (50) NOT NULL,
+    categoryName VARCHAR(255) NOT NULL,
+    UNIQUE (user_id, title, description)
 );
 
 
@@ -53,9 +53,9 @@ UNIQUE (user_id, title, description)
 
 CREATE TABLE IF NOT EXISTS categories
 (id INT UNSIGNED AUTO_INCREMENT,
-categoryName VARCHAR(100) NOT NULL ,
-PRIMARY KEY (id),
-UNIQUE (categoryName)
+ categoryName VARCHAR(100) NOT NULL ,
+ PRIMARY KEY (id),
+ UNIQUE (categoryName)
 );
 
 CREATE TABLE ad_category
@@ -69,11 +69,10 @@ CREATE TABLE ad_category
 
 
 INSERT INTO categories (categoryName) VALUES
-
-    ('for sale'),
-    ('automotive'),
-    ('jobs'),
-    ('community'),
-    ('furniture');
+              ('for sale'),
+              ('automotive'),
+              ('jobs'),
+              ('community'),
+              ('furniture');
 
 SELECT * FROM categories;

@@ -1,14 +1,18 @@
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" >
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" ></script>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+</script>
 
 <nav id="mainNav" class="navbar navbar-expand-lg red-hover">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <a class="navbar-brand w-text" href="#">logo</a>
-<%--        <img href="/img_1.png" alt="img" style="max-width: 20px; max-height: 24px"></img> Navbar</a>--%>
+<%--        <a class="navbar-brand w-text" href="#">logo</a>--%>
+<%--        <img src="../../img/adlister.png" alt="" style="max-width: 20px; max-height: 24px" >  --%>
+        <img src="<c:url value="/img/adlister.png"/>" alt=""  width="20px" height="24px">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle nav">
             <span class="navbar-toggler-icon"></span>
@@ -58,11 +62,11 @@
                 <a class="nav-link red-hover w-text" href="/login">
                     <i class="fa fa-edit"></i> Login to go in.<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link red-hover w-text" href="/register">
-                    <i class="fa fa-list" aria-hidden="true"> Register <span class="sr-only">(current)</span>
-                </i></a>
-            </li>
+<%--            <li class="nav-item active">--%>
+<%--                <a class="nav-link red-hover w-text" href="/register">--%>
+<%--                    <i class="fa fa-list" aria-hidden="true"> Register <span class="sr-only">(current)</span>--%>
+<%--                </i></a>--%>
+<%--            </li>--%>
         </c:otherwise>
     </c:choose>
                 </ul>

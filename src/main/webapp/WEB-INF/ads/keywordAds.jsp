@@ -26,14 +26,13 @@
             <nav id="side-nav" class="nav flex-column">
                 <%--                    add specific items/categories later--%>
                 <a class="w-text nav-link active pl-5" href="/category?value=0">All</a>
-                <a class="w-text nav-link active pl-5" href="/category?value=1"><i class="fa fa-example"></i>Cat. name</a>
-                <a class="w-text nav-link active pl-5" href="/category?value=2"><i class="fa fa-example"></i>Cat. name</a>
-                <a class="w-text nav-link active pl-5" href="/category?value=3"><i class="fa fa-example"></i>Cat. name</a>
-                <a class="w-text nav-link active pl-5" href="/category?value=4"><i class="fa fa-example"></i>Cat. name</a>
-                <a class="w-text nav-link active pl-5" href="/category?value=5"><i class="fa fa-example"></i>Cat. name</a>
-                <a class="w-text nav-link active pl-5" href="/category?value=6"><i class="fa fa-example"></i>Cat. name</a>
-                <a class="w-text nav-link active pl-5" href="/category?value=7"><i class="fa fa-example"></i>Cat. name</a>
-                <a class="w-text nav-link active pl-5" href="/category?value=8">Other</a>
+                <a class="w-text nav-link active pl-5" href="/category?value=1"><i class="fa fa-example"></i>For Sale</a>
+                <a class="w-text nav-link active pl-5" href="/category?value=2"><i class="fa fa-example"></i>Automotive</a>
+                <a class="w-text nav-link active pl-5" href="/category?value=3"><i class="fa fa-example"></i>Jobs</a>
+                <a class="w-text nav-link active pl-5" href="/category?value=4"><i class="fa fa-example"></i>Community</a>
+                <a class="w-text nav-link active pl-5" href="/category?value=5"><i class="fa fa-example"></i>Furniture</a>
+<%--                 <a class="w-text nav-link active pl-5" href="/category?value=8">Other</a>&ndash;%&gt;--%>
+<%--              ND  --%>
             </nav>
         </div>
     </div>
