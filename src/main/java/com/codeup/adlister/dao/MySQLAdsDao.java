@@ -14,14 +14,15 @@ public class MySQLAdsDao implements Ads {
         try {
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
-                config.getUrl(),
-                config.getUser(),
-                config.getPassword()
+                    config.getUrl(),
+                    config.getUser(),
+                    config.getPassword()
             );
         } catch (SQLException e) {
             throw new RuntimeException("Error connecting to the database!", e);
         }
     }
+
     @Override
     public List<Ad> all() {
         PreparedStatement stmt = null;
@@ -29,7 +30,7 @@ public class MySQLAdsDao implements Ads {
             //ND->>>>>>>
             stmt = connection.prepareStatement("SELECT * FROM ads.id, ads.user_id, users.username, " +
                     "ads.title, ads.description, ads.adCreated, ads.category"
-            + "From ads  JOIN users  ON users.id = ads.user_id");
+                    + "From ads  JOIN users  ON users.id = ads.user_id");
             ResultSet rs = stmt.executeQuery();
             //return createAdsFromResults(rs);
             List<Ad> allAds = new ArrayList<>();
@@ -51,29 +52,6 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error retrieving all ads.", e);
         }
     }
-    public void delete(Ad ad) {
-        String query = "DELETE FROM ads WHERE id = ?";
-        try {
-            PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.setLong(1, ad.getId());
-            stmt.executeUpdate();
-        } catch (SQLException e) {
-            throw new RuntimeException("Error deleting an ad by id", e);
-        }
-    }
-
-    public void update(Ad ad) {
-        String query = "UPDATE ads SET title = (?), description = (?) WHERE id = (?)";
-        try{
-            PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.setString(1, ad.getTitle());
-            stmt.setString(2, ad.getDescription());
-            stmt.setLong(3, ad.getId());
-            stmt.executeUpdate();
-        } catch (SQLException e) {
-            throw new RuntimeException("Error updating the existing ad", e);
-        }
-    }
 
     public void delete(Ad ad) {
         String query = "DELETE FROM ads WHERE id = ?";
@@ -88,7 +66,7 @@ public class MySQLAdsDao implements Ads {
 
     public void update(Ad ad) {
         String query = "UPDATE ads SET title = (?), description = (?) WHERE id = (?)";
-        try{
+        try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, ad.getTitle());
             stmt.setString(2, ad.getDescription());
@@ -99,7 +77,8 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    @Override
+
+
     public Long insert(Ad ad) {
         try {
             String insertQuery = "INSERT INTO ads(user_id, title, description) VALUES (?, ?, ?)";
@@ -150,10 +129,10 @@ public class MySQLAdsDao implements Ads {
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
-            rs.getLong("id"),
-            rs.getLong("user_id"),
-            rs.getString("title"),
-            rs.getString("description")
+                rs.getLong("id"),
+                rs.getLong("user_id"),
+                rs.getString("title"),
+                rs.getString("description")
         );
     }
 
@@ -164,6 +143,7 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
+
     //need to add arraylist methods, etc. ND
     @Override
     public List<Ad> findAdByKeyword(String keyword) throws SQLException {
@@ -175,7 +155,7 @@ public class MySQLAdsDao implements Ads {
         pstmt.setString(1, keyword);
         ResultSet rs = pstmt.executeQuery();
         List<Ad> keywordAds = new ArrayList<>();
-        while (rs.next()){
+        while (rs.next()) {
 //            name of the columns of list? Check on changes as needed. i.e. categories, etc.
             Ad newAd = new Ad(
                     rs.getLong("id"),
@@ -185,17 +165,17 @@ public class MySQLAdsDao implements Ads {
                     rs.getString("category"),
                     rs.getString("dateCreated")
 //        **  NOTE:**   not sure if we need a created date but added as a placeholder.
-                    );
+            );
 //            check on method for keywordAds//nvm-i need .add for adding to the list.
             keywordAds.add(newAd);
         }
         return keywordAds;
     }
 
-}
 
 
-//shows all of the current users ads in the profile by userid
+
+    //shows all of the current users ads in the profile by userid
 //@Override
     public List<Ad> allAdsByUserId(long userId) {
         String query = "SELECT * FROM ads WHERE user_id = ?";
