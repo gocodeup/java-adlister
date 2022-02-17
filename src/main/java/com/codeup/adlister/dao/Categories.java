@@ -12,4 +12,5 @@ public interface Categories {
     Category getCategoryByCatName(String category);
 
 
+    Long insert(List<Category> categoryObjects);
 }

@@ -22,4 +22,6 @@ public interface Ads {
     void delete(long id);
 
     void deleteCategories(long ad_Id);
+
+    void insertCategories(Ad ad, String[] selectedCategories);
 }
