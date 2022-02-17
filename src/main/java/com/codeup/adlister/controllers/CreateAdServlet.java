@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "controllers.CreateAdServlet", urlPatterns = "/ads/create")
@@ -20,6 +21,9 @@ public class CreateAdServlet extends HttpServlet {
             response.sendRedirect("/login");
             return;
         }
+        List <Category> allCategories = DaoFactory.getCategoriesDao().all();
+        request.getSession().setAttribute("allCategories",allCategories);
+
         request.getRequestDispatcher("/WEB-INF/ads/create.jsp")
                 .forward(request, response);
     }
@@ -30,12 +34,9 @@ public class CreateAdServlet extends HttpServlet {
         String description = request.getParameter("description");
 
         String [] selectedCategories = request.getParameterValues("categoryCheckbox");
+        List<Category> categoryObjects = new ArrayList<>();
         for (int i = 0; i < selectedCategories.length; i++) {
-            System.out.println(selectedCategories[i]);
-        }
-        List <Category> allCategories = DaoFactory.getCategoriesDao().all();
-        for (int i = 0; i < allCategories.size(); i++) {
-            allCategories.get(i).getCategory().equalsIgnoreCase(selectedCategories[i]);
+            categoryObjects.add(DaoFactory.getCategoriesDao().getCategoryByCatName(selectedCategories[i]));
         }
 
         //if title or description is missing error message will be created
