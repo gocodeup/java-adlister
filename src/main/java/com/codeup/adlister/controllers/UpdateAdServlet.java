@@ -17,7 +17,12 @@ public class UpdateAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String idQuery = req.getParameter("id");
         Ad ad = DaoFactory.getAdsDao().findByStringId(idQuery);
-        req.getSession().setAttribute("ad", ad);
+        User user = (User) req.getSession().getAttribute("user");
+        if (ad.getUserId() != user.getId()) {
+            resp.sendRedirect("/profile");
+        } else {
+            req.getSession().setAttribute("ad", ad);
+        }
         req.getRequestDispatcher("/WEB-INF/ads/update.jsp").forward(req,resp);
     }
 
