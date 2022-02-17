@@ -25,7 +25,6 @@ public class CreateAdServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User user = (User) request.getSession().getAttribute("user");
-        Category category = (Category) request.getSession().getAttribute("category");
         String title = request.getParameter("title");
         String description = request.getParameter("description");
 
