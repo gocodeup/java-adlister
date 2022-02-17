@@ -11,7 +11,7 @@ import java.io.IOException;
 public class PickAdServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        req.getRequestDispatcher("/profile.jsp").forward(req, res);
+        req.getRequestDispatcher("/WEB-INF/profile/profile.jsp").forward(req, res);
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
