@@ -23,31 +23,12 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    @Override
     public List<Ad> all() {
         PreparedStatement stmt = null;
         try {
-            //ND->>>>>>>
-            stmt = connection.prepareStatement("SELECT * FROM ads.id, ads.user_id, users.username, " +
-                    "ads.title, ads.description, ads.adCreated, ads.category"
-                    + "From ads  JOIN users  ON users.id = ads.user_id");
+            stmt = connection.prepareStatement("SELECT * FROM ads");
             ResultSet rs = stmt.executeQuery();
-            //return createAdsFromResults(rs);
-            List<Ad> allAds = new ArrayList<>();
-            while (rs.next()) {
-                Ad newAd = new Ad(
-                        rs.getLong("id"),
-                        rs.getString("username"),
-                        rs.getString("title"),
-                        rs.getString("description"),
-                        rs.getString("category"),
-                        rs.getString("dateCreated")
-                );
-                allAds.add(newAd);
-            }
-            return allAds;
-//            ND<<<<<<<<<<
-
+            return createAdsFromResults(rs);
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving all ads.", e);
         }
