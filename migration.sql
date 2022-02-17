@@ -38,4 +38,13 @@ CREATE TABLE ads_categories (
     FOREIGN KEY (category_id) REFERENCES categories(id)
 );
 
+INSERT INTO categories (category) VALUES ('Automotive');
+INSERT INTO categories (category) VALUES ('Clothing');
+INSERT INTO categories (category) VALUES ('Electronics');
+INSERT INTO categories (category) VALUES ('Furniture');
+INSERT INTO categories (category) VALUES ('Home');
+INSERT INTO categories (category) VALUES ('Tools');
+INSERT INTO categories (category) VALUES ('Toys');
+INSERT INTO categories (category) VALUES ('Miscellaneous');
+
 

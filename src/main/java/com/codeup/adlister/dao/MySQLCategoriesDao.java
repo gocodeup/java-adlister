@@ -49,6 +49,11 @@ public class MySQLCategoriesDao implements Categories {
         }
     }
 
+//    @Override
+//    public Category getAdsInsert(Category category) {
+//
+//    }
+
     private Category extractCategory(ResultSet rs) throws SQLException {
         if (! rs.next()) {
             return null;
