@@ -22,26 +22,26 @@
 
     <div class="form-check">
 
-<%--        <c:forEach var="category" items="${categories}">--%>
-            <form action="/ads/create" method="GET">
-        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Automotive">
-        <label class="form-check-label" for="Automotive">Automotive</label>
-        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Clothing">
-        <label class="form-check-label" for="Clothing">Clothing</label>
-        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Electronics">
-        <label class="form-check-label" for="Electronics">Electronics</label>
-        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Furniture">
-        <label class="form-check-label" for="Furniture">Furniture</label>
-        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Home">
-        <label class="form-check-label" for="Home">Home</label>
-        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Tools">
-        <label class="form-check-label" for="Tools">Tools</label>
-        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Toys">
-        <label class="form-check-label" for="Toys">Toys</label>
-        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Misc">
-        <label class="form-check-label" for="Misc">Miscellaneous</label>
-            </form>
-<%--        </c:forEach>--%>
+        <c:forEach var="category" items="${allCategories}">
+
+        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.category}" id="${category.id}">
+        <label class="form-check-label" for="${category.id}">${category.category}</label>
+<%--        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Clothing">--%>
+<%--        <label class="form-check-label" for="Clothing">Clothing</label>--%>
+<%--        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Electronics">--%>
+<%--        <label class="form-check-label" for="Electronics">Electronics</label>--%>
+<%--        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Furniture">--%>
+<%--        <label class="form-check-label" for="Furniture">Furniture</label>--%>
+<%--        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Home">--%>
+<%--        <label class="form-check-label" for="Home">Home</label>--%>
+<%--        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Tools">--%>
+<%--        <label class="form-check-label" for="Tools">Tools</label>--%>
+<%--        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Toys">--%>
+<%--        <label class="form-check-label" for="Toys">Toys</label>--%>
+<%--        <input class="form-check-input" type="checkbox" name="categoryCheckbox" value="${category.id}" id="Misc">--%>
+<%--        <label class="form-check-label" for="Misc">Miscellaneous</label>--%>
+
+        </c:forEach>
 
     </div>
 
