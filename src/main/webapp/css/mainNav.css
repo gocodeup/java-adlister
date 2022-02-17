@@ -1,0 +1,77 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&family=Montserrat:wght@300&family=Raleway:wght@200&display=swap');*/
+/*@import url("https://fonts.googleapis.com/css2?family=Montserrat%7CRaleway");*/
+/*probably change the navbar up to look better*/
+#mainNav{
+    background-color: aquamarine;
+    /*background-image: url("img.png");*/
+    /*min-height: 280px;*/
+    /*background-position: center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: cover;*/
+    /*position: relative;*/
+}
+/*remember this for other additions like a footer?*/
+#side-nav> a:hover, a:visited{
+    background-color: #a74a42;
+}
+a{
+    text-decoration: none;
+}
+.w-text, a.w-text:link, a.w-text:visited{
+    color: brown;
+}
+a.blk:link, a.blk:visited, a.blk:hover{
+    color: black;
+}
+a.red-hover:hover{
+    color: red;
+    text-decoration: none;
+}
+a.blk:hover{
+    color: black;
+}
+#side-nav> a:hover, a:active, a:visited{
+    background-color: #c53025 !important;
+}
+
+/*needed the webkit*/
+.scrollBx::-webkit-scrollbar{
+    display: none;
+}
+.scrollBx{
+    overflow-x: auto;
+    overflow-y: hidden !important;
+    white-space: nowrap;
+    height: 275px;
+}
+/*Julian had been planning cards*/
+.cards{
+    /*image?????*/
+
+    overflow: auto !important;
+    border: 1px solid #f2f2f2;
+    display: inline-block;
+    width: 300px;
+    height: 255px;
+    padding: 10px 16px;
+    white-space: normal;
+    box-shadow: 0 4px 9px 0 black;
+}
+
+/*added body*/
+body{
+    background-image: linear-gradient(#212125 30%, #98989A);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+/*im assuming use ADLISTER as the company name.  */
+@media only screen and (max-width: 990px){
+    #navCoName{
+        display: none !important;
+    }
+}

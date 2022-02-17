@@ -2,6 +2,11 @@ package com.codeup.adlister.models;
 
 public class Ad {
     private long id;
+    //ND
+    private String dateCreated;
+    private String username;
+    private String category;
+
     private long userId;
     private long categoryId;
     private String title;
@@ -31,6 +36,42 @@ public class Ad {
         this.title = title;
         this.description = description;
     }
+    //ND
+    public Ad(long id, String username, String title, String description, String category, String dateCreated){
+        this.id = id;
+        this.username = username;
+        this.title = title;
+        this.description = description;
+        this.category = category;
+        this.dateCreated = dateCreated;
+    }
+    // waiting for changes.
+
+    public String getDateCreated() {
+        return dateCreated;
+    }
+
+    public void setDateCreated(String dateCreated) {
+        this.dateCreated = dateCreated;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+
 
 
     //  GETTERS/SETTERS
