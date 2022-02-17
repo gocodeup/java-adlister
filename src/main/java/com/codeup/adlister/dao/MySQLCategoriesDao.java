@@ -39,7 +39,7 @@ public class MySQLCategoriesDao implements Categories {
 
     @Override
     public Category getCategoryByCatName(String category) {
-        String query = "SELECT * FROM users WHERE email = ? LIMIT 1";
+        String query = "SELECT * FROM categories WHERE category = ? LIMIT 1";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, category);
