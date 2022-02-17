@@ -14,45 +14,50 @@
                 <a class="navbar-brand" href="/ads">Adlister</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/login">Login</a></li>
-                    <%--                    <li><a href="/logout">Logout</a></li>--%>
-                <li><a href="/register">Register</a></li>
-
 <%--                added link to all ads--%>
                 <li><a class="nav-link" href="/ads">View All Ads</a></li>
-                <li>
-                    <form action="/ads/search" METHOD="POST">
-                        <input id="keyword" name="keyword" class="form-control" type="text">
-                        <button type="submit" class="btn btn-primary btn-block" value="Search">Search</button>
-                    </form>
-                </li>
+
+                <li><a href="/login">Login</a></li>
+<%--                    <li><a href="/logout">Logout</a></li>--%>
+                <li><a href="/register">Register</a></li>
+
             </ul>
         </div><!-- /.navbar-collapse -->
         <!-- /.container-fluid -->
     </nav>
 </c:if>
 
-<%--after user logged in--%>
+<%--after user logged in/ on user profile--%>
 <c:if test="${sessionScope.user != null}">
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default justify-content-between"">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <a class="navbar-brand" href="/ads">Adlister</a>
+                <a class="navbar-brand" href="/">Adlister</a>
+
             </div>
             <ul class="nav navbar-nav navbar-right">
-                    <%--                        <li><a href="/login">Login</a></li>--%>
-                <li><a href="/logout">Logout</a></li>
-                    <%--                        <li><a href="/register">Register</a></li>--%>
+
+                <li class="search-form"><form class="form-inline " action="/ads/search" METHOD="POST">
+                    <input id="title" name="keyword" class="form-control mr-sm-2" type="text" placeholder="Search on Adlister">
+                    <button type="submit" class="btn btn-outline-success my-2 my-sm-0" value="Search">Go</button>
+                </form>
+                </li>
+ <%--                        <li><a href="/register">Register</a></li>--%>
                 <li><a href="/ads/create">Create Ad</a></li>
+
 <%--                        added link to all ads--%>
                 <li><a class="nav-link" href="/ads">View All Ads</a></li>
-                <li>
-                    <form action="/ads/search" METHOD="POST">
-                        <input id="title" name="keyword" class="form-control" type="text">
-                        <button type="submit" class="btn btn-primary btn-block" value="Search">Search</button>
-                    </form>
-                </li>
+
+<%--                        <li><a href="/login">Login</a></li>--%>
+                        <li><a href="/logout">Logout</a></li>
+
+<%--                <li>--%>
+<%--                    <form action="/ads/search" METHOD="POST">--%>
+<%--                        <input id="title" name="keyword" class="form-control" type="text" placeholder="Search on Adlister">--%>
+<%--                        <button type="submit" class="btn btn-dark btn-block" value="Search">Search</button>--%>
+<%--                    </form>--%>
+<%--                </li>--%>
             </ul>
         </div><!-- /.navbar-collapse -->
         <!-- /.container-fluid -->

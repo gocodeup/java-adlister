@@ -50,7 +50,7 @@
             <%--createError attribute posts error message from createAdServlet --%>
 
             <h3 style="color: red">${createError}</h3>
-            <input type="submit" class="btn btn-block btn-primary">
+            <input type="submit" class="btn btn-block btn-dark">
         </form>
 <%--added link to get back to profile- AG--%>
         <a class="back-button" href="/profile"><i class="fa fa-chevron-left" aria-hidden="true">Back to Profile</i></a>

@@ -18,6 +18,8 @@ public interface Ads {
     // search ads
     List<Ad> search(String keyword);
 
-
     void update(Ad ad);
+    void delete(long id);
+
+    void deleteCategories(long ad_Id);
 }

@@ -15,13 +15,20 @@
 
 <div class="container">
 
-
+<h3>Your Ads:</h3>
     <c:forEach var="ad" items="${userAd}">
 
 
         <div class="col-md-6">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
+            <br>
+            <a href="${pageContext.request.contextPath}/ads/updateAds?ad_id=${ad.id}"
+               class="btn btn-sm ">Update</a>
+            <a href="${pageContext.request.contextPath}/ads/delete?ad_id=${ad.id}"
+               onclick="return confirm('Are you sure you want to delete this item?')"
+               class="btn btn-sm ">Delete</a>
+
         </div>
 
 
@@ -29,7 +36,14 @@
 
 
 </div>
+<br>
+<div>
 
+    <a href="/editProfile" onclick="w3_close()"
+       class="w3-bar-item w3-button w3-padding w3-text-teal"><i
+            class="fa fa-th-large fa-fw w3-margin-right"></i>EDIT PROFILE</a>
+
+</div>
 
 </body>
 </html>

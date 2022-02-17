@@ -19,7 +19,7 @@ public class ChangeEmailServlet extends HttpServlet {
        // String newPassword = null;
         //String hashPower = Password.hash(newPassword);
 
-        DaoFactory.getUsersDao().updateUserEmail(editUser.getId(), newEmail);
+//        DaoFactory.getUsersDao().updateUserEmail(editUser.getId(), newEmail);
         response.sendRedirect("/profile");
 
     }

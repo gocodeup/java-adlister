@@ -77,7 +77,7 @@ public class MySQLAdsDao implements Ads {
         String query = "SELECT * FROM ads WHERE title LIKE ? ";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.setString(1, keyword);
+//            stmt.setString(1, keyword);
             // change above code to :
             stmt.setString(1, '%' + keyword + '%');
 //            stmt.setString(2, keyword);
@@ -104,6 +104,33 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error updating ad", e);
         }
     }
+
+//method to delete ads
+    public void delete(long id) {
+        String Query = "DELETE FROM ads WHERE id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(Query);
+            stmt.setLong(1, id);
+            stmt.execute();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding ad with that ID", e);
+        }
+
+    }
+
+    @Override
+    public void deleteCategories(long ad_Id) {
+        try {
+            String insertQuery = "DELETE FROM ad_categories WHERE ad_id = ?";
+            PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
+            stmt.setLong(1, ad_Id);
+//            stmt.setLong(2, category_ID);
+            stmt.executeUpdate();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+    }
+
 
     // ---------------------------
 
