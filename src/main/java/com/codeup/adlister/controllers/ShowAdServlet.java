@@ -12,12 +12,12 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet("/ad/id")
+@WebServlet("/ad")
 public class ShowAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        long id = Long.parseLong(req.getParameter("id"));
+//        long id = Long.parseLong(req.getParameter("id"));
         String adId = req.getParameter("id");
-        req.setAttribute("ad", adId);
+        req.setAttribute("id", adId);
 //        if(adId != null){
 //
 //        }
