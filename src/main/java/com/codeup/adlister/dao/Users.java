@@ -8,8 +8,7 @@ public interface Users {
     User findByUsername(String username);
     Long insert(User user);
     User findByUserID(long id);
-    void updateUserPassword(long id, String hashPassword);
-    void updateUserEmail(long id, String  email);
+    void updateUser(User user);
     User findByUserEmail(String email);
     void deleteByID(long id);
 }

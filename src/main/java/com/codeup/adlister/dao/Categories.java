@@ -9,5 +9,7 @@ public interface Categories {
     List<Category> all();
 
     //Show category object by title
-    Category getCategoryByTitle(String category);
+    Category getCategoryByCatName(String category);
+
+
 }

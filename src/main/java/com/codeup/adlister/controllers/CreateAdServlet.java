@@ -2,6 +2,7 @@ package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.Category;
 import com.codeup.adlister.models.User;
 
 import javax.servlet.ServletException;
@@ -19,7 +20,7 @@ public class CreateAdServlet extends HttpServlet {
             return;
         }
         request.getRequestDispatcher("/WEB-INF/ads/create.jsp")
-            .forward(request, response);
+                .forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -28,13 +29,13 @@ public class CreateAdServlet extends HttpServlet {
         String description = request.getParameter("description");
 
         //if title or description is missing error message will be created
-        if(title.isEmpty() || description.isEmpty()){
+        if (title.isEmpty() || description.isEmpty()) {
             String errorMessage = "Missing information.";
             //errorMessage variable is set to attribute createError
             request.getSession().setAttribute("createError", errorMessage);
             //user is redirected to create page
             response.sendRedirect("/ads/create");
-        }else{
+        } else {
             //when all conditions are met new ad is created
             Ad ad = new Ad(
                     user.getId(),
@@ -44,7 +45,5 @@ public class CreateAdServlet extends HttpServlet {
             DaoFactory.getAdsDao().insert(ad);
             response.sendRedirect("/ads");
         }
-
-
     }
 }
