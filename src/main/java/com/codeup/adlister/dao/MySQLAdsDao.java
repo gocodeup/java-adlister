@@ -92,6 +92,7 @@ public class MySQLAdsDao implements Ads {
 //        return null;
 //    }
 
+
 //     @Override
 //     public List<Ad> findAdByKeyword(String keyword) throws SQLException {
 //         return null;
