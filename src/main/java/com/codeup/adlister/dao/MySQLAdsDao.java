@@ -14,15 +14,14 @@ public class MySQLAdsDao implements Ads {
         try {
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
-                config.getUrl(),
-                config.getUser(),
-                config.getPassword()
+                    config.getUrl(),
+                    config.getUser(),
+                    config.getPassword()
             );
         } catch (SQLException e) {
             throw new RuntimeException("Error connecting to the database!", e);
         }
     }
-
 
 
     @Override
@@ -58,18 +57,11 @@ public class MySQLAdsDao implements Ads {
     @Override
     public Ad findOne(long id) throws SQLException {
         String singleAdQuery = "SELECT * FROM ads WHERE id LIKE ?";
-        long adSelect = id;
         PreparedStatement stmt;
-//        try {
-            stmt = connection.prepareStatement(singleAdQuery);
-            //  need to correct after I complete add/commit/push/pull
-            stmt.setLong(adSelect);
-            ResultSet rs = stmt.executeQuery();
-            return extractAd(rs);
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        return null;
+        stmt = connection.prepareStatement(singleAdQuery);
+        stmt.setLong(1, id);
+        ResultSet rs = stmt.executeQuery();
+        return extractAd(rs);
     }
 
     @Override
@@ -89,10 +81,10 @@ public class MySQLAdsDao implements Ads {
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
-            rs.getLong("id"),
-            rs.getLong("user_id"),
-            rs.getString("title"),
-            rs.getString("description")
+                rs.getLong("id"),
+                rs.getLong("user_id"),
+                rs.getString("title"),
+                rs.getString("description")
         );
     }
 
