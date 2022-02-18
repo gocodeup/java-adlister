@@ -1,6 +1,5 @@
 package com.codeup.adlister.dao;
 
-import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.Category;
 import com.mysql.cj.jdbc.Driver;
 
@@ -49,15 +48,36 @@ public class MySQLCategoriesDao implements Categories {
         }
     }
 
+    @Override
+    public Long insert(List<Category> categoryObjects) {
+        return null;
+    }
+
+    @Override
+    public List<Category> search(String keyword2) {
+        String query = "SELECT * FROM ads WHERE title LIKE ? ";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, keyword2);
+            // change above code to :
+            stmt.setString(1, '%' + keyword2 + '%');
+//            stmt.setString(2, keyword);
+            ResultSet rs = stmt.executeQuery();
+            return createCatsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding ad", e);
+        }
+    }
+
 //    @Override
 //    public Category getAdsInsert(Category category) {
 //
 //    }
 
     private Category extractCategory(ResultSet rs) throws SQLException {
-        if (! rs.next()) {
-            return null;
-        }
+//        if (! rs.next()) {
+//            return null;
+//        }
         return new Category(
                 rs.getLong("id"),
                 rs.getString("category")

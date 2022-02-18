@@ -12,4 +12,7 @@ public interface Categories {
     Category getCategoryByCatName(String category);
 
 
+    Long insert(List<Category> categoryObjects);
+
+    List<Category> search(String keyword2);
 }

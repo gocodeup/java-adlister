@@ -20,6 +20,9 @@ public class CreateAdServlet extends HttpServlet {
             response.sendRedirect("/login");
             return;
         }
+        List <Category> allCategories = DaoFactory.getCategoriesDao().all();
+        request.getSession().setAttribute("allCategories",allCategories);
+
         request.getRequestDispatcher("/WEB-INF/ads/create.jsp")
                 .forward(request, response);
     }
@@ -30,13 +33,11 @@ public class CreateAdServlet extends HttpServlet {
         String description = request.getParameter("description");
 
         String [] selectedCategories = request.getParameterValues("categoryCheckbox");
-        for (int i = 0; i < selectedCategories.length; i++) {
-            System.out.println(selectedCategories[i]);
-        }
-        List <Category> allCategories = DaoFactory.getCategoriesDao().all();
-        for (int i = 0; i < allCategories.size(); i++) {
-            allCategories.get(i).getCategory().equalsIgnoreCase(selectedCategories[i]);
-        }
+//        List<Category> categoryObjects = new ArrayList<>();
+//        for (int i = 0; i < selectedCategories.length; i++) {
+//            categoryObjects.add(DaoFactory.getCategoriesDao().getCategoryByCatName(selectedCategories[i]));
+//        }
+
 
         //if title or description is missing error message will be created
         if (title.isEmpty() || description.isEmpty()) {
@@ -53,29 +54,13 @@ public class CreateAdServlet extends HttpServlet {
                     request.getParameter("description")
 
             );
-
-            Long IDofNewAd = DaoFactory.getAdsDao().insert(ad);
-            if (request.getParameter("clothing") != null) {
-                DaoFactory.getAdsDao().getAdsFromCategory(IDofNewAd, 2L);
+            if (selectedCategories == null) {
+                DaoFactory.getAdsDao().insert(ad);
+            }else {
+                DaoFactory.getAdsDao().insertCategories(ad, selectedCategories);
             }
-            if (request.getParameter("electronics-media") != null) {
-                DaoFactory.getAdsDao().getAdsFromCategory(IDofNewAd, 1L);
-            }
-            ;
-            if (request.getParameter("vehicles") != null) {
-                DaoFactory.getAdsDao().getAdsFromCategory(IDofNewAd, 3L);
-            }
-            if (request.getParameter("sporting-goods") != null) {
-                DaoFactory.getAdsDao().getAdsFromCategory(IDofNewAd, 4L);
-            }
-            if (request.getParameter("pets") != null) {
-                DaoFactory.getAdsDao().getAdsFromCategory(IDofNewAd, 5L);
-            }
-
-            //clear title & description attribute Because worked and no longer want to be filled in -CG
-            request.getSession().setAttribute("title", null);
-            request.getSession().setAttribute("description", null);
-
+//            DaoFactory.getAdsDao().insert(ad);
+//            DaoFactory.getCategoriesDao().insert(categoryObjects);
             response.sendRedirect("/ads");
         }
 
