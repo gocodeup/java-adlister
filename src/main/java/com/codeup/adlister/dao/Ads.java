@@ -20,8 +20,8 @@ public interface Ads {
 
     void update(Ad ad);
     void delete(long id);
-
     void deleteCategories(long ad_Id);
-
     void insertCategories(Ad ad, String[] selectedCategories);
+
+
 }

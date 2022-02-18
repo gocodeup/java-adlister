@@ -14,14 +14,14 @@
     <h1>Here Are all the ads!</h1>
     <div class="display-cards row row-cols-4" >
     <c:forEach var="ad" items="${ads}">
-        <div class="card" style="width: 30rem">
+        <div class="card" style="width: 18rem">
             <form action="/ads/individualAd" method="GET">
 <%--            <h2><a href="/ads/individualAd">${ad.id}</a></h2>--%>
             <input type="hidden" name="ad" value="${ad.id}">
 <%--            <h2><a href="<c:url value='/ads/individualAd?id=${ad.id}'/>"${ad.title}/></h2>--%>
             <h3>${ad.title}</h3>
             <p>${ad.description}</p>
-            <button class="btn-light ">Show Ad</button>
+            <button class="btn-light">Show Ad</button>
             </form>
 
 <%--            <p>${ad.description}</p>--%>

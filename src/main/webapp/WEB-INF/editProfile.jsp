@@ -20,7 +20,7 @@
 <form action="/editProfile" method="post" style="width: 60%">
     <div class="form-group form-check">
         <label for="username">Username</label>
-        <input type="text" class="form-control" id="username" disabled value="${sessionScope.user.username}">
+        <input type="text" class="form-control" id="username" name="username" disabled value="${sessionScope.user.username}">
 
     </div>
     <div class="form-group">
