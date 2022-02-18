@@ -3,7 +3,6 @@ package com.codeup.adlister.dao;
 import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 
-import java.sql.SQLException;
 import java.util.List;
 
 public interface Ads {
@@ -22,4 +21,6 @@ public interface Ads {
     void delete(long id);
 
     void deleteCategories(long ad_Id);
+
+    void getAdsFromCategory(Long IDofNewAd, long l);
 }

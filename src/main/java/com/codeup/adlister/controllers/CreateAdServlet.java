@@ -53,7 +53,29 @@ public class CreateAdServlet extends HttpServlet {
                     request.getParameter("description")
 
             );
-            DaoFactory.getAdsDao().insert(ad);
+
+            Long IDofNewAd = DaoFactory.getAdsDao().insert(ad);
+            if (request.getParameter("clothing") != null) {
+                DaoFactory.getAdsDao().getAdsFromCategory(IDofNewAd, 2L);
+            }
+            if (request.getParameter("electronics-media") != null) {
+                DaoFactory.getAdsDao().getAdsFromCategory(IDofNewAd, 1L);
+            }
+            ;
+            if (request.getParameter("vehicles") != null) {
+                DaoFactory.getAdsDao().getAdsFromCategory(IDofNewAd, 3L);
+            }
+            if (request.getParameter("sporting-goods") != null) {
+                DaoFactory.getAdsDao().getAdsFromCategory(IDofNewAd, 4L);
+            }
+            if (request.getParameter("pets") != null) {
+                DaoFactory.getAdsDao().getAdsFromCategory(IDofNewAd, 5L);
+            }
+
+            //clear title & description attribute Because worked and no longer want to be filled in -CG
+            request.getSession().setAttribute("title", null);
+            request.getSession().setAttribute("description", null);
+
             response.sendRedirect("/ads");
         }
 
