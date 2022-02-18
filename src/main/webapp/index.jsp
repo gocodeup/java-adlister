@@ -5,7 +5,7 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Welcome to my site!" />
     </jsp:include>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="stylesheets/styles.css">
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
@@ -13,8 +13,8 @@
 
 
     <div class="container my-5 mx-auto main">
-        <div class="jumbo-container mx-auto text-center">
-            <h1 class="">Welcome to the Adlister!</h1>
+        <div class="jumbotron JumboHeaderImg jumbotron-fluid mx-auto text-center" style="background-image:url(<c:url value='./stylesheets/images/flea-market.jpg' />)">
+            <h1 class="adlister-title">Welcome to the Adlister!</h1>
         </div>
 
 
