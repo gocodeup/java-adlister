@@ -3,23 +3,32 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Your Profile" />
+        <jsp:param name="title" value="Your Profile"/>
     </jsp:include>
 </head>
 <body>
-    <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
-    <div class="container">
-        <h1>Welcome, ${sessionScope.user.username}!</h1>
+<div class="container">
+    <h1>Welcome, ${sessionScope.user.username}!</h1>
+</div>
+
+<h2>Here are your ads:</h2>
+
+<c:forEach var="ad" items="${ads}">
+    <div class="col-md-6">
+            <%--for cleaner look putting ad title in a tag on click will take to individual ad page--%>
+            <%--need to rethink the a tag as it's not grabbing info for query--%>
+            <%--            <a href="/ad" methods="get" id="id"><h4>${ad.title}</h4></a>--%>
+        <h4>${ad.title}</h4>
+        <p>${ad.description}</p>
+
+        <form action="<c:url value="/ad?id="/>" method="get">
+<%--assigned value to input type of ad.id, allowing us to grab the ad's id--%>
+            <input type="hidden" name="id" value="${ad.id}">
+            <button>Submit</button>
+        </form>
     </div>
-
-    <h2>Here are your ads:</h2>
-
-    <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
-            <h2>${ad.title}</h2>
-            <p>${ad.description}</p>
-        </div>
-    </c:forEach>
+</c:forEach>
 </body>
 </html>
