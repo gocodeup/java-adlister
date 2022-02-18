@@ -9,4 +9,5 @@ public interface Users {
     Long insert(User user);
     void delete(String user);
     void update(User user);
+    User findById(long id);
 }

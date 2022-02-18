@@ -27,3 +27,7 @@ public class AdsIndexServlet extends HttpServlet {
 
     }
 }
+
+//  urlPattern does not work; get a 500 error code stating
+//  Error retrieving all ads
+//  Root Cause: Unknown database 'ads'

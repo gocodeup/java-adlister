@@ -1,6 +1,6 @@
 USE adlister_db;
 
-# TRUNCATE categories;
+-- # TRUNCATE categories;
 
 INSERT INTO categories (categoryName)
 VALUES ('For Sale'),
