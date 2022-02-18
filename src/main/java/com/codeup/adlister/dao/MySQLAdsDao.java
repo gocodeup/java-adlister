@@ -104,6 +104,11 @@ public class MySQLAdsDao implements Ads {
         stmt = connection.prepareStatement(singleAdQuery);
         stmt.setLong(1, id);
         ResultSet rs = stmt.executeQuery();
+        //  rs.next() - is used to get next in row
+        //  otherwise error page will be reached
+        //  if condition would be used if possibility of rs.next() == null
+        //  since each ad has an id none should return null therefore condition not needed
+        rs.next();
         return extractAd(rs);
     }
 
