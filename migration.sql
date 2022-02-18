@@ -9,6 +9,7 @@ CREATE TABLE users
     password VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
 
+
 # added these ND
 # maybe only dateCreated could be added
 # UNIQUE is identified in username/email above
@@ -31,6 +32,7 @@ CREATE TABLE ads
         ON DELETE CASCADE
 
 -- # added these ND
+
 # commenting out the below, don't believe is needed
 # will discuss with team
 #     dateCreated VARCHAR (50) NOT NULL,
