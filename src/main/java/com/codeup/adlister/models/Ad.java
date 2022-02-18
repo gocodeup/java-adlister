@@ -13,8 +13,7 @@ public class Ad {
     private String description;
 
     //  CONSTRUCTORS
-    public Ad() {
-    }
+    public Ad(){}
 
     public Ad(long userId, String title, String description) {
         this.userId = userId;
@@ -23,7 +22,6 @@ public class Ad {
     }
 
     public Ad(long id, long userId, String title, String description) {
-        this.categoryId = categoryId;
         this.id = id;
         this.userId = userId;
         this.title = title;
@@ -37,9 +35,8 @@ public class Ad {
         this.title = title;
         this.description = description;
     }
-
     //ND
-    public Ad(long id, String username, String title, String description, String category, String dateCreated) {
+    public Ad(long id, String username, String title, String description, String category, String dateCreated){
         this.id = id;
         this.username = username;
         this.title = title;
@@ -74,43 +71,36 @@ public class Ad {
     }
 
 
+
+
     //  GETTERS/SETTERS
     public long getId() {
         return id;
     }
-
     public void setId(long id) {
         this.id = id;
     }
-
     public long getUserId() {
         return userId;
     }
-
     public void setUserId(long userId) {
         this.userId = userId;
     }
-
     public String getTitle() {
         return title;
     }
-
     public void setTitle(String title) {
         this.title = title;
     }
-
     public String getDescription() {
         return description;
     }
-
     public void setDescription(String description) {
         this.description = description;
     }
-
     public long getCategoryId() {
         return categoryId;
     }
-
     public void setCategoryId(long categoryId) {
         this.categoryId = categoryId;
     }

@@ -23,4 +23,3 @@ public interface Ads {
     List<Ad> allAdsByUserId(long userId);
     Ad findByStringId(String id);
 }
-
