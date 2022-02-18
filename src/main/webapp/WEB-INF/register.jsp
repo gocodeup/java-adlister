@@ -1,13 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <jsp:include page="partials/head.jsp">
         <jsp:param name="title" value="Register For Our Site!" />
     </jsp:include>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/mainNav.css">
     <link rel="stylesheet" href="/css/register.css">
-    <link rel="stylesheet" href="/css/variables.css">
+    <link rel="stylesheet" href="/css/globalVar.css">
     <%--    ND --%>
 
 </head>

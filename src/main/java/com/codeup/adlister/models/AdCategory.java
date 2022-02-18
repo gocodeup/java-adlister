@@ -25,4 +25,7 @@ public class AdCategory {
     public void setAdId(long adId) {
         this.adId = adId;
     }
+
 }
+
+

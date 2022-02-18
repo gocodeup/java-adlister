@@ -28,7 +28,7 @@ public class SearchAdsServlet {
             }
             request.setAttribute("keyword", keyword.toLowerCase());
             request.setAttribute("ads", keywordAds);
-            request.getRequestDispatcher("/WEB-INF/ads/keywordAds.jsp");
+            request.getRequestDispatcher("/WEB-INF/ads/keywordAds.jsp").forward(request, response);
             for (Ad ad : keywordAds) {
                 System.out.println(ad.getTitle());
             }

@@ -13,12 +13,14 @@ public interface Ads {
     // get single ad
     Ad findOne(long id) throws SQLException;
     //  from reading should add all CRUD methods to DAO
-//    void update(Ad ad);
-//    void destroy(Ad ad);
+    void update(Ad ad);
+    void delete(Ad ad);
 
     //added by ND
     List<Ad> findAdByKeyword(String keyword) throws SQLException;
 
     //show all ads on profile
     List<Ad> allAdsByUserId(long userId);
+    Ad findByStringId(String id);
 }
+
