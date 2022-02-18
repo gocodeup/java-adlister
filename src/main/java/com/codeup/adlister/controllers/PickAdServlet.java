@@ -16,28 +16,7 @@ public class PickAdServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         String selectAd = req.getParameter("id");
-        System.out.println(selectAd);
-        String getAdId = (String) req.getSession().getAttribute("id");
-        System.out.println(getAdId);
-
+        req.setAttribute("ad", selectAd);
         res.sendRedirect("/ad?id=" + selectAd);
     }
 }
-
-
-//@WebServlet(name="PickColorServlet", urlPatterns = "/pickcolor")
-//public class PickColorServlet extends HttpServlet {
-//    @Override
-//    protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-//        req.getRequestDispatcher("/pick-color.jsp").forward(req, res);
-//    }
-//
-//    @Override
-//    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
-//        String favColor = req.getParameter("color");
-//        System.out.println(favColor);
-//
-//        //  to pass data, send through query
-//        res.sendRedirect("/viewcolor?color=" + favColor);
-//    }
-//}
