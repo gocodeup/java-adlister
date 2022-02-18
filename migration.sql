@@ -48,3 +48,7 @@ INSERT INTO categories (category) VALUES ('Toys');
 INSERT INTO categories (category) VALUES ('Miscellaneous');
 
 
+
+# DROP DATABASE IF EXISTS adlister_db;
+#
+# CREATE DATABASE IF NOT EXISTS adlister_db;
