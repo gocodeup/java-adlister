@@ -19,6 +19,14 @@
         <div class="col-md-6">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
+            <form action="/ads/update" method="get">
+                <input type="hidden" name="ad_id" value="${ad.id}">
+                <input class="btn btn-secondary btn-sm" name="update" type="submit" value="Edit">
+            </form>
+            <form action="/ads/delete" method="post">
+                <input type="hidden" name="ad_id" value="${ad.id}">
+                <input class="btn btn-danger btn-sm" type="submit" value="Delete">
+            </form>
         </div>
     </c:forEach>
 </body>

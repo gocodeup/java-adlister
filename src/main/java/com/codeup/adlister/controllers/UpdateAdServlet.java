@@ -15,14 +15,19 @@ import java.io.IOException;
 public class UpdateAdServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String idQuery = req.getParameter("id");
-        Ad ad = DaoFactory.getAdsDao().findByStringId(idQuery);
-        User user = (User) req.getSession().getAttribute("user");
-        if (ad.getUserId() != user.getId()) {
-            resp.sendRedirect("/profile");
-        } else {
-            req.getSession().setAttribute("ad", ad);
-        }
+//        String idQuery = req.getParameter("id");
+//        Ad ad = DaoFactory.getAdsDao().findByStringId(idQuery);
+//        User user = (User) req.getSession().getAttribute("user");
+//        if (ad.getUserId() != user.getId()) {
+//            resp.sendRedirect("/profile");
+//        } else {
+//            req.getSession().setAttribute("ad", ad);
+//        }
+
+
+        Long id = Long.parseLong(req.getParameter("ad_id"));
+        Ad ad = DaoFactory.getAdsDao().findById(id);
+        req.getSession().setAttribute("ad", ad);
         req.getRequestDispatcher("/WEB-INF/ads/update.jsp").forward(req,resp);
     }
 
@@ -43,6 +48,11 @@ public class UpdateAdServlet extends HttpServlet {
         ad.setDescription(description);
 
         DaoFactory.getAdsDao().update(ad);
-        resp.sendRedirect("/profile");
+        if (req.getSession().getAttribute("vp") == null){
+            resp.sendRedirect("/ads");
+        } else {
+            resp.sendRedirect("/profile");
+        }
+
     }
 }

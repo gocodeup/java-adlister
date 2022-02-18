@@ -168,11 +168,11 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    public Ad findByStringId(String id) {
-        String findquery = "SELECT * FROM ads WHERE id like (?)";
+    public Ad findById(Long id) {
+        String findquery = "SELECT * FROM ads WHERE id = (?)";
         try{
             PreparedStatement stmt = connection.prepareStatement(findquery);
-            stmt.setString(1, id);
+            stmt.setLong(1, id);
             ResultSet rs =stmt.executeQuery();
             rs.next();
             return extractAd(rs);

@@ -16,23 +16,27 @@ public class DeleteAdServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        String idQuery = req.getParameter("id");
-        Ad ad = DaoFactory.getAdsDao().findByStringId(idQuery);
-        User user = (User) req.getSession().getAttribute("user");
-        if (ad.getUserId() != user.getId()) {
-            resp.sendRedirect("/profile");
-        } else {
-            req.getSession().setAttribute("ad", ad);
-        }
+//        String idQuery = req.getParameter("id");
+//        Ad ad = DaoFactory.getAdsDao().findByStringId(idQuery);
+//        User user = (User) req.getSession().getAttribute("user");
+//        if (ad.getUserId() != user.getId()) {
+//            resp.sendRedirect("/profile");
+//        } else {
+//            req.getSession().setAttribute("ad", ad);
+//        }
         req.getRequestDispatcher("/WEB-INF/ads/delete.jsp").forward(req, resp);
     }
 
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        Ad ad = (Ad) req.getSession().getAttribute("ad");
+        Long id = Long.parseLong(req.getParameter("ad_id"));
+        Ad ad = DaoFactory.getAdsDao().findById(id);
         DaoFactory.getAdsDao().delete(ad);
-        req.getSession().removeAttribute("ad");
-        resp.sendRedirect("/profile");
+        if (req.getSession().getAttribute("vp") == null){
+            resp.sendRedirect("/ads");
+        } else {
+            resp.sendRedirect("/profile");
+        }
     }
 }
