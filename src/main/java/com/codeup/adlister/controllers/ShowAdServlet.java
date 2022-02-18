@@ -1,9 +1,8 @@
 package com.codeup.adlister.controllers;
 
-import com.codeup.adlister.dao.Ads;
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.Ad;
-
+import com.codeup.adlister.models.User;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,21 +17,14 @@ import java.util.List;
 public class ShowAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         long id = Long.parseLong(req.getParameter("id"));
-        String adId = req.getParameter("id");
-        req.setAttribute("id", adId);
-//        try {
-//            Ad adsDao = DaoFactory.getAdsDao().findOne(id);
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        if(adId != null){
-//
-//        }
-
-//      need to get id of ad
-        //  here we will bring in DaoFactory here to getAdById()
-//      need to set id of ad to "ad"
-//      req.setAttribute("ad", id)
+        try {
+            Ad ad = DaoFactory.getAdsDao().findOne(id);
+            req.setAttribute("ad", ad);
+            User user = DaoFactory.getUsersDao().findById(ad.getUserId());
+            req.setAttribute("adUser", user);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         req.getRequestDispatcher("/WEB-INF/ads/showAd.jsp").forward(req, res);
     }
 
