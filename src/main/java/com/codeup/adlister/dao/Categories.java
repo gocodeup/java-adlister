@@ -13,4 +13,6 @@ public interface Categories {
 
 
     Long insert(List<Category> categoryObjects);
+
+    List<Category> search(String keyword2);
 }

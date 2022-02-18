@@ -18,10 +18,6 @@ public class SearchAdsServlet extends HttpServlet {
     protected void doPost (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String keyword = request.getParameter("keyword");
 
-
-//        boolean inputHasErrors = keyword.isEmpty();
-
-
         if (keyword.isEmpty()){
             response.sendRedirect("/ads");// needs the page to be redirected
             return;
