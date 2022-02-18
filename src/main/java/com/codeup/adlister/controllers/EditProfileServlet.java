@@ -4,6 +4,7 @@ package com.codeup.adlister.controllers;
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.User;
 import com.codeup.adlister.util.Password;
+import com.codeup.adlister.util.Validate;
 
 import javax.imageio.IIOException;
 import javax.servlet.ServletException;
@@ -58,6 +59,21 @@ public class EditProfileServlet extends HttpServlet {
             }
 
             //sets errorMessage to editError
+            request.getSession().setAttribute("editError", errorMessage);
+            response.sendRedirect("/editProfile");
+        }else if(!Validate.emailVal(email) || !Validate.passVal(password)){
+
+            if (!Validate.passVal(password)){
+                errorMessage += "Password must have at least: <br>" +
+                        " one numeric character<br>" +
+                        "one lowercase character<br>" +
+                        "one uppercase character<br>" +
+                        "one special symbol of !@#$%<br>" +
+                        "and 6-15 characters long<br>";
+            }
+            if(!Validate.emailVal(email)){
+                errorMessage +="Enter a valid email<br>";
+            }
             request.getSession().setAttribute("editError", errorMessage);
             response.sendRedirect("/editProfile");
         }else{

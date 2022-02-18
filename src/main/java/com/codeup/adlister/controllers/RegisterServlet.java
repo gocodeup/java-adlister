@@ -3,6 +3,7 @@ package com.codeup.adlister.controllers;
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.User;
 import com.codeup.adlister.util.Password;
+import com.codeup.adlister.util.Validate;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -24,7 +25,8 @@ public class RegisterServlet extends HttpServlet {
         String password = request.getParameter("password");
         String passwordConfirmation = request.getParameter("confirm_password");
         String errorMessage = "";
-
+        System.out.println(email + Validate.emailVal(email));
+        System.out.println(password + Validate.passVal(password));
 
         // validate input
         boolean inputHasErrors = username.isEmpty()
@@ -43,19 +45,35 @@ public class RegisterServlet extends HttpServlet {
             if(email.isEmpty()){
                 errorMessage += "Email is required for registration<br> ";
             }
-            if (password.isEmpty()){
-                errorMessage += "Password is required for registration <br>";
+
+            if(password.isEmpty()){
+                errorMessage += "Password is required for registration<br>";
             }
+
             if(! password.equals(passwordConfirmation)){
                 errorMessage += "Passwords do not match";
             }
             //var errorMessage is set to attribute error
-            request.getSession().setAttribute("error", errorMessage);
-            response.sendRedirect("/register");
+
 
             //username variable is input to findByUsername, if it is not null
             //errorMessage will be assigned new string and will redirect to register
-        } else if(DaoFactory.getUsersDao().findByUsername(username) != null){
+        } else if(!Validate.emailVal(email) || !Validate.passVal(password)){
+
+            if (!Validate.passVal(password)){
+                errorMessage += "Password must have at least: <br>" +
+                        " one numeric character<br>" +
+                        "one lowercase character<br>" +
+                        "one uppercase character<br>" +
+                        "one special symbol of @#$%^&+=<br>" +
+                        "and 6-15 characters long<br>";
+            }
+            if(!Validate.emailVal(email)){
+                errorMessage +="Enter a valid email<br>";
+            }
+            request.getSession().setAttribute("error", errorMessage);
+            response.sendRedirect("/register");
+        }else if(DaoFactory.getUsersDao().findByUsername(username) != null){
             errorMessage = "Username already exists";
 
             //var errorMessage is set to attribute error
