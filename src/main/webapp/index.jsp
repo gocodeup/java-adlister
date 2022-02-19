@@ -13,7 +13,7 @@
 
 
     <div class="container my-5 mx-auto main">
-        <div class="jumbotron JumboHeaderImg jumbotron-fluid mx-auto text-center" style="background-image:url(<c:url value='images/flea-market.jpg' />)">
+        <div class="jumbotron JumboHeaderImg jumbotron-fluid mx-auto text-center">
             <h1 class="adlister-title">Welcome to the Adlister!</h1>
         </div>
 
