@@ -20,6 +20,11 @@ public class ViewProfileServlet extends HttpServlet {
             return;
         }
 
+        if (request.getSession().getAttribute("vi") != null) {
+            request.getSession().removeAttribute("vi");
+        }
+        request.getSession().setAttribute("vp", "hi");
+
         //shows all of the current users ads in the profile by userid
 
         User user = (User)request.getSession().getAttribute("user");

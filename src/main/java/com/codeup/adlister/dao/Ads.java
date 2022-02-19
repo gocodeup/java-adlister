@@ -21,4 +21,7 @@ public interface Ads {
 
     //show all ads on profile
     List<Ad> allAdsByUserId(long userId);
+
+
+    Ad findById(Long id);
 }
