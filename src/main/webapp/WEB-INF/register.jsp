@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/stylesheets/styles.css">
     <jsp:include page="partials/head.jsp">
         <jsp:param name="title" value="Register For Our Site!"/>
     </jsp:include>
