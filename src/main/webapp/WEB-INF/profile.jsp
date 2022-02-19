@@ -23,6 +23,19 @@
         <h4>${ad.title}</h4>
         <p>${ad.description}</p>
 
+    <c:forEach var="ad" items="${ads}">
+        <div class="col-md-6">
+            <h2>${ad.title}</h2>
+            <p>${ad.description}</p>
+            <form action="/ads/update" method="get">
+                <input type="hidden" name="ad_id" value="${ad.id}">
+                <input class="btn btn-secondary btn-sm" name="update" type="submit" value="Edit">
+            </form>
+            <form action="/ads/delete" method="post">
+                <input type="hidden" name="ad_id" value="${ad.id}">
+                <input class="btn btn-danger btn-sm" type="submit" value="Delete">
+          </form>
+    
         <form action="<c:url value="/ad?id="/>" method="get">
 <%--assigned value to input type of ad.id, allowing us to grab the ad's id--%>
             <input type="hidden" name="id" value="${ad.id}">
@@ -30,5 +43,6 @@
         </form>
     </div>
 </c:forEach>
+
 </body>
 </html>

@@ -14,11 +14,11 @@
 <form action="/ads/update" method="post">
   <div class="form-group">
     <label for="title">Title:</label>
-    <input id="title" name="title" value= ${sessionScope.ad.title} class="form-control" type="text">
+    <input id="title" name="title" value= "${sessionScope.ad.title}" class="form-control" type="text">
   </div>
   <div class="form-group">
     <label for="description">Description:</label>
-    <input id="description" name="description" value= ${sessionScope.ad.description} class="form-control" type="text">
+    <input id="description" name="description" value= "${sessionScope.ad.description}" class="form-control" type="text">
   </div>
   <input type="submit" class="btn btn-primary btn-block">
 </form>
