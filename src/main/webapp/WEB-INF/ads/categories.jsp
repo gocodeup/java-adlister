@@ -12,7 +12,7 @@
   <jsp:include page="/WEB-INF/partials/head.jsp">
     <jsp:param name="title" value="Viewing All Categories"/>
   </jsp:include>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/stylesheets/styles.css">
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
@@ -33,23 +33,26 @@
 </div>
 
   <div class="container">
-    <h1 class="display-4">Category: ${categories}</h1>
+    <h1 class="display-4">Category: ${category}</h1>
     <div class="display-cards" style="width: 100%">
       <c:if test="${ads.isEmpty()}">
         <h4>No ads found. <a href="${pageContext.request.contextPath}/ads">View all ads</a></h4>
       </c:if>
-      <c:forEach var="category" items="${categories}">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <a href="${pageContext.request.contextPath}/ads/categories?id=${ad.id}">${ad.title}${ad.category}</a>
-            <h5 class="card-title">${ad.title}</h5></a>
-            <p>${ad.description}</p>
-          </div>
-        </div>
+      <c:forEach var="ad" items="${ads}">
+<%--        <div class="card" style="width: 18rem;">--%>
+<%--          <div class="card-body">--%>
+<%--            <a href="${pageContext.request.contextPath}/ads/categories?id=${ad.id}">${ad.title}${ad.category}</a>--%>
+<%--            <h5 class="card-title">${ad.title}</h5></a>--%>
+<%--            <p>${ad.description}</p>--%>
+<%--          </div>--%>
+<%--        </div>--%>
+        <div>${ad.title}</div>
       </c:forEach>
     </div>
 
-</div>
+<%--</div>--%>
+
+
 
 
 <a class="back-button" href="/ads"><i class="fa fa-chevron-left" aria-hidden="true">Back to Ads</i></a>

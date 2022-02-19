@@ -19,9 +19,9 @@ public class SearchCategoriesServlet extends HttpServlet {
         String searchCategory = getCategory(category);
         request.setAttribute("category", searchCategory);
 
-        List<Ad> categories = (List<Ad>) DaoFactory.getCategoriesDao().getCategoryByCatName(searchCategory); //gets all ads with category
+        List<Ad> ads = DaoFactory.getAdsDao().getAdByCategory(category); //gets all ads with category
 
-        request.setAttribute("ads", categories); //sets ad attribute
+        request.setAttribute("ads", ads); //sets ad attribute
         request.getRequestDispatcher("/WEB-INF/ads/categories.jsp").forward(request, response);
     }
     protected String getCategory(String category){
@@ -53,19 +53,19 @@ public class SearchCategoriesServlet extends HttpServlet {
         return actualCategory;
     }
 
-    protected void doPost (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    String keyword2 = request.getParameter("keyword2");
-
-        if (keyword2.isEmpty()){
-        response.sendRedirect("/ads");
-        return;
-    }
-
-    List<Category> categories = DaoFactory.getCategoriesDao().search(keyword2);
-        request.setAttribute("ads", categories);
-  System.out.println(categories);
-        request.getRequestDispatcher("/WEB-INF/ads/categories.jsp").forward(request,response);
-
-}
+//    protected void doPost (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//    String keyword2 = request.getParameter("keyword2");
+//
+//        if (keyword2.isEmpty()){
+//        response.sendRedirect("/ads");
+//        return;
+//    }
+//
+//    List<Category> categories = DaoFactory.getCategoriesDao().search(keyword2);
+//        request.setAttribute("ads", categories);
+//  System.out.println(categories);
+//        request.getRequestDispatcher("/WEB-INF/ads/categories.jsp").forward(request,response);
+//
+//}
 
 }
