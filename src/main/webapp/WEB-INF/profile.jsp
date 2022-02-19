@@ -21,7 +21,7 @@
         <c:forEach var="ad" items="${userAd}">
 
 
-            <div class="card" style="width: 18rem">
+            <div class="card card mx-1 my-1" style="width: 18rem">
                 <h2>${ad.title}</h2>
                 <p>${ad.description}</p>
                 <br>

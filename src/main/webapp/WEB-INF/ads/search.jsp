@@ -23,15 +23,26 @@
 
 <%--//added some style to show add in a card*** Agutierrez
 NOTE: when click to indv ad gives error--%>
+    <div class="display-cards row row-cols-4">
+
+
 <c:if test="${ads != null}">
     <c:forEach var="ad" items="${ads}">
-        <div class="card" style="width: 18rem;">
+        <div class="card mx-1 my-1" style="width: 18rem;">
             <div class="card-body">
-                <h2><a href="${pageContext.request.contextPath}/ads/categories?id=${ad.id}">${ad.title}</a></h2>
-                 <p>${ad.description}</p>
+                <form action="/ads/individualAd" method="GET">
+                    <input type="hidden" name="ad" value="${ad.id}">
+                    <h3>${ad.title}</h3>
+                    <p>${ad.description}</p>
+                    <button class="btn-light">Show Ad</button>
+                </form>
             </div>
         </div>
+
+
+
 </c:forEach>
+    </div>
 </c:if>
 
     <c:if test="${ads.isEmpty()}">

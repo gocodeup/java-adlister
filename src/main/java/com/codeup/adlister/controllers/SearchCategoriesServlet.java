@@ -20,9 +20,12 @@ public class SearchCategoriesServlet extends HttpServlet {
         String searchCategory = getCategory(category);
         request.setAttribute("category", searchCategory);
 
+
+
         List<Ad> ads = DaoFactory.getAdsDao().getAdByCategory(category); //gets all ads with category
 
-        request.setAttribute("ads", ads); //sets ad attribute
+
+        request.setAttribute("ads", categories); //sets ad attribute
         request.getRequestDispatcher("/WEB-INF/ads/categories.jsp").forward(request, response);
     }
     protected String getCategory(String category){

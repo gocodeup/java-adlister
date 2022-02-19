@@ -10,11 +10,11 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-<div class="container">
+<div class="container-fluid " style=" margin-left: 50px; margin-right: 50px;">
     <h1>Here Are all the ads!</h1>
-    <div class="display-cards row row-cols-4" >
+    <div class="display-cards row row-cols-5 " >
     <c:forEach var="ad" items="${ads}">
-        <div class="card" style="width: 18rem">
+        <div class="card mx-2 my-2" style="width: 18rem">
             <form action="/ads/individualAd" method="GET">
 <%--            <h2><a href="/ads/individualAd">${ad.id}</a></h2>--%>
             <input type="hidden" name="ad" value="${ad.id}">
@@ -30,7 +30,11 @@
 
     </c:forEach>
     </div>
+
+    <a class="back-button" href="/index.jsp"><i class="fa fa-chevron-left" aria-hidden="true">Go Home</i></a>
 </div>
+
+
 <jsp:include page="/WEB-INF/partials/footer.jsp"></jsp:include>
 </body>
 </html>
