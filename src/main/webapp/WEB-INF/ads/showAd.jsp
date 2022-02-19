@@ -49,5 +49,7 @@
     <%--        <li>Community</li>--%>
     <%--    </ul>--%>
 </main>
+
+<jsp:include page="/WEB-INF/partials/scripts.jsp"/>
 </body>
 </html>
