@@ -52,3 +52,17 @@ INSERT INTO categories (category) VALUES ('Miscellaneous');
 # DROP DATABASE IF EXISTS adlister_db;
 #
 # CREATE DATABASE IF NOT EXISTS adlister_db;
+
+
+
+SELECT *
+FROM ads
+WHERE id IN (
+    SELECT ads_id
+    FROM ads_categories
+    WHERE category_id IN(
+        SELECT id
+        FROM categories
+        WHERE category LIKE 'Furniture'
+    )
+);

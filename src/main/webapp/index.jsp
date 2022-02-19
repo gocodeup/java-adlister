@@ -51,13 +51,18 @@
         </div>
     </div>
     </div>
-    <footer class="my-5">
+    <div class="footer">
 
-        <h3>Something here, this is our footer, can be social media, our signature, etc</h3>
+        <footer class="footer" style="margin-top: 300px">
+
+            <h3 class="mx-auto text-center" style="width: 200px; color: darkred">Red Team</h3>
 
 
-        <jsp:include page="/WEB-INF/partials/footer.jsp"></jsp:include>
-    </footer>
+            <jsp:include page="/WEB-INF/partials/footer.jsp"></jsp:include>
+        </footer>
+
+    </div>
+
 
 </body>
 </html>

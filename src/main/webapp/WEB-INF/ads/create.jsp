@@ -24,8 +24,8 @@
 
         <c:forEach var="category" items="${allCategories}">
 
-        <input class="form-check-input mx-3" type="checkbox" name="categoryCheckbox" value="${category.id}" id="${category.id}">
-        <label class="form-check-label" for="${category.id}">${category.category}</label>
+        <input class="form-check-input mx-auto" type="checkbox" name="categoryCheckbox" value="${category.id}" id="${category.id}">
+        <label class="form-check-label mx-3 justify-content-between" for="${category.id}">${category.category}</label>
         </c:forEach>
     </div>
 

@@ -20,7 +20,7 @@
     <div class="container">
         <h1>Your Ad</h1>
 <div>
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 35rem;">
         <h2> Title: ${ad.title} </h2>
         <h3> Description: ${ad.description}</h3>
         <h3>User: ${sessionScope.user.username}</h3>
