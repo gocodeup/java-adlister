@@ -58,7 +58,7 @@ public class MySQLCategoriesDao implements Categories {
         String query = "SELECT * FROM ads WHERE title LIKE ? ";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.setString(1, keyword2);
+//            stmt.setString(1, keyword2);
             // change above code to :
             stmt.setString(1, '%' + keyword2 + '%');
 //            stmt.setString(2, keyword);

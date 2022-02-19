@@ -53,7 +53,6 @@ public class MySQLAdsDao implements Ads {
     }
 
 
-
     @Override
     public Long insert(Ad ad) {
         try {
@@ -72,6 +71,7 @@ public class MySQLAdsDao implements Ads {
 
 
     }
+
     public void insertCategories(Ad ad, String[] selectedCategories) {
         try {
             String insertQuery = "INSERT INTO ads(user_id, title, description) VALUES (?, ?, ?)";
@@ -135,7 +135,7 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-//method to delete ads
+    //method to delete ads
     public void delete(long id) {
         String Query = "DELETE FROM ads WHERE id = ?";
         try {
@@ -162,8 +162,6 @@ public class MySQLAdsDao implements Ads {
     }
 
 
-
-
     // ---------------------------
 
     @Override
@@ -185,13 +183,12 @@ public class MySQLAdsDao implements Ads {
     }
 
 
-
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
-            rs.getLong("id"),
-            rs.getLong("user_id"),
-            rs.getString("title"),
-            rs.getString("description")
+                rs.getLong("id"),
+                rs.getLong("user_id"),
+                rs.getString("title"),
+                rs.getString("description")
         );
     }
 
@@ -203,9 +200,19 @@ public class MySQLAdsDao implements Ads {
         return ads;
     }
 
-
-
-
+    @Override
+    public List<Ad> getAdByCategory(String category) {
+        String sql = "SELECT * FROM ads WHERE id IN ( SELECT ads_id FROM ads_categories WHERE category_id IN(SELECT id FROM categories WHERE category LIKE ? ))";
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement(sql);
+            stmt.setString(1, category);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving ads", e);
+        }
+    }
 
 
 }
