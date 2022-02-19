@@ -1,5 +1,6 @@
 package com.codeup.adlister.controllers;
 
+import com.codeup.adlister.dao.Categories;
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.Category;
@@ -19,9 +20,12 @@ public class SearchCategoriesServlet extends HttpServlet {
         String searchCategory = getCategory(category);
         request.setAttribute("category", searchCategory);
 
+
+
         List<Ad> ads = DaoFactory.getAdsDao().getAdByCategory(category); //gets all ads with category
 
-        request.setAttribute("ads", ads); //sets ad attribute
+
+        request.setAttribute("ads", category); //sets ad attribute
         request.getRequestDispatcher("/WEB-INF/ads/categories.jsp").forward(request, response);
     }
     protected String getCategory(String category){
