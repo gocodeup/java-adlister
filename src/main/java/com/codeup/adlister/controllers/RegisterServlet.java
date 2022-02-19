@@ -54,6 +54,8 @@ public class RegisterServlet extends HttpServlet {
                 errorMessage += "Passwords do not match";
             }
             //var errorMessage is set to attribute error
+            request.getSession().setAttribute("error", errorMessage);
+            response.sendRedirect("/register");
 
 
             //username variable is input to findByUsername, if it is not null
