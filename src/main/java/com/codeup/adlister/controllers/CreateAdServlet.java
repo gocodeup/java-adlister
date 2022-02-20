@@ -30,6 +30,7 @@ public class CreateAdServlet extends HttpServlet {
             request.getParameter("description")
         );
         DaoFactory.getAdsDao().insert(ad);
+        //  consider changing redirect to /profile until adIndex is setup
         response.sendRedirect("/ads");
     }
 }

@@ -1,5 +1,4 @@
-USE
-adlister_db;
+USE adlister_db;
 
 DROP TABLE IF EXISTS users;
 CREATE TABLE users
@@ -16,6 +15,7 @@ CREATE TABLE users
         # UNIQUE (username),
     # UNIQUE (email)
 
+
 );
 
 DROP TABLE IF EXISTS ads;
@@ -28,15 +28,6 @@ CREATE TABLE ads
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users (id)
         ON DELETE CASCADE
-
--- # added these ND
-
-        # commenting out the below,
-    don '' t believe is needed
-        # will discuss with team
-        # dateCreated VARCHAR (50) NOT NULL,
-    #           categoryName VARCHAR(255) NOT NULL,
-    # UNIQUE (user_id, title, description)
 );
 
 DROP TABLE IF EXISTS categories;
@@ -67,3 +58,4 @@ Below INSERT should be removed
 #               (''jobs''),
 #               (''community''),
 #               (''furniture'');
+

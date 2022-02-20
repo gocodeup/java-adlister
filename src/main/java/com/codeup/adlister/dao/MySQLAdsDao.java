@@ -181,8 +181,9 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+
     @Override
-    public Ad findById(long id) {
+    public Ad findById(Long id) {
         try{
             String query = "SELECT * FROM ads WHERE id = ? LIMIT 1";
             PreparedStatement stmt = connection.prepareStatement(query);
@@ -231,3 +232,4 @@ public class MySQLAdsDao implements Ads {
 //    public void addCategory(Long ad_id, Long category_id) {
 
     }
+

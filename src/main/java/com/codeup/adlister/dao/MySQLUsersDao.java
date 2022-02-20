@@ -33,6 +33,19 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+    //  findById needed in order to grab from 1:n relation with ads
+    @Override
+    public User findById(long id) {
+        String query = "SELECT * FROM users WHERE id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, id);
+            return extractUser(stmt.executeQuery());
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding a user by id", e);
+        }
+    }
+
     public void delete(String username) {
         String query = "DELETE FROM users WHERE username = ?";
         try {

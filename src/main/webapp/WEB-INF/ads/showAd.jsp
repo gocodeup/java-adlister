@@ -15,6 +15,9 @@
     </jsp:include>
     <link rel="stylesheet" href="/mainNav.css">
     <title>Title</title>
+    <title><c:out value="${ad.title}"/></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+          integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
 </head>
 
 <body>
@@ -26,6 +29,9 @@
 
 <%--consider page being a card--%>
 <main class="container">
+
+  
+  <% ND %>
 <%--    <h2>Your Ad Title: <c:out value="${ad.title}"/></h2>--%>
 <%--    <p>${ad.description}</p>--%>
 <%--    <h5>${ad.user_id.getName()}</h5>--%>
@@ -51,6 +57,41 @@
            </ul>
        </div>
    </div>
+<%  ND %>
+  
+  
+    <div class="card w-100">
+        <div class="card-body pb-0">
+            <h3 class="card-title"><c:out value="${ad.title}"/></h3>
+            <p class="card-text">${ad.description}</p>
+            <ul class="list-group list-group-horizontal justify-content-end align-items-end">
+                <li class="list-group-item border-0 p-1"><c:out value="${adUser.username}"/></li>
+                <li class="list-group-item border-0 p-1"><a href="mailto: ${adUser.email}"><c:out value="${adUser.email}"/></a></li>
+                <li class="list-group-item border-0 p-1">
+                    <form action="/ads/update" method="get" class="mb-0">
+                        <input type="hidden" name="ad_id" value="${ad.id}"/>
+                        <input class="btn btn-secondary btn-sm" name="update" type="submit" value="Edit"/>
+                    </form>
+                </li>
+                <li class="list-group-item border-0 p-1">
+                    <form action="/ads/delete" method="post" class="mb-0">
+                        <input type="hidden" name="ad_id" value="${ad.id}"/>
+                        <input class="btn btn-danger btn-sm" name="delete" type="submit" value="Delete"/>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <%--FOR LOOP to display all categories an ad belongs to ad.category_id.getName()--%>
+    <%--Still need to work on categories--%>
+    <%--    <ul>--%>
+    <%--        <li>Jobs</li>--%>
+    <%--        <li>Housing</li>--%>
+    <%--        <li>For Sale</li>--%>
+    <%--        <li>Community</li>--%>
+    <%--    </ul>--%>
 </main>
+
+<jsp:include page="/WEB-INF/partials/scripts.jsp"/>
 </body>
 </html>
