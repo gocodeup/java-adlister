@@ -20,33 +20,33 @@
 <div class="container">
   <h1>All Categories</h1>
 
-<div class="category">
-  <span class="align-baseline w3-tag w3-grey w3-margin-bottom w3-margin-left"><a href="${pageContext.request.contextPath}/ads/categories?categories=Automobile">Automobile</a></span>
-  <span class="align-top w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?categories=Clothing">Clothing</a></span>
-  <span class="align-bottom w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?categories=Electronics">Electronics</a></span>
-  <span class="align-top w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?categories=Furniture">Furniture</a></span>
-  <span class="align-baseline w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?categories=Home">Home</a></span>
-  <span class="align-baseline w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?categories=Miscellaneous">Miscellaneous</a></span>
-  <span class="align-bottom w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?categories=Toys">Toys</a></span>
-  <span class="align-top w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?categories=Tools">Tools</a></span>
+  <div class="category text-center justify-content-around">
+    <span class="align-baseline w3-tag w3-grey w3-margin-bottom w3-margin-left"><a href="${pageContext.request.contextPath}/ads/categories?category=Automotive">Automobile</a></span>
+    <span class="align-top w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?category=Clothing">Clothing</a></span>
+    <span class="align-bottom w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?category=Electronics">Electronics</a></span>
+    <span class="align-top w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?category=Furniture">Furniture</a></span>
+    <span class="align-baseline w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?category=Home">Home</a></span>
+    <span class="align-baseline w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?category=Miscellaneous">Miscellaneous</a></span>
+    <span class="align-bottom w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?category=Toys">Toys</a></span>
+    <span class="align-top w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?category=Tools">Tools</a></span>
 
-</div>
+  </div>
 
   <div class="container">
-    <h1 class="display-4">Category: ${category}</h1>
-    <div class="display-cards" style="width: 100%">
+    <h3 class="title my-5">Category: ${category}</h3>
+    <div class="display-cards  row row-cols-4" style="width: 100%">
       <c:if test="${ads.isEmpty()}">
-        <h4>No ads found. <a href="${pageContext.request.contextPath}/ads">View all ads</a></h4>
+        <h5>No ads found. <a href="${pageContext.request.contextPath}/ads"> Explore all ads</a></h5>
       </c:if>
       <c:forEach var="ad" items="${ads}">
-<%--        <div class="card" style="width: 18rem;">--%>
-<%--          <div class="card-body">--%>
-<%--            <a href="${pageContext.request.contextPath}/ads/categories?id=${ad.id}">${ad.title}${ad.category}</a>--%>
-<%--            <h5 class="card-title">${ad.title}</h5></a>--%>
-<%--            <p>${ad.description}</p>--%>
-<%--          </div>--%>
-<%--        </div>--%>
-        <div>${ad.title}</div>
+        <div class="card my-1 mx-1" style="width: 18rem;">
+          <form action="/ads/individualAd" method="GET">
+            <input type="hidden" name="ad" value="${ad.id}">
+            <h3 style="color:#398AB9;">${ad.title}</h3>
+            <p>${ad.description}</p>
+            <button class="btn-light">Show Ad</button>
+          </form>
+        </div>
       </c:forEach>
     </div>
 
@@ -54,8 +54,12 @@
 
 
 
+  </div>
 
-<a class="back-button" href="/ads"><i class="fa fa-chevron-left" aria-hidden="true">Back to Ads</i></a>
+  <a class="back-button " href="/index.jsp"><i class="fa fa-chevron-left" aria-hidden="true">Return Home</i></a>
+  <a class="back-button mx-5" href="/ads"><i class="fa fa-chevron-left" aria-hidden="true">See all Ads</i></a>
+</div>
+
 
 <jsp:include page="/WEB-INF/partials/footer.jsp"></jsp:include>
 </body>

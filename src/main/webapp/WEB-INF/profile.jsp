@@ -19,23 +19,18 @@
 <h3>Your Ads:</h3>
     <div class="display-cards row row-cols-4">
         <c:forEach var="ad" items="${userAd}">
-
-
             <div class="card card mx-1 my-1" style="width: 18rem">
-                <h2>${ad.title}</h2>
+                <h2 style="color:#398AB9;">${ad.title}</h2>
                 <p>${ad.description}</p>
                 <br>
-<div class="text-center">
-    <a href="${pageContext.request.contextPath}/ads/updateAds?ad_id=${ad.id}"
+<div class="d-flex align-items-end text-center">
+    <a style="color:#017BFE;" href="${pageContext.request.contextPath}/ads/updateAds?ad_id=${ad.id}"
        class="btn btn-sm ">Update</a>
-    <a href="${pageContext.request.contextPath}/ads/delete?ad_id=${ad.id}"
+    <a style="color:#017BFE;" href="${pageContext.request.contextPath}/ads/delete?ad_id=${ad.id}"
        onclick="return confirm('Are you sure you want to delete this item?')"
        class="btn btn-sm ">Delete</a>
 </div>
             </div>
-
-
-
         </c:forEach>
     </div>
 
@@ -43,13 +38,15 @@
 
 </div>
 <br>
-<div class=" container fluid text-right">
+<div class=" container fluid">
 
     <a href="/editProfile" onclick="w3_close()"
        class="text-right"><i
-            class="fa fa-th-large fa-fw w3-margin-right"></i>EDIT PROFILE</a>
+            class="fa fa-th-large fa-fw w3-margin-right"></i>Edit Profile</a>
 
 </div>
+
+
 <jsp:include page="/WEB-INF/partials/footer.jsp"></jsp:include>
 </body>
 </html>
