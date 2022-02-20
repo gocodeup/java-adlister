@@ -24,6 +24,15 @@
             <input type="submit" class="btn btn-dark btn-block" value="Log In">
         </form>
     </div>
+
+    <div class="container-fluid my-5">
+        <a class="back-button mx-auto" href="/index.jsp"><i class="fa fa-chevron-left" aria-hidden="true">Return Home</i></a>
+
+    </div>
+
+
+
+
     <jsp:include page="/WEB-INF/partials/footer.jsp"></jsp:include>
 </body>
 </html>

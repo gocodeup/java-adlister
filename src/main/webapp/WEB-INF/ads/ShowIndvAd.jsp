@@ -21,7 +21,7 @@
         <h1>Your Ad</h1>
 <div>
     <div class="card" style="width: 35rem;">
-        <h2> Title: ${ad.title} </h2>
+        <h2 style="color:#398AB9;"> Title: ${ad.title} </h2>
         <h3> Description: ${ad.description}</h3>
         <h3>User: ${sessionScope.user.username}</h3>
     </div>

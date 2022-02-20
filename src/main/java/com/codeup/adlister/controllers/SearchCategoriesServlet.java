@@ -30,8 +30,8 @@ public class SearchCategoriesServlet extends HttpServlet {
     }
     protected String getCategory(String category){
         String actualCategory = "";
-        if(category.equals("Automobile")){
-            actualCategory = "Automobile";
+        if(category.equals("Automotive")){
+            actualCategory = "Automotive";
         }
         else if(category.equals("Clothing")){
             actualCategory = "Clothing";

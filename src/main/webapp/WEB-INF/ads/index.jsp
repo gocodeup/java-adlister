@@ -19,9 +19,9 @@
 <%--            <h2><a href="/ads/individualAd">${ad.id}</a></h2>--%>
             <input type="hidden" name="ad" value="${ad.id}">
 <%--            <h2><a href="<c:url value='/ads/individualAd?id=${ad.id}'/>"${ad.title}/></h2>--%>
-            <h3>${ad.title}</h3>
+            <h3 style="color:#398AB9;">${ad.title}</h3>
             <p>${ad.description}</p>
-            <button class="btn-light">Show Ad</button>
+            <button class="btn-light d-flex align-self-end">Show Ad</button>
             </form>
 
 <%--            <p>${ad.description}</p>--%>
@@ -31,7 +31,7 @@
     </c:forEach>
     </div>
 
-    <a class="back-button" href="/index.jsp"><i class="fa fa-chevron-left" aria-hidden="true">Go Home</i></a>
+    <a class="back-button" href="/index.jsp"><i class="fa fa-chevron-left" aria-hidden="true">Return Home</i></a>
 </div>
 
 

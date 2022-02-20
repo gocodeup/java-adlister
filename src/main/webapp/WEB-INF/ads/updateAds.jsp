@@ -15,9 +15,7 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
-<div>
-    <a class="back-button" href="/profile"><i class="fa fa-chevron-left" aria-hidden="true">Back to Profile</i></a>
-</div>
+
 <div class="container">
     <h1 class="display-4">Update your Ad</h1>
 
@@ -36,6 +34,9 @@
         <input type="submit" class="btn btn-block btn-dark">
     </form>
 
+</div>
+<div class="container-fluid my-5">
+    <a class="back-button" href="/profile"><i class="fa fa-chevron-left" aria-hidden="true">Back to Profile</i></a>
 </div>
 <jsp:include page="/WEB-INF/partials/footer.jsp"></jsp:include>
 </body>
