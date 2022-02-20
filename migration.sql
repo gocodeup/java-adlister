@@ -32,7 +32,7 @@ CREATE TABLE ads
 -- # added these ND
 
         # commenting out the below,
-    don '' t believe is needed
+    # don't believe is needed
         # will discuss with team
         # dateCreated VARCHAR (50) NOT NULL,
     #           categoryName VARCHAR(255) NOT NULL,
@@ -58,7 +58,7 @@ CREATE TABLE ad_category
 );
 
 #
-Below INSERT should be removed
+# Below INSERT should be removed
 # Have seeder file for INSERT of categories
 # Commenting out until discussed with team
 # INSERT INTO categories (categoryName) VALUES
