@@ -18,11 +18,19 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
+<div class="container-fluid my-5 justify-content-around">
+    <a class="back-button mx-auto" href="/index.jsp"><i class="fa fa-chevron-left" aria-hidden="true">Return Home</i></a>
+</div>
+
 <div class="container">
+
     <h1>You Search Results:</h1>
 
 <%--//added some style to show add in a card*** Agutierrez
 NOTE: when click to indv ad gives error--%>
+
+
+
     <div class="display-cards row row-cols-4">
 
 
@@ -32,7 +40,7 @@ NOTE: when click to indv ad gives error--%>
             <div class="card-body">
                 <form action="/ads/individualAd" method="GET">
                     <input type="hidden" name="ad" value="${ad.id}">
-                    <h3>${ad.title}</h3>
+                    <h3 style="color:#398AB9;">${ad.title}</h3>
                     <p>${ad.description}</p>
                     <button class="btn-light">Show Ad</button>
                 </form>
@@ -49,8 +57,14 @@ NOTE: when click to indv ad gives error--%>
         <h3>No Search Results Found</h3>
     </c:if>
 
-    <a href="${pageContext.request.contextPath}/ads">Return to all ads</a>
+
 </div>
+<div class="container-fluid my-5 justify-content-around">
+
+    <a class=" mx-auto" href="${pageContext.request.contextPath}/ads">See all ads</a>
+</div>
+
+
 <jsp:include page="/WEB-INF/partials/footer.jsp"></jsp:include>
 </body>
 </html>

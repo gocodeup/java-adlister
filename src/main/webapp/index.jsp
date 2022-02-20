@@ -38,7 +38,7 @@
         <div class="categories-container" id="categories-header">
 <%--            <h3 class="categories-header"><i class="fa fa-hashtag" aria-hidden="true">CATEGORIES</i></h3>--%>
             <div class="category text-center justify-content-around">
-                <span class="align-baseline w3-tag w3-grey w3-margin-bottom w3-margin-left"><a href="${pageContext.request.contextPath}/ads/categories?category=Automobile">Automobile</a></span>
+                <span class="align-baseline w3-tag w3-grey w3-margin-bottom w3-margin-left"><a href="${pageContext.request.contextPath}/ads/categories?category=Automotive">Automobile</a></span>
                 <span class="align-top w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?category=Clothing">Clothing</a></span>
                 <span class="align-bottom w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?category=Electronics">Electronics</a></span>
                 <span class="align-top w3-tag w3-grey w3-margin-bottom"><a href="${pageContext.request.contextPath}/ads/categories?category=Furniture">Furniture</a></span>
@@ -51,18 +51,8 @@
         </div>
     </div>
     </div>
-    <div class="footer">
-
-        <footer class="footer" style="margin-top: 300px">
-
-            <h3 class="mx-auto text-center" style="width: 200px; color: darkred">Red Team</h3>
 
 
-            <jsp:include page="/WEB-INF/partials/footer.jsp"></jsp:include>
-        </footer>
-
-    </div>
-
-
+    <jsp:include page="/WEB-INF/partials/footer.jsp"></jsp:include>
 </body>
 </html>
