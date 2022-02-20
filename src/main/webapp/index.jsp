@@ -36,9 +36,9 @@
     <form class="row pt-4" action="/ads" method="GET">
         <a class="red-hover w-text" href="/category?value=0"> View recent ads </a>
     </form>
-    <div class="scrollBx ">
+    <div class="scrollBx">
         <c:forEach var="ad" items="${all}">
-            <a class="blk" href="/viewAd?adId=${ad.id}" class="dark">
+            <a class="blk" href="/showAd?adId=${ad.id}" class="dark">
                 <div class="cards mr-2">
                     <h2>${ad.title}</h2>
                     <p>${ad.description}</p>
@@ -53,7 +53,7 @@
     </form>
     <div class="scrollBx ">
         <c:forEach var="ad" items="${all}">
-            <a class="blk" href="/viewAd?adId=${ad.id}" >
+            <a class="blk" href="/showAd?ad=${ad.id}" >
                 <div class="cards mr-2">
                     <h2>${ad.title}</h2>
                     <p>${ad.description}</p>
@@ -68,7 +68,7 @@
     </form>
     <div class="scrollBx ">
         <c:forEach var="ad" items="${all}">
-            <a class="blk" href="/viewAd?adId=${ad.id}" >
+            <a class="blk" href="/showAd?adId=${ad.id}" >
                 <div class="cards mr-2">
                     <h2>${ad.title}</h2>
                     <p>${ad.description}</p>
@@ -84,7 +84,7 @@
     </form>
     <div class="scrollBx ">
         <c:forEach var="ad" items="${all}">
-            <a class="blk" href="/viewAd?adId=${ad.id}">
+            <a class="blk" href="/showAd?adId=${ad.id}">
                 <div class="cards mr-2">
                     <h2>${ad.title}</h2>
                     <p>${ad.description}</p>
@@ -99,7 +99,7 @@
     </form>
         <div class="scrollBx ">
             <c:forEach var="ad" items="${all}">
-                <a class="blk" href="/viewAd?adId=${ad.id}">
+                <a class="blk" href="/showAd?adId=${ad.id}">
                     <div class="cards mr-2">
                         <h2>${ad.title}</h2>
                         <p>${ad.description}</p>

@@ -21,9 +21,9 @@
         <!-- Brand and toggle get grouped for better mobile display -->
 <%--        <a class="navbar-brand w-text" href="#">logo</a>--%>
 <%--        <img src="/img/adlister.png" alt="" style="max-width: 60px; max-height: 64px" >--%>
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbarText"
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggle-icon"></span>
+            <span class="navbar-toggler-icon"></span>
         </button>
 
 <%--        <div class="collapse navbar-header">--%>
@@ -40,13 +40,13 @@
             </ul>
             <span class="navbar-text">
                 <ul class="navbar-nav mr-auto">
-                    <form class="form-inline my-2 my-lg-0" action="/searchAds" method="POST">
+                    <form class="form-inline my-2 my-lg-0" action="/
+                    keywordAds" method="POST">
                              <%--      <input class="btn btn-outline-danger my 2 my-sm-0" type="submit">--%>
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search for ad" aria-label="Search" name="keyword">
-                                                <a href="/searchAds"></a>
-                             <input class="btn btn-outline-danger my-2 my-sm-0" type="submit">
-                                    <a href="/searchAds"></a>
-
+                            <input class="form-control mr-sm-2" name="keyword" type="search" placeholder="Search for ad" aria-label="Search">
+<%--                                                <a href="/searchAds"></a>--%>
+<%--                          <input class="btn btn-outline-danger my-2 my-sm-0" type="submit">--%>
+<%--                                 <a href="/searchAds"></a> --%>
                     </form>
 
                     <c:choose>

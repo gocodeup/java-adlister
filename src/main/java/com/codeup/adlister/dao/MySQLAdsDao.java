@@ -1,6 +1,7 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.AdCategory;
 import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
@@ -179,4 +180,54 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error finding the ad by string id");
         }
     }
-}
+
+    @Override
+    public Ad findById(long id) {
+        try{
+            String query = "SELECT * FROM ads WHERE id = ? LIMIT 1";
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, String.valueOf(id));
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()){
+                return extractAd(rs);
+            }
+            return null;
+        }catch (SQLException e) {
+            throw new RuntimeException("Error finding Ad by Id", e);
+        }
+
+    }
+
+    @Override
+    public List<AdCategory> getAdsFromCategory(String searchCategory) {
+        return null;
+    }
+
+    @Override
+    public List<Ad> search(String keyword) {
+        String query = "SELECT * FROM ads WHERE title LIKE ? OR description LIKE ?";
+        try{
+            PreparedStatement pstmt = connection.prepareStatement(query);
+            pstmt.setString(1, '%' + keyword + '%');
+            pstmt.setString(2, '%' + keyword + '%');
+            ResultSet rs = pstmt.executeQuery();
+            return createAdsFromResults(rs);
+        }catch (SQLException e) {
+            throw new RuntimeException("Error find the ad", e);
+        }
+    }
+
+//    @Override
+//    public List<Ad> getAdsFromCategory(String category) {
+//        return null;
+//    }
+//
+//    @Override
+//    public void removeCategories(Long ad_id) {
+//
+//    }
+//
+//    @Override
+//    public void addCategory(Long ad_id, Long category_id) {
+
+    }

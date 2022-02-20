@@ -8,22 +8,40 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<c:if test="${sessionScope.user != null}">
+    <a class="back-button" href="/WEB-INF/profile.jsp"><i class="fa fa-chevron-left" aria-hidden="true"> Back to Profile</i></a>
+</c:if>
 
-<div class="container">
-    <h1>Here Are all the ads!</h1>
+<div class="cat-container" id="cat-header">
 
-    <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
-            <h2>${ad.title}</h2>
-            <p>${ad.description}</p>
+    <h1 class="display-4">Here Are all the ads!</h1>
+    <div class="category">
+        <span class="align-baseline w3-tag w3-grey w3-margin-bottom w3-margin-left">
+            <a href="${pageContext.request.contextPath}/ads/category?category=forsale">For Sale</a></span>
 
-            <form action="/ad/id" method="get">
-                <input type="hidden" name="id">
-                <button>Submit</button>
-            </form>
-        </div>
-    </c:forEach>
+        <span class="align-top w3-tag w3-grey w3-margin-bottom">
+                <a href="${pageContext.request.contextPath}/ads/category?=automotive">Automotive</a></span>
+
+        <span class="align-bottom w3-tag w3-grey w3-margin-bottom">
+                <a href="${pageContext.request.contextPath}/ads/category?category=jobs">Jobs</a></span>
+
+        <span class="align-baseline w3-tag w3-grey w3-margin-bottom w3-margin-left">
+                <a href="${pageContext.request.contextPath}/ads/category?category=forsale">Community</a></span>
+    </div>
 </div>
-
+<p><hr></p>
+    <div class="container">
+        <div class="display-cards w3-third w3-container margin-auto" style="width: 100%;">
+            <c:forEach var="ad" items="${ads}">
+                <div class="card" style="width: 18rem; margin: auto">
+                    <div class="card-body">
+                        <h4 class="card-title">
+                            <a href="${pageContext.request.contextPath}/WEB-INF/ads/showAd?id=${ad.id}">${ad.title}</a>
+                        </h4>
+                    </div>
+                </div>
+            </c:forEach>
+        </div>
+    </div>
 </body>
 </html>

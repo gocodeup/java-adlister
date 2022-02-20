@@ -2,6 +2,7 @@ package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.AdCategory;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,12 +13,38 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet("/ad/id")
+@WebServlet(name="controllers.SearchAdsServlet", urlPatterns="/Categories/category")
 public class ShowAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-        long id = Long.parseLong(req.getParameter("id"));
-        String adId = req.getParameter("id");
-        req.setAttribute("ad", adId);
+        String category = req.getParameter("category");
+        String searchCategory = getCategory(category);
+        req.setAttribute("category", searchCategory);
+
+        List<AdCategory> categories = DaoFactory.getAdsDao().getAdsFromCategory(searchCategory);
+        req.setAttribute("ads", category);
+        req.getRequestDispatcher("/WEB-INF/ads/category.jsp").forward(req, res);
+    }
+    protected String getCategory(String category) {
+        String actualCategory = "";
+        if(category.equals("For Sale")){
+            actualCategory = "For Sale";
+    }
+        else if (category.equals("Automotive")) {
+            actualCategory = "Automotive";
+        } else if (category.equals("Jobs")) {
+            actualCategory = "Jobs";
+        } else if (category.equals("Community")) {
+            actualCategory = "Community";
+//        } else if (category.equals("")) {
+//            actualCategory = "";
+        }
+        return actualCategory;
+
+
+//early version ND
+//        long id = Long.parseLong(req.getParameter("id"));
+//        String adId = req.getParameter("id");
+//        req.setAttribute("ad", adId);
 //        if(adId != null){
 //
 //        }
@@ -26,10 +53,10 @@ public class ShowAdServlet extends HttpServlet {
         //  here we will bring in DaoFactory here to getAdById()
 //      need to set id of ad to "ad"
 //      req.setAttribute("ad", id)
-        req.getRequestDispatcher("/WEB-INF/ads/showAd.jsp").forward(req, res);
-    }
-
-    public static void main(String[] args) {
+//        req.getRequestDispatcher("/WEB-INF/ads/search.jsp").forward(req, res);
+//    }
+//
+//    public static void main(String[] args) {
 
     }
 }
