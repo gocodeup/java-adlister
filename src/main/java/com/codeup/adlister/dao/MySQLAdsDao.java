@@ -1,6 +1,7 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.AdCategory;
 import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
@@ -75,20 +76,9 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    //  need to finish this method
     @Override
     public Ad findOne(long id) throws SQLException {
-        String singleAdQuery = "SELECT * FROM ads WHERE id = ?";
-        PreparedStatement stmt;
-        stmt = connection.prepareStatement(singleAdQuery);
-        stmt.setLong(1, id);
-        ResultSet rs = stmt.executeQuery();
-        //  rs.next() - is used to get next in row
-        //  otherwise error page will be reached
-        //  if condition would be used if possibility of rs.next() == null
-        //  since each ad has an id none should return null therefore condition not needed
-        rs.next();
-        return extractAd(rs);
+        return null;
     }
 
 
@@ -167,11 +157,11 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    public Ad findById(Long id) {
-        String findquery = "SELECT * FROM ads WHERE id = (?)";
+    public Ad findByStringId(String id) {
+        String findquery = "SELECT * FROM ads WHERE id like (?)";
         try{
             PreparedStatement stmt = connection.prepareStatement(findquery);
-            stmt.setLong(1, id);
+            stmt.setString(1, id);
             ResultSet rs =stmt.executeQuery();
             rs.next();
             return extractAd(rs);
@@ -179,4 +169,36 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error finding the ad by string id");
         }
     }
+
+    @Override
+    public Ad findById(long id) {
+        return null;
+    }
+
+    @Override
+    public Ad findById(Long id) {
+        return null;
+    }
+
+
+    @Override
+    public List<AdCategory> getAdsFromCategory(String searchCategory) {
+        return null;
+    }
+
+    @Override
+    public List<Ad> search(String keyword) {
+        String query = "SELECT * FROM ads WHERE title LIKE ? OR description LIKE ?";
+        try{
+            PreparedStatement pstmt = connection.prepareStatement(query);
+            pstmt.setString(1, '%' + keyword + '%');
+            pstmt.setString(2, '%' + keyword + '%');
+            ResultSet rs = pstmt.executeQuery();
+            return createAdsFromResults(rs);
+        }catch (SQLException e) {
+            throw new RuntimeException("Error find the ad", e);
+        }
+    }
+
+
 }

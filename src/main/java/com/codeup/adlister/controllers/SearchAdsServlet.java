@@ -4,6 +4,7 @@ package com.codeup.adlister.controllers;
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.Ad;
 
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -12,28 +13,39 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name="SearchAdsServlet", urlPatterns="/searchAds")
+@WebServlet(name="controllers.SearchAdsServlet", urlPatterns="/ads/keywordAds")
 public class SearchAdsServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//    public void doGet(HttpServletRequest request, HttpServletResponse response)
+//            throws IOException{
+//
+//    }
+protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    String keyword = request.getParameter("keyword");
+    if(keyword.isEmpty()){
+        response.sendRedirect("/ads");
+        return;
+}
+    List<Ad> ads = DaoFactory.getAdsDao().search(keyword);
+    request.setAttribute("ads", ads);
+    request.getRequestDispatcher("WEB-INF/ads/keywordAds.jsp").forward(request, response);
+//    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+//        String keyword = request.getParameter("keyword");
+//        try {
+//            List<Ad> keywordAds = DaoFactory.getAdsDao().findAdByKeyword(keyword);
+//            if (keywordAds.size() == 0) {
+//                request.setAttribute("zeroResults", true);
+//            } else {
+//                request.setAttribute("zeroResults", false);
+//            }
+//            request.setAttribute("keyword", keyword.toLowerCase());
+//            request.setAttribute("ads", keywordAds);
+//            request.getRequestDispatcher("/WEB-INF/ads/showAd.jsp").forward(request, response);
+//            for (Ad ad : keywordAds) {
+//                System.out.println(ad.getTitle());
+//            }
+//        }catch(SQLException e){
+//            e.printStackTrace();
+//        }
 
-    }
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String keyword = request.getParameter("keyword");
-        try {
-            List<Ad> keywordAds = DaoFactory.getAdsDao().findAdByKeyword(keyword);
-            if (keywordAds.size() == 0) {
-                request.setAttribute("zeroResults", true);
-            } else {
-                request.setAttribute("zeroResults", false);
-            }
-            request.setAttribute("keyword", keyword.toLowerCase());
-            request.setAttribute("ads", keywordAds);
-            request.getRequestDispatcher("/WEB-INF/ads/keywordAds.jsp");
-            for (Ad ad : keywordAds) {
-                System.out.println(ad.getTitle());
-            }
-        }catch(SQLException e){
-            e.printStackTrace();
-        }
     }
 }

@@ -32,7 +32,7 @@
             <input class="btn btn-danger btn-sm" type="submit" value="Delete">
         </form>
 
-        <form action="<c:url value="/ad?id="/>" method="get">
+        <form action="<c:url value="/ads?id="/>" method="get">
                 <%--assigned value to input type of ad.id, allowing us to grab the ad's id--%>
             <input type="hidden" name="id" value="${ad.id}">
             <button>Submit</button>

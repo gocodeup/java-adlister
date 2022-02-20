@@ -33,9 +33,9 @@ public class MySQLUsersDao implements Users {
         }
     }
 
-    //  findById needed in order to grab from 1:n relation with ads
+    //  findByid needed in order to grab from 1:n relation with ads
     @Override
-    public User findById(long id) {
+    public User findById(long id){
         String query = "SELECT * FROM users WHERE id = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);

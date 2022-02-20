@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Maven: jstl:jstl:1.2">
+    <archive path="/Users/nicholasdiazjr/.m2/repository/jstl/jstl/1.2/jstl-1.2.jar" />
+  </library>
+  <library name="Maven: org.mindrot:jbcrypt:0.4">
+    <archive path="/Users/nicholasdiazjr/.m2/repository/org/mindrot/jbcrypt/0.4/jbcrypt-0.4.jar" />
+  </library>
+  <library name="Maven: com.google.protobuf:protobuf-java:3.11.4">
+    <archive path="/Users/nicholasdiazjr/.m2/repository/com/google/protobuf/protobuf-java/3.11.4/protobuf-java-3.11.4.jar" />
+  </library>
+  <library name="Maven: javax.servlet:javax.servlet-api:4.0.1">
+    <archive path="/Users/nicholasdiazjr/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar" />
+  </library>
+  <library name="Maven: mysql:mysql-connector-java:8.0.25">
+    <archive path="/Users/nicholasdiazjr/.m2/repository/mysql/mysql-connector-java/8.0.25/mysql-connector-java-8.0.25.jar" />
+  </library>
+  <library name="244940f08c">
+    <archive path="/Users/nicholasdiazjr/Library/Application Support/JetBrains/IntelliJIdea2021.3/javascript/extLibs/http_kit.fontawesome.com_244940f08c.js" />
+  </library>
+  <library name="@popperjs/core">
+    <archive path="/Users/nicholasdiazjr/Library/Application Support/JetBrains/IntelliJIdea2021.3/javascript/extLibs/http_cdn.jsdelivr.net_npm_@popperjs_core@2.10.2_dist_umd_popper.js" />
+    <archive path="/Users/nicholasdiazjr/Library/Application Support/JetBrains/IntelliJIdea2021.3/javascript/extLibs/http_cdn.jsdelivr.net_npm_@popperjs_core@2.9.2_dist_umd_popper.js" />
+  </library>
+  <library name="bootstrap">
+    <archive path="/Users/nicholasdiazjr/Library/Application Support/JetBrains/IntelliJIdea2021.3/javascript/extLibs/http_cdn.jsdelivr.net_npm_bootstrap@5.0.0_dist_css_bootstrap.css" />
+    <archive path="/Users/nicholasdiazjr/Library/Application Support/JetBrains/IntelliJIdea2021.3/javascript/extLibs/http_cdn.jsdelivr.net_npm_bootstrap@5.0.0_dist_js_bootstrap.js" />
+    <archive path="/Users/nicholasdiazjr/Library/Application Support/JetBrains/IntelliJIdea2021.3/javascript/extLibs/http_cdn.jsdelivr.net_npm_bootstrap@5.1.3_dist_css_bootstrap.css" />
+    <archive path="/Users/nicholasdiazjr/Library/Application Support/JetBrains/IntelliJIdea2021.3/javascript/extLibs/http_cdn.jsdelivr.net_npm_bootstrap@5.1.3_dist_js_bootstrap.bundle.js" />
+    <archive path="/Users/nicholasdiazjr/Library/Application Support/JetBrains/IntelliJIdea2021.3/javascript/extLibs/http_cdn.jsdelivr.net_npm_bootstrap@5.1.3_dist_js_bootstrap.js" />
+    <archive path="/Users/nicholasdiazjr/Library/Application Support/JetBrains/IntelliJIdea2021.3/javascript/extLibs/http_maxcdn.bootstrapcdn.com_bootstrap_3.3.7_css_bootstrap.css" />
+  </library>
+</eclipse-userlibraries>
+

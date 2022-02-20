@@ -1,25 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat%7CRaleway");
 
 body{
+    background-color: #252525;
     font-family: 'Raleway', sans-serif;
-    background-color: #27272d;
     margin: 0;
-
-}
-.welcome-msg{
-    font-size: 4rem;
     color: whitesmoke;
-}
-.account-info{
-    font-familly: Montesserat;
-}
-.card-title{
-    font-size: 2rem;
-}
-.adCards{
-    background-color: #f1eeee;
 }
 .grid{
     display: grid;
     grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 26px;
 }

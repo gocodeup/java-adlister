@@ -14,7 +14,7 @@
     </jsp:include>
     <%--    needed this for css stylesheet!!   --%>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width", initial-scale="1.0" />
+    <meta name="viewport" content="width=device-width" initial-scale="1.0" />
     <meta http-equiv="X-UA-COMPATIBLE" content="ie=edge" />
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <title>Search</title>
@@ -48,7 +48,7 @@
         <c:if test="${zeroResults == false}">
             <h3 class="w-text">All ads in reference to: <c:out value="${keyword}" /></h3>
             <c:forEach var="ad" items="${ads}">
-                <a class="blk" href="/viewAd?adId=${ad.id}">
+                <a class="blk" href="/ads/showAd?id=${ad.id}">
                     <div class="cards mr-3 mb-3">
                         <h2>${ad.title}</h2>
                         <p>${ad.descritpion}</p>
