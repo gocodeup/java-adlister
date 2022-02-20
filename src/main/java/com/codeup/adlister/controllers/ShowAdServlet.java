@@ -25,12 +25,12 @@ public class ShowAdServlet extends HttpServlet {
         req.setAttribute("ads", category);
         req.getRequestDispatcher("/WEB-INF/ads/category.jsp").forward(req, res);
     }
+
     protected String getCategory(String category) {
         String actualCategory = "";
-        if(category.equals("For Sale")){
+        if (category.equals("For Sale")) {
             actualCategory = "For Sale";
-    }
-        else if (category.equals("Automotive")) {
+        } else if (category.equals("Automotive")) {
             actualCategory = "Automotive";
         } else if (category.equals("Jobs")) {
             actualCategory = "Jobs";
@@ -40,7 +40,8 @@ public class ShowAdServlet extends HttpServlet {
 //            actualCategory = "";
         }
         return actualCategory;
-
+    }
+}
 //        @WebServlet("/ad")
 //        public class ShowAdServlet extends HttpServlet {
 //            protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
@@ -68,13 +69,30 @@ public class ShowAdServlet extends HttpServlet {
 //        }
 
 //      need to get id of ad
-        //  here we will bring in DaoFactory here to getAdById()
+//  here we will bring in DaoFactory here to getAdById()
 //      need to set id of ad to "ad"
 //      req.setAttribute("ad", id)
 //        req.getRequestDispatcher("/WEB-INF/ads/search.jsp").forward(req, res);
 //    }
 //
 //    public static void main(String[] args) {
-
-    }
-}
+//
+// @WebServlet("/ad")
+// public class ShowAdServlet extends HttpServlet {
+//   protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+//     long id = Long.parseLong(req.getParameter("id"));
+//      try {
+//         Ad ad = DaoFactory.getAdsDao().findOne(id);
+//          req.setAttribute("ad", ad);
+//         User user = DaoFactory.getUsersDao().findById(ad.getUserId());
+//          req.setAttribute("adUser", user);
+//     } catch (SQLException e) {
+//         e.printStackTrace();
+//     }
+//      req.getRequestDispatcher("/WEB-INF/ads/showAd.jsp").forward(req, res);
+//  }
+//
+//    public static void main(String[] args) {
+//
+//   }
+//}

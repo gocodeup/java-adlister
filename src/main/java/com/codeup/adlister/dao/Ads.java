@@ -23,11 +23,13 @@ public interface Ads {
 
     //show all ads on profile
     List<Ad> allAdsByUserId(long userId);
+
     Ad findByStringId(String id);
     Ad findById(long id);
 
-    List<AdCategory> getAdsFromCategory(String searchCategory);
+    Ad findById(Long id);
 
+    List<AdCategory> getAdsFromCategory(String searchCategory);
 
 
 //    have these methods here just in case***********************
@@ -36,3 +38,4 @@ public interface Ads {
 //    void addCategory(Long ad_id, Long category_id);
 
 }
+
