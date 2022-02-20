@@ -76,20 +76,9 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    //  need to finish this method
     @Override
     public Ad findOne(long id) throws SQLException {
-        String singleAdQuery = "SELECT * FROM ads WHERE id = ?";
-        PreparedStatement stmt;
-        stmt = connection.prepareStatement(singleAdQuery);
-        stmt.setLong(1, id);
-        ResultSet rs = stmt.executeQuery();
-        //  rs.next() - is used to get next in row
-        //  otherwise error page will be reached
-        //  if condition would be used if possibility of rs.next() == null
-        //  since each ad has an id none should return null therefore condition not needed
-        rs.next();
-        return extractAd(rs);
+        return null;
     }
 
 
@@ -187,6 +176,12 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public Ad findById(Long id) {
+        return null;
+    }
+
+
+    @Override
     public List<AdCategory> getAdsFromCategory(String searchCategory) {
         return null;
     }
@@ -205,17 +200,5 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-//    @Override
-//    public List<Ad> getAdsFromCategory(String category) {
-//        return null;
-//    }
-//
-//    @Override
-//    public void removeCategories(Long ad_id) {
-//
-//    }
-//
-//    @Override
-//    public void addCategory(Long ad_id, Long category_id) {
 
-    }
+}
