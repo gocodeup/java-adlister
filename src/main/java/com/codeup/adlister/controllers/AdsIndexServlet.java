@@ -14,10 +14,10 @@ public class AdsIndexServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("ads", DaoFactory.getAdsDao().all());
 
-        if (request.getSession().getAttribute("vp") != null) {
-            request.getSession().removeAttribute("vp");
-        }
-        request.getSession().setAttribute("vi", "hi");
+//        if (request.getSession().getAttribute("vp") != null) {
+//            request.getSession().removeAttribute("vp");
+//        }
+//        request.getSession().setAttribute("vi", "hi");
         request.getRequestDispatcher("/WEB-INF/ads/index.jsp").forward(request, response);
 
     }

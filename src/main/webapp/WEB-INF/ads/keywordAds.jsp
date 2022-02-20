@@ -21,6 +21,7 @@
 
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="row no-gutter">
     <%--        //add a sticky?--%>
     <div class="h-100 col-2 pt-4">

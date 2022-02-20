@@ -185,6 +185,20 @@ public class MySQLAdsDao implements Ads {
     public List<AdCategory> getAdsFromCategory(String searchCategory) {
         return null;
     }
+//the "SEARCH"
+    @Override
+    public List<Ad> keywordAds(String keyword) {
+        String query = " SELECT * FROM ads WHERE title LIKE ? OR description LIKE ? ";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1,  '%'+ keyword + '%');
+            stmt.setString(2, '%' + keyword + '%');
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding ad", e);
+        }
+    }
 
     @Override
     public List<Ad> search(String keyword) {

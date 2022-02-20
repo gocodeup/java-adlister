@@ -31,6 +31,8 @@ public interface Ads {
 
     List<AdCategory> getAdsFromCategory(String searchCategory);
 
+    List<Ad> keywordAds(String keyword);
+
 
 //    have these methods here just in case***********************
 //    List<Ad> getAdsFromCategory(String category);
