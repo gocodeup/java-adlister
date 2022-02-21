@@ -8,6 +8,7 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+
 <c:if test="${sessionScope.user != null}">
     <a class="back-button" href="/WEB-INF/profile.jsp"><i class="fa fa-chevron-left" aria-hidden="true"> Back to Profile</i></a>
 </c:if>

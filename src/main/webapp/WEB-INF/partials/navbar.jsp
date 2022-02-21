@@ -1,14 +1,16 @@
 
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
         integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
 </script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/mainNav.css">
+<link rel="stylesheet"  href="${pageContext.request.contextPath}/css/mainNav.css">
 <%--<link rel="stylesheet" href="/css/mainNav.css">--%>
 
 
@@ -16,7 +18,7 @@
 <%--ND--%>
 <nav id="mainNav" class="navbar navbar-expand-lg red-hover" >
     <div class="container-fluid">
-        <img src="<c:url value="/img/adlister.png"/>" class="d-inline-block align-top" alt=""  width="20px" height="24px" />
+<%--        <img src="<c:url value="/img/adlister.png"/>" class="d-inline-block align-top" alt=""  width="20px" height="24px" />--%>
 
         <!-- Brand and toggle get grouped for better mobile display -->
 <%--        <a class="navbar-brand w-text" href="#">logo</a>--%>
@@ -34,7 +36,7 @@
             <%--        <ul class="nav navbar-nav navbar-right">--%>
             <ul class="navbar-nav mr-auto"  >
                 <li class="nav-item active">
-                    <a class="nav-link red-hover w-text" href="/home">
+                    <a class="nav-link red-hover w-text" href="/">
                         <i class="fa fa-fw fa-home"></i> Home <span class="sr-only">(current)</span></a>
                 </li>
             </ul>
