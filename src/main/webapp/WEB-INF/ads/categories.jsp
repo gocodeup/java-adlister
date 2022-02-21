@@ -56,8 +56,8 @@
 
   </div>
 
-  <a class="back-button " href="/index.jsp"><i class="fa fa-chevron-left" aria-hidden="true">Return Home</i></a>
-  <a class="back-button mx-5" href="/ads"><i class="fa fa-chevron-left" aria-hidden="true">See all Ads</i></a>
+  <a class="back-button " href="/index.jsp"><i class="fa fa-chevron-left" aria-hidden="true"></i>Return Home</a>
+  <a class="back-button mx-5" href="/ads" aria-hidden="true">See all Ads<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 </div>
 
 

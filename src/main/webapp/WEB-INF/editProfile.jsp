@@ -16,13 +16,19 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
-<div class="container d-flex justify-content-center">
-<form action="/editProfile" method="post" style="width: 60%">
-    <div class="form-group form-check">
-        <label for="username">Username</label>
-        <input type="text" class="form-control" id="username" name="username" disabled value="${sessionScope.user.username}">
+<div class="container">
 
-    </div>
+    <h1>Update your Profile:</h1>
+
+<div class="container-fluid my-5 justify-content-around">
+    <div class="container d-flex justify-content-center">
+        <form action="/editProfile" method="post" style="width: 60%">
+            <div class="form-group form-check">
+                <label for="username">Username</label>
+
+                <input type="text" class="form-control" id="username" name="username" disabled value="${sessionScope.user.username}">
+
+            </div>
     <div class="form-group">
         <label for="email">Email address</label>
         <input type="email" class="form-control" id="email" name="email" value="${sessionScope.user.email}">
@@ -39,11 +45,9 @@
     <button type="submit" class="btn btn-dark btn-block">Save changes</button>
 </form>
 </div>
-
-<div class="container-fluid my-5">
-    <a class="back-button" href="/profile"><i class="fa fa-chevron-left" aria-hidden="true">Back to Profile</i></a>
+    <a class="back-button" href="/profile"><i class="fa fa-chevron-left" aria-hidden="true"></i>Back to Profile</a>
 </div>
-
+</div>
 <jsp:include page="/WEB-INF/partials/footer.jsp"></jsp:include>
 </body>
 </html>

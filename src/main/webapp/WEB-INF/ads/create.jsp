@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/stylesheets/styles.css">
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <h1>Create a new Ad</h1>
         <form action="/ads/create" method="post">
@@ -35,7 +36,7 @@
             <input type="submit" class="btn btn-block btn-dark">
         </form>
 <%--added link to get back to profile- AG--%>
-        <a class="back-button" href="/profile"><i class="fa fa-chevron-left" aria-hidden="true">Back to Profile</i></a>
+        <a class="back-button" href="/profile"><i class="fa fa-chevron-left" aria-hidden="true"></i>Back to Profile</a>
     </div>
 
 

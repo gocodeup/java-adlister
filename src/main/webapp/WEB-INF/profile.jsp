@@ -40,9 +40,7 @@
 <br>
 <div class=" container fluid">
 
-    <a href="/editProfile" onclick="w3_close()"
-       class="text-right"><i
-            class="fa fa-th-large fa-fw w3-margin-right"></i>Edit Profile</a>
+    <a href="/editProfile" class="text-right"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Edit Profile</a>
 
 </div>
 
