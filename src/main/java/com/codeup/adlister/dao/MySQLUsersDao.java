@@ -64,6 +64,21 @@ public class MySQLUsersDao implements Users {
     }
 
     @Override
+    public User findByAd(long ad_id) {
+        String query = "SELECT * from users where id in (select user_id FROM ads where id = ?)";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, ad_id);
+            ResultSet rs = stmt.executeQuery();
+            System.out.println(rs);
+//            rs.next();
+            return extractUser(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding ad username", e);
+        }
+    }
+
+    @Override
     public void updateUser(User user) {
         //updates only password and email
         String updateSql = "UPDATE users set password = ?, email = ? where id = ?";
