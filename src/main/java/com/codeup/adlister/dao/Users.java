@@ -11,4 +11,5 @@ public interface Users {
     void updateUser(User user);
     User findByUserEmail(String email);
     void deleteByID(long id);
+    User findByAd(long ad_id);
 }
