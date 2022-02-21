@@ -83,8 +83,8 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Account</a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="/login">Login</a></li>
-                            <li><a class="dropdown-item" href="/register">Register</a></li>
+                            <li><a class="dropdown-item" href="${pageContext.request.contextPath}/login">Login</a></li>
+                            <li><a class="dropdown-item" href="${pageContext.request.contextPath}/register">Register</a></li>
                         </ul>
                         </c:otherwise>
                     </c:choose>
