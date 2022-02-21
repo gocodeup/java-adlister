@@ -4,13 +4,15 @@
 <%--^^**NOTE***^^   page contentType kept showing as an ERROR when I inspected the webpage--%>
 <html>
 <head>
+
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Welcome to my site!" />
     </jsp:include>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" initial-scale="1.0" />
     <meta http-equiv="X-UA-COMPATIBLE" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/mainNav.css">
+    <link rel="stylesheet"   href="${pageContext.request.contextPath}/css/mainNav.css">
+
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
