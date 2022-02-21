@@ -23,7 +23,7 @@
     <div class="card" style="width: 35rem;">
         <h2 style="color:#398AB9;"> Title: ${ad.title} </h2>
         <h3> Description: ${ad.description}</h3>
-        <h3>User: ${sessionScope.user.username}</h3>
+        <h3>User: ${userAd}</h3>
     </div>
 </div>
 
