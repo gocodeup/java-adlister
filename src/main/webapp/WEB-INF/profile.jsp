@@ -5,6 +5,8 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Your Profile"/>
     </jsp:include>
+    
+    <link rel"styelsheet" href"/mainNav.css">
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
