@@ -7,67 +7,7 @@
     </jsp:include>
 
 </head>
-<%
 
-//exploring sticky forms
-    //  obtaining the inputs from the form into local variables
-    String username = request.getParameter("username");
-    if (username == null) username = "";
-
-    String email = request.getParameter("email");
-    if (email == null) email = "";
-
-    String password = request.getParameter("password");
-    if (password == null) password = "";
-// checking to see if this form has been submitted
-    if (request.getMethod().equals("POST"))
-    {
-// initializing a boolean for errors
-        boolean allEntriesPresent = true;
-// initializing a string for the error message
-        String skipped_inputs = "";
-        if (username.length( ) == 0)
-        {
-
-            skipped_inputs = "You forgot to enter your username<br>";
-            allEntriesPresent = false;
-
-        }
-        if (email.length( ) == 0)
-        {
-
-            skipped_inputs = skipped_inputs + "You forgot to enter your email<br>";
-            allEntriesPresent = false;
-
-        }
-        if (password.length( ) == 0)
-        {
-
-            skipped_inputs = skipped_inputs + "You forgot to enter your password<br>";
-            allEntriesPresent = false;
-
-        }
-
-// if all of the required fields haven't been entered
-// inform the user
-        if (!allEntriesPresent)
-        {
-
-            out.println(skipped_inputs);
-
-        }
-        else
-        {
-
-// display the name and address that have been entered
-            String identifierString = "Your name: " + username + " " +  "<br>" +
-                    "Your email: " + email + "<br>";
-            out.println("<p>" + identifierString);
-
-        }
-
-    }
-%>
 <body>
 <jsp:include page="partials/navbar.jsp"/>
 
@@ -79,19 +19,19 @@
     <form action="/register" method="POST">
         <div class="form-group">
             <label for="username">Username</label>
-            <input id="username" name="username" class="form-control" type="text" value="<%=username%>">
+            <input id="username" name="username" class="form-control" type="text" >
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input id="email" name="email" class="form-control" type="email" value="<%=email%>">
+            <input id="email" name="email" class="form-control" type="email" >
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input id="password" name="password" class="form-control" type="password" value="<%=password%>">
+            <input id="password" name="password" class="form-control" type="password" >
         </div>
         <div class="form-group">
             <label for="confirm_password">Confirm Password</label>
-            <input id="confirm_password" name="confirm_password" class="form-control" type="password" value="<%=password%>">
+            <input id="confirm_password" name="confirm_password" class="form-control" type="password" >
         </div>
         <%--error attribute posts error message from registerservlet --%>
         <h3 style="color: red">${error}</h3>

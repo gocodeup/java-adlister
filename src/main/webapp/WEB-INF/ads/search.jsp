@@ -18,9 +18,7 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
-<div class="container-fluid my-5 justify-content-around">
-    <a class="back-button mx-auto" href="/index.jsp"><i class="fa fa-chevron-left" aria-hidden="true">Return Home</i></a>
-</div>
+
 
 <div class="container">
 
@@ -60,8 +58,10 @@ NOTE: when click to indv ad gives error--%>
 
 </div>
 <div class="container-fluid my-5 justify-content-around">
+    <a class="back-button mx-auto" href="/profile.jsp"><i class="fa fa-chevron-left" aria-hidden="true">Return Profile</i></a>
 
-    <a class=" mx-auto" href="${pageContext.request.contextPath}/ads">See all ads</a>
+
+    <a class=" mx-auto" href="${pageContext.request.contextPath}/ads">See all ads<i class="fa fa-chevron-right" aria-hidden="true"></i></a>
 </div>
 
 
