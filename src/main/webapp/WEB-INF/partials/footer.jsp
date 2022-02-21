@@ -1,7 +1,7 @@
 <footer class="footer" style="margin-top:175px">
 
     <h3 class="mx-auto text-center" style="width: 300px; color: darkred; font-size: medium">Adlister Red Team</h3>
-
+    <div class="mx-auto text-center"><i class="fa-brands fa-twitter"></i><i class="fa-brands fa-facebook-square"></i><i class="fa-brands fa-instagram"></i></div>
 
 
 </footer>
