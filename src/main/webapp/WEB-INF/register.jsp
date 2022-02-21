@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-7">
             <h1 headingRegister>Please fill in your information.</h1>
-            <form action="/register" method="post">
+            <form action="${pageContext.request.contextPath}/register" method="post">
                 <div class="form-group">
                     <label for="username">Username</label>
                     <input id="username" name="username" class="form-control" type="text">
