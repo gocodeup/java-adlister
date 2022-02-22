@@ -25,19 +25,37 @@ public class LoginServlet extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         User user = DaoFactory.getUsersDao().findByUsername(username);
+        String errorMessage = "";
 
-        if (user == null) {
+        //if username or password field is empty error message occurs
+        if(username.isEmpty() || password.isEmpty()){
+            errorMessage = "Username and Password are required";
+            request.getSession().setAttribute("loginError", errorMessage);
             response.sendRedirect("/login");
             return;
         }
 
+        //if user doesn't exist message will occur then will redirect to login
+        if (user == null) {
+            errorMessage = "You have entered an invalid username or password";
+            request.getSession().setAttribute("loginError", errorMessage);
+            response.sendRedirect("/login");
+            return;
+        }
+
+        //boolean if password can be made into hash
         boolean validAttempt = Password.check(password, user.getPassword());
 
+        //if boolean validattempt true user is redirected to profile
+        //if false error message is created
         if (validAttempt) {
             request.getSession().setAttribute("user", user);
             response.sendRedirect("/profile");
         } else {
+            errorMessage = "You have entered an invalid username or password";
+            request.getSession().setAttribute("loginError", errorMessage);
             response.sendRedirect("/login");
         }
+
     }
 }
