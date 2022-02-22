@@ -2,13 +2,12 @@ package com.codeup.adlister.dao;
 import com.codeup.adlister.util.Password;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
-import com.sun.org.apache.bcel.internal.generic.Select;
 
-import javax.servlet.jsp.jstl.core.Config;
 import java.sql.*;
 
 public class MySQLUsersDao implements Users {
     private final Connection connection;
+    private Config config = new Config();
 
     public MySQLUsersDao(Config config) {
         try {

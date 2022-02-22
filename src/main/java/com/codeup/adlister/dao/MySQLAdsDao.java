@@ -1,10 +1,9 @@
 package com.codeup.adlister.dao;
-
+import com.codeup.adlister.dao.Config;
 import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.AdCategory;
 import com.mysql.cj.jdbc.Driver;
 
-import javax.servlet.jsp.jstl.core.Config;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -130,10 +129,11 @@ public class MySQLAdsDao implements Ads {
 //            name of the columns of list? Check on changes as needed. i.e. categories, etc.
             Ad newAd = new Ad(
                     rs.getLong("id"),
+                    rs.getString("user_id"),
                     rs.getString("username"),
                     rs.getString("title"),
                     rs.getString("description"),
-                    rs.getString("category"),
+                    rs.getString("category")
             );
 //            check on method for keywordAds//nvm-i need .add for adding to the list.
             keywordAds.add(newAd);
