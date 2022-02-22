@@ -11,7 +11,6 @@ import java.util.List;
 
 public class MySQLAdsDao implements Ads {
     private Connection connection = null;
-    private Config config = new Config();
 
     public MySQLAdsDao(Config config) {
         try {
