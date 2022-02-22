@@ -6,7 +6,7 @@ import com.mysql.cj.jdbc.Driver;
 import java.sql.*;
 
 public class MySQLUsersDao implements Users {
-    private final Connection connection;
+    private Connection connection;
     private Config config = new Config();
 
     public MySQLUsersDao(Config config) {
@@ -49,7 +49,7 @@ public class MySQLUsersDao implements Users {
     }
 
     @Override
-    public boolean validateEmail(String username) throws SQLException {
+    public boolean validateEmail(String email) throws SQLException {
         boolean emailExist = false;
         DriverManager.registerDriver(new Driver());
         connection = DriverManager.getConnection(
@@ -59,14 +59,14 @@ public class MySQLUsersDao implements Users {
         );
         String query =" SELECT * FROM users WHERE email = ?";
         PreparedStatement pstmt = connection.prepareStatement(query);
-        pstmt.setString(1, username);
+        pstmt.setString(1, email);
         ResultSet rs = pstmt.executeQuery();
         while (rs.next()) {
             if(rs.getString("email").equals(email)){
                 emailExist = true;
         }
     }
-        return emailExists;
+        return emailExist;
 }
     @Override
     public boolean validateUsername(String username) throws SQLException {
@@ -104,7 +104,7 @@ public class MySQLUsersDao implements Users {
         }
         return passwordCorrect;
     }
-}
+
     public void delete(String username) {
         String query = "DELETE FROM users WHERE username = ?";
         try {
