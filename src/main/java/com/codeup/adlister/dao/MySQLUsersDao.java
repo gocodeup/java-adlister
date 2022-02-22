@@ -1,7 +1,10 @@
 package com.codeup.adlister.dao;
-
+import com.codeup.adlister.util.Password;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
+import com.sun.org.apache.bcel.internal.generic.Select;
+
+import javax.servlet.jsp.jstl.core.Config;
 import java.sql.*;
 
 public class MySQLUsersDao implements Users {
@@ -46,6 +49,63 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+    @Override
+    public boolean validateEmail(String username) throws SQLException {
+        boolean emailExist = false;
+        DriverManager.registerDriver(new Driver());
+        connection = DriverManager.getConnection(
+                config.getUrl(),
+                config.getUser(),
+                config.getPassword()
+        );
+        String query =" SELECT * FROM users WHERE email = ?";
+        PreparedStatement pstmt = connection.prepareStatement(query);
+        pstmt.setString(1, username);
+        ResultSet rs = pstmt.executeQuery();
+        while (rs.next()) {
+            if(rs.getString("email").equals(email)){
+                emailExist = true;
+        }
+    }
+        return emailExists;
+}
+    @Override
+    public boolean validateUsername(String username) throws SQLException {
+        boolean usernameExist = false;
+        DriverManager.registerDriver(new Driver());
+        connection = DriverManager.getConnection(
+                config.getUrl(),
+                config.getUser(),
+                config.getPassword()
+        );
+        String query =" SELECT * FROM users WHERE username = ?";
+        PreparedStatement pstmt = connection.prepareStatement(query);
+        pstmt.setString(1, username);
+        ResultSet rs = pstmt.executeQuery();
+        while (rs.next()) {
+            if(rs.getString("username").equals(username)){
+                usernameExist = true;
+            }
+        }
+        return usernameExist;
+    }
+
+    @Override
+    public boolean validatePassword(String password) throws SQLException {
+        boolean passwordCorrect = false;
+
+        String query = " SELECT * FROM users WHERE password = ?";
+        PreparedStatement pstmt = connection.prepareStatement(query);
+        pstmt.setString(1, password);
+        ResultSet rs = pstmt.executeQuery();
+        while (rs.next()) {
+            if (rs.getString("password").equals(password)) {
+                passwordCorrect = true;
+            }
+        }
+        return passwordCorrect;
+    }
+}
     public void delete(String username) {
         String query = "DELETE FROM users WHERE username = ?";
         try {

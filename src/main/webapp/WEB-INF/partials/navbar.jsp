@@ -42,7 +42,7 @@
             </ul>
             <span class="navbar-text">
                 <ul class="navbar-nav mr-auto">
-                    <form class="form-inline my-2 my-lg-0" action="/keywordAds" method="POST">
+                    <form class="form-inline my-2 my-lg-0" action="/searchAds" method="POST">
                              <%--      <input class="btn btn-outline-danger my 2 my-sm-0" type="submit">--%>
                             <input class="form-control mr-sm-2" name="keyword" type="search" placeholder="Search for ad" aria-label="Search">
 <%--                                                <a href="/searchAds"></a>--%>
