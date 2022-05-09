@@ -16,7 +16,25 @@
         <div class="col-md-6 container">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
-            <p>${ad.catId}</p>
+            <p>
+                <c:choose>
+                    <c:when test="${ad.catId == 1}">
+                        <i class="fa-solid fa-burger fa-2xl mx-4"></i>
+                    </c:when>
+                    <c:when test="${ad.catId == 2}">
+                        <i class="fa-solid fa-landmark fa-2xl mx-4"></i>
+                    </c:when>
+                    <c:when test="${ad.catId == 3}">
+                        <i class="fa-solid fa-champagne-glasses fa-2xl mx-4"></i>
+                    </c:when>
+                    <c:when test="${ad.catId == 4}">
+                        <i class="fa-solid fa-people-line fa-2xl mx-4"></i>
+                    </c:when>
+                    <c:otherwise>
+                        <p>Etc</p>
+                    </c:otherwise>
+                </c:choose>
+            </p>
             <form action="/update" method="POST">
                 <div class="form-group">
                     <label for="title">Edit Title</label>
