@@ -3,9 +3,6 @@ package com.codeup.adlister.dao;
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +27,7 @@ public class MySQLAdsDao implements Ads {
     public List<Ad> all() {
         PreparedStatement stmt = null;
         try {
-            stmt = connection.prepareStatement("SELECT * FROM ads");
+            stmt = connection.prepareStatement("SELECT * FROM sa_lister_db.ads");
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
         } catch (SQLException e) {
@@ -49,7 +46,7 @@ public class MySQLAdsDao implements Ads {
     @Override
     public Long insert(Ad ad) {
         try {
-            String insertQuery = "INSERT INTO ads(user_id, cat_id, title, description, location) VALUES (?, ?, ?, ?, ?)";
+            String insertQuery = "INSERT INTO sa_lister_db.ads(user_id, cat_id, title, description, location) VALUES (?, ?, ?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad.getUserId());
             stmt.setLong(2, ad.getCatId());
@@ -68,20 +65,37 @@ public class MySQLAdsDao implements Ads {
     @Override
     public void update(Ad ad) {
         try {
-            String insertQuery = "UPDATE ads SET cat_id = ?, title = ?, description = ?, location = ? WHERE id = ?";
-            PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
+            String insertQuery = "UPDATE sa_lister_db.ads SET cat_id = ?, title = ?, description = ?, location = ? WHERE id = ?";
+            PreparedStatement stmt = connection.prepareStatement(insertQuery);
             stmt.setLong(1, ad.getCatId());
             stmt.setString(2, ad.getTitle());
             stmt.setString(3, ad.getDescription());
             stmt.setString(4, ad.getLocation());
             stmt.setLong(5, ad.getId());
             stmt.executeUpdate();
-            ResultSet rs = stmt.getGeneratedKeys();
-            rs.next();
         } catch (SQLException e) {
             throw new RuntimeException("Error updating ad.", e);
         }
     }
+
+    @Override
+    public Ad findAdById(long id) {
+        String query = "SELECT * FROM sa_lister_db.ads WHERE id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, id);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()) {
+                return extractAd(rs);
+            } else {
+                return null;
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error searching for ads by id", e);
+        }
+    }
+
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
@@ -99,5 +113,6 @@ public class MySQLAdsDao implements Ads {
     public void destroy(Ad ad) {
 
     }
+
 
 } //end

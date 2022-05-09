@@ -11,6 +11,9 @@ public interface Ads {
     Long insert(Ad ad);
     //edit existing ad
     void update(Ad ad);
+
+    Ad findAdById(long id);
+
     //delete existing ad
     void destroy(Ad ad);
 

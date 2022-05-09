@@ -60,6 +60,7 @@
                     <label for="description">Edit Description</label>
                     <input type="text" id="description" name="description">
                 </div>
+                <input type="hidden" value="${ad.id}" name="update">
                 <input type="submit">
             </form>
         </div>
