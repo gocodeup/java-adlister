@@ -1,5 +1,6 @@
 <head>
     <title>Navbar</title>
+    <script src="https://kit.fontawesome.com/5c1e7c5892.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
@@ -7,22 +8,40 @@
 <header>
 
     <nav class="navbar navbar-light bg-light">
-        <a class="navbar-brand d-flex flex-column justify-content-center" href="#">SA Lister</a>
-        <div class="container d-flex flex-row justify-content-end">
+        <div class="container d-flex justify-content-start">
+            <a class="navbar-brand d-flex flex-column justify-content-center" href="#">SA Lister</a>
+            <div class="d-flex justify-content-center">
+                <div>
+                    <i class="fa-solid fa-burger fa-2xl mx-4"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-landmark fa-2xl mx-4"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-champagne-glasses fa-2xl mx-4"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-people-line fa-2xl mx-4"></i>
+                </div>
+            </div>
+        </div>
+<%--        <div class="container d-flex flex-row justify-content-end">--%>
             <button class="nav-item bg-light border border-0">
                 <a class="nav-link" href="/ads">Ads</a>
             </button>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-        </div>
+<%--            </div>--%>
+
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">${sessionScope.user.username} Account</h5>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+            <div class="offcanvas-body d-flex justify-content-center">
+                <ul class="navbar-nav flex-grow-1 pe-3 mx-4">
 
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/profile">Home</a>
@@ -34,6 +53,10 @@
 
                     <li class="nav-item">
                         <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register">Create Account</a>
                     </li>
                 </ul>
             </div>
