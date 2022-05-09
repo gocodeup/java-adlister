@@ -1,4 +1,6 @@
 package com.codeup.adlister.dao;
+
+import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.Category;
 import com.mysql.cj.jdbc.Driver;
 
@@ -35,13 +37,21 @@ public class MySQLCategoriesDao implements Categories{
     }
 
     @Override
-    public List<Category> findByCategory(String category) {
+    public List<Ad> findByCategory(String category) {
         String query = "SELECT * FROM ads JOIN categories c ON c.id = ads.cat_id WHERE category = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, category);
             ResultSet rs = stmt.executeQuery();
-            return createCategoriesFromList(rs);
+
+            Config config = new Config();
+            MySQLAdsDao util = new MySQLAdsDao(config);
+            List<Ad> ads = new ArrayList<>();
+            while(rs.next()){
+                ads.add(util.extractAd(rs));
+            }
+
+            return ads;
         } catch(SQLException e) {
             throw new RuntimeException("Error connecting to the database!", e);
         }
@@ -50,7 +60,6 @@ public class MySQLCategoriesDao implements Categories{
     private Category extractCategory(ResultSet rs) throws SQLException {
         return new Category(
                 rs.getLong("id"),
-                rs.getLong("ad_id"),
                 rs.getString("category")
         );
     }
@@ -62,4 +71,15 @@ public class MySQLCategoriesDao implements Categories{
         }
         return categories;
     }
+
+//    private Ad extractAd(ResultSet rs) throws SQLException {
+//        return new Ad(
+//                rs.getLong("id"),
+//                rs.getLong("user_id"),
+//                rs.getLong("cat_id"),
+//                rs.getString("title"),
+//                rs.getString("description"),
+//                rs.getString("location")
+//        );
+//    }
 }
