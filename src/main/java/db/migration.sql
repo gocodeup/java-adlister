@@ -11,21 +11,24 @@ CREATE TABLE IF NOT EXISTS users (
     PRIMARY KEY (id)
 );
 
+CREATE TABLE IF NOT EXISTS categories (
+                                          id INT UNSIGNED AUTO_INCREMENT NOT NULL,
+                                          category VARCHAR(50) NOT NULL,
+                                          PRIMARY KEY (id)
+);
+
+
+
 CREATE TABLE IF NOT EXISTS ads (
     id INT UNSIGNED AUTO_INCREMENT NOT NULL,
     user_id INT UNSIGNED NOT NULL,
+    cat_id INT UNSIGNED NOT NULL,
     title VARCHAR(100) NOT NULL,
     description TEXT NOT NULL,
     location VARCHAR(100) NOT NULL,
     reputation INT,
     PRIMARY KEY (id),
-    FOREIGN KEY (user_id) REFERENCES users(id)
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (cat_id) REFERENCES categories(id)
 );
 
-CREATE TABLE IF NOT EXISTS categories (
-    id INT UNSIGNED AUTO_INCREMENT NOT NULL,
-    ad_id INT UNSIGNED NOT NULL,
-    category VARCHAR(50) NOT NULL,
-    PRIMARY KEY (id),
-    FOREIGN KEY (ad_id) REFERENCES ads(id)
-);
