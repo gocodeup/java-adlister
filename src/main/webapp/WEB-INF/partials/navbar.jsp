@@ -5,12 +5,17 @@
 
 
 <header>
-<nav class="navbar navbar-light bg-light fixed-top">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">Offcanvas navbar</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand d-flex flex-column justify-content-center" href="#">SA Lister</a>
+        <div class="container d-flex flex-row justify-content-end">
+            <button class="nav-item bg-light border border-0">
+                <a class="nav-link" href="/ads">Ads</a>
+            </button>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">${sessionScope.user.username} Account</h5>
@@ -24,10 +29,6 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="/ads">Ads</a>
-                    </li>
-
-                    <li class="nav-item">
                         <a class="nav-link" href="/login">Login</a>
                     </li>
 
@@ -37,8 +38,8 @@
                 </ul>
             </div>
         </div>
-    </div>
-</nav>
+    </nav>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </header>
 <%--    <nav class="navbar navbar-default">--%>
