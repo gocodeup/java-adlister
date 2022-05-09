@@ -1,9 +1,9 @@
 USE sa_lister_db;
 
 INSERT INTO users (username, email, password)
-VALUES ('Chris', 'chris@email.com', 'password'),
-       ('Sam', 'sam@email.com', 'password'),
-       ('Nathan', 'nathan@email.com', 'password');
+VALUES ('Chris', 'chris@email.com', '$2a$12$PR.9ruxGJVsOfOGHCIYzl.JyA2CCxhMJXsosr2GTRM0exQPej3H/O'),
+       ('Sam', 'sam@email.com', '$2a$12$PR.9ruxGJVsOfOGHCIYzl.JyA2CCxhMJXsosr2GTRM0exQPej3H/O'),
+       ('Nathan', 'nathan@email.com', '$2a$12$PR.9ruxGJVsOfOGHCIYzl.JyA2CCxhMJXsosr2GTRM0exQPej3H/O');
 
 INSERT INTO ads (user_id, title, description, location)
 VALUES ('1', 'Bunz', 'Local burger restaraunt with some of the best burgers in town.', '122 E Houston St, San Antonio, TX 78205'),
