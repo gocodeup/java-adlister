@@ -1,15 +1,27 @@
 package com.codeup.adlister.models;
 
+import static java.lang.Long.parseLong;
+
 public class Ad {
     private long id;
     private long userId;
+    private long catId;
     private String title;
     private String description;
     private String location;
 
-    public Ad(long id, long userId, String title, String description, String location) {
+    public Ad(long id, long userId, long catId, String title, String description, String location) {
         this.id = id;
         this.userId = userId;
+        this.catId = catId;
+        this.title = title;
+        this.description = description;
+        this.location = location;
+    }
+
+    public Ad(long userId, long catId, String title, String description, String location){
+        this.userId = userId;
+        this.catId = catId;
         this.title = title;
         this.description = description;
         this.location = location;
@@ -38,6 +50,14 @@ public class Ad {
 
     public long getUserId() {
         return userId;
+    }
+
+    public long getCatId() {
+        return catId;
+    }
+
+    public void setCatId(long catId) {
+        this.catId = catId;
     }
 
     public void setUserId(long userId) {

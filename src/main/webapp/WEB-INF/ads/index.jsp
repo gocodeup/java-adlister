@@ -16,6 +16,7 @@
         <div class="col-md-6 container">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
+            <p>${ad.catId}</p>
             <form action="/update" method="POST">
                 <div class="form-group">
                     <label for="title">Edit Title</label>
