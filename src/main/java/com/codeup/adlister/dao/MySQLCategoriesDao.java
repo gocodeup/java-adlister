@@ -36,7 +36,9 @@ public class MySQLCategoriesDao implements Categories{
 
     @Override
     public Category findByCategory(String category) {
-        String query = "SELECT * FROM categories WHERE category = ? LIMIT 1";
+        String query = "SELECT * FROM ads a JOIN categories c ON a.id = c.ad_id WHERE category = ? LIMIT 1";
+
+//        WHERE category = ? LIMIT 1
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, category);
