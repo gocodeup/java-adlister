@@ -9,4 +9,9 @@ public interface Ads {
     List<Ad> all();
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
+    //edit existing ad
+    void update(Ad ad);
+    //delete existing ad
+    void destroy(Ad ad);
+
 }

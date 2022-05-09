@@ -13,9 +13,25 @@
     <h1>Here Are all the ads!</h1>
 
     <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
+        <div class="col-md-6 container">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
+            <form action="/update" method="POST">
+                <div class="form-group">
+                    <label for="title">Edit Title</label>
+                    <input type="text" id="title" name="title">
+                </div>
+<%--                    <br>--%>
+                <div class="form-group">
+                    <label for="location">Edit Location</label>
+                    <input type="text" id="location" name="location">
+                </div>
+<%--                    <br>--%>
+                <div class="form-group">
+                    <label for="description">Edit Description</label>
+                    <input type="text" id="description" name="description">
+                </div>
+            </form>
         </div>
     </c:forEach>
 </div>
