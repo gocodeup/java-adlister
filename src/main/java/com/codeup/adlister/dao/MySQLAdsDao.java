@@ -65,32 +65,35 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+    @Override
+    public void update(Ad ad) {
+        try {
+            String insertQuery = "UPDATE ads SET cat_id = ?, title = ?, description = ?, location = ? WHERE id = ?";
+            PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
+            stmt.setLong(1, ad.getCatId());
+            stmt.setString(2, ad.getTitle());
+            stmt.setString(3, ad.getDescription());
+            stmt.setString(4, ad.getLocation());
+            stmt.setLong(5, ad.getId());
+            stmt.executeUpdate();
+            ResultSet rs = stmt.getGeneratedKeys();
+            rs.next();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating ad.", e);
+        }
+    }
+
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("id"),
             rs.getLong("user_id"),
-                rs.getLong("cat_id"),
+            rs.getLong("cat_id"),
             rs.getString("title"),
             rs.getString("description"),
             rs.getString("location")
         );
     }
 
-    @Override
-    public void update(Ad ad) {
-//        try {
-//            String insertQuery = "UPDATE ads SET (title = ?, description = ?, location = ?)";
-//            PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
-//            stmt.setString(1, ad.getTitle());
-//            stmt.setString(2, ad.getDescription());
-//            stmt.setString(3, ad.getLocation());
-//            stmt.executeUpdate();
-//            ResultSet rs = stmt.getGeneratedKeys();
-//            rs.next();
-//        } catch (SQLException e) {
-//            throw new RuntimeException("Error updating ad.", e);
-//        }
-    }
 
     @Override
     public void destroy(Ad ad) {

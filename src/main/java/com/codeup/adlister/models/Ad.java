@@ -33,8 +33,8 @@ public class Ad {
         this.description = description;
     }
 
-    public Ad(long userId, String title, String description, String location) {
-        this.userId = userId;
+    public Ad(long catId, String title, String description, String location) {
+        this.catId = catId;
         this.title = title;
         this.description = description;
         this.location = location;
