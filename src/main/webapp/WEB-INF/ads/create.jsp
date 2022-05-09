@@ -10,6 +10,16 @@
         <h1>Create a new Ad</h1>
         <form action="/ads/create" method="post">
             <div class="form-group">
+                <label for="category">Category</label>
+                <select name="category" id="category">
+                    <option value=1>Restaurants</option>
+                    <option value=2>History</option>
+                    <option value=3>Outdoors</option>
+                    <option value=4>Family</option>
+                    <option value=5>Etc.</option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label for="title">Title</label>
                 <input id="title" name="title" class="form-control" type="text">
             </div>

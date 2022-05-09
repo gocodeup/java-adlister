@@ -12,12 +12,10 @@ CREATE TABLE IF NOT EXISTS users (
 );
 
 CREATE TABLE IF NOT EXISTS categories (
-                                          id INT UNSIGNED AUTO_INCREMENT NOT NULL,
-                                          category VARCHAR(50) NOT NULL,
-                                          PRIMARY KEY (id)
+    id INT UNSIGNED AUTO_INCREMENT NOT NULL,
+    category VARCHAR(50) NOT NULL,
+    PRIMARY KEY (id)
 );
-
-
 
 CREATE TABLE IF NOT EXISTS ads (
     id INT UNSIGNED AUTO_INCREMENT NOT NULL,
