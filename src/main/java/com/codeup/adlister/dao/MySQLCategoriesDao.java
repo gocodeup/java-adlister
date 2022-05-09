@@ -24,9 +24,9 @@ public class MySQLCategoriesDao implements Categories{
 
     @Override
     public List<Category> all() {
-        PreparedStatement stmt = null;
+        String query = "SELECT * FROM categories";
         try {
-            stmt = connection.prepareStatement("SELECT * FROM categories");
+            PreparedStatement stmt = connection.prepareStatement(query);
             ResultSet rs = stmt.executeQuery();
             return createCategoriesFromList(rs);
         } catch(SQLException e) {
@@ -35,12 +35,13 @@ public class MySQLCategoriesDao implements Categories{
     }
 
     @Override
-    public Category findByCategory(String category) {
-        String query = "SELECT * FROM categories WHERE category = ? LIMIT 1";
+    public List<Category> findByCategory(String category) {
+        String query = "SELECT * FROM ads JOIN categories c ON c.id = ads.cat_id WHERE category = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, category);
-            return extractCategory(stmt.executeQuery());
+            ResultSet rs = stmt.executeQuery();
+            return createCategoriesFromList(rs);
         } catch(SQLException e) {
             throw new RuntimeException("Error connecting to the database!", e);
         }

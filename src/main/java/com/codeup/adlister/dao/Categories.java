@@ -9,5 +9,5 @@ public interface Categories {
     List<Category> all();
 
     // find all ads with a specific category
-    Category findByCategory(String category);
+    List<Category> findByCategory(String category);
 }
