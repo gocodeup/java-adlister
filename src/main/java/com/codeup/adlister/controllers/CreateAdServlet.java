@@ -14,7 +14,7 @@ import java.io.IOException;
 import static java.lang.Long.parseLong;
 import static java.lang.Long.valueOf;
 
-@WebServlet("/create")
+@WebServlet("/ads/create")
 public class CreateAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") == null) {
