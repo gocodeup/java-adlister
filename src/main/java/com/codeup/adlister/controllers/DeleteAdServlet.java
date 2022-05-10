@@ -17,15 +17,13 @@ public class DeleteAdServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        if (req.getSession().getAttribute("user") == null) {
-            resp.sendRedirect("/login");
-
             System.out.println(Long.parseLong(req.getParameter("delete")));
 
-            DaoFactory.getAdsDao().destroy(Long.parseLong(req.getParameter("delete")));
-//            resp.sendRedirect("/ads");
-        }
+            long ad_id = (Long.parseLong(req.getParameter("delete")));
 
-    }
+            DaoFactory.getAdsDao().destroy(ad_id);
+
+            resp.sendRedirect("/ads");
+        }
 
 }

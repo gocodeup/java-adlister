@@ -62,7 +62,6 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-
     @Override
     public void update(Ad ad) {
         try {
@@ -84,9 +83,6 @@ public class MySQLAdsDao implements Ads {
         PreparedStatement stmt;
         try {
             stmt = connection.prepareStatement("DELETE FROM sa_lister_db.ads WHERE id = ?");
-//            String insertQuery = "DELETE FROM sa_lister_db.ads WHERE id = ?";
-//            PreparedStatement stmt = connection.prepareStatement(insertQuery);
-//            Ad ad = new Ad();
             stmt.setLong(1, id);
             stmt.executeUpdate();
         } catch (SQLException e) {
@@ -112,7 +108,6 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-
     public Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("id"),
@@ -123,6 +118,5 @@ public class MySQLAdsDao implements Ads {
             rs.getString("location")
         );
     }
-
 
 } //end
