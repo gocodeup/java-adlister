@@ -33,6 +33,14 @@
                     <a class="fa-solid fa-people-line fa-2xl mx-4" href="/category?family"></a>
                     <p class="m-0 mt-3">Family</p>
                 </div>
+                <div>
+                    <%--        searchbar--%>
+                    <form action="/search" method="GET">
+                        <label for="search" class="form-label">Search Ads</label>
+                        <input type="text" name="search" placeholder="Enter keyword" id="search" class="">
+                        <input id="submit" type="submit" value="search" class="">
+                    </form>
+                </div>
             </div>
         </div>
 
