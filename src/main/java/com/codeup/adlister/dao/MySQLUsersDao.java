@@ -4,6 +4,7 @@ import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
+import java.util.List;
 
 public class MySQLUsersDao implements Users {
     private Connection connection;
@@ -21,6 +22,11 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+
+    @Override
+    public List<User> all() {
+        return null;
+    }
 
     @Override
     public User findByUsername(String username) {
@@ -51,6 +57,26 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+    @Override
+    public void update(User user) {
+        try {
+            String insertQuery = "UPDATE sa_lister_db.users SET id = ?, username = ?, email = ?, password = ?";
+            PreparedStatement stmt = connection.prepareStatement(insertQuery);
+            stmt.setLong(1, user.getId());
+            stmt.setString(2, user.getUsername());
+            stmt.setString(3, user.getEmail());
+            stmt.setString(4, user.getPassword());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating user.", e);
+        }
+    }
+
+    @Override
+    public User findUserById(long id) {
+        return null;
+    }
+
     private User extractUser(ResultSet rs) throws SQLException {
         if (! rs.next()) {
             return null;
@@ -62,5 +88,7 @@ public class MySQLUsersDao implements Users {
             rs.getString("password")
         );
     }
+
+
 
 }

@@ -1,8 +1,8 @@
 package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
-import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,30 +11,31 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/update")
-public class UpdateAdServlet extends HttpServlet {
+@WebServlet("/updateProfile")
+public class UpdateProfileServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") == null) {
             response.sendRedirect("/login");
             return;
         }
-        request.getRequestDispatcher("/WEB-INF/ads/create.jsp")
+        request.getRequestDispatcher("/WEB-INF/profile.jsp")
                 .forward(request, response);
+        request.setAttribute("user", DaoFactory.getUsersDao().all());
     }
 
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        User user = (User) request.getSession().getAttribute("user");
 
-        Ad ad = new Ad(
-
-                Long.parseLong(request.getParameter("category")),
-                request.getParameter("title"),
-                request.getParameter("description"),
-                request.getParameter("location"),
-                Long.parseLong(request.getParameter("update"))
+        User users = new User(
+                user.getId(),
+                request.getParameter("username"),
+                request.getParameter("email"),
+                request.getParameter("password")
         );
 
-        DaoFactory.getAdsDao().update(ad);
-        response.sendRedirect("/ads");
+        DaoFactory.getUsersDao().update(users);
+        response.sendRedirect("/profile");
     }
 }
