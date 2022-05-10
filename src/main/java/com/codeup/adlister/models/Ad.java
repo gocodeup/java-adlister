@@ -10,6 +10,14 @@ public class Ad {
     private String description;
     private String location;
 
+    public Ad(long userId, long catId, String title, String description, String location) {
+        this.userId = userId;
+        this.catId = catId;
+        this.title = title;
+        this.description = description;
+        this.location = location;
+    }
+
     public Ad(long id, long userId, long catId, String title, String description, String location) {
         this.id = id;
         this.userId = userId;
@@ -19,12 +27,12 @@ public class Ad {
         this.location = location;
     }
 
-    public Ad(long userId, long catId, String title, String description, String location){
-        this.userId = userId;
+    public Ad(long catId, String title, String description, String location, long id){
         this.catId = catId;
         this.title = title;
         this.description = description;
         this.location = location;
+        this.id = id;
     }
 
     public Ad(long userId, String title, String description) {
@@ -33,8 +41,8 @@ public class Ad {
         this.description = description;
     }
 
-    public Ad(long userId, String title, String description, String location) {
-        this.userId = userId;
+    public Ad(long catId, String title, String description, String location) {
+        this.catId = catId;
         this.title = title;
         this.description = description;
         this.location = location;
