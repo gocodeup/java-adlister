@@ -25,7 +25,7 @@
                         <i class="fa-solid fa-landmark fa-2xl mx-4"></i>
                     </c:when>
                     <c:when test="${ad.catId == 3}">
-                        <i class="fa-solid fa-champagne-glasses fa-2xl mx-4"></i>
+                        <i class="fa-solid fa-solid fa-person-hiking fa-2xl mx-4"></i>
                     </c:when>
                     <c:when test="${ad.catId == 4}">
                         <i class="fa-solid fa-people-line fa-2xl mx-4"></i>

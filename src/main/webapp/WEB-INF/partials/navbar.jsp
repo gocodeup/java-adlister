@@ -12,16 +12,16 @@
             <a class="navbar-brand d-flex flex-column justify-content-center" href="#">SA Lister</a>
             <div class="d-flex justify-content-center">
                 <div>
-                    <i class="fa-solid fa-burger fa-2xl mx-4"></i>
+                    <a class="fa-solid fa-burger fa-2xl mx-4" href="/category?restaurant" ></a>
                 </div>
                 <div>
-                    <i class="fa-solid fa-landmark fa-2xl mx-4"></i>
+                    <a class="fa-solid fa-landmark fa-2xl mx-4" href="/category?history"></a>
                 </div>
                 <div>
-                    <i class="fa-solid fa-champagne-glasses fa-2xl mx-4"></i>
+                    <a class="fa-solid fa-person-hiking fa-2xl mx-4" href="/category?outdoors"></a>
                 </div>
                 <div>
-                    <i class="fa-solid fa-people-line fa-2xl mx-4"></i>
+                    <a class="fa-solid fa-people-line fa-2xl mx-4" href="/category?family"></a>
                 </div>
             </div>
         </div>

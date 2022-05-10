@@ -35,7 +35,7 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    private List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
+    public List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
         List<Ad> ads = new ArrayList<>();
         while (rs.next()) {
             ads.add(extractAd(rs));
@@ -61,6 +61,7 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error creating a new ad.", e);
         }
     }
+
 
     @Override
     public void update(Ad ad) {
