@@ -19,4 +19,7 @@ public interface Ads {
     //delete existing ad
     void destroy(long id);
 
+    //search
+    List<Ad> findByKeyword(String query);
+
 }

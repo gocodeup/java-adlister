@@ -13,8 +13,13 @@
             <a class="navbar-brand d-flex flex-column justify-content-center" href="#">SA Lister</a>
             <div class="d-flex justify-content-center">
                 <div>
+<<<<<<< HEAD
+<%--                    category icons--%>
+                    <a class="fa-solid fa-burger fa-2xl mx-4" href="/category?restaurant" ></a>
+=======
                     <a class="fa-solid fa-burger fa-2xl mx-4 mt-1" href="/category?restaurant" ></a>
                     <p class="m-0 mt-3">Restaurants</p>
+>>>>>>> 06e6bb3913dfeadbd622466c71bc211619a77e81
                 </div>
                 <div>
                     <a class="fa-solid fa-landmark fa-2xl mx-4" href="/category?history"></a>
@@ -30,6 +35,7 @@
                 </div>
             </div>
         </div>
+
 <%--        <div class="container d-flex flex-row justify-content-end">--%>
         <c:choose>
         <c:when test="${sessionScope.user != null}">
