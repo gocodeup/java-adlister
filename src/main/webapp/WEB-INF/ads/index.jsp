@@ -61,7 +61,11 @@
                     <input type="text" id="description" name="description">
                 </div>
                 <input type="hidden" value="${ad.id}" name="update">
-                <input type="submit">
+                <input type="submit" value="Edit">
+            </form>
+            <form action="/delete" method="POST">
+                <input type="hidden" value="${ad.id}" name="delete">
+                <button type="submit">Delete</button>
             </form>
         </div>
     </c:forEach>
