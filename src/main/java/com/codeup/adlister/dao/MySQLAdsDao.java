@@ -74,7 +74,7 @@ public class MySQLAdsDao implements Ads {
             rs.next();
             return rs.getLong(1);
         } catch (SQLException e) {
-            throw new RuntimeException("Error creating a new ad.", e);
+            throw new RuntimeException("Error creating a new ad!", e);
         }
     }
 
@@ -90,7 +90,7 @@ public class MySQLAdsDao implements Ads {
             stmt.setLong(5, ad.getId());
             stmt.executeUpdate();
         } catch (SQLException e) {
-            throw new RuntimeException("Error updating ad.", e);
+            throw new RuntimeException("Error updating ad!", e);
         }
     }
 
@@ -102,9 +102,11 @@ public class MySQLAdsDao implements Ads {
             stmt.setLong(1, id);
             stmt.executeUpdate();
         } catch (SQLException e) {
-            throw new RuntimeException("Error deleting ad.", e);
+            throw new RuntimeException("Error deleting ad!", e);
         }
     }
+
+
 
     @Override
     public Ad findAdById(long id) {
@@ -118,9 +120,29 @@ public class MySQLAdsDao implements Ads {
             } else {
                 return null;
             }
-
         } catch (SQLException e) {
-            throw new RuntimeException("Error searching for ads by id", e);
+            throw new RuntimeException("Error searching for ads by id!", e);
+        }
+    }
+
+    @Override
+    public List<Ad> findByKeyword(String title) {
+        String query = "SELECT * FROM sa_lister_db.ads WHERE title LIKE ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, '%'+title+'%');
+            ResultSet rs = stmt.executeQuery();
+
+            Config config = new Config();
+            MySQLAdsDao util = new MySQLAdsDao(config);
+            List<Ad> ads = new ArrayList<>();
+
+            while(rs.next()){
+                ads.add(util.extractAd(rs));
+            }
+            return ads;
+        } catch(SQLException e) {
+            throw new RuntimeException("Error searching database!", e);
         }
     }
 

@@ -13,6 +13,7 @@
             <a class="navbar-brand d-flex flex-column justify-content-center" href="#">SA Lister</a>
             <div class="d-flex justify-content-center">
                 <div>
+<%--                    category icons--%>
                     <a class="fa-solid fa-burger fa-2xl mx-4" href="/category?restaurant" ></a>
                 </div>
                 <div>
@@ -24,8 +25,17 @@
                 <div>
                     <a class="fa-solid fa-people-line fa-2xl mx-4" href="/category?family"></a>
                 </div>
+                <div>
+                    <%--        searchbar--%>
+                    <form action="/search" method="GET">
+                        <label for="search" class="form-label">Search Ads</label>
+                        <input type="text" name="search" placeholder="Enter keyword" id="search" class="">
+                        <input id="submit" type="submit" value="search" class="">
+                    </form>
+                </div>
             </div>
         </div>
+
 <%--        <div class="container d-flex flex-row justify-content-end">--%>
             <button class="nav-item bg-light border border-0">
                 <a class="nav-link" href="/ads">Ads</a>
