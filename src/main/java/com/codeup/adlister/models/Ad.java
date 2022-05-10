@@ -50,8 +50,7 @@ public class Ad {
 
     public Ad() {}
 
-    public Ad(long id) {
-    }
+    public Ad(long id) {}
 
     public long getId() {
         return id;
