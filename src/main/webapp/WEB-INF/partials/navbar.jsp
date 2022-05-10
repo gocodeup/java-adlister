@@ -13,20 +13,32 @@
             <a class="navbar-brand d-flex flex-column justify-content-center" href="#">SA Lister</a>
             <div class="d-flex justify-content-center">
                 <div>
-                    <a class="fa-solid fa-burger fa-2xl mx-4" href="/category?restaurant" ></a>
+                    <a class="fa-solid fa-burger fa-2xl mx-4 mt-1" href="/category?restaurant" ></a>
+                    <p class="m-0 mt-3">Restaurants</p>
                 </div>
                 <div>
                     <a class="fa-solid fa-landmark fa-2xl mx-4" href="/category?history"></a>
+                    <p class="mb-0 mt-3">History</p>
                 </div>
                 <div>
                     <a class="fa-solid fa-person-hiking fa-2xl mx-4" href="/category?outdoors"></a>
+                    <p class="m-0 mt-3">Outdoors</p>
                 </div>
                 <div>
                     <a class="fa-solid fa-people-line fa-2xl mx-4" href="/category?family"></a>
+                    <p class="m-0 mt-3">Family</p>
                 </div>
             </div>
         </div>
 <%--        <div class="container d-flex flex-row justify-content-end">--%>
+        <c:choose>
+        <c:when test="${sessionScope.user != null}">
+        <button class="nav-item bg-light border border-0">
+            <a class="nav-link" href="/ads/create">Create Add</a>
+        </button>
+        </c:when>
+        </c:choose>
+
             <button class="nav-item bg-light border border-0">
                 <a class="nav-link" href="/ads">Ads</a>
             </button>
