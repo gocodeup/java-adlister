@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <head>
     <title>Navbar</title>
     <script src="https://kit.fontawesome.com/5c1e7c5892.js" crossorigin="anonymous"></script>
@@ -42,22 +43,37 @@
 
             <div class="offcanvas-body d-flex justify-content-center">
                 <ul class="navbar-nav flex-grow-1 pe-3 mx-4">
-
+                    <c:choose>
+                    <c:when test="${sessionScope.user != null}">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/profile">Home</a>
                     </li>
+                    </c:when>
+                    </c:choose>
 
+                    <c:choose>
+                    <c:when test="${sessionScope.user == null}">
                     <li class="nav-item">
                         <a class="nav-link" href="/login">Login</a>
                     </li>
+                    </c:when>
+                    </c:choose>
 
+                    <c:choose>
+                    <c:when test="${sessionScope.user != null}">
                     <li class="nav-item">
                         <a class="nav-link" href="/logout">Logout</a>
                     </li>
+                    </c:when>
+                    </c:choose>
 
+                    <c:choose>
+                    <c:when test="${sessionScope.user == null}">
                     <li class="nav-item">
                         <a class="nav-link" href="/register">Create Account</a>
                     </li>
+                    </c:when>
+                    </c:choose>
                 </ul>
             </div>
         </div>
