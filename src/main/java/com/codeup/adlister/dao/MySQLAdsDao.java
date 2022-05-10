@@ -80,6 +80,21 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public void destroy(long id) {
+        PreparedStatement stmt;
+        try {
+            stmt = connection.prepareStatement("DELETE FROM sa_lister_db.ads WHERE id = ?");
+//            String insertQuery = "DELETE FROM sa_lister_db.ads WHERE id = ?";
+//            PreparedStatement stmt = connection.prepareStatement(insertQuery);
+//            Ad ad = new Ad();
+            stmt.setLong(1, id);
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error deleting ad.", e);
+        }
+    }
+
+    @Override
     public Ad findAdById(long id) {
         String query = "SELECT * FROM sa_lister_db.ads WHERE id = ?";
         try {
@@ -107,12 +122,6 @@ public class MySQLAdsDao implements Ads {
             rs.getString("description"),
             rs.getString("location")
         );
-    }
-
-
-    @Override
-    public void destroy(Ad ad) {
-
     }
 
 

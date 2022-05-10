@@ -14,7 +14,7 @@ import java.io.IOException;
 import static java.lang.Long.parseLong;
 import static java.lang.Long.valueOf;
 
-@WebServlet("/ads/create")
+@WebServlet("/create")
 public class CreateAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") == null) {
@@ -29,8 +29,8 @@ public class CreateAdServlet extends HttpServlet {
         User user = (User) request.getSession().getAttribute("user");
 
         Ad ad = new Ad(
-                user.getId(),
-                Long.parseLong(request.getParameter("category")),
+            user.getId(),
+            Long.parseLong(request.getParameter("category")),
             request.getParameter("title"),
             request.getParameter("description"),
             request.getParameter("location")

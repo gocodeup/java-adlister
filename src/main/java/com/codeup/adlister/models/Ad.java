@@ -48,6 +48,11 @@ public class Ad {
         this.location = location;
     }
 
+    public Ad() {}
+
+    public Ad(long id) {
+    }
+
     public long getId() {
         return id;
     }
