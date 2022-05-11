@@ -13,7 +13,35 @@
         <h1>Welcome, ${sessionScope.user.username}!</h1>
     </div>
 
+
+    <form action="/updateProfile" method="POST">
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input id="username" name="username" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" class="form-control" type="text">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input id="password" name="password" class="form-control" type="password">
+        </div>
+        <div class="form-group">
+            <label for="confirm_password">Confirm Password</label>
+            <input id="confirm_password" name="confirm_password" class="form-control" type="password">
+        </div>
+        <input type="hidden" value="${users.id}" name="update">
+        <input type="submit" value="Update Profile">
+    </form>
+
+
+    <div class="container">
+        <h1>Here Are all your ads!</h1>
+
+
     <div class="d-flex " >
+
         <c:forEach var="ad" items="${ads}">
 
             <div class="card col-md-6 m-5 p-3" style="width: 20rem;">

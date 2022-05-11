@@ -4,6 +4,9 @@ import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
+import java.util.List;
+
+import static com.codeup.adlister.util.Password.hash;
 
 public class MySQLUsersDao implements Users {
     private Connection connection;
@@ -21,6 +24,11 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+
+    @Override
+    public List<User> all() {
+        return null;
+    }
 
     @Override
     public User findByUsername(String username) {
@@ -51,6 +59,40 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+    @Override
+    public void update(User user) {
+        try {
+            String insertQuery = "UPDATE sa_lister_db.users SET username = ?, email = ?, password = ? WHERE id = ?";
+            PreparedStatement stmt = connection.prepareStatement(insertQuery);
+
+            stmt.setString(1, user.getUsername());
+            stmt.setString(2, user.getEmail());
+            stmt.setString(3, hash(user.getPassword()));
+            stmt.setLong(4, user.getId());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating user.", e);
+        }
+    }
+
+    @Override
+    public User findUserById(long id) {
+        String query = "SELECT * FROM sa_lister_db.users WHERE id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, id);
+            ResultSet rs = stmt.executeQuery();
+            if(rs.next()) {
+                return extractUser(rs);
+            } else {
+                return null;
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error searching for ads by id", e);
+        }
+    }
+
     private User extractUser(ResultSet rs) throws SQLException {
         if (! rs.next()) {
             return null;
@@ -62,5 +104,7 @@ public class MySQLUsersDao implements Users {
             rs.getString("password")
         );
     }
+
+
 
 }
