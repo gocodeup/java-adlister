@@ -27,5 +27,7 @@
         <input type="hidden" value="${users.id}" name="update">
         <input type="submit" value="Update Profile">
     </form>
+
+    <jsp:include page="/WEB-INF/partials/footer.jsp" />
 </body>
 </html>

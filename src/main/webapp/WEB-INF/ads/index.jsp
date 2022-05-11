@@ -29,7 +29,7 @@
                                         <i class="fa-solid fa-people-line fa-2xl m-4"></i>
                                     </c:when>
                                     <c:otherwise>
-                                        <p>Etc</p>
+                                        <i class="fa-solid fa-circle-exclamation"></i>
                                     </c:otherwise>
                                 </c:choose>
 
@@ -42,7 +42,6 @@
 
 
                 <a class="fa-solid fa-thumbs-up" href="/like?${ad.id}"></a>
-
 
 
                 <p>${ad.reputation} Users like this</p>

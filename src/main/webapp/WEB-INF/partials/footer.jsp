@@ -26,7 +26,7 @@
                 <a class="fa-solid fa-people-line fa-2xl mx-4" href="/category?family"></a>
                 <p class="mt-3 mx-3">Family</p>
             </div>
-            <div>
+            <div class="m-0 mt-4">
                 <a class="fa-solid fa-circle-exclamation fa-2xl mx-4" href="/category?etc"></a>
                 <p class="mt-3 mx-3">Etc.</p>
             </div>
@@ -79,10 +79,10 @@
                         Developers
                     </h6>
                         <i class="fa-brands fa-github me-3"></i>
-                        <a class="text-reset" href="github.com/berry">Chris Berry</a>
+                        <a class="text-reset" href="https://github.com/c-berry">Chris Berry</a>
                     </p>
-                    <p><i class="fa-brands fa-github me-3"></i><a class="text-reset" href="github.com/Sarguello12">Sam Arguello</a></p>
-                    <p><i class="fa-brands fa-github me-3"></i><a class="text-reset" href="github.com/Nathan-Haustveit">Nate Haustveit</a></p>
+                    <p><i class="fa-brands fa-github me-3"></i><a class="text-reset" href="https://github.com/Sarguello12">Sam Arguello</a></p>
+                    <p><i class="fa-brands fa-github me-3"></i><a class="text-reset" href="https://github.com/Nathan-Haustveit">Nate Haustveit</a></p>
                 </div>
                 <!-- Grid column -->
             </div>
