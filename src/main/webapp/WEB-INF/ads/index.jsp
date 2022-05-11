@@ -9,7 +9,6 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-<<<<<<< HEAD
 <div class="d-flex " >
     <c:forEach var="ad" items="${ads}">
 
@@ -51,46 +50,6 @@
     </c:forEach>
 </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-<%--        <div class="col-md-6 p-3 container">--%>
-<%--            <h2>${ad.title}--%>
-
-<%--            </h2>--%>
-
-<%--            <p>${ad.description}</p>--%>
-<%--            <p>${ad.location}</p>--%>
-<%--            <c:choose>--%>
-<%--                <c:when test="${ad.catId == 1}">--%>
-<%--                    <i class="fa-solid fa-burger fa-2xl mx-4"></i>--%>
-<%--                </c:when>--%>
-<%--                <c:when test="${ad.catId == 2}">--%>
-<%--                    <i class="fa-solid fa-landmark fa-2xl mx-4"></i>--%>
-<%--                </c:when>--%>
-<%--                <c:when test="${ad.catId == 3}">--%>
-<%--                    <i class="fa-solid fa-solid fa-person-hiking fa-2xl mx-4"></i>--%>
-<%--                </c:when>--%>
-<%--                <c:when test="${ad.catId == 4}">--%>
-<%--                    <i class="fa-solid fa-people-line fa-2xl mx-4"></i>--%>
-<%--                </c:when>--%>
-<%--                <c:otherwise>--%>
-<%--                    <p>Etc</p>--%>
-<%--                </c:otherwise>--%>
-<%--            </c:choose>--%>
-<%--        </div>--%>
-
-
-=======
     <div class="d-flex " >
         <c:forEach var="ad" items="${ads}">
             <div class="card col-md-6 m-5 p-3" style="width: 20rem;">
@@ -127,7 +86,7 @@
             </div>
         </c:forEach>
     </div>
->>>>>>> 15e4c2eab46c185069acf995aca6ae47262b8c0f
 
+<jsp:include page="/WEB-INF/partials/footer.jsp" />
 </body>
 </html>
