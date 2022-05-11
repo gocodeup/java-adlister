@@ -8,7 +8,7 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-    <h1>Welcome, ${sessionScope.user.username}!</h1>
+    <h1 class="container d-flex justify-content-center mb-4">Edit Account Information for ${sessionScope.user.username}</h1>
     <form class="container w-25" action="/profileupdate" method="POST">
         <div class="form-group">
             <label for="username">Username</label>
