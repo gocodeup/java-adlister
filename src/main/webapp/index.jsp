@@ -40,5 +40,6 @@
         <h1 class="m-5">Welcome to SA-lister!</h1>
     </div>
 
+    <jsp:include page="/WEB-INF/partials/footer.jsp" />
 </body>
 </html>
