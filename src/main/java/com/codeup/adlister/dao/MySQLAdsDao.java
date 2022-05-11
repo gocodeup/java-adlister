@@ -7,6 +7,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.lang.Integer.parseInt;
+
 public class MySQLAdsDao implements Ads {
     private Connection connection = null;
 
@@ -62,7 +64,7 @@ public class MySQLAdsDao implements Ads {
     @Override
     public Long insert(Ad ad) {
         try {
-            String insertQuery = "INSERT INTO sa_lister_db.ads(user_id, cat_id, title, description, location) VALUES (?, ?, ?, ?, ?)";
+            String insertQuery = "INSERT INTO sa_lister_db.ads(user_id, cat_id, title, description, location, reputation) VALUES (?, ?, ?, ?, ?, 0)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, ad.getUserId());
             stmt.setLong(2, ad.getCatId());
@@ -146,6 +148,40 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+
+
+
+
+
+
+
+
+
+
+
+    @Override
+    public void likeAd(String id) {
+        String query = "UPDATE ads set reputation = reputation+1 where id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setInt(1, parseInt(id));
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating ad!", e);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     public Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("id"),
@@ -153,7 +189,8 @@ public class MySQLAdsDao implements Ads {
             rs.getLong("cat_id"),
             rs.getString("title"),
             rs.getString("description"),
-            rs.getString("location")
+            rs.getString("location"),
+            rs.getInt("reputation")
         );
     }
 

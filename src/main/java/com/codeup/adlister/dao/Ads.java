@@ -22,4 +22,6 @@ public interface Ads {
     //search
     List<Ad> findByKeyword(String query);
 
+    void likeAd(String id);
+
 }
