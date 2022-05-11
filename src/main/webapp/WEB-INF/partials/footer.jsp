@@ -58,15 +58,19 @@
                         Useful links
                     </h6>
                     <p>
+                        <i class="fa-solid fa-location-dot"></i>
                         <a href="https://www.google.com/maps" class="text-reset">Maps</a>
                     </p>
                     <p>
+                        <i class="fa-solid fa-utensils"></i>
                         <a href="https://www.yelp.com/search?find_loc=San+Antonio%2C+TX" class="text-reset">Food Stops</a>
                     </p>
                     <p>
+                        <i class="fa-solid fa-bed"></i>
                         <a href="https://www.booking.com/city/us/san-antonio.en.html?aid=336408;label=san-antonio-yc01*o3xhXZ6CTsh9POUJgS553260295140:pl:ta:p1300:p2:ac:ap:neg:fi:tikwd-35026980:lp9060401:li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9YavywThF4buZQ9k1iY7Jbs4;ws=&gclid=CjwKCAjwve2TBhByEiwAaktM1NH-pUHdINdGIDA7BbHqryKJHm5Jnxzo7gjFOBSbTj1CPgOdIgRs2RoCd5QQAvD_BwE" class="text-reset">Hotel Rooms</a>
                     </p>
                     <p>
+                        <i class="fa-solid fa-car-side"></i>
                         <a href="https://www.uber.com/global/en/cities/san-antonio/" class="text-reset">Get a Ride</a>
                     </p>
                 </div>
