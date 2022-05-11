@@ -9,13 +9,11 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
-    <div class="container">
+    <div class="container ">
         <h1>Welcome, ${sessionScope.user.username}!</h1>
-    </div>
-    <a href="profileupdate">
-        <button>Edit Your Account</button>
-    </a>
 
+
+    </div>
 
 
 
@@ -86,6 +84,9 @@
                             </form>
         </c:forEach>
     </div>
+        <a href="profileupdate">
+            <input class="" type="submit" value="Edit Account">
+        </a>
 
 <%--    <div class="container">--%>
 <%--        <h1>Here Are all your ads!</h1>--%>
