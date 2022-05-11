@@ -39,6 +39,13 @@
                 <p class="card-text">${ad.description}</p>
                 <hr>
                 <h6 class="card-subtitle mb-2 text-muted">${ad.location}</h6>
+
+
+                <a class="fa-solid fa-thumbs-up" href="/like?${ad.id}"></a>
+
+
+
+                <p>${ad.reputation} Users like this</p>
             </div>
         </div>
     </c:forEach>

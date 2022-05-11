@@ -1,6 +1,5 @@
 package com.codeup.adlister.models;
 
-import static java.lang.Long.parseLong;
 
 public class Ad {
     private long id;
@@ -9,6 +8,17 @@ public class Ad {
     private String title;
     private String description;
     private String location;
+    private int reputation;
+
+    public Ad(long id, long user_id, long cat_id, String title, String description, String location, int reputation) {
+        this.id = id;
+        this.userId = user_id;
+        this.catId = cat_id;
+        this.title = title;
+        this.description = description;
+        this.location = location;
+        this.reputation = reputation;
+    }
 
     public Ad(long userId, long catId, String title, String description, String location) {
         this.userId = userId;
@@ -49,8 +59,6 @@ public class Ad {
     }
 
     public Ad() {}
-
-    public Ad(long id) {}
 
     public long getId() {
         return id;
@@ -98,5 +106,13 @@ public class Ad {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public int getReputation() {
+        return reputation;
+    }
+
+    public void setReputation(int reputation) {
+        this.reputation = reputation;
     }
 }
