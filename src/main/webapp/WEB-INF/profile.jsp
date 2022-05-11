@@ -46,36 +46,37 @@
                     <p class="card-text">${ad.description}</p>
                     <hr>
                     <h6 class="card-subtitle mb-2 text-muted">${ad.location}</h6>
+
+                    <form action="/update" method="POST">
+                        <div class="form-group">
+                            <label for="category">Edit Category</label>
+                            <select name="category" id="category">
+                                <option value=1>Restaurants</option>
+                                <option value=2>History</option>
+                                <option value=3>Outdoors</option>
+                                <option value=4>Family</option>
+                                <option value=5>Etc.</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Edit Title</label>
+                            <input type="text" id="title" name="title">
+                        </div>
+                            <%--                    <br>--%>
+                        <div class="form-group">
+                            <label for="location">Edit Location</label>
+                            <input type="text" id="location" name="location">
+                        </div>
+                            <%--                    <br>--%>
+                        <div class="form-group">
+                            <label for="description">Edit Description</label>
+                            <input type="" id="description" name="description">
+                        </div>
+                        <input type="hidden" value="${ad.id}" name="update">
+                        <input type="submit">
+                    </form>
                 </div>
             </div>
-                            <form action="/update" method="POST">
-                                <div class="form-group">
-                                    <label for="category">Edit Category</label>
-                                    <select name="category" id="category">
-                                        <option value=1>Restaurants</option>
-                                        <option value=2>History</option>
-                                        <option value=3>Outdoors</option>
-                                        <option value=4>Family</option>
-                                        <option value=5>Etc.</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label for="title">Edit Title</label>
-                                    <input type="text" id="title" name="title">
-                                </div>
-                                    <%--                    <br>--%>
-                                <div class="form-group">
-                                    <label for="location">Edit Location</label>
-                                    <input type="text" id="location" name="location">
-                                </div>
-                                    <%--                    <br>--%>
-                                <div class="form-group">
-                                    <label for="description">Edit Description</label>
-                                    <input type="text" id="description" name="description">
-                                </div>
-                                <input type="hidden" value="${ad.id}" name="update">
-                                <input type="submit">
-                            </form>
         </c:forEach>
     </div>
         <a href="profileupdate">
@@ -83,5 +84,6 @@
         </a>
 
         <jsp:include page="/WEB-INF/partials/footer.jsp" />
+
 </body>
 </html>
