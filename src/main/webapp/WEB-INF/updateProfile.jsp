@@ -7,7 +7,9 @@
 </head>
 <body>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <form action="/profileupdate" method="POST">
+
+    <h1>Welcome, ${sessionScope.user.username}!</h1>
+    <form class="container w-25" action="/profileupdate" method="POST">
         <div class="form-group">
             <label for="username">Username</label>
             <input id="username" name="username" class="form-control" type="text">
