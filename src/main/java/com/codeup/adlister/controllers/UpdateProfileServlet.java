@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/updateProfile")
+@WebServlet("/profileupdate")
 public class UpdateProfileServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -17,7 +17,7 @@ public class UpdateProfileServlet extends HttpServlet {
             response.sendRedirect("/login");
             return;
         }
-        request.getRequestDispatcher("/WEB-INF/profile.jsp")
+        request.getRequestDispatcher("/WEB-INF/updateProfile.jsp")
                 .forward(request, response);
         request.setAttribute("user", DaoFactory.getUsersDao().all());
     }
