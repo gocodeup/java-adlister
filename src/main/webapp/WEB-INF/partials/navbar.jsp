@@ -14,16 +14,16 @@
 
     <nav class="navbar navbar-light bg-light ">
         <div class="container d-flex justify-content-start">
-            <a class="navbar-brand d-flex flex-column justify-content-center" href="#"><h2>SA Lister</h2></a>
+            <a class="navbar-brand d-flex flex-column justify-content-center" ><h2>SA Lister</h2></a>
             <div class="mt-4 mx-3">
 <%--                        searchbar--%>
                 <form action="/search" method="GET">
                     <label for="search" class="form-label text-style ">Search Ads</label>
                     <input type="text" name="search" placeholder="Enter keyword" id="search" class="">
-                    <input id="submit" type="submit" value="search" class="btn-primary">
+                    <input id="submit" type="submit" value="search" class="btn-outline-primary">
                 </form>
             </div>
-        </div>
+<%--        </div>--%>
 
         <c:choose>
         <c:when test="${sessionScope.user != null}">
@@ -33,7 +33,7 @@
         </c:when>
         </c:choose>
 
-        <div>
+        <div class="d-flex ms-auto">
             <button class="nav-item bg-light border border-0 ">
                 <a class="nav-link" href="/ads"><h2>Ads</h2></a>
             </button>
@@ -83,6 +83,7 @@
                     </c:choose>
                 </ul>
             </div>
+        </div>
         </div>
     </nav>
 

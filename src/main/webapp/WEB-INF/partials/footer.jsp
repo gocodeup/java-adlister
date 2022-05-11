@@ -26,10 +26,13 @@
                 <a class="fa-solid fa-people-line fa-2xl mx-4" href="/category?family"></a>
                 <p class="mt-3 mx-3">Family</p>
             </div>
+            <div>
+                <a class="fa-solid fa-circle-exclamation fa-2xl mx-4" href="/category?etc"></a>
+                <p class="mt-3 mx-3">Etc.</p>
+            </div>
         </div>
-        <!-- Right -->
+
     </section>
-    <!-- Section: Social media -->
 
     <!-- Section: Links  -->
     <section class="">
@@ -46,27 +49,6 @@
                         SA Lister is your go-to resource dedicated to finding things to do in San Antonio! Search for specific things to do, or browse our list of ads by category. San Antonio has no shortage of fun activities for solo adventurers, romantic date spots, and wholesome family activities.
                     </p>
                 </div>
-                <!-- Grid column -->
-
-                <!-- Grid column -->
-<%--                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">--%>
-<%--                    <!-- Links -->--%>
-<%--                    <h6 class="text-uppercase fw-bold mb-4">--%>
-<%--                        Products--%>
-<%--                    </h6>--%>
-<%--                    <p>--%>
-<%--                        <a href="#!" class="text-reset">Angular</a>--%>
-<%--                    </p>--%>
-<%--                    <p>--%>
-<%--                        <a href="#!" class="text-reset">React</a>--%>
-<%--                    </p>--%>
-<%--                    <p>--%>
-<%--                        <a href="#!" class="text-reset">Vue</a>--%>
-<%--                    </p>--%>
-<%--                    <p>--%>
-<%--                        <a href="#!" class="text-reset">Laravel</a>--%>
-<%--                    </p>--%>
-<%--                </div>--%>
                 <!-- Grid column -->
 
                 <!-- Grid column -->
