@@ -7,7 +7,7 @@
 </head>
 <body style="background-color: ${color}">
 <%@ include file="partials/navbar.jsp"%>
-<p class="text-center">This page is your favorite color: ${color}</p>
+<p class="text-center">Is this your favorite color? ${color}</p>
 
 <%--<%@ include file="partials/footer.jsp"%>--%>
 <%--<%@ include file="partials/scripts.jsp"%>--%>
