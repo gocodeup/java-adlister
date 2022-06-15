@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%--@WebServlet(name = "LoginPage", urlPatterns = "/login.jsp")--%>
-<%--public class HelloWorldServlet extends HttpServlet {--%>
+<%--public class HelloWorldServlet1 extends HttpServlet {--%>
 
 <%--@Override--%>
 <%--protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {--%>
