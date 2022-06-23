@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: boryanadimova
@@ -8,9 +9,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Profile</title>
 </head>
 <body>
-
+<form action="/profile" method="GET">
+    Profile
+</form>
+<c:if test="true">
+    <h1>Profile</h1>
+</c:if>
+<c:if test="false">
+    <h1>single letter variable names are good</h1>
+</c:if>
 </body>
 </html>
