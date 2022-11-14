@@ -3,6 +3,7 @@ package com.codeup.adlister.dao;
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
 
+import javax.management.RuntimeErrorException;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -52,6 +53,27 @@ public class MySQLAdsDao implements Ads {
             return rs.getLong(1);
         } catch (SQLException e) {
             throw new RuntimeException("Error creating a new ad.", e);
+        }
+    }
+
+    @Override
+    public void updateAd(Long id, String title, String description) {
+        // Storing update query in string.
+        String updateAdQuery = "UPDATE ads SET title = ?, description = ? WHERE id = ?";
+        try {
+            // Preparing SQL statement.
+            PreparedStatement statement = connection.prepareStatement(updateAdQuery);
+
+            // Setting update query values in "updateAdQuery".
+            statement.setString(1, title);
+            statement.setString(2, description);
+            statement.setLong(3, id);
+
+            // Execute update query.
+            statement.executeUpdate();
+
+        } catch (SQLException e)  {
+            throw new RuntimeException("Error updating current ad.");
         }
     }
 
