@@ -4,8 +4,10 @@
     <jsp:include page="/WEB-INF/partials/head.jsp">
         <jsp:param name="title" value="Create a new Ad" />
     </jsp:include>
+    <title>create ad</title>
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/navbar-create-ad.jsp" />
     <div class="container">
         <h1>Create a new Ad</h1>
         <form action="/ads/create" method="post">
