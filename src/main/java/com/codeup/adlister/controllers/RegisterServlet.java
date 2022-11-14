@@ -43,6 +43,7 @@ public class RegisterServlet extends HttpServlet {
         if(user1.getUsername().equals(user.getUsername()))
         {
             response.sendRedirect("/register");
+
         }
         else
         {
