@@ -2,6 +2,7 @@ package com.codeup.adlister.dao;
 
 import com.codeup.adlister.Config;
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
 import java.io.FileInputStream;
@@ -54,6 +55,55 @@ public class MySQLAdsDao implements Ads {
         } catch (SQLException e) {
             throw new RuntimeException("Error creating a new ad.", e);
         }
+    }
+
+    @Override
+    public void update(Ad ad) {
+
+            String query = "UPDATE ads" +
+                    " SET" +
+                    " title = ?," +
+                    " description = ?" +
+
+                    "WHERE title = " +ad.getTitle()+ "AND user_id ="+ ad.getUserId()+"";
+
+
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, ad.getTitle());
+            stmt.setString(2, ad.getDescription());
+            stmt.executeUpdate();
+            ResultSet rs = stmt.getGeneratedKeys();
+            rs.next();
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error creating new user", e);
+
+        }
+
+
+
+    }
+
+    @Override
+    public void delete(Ad ad) {
+
+        String query = "DELETE ads" +
+                "WHERE title = " + ad.getTitle() + "";
+
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.executeUpdate();
+            ResultSet rs = stmt.getGeneratedKeys();
+            rs.next();
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error creating new user", e);
+
+        }
+
+
+
     }
 
     private Ad extractAd(ResultSet rs) throws SQLException {
