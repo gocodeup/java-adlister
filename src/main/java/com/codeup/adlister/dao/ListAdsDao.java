@@ -27,6 +27,23 @@ public class ListAdsDao implements Ads {
         return ad.getId();
     }
 
+    public Ads findByUserID(long userID){
+        List<Ad> newAds = new ArrayList<>();
+        newAds.add((Ad) DaoFactory.getAdsDao().all());
+
+        List<Ad> returnAds = new ArrayList<>();
+
+        for(Ad ad : newAds)
+        {
+            if(userID == ad.getUserId())
+            {
+                returnAds.add(ad);
+            }
+        }
+
+        return (Ads) returnAds;
+    }
+
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();
         ads.add(new Ad(
