@@ -1,6 +1,5 @@
 package com.codeup.adlister.dao;
 
-import com.codeup.adlister.Config;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
@@ -27,6 +26,8 @@ public class MySQLUsersDao implements Users {
     public User findByUsername(String username) {
         String query = "SELECT * FROM users WHERE username = ? LIMIT 1";
         try {
+            System.out.println(username);
+            System.out.println(query);
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, username);
             return extractUser(stmt.executeQuery());
