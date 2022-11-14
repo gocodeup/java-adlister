@@ -37,15 +37,20 @@ public class RegisterServlet extends HttpServlet {
 
         // create and save a new user
         User user = new User(username, email, password);
+        try {
 
-        User user1 = DaoFactory.getUsersDao().findByUsername(user.getUsername());
+            User user1 = DaoFactory.getUsersDao().findByUsername(user.getUsername());
 
-        if(user1.getUsername().equals(user.getUsername()))
-        {
-            response.sendRedirect("/register");
+//            System.out.println(DaoFactory.getUsersDao().findByUsername());
+//            System.out.println(user1.getUsername());
+
+            if (user1.getUsername().equals(user.getUsername())){
+                response.sendRedirect("/register");
+
+            }
 
         }
-        else
+        catch(NullPointerException e)
         {
             DaoFactory.getUsersDao().insert(user);
             response.sendRedirect("/login");
