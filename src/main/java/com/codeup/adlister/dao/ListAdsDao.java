@@ -2,6 +2,8 @@ package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,6 +35,15 @@ public class ListAdsDao implements Ads {
             ads = generateAds();
         }
 
+    }
+
+    public List<Ad> findPostByUserId(Long userId) {
+      return null;
+    }
+
+    @Override
+    public Ad findById(long id) {
+        return null;
     }
 
 
