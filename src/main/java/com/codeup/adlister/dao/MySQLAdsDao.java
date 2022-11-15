@@ -1,5 +1,6 @@
 package com.codeup.adlister.dao;
 
+import com.codeup.adlister.Config;
 import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
@@ -64,7 +65,7 @@ public class MySQLAdsDao implements Ads {
     //************************UPDATE ADS********************************************
 
     @Override
-    public void update(Ad ad) {
+    public void update(Ad ad, String title,String description) {
 
             String query = "UPDATE ads " +
                     " SET " +
@@ -76,8 +77,8 @@ public class MySQLAdsDao implements Ads {
 
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.setString(1, ad.getTitle());
-            stmt.setString(2, ad.getDescription());
+            stmt.setString(1, title);
+            stmt.setString(2, description);
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
 
