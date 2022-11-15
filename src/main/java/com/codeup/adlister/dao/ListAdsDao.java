@@ -2,11 +2,16 @@ package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListAdsDao implements Ads {
     private List<Ad> ads;
+    private Connection connection = null;
 
     public List<Ad> all() {
         if (ads == null) {
@@ -27,7 +32,7 @@ public class ListAdsDao implements Ads {
         return ad.getId();
     }
 
-    public Ads findByUserID(long userID){
+    public Ad findByUserID(long userID){
         List<Ad> newAds = new ArrayList<>();
         newAds.add((Ad) DaoFactory.getAdsDao().all());
 
@@ -41,7 +46,7 @@ public class ListAdsDao implements Ads {
             }
         }
 
-        return (Ads) returnAds;
+        return (Ad) returnAds;
     }
 
     private List<Ad> generateAds() {
@@ -72,4 +77,26 @@ public class ListAdsDao implements Ads {
         ));
         return ads;
     }
+
+    private Ad extractAd(ResultSet rs) throws SQLException {
+        return new Ad(
+                rs.getLong("id"),
+                rs.getLong("user_id"),
+                rs.getString("title"),
+                rs.getString("description")
+        );
+    }
+    @Override
+    public Ad findByTitle(String search)
+    {
+        String query = "SELECT * FROM ads WHERE title LIKE ? ";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, search);
+            return (Ad) extractAd(stmt.executeQuery());
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding ads by search", e);
+        }
+    }
+
 }
