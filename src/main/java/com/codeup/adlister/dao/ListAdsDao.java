@@ -30,7 +30,7 @@ public class ListAdsDao implements Ads {
     }
 
     @Override
-    public void deleteAd(long id) {
+    public void delete(long id) {
         if (ads == null){
             ads = generateAds();
         }

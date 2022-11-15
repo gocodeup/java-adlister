@@ -12,7 +12,7 @@ public interface Ads
     Long insert(Ad ad);
 
 
-    void deleteAd(long id);
+    void delete(long id);
 
 
     //method for finding posts by userid
