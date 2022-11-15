@@ -16,6 +16,9 @@ public interface Ads
     void updateAd(Long id, String title, String description);
 
 
+    void delete(long id);
+
+
     //method for finding posts by userid
     List<Ad> findPostByUserId(Long userId);
 

@@ -34,8 +34,14 @@ public class ListAdsDao implements Ads {
 
     }
 
+    public void delete(long id) {
+        if (ads == null) {
+            ads = generateAds();
+        }
+    }
+
     public List<Ad> findPostByUserId(Long userId) {
-      return null;
+        return null;
     }
 
     @Override
@@ -43,31 +49,32 @@ public class ListAdsDao implements Ads {
         return null;
     }
 
+
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();
         ads.add(new Ad(
-            1,
-            1,
-            "playstation for sale",
-            "This is a slightly used playstation"
+                1,
+                1,
+                "playstation for sale",
+                "This is a slightly used playstation"
         ));
         ads.add(new Ad(
-            2,
-            1,
-            "Super Nintendo",
-            "Get your game on with this old-school classic!"
+                2,
+                1,
+                "Super Nintendo",
+                "Get your game on with this old-school classic!"
         ));
         ads.add(new Ad(
-            3,
-            2,
-            "Junior Java Developer Position",
-            "Minimum 7 years of experience required. You will be working in the scripting language for Java, JavaScript"
+                3,
+                2,
+                "Junior Java Developer Position",
+                "Minimum 7 years of experience required. You will be working in the scripting language for Java, JavaScript"
         ));
         ads.add(new Ad(
-            4,
-            2,
-            "JavaScript Developer needed",
-            "Must have strong Java skills"
+                4,
+                2,
+                "JavaScript Developer needed",
+                "Must have strong Java skills"
         ));
         return ads;
     }

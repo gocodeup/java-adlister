@@ -78,25 +78,38 @@ public class MySQLAdsDao implements Ads {
     }
 
 
-    public List<Ad> findPostByUserId(Long userId) {
+    public void delete(long id) {
         try {
-            String findQuery = "SELECT * FROM ads WHERE user_id = ?";
-            PreparedStatement stmt1 = connection.prepareStatement(findQuery);
-            stmt1.setLong(1, userId);
-            return createAdsFromResults(stmt1.executeQuery());
-        } catch (SQLException e) {
-            throw new RuntimeException("Error creating a new ad.", e);
-        }
+            String query = "DELETE FROM ads WHERE id = ?";
+            PreparedStatement ps = connection.prepareStatement(query);
+            ps.setLong(1, id);
+            ps.executeUpdate();
 
+        } catch (SQLException e) {
+            throw new RuntimeException("Error deleting ad.");
+        }
     }
 
     @Override
-    public Ad findById(long id) {
+    public List<Ad> findPostByUserId (Long userId){
+                try {
+                    String findQuery = "SELECT * FROM ads WHERE user_id = ?";
+                    PreparedStatement stmt1 = connection.prepareStatement(findQuery);
+                    stmt1.setLong(1, userId);
+                    return createAdsFromResults(stmt1.executeQuery());
+                } catch (SQLException e) {
+                    throw new RuntimeException("Error creating a new ad.", e);
+                }
+
+            }
+
+    @Override
+    public Ad findById ( long id){
         String query = String.format("SELECT * FROM ads WHERE id = %d", id);
         try {
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery(query);
-            if(rs.next()){
+            if (rs.next()) {
                 return extractAd(rs);
             }
             return null;
@@ -104,14 +117,13 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error retrieving all ads.", e);
         }
     }
-    
 
-    private Ad extractAd(ResultSet rs) throws SQLException {
+    private Ad extractAd (ResultSet rs) throws SQLException {
         return new Ad(
-            rs.getLong("id"),
-            rs.getLong("user_id"),
-            rs.getString("title"),
-            rs.getString("description")
+                rs.getLong("id"),
+                rs.getLong("user_id"),
+                rs.getString("title"),
+                rs.getString("description")
         );
     }
 
@@ -122,5 +134,6 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
+
 
 }
