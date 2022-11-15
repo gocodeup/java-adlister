@@ -16,6 +16,7 @@ public class MySQLUsersDao implements Users {
                 config.getUrl(),
                 config.getUser(),
                 config.getPassword()
+
             );
         } catch (SQLException e) {
             throw new RuntimeException("Error connecting to the database!", e);
@@ -34,6 +35,8 @@ public class MySQLUsersDao implements Users {
             throw new RuntimeException("Error finding a user by username", e);
         }
     }
+
+
 
     @Override
     public Long insert(User user) {
