@@ -17,7 +17,9 @@ public class LoginServlet extends HttpServlet {
         if (request.getSession().getAttribute("user") != null) {
             response.sendRedirect("/profile");
             return;
+
         }
+
         request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
     }
 
@@ -26,12 +28,9 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         User user = DaoFactory.getUsersDao().findByUsername(username);
 
-        if (user == null) {
-            response.sendRedirect("/login");
-            return;
-        }
-
         boolean validAttempt = Password.check(password, user.getPassword());
+
+
 
         if (validAttempt) {
             request.getSession().setAttribute("user", user);

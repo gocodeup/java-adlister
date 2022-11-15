@@ -23,6 +23,7 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+
     @Override
     public List<Ad> all() {
         PreparedStatement stmt = null;
@@ -53,6 +54,19 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public List<Ad> findPostByUserId(Long userId) {
+        try {
+            String findQuery = "SELECT * FROM ads WHERE user_id = ?";
+            PreparedStatement stmt1 = connection.prepareStatement(findQuery);
+            stmt1.setLong(1, userId);
+            return createAdsFromResults(stmt1.executeQuery());
+        } catch (SQLException e) {
+            throw new RuntimeException("Error creating a new ad.", e);
+        }
+
+    }
+
+    @Override
     public Ad findById(long id) {
         String query = String.format("SELECT * FROM ads WHERE id = %d", id);
         try {
@@ -66,6 +80,7 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error retrieving all ads.", e);
         }
     }
+    
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("id"),
