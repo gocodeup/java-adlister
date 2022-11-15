@@ -20,6 +20,7 @@ public class RegisterServlet extends HttpServlet {
         String username = request.getParameter("username");
         String email = request.getParameter("email");
         String password = request.getParameter("password");
+        System.out.println(password);
         String passwordConfirmation = request.getParameter("confirm_password");
 
         // validate input
@@ -32,6 +33,15 @@ public class RegisterServlet extends HttpServlet {
             response.sendRedirect("/register");
             return;
         }
+
+
+        // create and save a new user
+        User user = new User(username, email, password);
+        System.out.println(user.getPassword());
+        System.out.println(user.getEmail());
+        System.out.println(user.getUsername());
+        DaoFactory.getUsersDao().insert(user);
+        response.sendRedirect("/login");
 
         User userName = DaoFactory.getUsersDao().findByUsername(username);
 
@@ -50,11 +60,11 @@ public class RegisterServlet extends HttpServlet {
 
 
             // create and save a new user
-        if(valid) {
-            User user = new User(username, email, password);
-            DaoFactory.getUsersDao().insert(user);
-            response.sendRedirect("/login");
-        }
+       // if(valid) {
+       //     User user = new User(username, email, password);
+       //     DaoFactory.getUsersDao().insert(user);
+       //     response.sendRedirect("/login");
+       // }
 
     }
 

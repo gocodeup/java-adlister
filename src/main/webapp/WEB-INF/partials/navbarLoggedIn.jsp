@@ -6,10 +6,12 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="/login">Login</a></li>
-            <li><a href="/register">Register</a></li>
+            <li><a href="/logout">Logout</a></li>
+            <li><a href="/profile">Profile</a></li>
         </ul>
-<%--        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">--%>
-<%--        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>--%>
+        <ul class="nav navbar-nav navbar-left">
+            <li><a href="/ads/create">Create Ads</a></li>
+        </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
