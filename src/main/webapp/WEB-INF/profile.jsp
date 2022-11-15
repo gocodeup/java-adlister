@@ -10,15 +10,10 @@
 
 </head>
 <body>
-    <jsp:include page="/WEB-INF/partials/navbarLoggedIn.jsp" />
+    <jsp:include page="/WEB-INF/partials/navbarProf.jsp" />
 
     <div class="container">
         <h1>Welcome, ${sessionScope.user.username}!</h1>
     </div>
-
-    <div>
-
-    </div>
-
 </body>
 </html>
