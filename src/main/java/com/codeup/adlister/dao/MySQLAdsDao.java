@@ -121,19 +121,19 @@ public class MySQLAdsDao implements Ads {
 
 
 
- //********************************   FIND ADS  ****************************************************
+ //********************************   FIND All  ADS OWNED BY A User  ****************************************************
 
 
-    @Override
-    public Ad findAd(long userId, String title) {
-String query = "SELECT * FROM ads WHERE title = ? AND  user_id = ?";
+    public  List<Ad> findAd(long userId) {
+String query = "SELECT * FROM ads WHERE user_id = ?";
 
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.setString(1, title);
-            stmt.setLong(2, userId);
+
+            stmt.setLong(1, userId);
             ResultSet rs = stmt.executeQuery();
-        return  extractAd(rs);
+            return createAdsFromResults(rs);
+
 
 
         } catch (SQLException e) {
