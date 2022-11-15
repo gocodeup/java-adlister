@@ -15,10 +15,10 @@
         <h1>${sessionScope.ads}</h1>
 
         <c:forEach var="ad" items="${ads}">
-        <div class="User">
-            <h3>${ad.title}</h3>
-            <p>${ad.description}</p>
-        </div>
+            <div class="col-md-6">
+                <a href="/ad?id=${ad.id}"><h2>${ad.title}</h2></a>
+                <p>${ad.description}</p>
+            </div>
             </c:forEach>
     </div>
 
