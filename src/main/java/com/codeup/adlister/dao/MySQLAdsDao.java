@@ -40,6 +40,12 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+
+
+
+
+
+    //****************************INSERT AD*********************************
     @Override
     public Long insert(Ad ad) {
         try {
@@ -57,15 +63,19 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+
+
+    //************************UPDATE ADS********************************************
+
     @Override
     public void update(Ad ad) {
 
-            String query = "UPDATE ads" +
-                    " SET" +
-                    " title = ?," +
-                    " description = ?" +
+            String query = "UPDATE ads " +
+                    " SET " +
+                    " title = ?, " +
+                    " description = ? " +
 
-                    "WHERE title = " +ad.getTitle()+ "AND user_id ="+ ad.getUserId()+"";
+                    "WHERE title = " + ad.getTitle()+"";
 
 
         try {
@@ -74,7 +84,7 @@ public class MySQLAdsDao implements Ads {
             stmt.setString(2, ad.getDescription());
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
-            rs.next();
+
 
         } catch (SQLException e) {
             throw new RuntimeException("Error creating new user", e);
@@ -85,10 +95,16 @@ public class MySQLAdsDao implements Ads {
 
     }
 
+
+
+
+
+    //****************************DELETE ADS************************************************
+
     @Override
     public void delete(Ad ad) {
 
-        String query = "DELETE ads" +
+        String query = "DELETE ads " +
                 "WHERE title = " + ad.getTitle() + "";
 
         try {
@@ -105,6 +121,51 @@ public class MySQLAdsDao implements Ads {
 
 
     }
+
+
+
+ //********************************   FIND ADS  ****************************************************
+
+
+    @Override
+    public Ad findAd(long userId, String title) {
+String query = "SELECT * FROM ads WHERE title = ? AND  user_id = ?";
+
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, title);
+            stmt.setLong(2, userId);
+            ResultSet rs = stmt.executeQuery();
+        return  extractAd(rs);
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
+
+
+
+
+//****************************SEARCH AD BY TITLE**********************************
+    @Override
+    public List<Ad> searchAD(String tittle) {
+
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM ads WHERE title =? ");
+            stmt.setString(1,tittle);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+
+    }
+
+
+
+
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(

@@ -23,6 +23,8 @@ public class MySQLUsersDao implements Users {
     }
 
 
+
+//**************************FIND BY USERNAME**************************************
     @Override
     public User findByUsername(String username) {
         String query = "SELECT * FROM users WHERE username = ? LIMIT 1";
@@ -34,6 +36,11 @@ public class MySQLUsersDao implements Users {
             throw new RuntimeException("Error finding a user by username", e);
         }
     }
+
+
+
+
+
 
     @Override
     public Long insert(User user) {
@@ -52,12 +59,14 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+
+    //**********************UPDATE USER*********************************
     @Override
     public void update(User user) {
-        String query = "UPDATE users" +
-                " SET" +
+        String query = "UPDATE users " +
+                " SET " +
                 " username = ?," +
-                "  email = ?" +
+                "  email = ? " +
                 "  password = ?" +
                 "WHERE username = " + user.getUsername() + "";
 
@@ -77,16 +86,18 @@ public class MySQLUsersDao implements Users {
     }
 
 
+
+
+
+    //*******************************DELETE USER*********************************
     @Override
     public void delete(User user) {
-        String query = "DELETE users" +
+        String query = "DELETE users " +
                 "WHERE username = " + user.getUsername() + "";
 
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.executeUpdate();
-            ResultSet rs = stmt.getGeneratedKeys();
-            rs.next();
+           stmt.executeUpdate();
 
         } catch (SQLException e) {
             throw new RuntimeException("Error creating new user", e);
@@ -97,6 +108,10 @@ public class MySQLUsersDao implements Users {
 
 
     }
+
+
+
+
 
     private User extractUser(ResultSet rs) throws SQLException {
         if (!rs.next()) {

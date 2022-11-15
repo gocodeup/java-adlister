@@ -18,18 +18,19 @@ public class DeleteAdsServlet extends HttpServlet {
             response.sendRedirect("/login");
             return;
         }
-        request.getRequestDispatcher("/WEB-INF/ads/create.jsp")
+        request.getRequestDispatcher("/WEB-INF/ads/deleteAd.jsp")
                 .forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User user = (User) request.getSession().getAttribute("user");
-        Ad ad = new Ad(
-                user.getId(),
-                request.getParameter("title"),
-                request.getParameter("description")
-        );
-        DaoFactory.getAdsDao().insert(ad);
+        long userId = user.getId();
+
+        String title = request.getParameter("title");
+        Ad ad =  DaoFactory.getAdsDao().findAd(userId,title);  //FIND THE AD TO DELETE
+        DaoFactory.getAdsDao().delete(ad); // DELETE AD
         response.sendRedirect("/ads");
+
     }
 }
+
