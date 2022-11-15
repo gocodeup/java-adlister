@@ -53,11 +53,6 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public Ad findById(Long id) {
-        return null;
-    }
-
-    @Override
     public Ad findById(long id) {
         String query = String.format("SELECT * FROM ads WHERE id = %d", id);
         try {

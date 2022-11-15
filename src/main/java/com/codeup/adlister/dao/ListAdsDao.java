@@ -28,11 +28,6 @@ public class ListAdsDao implements Ads {
     }
 
     @Override
-    public Ad findById(Long id) {
-        return null;
-    }
-
-    @Override
     public Ad findById(long id) {
         return null;
     }
