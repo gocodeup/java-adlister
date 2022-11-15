@@ -6,6 +6,8 @@
     </jsp:include>
 </head>
 <body>
+    <jsp:include page="/WEB-INF/partials/navbar-create.jsp" />
+
     <div class="container">
         <h1>Create a new Ad</h1>
         <form action="/ads/create" method="post">

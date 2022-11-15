@@ -22,14 +22,26 @@ public class CreateAdServlet extends HttpServlet {
             .forward(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, IllegalStateException {
         User user = (User) request.getSession().getAttribute("user");
         Ad ad = new Ad(
             user.getId(),
             request.getParameter("title"),
             request.getParameter("description")
         );
+
+        String title = request.getParameter("title");
+        String description = request.getParameter("description");
+
+        boolean inputHasErrors = title.isEmpty() || description.isEmpty();
+
+        if (inputHasErrors) {
+            response.sendRedirect("/ads/create");
+            return;
+        }
         DaoFactory.getAdsDao().insert(ad);
         response.sendRedirect("/ads");
     }
 }
+
+
