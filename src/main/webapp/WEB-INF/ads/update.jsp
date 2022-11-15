@@ -16,6 +16,7 @@
   <div class="container">
     <h1>Edit Your Ad</h1>
     <form action="/ads/update" method="POST">
+      <input name="adId" value="${adId}" style="display: none">
       <div class="form-group">
         <label for="title">Title</label>
         <input id="title" name="title" class="form-control" type="text" required>

@@ -19,24 +19,24 @@ public class UpdateAdServlet extends HttpServlet {
             response.sendRedirect("/login");
             return;
         }
-        System.out.println(request.getParameter("id"));
+
+        request.setAttribute("adId", request.getParameter("id"));
         request.getRequestDispatcher("/WEB-INF/ads/update.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // Storing user input values from update form.
 
+        // Storing user input values from update form.
         String title = request.getParameter("title");
         String description = request.getParameter("description");
-        System.out.println(title);
-        System.out.println(description);
-        Long id = Long.valueOf(request.getParameter("id"));
-        System.out.println(id);
+        Long id = Long.valueOf(request.getParameter("adId"));
 
-        //TODO: Get id from ad.
-        // When submitting POST request, it currently returns the id as null.
+
+        // Using DAO factory to access our update method.
         DaoFactory.getAdsDao().updateAd(id, title, description);
 
+        // Redirecting user to ads page after submitting update form.
+        response.sendRedirect("/ads");
     }
 }
