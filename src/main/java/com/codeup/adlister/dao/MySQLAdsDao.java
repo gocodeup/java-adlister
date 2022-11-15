@@ -147,10 +147,11 @@ String query = "SELECT * FROM ads WHERE title = ? AND  user_id = ?";
     @Override
     public List<Ad> searchAD(String tittle) {
 
+String sql = "SELECT * FROM ads WHERE title LIKE ?";
         PreparedStatement stmt = null;
         try {
-            stmt = connection.prepareStatement("SELECT * FROM ads WHERE title =? ");
-            stmt.setString(1,tittle);
+            stmt = connection.prepareStatement(sql);
+            stmt.setString(1,"%" + tittle + "%");
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
         } catch (SQLException e) {

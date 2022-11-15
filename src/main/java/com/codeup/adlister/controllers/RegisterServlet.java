@@ -34,7 +34,7 @@ public class RegisterServlet extends HttpServlet {
             return;
         }
 
-<<<<<<< HEAD
+
         User userName = DaoFactory.getUsersDao().findByUsername(username);
 
         boolean valid = false;
@@ -58,32 +58,11 @@ public class RegisterServlet extends HttpServlet {
 
         }
 
-    }
 
-=======
 
         // create and save a new user
-        User user = new User(username, email, password);
-        System.out.println(user.getPassword());
-        System.out.println(user.getEmail());
-        System.out.println(user.getUsername());
-        DaoFactory.getUsersDao().insert(user);
-        response.sendRedirect("/login");
-
-        User userName = DaoFactory.getUsersDao().findByUsername(username);
 
 
-        boolean valid = false;
-
-        if(userName != null && username.equals(userName.getUsername())) {
-            request.setAttribute("usernameExists", "This username already exists.");
-            request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
-        } else if (!password.equals(passwordConfirmation)) {
-            request.setAttribute("passwordError", "The passwords do not match!");
-            request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
-        } else {
-            valid = true;
-        }
 
 
             // create and save a new user
@@ -96,5 +75,5 @@ public class RegisterServlet extends HttpServlet {
     }
 
 
-}
->>>>>>> master
+
+
