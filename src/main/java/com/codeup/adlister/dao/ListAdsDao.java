@@ -86,14 +86,35 @@ public class ListAdsDao implements Ads {
                 rs.getString("description")
         );
     }
+
+    private List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
+        List<Ad> ads = new ArrayList<>();
+        while (rs.next()) {
+            System.out.println("next result set");
+            ads.add(extractAd(rs));
+        }
+        return ads;
+    }
     @Override
-    public Ad findByTitle(String search)
+    public List<Ad> findByTitle(String search)
     {
         String query = "SELECT * FROM ads WHERE title LIKE ? ";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, search);
-            return (Ad) extractAd(stmt.executeQuery());
+            return createAdsFromResults(stmt.executeQuery());
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding ads by search", e);
+        }
+    }
+
+    public List<Ad> findByID(Long user_id)
+    {
+        String query = "SELECT * FROM ads WHERE user_id = ? ";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, user_id);
+            return createAdsFromResults(stmt.executeQuery());
         } catch (SQLException e) {
             throw new RuntimeException("Error finding ads by search", e);
         }

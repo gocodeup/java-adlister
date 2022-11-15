@@ -11,5 +11,8 @@ public interface Ads {
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
     Ad findByUserID(long userID);
-    Ad findByTitle(String search);
+    List<Ad> findByTitle(String search);
+
+    List<Ad> findByID(Long user_id);
+//    List<Ad> findByTitle(String search);
 }
