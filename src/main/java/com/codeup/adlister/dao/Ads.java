@@ -4,7 +4,8 @@ import com.codeup.adlister.models.Ad;
 
 import java.util.List;
 
-public interface Ads {
+public interface Ads
+{
     // get a list of all the ads
     List<Ad> all();
 
@@ -13,4 +14,11 @@ public interface Ads {
 
     // update exisiting ad
     void updateAd(Long id, String title, String description);
+
+
+    //method for finding posts by userid
+    List<Ad> findPostByUserId(Long userId);
+
+    Ad findById(long id);
+
 }

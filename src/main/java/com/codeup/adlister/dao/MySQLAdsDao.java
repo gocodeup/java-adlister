@@ -2,7 +2,6 @@ package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
-
 import javax.management.RuntimeErrorException;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -26,6 +25,7 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error connecting to the database!", e);
         }
     }
+
 
     @Override
     public List<Ad> all() {
@@ -77,6 +77,35 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+
+    public List<Ad> findPostByUserId(Long userId) {
+        try {
+            String findQuery = "SELECT * FROM ads WHERE user_id = ?";
+            PreparedStatement stmt1 = connection.prepareStatement(findQuery);
+            stmt1.setLong(1, userId);
+            return createAdsFromResults(stmt1.executeQuery());
+        } catch (SQLException e) {
+            throw new RuntimeException("Error creating a new ad.", e);
+        }
+
+    }
+
+    @Override
+    public Ad findById(long id) {
+        String query = String.format("SELECT * FROM ads WHERE id = %d", id);
+        try {
+            Statement stmt = connection.createStatement();
+            ResultSet rs = stmt.executeQuery(query);
+            if(rs.next()){
+                return extractAd(rs);
+            }
+            return null;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
+    
+
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("id"),
@@ -93,4 +122,5 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
+
 }
