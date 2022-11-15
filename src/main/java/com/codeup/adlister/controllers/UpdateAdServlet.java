@@ -25,10 +25,12 @@ public class UpdateAdServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User user = (User) request.getSession().getAttribute("user");
          long userId = user.getId();
+String title = request.getParameter("title");
+String description = request.getParameter("description");
 
-        String title = request.getParameter("title");
+
       Ad ad =  DaoFactory.getAdsDao().findAd(userId,title);  //FIND THE AD TO UPDATE
-        DaoFactory.getAdsDao().update(ad);    // UPDATE AD
+        DaoFactory.getAdsDao().update(ad,title,description);    // UPDATE AD
         response.sendRedirect("/ads");
 
     }
