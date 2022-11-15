@@ -55,32 +55,59 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    private Ad extractAd(ResultSet rs) throws SQLException {
-        return new Ad(
-            rs.getLong("id"),
-            rs.getLong("user_id"),
-            rs.getString("title"),
-            rs.getString("description")
-        );
+    public Ad findByUserID(long user_id)
+    {
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id = ? LIMIT 1");
+            stmt.setLong(1, user_id);
+            return (Ad) extractAd(stmt.executeQuery());
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding ads by user_id", e);
+        }
+    }
+    @Override
+    public Ad findByTitle(String search)
+    {
+        String query = "SELECT * FROM ads WHERE title = ? LIMIT 1";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, search);
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            System.out.println("Below is our search results");
+            return new Ad(
+                    rs.getLong("id"),
+                    rs.getLong("user_id"),
+                    rs.getString("title"),
+                    rs.getString("description")
+            );
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding ads by search", e);
+        }
     }
 
     private List<Ad> createAdsFromResults(ResultSet rs) throws SQLException {
         List<Ad> ads = new ArrayList<>();
         while (rs.next()) {
+            System.out.println("next result set");
             ads.add(extractAd(rs));
         }
         return ads;
     }
-
-    public Ads findByUserID(long user_id)
-    {
-        String query = "SELECT * FROM ads WHERE user_id = ? LIMIT 1";
-        try {
-            PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.setLong(1, user_id);
-            return (Ads) extractAd(stmt.executeQuery());
-        } catch (SQLException e) {
-            throw new RuntimeException("Error finding ads by user_id", e);
-        }
+    private Ad extractAd(ResultSet rs) throws SQLException {
+//        if (! rs.next()) {
+//            return null;
+//        }
+            System.out.println("Current result set " + rs);
+            System.out.println("result set id: " + rs.getLong("id"));
+            System.out.println("result set title: " + rs.getString("title"));
+            return new Ad(
+                    rs.getLong("id"),
+                    rs.getLong("user_id"),
+                    rs.getString("title"),
+                    rs.getString("description")
+            );
+//        }
     }
 }
