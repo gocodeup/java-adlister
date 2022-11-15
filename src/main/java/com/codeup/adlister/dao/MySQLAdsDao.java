@@ -67,23 +67,40 @@ public class MySQLAdsDao implements Ads {
         }
     }
     @Override
-    public Ad findByTitle(String search)
+    public List<Ad> findByTitle(String search)
     {
-        String query = "SELECT * FROM ads WHERE title = ? LIMIT 1";
+        String query = "SELECT * FROM ads WHERE title = ?";
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, search);
             ResultSet rs = stmt.executeQuery();
             rs.next();
             System.out.println("Below is our search results");
-            return new Ad(
-                    rs.getLong("id"),
-                    rs.getLong("user_id"),
-                    rs.getString("title"),
-                    rs.getString("description")
-            );
+//            return new Ad(
+//                    rs.getLong("id"),
+//                    rs.getLong("user_id"),
+//                    rs.getString("title"),
+//                    rs.getString("description")
+//            );
+            return createAdsFromResults(stmt.executeQuery());
         } catch (SQLException e) {
-            throw new RuntimeException("Error finding ads by search", e);
+//            throw new RuntimeException("Error finding ads by search", e);
+            throw new RuntimeException(e.toString());
+        }
+    }
+
+    @Override
+    public List<Ad> findByID(Long user_id) {
+        String query = "SELECT * FROM ads WHERE user_id = ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, user_id);
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            return createAdsFromResults(stmt.executeQuery());
+        } catch (SQLException e) {
+//            throw new RuntimeException("Error finding ads by search", e);
+            throw new RuntimeException(e.toString());
         }
     }
 
@@ -95,6 +112,7 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
+
     private Ad extractAd(ResultSet rs) throws SQLException {
 //        if (! rs.next()) {
 //            return null;
