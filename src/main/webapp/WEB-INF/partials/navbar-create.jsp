@@ -4,6 +4,7 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="/ads">Adlister</a>
         </div>
+
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>

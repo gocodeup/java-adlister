@@ -6,7 +6,7 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
             <li><a href="/ads/create">Create Ad</a></li>
-            <li><a href="/login">Login</a></li>
+            <li><a href="/login">Profile</a></li>
         </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
