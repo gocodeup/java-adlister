@@ -12,6 +12,7 @@
 <div class="container">
     <h1>Here Are all the ads!</h1>
 
+    <jsp:useBean id="ads" scope="request" type="java.util.List"/>
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
             <h2>${ad.title}</h2>
