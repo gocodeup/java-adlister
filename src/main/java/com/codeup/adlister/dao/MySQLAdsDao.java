@@ -2,11 +2,9 @@ package com.codeup.adlister.dao;
 
 import com.codeup.adlister.Config;
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -39,6 +37,12 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+
+
+
+
+
+    //****************************INSERT AD*********************************
     @Override
     public Long insert(Ad ad) {
         try {
@@ -55,6 +59,111 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error creating a new ad.", e);
         }
     }
+
+
+
+    //************************UPDATE ADS********************************************
+
+    @Override
+    public void update(Ad ad, String title,String description) {
+
+            String query = "UPDATE ads " +
+                    " SET " +
+                    " title = ?, " +
+                    " description = ? " +
+
+                    "WHERE title = " + ad.getTitle()+"";
+
+
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, title);
+            stmt.setString(2, description);
+            stmt.executeUpdate();
+            ResultSet rs = stmt.getGeneratedKeys();
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error creating new user", e);
+
+        }
+
+
+
+    }
+
+
+
+
+
+    //****************************DELETE ADS************************************************
+
+    @Override
+    public void delete(Ad ad) {
+
+        String query = "DELETE ads " +
+                "WHERE title = " + ad.getTitle() + "";
+
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.executeUpdate();
+            ResultSet rs = stmt.getGeneratedKeys();
+            rs.next();
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error creating new user", e);
+
+        }
+
+
+
+    }
+
+
+
+ //********************************   FIND ADS  ****************************************************
+
+
+    @Override
+    public Ad findAd(long userId, String title) {
+String query = "SELECT * FROM ads WHERE title = ? AND  user_id = ?";
+
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, title);
+            stmt.setLong(2, userId);
+            ResultSet rs = stmt.executeQuery();
+        return  extractAd(rs);
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
+
+
+
+
+//****************************SEARCH AD BY TITLE**********************************
+    @Override
+    public List<Ad> searchAD(String tittle) {
+
+String sql = "SELECT * FROM ads WHERE title LIKE ?";
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement(sql);
+            stmt.setString(1,"%" + tittle + "%");
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+
+    }
+
+
+
+
 
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(

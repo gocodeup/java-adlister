@@ -51,15 +51,39 @@ public class RegisterServlet extends HttpServlet {
 
 //             create and save a new user
 //             if(valid) {
+<<<<<<< HEAD
         User user = new User(username, email, password);
         DaoFactory.getUsersDao().insert(user);
         response.sendRedirect("/login");
 //             }
+=======
+                 User user = new User(username, email, password);
+                 DaoFactory.getUsersDao().insert(user);
+                 response.sendRedirect("/login");
+//             }
+
+        }
+>>>>>>> fe7c836abce2643dcc2c5cd3a0d83e995b916298
+
+
+
+        // create and save a new user
+
+
+
+
+            // create and save a new user
+       // if(valid) {
+       //     User user = new User(username, email, password);
+       //     DaoFactory.getUsersDao().insert(user);
+       //     response.sendRedirect("/login");
+       // }
 
     }
 
 
 
+<<<<<<< HEAD
     // create and save a new user
 
 
@@ -73,4 +97,6 @@ public class RegisterServlet extends HttpServlet {
     // }
 
 }
+=======
+>>>>>>> fe7c836abce2643dcc2c5cd3a0d83e995b916298
 
