@@ -65,7 +65,7 @@ public class MySQLUsersDao implements Users {
 
     //**********************UPDATE USER*********************************
     @Override
-    public void update(User user) {
+    public void update(User user,String name,String email,String password) {
         String query = "UPDATE users " +
                 " SET " +
                 " username = ?," +
@@ -75,9 +75,9 @@ public class MySQLUsersDao implements Users {
 
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.setString(1, user.getUsername());
-            stmt.setString(2, user.getEmail());
-            stmt.setString(3, user.getPassword());
+            stmt.setString(1,name );
+            stmt.setString(2,email);
+            stmt.setString(3, password);
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
