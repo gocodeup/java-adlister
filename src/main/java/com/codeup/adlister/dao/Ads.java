@@ -13,6 +13,6 @@ public interface Ads {
     Ad findByUserID(long userID);
     List<Ad> findByTitle(String search);
 
-    List<Ad> findByID(Long user_id);
+    Ad findByID(Long user_id);
 //    List<Ad> findByTitle(String search);
 }
