@@ -30,20 +30,25 @@
                 <p class="card-text">${ad.description}</p>
 
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-6 mt-4">
                         <form method="get" action="updateAd"  >
 
-                        <label for="edit"></label>
-                        <input id="edit" class="invisible" type="text" name="title" value="${ad.title}">
+                        <label for="update"></label>
+                            <input id="update" type="text" class="invisible" name="description" value="${ad.description}">
+                            <input type="text" class="invisible" name="title" value="${ad.title}">
+
+                            <input type="text" class="invisible" name="id" value="${ad.id}">
                             <button class="btn btn-primary" type="submit" >Update Ad</button>
                         </form>
                     </div>
 
 
-                    <div class="col-6">
+                    <div class="col-6 mt-4">
                         <form method="post" action="deleteAd" >
                         <label for="delete"></label>
-                        <input id="delete" class="invisible" type="text" name="title" value="${ad.title}">
+                            <input  type="text" class="invisible" name="description" value="${ad.description}">
+
+                            <input id="delete" type="text" class="invisible" name="id" value="${ad.id}">
 
                             <button class="btn btn-primary" type="submit" >Delete Ad</button>
                         </form>

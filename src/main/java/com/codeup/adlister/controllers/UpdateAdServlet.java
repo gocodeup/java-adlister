@@ -14,9 +14,14 @@ import java.io.IOException;
 @WebServlet(name = "controllers.UpdateAdServlet", urlPatterns = "/updateAd")
 public class UpdateAdServlet extends HttpServlet {
     String titleOld;
+    long id;
+  String oldDescription;
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
      titleOld = request.getParameter("title");
+     id = Long.parseLong(request.getParameter("id"));
+        oldDescription = request.getParameter("description");
+
 
         request.getRequestDispatcher("/WEB-INF/ads/updateAd.jsp")
                 .forward(request, response);
@@ -26,10 +31,17 @@ public class UpdateAdServlet extends HttpServlet {
         User user = (User) request.getSession().getAttribute("user");
 
 String title = request.getParameter("title");
-String description = request.getParameter("description");
+        if( title.isEmpty()){title = titleOld;}
 
-        System.out.println(titleOld);
-      Ad ad =  DaoFactory.getAdsDao().ByTitle(titleOld);  //FIND THE AD TO UPDATE
+String description =  request.getParameter("description");
+        if( description.isEmpty()){ description = oldDescription;}
+
+
+
+
+        System.out.println(id);
+        System.out.println(oldDescription);
+      Ad ad =  DaoFactory.getAdsDao().ById(id);  //FIND THE AD TO UPDATE
         DaoFactory.getAdsDao().update(ad,title,description);    // UPDATE AD
         response.sendRedirect("/ads");
 

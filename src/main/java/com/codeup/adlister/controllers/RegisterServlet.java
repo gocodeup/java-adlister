@@ -52,14 +52,13 @@ public class RegisterServlet extends HttpServlet {
             request.setAttribute("passwordMismatch", "Please confirm your password you re-entered is correct.");
             request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
 
-        else {
-                correctInfo = true;
-            }
+
+        } else {
+            correctInfo = true;
         }
     }
-
-
 }
+
 
 
 

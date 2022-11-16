@@ -96,15 +96,15 @@ public class MySQLAdsDao implements Ads {
 
 
 
-    //**********************Find ad by the ad id to delete****************************
+    //**********************Find ad by id to delete****************************
 
-    public Ad ByTitle(String title) {
+    public Ad ById(long id) {
 
-        String sql = "SELECT * FROM ads WHERE title LIKE ?";
+        String sql = "SELECT * FROM ads WHERE id = ?";
         PreparedStatement stmt = null;
         try {
             stmt = connection.prepareStatement(sql);
-            stmt.setString(1,"%"+title+"%");
+            stmt.setLong(1,id);
             ResultSet rs = stmt.executeQuery();
             List<Ad> ad = createAdsFromResults(rs);
 

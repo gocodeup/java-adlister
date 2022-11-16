@@ -16,7 +16,7 @@ public interface Ads {
 
 
 
-   Ad ByTitle(String title);
+   Ad ById(long id);
 
     void delete(Ad ad);
 

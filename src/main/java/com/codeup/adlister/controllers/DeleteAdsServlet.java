@@ -17,10 +17,10 @@ public class DeleteAdsServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
-            String title = (String) request.getParameter("title");
-            System.out.println(title);
+            long id = Long.parseLong( request.getParameter("id"));
+            System.out.println(id);
 
-            Ad ad = DaoFactory.getAdsDao().ByTitle(title);  //FIND THE AD TO DELETE
+            Ad ad = DaoFactory.getAdsDao().ById(id);  //FIND THE AD TO DELETE
             DaoFactory.getAdsDao().delete(ad); // DELETE AD
             response.sendRedirect("/ads");
 
