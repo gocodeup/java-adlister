@@ -35,8 +35,6 @@ public class RegisterServlet extends HttpServlet {
 //        }
 
 
-
-
         User userName = DaoFactory.getUsersDao().findByUsername(username);
         User emailTest = DaoFactory.getUsersDao().findByEmail(email);
 
@@ -55,14 +53,13 @@ public class RegisterServlet extends HttpServlet {
             request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
 
         else {
-            correctInfo = true;
+                correctInfo = true;
+            }
         }
     }
+
+
 }
-
-
-
-
 
 
 
