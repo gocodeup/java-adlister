@@ -65,7 +65,7 @@ public class MySQLAdsDao implements Ads {
     //************************UPDATE ADS********************************************
 
     @Override
-    public void update(Ad ad) {
+    public void update(Ad ad, String title,String description) {
 
             String query = "UPDATE ads " +
                     " SET " +
@@ -77,8 +77,8 @@ public class MySQLAdsDao implements Ads {
 
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.setString(1, ad.getTitle());
-            stmt.setString(2, ad.getDescription());
+            stmt.setString(1, title);
+            stmt.setString(2, description);
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
 
@@ -148,10 +148,11 @@ String query = "SELECT * FROM ads WHERE title = ? AND  user_id = ?";
     @Override
     public List<Ad> searchAD(String tittle) {
 
+String sql = "SELECT * FROM ads WHERE title LIKE ?";
         PreparedStatement stmt = null;
         try {
-            stmt = connection.prepareStatement("SELECT * FROM ads WHERE title =? ");
-            stmt.setString(1,tittle);
+            stmt = connection.prepareStatement(sql);
+            stmt.setString(1,"%" + tittle + "%");
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
         } catch (SQLException e) {
@@ -180,4 +181,5 @@ String query = "SELECT * FROM ads WHERE title = ? AND  user_id = ?";
         }
         return ads;
     }
+
 }

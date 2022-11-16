@@ -24,49 +24,49 @@ public class RegisterServlet extends HttpServlet {
         String passwordConfirmation = request.getParameter("confirm_password");
 
         // validate input
-        boolean inputHasErrors = username.isEmpty()
-            || email.isEmpty()
-            || password.isEmpty()
-            || (! password.equals(passwordConfirmation));
+//        boolean inputHasErrors = username.isEmpty()
+//                || email.isEmpty()
+//                || password.isEmpty()
+//                || (!password.equals(passwordConfirmation));
+//
+//        if (inputHasErrors) {
+//            response.sendRedirect("/register");
+//            return;
+//        }
 
-        if (inputHasErrors) {
-            response.sendRedirect("/register");
-            return;
-        }
-
-
-        // create and save a new user
-        User user = new User(username, email, password);
-        System.out.println(user.getPassword());
-        System.out.println(user.getEmail());
-        System.out.println(user.getUsername());
-        DaoFactory.getUsersDao().insert(user);
-        response.sendRedirect("/login");
 
         User userName = DaoFactory.getUsersDao().findByUsername(username);
+        User emailTest = DaoFactory.getUsersDao().findByEmail(email);
 
-
-        boolean valid = false;
-
-        if(userName != null && username.equals(userName.getUsername())) {
-            request.setAttribute("usernameExists", "This username already exists.");
+        boolean correctInfo = false;
+        if (userName != null && username.equals(userName.getUsername())) {
+            request.setAttribute("usernameExists", "This username is already in use, please try another.");
+            request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
+        } else if (!email.contains("@")) {
+            request.setAttribute("emailError", "You need to enter a valid email address!");
+            request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
+        } else if (emailTest != null && email.equals(emailTest.getEmail())) {
+            request.setAttribute("emailExists", "The email you entered already exists.");
             request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
         } else if (!password.equals(passwordConfirmation)) {
-            request.setAttribute("passwordError", "The passwords do not match!");
+            request.setAttribute("passwordMismatch", "Please confirm your password you re-entered is correct.");
             request.getRequestDispatcher("/WEB-INF/register.jsp").forward(request, response);
-        } else {
-            valid = true;
+
+        else {
+                correctInfo = true;
+            }
         }
-
-
-            // create and save a new user
-       // if(valid) {
-       //     User user = new User(username, email, password);
-       //     DaoFactory.getUsersDao().insert(user);
-       //     response.sendRedirect("/login");
-       // }
-
     }
 
 
 }
+
+
+
+
+
+
+
+
+
+

@@ -46,6 +46,8 @@ public class MySQLUsersDao implements Users {
 
 
 
+
+
     @Override
     public Long insert(User user) {
         String query = "INSERT INTO users(username, email, password) VALUES (?, ?, ?)";
@@ -66,7 +68,7 @@ public class MySQLUsersDao implements Users {
 
     //**********************UPDATE USER*********************************
     @Override
-    public void update(User user) {
+    public void update(User user,String name,String email,String password) {
         String query = "UPDATE users " +
                 " SET " +
                 " username = ?," +
@@ -76,9 +78,9 @@ public class MySQLUsersDao implements Users {
 
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.setString(1, user.getUsername());
-            stmt.setString(2, user.getEmail());
-            stmt.setString(3, user.getPassword());
+            stmt.setString(1,name );
+            stmt.setString(2,email);
+            stmt.setString(3, password);
             stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
             rs.next();
@@ -113,8 +115,20 @@ public class MySQLUsersDao implements Users {
 
     }
 
+    @Override
+    public User findByEmail(String email) {
+        String query = "SELECT * FROM users WHERE email = ? LIMIT 1";
+        try {
+            System.out.println(email);
+            System.out.println(query);
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, email);
+            return extractUser(stmt.executeQuery());
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding a user by username", e);
+        }
 
-
+    }
 
 
     private User extractUser(ResultSet rs) throws SQLException {
