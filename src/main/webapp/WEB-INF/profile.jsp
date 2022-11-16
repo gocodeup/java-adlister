@@ -23,6 +23,12 @@
                 <input type="hidden" name="description" value="${ad.title}">
                 <button type="submit">UPDATE</button>
             </form>
+
+            <form method="get" action="/profile/delete">
+                <input type="hidden" name="id" value="${ad.id}">
+                <button type="submit">DELETE</button>
+            </form>
+
         </div>
     </c:forEach>
 
