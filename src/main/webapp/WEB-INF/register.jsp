@@ -22,11 +22,26 @@
                 <label for="email">Email</label>
                 <input id="email" name="email" class="form-control" type="text">
             </div>
+            <div>
+                <script>
+                    confirm("")
+                </script>
+                <p style="color: red">
+                    <c:out value="${emailError}"></c:out>
+                </p>
+                <p style="color: red">
+                    <c:out value="${emailExists}"></c:out>
+                </p>
 
+            </div>
             <div class="form-group">
                 <label for="password">Password</label>
                 <input id="password" name="password" class="form-control" type="password">
             </div>
+
+            <p style="color: red">
+                <c:out value="${passwordMismatch}"></c:out>
+            </p>
             <div class="form-group">
                 <label for="confirm_password">Confirm Password</label>
                 <input id="confirm_password" name="confirm_password" class="form-control" type="password">

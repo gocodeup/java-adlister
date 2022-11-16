@@ -1,3 +1,5 @@
+
+
 package com.codeup.adlister.controllers;
 import com.codeup.adlister.dao.DaoFactory;
 
@@ -14,7 +16,7 @@ public class SearchServlet extends HttpServlet {
 
         String search = request.getParameter("search");
         System.out.println(search);
-       // String wilSearch = "%"+search+"%";
+        // String wilSearch = "%"+search+"%";
         request.setAttribute("ads", DaoFactory.getAdsDao().searchAD(search));
         request.getRequestDispatcher("/WEB-INF/ads/searchAds.jsp").forward(request, response);
     }

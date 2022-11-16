@@ -10,11 +10,21 @@ public interface Ads {
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
 
-   void update(Ad ad,String title,String description);
+
+    void update(Ad ad,String title,String description);
+
+
+
+
+   Ad ByTitle(String title);
 
     void delete(Ad ad);
 
-    Ad findAd(long userId, String title);
+     List<Ad> findAd(long userId);
 
     List<Ad> searchAD(String tittle);
+
 }
+
+
+

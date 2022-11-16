@@ -11,6 +11,7 @@
 
 <div class="container">
     <h1 class="text-center">Here Are all the ads!</h1>
+<<<<<<< HEAD
     <div>
         <div class="ms-4 row">
             <br>
@@ -23,6 +24,18 @@
                         <a href="#" class="card-link">Card link</a>
                         <a href="#" class="card-link">Another link</a>
                     </div>
+=======
+
+    <c:forEach var="ad" items="${ads}">
+
+            <div class="card text-center" style="width: 18rem;border:5px solid cornflowerblue">
+                <div class="card-body">
+                    <h5 class="card-title">${ad.title}</h5>
+                    <p class="card-text">${ad.description}</p>
+
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+>>>>>>> refs/remotes/origin/master
                 </div>
             </c:forEach>
             <br>

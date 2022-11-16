@@ -11,25 +11,25 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "controllers.UpdateAdServlet", urlPatterns = "/ads/updateAd")
+@WebServlet(name = "controllers.UpdateAdServlet", urlPatterns = "/updateAd")
 public class UpdateAdServlet extends HttpServlet {
+    String titleOld;
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if (request.getSession().getAttribute("user") == null) {
-            response.sendRedirect("/login");
-            return;
-        }
+
+     titleOld = request.getParameter("title");
+
         request.getRequestDispatcher("/WEB-INF/ads/updateAd.jsp")
                 .forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User user = (User) request.getSession().getAttribute("user");
-         long userId = user.getId();
+
 String title = request.getParameter("title");
 String description = request.getParameter("description");
 
-
-      Ad ad =  DaoFactory.getAdsDao().findAd(userId,title);  //FIND THE AD TO UPDATE
+        System.out.println(titleOld);
+      Ad ad =  DaoFactory.getAdsDao().ByTitle(titleOld);  //FIND THE AD TO UPDATE
         DaoFactory.getAdsDao().update(ad,title,description);    // UPDATE AD
         response.sendRedirect("/ads");
 

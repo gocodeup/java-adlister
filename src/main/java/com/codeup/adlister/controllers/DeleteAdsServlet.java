@@ -11,26 +11,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "controllers.DeleteAdsServlet", urlPatterns = "/ads/deleteAds")
+@WebServlet(name = "controllers.DeleteAdsServlet", urlPatterns = "/deleteAd")
 public class DeleteAdsServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if (request.getSession().getAttribute("user") == null) {
-            response.sendRedirect("/login");
-            return;
-        }
-        request.getRequestDispatcher("/WEB-INF/ads/deleteAd.jsp")
-                .forward(request, response);
-    }
+
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        User user = (User) request.getSession().getAttribute("user");
-        long userId = user.getId();
 
-        String title = request.getParameter("title");
-        Ad ad =  DaoFactory.getAdsDao().findAd(userId,title);  //FIND THE AD TO DELETE
-        DaoFactory.getAdsDao().delete(ad); // DELETE AD
-        response.sendRedirect("/ads");
+            String title = (String) request.getParameter("title");
+            System.out.println(title);
+
+            Ad ad = DaoFactory.getAdsDao().ByTitle(title);  //FIND THE AD TO DELETE
+            DaoFactory.getAdsDao().delete(ad); // DELETE AD
+            response.sendRedirect("/ads");
+
 
     }
 }
-
