@@ -19,8 +19,12 @@
                 <a href="/ad?id=${ad.id}"><h2>${ad.title}</h2></a>
                 <p>${ad.description}</p>
 
-                <form action="/ads/delete" method="POST">
-                    <button>Delete Ad</button>
+                <a href="/ads/update?id=${ad.id}">
+                    <button class="btn btn-primary">Update Ad</button>
+                </a>
+
+                <form action="/ads/delete" method="POST" class="mt-">
+                    <button class="btn btn-danger">Delete Ad</button>
                     <input type="hidden" name="id" value="${ad.id}">
                 </form>
 
