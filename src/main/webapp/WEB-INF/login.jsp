@@ -17,10 +17,14 @@
                 <label for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text">
             </div>
+
             <div class="form-group">
                 <label for="password">Password</label>
                 <input id="password" name="password" class="form-control" type="password">
             </div>
+            <c:if test="${password}">
+                <small>Incorrect Password</small>
+            </c:if>
             <input type="submit" class="btn btn-primary btn-block" value="Log In">
         </form>
     </div>
