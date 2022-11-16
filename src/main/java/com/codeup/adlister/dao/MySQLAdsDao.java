@@ -55,13 +55,13 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
-    public Ad findByUserID(long user_id)
+    public List<Ad> findByUserID(long user_id)
     {
         PreparedStatement stmt = null;
         try {
-            stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id = ? LIMIT 1");
+            stmt = connection.prepareStatement("SELECT * FROM ads WHERE user_id = ?");
             stmt.setLong(1, user_id);
-            return (Ad) extractAd(stmt.executeQuery());
+            return createAdsFromResults(stmt.executeQuery());
         } catch (SQLException e) {
             throw new RuntimeException("Error finding ads by user_id", e);
         }
@@ -100,6 +100,24 @@ public class MySQLAdsDao implements Ads {
             return extractAd(rs);
         } catch (SQLException e) {
             throw new RuntimeException(e.toString());
+        }
+    }
+
+    @Override
+    public void updateAd(Long ad_id, String title, String description)
+    {
+        try
+        {
+            String query = "UPDATE ads SET title = ?, description = ? WHERE id = ?";
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, title);
+            stmt.setString(2, description);
+            stmt.setLong(3, ad_id);
+            stmt.executeUpdate();
+        }
+        catch (SQLException e)
+        {
+            throw new RuntimeException("Unable to update ad", e);
         }
     }
 
