@@ -31,6 +31,7 @@ public class MySQLAdsDao implements Ads {
         try {
             stmt = connection.prepareStatement("SELECT * FROM ads");
             ResultSet rs = stmt.executeQuery();
+
             return createAdsFromResults(rs);
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving all ads.", e);
@@ -72,24 +73,49 @@ public class MySQLAdsDao implements Ads {
                     " title = ?, " +
                     " description = ? " +
 
-                    "WHERE title = " + ad.getTitle()+"";
+                    "WHERE title = ?";
 
 
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setString(1, title);
             stmt.setString(2, description);
+            stmt.setString(3    , ad.getTitle());
+
             stmt.executeUpdate();
-            ResultSet rs = stmt.getGeneratedKeys();
+
 
 
         } catch (SQLException e) {
-            throw new RuntimeException("Error creating new user", e);
+            throw new RuntimeException("Error updating Ad", e);
 
         }
 
 
 
+    }
+
+
+
+    //**********************Find ad by the ad id to delete****************************
+
+    public Ad ByTitle(String title) {
+
+        String sql = "SELECT * FROM ads WHERE title LIKE ?";
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement(sql);
+            stmt.setString(1,"%"+title+"%");
+            ResultSet rs = stmt.executeQuery();
+            List<Ad> ad = createAdsFromResults(rs);
+
+return ad.get(0);
+
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
     }
 
 
@@ -101,17 +127,17 @@ public class MySQLAdsDao implements Ads {
     @Override
     public void delete(Ad ad) {
 
-        String query = "DELETE ads " +
-                "WHERE title = " + ad.getTitle() + "";
+        String query = "DELETE FROM ads WHERE title = ? ";
 
+       PreparedStatement stmt = null;
         try {
-            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt = connection.prepareStatement(query);
+            stmt.setString(1,ad.getTitle());
+        
             stmt.executeUpdate();
-            ResultSet rs = stmt.getGeneratedKeys();
-            rs.next();
 
         } catch (SQLException e) {
-            throw new RuntimeException("Error creating new user", e);
+            throw new RuntimeException("Error deleting ad", e);
 
         }
 
@@ -121,19 +147,19 @@ public class MySQLAdsDao implements Ads {
 
 
 
- //********************************   FIND ADS  ****************************************************
+ //********************************   FIND All  ADS OWNED BY A User  ****************************************************
 
 
-    @Override
-    public Ad findAd(long userId, String title) {
-String query = "SELECT * FROM ads WHERE title = ? AND  user_id = ?";
+    public  List<Ad> findAd(long userId) {
+String query = "SELECT * FROM ads WHERE user_id = ?";
 
         try {
             PreparedStatement stmt = connection.prepareStatement(query);
-            stmt.setString(1, title);
-            stmt.setLong(2, userId);
+
+            stmt.setLong(1, userId);
             ResultSet rs = stmt.executeQuery();
-        return  extractAd(rs);
+            return createAdsFromResults(rs);
+
 
 
         } catch (SQLException e) {

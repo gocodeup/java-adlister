@@ -10,7 +10,7 @@
 <jsp:include page="partials/navbar.jsp" />
 <div class="container">
   <h1>Please fill in your information.</h1>
-  <form action="/updateUser" method="post">
+  <form action="updateUser" method="post">
     <div class="form-group">
       <label for="username">New Username</label>
       <input id="username" name="username" class="form-control" type="text">

@@ -32,14 +32,19 @@ public class ListAdsDao implements Ads {
 
     }
 
+    @Override
+    public Ad ByTitle(String title) {
+        return null;
+    }
+
 
     @Override
     public void delete(Ad ad) {
 
     }
 
-    @Override
-    public Ad findAd(long userId, String title) {
+
+    public List<Ad>  findAd(long userId) {
         return null;
     }
 
