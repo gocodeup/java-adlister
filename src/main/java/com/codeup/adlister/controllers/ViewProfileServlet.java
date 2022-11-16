@@ -14,16 +14,17 @@ import java.io.IOException;
 @WebServlet(name = "controllers.ViewProfileServlet", urlPatterns = "/profile")
 public class ViewProfileServlet extends HttpServlet {
     long userId;
+    String username;
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+HttpSession session = request.getSession();
 
-
-        if (request.getSession().getAttribute("user") == null) {
+        if (session.getAttribute("user") == null) {
             response.sendRedirect("/login");
             return;
         }
-        HttpSession session = request.getSession();
-        User user = session.setAttribute("user",user);
-        userId = user.getId();
+
+        String username = (String) session.getAttribute("username");
+        userId = (long) session.getAttribute("userId");
         request.setAttribute("ads", DaoFactory.getAdsDao().findAd(userId));
         request.getRequestDispatcher("/WEB-INF/profile.jsp").forward(request, response);
     }
