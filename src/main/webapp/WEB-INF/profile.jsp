@@ -28,7 +28,7 @@
 
                         <label for="edit"></label>
                         <input id="edit" class="invisible" type="text" name="title" value="${ad.title}">
-                            <button class="btn btn-primary" type="submit" >Edit Ad</button>
+                            <button class="btn btn-primary" type="submit" >Update Ad</button>
                         </form>
                     </div>
 
