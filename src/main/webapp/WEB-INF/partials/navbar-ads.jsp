@@ -4,9 +4,9 @@
         <div class="navbar-header">
             <a class="navbar-brand" href="/ads">Adlister</a>
         </div>
-        <form action="/ads" method="post">
-            <div class="form-group">
-                <input id="search" name="search" class="form-control" type="text" placeholder="Search Ads">
+        <form action="/ads" method="post" class="w-50">
+            <div class="form-group w-50">
+                <input id="search" name="search" class="w-50 form-control" type="text" placeholder="Search Ads">
             </div>
         </form>
         <ul class="nav navbar-nav navbar-right">

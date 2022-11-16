@@ -99,7 +99,6 @@ public class MySQLAdsDao implements Ads {
             rs.next();
             return createAdsFromResults(stmt.executeQuery());
         } catch (SQLException e) {
-//            throw new RuntimeException("Error finding ads by search", e);
             throw new RuntimeException(e.toString());
         }
     }
@@ -114,9 +113,7 @@ public class MySQLAdsDao implements Ads {
     }
 
     private Ad extractAd(ResultSet rs) throws SQLException {
-//        if (! rs.next()) {
-//            return null;
-//        }
+
             System.out.println("Current result set " + rs);
             System.out.println("result set id: " + rs.getLong("id"));
             System.out.println("result set title: " + rs.getString("title"));
@@ -126,6 +123,5 @@ public class MySQLAdsDao implements Ads {
                     rs.getString("title"),
                     rs.getString("description")
             );
-//        }
     }
 }
