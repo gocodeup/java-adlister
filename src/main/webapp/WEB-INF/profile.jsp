@@ -12,6 +12,9 @@
 
     <div class="container">
         <h1>Welcome, ${sessionScope.user.username}!</h1>
+        <a href="/profile/update?userId=${user.id}">
+            <button class="btn btn-default">Update profile</button>
+        </a>
         <h1>${sessionScope.ads}</h1>
 
         <c:forEach var="ad" items="${ads}">
