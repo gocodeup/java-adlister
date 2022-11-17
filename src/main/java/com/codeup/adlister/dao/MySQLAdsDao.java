@@ -39,6 +39,8 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+
+
     @Override
     public Long insert(Ad ad) {
         try {
@@ -91,6 +93,20 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public List<Ad> search(String title){
+        try {
+            String searchQuery = "SELECT * FROM ads WHERE title LIKE CONCAT('%',?,'%')";
+            PreparedStatement stmt = connection.prepareStatement(searchQuery);
+            stmt.setString(1, title);
+            return createAdsFromResults(stmt.executeQuery());
+        }catch (SQLException e){
+            throw new RuntimeException("Error finding results for that title.", e);
+        }
+    }
+
+
+
+    @Override
     public List<Ad> findPostByUserId (Long userId){
                 try {
                     String findQuery = "SELECT * FROM ads WHERE user_id = ?";
@@ -134,6 +150,7 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
+
 
 
 }

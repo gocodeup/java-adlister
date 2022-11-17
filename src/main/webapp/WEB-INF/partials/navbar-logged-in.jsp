@@ -20,8 +20,10 @@
             <li><a href="/logout">logout</a></li>
         </ul>
     </div>
-    <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="search for ads" aria-label="search ads">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">search</button>
-    </form>
+    <div>
+        <form class="form-inline my-2 my-lg-0" action="/ads/search" method="get">
+            <input class="form-control mr-sm-2" type="search" name="title" placeholder="search for ads" aria-label="search ads">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">search</button>
+        </form>
+    </div>
 </nav>
