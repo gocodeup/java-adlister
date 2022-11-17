@@ -32,10 +32,18 @@ public class UpdateProfileServlet extends HttpServlet {
 
         password = Password.hash(password);
 
-        // Accessing DAO to implement update users method.
-        DaoFactory.getUsersDao().updateUser(id, username, email, password);
+        boolean invalidInput = username.isEmpty() || email.isEmpty() || password.isEmpty();
+        if (invalidInput)
+        {
+            request.setAttribute("inputIsNull", true);
+            request.getRequestDispatcher("/WEB-INF/profile/update.jsp").forward(request, response);
+        } else
+        {
+//            Accessing DAO to implement update users method.
+                DaoFactory.getUsersDao().updateUser(id, username, email, password);
+            // Redirecting them to login again.
+            response.sendRedirect("/login");
+        }
 
-        // Redirecting them to login again.
-        response.sendRedirect("/login");
     }
 }
