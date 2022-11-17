@@ -15,6 +15,10 @@
         <a href="/profile/update?userId=${user.id}">
             <button class="btn btn-default">Update profile</button>
         </a>
+
+        <a href="/profile/delete?id=${user.id}">
+            <button class="btn btn-danger">Delete User</button>
+        </a>
         <h1>${sessionScope.ads}</h1>
 
         <c:forEach var="ad" items="${ads}">

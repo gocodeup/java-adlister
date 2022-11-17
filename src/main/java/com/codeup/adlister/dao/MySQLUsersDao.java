@@ -72,6 +72,22 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+    @Override
+    public void deleteUser(Long id) {
+        String deleteUserQuery = "DELETE FROM users WHERE id = ?";
+        try {
+            PreparedStatement statement = connection.prepareStatement(deleteUserQuery);
+
+            // Setting value of question mark in SQL query to the id that's being passed in as parameter.
+            statement.setLong(1, id);
+
+            // Executing delete user query.
+            statement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error deleting user.");
+        }
+    }
+
     private User extractUser(ResultSet rs) throws SQLException {
         if (! rs.next()) {
             return null;
