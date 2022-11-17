@@ -16,9 +16,11 @@
             <button class="btn btn-default">Update profile</button>
         </a>
 
-        <a href="/profile/delete?id=${user.id}">
-            <button class="btn btn-danger">Delete User</button>
-        </a>
+        <form action="/profile/delete?id=${user.id}" method="POST">
+            <input type="hidden" name="userId" value="${user.id}">
+            <button type="submit" class="btn btn-danger">Delete User</button>
+        </form>
+
         <h1>${sessionScope.ads}</h1>
 
         <c:forEach var="ad" items="${ads}">

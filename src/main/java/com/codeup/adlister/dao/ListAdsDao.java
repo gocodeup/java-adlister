@@ -2,8 +2,6 @@ package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
 
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,6 +44,11 @@ public class ListAdsDao implements Ads {
 
     @Override
     public Ad findById(long id) {
+        return null;
+    }
+
+    @Override
+    public List<Ad> search(String title) {
         return null;
     }
 

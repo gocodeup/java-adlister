@@ -24,4 +24,6 @@ public interface Ads
 
     Ad findById(long id);
 
+
+    List<Ad> search(String title);
 }

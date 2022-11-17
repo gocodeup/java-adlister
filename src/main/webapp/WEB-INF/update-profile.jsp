@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: vicente
@@ -9,7 +10,7 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Update Your Ad" />
+        <jsp:param name="title" value="Update Your Ad"/>
     </jsp:include>
     <title>Title</title>
 </head>
@@ -19,16 +20,19 @@
         <input name="userId" value="${userId}" style="display: none">
         <div class="form-group">
             <label for="username">Username</label>
-            <input id="username" name="username" class="form-control" type="text" required />
+            <input id="username" name="username" class="form-control" type="text" required/>
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input id="email" name="email" class="form-control" type="text" required />
+            <input id="email" name="email" class="form-control" type="text" required/>
         </div>
         <div class="form-group">
             <label for="password">Password</label>
-            <input id="password" name="password" class="form-control" type="password" required />
+            <input id="password" name="password" class="form-control" type="password" required/>
         </div>
+        <c:if test="${inputIsNull}">
+            <small>No fields left blank.</small>
+        </c:if>
         <input type="submit" class="btn btn-block btn-primary" value="Update Profile">
     </form>
 </body>
