@@ -8,8 +8,8 @@
 <body>
     <jsp:include page="/WEB-INF/partials/navbar-create.jsp" />
 
-    <div class="container">
-        <h1>Create a new Ad</h1>
+    <div class="container w-50">
+        <h1>Create Ad</h1>
         <form action="/ads/create" method="post">
             <div class="form-group">
                 <label for="title">Title</label>

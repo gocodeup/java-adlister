@@ -76,15 +76,9 @@ public class MySQLAdsDao implements Ads {
             ResultSet rs = stmt.executeQuery();
             rs.next();
             System.out.println("Below is our search results");
-//            return new Ad(
-//                    rs.getLong("id"),
-//                    rs.getLong("user_id"),
-//                    rs.getString("title"),
-//                    rs.getString("description")
-//            );
+
             return createAdsFromResults(stmt.executeQuery());
         } catch (SQLException e) {
-//            throw new RuntimeException("Error finding ads by search", e);
             throw new RuntimeException(e.toString());
         }
     }

@@ -9,21 +9,24 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar-ads.jsp" />
 
-<div class="container">
-    <h1>Here Are all the ads!</h1>
+<div class="container text-center">
+    <h1>All Ads</h1>
 
-    <c:forEach var="ad" items="${ads}">
+    <div class="container">
+        <div class="row row-cols-6">
 
-        <div class="col-md-6" >
+        <c:forEach var="ad" items="${ads}">
+        <div class="col-6 d-block" >
             <form action="/ads/singles" method="post">
                 <input type="hidden" name="ad_id" value="${ad.id}">
-            <button type="submit"><h2>${ad.title}</h2></button>
+                <input type="hidden" name="ad_title" value="${ad.title}">
+            <button type="submit" class="btn btn-warning"><h2>${ad.title}</h2></button>
             </form>
-            <p>${ad.description}</p>
         </div>
-
     </c:forEach>
 
+</div>
+</div>
     <c:forEach var="ad2" items="${ads2}">
         <div class="col-md-6" >
             <form action="/ads/singles" method="post">
