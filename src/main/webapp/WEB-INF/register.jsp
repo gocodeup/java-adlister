@@ -29,6 +29,9 @@
                 <label for="confirm_password">Confirm Password</label>
                 <input id="confirm_password" name="confirm_password" class="form-control" type="password">
             </div>
+            <c:if test="${inputHasErrors}">
+                <small>No fields left blank.</small>
+            </c:if>
             <input type="submit" class="btn btn-primary btn-block">
         </form>
     </div>
