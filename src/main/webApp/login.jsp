@@ -15,6 +15,7 @@
   <body>
   <form action="/login.jsp" method="post">
         <div class="container">
+
             <label>Username : </label>
             <input type="text" placeholder="Enter Username" name="username" required>
 
@@ -22,6 +23,7 @@
             <label>Password : </label>
             <input type="password" placeholder="Enter Password" name="password">
             <button type="submit">Login</button>
+
 <%
                 if (request.getMethod().equalsIgnoreCase("POST")) {
                     String name = request.getParameter("username");
