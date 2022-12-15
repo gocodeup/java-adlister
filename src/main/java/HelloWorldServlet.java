@@ -14,7 +14,7 @@ public class HelloWorldServlet extends HttpServlet {
         // Reset hit counter.
         hitCount = 0;
     }
-
+//stuff
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
