@@ -9,8 +9,22 @@ public class HelloWorldServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        out.println("<h1>Hello, World!</h1>");
-        out.println("<h2>HEy there</h2>");
+        String name = request.getParameter("name");
+        int count = 0;
+
+
+        if (name == null) {
+            out.println("<h1>Hello, World!</h1>");
+            out.println("<h2>HEy there</h2>");
+
+            out.println("<h2>Hello, " + count + "!</h2>");
+        } else {
+            out.println("<h1>Hello, " + name + "!</h1>");
+            out.println("<h2>HEy there</h2>");
+
+            out.println("<h2>Hello, " + count++ + "!</h2>");
+        }
+
     }
 
 }
