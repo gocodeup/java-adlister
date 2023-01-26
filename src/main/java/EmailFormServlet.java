@@ -24,7 +24,7 @@ public class EmailFormServlet extends HttpServlet {
 //        req.getParameter(parameter-name); = returns value of parameter
 //        req.getSession(); = returns a HttpSession object - more later..
 
-//        Rersponse Object Methods:
+//        Response Object Methods:
 //        resp.sendRedirect(); = redirects to a different URL
 //        resp.setContentType(); = sets the Content-Type of the response
 //        resp.getRequestDispatcher(); = forwards the information to a Java Server Page (JSP) - more later..
