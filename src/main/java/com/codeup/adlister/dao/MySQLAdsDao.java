@@ -49,7 +49,7 @@ public class MySQLAdsDao implements Ads {
             ResultSet rs = stmt.executeQuery();
             return createAdsFromResults(rs);
         } catch (SQLException e) {
-            throw new RuntimeException("Error retrieving all ads.", e);
+            throw new RuntimeException("Error retrieving your ads.", e);
         }
     }
 
@@ -100,4 +100,21 @@ public class MySQLAdsDao implements Ads {
             throw new RuntimeException("Error finding ad by id", e);
         }
     }
+
+    @Override
+    public Ad deleteAd(String id) {
+        String query = "DELETE FROM ads WHERE id = ? LIMIT 1";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setInt(1, Integer.parseInt(id));
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            return extractAd(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding ad by id", e);
+        }
+    }
+
+
+
 }
