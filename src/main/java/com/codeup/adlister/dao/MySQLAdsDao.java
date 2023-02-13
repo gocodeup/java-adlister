@@ -3,9 +3,7 @@ package com.codeup.adlister.dao;
 import com.codeup.adlister.models.Ad;
 import com.mysql.cj.jdbc.Driver;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -52,6 +50,38 @@ public class MySQLAdsDao implements Ads {
             return rs.getLong(1);
         } catch (SQLException e) {
             throw new RuntimeException("Error creating a new ad.", e);
+        }
+    }
+
+    @Override
+    public List<Ad> searchAds(String keyword) throws SQLException {
+        List<Ad> adList = new ArrayList<>();
+        String sqlQuery = "SELECT id FROM ads WHERE title LIKE ?";
+
+        PreparedStatement stmt = connection.prepareStatement(sqlQuery, Statement.NO_GENERATED_KEYS);
+        stmt.setString(1, "%" + keyword + "%");
+        System.out.println(stmt);
+        stmt.executeQuery();
+        ResultSet rs = stmt.getResultSet();
+        while (rs.next()) {
+            adList.add(findUniqueAdId(rs.getLong("id")));
+        }
+        return adList;
+    }
+
+    @Override
+    public Ad findUniqueAdId(Long ad){
+        String query = "SELECT * FROM ads WHERE id = ? LIMIT 1";
+        try{
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, ad);
+            ResultSet rs = stmt.executeQuery();
+            if (! rs.next()) {
+                return null;
+            }
+            return extractAd(rs);
+        } catch(SQLException e) {
+            throw new RuntimeException("Error finding Ad ID", e);
         }
     }
 

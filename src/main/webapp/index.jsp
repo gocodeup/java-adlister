@@ -11,5 +11,15 @@
     <div class="container">
         <h1>Welcome to the Adlister!</h1>
     </div>
+
+    <div>
+        <jsp:include page="/WEB-INF/partials/search.jsp"/>
+    </div>
+
+<%--    <form action="/ads/search" method="GET">--%>
+<%--        <input id="s" name="s" type="search" placeholder="Search Ads..." aria-label="Search">--%>
+<%--        <button class="btn btn-outline-success" type="submit"></button>--%>
+<%--    </form>--%>
+
 </body>
 </html>
