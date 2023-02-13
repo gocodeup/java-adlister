@@ -15,7 +15,11 @@ import java.io.IOException;
 @WebServlet(name = "controllers.ViewAdServlet", urlPatterns = "/ads/ad")
 public class ViewAdServlet extends HttpServlet{
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+            User user = (User) request.getSession().getAttribute("user");
             String selected = request.getQueryString();
+            if(user == null){
+                response.sendRedirect("/login?"+selected);
+            }
             Ad returned = DaoFactory.getAdsDao().findById(selected);
             User owner = DaoFactory.getUsersDao().findById(String.valueOf(returned.getUserId()));
             request.setAttribute("ad", returned);

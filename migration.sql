@@ -10,7 +10,9 @@ CREATE TABLE users (
     username VARCHAR(240) NOT NULL,
     email VARCHAR(240) NOT NULL,
     password VARCHAR(255) NOT NULL,
-    PRIMARY KEY (id)
+    PRIMARY KEY (id),
+    UNIQUE (username),
+    UNIQUE (email)
 );
 
 CREATE TABLE ads (
@@ -22,3 +24,17 @@ CREATE TABLE ads (
     FOREIGN KEY (user_id) REFERENCES users(id)
         ON DELETE CASCADE
 );
+
+CREATE TABLE categories(
+                           id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+                           category VARCHAR(20) NOT NULL,
+                           PRIMARY KEY (id)
+);
+
+CREATE TABLE ads_cat(
+                        cat_id INT UNSIGNED NOT NULL ,
+                        ad_id INT UNSIGNED NOT NULL ,
+                        FOREIGN KEY (cat_id) REFERENCES categories (id),
+                        FOREIGN KEY (ad_id) REFERENCES ads (id)
+);
+

@@ -18,8 +18,14 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("/profile");
             return;
         }
+        String selected = request.getQueryString();
+        if(selected != null){
+            request.setAttribute("redirect", selected);
+        }
         request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+
     }
+
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String username = request.getParameter("username");
@@ -32,8 +38,11 @@ public class LoginServlet extends HttpServlet {
         }
 
         boolean validAttempt = Password.check(password, user.getPassword());
-
+        String selected = request.getParameter("redirect");
         if (validAttempt) {
+            if(selected != null){
+                response.sendRedirect("/ads/ad?"+selected);
+            }
             request.getSession().setAttribute("user", user);
             response.sendRedirect("/profile");
         } else {
