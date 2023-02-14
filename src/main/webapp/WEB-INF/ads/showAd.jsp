@@ -12,6 +12,7 @@
     <title>Title</title>
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <h1><c:out value="${ad.title}"/></h1>
     <div class="col-md-6">
