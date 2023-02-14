@@ -51,7 +51,10 @@ CREATE TABLE ads_fav(
 INSERT INTO users (username, email, password) VALUES ('test', 'test@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e'),
                                                      ('Testy_Teserson', 'test1@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e'),
                                                      ('Alfred_testers', 'te1st@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e'),
-                                                     ('Jaminican_teststrom', 't2est@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e');
+                                                     ('Jaminican_teststrom', 't2est@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e'),
+                                                     ('Tripp', 'tripp@tripperdipper.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e'),
+                                                     ('Crystal', 'crystal@cssChamp.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e'),
+                                                     ('Isaac', 'isaac@SlumLord.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e');
 
 INSERT INTO categories (category) VALUES ('Animals'),('Adjectives'),('Adverbs'),('Birds'),('Books'),('Buildings'),('Cars'),('Celebrities'),('Celebrations'),('Cities')
                                        ,('Clothes'),('Comic book'),('Currencies'),('Drinks'),('Electronic goods'),('Films'),('Film characters'),('Food'),('Football teams')
