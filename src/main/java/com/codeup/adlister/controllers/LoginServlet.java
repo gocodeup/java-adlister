@@ -27,7 +27,7 @@ public class LoginServlet extends HttpServlet {
         User user = DaoFactory.getUsersDao().findByUsername(username);
 
         if (user == null) {
-            response.sendRedirect("/login");// this needs to be changed to the register page
+            response.sendRedirect("/register");// this needs to be changed to the register page
             return;
         }
 
