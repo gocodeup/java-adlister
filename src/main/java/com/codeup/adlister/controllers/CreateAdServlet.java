@@ -1,9 +1,7 @@
 package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
-import com.codeup.adlister.models.Ad;
-import com.codeup.adlister.models.JSON;
-import com.codeup.adlister.models.User;
+import com.codeup.adlister.models.*;
 import com.google.gson.Gson;
 
 import javax.servlet.ServletException;
@@ -13,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -26,6 +25,7 @@ public class CreateAdServlet extends HttpServlet {
             response.sendRedirect("/login");
             return;
         }
+        request.setAttribute("categories", DaoFactory.getCategoryDao().all());
         request.getRequestDispatcher("/WEB-INF/ads/create.jsp")
             .forward(request, response);
     }
@@ -38,13 +38,17 @@ public class CreateAdServlet extends HttpServlet {
             request.getParameter("description")
         );
         DaoFactory.getAdsDao().insert(ad);
-
         List<Ad> returnedAds = DaoFactory.getAdsDao().myAds(user);
         String returnedAd = null;
         for (Ad current : returnedAds){
             if(Objects.equals(current.getTitle(), request.getParameter("title"))){
                 returnedAd = String.valueOf(current.getId());
             }
+        }
+        String[] recievedCats = request.getParameterValues("category");
+        for( String cat : recievedCats){
+            AdCat adCat = new AdCat(Integer.parseInt(cat) , Integer.parseInt(returnedAd));
+            DaoFactory.getAdCatsDao().insert(adCat);
         }
 
         PrintWriter out = response.getWriter();

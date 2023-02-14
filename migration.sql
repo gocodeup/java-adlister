@@ -38,3 +38,17 @@ CREATE TABLE ads_cat(
                         FOREIGN KEY (ad_id) REFERENCES ads (id)
 );
 
+CREATE TABLE ads_fav(
+                        user_id INT UNSIGNED NOT NULL ,
+                        ad_id INT UNSIGNED NOT NULL ,
+                        FOREIGN KEY (user_id) REFERENCES users (id),
+                        FOREIGN KEY (ad_id) REFERENCES ads (id)
+);
+
+
+# USER PLANTS
+INSERT INTO users (username, email, password) VALUES ('test', 'test@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e');
+INSERT INTO users (username, email, password) VALUES ('Testy_Teserson', 'test@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e');
+INSERT INTO users (username, email, password) VALUES ('Alfred_testers', 'test@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e');
+INSERT INTO users (username, email, password) VALUES ('Jaminican_teststrom', 'test@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e');
+
