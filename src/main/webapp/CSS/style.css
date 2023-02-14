@@ -1,94 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    padding-top: 0;
-    font-size: 12px;
-    color: #777;
-    background: #f9f9f9;
-    font-family: 'Open Sans',sans-serif;
-    margin-top:20px;
+    font-family: Arial;
+    padding: 20px;
+    background: #f1f1f1;
 }
 
-.panel {
-    position: relative;
-    background: #fff;
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    font-size: 40px;
+    text-align: center;
+    background: white;
 }
 
-.image-wrapper {
-    position: relative;
-    display: block;
-    overflow: hidden;
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+    float: left;
+    width: 75%;
 }
 
-.blog-container a:not(.btn) {
-    color: #999;
-    transition: all .2s linear;
-    -webkit-transition: all .2s linear;
-    -moz-transition: all .2s linear;
-    -ms-transition: all .2s linear;
-    -o-transition: all .2s linear;
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
 }
 
-.image-wrapper img {
-    transition: all .4s ease;
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    -ms-transition: all .4s ease;
-    -o-transition: all .4s ease;
-}
-
-.image-wrapper:hover .image-overlay {
-    opacity: .9;
-    transition: all .4s ease;
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    -ms-transition: all .4s ease;
-    -o-transition: all .4s ease;
-    transform: translateX(0%);
-    -webkit-transform: translateX(0%);
-    -moz-transform: translateX(0%);
-    -ms-transform: translateX(0%);
-    -o-transform: translateX(0%);
-}
-
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
     width: 100%;
-    height: 100%;
-    opacity: 0;
-    background-color: #3c8dbc;
-    background-image: -moz-linear-gradient(top,#5fa4cc,#3c8dbc);
-    background-image: -webkit-gradient(linear,0 0,0 100%,from(#5fa4cc),to(#3c8dbc));
-    background-image: -webkit-linear-gradient(top,#5fa4cc,#3c8dbc);
-    background-image: -o-linear-gradient(top,#5fa4cc,#3c8dbc);
-    background-image: linear-gradient(to bottom,#5fa4cc,#3c8dbc);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#5fa4cc, endColorstr=#3c8dbc, GradientType=0);
-    filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
-    border: 6px solid #296282;
-    transition: all .4s ease;
-    -webkit-transition: all .4s ease;
-    -moz-transition: all .4s ease;
-    -ms-transition: all .4s ease;
-    -o-transition: all .4s ease;
+    padding: 20px;
 }
 
-.post-like {
-    float: right;
-    cursor: pointer;
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
 }
 
-.headline {
-    margin: 20px 0;
-    padding: 5px 0 10px;
-    border-bottom: 1px solid #eee;
-    font-weight: 500;
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-h4, .h4 {
-    font-size: 18px;
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
 }
 
-.media, .media-body {
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+/* Navbar container */
+.navbar {
     overflow: hidden;
-    zoom: 1;
+    background-color: #333;
+    font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Mega Menu header, if needed */
+.dropdown-content .header {
+    background: red;
+    padding: 16px;
+    color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: #ccc;
+    height: 250px;
+}
+
+/* Style links inside the columns */
+.column a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a background color on hover */
+.column a:hover {
+    background-color: #ddd;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
