@@ -155,7 +155,19 @@
             </div>
         </main>
     </div>
-
+<div>
+    <h1>Favorites</h1>
+    <c:forEach var="ad" items="${myFavs}">
+        <div class="col-md-6">
+            <h2>${ad.title}</h2>
+            <p>${ad.description}</p>
+            <c:forEach var="cat" items="${ad.categories}">
+                <span>${cat.name}</span>
+            </c:forEach>
+            <a href="/ads/ad?${ad.id}">Click here to view ad</a>
+        </div>
+    </c:forEach>
+</div>
 </body>
 </html>
 
