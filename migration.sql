@@ -46,9 +46,10 @@ CREATE TABLE ads_fav(
 );
 
 
+
 # USER PLANTS
 INSERT INTO users (username, email, password) VALUES ('test', 'test@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e');
-INSERT INTO users (username, email, password) VALUES ('Testy_Teserson', 'test@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e');
-INSERT INTO users (username, email, password) VALUES ('Alfred_testers', 'test@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e');
-INSERT INTO users (username, email, password) VALUES ('Jaminican_teststrom', 'test@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e');
+INSERT INTO users (username, email, password) VALUES ('Testy_Teserson', 'test1@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e');
+INSERT INTO users (username, email, password) VALUES ('Alfred_testers', 'te1st@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e');
+INSERT INTO users (username, email, password) VALUES ('Jaminican_teststrom', 't2est@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e');
 
