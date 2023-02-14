@@ -20,5 +20,11 @@
 <div>
     <h1><c:out value="${user.email}" /></h1>
 </div>
+<div>
+    <c:forEach var="cat" items="${categories}">
+            <span>${cat.name}</span>
+    </c:forEach>
+</div>
+
 </body>
 </html>

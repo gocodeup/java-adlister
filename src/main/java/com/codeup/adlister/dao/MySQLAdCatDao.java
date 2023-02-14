@@ -1,4 +1,5 @@
 package com.codeup.adlister.dao;
+import com.codeup.adlister.models.JoinReturns;
 import com.mysql.cj.jdbc.Driver;
 import com.codeup.adlister.models.AdCat;
 import java.sql.*;
@@ -22,8 +23,8 @@ public class MySQLAdCatDao implements Adcats{
     }
 
     @Override
-    public List<AdCat> getRelated(String ad_id) {
-        String query = "SELECT * FROM categories" +
+    public List<JoinReturns> getRelated(String ad_id) {
+        String query = "SELECT categories.category FROM categories" +
                 " JOIN ads_cat ac on categories.id = ac.cat_id" +
                 " JOIN ads a on a.id = ac.ad_id" +
                 " WHERE ac.ad_id = ?";
@@ -32,11 +33,25 @@ public class MySQLAdCatDao implements Adcats{
             stmt.setInt(1, Integer.parseInt(ad_id));
             ResultSet rs = stmt.executeQuery();
             rs.next();
-            return createAdCatsFromResults(rs);
+            return createJoinReturnsFromResults(rs);
         } catch (SQLException e) {
             throw new RuntimeException("Error finding related categories by id", e);
         }
 
+    }
+    private List<JoinReturns> createJoinReturnsFromResults(ResultSet rs) throws SQLException {
+        List<JoinReturns> cats= new ArrayList<>();
+        while (rs.next()) {
+            cats.add(extractJoinReturns(rs));
+        }
+        return cats;
+    }
+
+
+    private JoinReturns extractJoinReturns(ResultSet rs) throws SQLException {
+        return new JoinReturns(
+                rs.getString("category")
+        );
     }
 
     private List<AdCat> createAdCatsFromResults(ResultSet rs) throws SQLException {

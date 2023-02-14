@@ -1,13 +1,14 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.AdCat;
+import com.codeup.adlister.models.JoinReturns;
 
 import java.util.List;
 
 public interface Adcats {
 
 
-    List<AdCat> getRelated(String ad_id);
+    List<JoinReturns> getRelated(String ad_id);
 
     Long insert(AdCat adCat);
 }

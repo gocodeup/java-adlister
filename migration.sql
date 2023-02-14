@@ -84,3 +84,16 @@ INSERT INTO ads_cat (cat_id, ad_id) VALUES (4,4), (28,4);
 INSERT INTO ads (user_id, title, description) VALUES (5,'Reduced - ADIDAS TERREX Continental Hiking Shoes Men`s Size 10', 'Adidas TERREX Continental Sesame/Orange Hiking Shoes, Men`s Size US-10, Style G28407. Overall in outstanding condition with minor scuffing on toes. These shoes would be over $125 new. Adidas TERREX shoes for men and women are perfect for hiking or trekking with aggressive lug soles. These rugged lightweight shoes are the perfect footwear to enjoy maximum comfort while you make your routes.');
 INSERT INTO ads_cat (cat_id, ad_id) VALUES (11,5), (22,5);
 
+#
+SELECT categories.category FROM categories
+    JOIN ads_cat ac on categories.id = ac.cat_id
+     JOIN ads a on a.id = ac.ad_id
+     WHERE ac.ad_id = 1;
+
+SELECT * FROM ads_cat where ad_id = 1;
+
+SELECT * FROM ads
+                 JOIN ads_fav af on ads.id = af.ad_id
+                 JOIN users u on af.user_id = u.id
+                 WHERE u.id =1;
+
