@@ -38,3 +38,62 @@ CREATE TABLE ads_cat(
                         FOREIGN KEY (ad_id) REFERENCES ads (id)
 );
 
+CREATE TABLE ads_fav(
+                        user_id INT UNSIGNED NOT NULL ,
+                        ad_id INT UNSIGNED NOT NULL ,
+                        FOREIGN KEY (user_id) REFERENCES users (id),
+                        FOREIGN KEY (ad_id) REFERENCES ads (id)
+);
+
+
+
+# USER PLANTS
+INSERT INTO users (username, email, password) VALUES ('test', 'test@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e'),
+                                                     ('Testy_Teserson', 'test1@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e'),
+                                                     ('Alfred_testers', 'te1st@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e'),
+                                                     ('Jaminican_teststrom', 't2est@test.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e'),
+                                                     ('Tripp', 'tripp@tripperdipper.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e'),
+                                                     ('Crystal', 'crystal@cssChamp.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e'),
+                                                     ('Isaac', 'isaac@SlumLord.com', '$2a$12$Oc3m7XZ18EYOeUMemf.JXu0Aw2h7voI8I1UewpEq9VIH7Kdm6u08e');
+
+INSERT INTO categories (category) VALUES ('Animals'),('Books'),('Sports/Games'),('Tools'),('Tourist'),
+                                         ('Buildings'),('Cars'),('Celebrities'),('Celebrations'),('Cities')
+
+                                       ,('Clothes'),('Comic book'),('Currencies'),('Drinks'),('Electronic goods'),
+                                        ('Films'),('Film characters'),('Food'),('Football teams'),('Fruit'),
+
+                                        ('Furniture'),('Hobbies'),('Hotels'),('Jobs'),('Languages'),
+                                        ('Liquids'),('Mammals'),('Materials'),('Musical genres'),('Musical instruments'),
+
+                                        ('Places to eat'),('School subjects'),('Shops'),('Singers/Bands'),('Sounds')
+                                        ,('Toys'),('Vegetables'), ('Vehicles');
+
+
+INSERT INTO ads (user_id, title, description) VALUES (1,'2 29"x45" Mirrors', '2 29"x45" Mirrors. Asking $20.00 each. I`m 22min. from Walmart in Bonsack. I deal in cash only');
+INSERT INTO ads_cat (cat_id, ad_id) VALUES (11,1);
+
+INSERT INTO ads (user_id, title, description) VALUES (2,'13 ANTIQUE CLOCKS', 'All of the great clocks you see pictured here are still available in beautiful Monroe NC so no need to ask. Each clock is in running condition although I do not run them all of the time. The individual ads for each clock can be found in Charlotte CL by searching "clock". Cash only please. Delivery and set up available. Email with a phone number, or call/text. Thanks for looking. Good luck');
+INSERT INTO ads_cat (cat_id, ad_id) VALUES (11,2);
+
+INSERT INTO ads (user_id, title, description) VALUES (3,'AKAI Reel to Reel', 'AKAI Reel to Reel, GX280D-SS. I have a box of tape reels to go with it. Asking $200.00 Ideal in cash only.');
+INSERT INTO ads_cat (cat_id, ad_id) VALUES (15,3), (22,3), (29,3), (30,3);
+
+INSERT INTO ads (user_id, title, description) VALUES (4,'Antique pull chain toilet', 'Antique pull chain toilet bowl and tank. Don''t have any of the other hardware, just what you see in the photos. Asking $50.00 I deal in cash only.');
+INSERT INTO ads_cat (cat_id, ad_id) VALUES (4,4), (28,4);
+
+INSERT INTO ads (user_id, title, description) VALUES (5,'Reduced - ADIDAS TERREX Continental Hiking Shoes Men`s Size 10', 'Adidas TERREX Continental Sesame/Orange Hiking Shoes, Men`s Size US-10, Style G28407. Overall in outstanding condition with minor scuffing on toes. These shoes would be over $125 new. Adidas TERREX shoes for men and women are perfect for hiking or trekking with aggressive lug soles. These rugged lightweight shoes are the perfect footwear to enjoy maximum comfort while you make your routes.');
+INSERT INTO ads_cat (cat_id, ad_id) VALUES (11,5), (22,5);
+
+#
+SELECT categories.category FROM categories
+    JOIN ads_cat ac on categories.id = ac.cat_id
+     JOIN ads a on a.id = ac.ad_id
+     WHERE ac.ad_id = 1;
+
+SELECT * FROM ads_cat where ad_id = 1;
+
+SELECT * FROM ads
+                 JOIN ads_fav af on ads.id = af.ad_id
+                 JOIN users u on af.user_id = u.id
+                 WHERE u.id =1;
+
