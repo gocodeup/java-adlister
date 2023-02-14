@@ -7,5 +7,5 @@ public interface Users {
 
     Long insert(User user);
 
-    boolean update(User editUser);
+    void update(User editUser);
 }
