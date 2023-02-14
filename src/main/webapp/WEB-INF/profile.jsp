@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -11,6 +12,21 @@
     <div class="container">
         <h1>Welcome, ${sessionScope.user.username}!</h1>
     </div>
+    <c:forEach var="ad" items="${myAds}">
+        <div class="col-md-6">
+            <h2>${ad.title}</h2>
+            <p>${ad.description}</p>
+            <a href="${pageContext.request.contextPath}/ads/ad?${ad.id}">Click here to view ad</a>
+        </div>
+    </c:forEach>
+
+    <c:forEach var="ads" items="${myFavs}">
+        <div class="col-md-6">
+            <h2>${ads.title}</h2>
+            <p>${ads.description}</p>
+            <a href="${pageContext.request.contextPath}/ads/ad?${ads.id}">Click here to view ad</a>
+        </div>
+    </c:forEach>
 
 <%--    <div class="main-content">--%>
 <%--        <!-- Top navbar -->--%>
