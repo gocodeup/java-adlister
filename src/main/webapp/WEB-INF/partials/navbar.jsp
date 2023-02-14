@@ -10,6 +10,7 @@
             <% User user = (User) session.getAttribute("user");
             if (user == null) {
             %>
+            <li><a href="${pageContext.request.contextPath}<c:url value="/register"/>">Register</a></li>
             <li><a href="${pageContext.request.contextPath}<c:url value="/login"/>">Login</a></li>
             <%
             }else{
@@ -19,7 +20,6 @@
             <%
                 }
             %>
-
         </ul>
     </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
