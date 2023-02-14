@@ -1,6 +1,7 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.JoinReturns;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
@@ -75,7 +76,8 @@ public class MySQLAdsDao implements Ads {
             rs.getLong("id"),
             rs.getLong("user_id"),
             rs.getString("title"),
-            rs.getString("description")
+            rs.getString("description"),
+                (ArrayList<JoinReturns>) DaoFactory.getAdCatsDao().getRelated(String.valueOf(rs.getLong("id")))
         );
     }
 
