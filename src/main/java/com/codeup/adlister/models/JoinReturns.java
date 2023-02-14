@@ -7,7 +7,7 @@ public class JoinReturns {
         this.name = _name;
     }
 
-    private String Name(){
+    public String getName(){
         return this.name;
     }
 }
