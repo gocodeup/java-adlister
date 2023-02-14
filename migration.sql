@@ -70,10 +70,10 @@ INSERT INTO categories (category) VALUES ('Animals'),('Books'),('Sports/Games'),
 
 
 INSERT INTO ads (user_id, title, description) VALUES (1,'2 29"x45" Mirrors', '2 29"x45" Mirrors. Asking $20.00 each. I`m 22min. from Walmart in Bonsack. I deal in cash only');
-INSERT INTO ads_cat (cat_id, ad_id) VALUES (11,1);
+INSERT INTO ads_cat (cat_id, ad_id) VALUES (21,1);
 
 INSERT INTO ads (user_id, title, description) VALUES (2,'13 ANTIQUE CLOCKS', 'All of the great clocks you see pictured here are still available in beautiful Monroe NC so no need to ask. Each clock is in running condition although I do not run them all of the time. The individual ads for each clock can be found in Charlotte CL by searching "clock". Cash only please. Delivery and set up available. Email with a phone number, or call/text. Thanks for looking. Good luck');
-INSERT INTO ads_cat (cat_id, ad_id) VALUES (11,2);
+INSERT INTO ads_cat (cat_id, ad_id) VALUES (21,2), (22,2);
 
 INSERT INTO ads (user_id, title, description) VALUES (3,'AKAI Reel to Reel', 'AKAI Reel to Reel, GX280D-SS. I have a box of tape reels to go with it. Asking $200.00 Ideal in cash only.');
 INSERT INTO ads_cat (cat_id, ad_id) VALUES (15,3), (22,3), (29,3), (30,3);

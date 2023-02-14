@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -11,6 +12,13 @@
         <h1>Please Log In</h1>
 
         <form action="/login" method="POST">
+
+
+            <c:if test="${not empty redirect}">
+                <input id="redirect" name="redirect" style="display: none" value="${redirect}">
+            </c:if>
+
+
             <div class="form-group">
                 <label for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text">
