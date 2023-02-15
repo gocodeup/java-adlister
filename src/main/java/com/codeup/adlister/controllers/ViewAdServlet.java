@@ -13,11 +13,8 @@ import java.util.List;
 
 @WebServlet(name = "controllers.ViewAdServlet", urlPatterns = "/adpage")
 public class ViewAdServlet extends HttpServlet {
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if (request.getSession().getAttribute("ad") == null) {
-            response.sendRedirect("/ads");
-            return;
-        }
 
         long adId = Long.parseLong(request.getParameter("adId"));
         Ad ad = DaoFactory.getAdsDao().findUniqueAdId(adId);
@@ -25,6 +22,5 @@ public class ViewAdServlet extends HttpServlet {
         request.setAttribute("ad", ad);
         request.setAttribute("user", user);
         request.getRequestDispatcher("/WEB-INF/adpage.jsp").forward(request, response);
-        response.sendRedirect("/adpage");
     }
 }

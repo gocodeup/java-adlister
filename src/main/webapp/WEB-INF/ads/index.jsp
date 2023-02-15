@@ -14,7 +14,7 @@
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
-            <a href="${pageContext.request.contextPath}<c:url value="/adpage"/>">
+            <a href="/adpage?adId=${ad.getId()}">
                 <h2>${ad.title}</h2>
             </a>
         </div>
