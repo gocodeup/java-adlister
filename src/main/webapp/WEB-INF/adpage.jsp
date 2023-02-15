@@ -8,7 +8,6 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-<jsp:include page="/WEB-INF/partials/search.jsp" />
 
 <div class="container">
   <h1>${ad.title}</h1>
