@@ -8,11 +8,6 @@
 </head>
 
 <style>
-    body{
-        background: #2e303b;
-        color: white;
-    }
-
     :root {
         --main-bg: #E6ECF0;
         --link-color: #3B94D9;
@@ -31,6 +26,7 @@
         margin: 0;
         padding: 0;
         font-family: Arial, Ubuntu, sans-serif;
+        color: black;
     }
     header {
         background-image: url("https://picsum.photos/1200/300");
@@ -38,15 +34,9 @@
         min-height: 300px;
         padding-top: 275px;
     }
-    a {
-        color: var(--link-color);
-    }
     .nav li {
         display: inline-block;
         padding: 1.5em;
-    }
-    .nav-link:hover {
-        color: var(--link-color);
     }
     .profile-image{
         position: absolute;
@@ -70,105 +60,121 @@
     .container{
         margin-top: 2em;
     }
-    .profile-details, .timeline{
+    .profile-details, .favorite, .personal {
         margin: 0 .5em;
         float: left;
     }
-    .profile-details{
+    .profile-details, .favorite{
         width: calc(25% - 1em);
     }
     .profile-items {
         padding: 0;
         list-style: none;
     }
-    .timeline {
+    .personal {
         width: calc(50% - 1em);
     }
-    .media {
+    .favorite {
         width: 100%;
-        background-color: var(--light-bg);
-        border-bottom: 1px solid var(--separator-color);
-        padding: .5em;
-        overflow: auto;
+        margin-left: 2em;
     }
-    .media-image {
-        max-width: 50px;
-        float: left;
-        margin-top: 1.33em;
+    .personal{
+        width: 100%;
     }
-    .media-body {
-        float: left;
-        width: calc(100% - 50px);
+    .overflow-scroll{
+        width: 60%;
     }
 </style>
 
 
 <body>
-    <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <%--    <div class="container">--%>
 <%--        <h1>Welcome, ${sessionScope.user.username}!</h1>--%>
 <%--    </div>--%>
 <%--    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>--%>
 
-    <header>
-        <section class="profile">
-            <div class="profile-header">
-                <img class="img-circle profile-image" src="https://randomuser.me/api/portraits/men/12.jpg" alt="user">
-<%--                <h1 style="color: black">Welcome, ${sessionScope.user.username}!</h1>--%>
-            </div>
-<%--            <div class="profile-form">--%>
-<%--                <form action="#" class="text-right">--%>
-<%--                    <button class="btn btn-large">Edit profile</button>--%>
-<%--                </form>--%>
-<%--            </div>--%>
-        </section>
-    </header>
-    <div class="container">
-        <aside class="profile-details">
-
-            <h3 style="color: black">Welcome, ${sessionScope.user.username}!</h3>
-
-            <ul class="profile-items">
-                <li class="profile-entry"><a href="#">San Antonio, TX</a></li>
-                <li class="profile-entry"><a href="#">codeup.com</a></li>
-                <li class="text-muted profile-entry">Joined June 2011</li>
-            </ul>
-        </aside>
-        <main class="timeline">
-            <div class="media">
-                <img class="media-image img-circle" src="https://randomuser.me/api/portraits/women/18.jpg" alt="Random user">
-                <div class="media-body">
-                    <h4 class="tweet-user">Safia Abdalla <span class="text-muted">@captainsafia</span></h4>
-                    Unit tests are an important part of self-care.
-                </div>
-            </div>
-            <div class=media>
-                <img class="media-image img-circle" src="https://randomuser.me/api/portraits/men/22.jpg" alt="Random user">
-                <div class="media-body">
-                    <h4 class="tweet-user">Little Idea <span class="text-muted">@littleidea</span></h4>
-                    <p>I've only seen one thing produce software quality... conscientious people with quality as a high
-                        priority.</p>
-                    <p>Often those people should have prioritized 'valuable'.</p>
-                    <p>Live and learn. Live and learn.</p>
-                </div>
-            </div>
-        </main>
-    </div>
-<div>
-    <h1>Favorites</h1>
-    <c:forEach var="ad" items="${myFavs}">
-        <div class="col-md-6">
-            <h2>${ad.title}</h2>
-            <p>${ad.description}</p>
-            <c:forEach var="cat" items="${ad.categories}">
-                <span>${cat.name}</span>
-            </c:forEach>
-            <a href="/ads/ad?${ad.id}">Click here to view ad</a>
+<header>
+    <section class="profile">
+        <div class="profile-header">
+            <img class="img-circle profile-image" src="https://randomuser.me/api/portraits/men/12.jpg" alt="user">
+            <%--                <h1 style="color: black">Welcome, ${sessionScope.user.username}!</h1>--%>
         </div>
-    </c:forEach>
+
+    </section>
+</header>
+<div class="container">
+
+    <%--   Users Profile Info      --%>
+    <aside class="profile-details">
+
+        <h3>Welcome, ${sessionScope.user.username}!</h3>
+
+        <ul class="profile-items">
+            <li class="profile-entry"><a href="#">San Antonio, TX</a></li>
+            <li class="profile-entry"><a href="#">codeup.com</a></li>
+            <li class="text-muted profile-entry">Joined June 2011</li>
+        </ul>
+    </aside>
+
+
+    <%--   User Personal Ads    --%>
+    <div class="container cmh cmw overflow-scroll">
+        <div class="row row-cols-1">
+            <div class="personal">
+                <h1>Personal</h1>
+                <c:forEach var="ad" items="${myFavs}">
+                    <div class="col-md-6">
+                        <h2>${ad.title}</h2>
+                        <p>${ad.description}</p>
+                        <c:forEach var="cat" items="${ad.categories}">
+                            <span>${cat.name}</span>
+                        </c:forEach>
+                        <a href="/ads/ad?${ad.id}">Click here to view ad</a>
+                    </div>
+                    <br>
+                </c:forEach>
+            </div>
+        </div>
+    </div>
+
+    <%--   User Favorite Ads    --%>
+    <div class="container cmh cmw overflow-scroll">
+        <div class="row row-cols-1">
+            <div class="favorite">
+                <h1>Favorites</h1>
+                <c:forEach var="ad" items="${myFavs}">
+                    <div class="col-md-3">
+                        <h2>${ad.title}</h2>
+                        <p>${ad.description}</p>
+                        <c:forEach var="cat" items="${ad.categories}">
+                            <span>${cat.name}</span>
+                        </c:forEach>
+                        <a href="/ads/ad?${ad.id}">Click here to view ad</a>
+                    </div>
+                    <br>
+                </c:forEach>
+            </div>
+        </div>
+    </div>
 </div>
-    <jsp:include page="./partials/footer.jsp"></jsp:include>
+
+<%--<div>--%>
+<%--    <h1>Favorites</h1>--%>
+<%--    <c:forEach var="ad" items="${myFavs}">--%>
+<%--        <div class="col-md-6">--%>
+<%--            <h2>${ad.title}</h2>--%>
+<%--            <p>${ad.description}</p>--%>
+<%--            <c:forEach var="cat" items="${ad.categories}">--%>
+<%--                <span>${cat.name}</span>--%>
+<%--            </c:forEach>--%>
+<%--            <a href="/ads/ad?${ad.id}">Click here to view ad</a>--%>
+<%--        </div>--%>
+<%--    </c:forEach>--%>
+<%--</div>--%>
+
+<jsp:include page="./partials/footer.jsp"></jsp:include>
 </body>
 </html>
 
