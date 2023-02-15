@@ -29,6 +29,10 @@
         </div>
         <input type="submit" name="editButton" class="btn btn-primary btn-block">
     </form>
+    <form action="/updateinfo" method="post">
+        <button type="submit" name="delete-account" style="background: red; color: black; font-weight: bold"value="${sessionScope.user.id}" onclick="return confirm('This will delete all info are you sure?')" >Delete Account?</button>
+
+    </form>
 <%--    <div>--%>
 <%--        <c:if test="${invalidUsername}">--%>
 <%--            <small>Sorry, that username is already taken.</small>--%>

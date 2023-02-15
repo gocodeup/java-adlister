@@ -10,4 +10,6 @@ public interface Users {
     User getUserByAd(long id);
 
     void update(User editUser);
+
+    void delete(User user);
 }
