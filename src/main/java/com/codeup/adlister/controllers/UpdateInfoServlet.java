@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.*;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -45,8 +46,12 @@ public class UpdateInfoServlet extends HttpServlet {
                 boolean inputHasErrors = (!password.equals(passwordConfirmation));
 
                 if (inputHasErrors) {
-                    request.setAttribute("inputHasErrors", true);
-                    request.getRequestDispatcher("/WEB-INF/updateinfo.jsp").forward(request, response);
+                    if (inputHasErrors) {
+                        JOptionPane.showMessageDialog(null,"Passwords do not match");
+                        request.setAttribute("inputHasErrors", true);
+                        String message = "Passwords did not  match";
+                        request.setAttribute("message", message);
+                        request.getRequestDispatcher("/WEB-INF/updateinfo.jsp").forward(request, response);
                 } else {
                     editUser.setUsername(username);
                     editUser.setEmail(email);
