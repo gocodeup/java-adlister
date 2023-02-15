@@ -10,19 +10,36 @@
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <h1>Here Are all the ads!</h1>
+    <h1 class="redirect">Here Are all the ads!</h1>
 
-    <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6">
-            <h2>${ad.title}</h2>
-            <p>${ad.description}</p>
-            <c:forEach var="cat" items="${ad.categories}">
-                <span>${cat.name}</span>
-            </c:forEach>
-            <a href="/ads/ad?${ad.id}">Click here to view ad</a>
+    <div class="container cmh overflow-scroll">
+        <div class="row">
+            <div class="col">
+                <h1> Recent ad listings</h1>
+            </div>
         </div>
-    </c:forEach>
-</div>
+        <div class="row row-cols-1">
+            <c:forEach var="ad" items="${ads}">
+                <div class="col redirect" id="${ad.id}">
+                    <div class="row">
+                        <h2>${ad.title}</h2>
+                    </div>
+                   <div class="row dmh overflow-hidden text-nowrap">
+                       <p>${ad.description}</p>
+                   </div>
+                   <div class="row row-cols-4">
+                       <c:forEach var="cat" items="${ad.categories}">
+                           <div class="col col-3">
+                               <span>${cat.name}</span>
+                           </div>
+                       </c:forEach>
+                   </div>
+                </div>
+            </c:forEach>
+        </div>
+    </div>
 
+</div>
+<jsp:include page="../partials/footer.jsp"></jsp:include>
 </body>
 </html>
