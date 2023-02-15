@@ -7,5 +7,7 @@ public interface Users {
 
     Long insert(User user);
 
+    User getUserByAd(long id);
+
     void update(User editUser);
 }
