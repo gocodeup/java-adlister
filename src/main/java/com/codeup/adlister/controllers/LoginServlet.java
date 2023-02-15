@@ -1,6 +1,7 @@
 package com.codeup.adlister.controllers;
 
 import com.codeup.adlister.dao.DaoFactory;
+import com.codeup.adlister.models.JSON;
 import com.codeup.adlister.models.User;
 import com.codeup.adlister.util.Password;
 
@@ -27,7 +28,7 @@ public class LoginServlet extends HttpServlet {
     }
 
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         User user = DaoFactory.getUsersDao().findByUsername(username);
@@ -45,13 +46,13 @@ public class LoginServlet extends HttpServlet {
                 response.sendRedirect("/ads/ad?"+selected);
             }
             else{
-                System.out.println("null else fired");
                 request.getSession().setAttribute("user", user);
                 response.sendRedirect("/profile");
             }
 
         } else {
-            response.sendRedirect("/login");
+            request.setAttribute("error", new JSON("Username and/or password does not match"));
+            request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         }
     }
 }

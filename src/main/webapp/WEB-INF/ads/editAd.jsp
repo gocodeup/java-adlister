@@ -4,6 +4,7 @@
   <jsp:include page="/WEB-INF/partials/head.jsp">
     <jsp:param name="title" value="Editing ad" />
   </jsp:include>
+<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 </head>
 <body>
 <div class="container ">

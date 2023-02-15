@@ -36,10 +36,16 @@ public class MySQLFavoritesDao implements Favorites {
             stmt.setLong(1, user.getId());
             ResultSet rs = stmt.executeQuery();
             List<Ad> returnedAds = new ArrayList<>();
-            while(rs.next()){
-                returnedAds.add(DaoFactory.getAdsDao().findById(String.valueOf(rs.getInt("id"))));
+            if(!rs.next()){
+                return null;
             }
-            return returnedAds;
+            else{
+                while(rs.next()){
+                    returnedAds.add(DaoFactory.getAdsDao().findById(String.valueOf(rs.getInt("id"))));
+                }
+                return returnedAds;
+            }
+
         } catch (SQLException e) {
             throw new RuntimeException("Error finding favorites by id", e);
         }

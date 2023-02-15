@@ -16,6 +16,8 @@ public interface Ads {
     // insert a new ad and return the new ad's id
     Long insert(Ad ad);
 
+    Ad findByTitle(String id);
+
     Ad findById(String id);
 
     Ad deleteAd(String id);
