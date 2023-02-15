@@ -16,7 +16,10 @@ import java.io.IOException;
 public class ViewAdServlet extends HttpServlet{
         protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             User user = (User) request.getSession().getAttribute("user");
-            String selected = request.getQueryString();
+            String selected = request.getParameter("query");
+            if(selected == null){
+                selected = request.getQueryString();
+            }
             if(user == null){
                 response.sendRedirect("/login?"+selected);
             }
