@@ -16,6 +16,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+import static java.lang.Long.parseLong;
+
 @WebServlet(name = "UpdateInfoServlet", urlPatterns = "/updateinfo")
 public class UpdateInfoServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -40,7 +42,7 @@ public class UpdateInfoServlet extends HttpServlet {
                 String passwordConfirmation = request.getParameter("confirm_password");
 
                 // Process Edit Action
-                boolean inputHasErrors = (! password.equals(passwordConfirmation));
+                boolean inputHasErrors = (!password.equals(passwordConfirmation));
 
                 if (inputHasErrors) {
                     request.setAttribute("inputHasErrors", true);
@@ -55,6 +57,15 @@ public class UpdateInfoServlet extends HttpServlet {
             }
             response.sendRedirect("/profile");
         }
+        if (request.getParameter("delete-account") != null) {
+
+            // Edit Process
+            User user = (User) request.getSession().getAttribute("user");
+            DaoFactory.getUsersDao().delete(user);
+            request.getSession().invalidate();
+        }
 
     }
-}
+
+ }
+
