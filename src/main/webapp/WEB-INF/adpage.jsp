@@ -1,3 +1,6 @@
+<%@ page import="com.codeup.adlister.models.User" %>
+<%@ page import="com.codeup.adlister.models.Ad" %>
+<%@ page import="com.codeup.adlister.dao.DaoFactory" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -13,6 +16,23 @@
   <h1>${ad.title}</h1>
   <h2>${ad.description}</h2>
   <h2>Ad created by: ${user.username}</h2>
+  <% User user =(User) request.getSession().getAttribute("user");
+
+    if (user == null) {
+  %>
+  <p>Own this ad? <a href="/login">Login</a> to update or delete this ad.</p>
+  <%
+  } else {
+    Long currentUser = user.getId();
+    long adId = Long.parseLong(request.getParameter("adId"));
+    User adUser = DaoFactory.getUsersDao().getUserByAd(adId);
+    Long adUserId = adUser.getId();
+      if (currentUser == adUserId) {
+  %> <a href="/ads/update?adId=${ad.getId()}">Update Ad</a>
+  <%
+      }
+    }
+  %>
 </div>
 
 </body>
