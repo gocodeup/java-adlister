@@ -14,8 +14,9 @@
 
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6">
-            <h2>${ad.title}</h2>
-            <p>${ad.description}</p>
+            <a href="${pageContext.request.contextPath}<c:url value="/adpage"/>">
+                <h2>${ad.title}</h2>
+            </a>
         </div>
     </c:forEach>
 </div>
