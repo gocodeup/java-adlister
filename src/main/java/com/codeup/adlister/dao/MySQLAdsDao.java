@@ -90,6 +90,24 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
+    public Ad findByTitle(String title) {
+        String query = "SELECT * FROM ads WHERE title = ? LIMIT 1";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, title);
+            ResultSet rs = stmt.executeQuery();
+            if(!rs.next()){
+                return null;
+            }
+            else{
+                return extractAd(rs);
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding ad by Title", e);
+        }
+    }
+
+    @Override
     public Ad findById(String id) {
         String query = "SELECT * FROM ads WHERE id = ? LIMIT 1";
         try {
@@ -97,7 +115,7 @@ public class MySQLAdsDao implements Ads {
             stmt.setInt(1, Integer.parseInt(id));
             ResultSet rs = stmt.executeQuery();
             rs.next();
-            return extractAd(rs);
+             return extractAd(rs);
         } catch (SQLException e) {
             throw new RuntimeException("Error finding ad by id", e);
         }

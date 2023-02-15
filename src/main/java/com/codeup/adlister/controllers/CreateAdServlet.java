@@ -30,32 +30,35 @@ public class CreateAdServlet extends HttpServlet {
             .forward(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         User user = (User) request.getSession().getAttribute("user");
         Ad ad = new Ad(
             user.getId(),
             request.getParameter("title"),
             request.getParameter("description")
         );
-        DaoFactory.getAdsDao().insert(ad);
-        List<Ad> returnedAds = DaoFactory.getAdsDao().myAds(user);
-        String returnedAd = null;
-        for (Ad current : returnedAds){
-            if(Objects.equals(current.getTitle(), request.getParameter("title"))){
-                returnedAd = String.valueOf(current.getId());
+        if(DaoFactory.getAdsDao().findByTitle(ad.getTitle()) == null){
+            DaoFactory.getAdsDao().insert(ad);
+            List<Ad> returnedAds = DaoFactory.getAdsDao().myAds(user);
+            String returnedAd = null;
+            for (Ad current : returnedAds){
+                if(Objects.equals(current.getTitle(), request.getParameter("title"))){
+                    returnedAd = String.valueOf(current.getId());
+                }
             }
+            String[] recievedCats = request.getParameterValues("category");
+            if(recievedCats != null){
+                for( String cat : recievedCats){
+                    AdCat adCat = new AdCat(Integer.parseInt(cat) , Integer.parseInt(returnedAd));
+                    DaoFactory.getAdCatsDao().insert(adCat);
+                }
+            }
+            response.sendRedirect("/ads/ad?"+returnedAd);
         }
-        String[] recievedCats = request.getParameterValues("category");
-        for( String cat : recievedCats){
-            AdCat adCat = new AdCat(Integer.parseInt(cat) , Integer.parseInt(returnedAd));
-            DaoFactory.getAdCatsDao().insert(adCat);
+        else{
+            request.setAttribute("error", new JSON("Please change the title, no duplicates allowed"));
+            request.setAttribute("ad", ad);
+            request.getRequestDispatcher("/WEB-INF/ads/create.jsp").forward(request, response);
         }
-
-        PrintWriter out = response.getWriter();
-        String jsonString;
-        JSON json = new JSON("Your Ad labeled "+ ad.getTitle() +" was added", "/ads/ad?"+returnedAd);
-        jsonString = this.gson.toJson(json);
-        out.print(jsonString);
-        out.flush();
     }
 }
