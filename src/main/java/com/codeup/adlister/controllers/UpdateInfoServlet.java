@@ -45,7 +45,7 @@ public class UpdateInfoServlet extends HttpServlet {
                 // Process Edit Action
                 boolean inputHasErrors = (!password.equals(passwordConfirmation));
 
-                if (inputHasErrors) {
+
                     if (inputHasErrors) {
                         JOptionPane.showMessageDialog(null,"Passwords do not match");
                         request.setAttribute("inputHasErrors", true);
