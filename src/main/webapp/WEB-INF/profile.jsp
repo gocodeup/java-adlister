@@ -20,8 +20,8 @@
     <div>
 
         <c:forEach var="ad" items="${ads}">
-            <div>
-                <a href="${pageContext.request.contextPath}<c:url value="/adpage"/>">
+            <div id="${ad.id}">
+                <a href="/adpage?adId=${ad.getId()}">
                     <h2>${ad.title}</h2>
                 </a>
             </div>
