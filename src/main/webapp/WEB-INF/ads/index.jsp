@@ -20,7 +20,7 @@
 
         <div class="row row-cols-1">
             <c:forEach var="ad" items="${ads}">
-                <form class="col" action="ads/ad" method="get">
+                <form class="col border" action="ads/ad" method="get">
                     <input class="d-none" name="query" value="${ad.id}">
                     <button class="unstyle" id="${ad.id}" type="submit">
                         <div class="row">
