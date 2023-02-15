@@ -10,5 +10,5 @@ public interface Adcats {
 
     List<JoinReturns> getRelated(String ad_id);
 
-    Long insert(AdCat adCat);
+    void insert(AdCat adCat);
 }

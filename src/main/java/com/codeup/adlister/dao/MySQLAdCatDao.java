@@ -88,16 +88,16 @@ public class MySQLAdCatDao implements Adcats{
 
 
     @Override
-    public Long insert(AdCat adCat) {
+    public void insert(AdCat adCat) {
+        String insertQuery = "INSERT INTO ads_cat(cat_id, ad_id) VALUES (?, ?)";
         try {
-            String insertQuery = "INSERT INTO ads_cat(ad_id, cat_id) VALUES (?, ?)";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setInt(1, adCat.getAdId());
             stmt.setInt(2, adCat.getCatId());
             stmt.executeUpdate();
-            ResultSet rs = stmt.getGeneratedKeys();
-            rs.next();
-            return rs.getLong(1);
+//            ResultSet rs = stmt.getGeneratedKeys();
+//            rs.next();
+//            return rs.getLong(1);
         } catch (SQLException e) {
             throw new RuntimeException("Error adding CatAd's ", e);
         }

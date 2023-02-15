@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -46,6 +47,8 @@ public class CreateAdServlet extends HttpServlet {
                 }
             }
             String[] recievedCats = request.getParameterValues("category");
+            System.out.println(returnedAd);
+            System.out.println(Arrays.toString(recievedCats));
             if(recievedCats != null){
                 for( String cat : recievedCats){
                     AdCat adCat = new AdCat(Integer.parseInt(cat) , Integer.parseInt(returnedAd));
@@ -55,6 +58,7 @@ public class CreateAdServlet extends HttpServlet {
             response.sendRedirect("/ads/ad?"+returnedAd);
         }
         else{
+            request.setAttribute("categories", DaoFactory.getCategoryDao().all());
             request.setAttribute("error", new JSON("Please change the title, no duplicates allowed"));
             request.setAttribute("ad", ad);
             request.getRequestDispatcher("/WEB-INF/ads/create.jsp").forward(request, response);
