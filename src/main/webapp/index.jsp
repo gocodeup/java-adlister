@@ -6,10 +6,10 @@
         <jsp:param name="title" value="Welcome to my site!" />
     </jsp:include>
 </head>
-<body>
+<body class="bg-dark">
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-    <div class="container">
-        <h1>Welcome to the Adlister!</h1>
+    <div class="container" style="text-align: center">
+        <a href="${pageContext.request.contextPath}<c:url value="/ads"/>"><h1>Welcome to the Adlister!</h1></a>
     </div>
 
 
