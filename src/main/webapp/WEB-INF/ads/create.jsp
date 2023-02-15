@@ -2,7 +2,7 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Create a new Ad" />
+        <jsp:param name="title" value="Your Ad" />
     </jsp:include>
 </head>
 <body>
@@ -20,6 +20,7 @@
             <input type="submit" class="btn btn-block btn-primary">
         </form>
     </div>
+    <jsp:include page="../partials/footer.jsp"></jsp:include>
 </body>
 </html>
 

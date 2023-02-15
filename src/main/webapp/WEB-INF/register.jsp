@@ -54,5 +54,6 @@
             <input type="submit" class="btn btn-primary btn-block">
         </form>
     </div>
+    <jsp:include page="./partials/footer.jsp"></jsp:include>
 </body>
 </html>
