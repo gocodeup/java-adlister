@@ -21,7 +21,7 @@
         <p><c:out value = "${ad.description}"/></p>
     </div>
 <div>
-    <h1><c:out value="${user.email}" /></h1>
+    <h1><c:out value="${owner.email}" /></h1>
 </div>
 <div>
     <c:forEach var="cat" items="${ad.categories}">

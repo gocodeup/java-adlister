@@ -24,7 +24,7 @@ public class ViewAdServlet extends HttpServlet{
                 Ad returned = DaoFactory.getAdsDao().findById(selected);
                 User owner = DaoFactory.getUsersDao().findById(String.valueOf(returned.getUserId()));
                 request.setAttribute("ad", returned);
-                request.setAttribute("user", owner);
+                request.setAttribute("owner", owner);
                 request.getRequestDispatcher("/WEB-INF/ads/showAd.jsp").forward(request, response);
             }
 
