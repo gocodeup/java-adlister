@@ -10,7 +10,6 @@
 <style>
     :root {
         --main-bg: #E6ECF0;
-        --link-color: #3B94D9;
         --main-link-color: #848487;
         --light-bg: #FFF;
         --separator-color: #DDD;
@@ -50,37 +49,24 @@
         border-radius: 100%;
         border: 4px solid var(--light-bg);
     }
-    .profile-details, .favorite, .personal {
-        margin: 0 .5em;
-        float: left;
-    }
-    .profile-details, .favorite{
-        width: calc(25% - 1em);
+   .info{
+       margin-right: 2em;
+   }
+    .profile-details{
+        text-align: center;
     }
     .profile-items {
         padding: 0;
         list-style: none;
     }
-    .personal {
-        width: calc(50% - 1em);
+    h3{
+        text-align: center;
     }
-    .boxes{
-        margin-top: 2em;
+    .container{
+        margin: 2em 0 0 0;
     }
-    #leftbox {
-        float:left;
-        width:25%;
-    }
-    #middlebox{
-        float:left;
-        width:50%;
-    }
-    #rightbox{
-        float:right;
-        width:25%;
-    }
-    .ads{
-        text-align:center;
+    h2{
+        text-align: center;
     }
 </style>
 
@@ -103,57 +89,56 @@
     </section>
 </header>
 
-<div class = "boxes">
 
-    <%--   Users Profile Info    --%>
-    <div id = "leftbox">
-        <aside class="profile-details">
-            <h3>Welcome, ${sessionScope.user.username}!</h3>
-            <ul class="profile-items">
-                <li class="profile-entry"><a href="#">San Antonio, TX</a></li>
-                <li class="profile-entry"><a href="#">codeup.com</a></li>
-                <li class="profile-entry">Joined June 2011</li>
-            </ul>
-        </aside>
-    </div>
-
-    <%--   User Personal Ads    --%>
-    <div id = "middlebox">
-        <div class="personal">
-            <h1>Personal</h1>
-            <c:forEach var="ad" items="${myFavs}">
-                <div class="ads">
-                    <h2>${ad.title}</h2>
-                    <p>${ad.description}</p>
-                    <c:forEach var="cat" items="${ad.categories}">
-                        <span>${cat.name}</span>
-                    </c:forEach>
-                    <a href="/ads/ad?${ad.id}">Click here to view ad</a>
+        <div class="container">
+            <div class="row">
+                <div class="col info">
+                    <aside class="profile-details">
+                        <h3>Welcome, ${sessionScope.user.username}!</h3>
+                        <ul class="profile-items">
+                            <li class="profile-entry">San Antonio, TX</li>
+                            <li class="profile-entry">codeup.com</li>
+                            <li class="profile-entry">Joined June 2011</li>
+                        </ul>
+                    </aside>
                 </div>
-                <br>
-            </c:forEach>
-        </div>
-    </div>
-
-
-        <%--   Users Favorite Ads      --%>
-    <div id = "rightbox">
-        <div class="favorite">
-            <h2>Favorites</h2>
-            <c:forEach var="ad" items="${myFavs}">
-                <div class="ads">
-                    <h2>${ad.title}</h2>
-                    <p>${ad.description}</p>
-                    <c:forEach var="cat" items="${ad.categories}">
-                        <span>${cat.name}</span>
+                <div class="col-6">
+                    <h2>Personal</h2>
+                    <hr>
+                    <c:forEach var="ad" items="${myFavs}">
+                        <div class="ads">
+                            <h3>${ad.title}</h3>
+                            <p>${ad.description}</p>
+                            <c:forEach var="cat" items="${ad.categories}">
+                                <span>${cat.name}</span>
+                            </c:forEach>
+                            <a href="/ads/ad?${ad.id}">Click here to view ad</a>
+                        </div>
+                        <br>
                     </c:forEach>
-                    <a href="/ads/ad?${ad.id}">Click here to view ad</a>
                 </div>
-                <br>
-            </c:forEach>
+                <div class="col">
+                    <h2>Favorites</h2>
+                    <hr>
+                    <c:forEach var="ad" items="${myFavs}">
+                        <div class="ads">
+                            <h3>${ad.title}</h3>
+                            <p>${ad.description}</p>
+                            <c:forEach var="cat" items="${ad.categories}">
+                                <span>${cat.name}</span>
+                            </c:forEach>
+                            <a href="/ads/ad?${ad.id}">Click here to view ad</a>
+                        </div>
+                        <br>
+                    </c:forEach>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+
+
+
+
+<%--</div>--%>
 <%--        <jsp:include page="./partials/footer.jsp"></jsp:include>--%>
 </body>
 </html>
