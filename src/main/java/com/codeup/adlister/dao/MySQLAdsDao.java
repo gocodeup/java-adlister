@@ -1,8 +1,6 @@
 package com.codeup.adlister.dao;
-
 import com.codeup.adlister.models.*;
 import com.mysql.cj.jdbc.Driver;
-
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -86,6 +84,36 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
+
+    @Override
+    public List<Ad> searchResults(String words, List<ReturnedCats> cats){
+            int count = 3;
+        try {
+            words = "%"+words+"%";
+            String query = "SELECT DISTINCT ads.id, ads.user_id, ads.title, ads.description FROM ads WHERE (title LIKE ? OR  description LIKE ?)";
+            if(!cats.isEmpty()){
+                for (int i = 1; i <= cats.size(); i++){
+                    query = query + "AND ads.id IN (SELECT ad_id FROM ads_cat WHERE cat_id = ?)";
+                }
+            }
+
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, words);
+            stmt.setString(2, words);
+            if(!cats.isEmpty()){
+                for (ReturnedCats cat : cats){
+                    stmt.setString(count, cat.getId());
+                    count++;
+                }
+            }
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving search ads.", e);
+        }
+
+    }
+
 
     @Override
     public Ad findByTitle(String title) {
