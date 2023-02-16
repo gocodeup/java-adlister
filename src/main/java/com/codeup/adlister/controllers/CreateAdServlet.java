@@ -1,18 +1,13 @@
 package com.codeup.adlister.controllers;
-
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.*;
-
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 
@@ -39,8 +34,10 @@ public class CreateAdServlet extends HttpServlet {
         );
         List<ReturnedCats> returnedCats = new ArrayList<>();
         String[] recievedCats = request.getParameterValues("category");
-        for (String cat : recievedCats){
-            returnedCats.add(new ReturnedCats(cat));
+        if(recievedCats != null){
+            for (String cat : recievedCats){
+                returnedCats.add(new ReturnedCats(cat));
+            }
         }
         if(DaoFactory.getAdsDao().findByTitle(ad.getTitle()) == null){
             DaoFactory.getAdsDao().insert(ad);
@@ -51,7 +48,7 @@ public class CreateAdServlet extends HttpServlet {
                     returnedAd = String.valueOf(current.getId());
                 }
             }
-            if(recievedCats.length > 1){
+            if(recievedCats != null){
                 for( String cat : recievedCats){
                     AdCat adCat = new AdCat(Integer.parseInt(cat) , Integer.parseInt(returnedAd));
                     DaoFactory.getAdCatsDao().insert(adCat);
