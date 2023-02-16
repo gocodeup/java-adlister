@@ -89,35 +89,14 @@ INSERT INTO ads_cat (cat_id, ad_id) VALUES (11,5), (22,5);
 
 INSERT INTO ads_fav (user_id, ad_id) VALUES (1,2), (1,3);
 
+#
+# SELECT ads.id, ads.user_id, ads.title, ads.description FROM ads
+#     JOIN ads_cat ac on ads.id = ac.ad_id
+#     WHERE ads.id = 1 AND ac.cat_id = 1;
+#
+#
+# SELECT DISTINCT ads.id, ads.user_id, ads.title, ads.description FROM ads WHERE
+#     (title LIKE ? OR  description LIKE ?) AND
+#         ads.id IN (SELECT ad_id FROM ads_cat WHERE cat_id ='21') AND
+#         ads.id IN (SELECT ad_id FROM ads_cat WHERE cat_id ='22');
 
-SELECT ads.id, ads.user_id, ads.title, ads.description FROM ads
-    JOIN ads_cat ac on ads.id = ac.ad_id
-    WHERE ads.id = 1 AND ac.cat_id = 1;
-
-SELECT DISTINCT ads.id, ads.user_id, ads.title, ads.description FROM ads    JOIN ads_cat ac on ads.id = ac.ad_id WHERE (title LIKE '%%' OR  description LIKE '%%');
-
-SELECT DISTINCT ads.id, ads.user_id, ads.title, ads.description FROM ads
-    JOIN ads_cat ac on ads.id = ac.ad_id
-    WHERE (title LIKE '%%' OR  description LIKE '%%')
-    AND ac.cat_id = '21'
-    AND ac.cat_id = '22';
-
-
-
-
-SELECT DISTINCT ads.id, ads.user_id, ads.title, ads.description FROM ads
-        INNER JOIN ads_cat ac on ads.id = ac.ad_id =21
-
-
-
-SELECT DISTINCT ads.id, ads.user_id, ads.title, ads.description FROM ads WHERE
-    (title LIKE ? OR  description LIKE ?) AND
-        ads.id IN (SELECT ad_id FROM ads_cat WHERE cat_id ='21') AND
-        ads.id IN (SELECT ad_id FROM ads_cat WHERE cat_id ='22');
-
-
-SELECT DISTINCT ads.id, ads.user_id, ads.title, ads.description FROM ads
-                                                                         JOIN ads_cat ac on ads.id = ac.ad_id
-WHERE
-  ac.cat_id = 21
-  AND ac.cat_id = 22
