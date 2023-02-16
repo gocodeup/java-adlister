@@ -18,26 +18,35 @@
 <c:set var="userId" value="${sessionScope.user.id}"/>
 <c:set var="ownerId" value="${requestScope.owner.id}"/>
 
-<h1><c:out value="${ad.title}"/></h1>
-<c:if test="${userId == ownerId}">
-    <a class="unstyle" href="/ads/delete?${ad.id}">
-        Delete Ad
-    </a>
-    <a class="unstyle" href="/ads/edit?${ad.id}">
-        Edit Ad
-    </a>
-</c:if>
-    <div class="col-md-6">
+
+
+<div class="col-md-12" style="text-align: center">
+
+    <h1><c:out value="${ad.title}"/></h1>
+<%--    <c:if test="${userId == ownerId}">--%>
+<%--        <a href="/ads/delete?${ad.id}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Delete Ad</a>--%>
+<%--        <a href="/ads/edit?${ad.id}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Edit Ad</a>--%>
+<%--    </c:if>--%>
+    <div>
         <p><c:out value = "${ad.description}"/></p>
     </div>
-<div>
-    <h1><c:out value="${owner.email}" /></h1>
+    <div>
+        <h1><c:out value="${owner.email}" /></h1>
+    </div>
+    <div>
+        <c:forEach var="cat" items="${ad.categories}">
+            <span>${cat.name}</span>
+        </c:forEach>
+    </div>
+    <br>
+    <c:if test="${userId == ownerId}">
+        <a href="/ads/delete?${ad.id}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" style="width: 50%">Delete Ad</a>
+        <br>
+        <br>
+        <a href="/ads/edit?${ad.id}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" style="width: 50%">Edit Ad</a>
+    </c:if>
 </div>
-<div>
-    <c:forEach var="cat" items="${ad.categories}">
-        <span>${cat.name}</span>
-    </c:forEach>
-</div>
+
 <jsp:include page="../partials/footer.jsp"></jsp:include>
 </body>
 </html>
