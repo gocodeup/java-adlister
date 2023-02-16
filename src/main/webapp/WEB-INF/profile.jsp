@@ -72,24 +72,18 @@
 
 
 <body>
+
+<%--Profile Header--%>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
-
-<%--    <div class="container">--%>
-<%--        <h1>Welcome, ${sessionScope.user.username}!</h1>--%>
-<%--    </div>--%>
-<%--    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>--%>
-
 <header>
     <section class="profile">
         <div class="profile-header">
             <img class="img-circle profile-image" src="https://randomuser.me/api/portraits/men/12.jpg" alt="user">
-            <%--                <h1 style="color: black">Welcome, ${sessionScope.user.username}!</h1>--%>
         </div>
-
     </section>
 </header>
 
-
+    <%--Profile Personal Info--%>
         <div class="container">
             <div class="row">
                 <div class="col info">
@@ -97,15 +91,17 @@
                         <h3>Welcome, ${sessionScope.user.username}!</h3>
                         <ul class="profile-items">
                             <li class="profile-entry">San Antonio, TX</li>
-                            <li class="profile-entry">codeup.com</li>
-                            <li class="profile-entry">Joined June 2011</li>
+                            <li class="profile-entry">Adlister.com</li>
+                            <li class="profile-entry">Joined January 2023</li>
                         </ul>
                     </aside>
                 </div>
+
+        <%--      Users Ads Section      --%>
                 <div class="col-6">
-                    <h2>Personal</h2>
+                    <h2>Your Ads</h2>
                     <hr>
-                    <c:forEach var="ad" items="${myFavs}">
+                    <c:forEach var="ad" items="${myAds}">
                         <div class="ads">
                             <h3>${ad.title}</h3>
                             <p>${ad.description}</p>
@@ -117,6 +113,8 @@
                         <br>
                     </c:forEach>
                 </div>
+
+        <%--    Users Favorite Ads Section     --%>
                 <div class="col">
                     <h2>Favorites</h2>
                     <hr>
@@ -135,10 +133,6 @@
             </div>
         </div>
 
-
-
-
-<%--</div>--%>
 <%--        <jsp:include page="./partials/footer.jsp"></jsp:include>--%>
 </body>
 </html>
