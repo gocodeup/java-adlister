@@ -37,6 +37,11 @@ public class CreateAdServlet extends HttpServlet {
             request.getParameter("title"),
             request.getParameter("description")
         );
+        List<ReturnedCats> returnedCats = new ArrayList<>();
+        String[] recievedCats = request.getParameterValues("category");
+        for (String cat : recievedCats){
+            returnedCats.add(new ReturnedCats(cat));
+        }
         if(DaoFactory.getAdsDao().findByTitle(ad.getTitle()) == null){
             DaoFactory.getAdsDao().insert(ad);
             List<Ad> returnedAds = DaoFactory.getAdsDao().myAds(user);
@@ -46,10 +51,7 @@ public class CreateAdServlet extends HttpServlet {
                     returnedAd = String.valueOf(current.getId());
                 }
             }
-            String[] recievedCats = request.getParameterValues("category");
-            System.out.println(returnedAd);
-            System.out.println(Arrays.toString(recievedCats));
-            if(recievedCats != null){
+            if(recievedCats.length > 1){
                 for( String cat : recievedCats){
                     AdCat adCat = new AdCat(Integer.parseInt(cat) , Integer.parseInt(returnedAd));
                     DaoFactory.getAdCatsDao().insert(adCat);
@@ -59,6 +61,7 @@ public class CreateAdServlet extends HttpServlet {
         }
         else{
             request.setAttribute("categories", DaoFactory.getCategoryDao().all());
+            request.setAttribute("checked", returnedCats);
             request.setAttribute("error", new JSON("Please change the title, no duplicates allowed"));
             request.setAttribute("ad", ad);
             request.getRequestDispatcher("/WEB-INF/ads/create.jsp").forward(request, response);
