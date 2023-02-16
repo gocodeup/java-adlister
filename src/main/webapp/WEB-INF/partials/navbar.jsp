@@ -36,31 +36,36 @@
 <%--    </div><!-- /.container-fluid -->--%>
 <%--</nav>--%>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="${pageContext.request.contextPath}<c:url value="/ads"/>">Adlister</a>
+
+        <a class="navbar-brand" href="${pageContext.request.contextPath}<c:url value="/ads"/>">
+            <div class="logo-image">
+                <img src="https://iili.io/HG2k5Mu.png" class="img-fluid">
+                UFO-Lister
+            </div></a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mt-2">
                 <form class="d-flex" action="/ads/search" method="GET">
                     <input id="s" class="form-control me-2" name="s" type="search" placeholder="Search Ads..." aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit" >Search</button>
+                    <button class="btn search-btn" type="submit" >Search</button>
                 </form>
             </ul>
 
-            <ul class="nav navbar-nav navbar-right">
+            <ul class="nav">
                 <% User user = (User) session.getAttribute("user");
                     if (user == null) {
                 %>
 
-                <li><a class="nav-link active" href="${pageContext.request.contextPath}<c:url value="/ads/create"/>">Create a Listing</a></li>
-                <li><a class="nav-link active" href="${pageContext.request.contextPath}<c:url value="/register"/>">Register</a></li>
-                <li><a class="nav-link active" href="${pageContext.request.contextPath}<c:url value="/login"/>">Login</a></li>
+                <li><a class="nav-txt active" href="${pageContext.request.contextPath}<c:url value="/ads/create"/>">Create a Listing</a></li>
+                <li><a class="nav-txt active" href="${pageContext.request.contextPath}<c:url value="/register"/>">Register</a></li>
+                <li><a class="nav-txt active" href="${pageContext.request.contextPath}<c:url value="/login"/>">Login</a></li>
                 <%
                 }else{
                 %>
-                <li><a class="nav-link active" href="${pageContext.request.contextPath}<c:url value="/ads/create"/>">Create an Ad</a></li>
-                <li><a class="nav-link active" href="${pageContext.request.contextPath}<c:url value="/profile"/>"><i class="fa-solid fa-user"></i> Profile</a></li>
-                <li><a class="nav-link active" href="${pageContext.request.contextPath}<c:url value="/logout"/>"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+                <li><a class="nav-txt active" href="${pageContext.request.contextPath}<c:url value="/ads/create"/>">Create a Listing</a></li>
+                <li><a class="nav-txt active" href="${pageContext.request.contextPath}<c:url value="/profile"/>"><i class="fa-solid fa-user"></i> Profile</a></li>
+                <li><a class="nav-txt active" href="${pageContext.request.contextPath}<c:url value="/logout"/>"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
                 <%
                     }
                 %>
