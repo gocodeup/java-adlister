@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/functions" prefix = "fn" %>
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
@@ -21,9 +22,17 @@
             </div>
             <input type="submit" class="btn btn-block btn-primary">
             <div class="row text-nowrap">
+
                         <c:forEach var="cat" items="${categories}">
+                            <c:set var="id" value="${cat.id}" />
                             <div class="col-3">
-                                <input class="form-check-input me-1" name="category" type="checkbox" value="${cat.id}" id="${cat.category}">
+                                <input class="form-check-input me-1" name="category" type="checkbox" value="${cat.id}"
+                                <c:forEach var="catTrue" items="${checked}">
+                                    <c:set var="id1" value="${catTrue.id}" />
+                                <c:if test="${fn:contains(id1,id)}">
+                                checked</c:if>
+                                </c:forEach>
+                                       id="${cat.category}">
                                 <label class="form-check-label" for="${cat.category}">${cat.category}</label>
                             </div>
                         </c:forEach>

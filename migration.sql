@@ -32,6 +32,7 @@ CREATE TABLE categories(
 );
 
 CREATE TABLE ads_cat(
+
                         cat_id INT UNSIGNED NOT NULL ,
                         ad_id INT UNSIGNED NOT NULL ,
                         FOREIGN KEY (cat_id) REFERENCES categories (id),

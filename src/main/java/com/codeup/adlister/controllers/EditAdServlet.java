@@ -4,7 +4,6 @@ package com.codeup.adlister.controllers;
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.User;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +13,7 @@ import java.io.IOException;
 import java.util.Objects;
 
 
-@WebServlet(name = "controllers.ViewAdServlet", urlPatterns = "/ads/edit")
+@WebServlet(name = "controllers.EditAdServlet", urlPatterns = "/ads/edit")
 public class EditAdServlet extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User user = (User) request.getSession().getAttribute("user");
@@ -50,8 +49,10 @@ public class EditAdServlet extends HttpServlet{
             if(owner == user){
                 String result = DaoFactory.getAdsDao().updateAd(adId,adTitle,description);
                 if(Objects.equals(result, "updated")){
-                    request.setAttribute("user", user);
                     response.sendRedirect("/ads/ad?"+adId);
+                }
+                else{
+
                 }
             }
         }
