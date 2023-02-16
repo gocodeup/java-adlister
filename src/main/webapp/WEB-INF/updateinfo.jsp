@@ -8,9 +8,9 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 <div class="container">
-    <h1>Update Info <c:out value="${sessionScope.user.username}"/>:</h1>
+    <h1 class="card-txt">Update Info <c:out value="${sessionScope.user.username}"/>:</h1>
 
-    <form action="/updateinfo" method="post">
+    <form class="card-txt" action="/updateinfo" method="post">
         <div class="form-group">
             <label for="email">Username</label>
             <input id="username" name="username" class="form-control" type="text" value="${sessionScope.user.username}">
@@ -27,10 +27,10 @@
             <label for="confirm_password">Confirm Password</label>
             <input id="confirm_password" name="confirm_password" class="form-control" type="password"  required>
         </div>
-        <input type="submit" name="editButton" class="btn btn-primary btn-block">
+        <input type="submit" name="editButton" class="btn card-btn">
     </form>
     <form action="/updateinfo" method="post">
-        <button type="submit" name="delete-account" style="background: red; color: black; font-weight: bold"value="${sessionScope.user.id}" onclick="return confirm('This will delete all info are you sure?')" >Delete Account?</button>
+        <button class="btn delete-btn" type="submit" name="delete-account" value="${sessionScope.user.id}" onclick="return confirm('This will delete all info are you sure?')" >Delete Account?</button>
 
     </form>
 <%--    <div>--%>
