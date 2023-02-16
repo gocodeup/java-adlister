@@ -17,6 +17,7 @@ public class ViewProfileServlet extends HttpServlet {
             response.sendRedirect("/login");
             return;
         }
+        System.out.println(DaoFactory.getFavoritesDao().getRelated(user).size());
 
         request.setAttribute("myFavs", DaoFactory.getFavoritesDao().getRelated(user));
         request.setAttribute("myAds", DaoFactory.getAdsDao().myAds(user));

@@ -24,6 +24,25 @@ public class MySQLFavoritesDao implements Favorites {
         }
     }
 
+
+    @Override
+    public String addAdFav(String id, User user){
+        try {
+            String insertQuery = "INSERT INTO ads_fav(user_id, ad_id) VALUES (?, ?)";
+            PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
+            stmt.setInt(1, (int) user.getId());
+            stmt.setInt(2, Integer.parseInt(id));
+            stmt.executeUpdate();
+            ResultSet rs = stmt.getGeneratedKeys();
+            rs.next();
+            return "added";
+        } catch (SQLException e) {
+            throw new RuntimeException("Error creating a new ad.", e);
+        }
+    }
+
+
+
     @Override
     public void deleteAdFav(String id){
         try {
@@ -47,15 +66,11 @@ public class MySQLFavoritesDao implements Favorites {
             stmt.setLong(1, user.getId());
             ResultSet rs = stmt.executeQuery();
             List<Ad> returnedAds = new ArrayList<>();
-            if(!rs.next()){
-                return null;
-            }
-            else{
-                while(rs.next()){
+            while(rs.next()){
                     returnedAds.add(DaoFactory.getAdsDao().findById(String.valueOf(rs.getInt("id"))));
                 }
-                return returnedAds;
-            }
+            return returnedAds;
+
 
         } catch (SQLException e) {
             throw new RuntimeException("Error finding favorites by id", e);

@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
+import java.util.Objects;
 
 
 @WebServlet(name = "controllers.ViewAdServlet", urlPatterns = "/ads/ad")
@@ -22,6 +24,21 @@ public class ViewAdServlet extends HttpServlet{
             else{
                 Ad returned = DaoFactory.getAdsDao().findById(selected);
                 User owner = DaoFactory.getUsersDao().findById(String.valueOf(returned.getUserId()));
+                List<Ad> favList = DaoFactory.getFavoritesDao().getRelated(user);
+                boolean fav = false;
+                for (Ad ad : favList){
+                    if (Objects.equals(String.valueOf(ad.getId()) , selected)) {
+                        fav = true;
+                        break;
+                    }
+                }
+                if(fav){
+                   request.setAttribute("favStatus", "Remove");
+                }
+                else{
+                    request.setAttribute("favStatus", "Add");
+                }
+
                 request.setAttribute("ad", returned);
                 request.setAttribute("owner", owner);
                 request.getRequestDispatcher("/WEB-INF/ads/showAd.jsp").forward(request, response);

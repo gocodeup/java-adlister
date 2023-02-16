@@ -9,6 +9,8 @@ import java.util.List;
 public interface Favorites {
 
 
+    String addAdFav(String id, User user);
+
     void deleteAdFav(String id);
 
     List<Ad> getRelated(User user);

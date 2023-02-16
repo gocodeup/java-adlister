@@ -100,3 +100,5 @@ INSERT INTO ads_fav (user_id, ad_id) VALUES (1,2), (1,3);
 #         ads.id IN (SELECT ad_id FROM ads_cat WHERE cat_id ='21') AND
 #         ads.id IN (SELECT ad_id FROM ads_cat WHERE cat_id ='22');
 
+SELECT ads.id FROM ads JOIN ads_fav af on ads.id = af.ad_id JOIN users u on af.user_id = u.id
+                  WHERE u.id =1;
