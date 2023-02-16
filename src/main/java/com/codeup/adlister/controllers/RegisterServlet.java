@@ -42,7 +42,7 @@ public class RegisterServlet extends HttpServlet {
             String message = "Passwords did not  match";
             request.setAttribute("message", message);
             response.sendRedirect("/register");
-            return;
+//            return;
 
         }else{
             User user = new User(username, email, password);
