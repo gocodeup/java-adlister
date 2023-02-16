@@ -15,23 +15,25 @@
 }
 
 .unstyle{
-    background: none;
     color: inherit;
-    border: none;
     padding: 0;
     font: inherit;
     cursor: pointer;
     outline: inherit;
+    border: 3px solid black;
+    background-color: peachpuff;
+    font-family: "Times New Roman", Serif;
 }
 
 h1 {
-    font-family:arial;
+    font-family:"Times New Roman", Serif;
     font-weight:900;
     font-size:100px;
     text-transform:uppercase;
     text-shadow: 1px 1px 2px yellow, 0 0 1em lightpink, 0 0 0.2em yellow;
     text-align: center;
 }
+
 
 body {
     background-color: hsl(34, 53%, 82%);
@@ -64,7 +66,7 @@ font-family: "Segoe UI light", "Segoe UI", "Helvetica";
 
 .navbar-brand:hover {
     color: white;
-    font-family: Arial;
+    font-family: "Times New Roman", Serif;
     font-weight: bold;
     background-color: peachpuff;
 }
@@ -73,7 +75,7 @@ font-family: "Segoe UI light", "Segoe UI", "Helvetica";
     font-size: 35px;
 }
 .nav-link:hover {
-    font-family: Arial;
+    font-family: "Times New Roman", Serif;
     font-weight: bold;
     background-color: peachpuff;
 }
@@ -87,7 +89,7 @@ font-family: "Segoe UI light", "Segoe UI", "Helvetica";
     margin: auto;
     padding-top: 10px;
     border-right: 0.1em solid black;
-    font-family: monospace;
+    font-family: "Times New Roman", Serif;
     font-size: 5em;
     border-style: ridge;
     text-align: center;
@@ -204,7 +206,493 @@ header {
 h3, h2{
     text-align: center;
 }
-.container{
-    margin: 2em 0 0 0;
+
+label {
+    font-family:"Times New Roman", Serif;
+    font-weight:900;
+    font-size:25px;
+    text-transform:uppercase;
+    text-shadow: 1px 1px 2px yellow, 0 0 1em lightpink, 0 0 0.2em yellow;
+    text-align: center;
+}
+
+.btn-primary {
+    size: 40px;
+}
+
+p {
+    font-family: "Times New Roman", Serif;
+    font-size: 23px;
+}
+
+
+.container {
+    width:100%;
+    height:100%;
+}
+.body-table-section {
+    position:absolute;
+    width:750px;
+    height:830px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    overflow:hidden;
+    box-shadow: inset 0px 0px 350px -20px rgb(0, 0, 0);
+    border-radius: 200px;
+}
+.window {
+    position:absolute;
+    height:350px;
+    width:300px;
+    margin:50px 0;
+}
+.marton-body {
+    position:inherit;
+    margin:450px 250px;
+    width: 250px;
+    height:300px;
+    border-radius: 70px;
+    background-color:rgb(185, 185, 185);
+    animation: marton-body 30s linear infinite;
+}
+.marton-body-cover {
+    position:inherit;
+    margin:530px 100px;
+    width: 500px;
+    height:250px;
+
+}
+.marton-head {
+    margin:300px;
+    width:150px;
+    height:170px;
+    border-radius: 60px;
+    animation: marton-head 30s linear infinite;
+}
+.marton-hair {
+    margin:0px;
+    width:150px;
+    height:170px;
+    border-radius: 60px;
+    background-color: rgb(82, 40, 40);
+}
+.marton-hair-parting-right {
+    position: absolute;
+    margin:-8px 00px;
+    width:105px;
+    height:120px;
+    background-color: rgb(82, 40, 40);
+    border-radius: 50px;
+}
+.marton-hair-parting-left {
+    position: relative;
+    float:right;
+    margin:-8px 00px;
+    width:105px;
+    height:120px;
+    background-color: rgb(82, 40, 40);
+    border-radius: 60px;
+}
+.marton-face {
+    position:absolute;
+    margin:30px 15px;
+    width:120px;
+    height:110px;
+    background-color: rgb(204, 204, 183);
+    border-radius:45px;
+    animation: marton-face 1.5s linear infinite;
+}
+.marton-face-traits {
+    animation: marton-face-traits 1.5s linear infinite;
+}
+.marton-beard-shadow {
+    position:absolute;
+    margin:40px 0px;
+    width:150px;
+    height:160px;
+    background-color: rgb(71, 36, 36);
+    border-radius:60px;
+}
+.marton-beard {
+    position:absolute;
+    margin:25px 0px;
+    width:150px;
+    height:160px;
+    background-color: rgb(82, 40, 40);
+    border-radius:60px;
+    animation: marton-beard 1.5s linear infinite;
+}
+.marton-ear-right {
+    position: absolute;
+    margin:50px -20px;
+    width:60px;
+    height:60px;
+    background-color: rgb(204, 204, 183);
+    border-radius: 50%;
+    animation: marton-ear-right 1.5s linear infinite;
+}
+.marton-ear-left {
+    position: absolute;
+    margin:50px 108px;
+    width:60px;
+    height:60px;
+    background-color: rgb(204, 204, 183);
+    border-radius: 50%;
+    animation: marton-ear-left 1.5s linear infinite;
+}
+.marton-ear-shadow-right {
+    position: absolute;
+    margin:60px -10px;
+    width:40px;
+    height:40px;
+    background-color: rgb(192, 192, 170);
+    border-radius: 50%;
+    animation: marton-ear-shadow-right 1.5s linear infinite;
+}
+.marton-ear-shadow-left {
+    position: absolute;
+    margin:60px 118px;
+    width:40px;
+    height:40px;
+    background-color: rgb(192, 192, 170);
+    border-radius: 50%;
+    animation: marton-ear-shadow-left 1.5s linear infinite;
+}
+.marton-earbud-right {
+    position: absolute;
+    margin:80px -1px;
+    width:20px;
+    height:20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: marton-ear-shadow-right 1.5s linear infinite;
+}
+.marton-earbud-right2 {
+    position: absolute;
+    margin:83px 3px;
+    width:10px;
+    height:30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1px;
+    animation: marton-ear-shadow-right 1.5s linear infinite;
+}
+
+.marton-earbud-left {
+    position: absolute;
+    margin:80px 130px;
+    width:20px;
+    height:20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: marton-ear-shadow-left 1.5s linear infinite;
+}
+.marton-earbud-left2 {
+    position: absolute;
+    margin:83px 135px;
+    width:10px;
+    height: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1px;
+    animation: marton-ear-shadow-left 1.5s linear infinite;
+}
+.marton-moustache-right {
+    position:absolute;
+    margin:95px 10px;
+    width:50px;
+    height:20px;
+    background-color: rgb(71, 36, 36);
+    border-radius:11px;
+    transform: rotate(-20deg);
+}
+.marton-moustache-left {
+    position:absolute;
+    margin:95px 60px;
+    width:50px;
+    height:20px;
+    background-color: rgb(71, 36, 36);
+    border-radius:11px;
+    transform: rotate(20deg);
+}
+.marton-eyebrow-right {
+    position:absolute;
+    margin:30px 10px;
+    width:40px;
+    height:15px;
+    background-color: rgb(71, 36, 36);
+    border-radius:11px;
+    transform: rotate(-3deg);
+}
+.marton-eyebrow-left {
+    position:absolute;
+    margin:25px 70px;
+    width:40px;
+    height:15px;
+    background-color: rgb(71, 36, 36);
+    border-radius:11px;
+    animation: marton-eyebrow-left 30s linear infinite;
+}
+.marton-eye-right {
+    position: absolute;
+    margin:35px 10px;
+    width:40px;
+    height:40px;
+    background-color:rgb(36, 36, 36);
+    border-radius: 50%;
+}
+.marton-eye-left {
+    position: absolute;
+    margin:35px 70px;
+    width:40px;
+    height:40px;
+    background-color:rgb(36, 36, 36);
+    border-radius: 50%;
+}
+.marton-noserim-box {
+    position: absolute;
+    margin:29px 43px;
+    width:35px;
+    height:35px;
+    overflow:hidden;
+}
+.marton-eye-noserim {
+    margin-top: 20px;
+    width:30px;
+    height:25px;
+    position:absolute;
+    border-style:solid;
+    border-color:rgb(36, 36, 36);
+    border-width: 5px;
+    border-radius: 50%;
+}
+.marton-nostril-right {
+    position: absolute;
+    margin:80px 51px;
+    width:5px;
+    height:5px;
+    background-color:rgb(36, 36, 36);
+    border-radius: 50%;
+}
+.marton-nostril-left {
+    position: absolute;
+    margin:80px 63px;
+    width:5px;
+    height:5px;
+    background-color:rgb(36, 36, 36);
+    border-radius: 50%;
+}
+.marton-mouth {
+    position:absolute;
+    margin:100px 44px;
+    width:30px;
+    height:15px;
+    background-color: rgb(187, 187, 158);
+    border-radius:11px;
+}
+.computer-screen-layer1 {
+    position:absolute;
+    margin:-256px 200px;
+    width:350px;
+    height:200px;
+    background-color: darkslategrey;
+    animation: screen-glow 30s linear infinite;
+    border-radius: 15px;
+}
+.computer-screen-layer2 {
+    position:absolute;
+    margin:-250px 200px;
+    width:350px;
+    height:200px;
+    background-color: rgb(21, 31, 31);
+    border-radius: 15px;
+}
+.computer-stand-layer1 {
+    position:absolute;
+    margin:-156px 350px;
+    width: 50px;
+    height:150px;
+    background-color: darkslategrey;
+}
+.computer-stand-layer2 {
+    position:absolute;
+    margin:-150px 350px;
+    width:50px;
+    height:150px;
+    background-color: rgb(25, 36, 36);
+}
+.computer-stand-layer3 {
+    position:absolute;
+    margin:-50px 275px;
+    width:200px;
+    height:70px;
+    border-radius: 15px;
+    background-color:rgb(20, 32, 32);
+}
+.computer-stand-layer4 {
+    position:absolute;
+    margin:-45px 275px;
+    width:200px;
+    height:70px;
+    border-radius: 15px;
+    background-color:rgb(15, 22, 22);
+}
+.computer-table {
+    position:absolute;
+    margin: -140px -125px;
+    width:1000px;
+    height:200px;
+    background-color:rgb(36, 31, 31);
+}
+
+/* ANIMATION */
+
+@keyframes marton-eyebrow-left {
+    0.0%  { transform: translate(0px, 2px) rotate(10deg); }
+    1.0%  { transform: translate(0px, 2px) rotate(10deg); }
+    53%  { transform: translate(0px, 2px) rotate(10deg); }
+    54%  { transform: translate(0px, -12px) rotate(10deg); }
+    74%  { transform: translate(0px, -12px) rotate(10deg); }
+    76% { transform: translate(0px, 2px) rotate(10deg); }
+    100%  { transform: translate(0px, 2px) rotate(10deg); }
+}
+@keyframes screen-glow {
+    0% {  box-shadow:0px -30px 200px -50px rgb(168, 216, 165); }
+    20.9% {  box-shadow:0px -30px 200px -50px rgb(179, 229, 175); }
+    21% {  box-shadow:0px -30px 270px -50px rgb(255, 255, 255); }
+    29.95% {  box-shadow:0px -30px 270px -50px rgb(255, 255, 255); }
+    30% {  box-shadow:0px -30px 150px -60px rgb(161, 140, 216); }
+    34.95% {  box-shadow:0px -30px 150px -60px rgb(151, 134, 197); }
+    35% {  box-shadow:0px -30px 250px -60px #0ff; }
+    49.95% {  box-shadow:0px -30px 250px -60px #0ff; }
+    50% {  box-shadow:0px -30px 250px -50px rgb(239, 241, 198); }
+    68% {  box-shadow:0px -30px 350px -30px rgb(239, 241, 198); }
+    69.95% {  box-shadow:0px -30px 350px -30px rgb(236, 240, 182); }
+    70% {  box-shadow:0px -30px 350px -30px rgb(243, 204, 191); }
+    74.95% {  box-shadow:0px -30px 350px -30px rgb(252, 207, 194); }
+    75% {  box-shadow:0px -30px 350px -40px rgb(224, 167, 247); }
+    99.95% {  box-shadow:0px -30px 350px -40px rgb(217, 160, 240); }
+    100% {  box-shadow:0px -30px 150px -60px #0ff; }
+}
+@keyframes marton-body {
+    0.0%  { transform: rotate(-1deg); }
+    25% { transform: rotate(1deg); }
+    50%  { transform: rotate(-1deg); }
+    52.5% { transform: rotate(1deg); }
+    55%  { transform: rotate(-2deg); }
+    57.5% { transform: rotate(2deg); }
+    60%  { transform: rotate(-3deg); }
+    62.5% { transform: rotate(3deg); }
+    65%  { transform: rotate(-3deg); }
+    67.5% { transform: rotate(3deg); }
+    70%  { transform: rotate(-3deg); }
+    72.5% { transform: rotate(3deg); }
+    75%  { transform: rotate(-3deg); }
+    77.5% { transform: rotate(3deg); }
+    80%  { transform: rotate(-3deg); }
+    82.5% { transform: rotate(3deg); }
+    85%  { transform: rotate(-3deg); }
+    87.5% { transform: rotate(2deg); }
+    90%  { transform: rotate(-2deg); }
+    95%  { transform: rotate(1deg); }
+    100%  { transform: rotate(-1deg); }
+}
+@keyframes marton-head {
+    0.0%  { transform: rotate(0deg) translate(-5px, 2px); }
+    22.5%  { transform: rotate(0deg) translate(0px, 9px); }
+    25% { transform: rotate(7deg) translate(5px, 17px); }
+    35% { transform: rotate(5deg) translate(5px, 13px); }
+    37.5% { transform: rotate(0deg) translate(0px, 7px); }
+    50%  { transform: rotate(-3deg) translate(-6px, 2px) }
+    51.25%  { transform: rotate(-0deg) translate(0px, -3px); }
+    52.5% { transform: rotate(4deg) translate(6px, 3px); }
+    53.75% { transform: rotate(0deg) translate(0px, -3px); }
+    55%  { transform: rotate(-4deg) translate(-7px, 4px) }
+    56.25%  { transform: rotate(-0deg) translate(0px, -4px); }
+    57.5% { transform: rotate(3deg) translate(7px, 4px); }
+    58.75% { transform: rotate(0deg) translate(0px, -4px); }
+    60%  { transform: rotate(-3deg) translate(-8px, 5px) }
+    61.25%  { transform: rotate(-0deg) translate(0px, -5px); }
+    62.5% { transform: rotate(6deg) translate(8px, 5px); }
+    63.75% { transform: rotate(0deg) translate(0px, -5px); }
+    65%  { transform: rotate(-6deg) translate(-9px, 6px) }
+    66.25%  { transform: rotate(-0deg) translate(0px, -6px); }
+    67.5% { transform: rotate(7deg) translate(9px, 6px); }
+    68.75% { transform: rotate(0deg) translate(0px, -6px); }
+    70%  { transform: rotate(-7deg) translate(-10px, 7px) }
+    71.25%  { transform: rotate(-0deg) translate(0px, -7px); }
+    72.5% { transform: rotate(7deg) translate(10px, 7px); }
+    73.75% { transform: rotate(0deg) translate(0px, -7px); }
+    75%  { transform: rotate(-7deg) translate(-10px, 7px) }
+    76.25%  { transform: rotate(-0deg) translate(0px, -7px); }
+    77.5% { transform: rotate(7deg) translate(10px, 7px); }
+    78.75% { transform: rotate(0deg) translate(0px, -7px); }
+    80%  { transform: rotate(-7deg) translate(-10px, 7px) }
+    81.25%  { transform: rotate(-0deg) translate(0px, -7px); }
+    82.5% { transform: rotate(7deg) translate(10px, 7px); }
+    83.75% { transform: rotate(0deg) translate(0px, -7px); }
+    85%  { transform: rotate(-7deg) translate(-10px, 7px) }
+    86.25%  { transform: rotate(-0deg) translate(0px, -7px); }
+    87.5% { transform: rotate(6deg) translate(10px, 6px); }
+    88.75% { transform: rotate(0deg) translate(0px, -6px); }
+    90%  { transform: rotate(-6deg) translate(-9px, 5px) }
+    91.25%  { transform: rotate(-0deg) translate(0px, -5px); }
+    92.5% { transform: rotate(5deg) translate(8px, 4px); }
+    93.75% { transform: rotate(0deg) translate(0px, -3px); }
+    95%  { transform: rotate(-5deg) translate(-7px, 4px) }
+    96.25%  { transform: rotate(-0deg) translate(0px, -3px); }
+    97.5% { transform: rotate(4deg) translate(6px, 3px); }
+    98.75% { transform: rotate(0deg) translate(0px, -2px); }
+    100%  { transform: rotate(0deg) translate(-5px, 2px) }
+}
+
+/* not sure if i want animation above *//* mabye as a shorter burst of climactic head bobbing */
+@keyframes marton-face-traits {
+    0.0%  { transform: translate(-5px, 2px); }
+    25% { transform: translate(0px, -3px); }
+    50% { transform: translate(5px, 2px); }
+    75%  { transform: translate(0px, -3px); }
+    100%  { transform: translate(-5px, 2px); }
+}
+@keyframes marton-face {
+    0.0%  { transform: translate(-5px, 2px); }
+    25% { transform: translate(0px, -12px); }
+    50% { transform: translate(5px, 2px); }
+    75%  { transform: translate(0px, -12px); }
+    100%  { transform: translate(-5px, 2px); }
+}
+@keyframes marton-ear-right {
+    0.0%  { transform: translate(1px, -2px) scale(.9); }
+    25%  { transform: translate(-1px, 2px) scale(.95); }
+    50% { transform: translate(1px, 2px) scale(1); }
+    75%  { transform: translate(-1px, 2px) scale(.95); }
+    100%  { transform: translate(1px, -2px) scale(.9); }
+}
+@keyframes marton-ear-left {
+    0.0%  { transform: translate(-1px, 2px) scale(1); }
+    25%  { transform: translate(1px, 2px) scale(.95); }
+    50% { transform: translate(-1px, -2px) scale(.9); }
+    75%  { transform: translate(1px, 2px) scale(.95); }
+    100%  { transform: translate(-1px, 2px) scale(1); }
+}
+@keyframes marton-ear-shadow-right {
+    0.0%  { transform: translate(1px, -2px) scale(.9); }
+    25%  { transform: translate(-1px, 2px) scale(.95); }
+    50% { transform: translate(1px, 2px) scale(1); }
+    75%  { transform: translate(-1px, 2px) scale(.95); }
+    100%  { transform: translate(1px, -2px) scale(.9); }
+}
+@keyframes marton-ear-shadow-left {
+    0.0%  { transform: translate(-1px, 2px) scale(1); }
+    25%  { transform: translate(1px, 2px) scale(.95); }
+    50% { transform: translate(-1px, -2px) scale(.9); }
+    75%  { transform: translate(1px, 2px) scale(.95); }
+    100%  { transform: translate(-1px, 2px) scale(1); }
+}
+@keyframes marton-beard {
+    0.0%  { transform: translate(0px, 2px); }
+    25% { transform: translate(0px, -2px); }
+    50% { transform: translate(0px, 2px); }
+    75%  { transform: translate(0px, -2px); }
+    100%  { transform: translate(0px, 2px); }
 }
 
