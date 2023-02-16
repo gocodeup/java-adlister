@@ -8,4 +8,10 @@ public class Favorite {
         user_id = userId;
         ad_id = adId;
     }
+    public int getAdId(){
+        return this.ad_id;
+    }
+    public int getUser_id(){
+        return this.user_id;
+    }
 }

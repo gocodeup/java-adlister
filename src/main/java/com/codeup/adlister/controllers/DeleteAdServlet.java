@@ -11,16 +11,28 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+import java.io.IOException;
+import java.sql.SQLException;
 
 
 @WebServlet(name = "controllers.DeleteAdServlet", urlPatterns = "/ads/delete")
 public class DeleteAdServlet extends HttpServlet {
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         User user = (User) request.getSession().getAttribute("user");
         String selected = request.getQueryString();
-        Ad ad = DaoFactory.getAdsDao().findById(selected);
+        Ad returned = DaoFactory.getAdsDao().findById(selected);
+        User owner = DaoFactory.getUsersDao().findById(String.valueOf(returned.getUserId()));
+        if(owner.getId() == user.getId()){
+            DaoFactory.getAdsDao().deleteAd(selected);
+            response.sendRedirect("/ads");
+        }
+        else{
+            request.setAttribute("ad", returned);
+            request.setAttribute("error", new JSON("Did not find relation to you and ad"));
+            request.getRequestDispatcher("/WEB-INF/ads/showAd.jsp").forward(request, response);
+
+        }
 
     }
 }

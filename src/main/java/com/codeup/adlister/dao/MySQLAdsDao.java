@@ -1,8 +1,6 @@
 package com.codeup.adlister.dao;
 
-import com.codeup.adlister.models.Ad;
-import com.codeup.adlister.models.JoinReturns;
-import com.codeup.adlister.models.User;
+import com.codeup.adlister.models.*;
 import com.mysql.cj.jdbc.Driver;
 
 import java.sql.*;
@@ -122,14 +120,12 @@ public class MySQLAdsDao implements Ads {
     }
 
     @Override
-    public Ad deleteAd(String id) {
-        String query = "DELETE FROM ads WHERE id = ?";
-        try {
+    public void deleteAd(String id) {
+            try {
+            String query = "DELETE FROM ads WHERE id = ?";
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setInt(1, Integer.parseInt(id));
-            ResultSet rs = stmt.executeQuery();
-            rs.next();
-            return extractAd(rs);
+            stmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException("Error finding ad by id", e);
         }
@@ -143,8 +139,7 @@ public class MySQLAdsDao implements Ads {
             stmt.setString(1, title);
             stmt.setString(2, description);
             stmt.setInt(3, Integer.parseInt(id));
-            ResultSet rs = stmt.executeQuery();
-            rs.next();
+            stmt.executeUpdate();
             return "updated";
         } catch (SQLException e) {
             throw new RuntimeException("Error finding ad by id and updating", e);

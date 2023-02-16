@@ -15,8 +15,18 @@
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+<c:set var="userId" value="${sessionScope.user.id}"/>
+<c:set var="ownerId" value="${requestScope.owner.id}"/>
 
 <h1><c:out value="${ad.title}"/></h1>
+<c:if test="${userId == ownerId}">
+    <form action="/ads/delete?${ad.id}" method="post">
+        <button type="submit">Delete Ad</button>
+    </form>
+    <form action="/ads/edit?${ad.id}" method="post">
+        <button type="submit">Edit Ad</button>
+    </form>
+</c:if>
     <div class="col-md-6">
         <p><c:out value = "${ad.description}"/></p>
     </div>

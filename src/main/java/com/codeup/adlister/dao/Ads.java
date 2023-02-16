@@ -20,7 +20,7 @@ public interface Ads {
 
     Ad findById(String id);
 
-    Ad deleteAd(String id);
+    void deleteAd(String id);
 
     String updateAd(String id, String title, String description);
 }
