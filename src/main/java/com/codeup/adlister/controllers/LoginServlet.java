@@ -3,6 +3,7 @@ package com.codeup.adlister.controllers;
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.User;
 import com.codeup.adlister.util.Password;
+import org.apache.taglibs.standard.tag.el.core.IfTag;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -27,15 +28,21 @@ public class LoginServlet extends HttpServlet {
         User user = DaoFactory.getUsersDao().findByUsername(username);
 
         if (user == null) {
-            response.sendRedirect("/register");// this needs to be changed to the register page
+            response.sendRedirect("/register");
             return;
         }
 
         boolean validAttempt = Password.check(password, user.getPassword());
 
+
         if (validAttempt) {
             request.getSession().setAttribute("user", user);
-            response.sendRedirect("/profile");
+            String redirectUrl = (String) request.getSession().getAttribute("redirectUrl");
+            if (redirectUrl != null) {
+                response.sendRedirect(redirectUrl);
+            } else {
+                response.sendRedirect("/profile");
+            }
         } else {
             response.sendRedirect("/login");
         }
