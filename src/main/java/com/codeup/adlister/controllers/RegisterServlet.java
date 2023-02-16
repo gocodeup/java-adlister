@@ -24,8 +24,7 @@ public class RegisterServlet extends HttpServlet {
         String passwordConfirmation = request.getParameter("confirm_password");
 
         // validate input
-        boolean userNameExists = (!username.equals(request.getParameter(username)));
-
+        boolean userNameExists = DaoFactory.getUsersDao().findByUsername(username) != null;
         boolean inputHasErrors = username.isEmpty()
             || email.isEmpty()
             || password.isEmpty()
@@ -42,15 +41,13 @@ public class RegisterServlet extends HttpServlet {
             String message = "Passwords did not  match";
             request.setAttribute("message", message);
             response.sendRedirect("/register");
-//            return;
+
 
         }else{
             User user = new User(username, email, password);
             DaoFactory.getUsersDao().insert(user);
-            response.sendRedirect("/login");
+            response.sendRedirect("/profile");
         }
-//        User user = new User(username, email, password);
-//        DaoFactory.getUsersDao().insert(user);
-//        response.sendRedirect("/login");
+
     }
 }
