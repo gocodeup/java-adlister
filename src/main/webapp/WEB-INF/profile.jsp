@@ -55,6 +55,7 @@
                     <hr>
                     <c:forEach var="ad" items="${myFavs}">
                         <div class="ads">
+                            <a href="/ads/favorite?${ad.id}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" style="width: 50%">Remove Favorite</a>
                             <h3>${ad.title}</h3>
                             <p>${ad.description}</p>
                             <c:forEach var="cat" items="${ad.categories}">

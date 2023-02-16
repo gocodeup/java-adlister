@@ -17,9 +17,9 @@
                     </c:otherwise>
                 </c:choose>
             </ul>
-            <form class="d-flex" role="search" method="post" action="/">
-                <button class="btn btn-outline-success" type="button">Filter</button>
-            </form>
+            <a class="d-flex" href="/ads/search">
+                Filter
+            </a>
         </div>
     </div>
 </nav>

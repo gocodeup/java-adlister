@@ -45,6 +45,9 @@
         <br>
         <a href="/ads/edit?${ad.id}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" style="width: 50%">Edit Ad</a>
     </c:if>
+    <c:if test="${userId != ownerId}">
+        <a href="/ads/favorite?${ad.id}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" style="width: 50%">${favStatus} Favorite</a>
+    </c:if>
 </div>
 
 <jsp:include page="../partials/footer.jsp"></jsp:include>
