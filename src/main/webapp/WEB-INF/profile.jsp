@@ -38,7 +38,7 @@
                     <hr>
                     <c:forEach var="ad" items="${myAds}">
                         <div class="ads">
-                            <h3>${ad.title}</h3>
+                            <h1>${ad.title}</h1>
                             <p>${ad.description}</p>
                             <c:forEach var="cat" items="${ad.categories}">
                                 <span>${cat.name}</span>
@@ -51,7 +51,7 @@
 
         <%--    Users Favorite Ads Section     --%>
                 <div class="col">
-                    <h2>Favorites</h2>
+                    <h1>Favorites</h1>
                     <hr>
                     <c:forEach var="ad" items="${myFavs}">
                         <div class="ads">
