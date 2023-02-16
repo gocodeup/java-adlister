@@ -6,72 +6,7 @@
         <jsp:param name="title" value="Your Profile" />
     </jsp:include>
 </head>
-
-<style>
-    :root {
-        --main-bg: #E6ECF0;
-        --main-link-color: #848487;
-        --light-bg: #FFF;
-        --separator-color: #DDD;
-    }
-    body, html {
-        background-color: var(--main-bg);
-        line-height: 100%;
-        height: 100%;
-        width: 100%;
-        margin-right: 0;
-        padding: 0;
-        color: black;
-    }
-    header {
-        background-image: url("https://picsum.photos/1200/300");
-        background-size: cover;
-        min-height: 300px;
-        padding-top: 275px;
-    }
-    .nav li {
-        display: inline-block;
-        padding: 1.5em;
-    }
-    .profile-image{
-        position: absolute;
-        top: -28px;
-    }
-    .profile {
-        background: var(--light-bg);
-        height: 80px;
-        position: relative;
-    }
-    .profile-entry {
-        margin: .5em;
-    }
-    .img-circle {
-        border-radius: 100%;
-        border: 4px solid var(--light-bg);
-    }
-   .info{
-       margin-right: 2em;
-   }
-    .profile-details{
-        text-align: center;
-    }
-    .profile-items {
-        padding: 0;
-        list-style: none;
-    }
-    h3{
-        text-align: center;
-    }
-    .container{
-        margin: 2em 0 0 0;
-    }
-    h2{
-        text-align: center;
-    }
-</style>
-
-
-<body>
+<body class="profile-Body">
 
 <%--Profile Header--%>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
