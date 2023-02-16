@@ -4,6 +4,7 @@ package com.codeup.adlister.controllers;
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.models.Ad;
 import com.codeup.adlister.models.AdCat;
+import com.codeup.adlister.models.ReturnedCats;
 import com.codeup.adlister.models.User;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -41,7 +43,6 @@ public class EditAdServlet extends HttpServlet{
 
     }
 
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User user = (User) request.getSession().getAttribute("user");
         String adId = request.getParameter("id");
@@ -56,12 +57,24 @@ public class EditAdServlet extends HttpServlet{
             if(owner.getId() == user.getId()){
                 String result = DaoFactory.getAdsDao().updateAd(adId,adTitle,description);
                 if(Objects.equals(result, "updated")){
+                    DaoFactory.getAdCatsDao().deleteAdCat(adId);
+                    String[] recievedCats = request.getParameterValues("category");
+                    if(recievedCats != null){
+                        for (String cat : recievedCats) {
+                            AdCat adCat = new AdCat((int) returned.getId(), Integer.parseInt(cat));
+                            DaoFactory.getAdCatsDao().insert(adCat);
+                        }
+                    }
                     response.sendRedirect("/ads/ad?"+adId);
                 }
                 else{
-
+                    response.sendRedirect("/ads");
                 }
             }
+            else{
+                response.sendRedirect("/ads");
+            }
+
         }
 
     }
