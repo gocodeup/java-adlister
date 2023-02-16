@@ -27,6 +27,15 @@
         </div>
         <input type="submit" name="editButton" class="btn btn-block btn-primary">
     </form>
+    </form>
+    <form action="/ads/update" method="post">
+        <div class="form-group" hidden>
+            <label for="adId">adId</label>
+            <input id="adIdDelete" name="adId" class="form-control" type="text" value="${ad.id}">
+        </div>
+        <button type="submit" name="delete-ad" style="background: red; color: black; " onclick="return confirm('This will delete your ad, are you sure?')" >Delete Ad</button>
+
+    </form>
 </div>
 </body>
 </html>

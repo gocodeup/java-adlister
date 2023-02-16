@@ -39,6 +39,13 @@ public class UpdateAdServlet extends HttpServlet {
                     DaoFactory.getAdsDao().update(editAd);
 
             }
+            if (request.getParameter("delete-ad") != null) {
+
+            // Edit Process
+                long adId = Long.parseLong(request.getParameter("adId"));
+                Ad deleteAd = DaoFactory.getAdsDao().findUniqueAdId(adId);
+                DaoFactory.getAdsDao().delete(deleteAd);
+        }
             response.sendRedirect("/ads");
         }
 
