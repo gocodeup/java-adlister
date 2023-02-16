@@ -10,22 +10,17 @@
 <style>
     :root {
         --main-bg: #E6ECF0;
-        --link-color: #3B94D9;
         --main-link-color: #848487;
         --light-bg: #FFF;
         --separator-color: #DDD;
-    }
-    * {
-        box-sizing: border-box;
     }
     body, html {
         background-color: var(--main-bg);
         line-height: 100%;
         height: 100%;
         width: 100%;
-        margin: 0;
+        margin-right: 0;
         padding: 0;
-        font-family: Arial, Ubuntu, sans-serif;
         color: black;
     }
     header {
@@ -54,35 +49,24 @@
         border-radius: 100%;
         border: 4px solid var(--light-bg);
     }
-    .text-muted {
-        color: var(--main-link-color);
-    }
-    .container{
-        margin-top: 2em;
-    }
-    .profile-details, .favorite, .personal {
-        margin: 0 .5em;
-        float: left;
-    }
-    .profile-details, .favorite{
-        width: calc(25% - 1em);
+   .info{
+       margin-right: 2em;
+   }
+    .profile-details{
+        text-align: center;
     }
     .profile-items {
         padding: 0;
         list-style: none;
     }
-    .personal {
-        width: calc(50% - 1em);
+    h3{
+        text-align: center;
     }
-    .favorite {
-        width: 100%;
-        margin-left: 2em;
+    .container{
+        margin: 2em 0 0 0;
     }
-    .personal{
-        width: 100%;
-    }
-    .overflow-scroll{
-        width: 60%;
+    h2{
+        text-align: center;
     }
 </style>
 
@@ -104,77 +88,58 @@
 
     </section>
 </header>
-<div class="container">
-
-    <%--   Users Profile Info      --%>
-    <aside class="profile-details">
-
-        <h3>Welcome, ${sessionScope.user.username}!</h3>
-
-        <ul class="profile-items">
-            <li class="profile-entry"><a href="#">San Antonio, TX</a></li>
-            <li class="profile-entry"><a href="#">codeup.com</a></li>
-            <li class="text-muted profile-entry">Joined June 2011</li>
-        </ul>
-    </aside>
 
 
-    <%--   User Personal Ads    --%>
-    <div class="container cmh cmw overflow-scroll">
-        <div class="row row-cols-1">
-            <div class="personal">
-                <h1>Personal</h1>
-                <c:forEach var="ad" items="${myFavs}">
-                    <div class="col-md-6">
-                        <h2>${ad.title}</h2>
-                        <p>${ad.description}</p>
-                        <c:forEach var="cat" items="${ad.categories}">
-                            <span>${cat.name}</span>
-                        </c:forEach>
-                        <a href="/ads/ad?${ad.id}">Click here to view ad</a>
-                    </div>
-                    <br>
-                </c:forEach>
+        <div class="container">
+            <div class="row">
+                <div class="col info">
+                    <aside class="profile-details">
+                        <h3>Welcome, ${sessionScope.user.username}!</h3>
+                        <ul class="profile-items">
+                            <li class="profile-entry">San Antonio, TX</li>
+                            <li class="profile-entry">codeup.com</li>
+                            <li class="profile-entry">Joined June 2011</li>
+                        </ul>
+                    </aside>
+                </div>
+                <div class="col-6">
+                    <h2>Personal</h2>
+                    <hr>
+                    <c:forEach var="ad" items="${myFavs}">
+                        <div class="ads">
+                            <h3>${ad.title}</h3>
+                            <p>${ad.description}</p>
+                            <c:forEach var="cat" items="${ad.categories}">
+                                <span>${cat.name}</span>
+                            </c:forEach>
+                            <a href="/ads/ad?${ad.id}">Click here to view ad</a>
+                        </div>
+                        <br>
+                    </c:forEach>
+                </div>
+                <div class="col">
+                    <h2>Favorites</h2>
+                    <hr>
+                    <c:forEach var="ad" items="${myFavs}">
+                        <div class="ads">
+                            <h3>${ad.title}</h3>
+                            <p>${ad.description}</p>
+                            <c:forEach var="cat" items="${ad.categories}">
+                                <span>${cat.name}</span>
+                            </c:forEach>
+                            <a href="/ads/ad?${ad.id}">Click here to view ad</a>
+                        </div>
+                        <br>
+                    </c:forEach>
+                </div>
             </div>
         </div>
-    </div>
 
-    <%--   User Favorite Ads    --%>
-    <div class="container cmh cmw overflow-scroll">
-        <div class="row row-cols-1">
-            <div class="favorite">
-                <h1>Favorites</h1>
-                <c:forEach var="ad" items="${myFavs}">
-                    <div class="col-md-3">
-                        <h2>${ad.title}</h2>
-                        <p>${ad.description}</p>
-                        <c:forEach var="cat" items="${ad.categories}">
-                            <span>${cat.name}</span>
-                        </c:forEach>
-                        <a href="/ads/ad?${ad.id}">Click here to view ad</a>
-                    </div>
-                    <br>
-                </c:forEach>
-            </div>
-        </div>
-    </div>
-</div>
 
-<%--<div>--%>
-<%--    <h1>Favorites</h1>--%>
-<%--    <c:forEach var="ad" items="${myFavs}">--%>
-<%--        <div class="col-md-6">--%>
-<%--            <h2>${ad.title}</h2>--%>
-<%--            <p>${ad.description}</p>--%>
-<%--            <c:forEach var="cat" items="${ad.categories}">--%>
-<%--                <span>${cat.name}</span>--%>
-<%--            </c:forEach>--%>
-<%--            <a href="/ads/ad?${ad.id}">Click here to view ad</a>--%>
-<%--        </div>--%>
-<%--    </c:forEach>--%>
+
+
 <%--</div>--%>
-
-<jsp:include page="./partials/footer.jsp"></jsp:include>
+<%--        <jsp:include page="./partials/footer.jsp"></jsp:include>--%>
 </body>
 </html>
 
