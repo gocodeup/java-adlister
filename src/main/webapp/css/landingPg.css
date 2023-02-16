@@ -66,4 +66,23 @@ body {
     background-color: #631c6c
 }
 
+.delete-btn{
+    background-color: red;
+    color: black;
+}
+
+.ad-card{
+    background-color: black;
+    width: 30rem;
+}
+
+.update-redirect{
+    background-color: #631c6c;
+    color: lime;
+}
+
+.adPage-login{
+    color: deeppink;
+}
+
 
