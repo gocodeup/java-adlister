@@ -42,6 +42,7 @@ h1 {
     font-size:100px;
     text-transform:uppercase;
     text-shadow: 1px 1px 2px yellow, 0 0 1em lightpink, 0 0 0.2em yellow;
+    text-align: center;
 }
 
 body {
@@ -92,6 +93,76 @@ font-family: "Segoe UI light", "Segoe UI", "Helvetica";
     color: white;
     font-size: 35px;
 }
+
+.typing.animate {
+    width: 21ch;
+    margin: auto;
+    padding-top: 10px;
+    border-right: 0.1em solid black;
+    font-family: monospace;
+    font-size: 5em;
+    border-style: ridge;
+    text-align: center;
+    background-color: #E6ECF0;
+    animation: type 2.6s steps(10), writer 1s infinite alternate, delete 0.5s steps(5) 2.5s, type2 1s steps(4) 3s forwards, type3 3s steps(22, end) 6s forwards;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.typing.animate::before {
+    content: "Hello, welcome to Nick's website...";
+    animation: type2 4s steps(4) 3s forwards, type3 3s steps(22, end) 6s forwards;
+}
+
+@keyframes type {
+    from {
+        width: 0;
+    }
+    to {
+        width: 35ch;
+    }
+}
+
+@keyframes type2 {
+    from {
+        width: 18ch;
+        content: "Created by Nick... "
+    }
+    to {
+        width: 21ch;
+        content: "Hello, created by US! "
+    }
+}
+
+@keyframes type3 {
+    from {
+        width: 19ch;
+        content: "Hello, welcome to OUR website!"
+    }
+    to {
+        width: 59ch;
+        content: "Hello, this website was created by Nick, Issac and Crystal!"
+    }
+}
+
+@keyframes writer {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes delete {
+    from {
+        width: 20ch;
+    }
+    to {
+        width: 16ch;
+    }
+}
+
+
+
 /*!* Header/Blog Title *!*/
 /*.header {*/
 /*    padding: 30px;*/

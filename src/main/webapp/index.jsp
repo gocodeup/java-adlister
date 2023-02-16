@@ -10,7 +10,8 @@
 <div>
     <h1>Welcome to the Adlister!</h1>
 </div>
-
+<br>
+<div class="typing animate"></div>
 <jsp:include page="WEB-INF/partials/footer.jsp"></jsp:include>
 </body>
 </html>
