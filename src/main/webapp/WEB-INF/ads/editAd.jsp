@@ -28,7 +28,7 @@
         <div class="col-3">
           <input class="form-check-input me-1" name="category" type="checkbox" value="${cat.id}"
           <c:forEach var="catTrue" items="${checked}">
-            <c:set var="id1" value="${catTrue.adId}" />
+            <c:set var="id1" value="${catTrue.catId}" />
           <c:if test="${id1 == id}">
                  checked</c:if>
           </c:forEach>

@@ -89,8 +89,8 @@ public class MySQLAdCatDao implements Adcats{
 
     private AdCat extractAdCats(ResultSet rs) throws SQLException {
         return new AdCat(
-                rs.getInt("cat_id"),
-                rs.getInt("ad_id")
+                rs.getInt("ad_id"),
+                rs.getInt("cat_id")
         );
     }
 
