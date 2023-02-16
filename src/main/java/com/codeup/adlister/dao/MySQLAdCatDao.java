@@ -97,7 +97,7 @@ public class MySQLAdCatDao implements Adcats{
 
     @Override
     public void insert(AdCat adCat) {
-        String insertQuery = "INSERT INTO ads_cat(cat_id, ad_id) VALUES (?, ?)";
+        String insertQuery = "INSERT INTO ads_cat(ad_id, cat_id) VALUES (?, ?)";
         try {
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setInt(1, adCat.getAdId());

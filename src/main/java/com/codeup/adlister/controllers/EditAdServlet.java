@@ -18,13 +18,14 @@ public class EditAdServlet extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         User user = (User) request.getSession().getAttribute("user");
         String selected = request.getQueryString();
+        System.out.println(selected);
         if(user == null){
             response.sendRedirect("/login?"+selected);
         }
         else{
             Ad returned = DaoFactory.getAdsDao().findById(selected);
             User owner = DaoFactory.getUsersDao().findById(String.valueOf(returned.getUserId()));
-            if(owner == user){
+            if(owner.getId() == user.getId()){
                 request.setAttribute("ad", returned);
                 request.setAttribute("user", user);
                 request.getRequestDispatcher("/WEB-INF/ads/editAd.jsp").forward(request, response);
@@ -46,7 +47,7 @@ public class EditAdServlet extends HttpServlet{
         else{
             Ad returned = DaoFactory.getAdsDao().findById(adId);
             User owner = DaoFactory.getUsersDao().findById(String.valueOf(returned.getUserId()));
-            if(owner == user){
+            if(owner.getId() == user.getId()){
                 String result = DaoFactory.getAdsDao().updateAd(adId,adTitle,description);
                 if(Objects.equals(result, "updated")){
                     response.sendRedirect("/ads/ad?"+adId);

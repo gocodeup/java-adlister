@@ -20,12 +20,12 @@
 
 <h1><c:out value="${ad.title}"/></h1>
 <c:if test="${userId == ownerId}">
-    <form action="/ads/delete?${ad.id}" method="post">
-        <button type="submit">Delete Ad</button>
-    </form>
-    <form action="/ads/edit?${ad.id}" method="post">
-        <button type="submit">Edit Ad</button>
-    </form>
+    <a class="unstyle" href="/ads/delete?${ad.id}">
+        Delete Ad
+    </a>
+    <a class="unstyle" href="/ads/edit?${ad.id}">
+        Edit Ad
+    </a>
 </c:if>
     <div class="col-md-6">
         <p><c:out value = "${ad.description}"/></p>
