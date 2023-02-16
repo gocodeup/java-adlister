@@ -50,19 +50,19 @@ public class MySQLAdCatDao implements Adcats{
         }
     }
 
-//    @Override
-//
-//    public List<AdCat> getRelatedAdCat(String ad_id) {
-//        String query = "SELECT * FROM ads_cat WHERE ad_id= ?";
-//        try {
-//            PreparedStatement stmt = connection.prepareStatement(query);
-//            stmt.setInt(1, Integer.parseInt(ad_id));
-//            ResultSet rs = stmt.executeQuery();
-//            return createAdCatsFromResults(rs);
-//        } catch (SQLException e) {
-//            throw new RuntimeException("Error finding related categories by id", e);
-//        }
-//    }
+    @Override
+
+    public List<AdCat> getRelatedAdCat(String ad_id) {
+        String query = "SELECT * FROM ads_cat WHERE ad_id= ?";
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setInt(1, Integer.parseInt(ad_id));
+            ResultSet rs = stmt.executeQuery();
+            return createAdCatsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding related categories by id", e);
+        }
+    }
 
     private List<JoinReturns> createJoinReturnsFromResults(ResultSet rs) throws SQLException {
         List<JoinReturns> cats= new ArrayList<>();
@@ -89,8 +89,8 @@ public class MySQLAdCatDao implements Adcats{
 
     private AdCat extractAdCats(ResultSet rs) throws SQLException {
         return new AdCat(
-                rs.getInt("cat_id"),
-                rs.getInt("ad_id")
+                rs.getInt("ad_id"),
+                rs.getInt("cat_id")
         );
     }
 

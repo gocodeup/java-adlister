@@ -29,7 +29,7 @@
                                 <input class="form-check-input me-1" name="category" type="checkbox" value="${cat.id}"
                                 <c:forEach var="catTrue" items="${checked}">
                                     <c:set var="id1" value="${catTrue.id}" />
-                                <c:if test="${fn:contains(id1,id)}">
+                                <c:if test="${id1 == id}">
                                 checked</c:if>
                                 </c:forEach>
                                        id="${cat.category}">
