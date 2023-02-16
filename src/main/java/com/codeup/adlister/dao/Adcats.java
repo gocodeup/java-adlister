@@ -14,5 +14,7 @@ public interface Adcats {
 
 //    List<AdCat> getRelatedAdCat(String ad_id);
 
+    List<AdCat> getRelatedAdCat(String ad_id);
+
     void insert(AdCat adCat);
 }

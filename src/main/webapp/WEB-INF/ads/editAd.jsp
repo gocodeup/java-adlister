@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -20,6 +21,22 @@
       <textarea id="description" name="description" class="form-control" type="text">${ad.description}</textarea>
     </div>
     <input type="submit" class="btn btn-block btn-primary">
+    <div class="row text-nowrap">
+
+      <c:forEach var="cat" items="${categories}">
+        <c:set var="id" value="${cat.id}" />
+        <div class="col-3">
+          <input class="form-check-input me-1" name="category" type="checkbox" value="${cat.id}"
+          <c:forEach var="catTrue" items="${checked}">
+            <c:set var="id1" value="${catTrue.adId}" />
+          <c:if test="${id1 == id}">
+                 checked</c:if>
+          </c:forEach>
+                 id="${cat.category}">
+          <label class="form-check-label" for="${cat.category}">${cat.category}</label>
+        </div>
+      </c:forEach>
+    </div>
   </form>
 </div>
 <jsp:include page="../partials/footer.jsp"></jsp:include>
