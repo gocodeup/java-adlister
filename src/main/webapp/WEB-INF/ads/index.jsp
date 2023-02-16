@@ -20,9 +20,7 @@
 
         <div class="row row-cols-1">
             <c:forEach var="ad" items="${ads}">
-                <form class="col border bgt" action="ads/ad" method="get">
-                    <input class="d-none" name="query" value="${ad.id}">
-                    <button class="unstyle" id="${ad.id}" type="submit">
+                <a class="unstyle" href="ads/ad?${ad.id}">
                         <div class="row">
                             <h2>${ad.title}</h2>
                         </div>
@@ -36,8 +34,7 @@
                                 </div>
                             </c:forEach>
                         </div>
-                    </button>
-                </form>
+                </a>
 
             </c:forEach>
         </div>

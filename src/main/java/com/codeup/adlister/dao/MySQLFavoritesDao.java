@@ -1,7 +1,6 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
-import com.codeup.adlister.models.Favorite;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
@@ -22,6 +21,18 @@ public class MySQLFavoritesDao implements Favorites {
             );
         } catch (SQLException e) {
             throw new RuntimeException("Error connecting to the database!", e);
+        }
+    }
+
+    @Override
+    public void deleteAdFav(String id){
+        try {
+            String query = "DELETE FROM ads_fav WHERE ad_id = ?";
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setInt(1, Integer.parseInt(id));
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding adFav by id", e);
         }
     }
 
@@ -51,18 +62,5 @@ public class MySQLFavoritesDao implements Favorites {
         }
 
     }
-//    private List<Favorite> createFavoritesFromResults(ResultSet rs) throws SQLException {
-//        List<Favorite> favs = new ArrayList<>();
-//        while (rs.next()) {
-//            favs.add(extractFavorites(rs));
-//        }
-//        return favs;
-//    }
-//
-//    private Favorite extractFavorites(ResultSet rs) throws SQLException {
-//        return new Favorite(
-//                rs.getInt("user_id"),
-//                rs.getInt("ad_id")
-//        );
-//    }
+
 }

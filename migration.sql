@@ -35,15 +35,16 @@ CREATE TABLE ads_cat(
 
                         cat_id INT UNSIGNED NOT NULL ,
                         ad_id INT UNSIGNED NOT NULL ,
-                        FOREIGN KEY (cat_id) REFERENCES categories (id),
-                        FOREIGN KEY (ad_id) REFERENCES ads (id)
+                        FOREIGN KEY (cat_id) REFERENCES categories (id)  ON DELETE CASCADE,
+                        FOREIGN KEY (ad_id) REFERENCES ads (id)  ON DELETE CASCADE
+
 );
 
 CREATE TABLE ads_fav(
                         user_id INT UNSIGNED NOT NULL ,
                         ad_id INT UNSIGNED NOT NULL ,
-                        FOREIGN KEY (user_id) REFERENCES users (id),
-                        FOREIGN KEY (ad_id) REFERENCES ads (id)
+                        FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE,
+                        FOREIGN KEY (ad_id) REFERENCES ads (id) ON DELETE CASCADE
 );
 
 

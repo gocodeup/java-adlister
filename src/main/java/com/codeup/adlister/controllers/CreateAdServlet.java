@@ -50,7 +50,7 @@ public class CreateAdServlet extends HttpServlet {
             }
             if(recievedCats != null){
                 for( String cat : recievedCats){
-                    AdCat adCat = new AdCat(Integer.parseInt(cat) , Integer.parseInt(returnedAd));
+                    AdCat adCat = new AdCat(Integer.parseInt(returnedAd),Integer.parseInt(cat));
                     DaoFactory.getAdCatsDao().insert(adCat);
                 }
             }
