@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.*;
 import java.io.IOException;
 
 @WebServlet(name = "controllers.LoginServlet", urlPatterns = "/login")
@@ -28,11 +29,14 @@ public class LoginServlet extends HttpServlet {
         User user = DaoFactory.getUsersDao().findByUsername(username);
 
         if (user == null) {
-            response.sendRedirect("/register");
+            JOptionPane.showMessageDialog(null,"Username not found. Please try again.");
+            request.setAttribute("userNameExists", true);
+            response.sendRedirect("/login");
             return;
         }
 
         boolean validAttempt = Password.check(password, user.getPassword());
+
 
 
         if (validAttempt) {
@@ -44,6 +48,8 @@ public class LoginServlet extends HttpServlet {
                 response.sendRedirect("/profile");
             }
         } else {
+            JOptionPane.showMessageDialog(null,"Invalid password. Please try again.");
+            request.setAttribute("validAttempt", true);
             response.sendRedirect("/login");
         }
     }
