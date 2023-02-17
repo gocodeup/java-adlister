@@ -22,6 +22,7 @@ public class LoginServlet extends HttpServlet {
             request.setAttribute("redirect", selected);
         }
         request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+        System.out.println( request.getHeader("Referer"));
 
     }
 

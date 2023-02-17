@@ -44,11 +44,12 @@ public class MySQLFavoritesDao implements Favorites {
 
 
     @Override
-    public void deleteAdFav(String id){
+    public void deleteAdFav(String id, User user){
         try {
-            String query = "DELETE FROM ads_fav WHERE ad_id = ?";
+            String query = "DELETE FROM ads_fav WHERE ad_id = ? AND user_id = ?";
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setInt(1, Integer.parseInt(id));
+            stmt.setInt(2, (int) user.getId());
             stmt.executeUpdate();
         } catch (SQLException e) {
             throw new RuntimeException("Error finding adFav by id", e);

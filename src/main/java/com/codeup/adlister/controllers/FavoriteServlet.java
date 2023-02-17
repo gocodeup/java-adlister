@@ -28,16 +28,12 @@ public class FavoriteServlet extends HttpServlet {
             }
         }
         if(fav){
-            DaoFactory.getFavoritesDao().deleteAdFav(adId);
-            response.sendRedirect("/ads");
+            DaoFactory.getFavoritesDao().deleteAdFav(adId, user);
+            response.sendRedirect(request.getHeader("Referer"));
         }
         else{
             DaoFactory.getFavoritesDao().addAdFav(adId,user);
-            response.sendRedirect("/profile");
+            response.sendRedirect(request.getHeader("Referer"));
         }
-
-
-
-
     }
 }

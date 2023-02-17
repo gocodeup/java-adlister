@@ -11,7 +11,8 @@ public interface Favorites {
 
     String addAdFav(String id, User user);
 
-    void deleteAdFav(String id);
+
+    void deleteAdFav(String id, User user);
 
     List<Ad> getRelated(User user);
 }

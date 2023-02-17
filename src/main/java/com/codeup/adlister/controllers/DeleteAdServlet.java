@@ -18,14 +18,15 @@ import java.sql.SQLException;
 @WebServlet(name = "controllers.DeleteAdServlet", urlPatterns = "/ads/delete")
 public class DeleteAdServlet extends HttpServlet {
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        String lastPlace = request.getHeader("Referer");
         User user = (User) request.getSession().getAttribute("user");
         String selected = request.getQueryString();
         Ad returned = DaoFactory.getAdsDao().findById(selected);
         User owner = DaoFactory.getUsersDao().findById(String.valueOf(returned.getUserId()));
         if(owner.getId() == user.getId()){
             DaoFactory.getAdsDao().deleteAd(selected);
-            response.sendRedirect("/ads");
+            response.sendRedirect(lastPlace);
         }
         else{
             request.setAttribute("ad", returned);
