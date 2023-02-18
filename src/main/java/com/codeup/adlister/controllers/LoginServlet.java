@@ -1,9 +1,8 @@
 package com.codeup.adlister.controllers;
-
 import com.codeup.adlister.dao.DaoFactory;
+import com.codeup.adlister.models.JSON;
 import com.codeup.adlister.models.User;
 import com.codeup.adlister.util.Password;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,10 +17,17 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("/profile");
             return;
         }
+        String selected = request.getQueryString();
+        if(selected != null){
+            request.setAttribute("redirect", selected);
+        }
         request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
+        System.out.println( request.getHeader("Referer"));
+
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         User user = DaoFactory.getUsersDao().findByUsername(username);
@@ -30,14 +36,22 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("/login");
             return;
         }
-
         boolean validAttempt = Password.check(password, user.getPassword());
+        String selected = request.getParameter("redirect");
 
         if (validAttempt) {
-            request.getSession().setAttribute("user", user);
-            response.sendRedirect("/profile");
+            if(selected != null){
+                request.getSession().setAttribute("user", user);
+                response.sendRedirect("/ads/ad?"+selected);
+            }
+            else{
+                request.getSession().setAttribute("user", user);
+                response.sendRedirect("/profile");
+            }
+
         } else {
-            response.sendRedirect("/login");
+            request.setAttribute("error", new JSON("Username and/or password does not match"));
+            request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         }
     }
 }

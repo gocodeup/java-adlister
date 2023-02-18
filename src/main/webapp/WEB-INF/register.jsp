@@ -9,6 +9,31 @@
     <jsp:include page="partials/navbar.jsp" />
     <div class="container">
         <h1>Please fill in your information.</h1>
+
+        <%
+            if(request.getAttribute("errors") != null) {
+        %>
+        <fieldset>
+            <legend>Errors</legend>
+            <ul>
+                <%if(request.getAttribute("username_error") != null) {%>
+                <li class="error">Please fill out username</li>
+                <% } %>
+                <%if(request.getAttribute("email_error") != null) {%>
+                <li class="error">Please fill out email</li>
+                <% } %>
+                <%if(request.getAttribute("password_error") != null) {%>
+                <li class="error">Please fill out password</li>
+                <% } %>
+                <%if(request.getAttribute("passwordConfirmation_error") != null) {%>
+                <li class="error">Passwords do not match</li>
+                <% } %>
+            </ul>
+        </fieldset>
+        <%
+            }
+        %>
+
         <form action="/register" method="post">
             <div class="form-group">
                 <label for="username">Username</label>
@@ -29,5 +54,6 @@
             <input type="submit" class="btn btn-primary btn-block">
         </form>
     </div>
+    <jsp:include page="./partials/footer.jsp"></jsp:include>
 </body>
 </html>
