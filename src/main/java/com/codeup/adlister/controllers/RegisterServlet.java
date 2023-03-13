@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.*;
 import java.io.IOException;
 
 @WebServlet(name = "controllers.RegisterServlet", urlPatterns = "/register")
@@ -23,19 +24,31 @@ public class RegisterServlet extends HttpServlet {
         String passwordConfirmation = request.getParameter("confirm_password");
 
         // validate input
+        boolean userNameExists = DaoFactory.getUsersDao().findByUsername(username) != null;
         boolean inputHasErrors = username.isEmpty()
             || email.isEmpty()
             || password.isEmpty()
             || (! password.equals(passwordConfirmation));
 
-        if (inputHasErrors) {
+        if (userNameExists){
+            JOptionPane.showMessageDialog(null,"Please choose a new username that one exists already");
+            request.setAttribute("userNameExists", true);
             response.sendRedirect("/register");
-            return;
+
+        }else if (inputHasErrors) {
+            JOptionPane.showMessageDialog(null,"Passwords do not match");
+            request.setAttribute("inputHasErrors", true);
+            String message = "Passwords did not  match";
+            request.setAttribute("message", message);
+            response.sendRedirect("/register");
+
+
+        }else{
+            User user = new User(username, email, password);
+            DaoFactory.getUsersDao().insert(user);
+            request.getSession().setAttribute("user", user);
+            response.sendRedirect("/profile");
         }
 
-        // create and save a new user
-        User user = new User(username, email, password);
-        DaoFactory.getUsersDao().insert(user);
-        response.sendRedirect("/login");
     }
 }

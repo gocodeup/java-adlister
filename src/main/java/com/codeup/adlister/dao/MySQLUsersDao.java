@@ -3,6 +3,8 @@ package com.codeup.adlister.dao;
 import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
+
+
 import java.sql.*;
 
 public class MySQLUsersDao implements Users {
@@ -13,7 +15,7 @@ public class MySQLUsersDao implements Users {
             DriverManager.registerDriver(new Driver());
             connection = DriverManager.getConnection(
                 config.getUrl(),
-                config.getUser(),
+                config.getUsername(),
                 config.getPassword()
             );
         } catch (SQLException e) {
@@ -51,6 +53,55 @@ public class MySQLUsersDao implements Users {
         }
     }
 
+    @Override
+    public User getUserByAd(long id) {
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement("SELECT * FROM users u JOIN ads a ON a.user_id = u.id WHERE a.id = ?");
+            stmt.setLong(1, id);
+            ResultSet rs = stmt.executeQuery();
+            rs.next();
+            return new User(
+                    rs.getLong("id"),
+                    rs.getString("username"),
+                    rs.getString("email"),
+                    rs.getString("password")
+            );
+        } catch (SQLException e) {
+            throw new RuntimeException("Error finding user.", e);
+        }
+    }
+
+    @Override
+    public void update(User user) {
+        String query = "UPDATE users SET username = ?,email =?, password =? WHERE id =?";
+        try{
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1,user.getUsername());
+            stmt.setString(2, user.getEmail());
+            stmt.setString(3, user.getPassword());
+            stmt.setLong(4, user.getId());
+            stmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating a user", e);
+        }
+
+    }
+
+    @Override
+    public void delete(User user) {
+        String query = "DELETE FROM users WHERE id=?";
+        try{
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setLong(1, user.getId());
+            stmt.executeUpdate();
+        }catch(SQLException e){
+            throw new RuntimeException("Error deleting user", e);
+
+        }
+    }
+
+
     private User extractUser(ResultSet rs) throws SQLException {
         if (! rs.next()) {
             return null;
@@ -63,4 +114,7 @@ public class MySQLUsersDao implements Users {
         );
     }
 
+
 }
+
+

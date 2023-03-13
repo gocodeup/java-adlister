@@ -2,10 +2,11 @@ package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListAdsDao implements Ads {
+public class ListAdsDao {
     private List<Ad> ads;
 
     public List<Ad> all() {
@@ -26,6 +27,16 @@ public class ListAdsDao implements Ads {
         ads.add(ad);
         return ad.getId();
     }
+
+//    @Override
+//    public List<Ad> searchAds(String searchString) throws SQLException {
+//        return null;
+//    }
+//
+//    @Override
+//    public Ad findUniqueAdId(Long ad) {
+//        return null;
+//    }
 
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();

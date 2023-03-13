@@ -1,3 +1,5 @@
+CREATE DATABASE IF NOT EXISTS adlister_db;
+
 USE adlister_db;
 
 DROP TABLE IF EXISTS ads;
@@ -5,8 +7,8 @@ DROP TABLE IF EXISTS users;
 
 CREATE TABLE users (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    username VARCHAR(240) NOT NULL,
-    email VARCHAR(240) NOT NULL,
+    username VARCHAR(240) NOT NULL UNIQUE ,
+    email VARCHAR(240) NOT NULL UNIQUE ,
     password VARCHAR(255) NOT NULL,
     PRIMARY KEY (id)
 );
