@@ -6,6 +6,7 @@
     </jsp:include>
 </head>
 <body>
+<jsp:include page="/WEB-INF/partials/style.jsp"/>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <h1>Please Log In</h1>
@@ -20,6 +21,8 @@
             </div>
             <input type="submit" class="btn btn-primary btn-block" value="Log In">
         </form>
+
+        <h4>New user?<a href="/register"> Sign up!</a></h4>
     </div>
 </body>
 </html>
