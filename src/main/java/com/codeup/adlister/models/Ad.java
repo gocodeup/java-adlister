@@ -8,6 +8,7 @@ public class Ad {
     private String img_url;
     private String gender;
     private double price;
+    private int age;
 
 
     public Ad(long id, long userId, String title, String description) {
@@ -21,6 +22,19 @@ public class Ad {
         this.userId = userId;
         this.title = title;
         this.description = description;
+    }
+
+
+    // additional features constructor
+    public Ad(long userId, String title, String description, String img_url, String gender, double price, int age)
+    {
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.img_url = img_url;
+        this.gender = gender;
+        this.price = price;
+        this.age = age;
     }
 
     public long getId() {
@@ -77,5 +91,13 @@ public class Ad {
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
