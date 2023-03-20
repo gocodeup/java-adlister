@@ -21,7 +21,7 @@ public class ListAdsDao implements Ads {
             ads = generateAds();
         }
         // we'll assign an "id" here based on the size of the ads list
-        // really the dao would handle this
+        // really the com.codeup.adlister.dao would handle this
         ad.setId((long) ads.size());
         ads.add(ad);
         return ad.getId();

@@ -1,3 +1,4 @@
+CREATE DATABASE IF NOT EXISTS adlister_project_db;
 USE adlister_project_db;
 
 DROP TABLE IF EXISTS ads;
