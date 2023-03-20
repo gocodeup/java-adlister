@@ -24,15 +24,24 @@ public class CreateAdServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         User user = (User) request.getSession().getAttribute("user");
+
+        String img = request.getParameter("img_url");
+
+        if(img.isEmpty())
+        {
+            img = "https://core.trac.wordpress.org/raw-attachment/ticket/45927/placeholder-image-portrait.png";
+        }
+
         Ad ad = new Ad(
                 user.getId(),
                 request.getParameter("title"),
                 request.getParameter("description"),
-                request.getParameter("img_url"),
+                img,
                 request.getParameter("gender"),
                 Double.parseDouble(request.getParameter("price")),
                 Integer.parseInt(request.getParameter("age"))
         );
+
 
 
         DaoFactory.getAdsDao().insert(ad);
