@@ -26,7 +26,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="age">Price</label>
+                <label for="age">Age</label>
                 <input id="age" name="age" class="form-control" type="text">
             </div>
             <div class="form-group">

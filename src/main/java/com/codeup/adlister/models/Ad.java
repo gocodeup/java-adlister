@@ -25,6 +25,19 @@ public class Ad {
     }
 
 
+    // constructor with everything on it for extract DAO method
+    public Ad(long id, long userId, String title, String description, String img_url, String gender, double price, int age)
+    {
+        this.id = id;
+        this.userId = userId;
+        this.title = title;
+        this.description = description;
+        this.img_url = img_url;
+        this.gender = gender;
+        this.price = price;
+        this.age = age;
+    }
+
     // additional features constructor
     public Ad(long userId, String title, String description, String img_url, String gender, double price, int age)
     {
@@ -36,6 +49,7 @@ public class Ad {
         this.price = price;
         this.age = age;
     }
+
 
     public long getId() {
         return id;
