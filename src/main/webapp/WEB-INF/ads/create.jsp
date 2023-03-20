@@ -17,6 +17,26 @@
                 <label for="description">Description</label>
                 <textarea id="description" name="description" class="form-control" type="text"></textarea>
             </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" class="form-control" type="text">
+                    <option value="female">F</option>
+                    <option value="male">M</option>
+                    <option value="unknown">N/A</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="age">Price</label>
+                <input id="age" name="age" class="form-control" type="text">
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input id="price" name="price" class="form-control" type="text" placeholder="##,###,###.##">
+            </div>
+            <div class="form-group">
+                <label for="img_url">IMG URL</label>
+                <textarea id="img_url" name="img_url" class="form-control" type="url"></textarea>
+            </div>
             <input type="submit" class="btn btn-block btn-primary">
         </form>
     </div>
