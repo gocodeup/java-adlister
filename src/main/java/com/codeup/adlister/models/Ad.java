@@ -5,6 +5,10 @@ public class Ad {
     private long userId;
     private String title;
     private String description;
+    private String img_url;
+    private String gender;
+    private double price;
+
 
     public Ad(long id, long userId, String title, String description) {
         this.id = id;
@@ -49,5 +53,29 @@ public class Ad {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getImg_url() {
+        return img_url;
+    }
+
+    public void setImg_url(String img_url) {
+        this.img_url = img_url;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

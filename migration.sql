@@ -16,6 +16,9 @@ CREATE TABLE ads (
     user_id INT UNSIGNED NOT NULL,
     title VARCHAR(240) NOT NULL,
     description TEXT NOT NULL,
+    img_url VARCHAR(150) NOT NULL, #MAYBE ADD DEFAULT STATE IF NO IMG ADDED
+    gender VARCHAR(5) NOT NULL,
+    price DECIMAL(10, 2), # 12,345,678.90
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id)
         ON DELETE CASCADE
