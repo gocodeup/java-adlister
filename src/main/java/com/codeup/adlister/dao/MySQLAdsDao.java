@@ -1,11 +1,9 @@
 package com.codeup.adlister.dao;
 
 import com.codeup.adlister.models.Ad;
+import com.codeup.adlister.models.User;
 import com.mysql.cj.jdbc.Driver;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,12 +30,19 @@ public class MySQLAdsDao implements Ads {
         try {
             stmt = connection.prepareStatement("SELECT * FROM ads");
             ResultSet rs = stmt.executeQuery();
+
             return createAdsFromResults(rs);
         } catch (SQLException e) {
             throw new RuntimeException("Error retrieving all ads.", e);
         }
     }
 
+
+
+
+
+
+    //****************************INSERT AD*********************************
     @Override
     public Long insert(Ad ad) {
         try {
@@ -55,6 +60,136 @@ public class MySQLAdsDao implements Ads {
         }
     }
 
+
+
+    //************************UPDATE ADS********************************************
+
+    @Override
+    public void update(Ad ad, String title,String description) {
+
+            String query = "UPDATE ads " +
+                    " SET " +
+                    " title = ?, " +
+                    " description = ? " +
+
+                    "WHERE title = ?";
+
+
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, title);
+            stmt.setString(2, description);
+            stmt.setString(3    , ad.getTitle());
+
+            stmt.executeUpdate();
+
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error updating Ad", e);
+
+        }
+
+
+
+    }
+
+
+
+    //**********************Find ad by id to delete****************************
+
+    public Ad ById(long id) {
+
+        String sql = "SELECT * FROM ads WHERE id = ?";
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement(sql);
+            stmt.setLong(1,id);
+            ResultSet rs = stmt.executeQuery();
+            List<Ad> ad = createAdsFromResults(rs);
+
+return ad.get(0);
+
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
+
+
+
+
+
+    //****************************DELETE ADS************************************************
+
+    @Override
+    public void delete(Ad ad) {
+
+        String query = "DELETE FROM ads WHERE title = ? ";
+
+       PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement(query);
+            stmt.setString(1,ad.getTitle());
+        
+            stmt.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error deleting ad", e);
+
+        }
+
+
+
+    }
+
+
+
+ //********************************   FIND All  ADS OWNED BY A User  ****************************************************
+
+
+    public  List<Ad> findAd(long userId) {
+String query = "SELECT * FROM ads WHERE user_id = ?";
+
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+
+            stmt.setLong(1, userId);
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+
+
+
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+    }
+
+
+
+
+//****************************SEARCH AD BY TITLE**********************************
+    @Override
+    public List<Ad> searchAD(String tittle) {
+
+String sql = "SELECT * FROM ads WHERE title LIKE ?";
+        PreparedStatement stmt = null;
+        try {
+            stmt = connection.prepareStatement(sql);
+            stmt.setString(1,"%" + tittle + "%");
+            ResultSet rs = stmt.executeQuery();
+            return createAdsFromResults(rs);
+        } catch (SQLException e) {
+            throw new RuntimeException("Error retrieving all ads.", e);
+        }
+
+    }
+
+
+
+
+
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("id"),
@@ -71,4 +206,5 @@ public class MySQLAdsDao implements Ads {
         }
         return ads;
     }
+
 }
